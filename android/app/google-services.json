@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "395792097824",
+    "project_id": "lingola-kids",
+    "storage_bucket": "lingola-kids.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395792097824:android:f5acf612bd7de90aadd245",
+        "android_client_info": {
+          "package_name": "com.flywork.lingolakidsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395792097824-htddih19lauke1fufv99ifku8e17ded6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeN5eKL6cUIZZhFcTzL14xbwVty7GTXP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395792097824-htddih19lauke1fufv99ifku8e17ded6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,79 @@
+name: lingola_kids
+description: "A new Flutter project."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.9
+  google_fonts: ^8.1.0
+  flutter_svg: ^2.2.4
+  vector_graphics_compiler: ^1.2.0
+  flutter_hooks: ^0.21.3+1
+  cached_network_image: ^3.4.1
+  dio: ^5.9.2
+  purchases_flutter: ^10.0.1
+  flutter_riverpod: ^3.3.1
+  flutter_secure_storage: ^10.0.0
+  google_sign_in: ^7.2.0
+  sign_in_with_apple: ^7.0.1
+  crypto: ^3.0.7
+  flutter_localizations:
+    sdk: flutter
+  firebase_core: ^4.7.0
+  slang: ^4.14.0
+  flutter_launcher_icons: ^0.14.4
+  hooks_riverpod: ^3.3.1
+  cross_fade: ^0.5.0
+  flutter_native_splash: ^2.4.7
+  slang_flutter: ^4.14.0
+  purchases_ui_flutter: ^10.0.1
+  intl: ^0.20.2
+  flutter_local_notifications: ^21.0.0
+  timezone: ^0.11.0
+  permission_handler: ^12.0.1
+  image_picker: ^1.2.2
+  just_audio: ^0.10.5
+  riverpod: ^3.2.1
+  dropdown_button2: ^2.3.9
+  google_mlkit_digital_ink_recognition: ^0.14.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  stream_channel: ^2.1.4
+  build_runner: ^2.15.0
+  slang_build_runner: ^4.14.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+flutter_native_splash:
+  background_image: assets/splash.png
+  fullscreen: false
+  android_12:
+    background_image: assets/splash.png
+  android: true
+  ios: true
+  ios_content_mode: scaleAspectFill
+  web: false
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  min_sdk_android: 21
+  image_path: "assets/app_logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/app_logo.png"

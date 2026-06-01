@@ -1,0 +1,340 @@
+{
+    "welcome": "Welcome $name",
+    "welcome2": "Welcome to $appName",
+    "get_started": "Get Started",
+    "start_learning": "Start Learning",
+    "hello": "Hello",
+    "next": "Next",
+    "back": "Back",
+    "skip": "Skip",
+    "profile": "Profile",
+    "continue": "Continue",
+    "termOfService": {
+        "text1": "By signing up for ChatFace, you agree to our ",
+        "link1": "Terms of Service",
+        "text2": ". Learn how we process your data in our ",
+        "link2": "Privacy Policy",
+        "text3": " and ",
+        "link3": "Cookies Policy",
+        "text4": "",
+        "privacyPolicy": {
+            "title": "Privacy Policy",
+            "lastUpdated": "Last Updated: 2026",
+            "intro": "ChatFace adopts user privacy and data security as a core principle. All your personal data is processed in accordance with effective data protection regulations.",
+            "section1Title": "1. COLLECTED INFORMATION",
+            "section1sub1Title": "1.1 Data Provided by User",
+            "section1sub1Body": "• Name, nickname, age, gender, country, profile information, and optional profile photos you choose to upload.\n• Email address for registration, subscription, and support.\n• Interaction preferences, selected language, AI character choices, messages, voice transcripts, uploaded chat images, feedback, and support messages.",
+            "section1sub2Title": "1.2 Automatically Collected Data",
+            "section1sub2Body": "ChatFace may collect device type, operating system, approximate country/city derived from network signals, app usage data, crash logs, subscription status, and notification delivery data. Precise location is not requested during onboarding and is not required for AI chat or calls.",
+            "section2Title": "2. PURPOSES OF DATA PROCESSING",
+            "section2Body": "Your personal data is processed to operate the app, authenticate your account, provide AI chat and voice/video call features, personalize language and character interactions, process subscriptions, send notifications when enabled, prevent abuse, review user reports, improve reliability, and meet legal obligations. Your personal data is not sold or used for advertising.",
+            "section3Title": "3. AI PROCESSING AND THIRD-PARTY SHARING",
+            "section3Body": "To provide a better AI experience, ChatFace securely uses third-party providers, including OpenAI, to process the text, voice, images, and related data you submit. Messages, voice transcripts, selected language, profile context, conversation history, and uploaded chat images may be sent to OpenAI to generate AI replies and moderation outcomes. Speech audio may be sent to OpenAI or Deepgram for transcription depending on server configuration. Assistant text may be sent to ElevenLabs to create spoken audio. Uploaded profile and chat images, generated audio, and related media may be stored on BunnyCDN. OneSignal may process notification identifiers and delivery data. RevenueCat and the app stores process subscription and entitlement data. Social sign-in data may be processed by Apple, Google, or Facebook when you use those login methods. These providers are used only to perform the requested service and are expected to protect data under their own security and privacy terms. OpenAI API data is not used to train OpenAI models according to OpenAI API policies.",
+            "section4Title": "4. PHOTOS, CAMERA, MICROPHONE, AND FACE DATA",
+            "section4Body": "Camera access is used for local video-call preview when you start a video call. The camera preview stays on your device. ChatFace does not collect biometric face data, face templates, face geometry, face recognition identifiers, or face profiles. Uploaded profile photos and chat images may contain faces if you choose to upload them; these images are stored and processed only as user-provided photos for profile display or AI conversation context. Microphone access is used for voice and video conversations so your speech can be transcribed and answered by the AI.",
+            "section5Title": "5. DATA RETENTION AND DELETION",
+            "section5Body": "Account profile data, profile photos, conversation history, uploaded chat images, reports, notification settings, and subscription entitlement records are retained while your account is active or as needed for legal, security, fraud-prevention, and support purposes. When you delete your account, personal account records are deleted from ChatFace systems subject to required legal and operational retention. Media stored with third-party infrastructure is removed or made inaccessible according to our deletion process and provider retention behavior.",
+            "section6Title": "6. USER RIGHTS",
+            "section6Body": "Under applicable privacy laws, you may request access, correction, deletion, objection, restriction, or data portability for your personal data. You can contact us for these requests.",
+            "section7Title": "7. CHILDREN'S PRIVACY",
+            "section7Body": "ChatFace is not intended for users under the age of 18. We do not knowingly collect data from this age group; such accounts will be closed and data deleted upon detection.",
+            "section8Title": "8. CONTACT",
+            "section8Body": "For privacy inquiries: support@fly-work.com"
+        },
+        "termsOfService": {
+            "title": "Terms of Service",
+            "lastUpdated": "Last Updated: 2026",
+            "intro": "These Terms govern the use of the ChatFace mobile application. By using the app, you agree to these Terms.",
+            "disclaimer": "Disclaimer: ChatFace is an AI video interaction app. It does not provide legal, academic, medical, or professional consulting services.",
+            "section1Title": "1. SCOPE OF SERVICE",
+            "section1Body": "ChatFace provides AI-powered video interaction experiences:\n\n• AI video calling and conversation.\n• Personalized interaction preferences.\n• Access to interaction history and records.\n\nServices do not constitute official opinions or professional guidance guarantees.",
+            "section2Title": "2. CONDITIONS OF USE",
+            "section2Body": "• You must be at least 18 years old (Under 18 access is prohibited).\n• You must provide accurate account information.\n• The app must be used for legal and personal purposes only.",
+            "section3Title": "3. PROHIBITED USES",
+            "section3Body": "Impersonation, hate speech, endangering child safety, security breach attempts, and manipulation of AI systems are strictly prohibited.",
+            "section4Title": "4. SUBSCRIPTIONS AND PAYMENTS",
+            "section4Body": "Premium features are subject to App Store and Google Play policies. Subscription cancellations and refunds are managed via the respective store settings.",
+            "section5Title": "5. CONTENT DISCLAIMER",
+            "section5Body": "Content is AI-generated and does not replace professional advice. ChatFace does not guarantee accuracy or fitness for a particular purpose.",
+            "section6Title": "6. INTELLECTUAL PROPERTY",
+            "section6Body": "All content including design, software, and algorithms belongs to ChatFace. Unauthorized reproduction or redistribution is prohibited.",
+            "section7Title": "7. GOVERNING LAW",
+            "section7Body": "These Terms are governed by the laws of the Republic of Turkey. Istanbul Central Courts shall have jurisdiction over disputes.",
+            "section8Title": "8. CONTACT",
+            "section8Body": "📩 For inquiries: support@fly-work.com"
+        },
+        "cookiePolicy": {
+            "title": "Cookie Policy",
+            "lastUpdated": "Last Updated: 2026",
+            "intro": "Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.",
+            "important": "This policy explains what cookies are, their purposes, and how you can manage your preferences.",
+            "section1Title": "1. WHAT ARE COOKIES?",
+            "section1Body": "Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.",
+            "section2Title": "2. WHICH TECHNOLOGIES DO WE USE?",
+            "section2Body": "Strictly Necessary Technologies\nRequired for session management and security controls. The app may not function properly without these components.\n\nPerformance and Analytics\nHelps us understand which stories are read and which areas need improvement. Data is evaluated anonymously.\n\nPersonalization\nRemembers settings like language preference and reading level to provide a tailored experience for the child.",
+            "section3Title": "3. WHY DO WE USE THESE TECHNOLOGIES?",
+            "section3Body": "• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.",
+            "section4Title": "4. THIRD-PARTY TECHNOLOGIES",
+            "section4Body": "Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.",
+            "section5Title": "5. COOKIE CONTROL AND MANAGEMENT",
+            "section5Body": "Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.",
+            "section6Title": "6. CONTACT",
+            "section6Body": "📩 For inquiries: support@fly-work.com"
+        }
+    },
+    "cookies": "Cookies Policy",
+    "privacy": "Privacy Policy",
+    "onboarding": {
+        "step5": {
+            "permissionRequired": "Permission required",
+            "notNow": "Not now",
+            "openSettings": "Open settings",
+            "title": "Permissions",
+            "permission1": "Camera Access",
+            "permission1Subtitle": "ChatFace uses your camera for video calls with AI characters.",
+            "permission2": "Microphone Access",
+            "permission2Subtitle": "ChatFace uses your microphone for voice and video calls.",
+            "permission3": "Location Access",
+            "permission3Subtitle": "ChatFace uses your location to personalize your experience."
+        },
+        "step1": {
+            "title": "What is your Name?",
+            "subtitle": "Please enter your name",
+            "hint": "Full Name"
+        },
+        "step2": {
+            "title": "What is your Age?",
+            "subtitle": "You must be at least 18 years old to register."
+        },
+        "step3": {
+            "title": "What is your Gender?",
+            "subtitle": "Please select your gender",
+            "male": "Male",
+            "female": "Female",
+            "dontWantToMention": "I don't want to mention it."
+        },
+        "step4": {
+            "title": "Have Fun While \nStaying Safe",
+            "entry1": "We Maintain Order",
+            "subentry1": "Real-time AI Monitoring Open",
+            "entry2": "Screen Recordings",
+            "subentry2": "No Recording Without Consent",
+            "entry3": "24/7 Support",
+            "subentry3": "Complaints Are Reviewed At Any Time Of The Day",
+            "entry4": "18+ only",
+            "subentry4": "Not Suitable For Minors",
+            "communityRules": "Community Rules"
+        },
+        "loading": {
+            "titlePart1": "Your Personal Account is\n",
+            "titlePart2": "Being Created",
+            "subtitle": "Please wait, your profile is being prepared."
+        },
+        "final": {
+            "titlePart1": "Your Personal Account is\n",
+            "titlePart2": "Created",
+            "subtitle": "Enjoy communication with any character"
+        },
+        "allowAccess": "Allow Access",
+        "iUnderstand": "I Understand"
+    },
+    "pressBackAgainToExit": "Press back again to exit",
+    "splash": {
+        "initial": {
+            "hello": "Hello",
+            "title": "PLAYFUL ENGLISH FOR KIDS"
+        },
+        "screen1": {
+            "title": "Learning English \nCan Feel Like Play",
+            "description": "Short, playful lessons help kids learn new words without pressure."
+        },
+        "screen2": {
+            "title": "Listen, Repeat, and \nLearn New Words",
+            "description": "Simple voice activities help kids practice pronunciation step by step."
+        },
+        "screen3": {
+            "title": "Build Confidence, \nOne Word at a Time",
+            "description": "Designed for young learners with simple activities, friendly guidance, and a safe learning flow.",
+            "option1": "️🛡️ Safe For Kids",
+            "option2": "🌱 No pressure learning",
+            "option3": "⭐️ Made for young learners"
+        }
+    },
+    "auth": {
+        "google": "Continue with Google",
+        "facebook": "Continue with Facebook",
+        "apple": "Continue with Apple",
+        "guest": "Continue as Guest",
+        "signInFailed": "Sign-in failed: $error"
+    },
+    "home": {
+        "seeAll": "See All",
+        "more": "More",
+        "online": "Online",
+        "offline": "Offline",
+        "placeholders": {
+            "fashionDesigner": "Fashion Designer",
+            "comedian": "Comedian",
+            "influencer": "Influencer",
+            "teacher": "Teacher",
+            "friend": "Friend"
+        },
+        "greeting": "Hello,",
+        "guest": "Guest",
+        "thisWeek": "This Week",
+        "continueLearning": "Continue Learning",
+        "allLessons": "All Lessons",
+        "startLearning": "Start learning",
+        "resumeActivity": "Resume $activity",
+        "continueButton": "Continue"
+    },
+    "notifications": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "weekAgo": "${week} week ago",
+        "monthAgo": "${month} month ago",
+        "yearAgo": "${year} year ago",
+        "noNotifications": "No notifications yet.",
+        "noNotificationsSubtitle": "Don't forget to check again when you receive the notification.",
+        "allDeleted": "All notifications have been successfully deleted"
+    },
+    "editProfile": {
+        "aboutMe": "About Me",
+        "aboutMeHint": "Write something about yourself",
+        "fullName": "Full Name",
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "dontWantToMention": "I don't want to mention it.",
+        "country": "Country",
+        "languagePreferences": "Language Preferences",
+        "selectLanguage": "Add your preferred language",
+        "saved": "Saved",
+        "changesSaved": "Changes have been saved."
+    },
+    "settingsSupport": {
+        "title": "Settings & Support",
+        "premiumTitle": "Unlimited access \nto all features",
+        "getPremium": "Get Premium",
+        "settingsHub": "Settings Hub",
+        "shareTheApp": "Share the App",
+        "rateUs": "Rate Us",
+        "version": "Version",
+        "notifications": "Notifications",
+        "accountManagement": "Account Management",
+        "deleteAccount": "Delete Account",
+        "logOut": "Log Out",
+        "logOutTitle": "You are about to log out",
+        "logOutSubtitle": "See you again soon! \n We’ll miss you."
+    },
+    "deleteAccount": {
+        "title": "Delete Account",
+        "warning": "Are you sure you want to delete your account?",
+        "description": "This action cannot be undone, and all your history and data will be permanently deleted.",
+        "deleteFailed": "Account deletion failed: $error",
+        "steps": {
+            "step1": {
+                "title": "We don't want you to go, but we understand.",
+                "subtitle": "Can you tell us why you want to leave so we can improve the ChatFace experience?",
+                "option1": "I didn't find the AI characters realistic.",
+                "option2": "I am experiencing technical issues with video chats.",
+                "option3": "Subscription prices are above my expectations.",
+                "option4": "I couldn't find the type of characters I was looking for.",
+                "option5": "I just wanted to try it out for a short time.",
+                "option6": "Other"
+            },
+            "step2": {
+                "title": "If you delete your account, you will say goodbye to:",
+                "subtitle1": "Deep Connections and Memory:",
+                "subtitle1Desc": "The characters you chat with will completely forget their past with you, your shared secrets, and your personal habits.",
+                "subtitle2": "Video Call Privilege:",
+                "subtitle2Desc": "You will lose the right to communicate face-to-face with your AI partners, who are available to you anytime.",
+                "subtitle3": "Advanced Algorithm:",
+                "subtitle3Desc": "Your 'Just for You' character matches tailored to your preferences will be reset.",
+                "subtitle4": "Profile Data:",
+                "subtitle4Desc": "Your earned achievements, unlocked special characters, and chat history will be irreversibly deleted."
+            },
+            "step3": {
+                "title": "We have a special offer for you before you go!",
+                "description": "Maybe you just need a little more time or a better deal. Instead of deleting your account, would you consider these?",
+                "description1": "Keeping you with us is valuable. $offer on your next subscription! Would you like to continue with this offer?",
+                "description1Offer": "We've applied a 50% discount",
+                "description2": "We have given you $offer credits so you can see new characters you haven't discovered yet.",
+                "description2Offer": "3 free video calls",
+                "acceptOffer": "Accept 50% Discount Offer",
+                "deleteMyAccount": "Delete My Account"
+            }
+        }
+    },
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "premium": "Premium",
+    "profileEdit": "Profile Edit",
+    "settings": "Settings",
+    "undo": "Undo",
+    "successfully": "Successfully",
+    "save": "Save",
+    "languageOptions": {
+        "english": "English",
+        "chinese": "Chinese",
+        "german": "German",
+        "italian": "Italian",
+        "french": "French",
+        "japanese": "Japanese",
+        "spanish": "Spanish",
+        "russian": "Russian",
+        "turkish": "Turkish",
+        "korean": "Korean",
+        "hindi": "Hindi",
+        "portuguese": "Portuguese"
+    },
+    "common": {
+        "tryAgain": "Try Again",
+        "retry": "Retry",
+        "close": "Close"
+    },
+    "profileScreen": {
+        "title": "Profile",
+        "greeting": "Hello,",
+        "account": "ACCOUNT",
+        "app": "APP",
+        "statusLoading": "Status loading",
+        "premiumActive": "Active • Pro Member",
+        "freePlan": "Free Plan",
+        "loadFailed": "Profile information could not be loaded. Pull down to try again.",
+        "accountSettings": "Account Settings",
+        "accountSettingsGuestSubtitle": "Name and avatar",
+        "accountSettingsSubtitle": "Name, Photo, E-mail",
+        "manageSubscription": "Manage Subscription",
+        "screenTime": "Screen Time",
+        "rateApp": "Rate the App",
+        "supportUs": "Support us",
+        "rateComingSoon": "Rating will be available soon.",
+        "privacyPolicy": "Privacy Policy",
+        "privacySubtitle": "Protect data",
+        "termsOfService": "Terms of Service",
+        "termsSubtitle": "Data and terms",
+        "logout": "Log Out",
+        "logoutDialogTitle": "You are about to log\nout of your account",
+        "logoutFailed": "Could not log out. Please try again.",
+        "subscriptionFailed": "Subscription screen could not be opened. Please try again.",
+        "screenTimeMinutes": "Today $minutes minutes",
+        "screenTimeHours": "Today $hours hours",
+        "screenTimeHoursMinutes": "Today $hours hours $minutes minutes"
+    },
+    "editProfileScreen": {
+        "changeAvatar": "Change Avatar",
+        "email": "E-mail",
+        "emailHelper": "This field comes from your backend account.",
+        "deleteDialogTitle": "Are you sure want to\ndelete your account?",
+        "accountDeleteFailed": "Account could not be deleted. Please try again.",
+        "profileSaveFailed": "Profile could not be saved. Please try again."
+    },
+    "premiumAccess": {
+        "openFailed": "Premium screen could not be opened. Please try again."
+    },
+    "parentalGate": {
+        "barrierLabel": "Parental gate",
+        "question": "What is the result of this operation?"
+    }
+}

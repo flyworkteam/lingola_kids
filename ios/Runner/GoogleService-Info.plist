@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>395792097824-ge17gk0uv6hqaq1sd0bl2kmen62ja3rv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.395792097824-ge17gk0uv6hqaq1sd0bl2kmen62ja3rv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAYYw2IEcwxN_U9NQajpcCPsz1N1NCSBGI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>395792097824</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.flywork.lingolakidsapp</string>
+	<key>PROJECT_ID</key>
+	<string>lingola-kids</string>
+	<key>STORAGE_BUCKET</key>
+	<string>lingola-kids.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:395792097824:ios:5ad1e27ef51fb957add245</string>
+</dict>
+</plist>
