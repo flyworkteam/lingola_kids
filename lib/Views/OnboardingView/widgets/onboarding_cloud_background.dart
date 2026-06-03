@@ -17,7 +17,7 @@ class OnboardingCloudBackground extends StatelessWidget {
           child: SvgPicture.asset(AppIcons.splashScreen3CloudLeft1, width: 118),
         ),
         Positioned(
-          top: 138,
+          top: 400,
           left: 0,
           child: SvgPicture.asset(AppIcons.splashScreen3CloudLeft2, width: 92),
         ),

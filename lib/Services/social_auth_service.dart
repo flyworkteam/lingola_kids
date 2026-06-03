@@ -12,10 +12,22 @@ final socialAuthServiceProvider = Provider<SocialAuthService>((ref) {
 });
 
 class SocialAuthService {
+  static const _googleIosClientId =
+      '395792097824-ge17gk0uv6hqaq1sd0bl2kmen62ja3rv.apps.googleusercontent.com';
+  static const _googleServerClientId =
+      '395792097824-htddih19lauke1fufv99ifku8e17ded6.apps.googleusercontent.com';
+  static const _appleServiceId = 'com.flywork.lingolakidsapp.sid';
+  static final _appleRedirectUri = Uri.parse(
+    'https://lingola-kids.firebaseapp.com/__/auth/handler',
+  );
+
   Future<String?> signInWithGoogle() async {
     try {
       final googleSignIn = GoogleSignIn.instance;
-      await googleSignIn.initialize();
+      await googleSignIn.initialize(
+        clientId: _googleIosClientId,
+        serverClientId: _googleServerClientId,
+      );
 
       final GoogleSignInAccount account = await googleSignIn.authenticate();
 
@@ -60,10 +72,8 @@ class SocialAuthService {
         ],
         nonce: hashedNonce,
         webAuthenticationOptions: WebAuthenticationOptions(
-          clientId: 'com.flywork.chatface.android.sid',
-          redirectUri: Uri.parse(
-            'https://chatface-af028.firebaseapp.com/__/auth/handler',
-          ),
+          clientId: _appleServiceId,
+          redirectUri: _appleRedirectUri,
         ),
       );
 

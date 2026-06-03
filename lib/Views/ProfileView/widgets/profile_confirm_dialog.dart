@@ -34,8 +34,8 @@ Future<bool?> showProfileConfirmDialog({
                     title,
                     textAlign: TextAlign.center,
                     style: GoogleFonts.dynaPuff(
-                      fontSize: 26,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
                       color: Colors.black,
                       height: 1.18,
                     ),

@@ -1,24 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 
 class WeeklyProgressCard extends StatelessWidget {
-  const WeeklyProgressCard({this.weekActivity, super.key});
+  const WeeklyProgressCard({
+    this.weekActivity,
+    this.streakCount = 0,
+    super.key,
+  });
 
   final List<bool>? weekActivity;
-
-  static const _days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+  final int streakCount;
 
   @override
   Widget build(BuildContext context) {
+    final days = context.t.home.weekDays;
+    final todayIndex = DateTime.now().weekday - 1;
     final activity = List<bool>.generate(
-      _days.length,
+      days.length,
       (index) => weekActivity != null && index < weekActivity!.length
-          ? weekActivity![index]
+          ? weekActivity![index] && index <= todayIndex
           : false,
     );
-    final todayIndex = DateTime.now().weekday - 1;
+
+    if (streakCount > 0) {
+      final streakStartIndex = (todayIndex - streakCount + 1).clamp(
+        0,
+        todayIndex,
+      );
+      for (var index = streakStartIndex; index <= todayIndex; index += 1) {
+        activity[index] = true;
+      }
+    }
 
     return Container(
       padding: const EdgeInsets.all(8),
@@ -35,16 +50,14 @@ class WeeklyProgressCard extends StatelessWidget {
         ],
       ),
       child: Row(
-        children: List.generate(_days.length, (index) {
+        children: List.generate(days.length, (index) {
           final isDone = activity[index];
           final isToday = index == todayIndex;
           return Expanded(
             child: Padding(
-              padding: EdgeInsets.only(
-                right: index == _days.length - 1 ? 0 : 7,
-              ),
+              padding: EdgeInsets.only(right: index == days.length - 1 ? 0 : 7),
               child: _DayTile(
-                label: _days[index],
+                label: days[index],
                 isActive: isDone,
                 icon: isDone && isToday
                     ? SvgPicture.asset(
@@ -52,11 +65,13 @@ class WeeklyProgressCard extends StatelessWidget {
                         width: 26,
                         height: 26,
                       )
-                    : Icon(
-                        isDone ? Icons.check_rounded : null,
-                        size: 31,
-                        color: const Color(0xFFFF972C),
-                      ),
+                    : isDone
+                    ? SvgPicture.asset(
+                        AppLearningAssets.tick,
+                        width: 20,
+                        height: 20,
+                      )
+                    : SizedBox.shrink(),
               ),
             ),
           );

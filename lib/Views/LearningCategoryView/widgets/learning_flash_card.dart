@@ -18,51 +18,52 @@ class LearningFlashCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.white,
-      borderRadius: BorderRadius.circular(20),
-      elevation: 8,
-      shadowColor: Colors.black.withValues(alpha: 0.14),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(20),
-        onTap: onTap,
-        child: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.all(24),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: const Color(0xFFFFC08A), width: 2),
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 220),
+              transitionBuilder: (child, animation) {
+                return FadeTransition(
+                  opacity: animation,
+                  child: ScaleTransition(
+                    scale: Tween<double>(
+                      begin: 0.96,
+                      end: 1,
+                    ).animate(animation),
+                    child: child,
+                  ),
+                );
+              },
+              child: Center(key: ValueKey('front-$label'), child: front),
+            ),
           ),
-          child: AnimatedSwitcher(
-            duration: const Duration(milliseconds: 220),
-            transitionBuilder: (child, animation) {
-              return FadeTransition(
-                opacity: animation,
-                child: ScaleTransition(
-                  scale: Tween<double>(begin: 0.92, end: 1).animate(animation),
-                  child: child,
+          const SizedBox(height: 22),
+          Container(
+            constraints: const BoxConstraints(minWidth: 180, maxWidth: 240),
+            padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 14),
+            decoration: BoxDecoration(
+              color: AlphabetPageShell.orange,
+              borderRadius: BorderRadius.circular(28),
+            ),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                label.toUpperCase(),
+                textAlign: TextAlign.center,
+                style: GoogleFonts.dynaPuff(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 0,
+                  color: Colors.white,
                 ),
-              );
-            },
-            child: showBack
-                ? Center(
-                    key: ValueKey('back-$label'),
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Text(
-                        label,
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.dynaPuff(
-                          fontSize: 44,
-                          fontWeight: FontWeight.w700,
-                          color: AlphabetPageShell.orange,
-                        ),
-                      ),
-                    ),
-                  )
-                : Center(key: ValueKey('front-$label'), child: front),
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

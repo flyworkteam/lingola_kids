@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 
 class CorrectResultSheet extends StatelessWidget {
@@ -36,7 +37,7 @@ class CorrectResultSheet extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                isCorrect ? 'Correct' : 'Try Again',
+                isCorrect ? context.t.resultSheet.correct : context.t.resultSheet.tryAgain,
                 style: GoogleFonts.dynaPuff(
                   fontSize: 30,
                   fontWeight: FontWeight.w700,
@@ -49,7 +50,7 @@ class CorrectResultSheet extends StatelessWidget {
               const SizedBox(height: 12),
 
               Text(
-                isCorrect ? 'Harika gidiyorsun!' : 'Bir kez daha dene!',
+                isCorrect ? context.t.resultSheet.correctBody : context.t.resultSheet.tryAgainBody,
                 style: GoogleFonts.quicksand(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
@@ -70,7 +71,7 @@ class CorrectResultSheet extends StatelessWidget {
                   ),
                   onPressed: onContinue,
                   child: Text(
-                    isCorrect ? 'Continue' : 'Try Again',
+                    isCorrect ? context.t.kContinue : context.t.resultSheet.tryAgain,
                     style: GoogleFonts.dynaPuff(
                       fontSize: 28,
                       fontWeight: FontWeight.w700,

@@ -1,3 +1,4 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -128,7 +129,7 @@ class _SpellingViewState extends State<SpellingView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'Spelling',
+          title: context.t.activities.spelling,
           trailing: GestureDetector(
             onTap: () => playLessonItemVoice(
               context,

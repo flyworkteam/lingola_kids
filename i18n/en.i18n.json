@@ -136,7 +136,29 @@
             "subtitle": "Enjoy communication with any character"
         },
         "allowAccess": "Allow Access",
-        "iUnderstand": "I Understand"
+        "iUnderstand": "I Understand",
+        "login": {
+            "title": "Continue Your\nLearning Journey",
+            "subtitle": "Save progress, unlock lessons, and\nkeep learning across devices.",
+            "failed": "Sign-in could not be completed."
+        },
+        "reward": {
+            "points": "⭐️ +50 points",
+            "title": "Great Work 🎉",
+            "subtitle": "200+ more lessons are waiting for you!",
+            "progressLabel": "First step completed!",
+            "featureAlphabetTitle": "Full Alphabet & Numbers",
+            "featureAlphabetSubtitle": "200+ interactive lessons",
+            "featureVoiceTitle": "Voice Pronunciation",
+            "featureVoiceSubtitle": "Audio support for every word",
+            "featureQuizTitle": "Playful Mini Quizzes",
+            "featureQuizSubtitle": "Learn while having fun",
+            "continueButton": "Keep Exploring"
+        },
+        "spellTitle": "Spell the word you see!",
+        "spellSubtitle": "Can you spell \"LION\"?",
+        "spellSuccessTitle": "Nice! It's LION",
+        "spellSuccessSubtitle": "tap to hear"
     },
     "pressBackAgainToExit": "Press back again to exit",
     "splash": {
@@ -186,7 +208,28 @@
         "allLessons": "All Lessons",
         "startLearning": "Start learning",
         "resumeActivity": "Resume $activity",
-        "continueButton": "Continue"
+        "continueButton": "Continue",
+        "weekDays": [
+            "MON",
+            "TUE",
+            "WED",
+            "THU",
+            "FRI",
+            "SAT",
+            "SUN"
+        ],
+        "lessons": {
+            "alphabet": "Alphabet",
+            "numbers": "Numbers",
+            "colors": "Colors",
+            "shapes": "Shapes",
+            "fruit": "Fruit",
+            "vegetables": "Vegetables",
+            "sports": "Sports",
+            "fillIn": "Fill in",
+            "fillInBlank": "Fill in the Blank"
+        },
+        "lessonProgress": "Lesson $current of $total"
     },
     "notifications": {
         "today": "Today",
@@ -335,6 +378,28 @@
     },
     "parentalGate": {
         "barrierLabel": "Parental gate",
-        "question": "What is the result of this operation?"
+        "question": "What is the result of this operation?",
+        "submit": "Submit"
+    },
+    "activities": {
+        "flashCards": "Flash Cards",
+        "drawing": "Drawing",
+        "flipCards": "Flip Cards",
+        "trueFalse": "True False",
+        "spelling": "Spelling"
+    },
+    "resultSheet": {
+        "correct": "Correct",
+        "tryAgain": "Try Again",
+        "correctBody": "You are doing great!",
+        "tryAgainBody": "Try one more time!"
+    },
+    "trueFalseView": {
+        "isThisLetter": "Is this letter ${letter}?",
+        "isThisNumber": "Is this number ${number}?",
+        "isThisShape": "Is this shape ${shape}?",
+        "isThisSubject": "Is this ${subject}?",
+        "trueText": "True",
+        "falseText": "False"
     }
 }

@@ -1,8 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_cloud_background.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_primary_button.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 
 class OnboardingLoginPage extends StatelessWidget {
@@ -21,6 +23,17 @@ class OnboardingLoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = context.t;
+    final authButtons = defaultTargetPlatform == TargetPlatform.iOS
+        ? [
+            _AuthButtonConfig.apple(t.auth.apple, onApple),
+            _AuthButtonConfig.google(t.auth.google, onGoogle),
+          ]
+        : [
+            _AuthButtonConfig.google(t.auth.google, onGoogle),
+            _AuthButtonConfig.apple(t.auth.apple, onApple),
+          ];
+
     return OnboardingCloudBackground(
       child: SafeArea(
         child: Padding(
@@ -31,7 +44,7 @@ class OnboardingLoginPage extends StatelessWidget {
               SvgPicture.asset(AppIcons.loginElephant, height: 290),
               const Spacer(),
               Text(
-                'Continue Your\nLearning Journey',
+                t.onboarding.login.title,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.dynaPuff(
                   fontSize: 32,
@@ -42,7 +55,7 @@ class OnboardingLoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               Text(
-                'Save progress, unlock lessons, and\nkeep learning across devices.',
+                t.onboarding.login.subtitle,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.quicksand(
                   fontSize: 17,
@@ -52,31 +65,21 @@ class OnboardingLoginPage extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              OnboardingAuthButton(
-                label: 'Continue with Google',
-                color: Colors.white,
-                textColor: Colors.black,
-                enabled: !isLoading,
-                leading: SvgPicture.asset(
-                  AppIcons.google,
-                  width: 22,
-                  height: 22,
+              for (var i = 0; i < authButtons.length; i++) ...[
+                OnboardingAuthButton(
+                  label: authButtons[i].label,
+                  color: authButtons[i].color,
+                  textColor: authButtons[i].textColor,
+                  enabled: !isLoading,
+                  leading: SvgPicture.asset(
+                    authButtons[i].icon,
+                    width: 22,
+                    height: 22,
+                  ),
+                  onTap: authButtons[i].onTap,
                 ),
-                onTap: onGoogle,
-              ),
-              const SizedBox(height: 12),
-              OnboardingAuthButton(
-                label: 'Continue with Apple',
-                color: Colors.black,
-                textColor: Colors.white,
-                enabled: !isLoading,
-                leading: SvgPicture.asset(
-                  AppIcons.apple,
-                  width: 22,
-                  height: 22,
-                ),
-                onTap: onApple,
-              ),
+                if (i != authButtons.length - 1) const SizedBox(height: 12),
+              ],
               TextButton(
                 onPressed: isLoading ? null : onGuest,
                 child: isLoading
@@ -84,9 +87,13 @@ class OnboardingLoginPage extends StatelessWidget {
                         dimension: 18,
                         child: CircularProgressIndicator(strokeWidth: 2),
                       )
-                    : const Text(
-                        'Continue as Guest',
-                        style: TextStyle(color: Colors.black),
+                    : Text(
+                        t.auth.guest,
+                        style: GoogleFonts.manrope(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                        ),
                       ),
               ),
             ],
@@ -95,4 +102,40 @@ class OnboardingLoginPage extends StatelessWidget {
       ),
     );
   }
+}
+
+class _AuthButtonConfig {
+  const _AuthButtonConfig({
+    required this.label,
+    required this.icon,
+    required this.color,
+    required this.textColor,
+    required this.onTap,
+  });
+
+  factory _AuthButtonConfig.google(String label, VoidCallback onTap) {
+    return _AuthButtonConfig(
+      label: label,
+      icon: AppIcons.google,
+      color: Colors.white,
+      textColor: Colors.black,
+      onTap: onTap,
+    );
+  }
+
+  factory _AuthButtonConfig.apple(String label, VoidCallback onTap) {
+    return _AuthButtonConfig(
+      label: label,
+      icon: AppIcons.apple,
+      color: Colors.black,
+      textColor: Colors.white,
+      onTap: onTap,
+    );
+  }
+
+  final String label;
+  final String icon;
+  final Color color;
+  final Color textColor;
+  final VoidCallback onTap;
 }

@@ -1,3 +1,4 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_result_overlay.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/models/learning_item_model.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/widgets/learning_item_asset.dart';
+import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/progress_reporting.dart';
 import 'package:lingola_kids/utils/voice_playback.dart';
@@ -137,20 +139,20 @@ class _LearningTrueFalseViewState extends State<LearningTrueFalseView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'True False',
+          title: context.t.activities.trueFalse,
           trailing: IconButton(
             onPressed: () => playLessonItemVoice(
               context,
               lessonSlug: widget.lessonSlug,
               itemKey: lessonItemKey(askedItem.name),
             ),
-            icon: const Icon(Icons.volume_up_outlined, color: Colors.black),
+            icon: SvgPicture.asset(AppIcons.onboardingSound),
           ),
           child: Column(
             children: [
               const SizedBox(height: 28),
               Text(
-                'Is this $subjectText${askedItem.name}?',
+                context.t.trueFalseView.isThisSubject(subject: '$subjectText${askedItem.name}'),
                 textAlign: TextAlign.center,
                 style: GoogleFonts.dynaPuff(
                   fontSize: 20,
@@ -176,7 +178,7 @@ class _LearningTrueFalseViewState extends State<LearningTrueFalseView> {
                 children: [
                   Expanded(
                     child: _AnswerButton(
-                      label: 'False',
+                      label: context.t.trueFalseView.falseText,
                       assetPath: null,
                       icon: Icons.close_rounded,
                       color: AlphabetPageShell.red,
@@ -186,7 +188,7 @@ class _LearningTrueFalseViewState extends State<LearningTrueFalseView> {
                   const SizedBox(width: 36),
                   Expanded(
                     child: _AnswerButton(
-                      label: 'True',
+                      label: context.t.trueFalseView.trueText,
                       assetPath: null,
                       icon: Icons.check_rounded,
                       color: AlphabetPageShell.green,

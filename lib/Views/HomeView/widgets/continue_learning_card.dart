@@ -25,8 +25,8 @@ class ContinueLearningCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         onTap: onTap,
         child: Container(
-          constraints: const BoxConstraints(minHeight: 106),
-          padding: const EdgeInsets.fromLTRB(36, 11, 12, 11),
+          constraints: const BoxConstraints(minHeight: 100),
+          padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
           decoration: BoxDecoration(
             color: const Color(0xFFFFEBD8),
             borderRadius: BorderRadius.circular(15),
@@ -35,17 +35,22 @@ class ContinueLearningCard extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 58,
-                height: 74,
+                width: 76,
+                height: 76,
                 decoration: BoxDecoration(
                   color: const Color(0xFFFFF7F0),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Center(
-                  child: SvgPicture.asset(assetPath, width: 58, height: 58),
+                  child: SvgPicture.asset(
+                    assetPath,
+                    width: 62,
+                    height: 62,
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
-              const SizedBox(width: 12),
+              const SizedBox(width: 16),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -62,20 +67,27 @@ class ContinueLearningCard extends StatelessWidget {
                         color: Colors.black,
                       ),
                     ),
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 8),
                     Text(
                       subtitle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.quicksand(
                         fontSize: 18,
                         fontWeight: FontWeight.w800,
-                        color: const Color(0xFF8A817A),
+                        letterSpacing: 0,
+                        color: const Color(0xFF7F766D),
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
-              SvgPicture.asset(AppLearningAssets.continueArrow, width: 72),
+              const SizedBox(width: 12),
+              SvgPicture.asset(
+                AppLearningAssets.continueArrow,
+                width: 76,
+                fit: BoxFit.contain,
+              ),
             ],
           ),
         ),

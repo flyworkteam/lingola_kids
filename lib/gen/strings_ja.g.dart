@@ -73,6 +73,9 @@ class TranslationsJa with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsEditProfileScreenJa editProfileScreen = _TranslationsEditProfileScreenJa._(_root);
 	@override late final _TranslationsPremiumAccessJa premiumAccess = _TranslationsPremiumAccessJa._(_root);
 	@override late final _TranslationsParentalGateJa parentalGate = _TranslationsParentalGateJa._(_root);
+	@override late final _TranslationsActivitiesJa activities = _TranslationsActivitiesJa._(_root);
+	@override late final _TranslationsResultSheetJa resultSheet = _TranslationsResultSheetJa._(_root);
+	@override late final _TranslationsTrueFalseViewJa trueFalseView = _TranslationsTrueFalseViewJa._(_root);
 }
 
 // Path: termOfService
@@ -110,6 +113,12 @@ class _TranslationsOnboardingJa implements TranslationsOnboardingEn {
 	@override late final _TranslationsOnboardingKFinalJa kFinal = _TranslationsOnboardingKFinalJa._(_root);
 	@override String get allowAccess => 'Allow Access';
 	@override String get iUnderstand => 'I Understand';
+	@override late final _TranslationsOnboardingLoginJa login = _TranslationsOnboardingLoginJa._(_root);
+	@override late final _TranslationsOnboardingRewardJa reward = _TranslationsOnboardingRewardJa._(_root);
+	@override String get spellTitle => 'Spell the word you see!';
+	@override String get spellSubtitle => 'Can you spell "LION"?';
+	@override String get spellSuccessTitle => 'Nice! It\'s LION';
+	@override String get spellSuccessSubtitle => 'tap to hear';
 }
 
 // Path: splash
@@ -159,6 +168,17 @@ class _TranslationsHomeJa implements TranslationsHomeEn {
 	@override String get startLearning => 'Start learning';
 	@override String resumeActivity({required Object activity}) => 'Resume ${activity}';
 	@override String get continueButton => 'Continue';
+	@override List<String> get weekDays => [
+		'MON',
+		'TUE',
+		'WED',
+		'THU',
+		'FRI',
+		'SAT',
+		'SUN',
+	];
+	@override late final _TranslationsHomeLessonsJa lessons = _TranslationsHomeLessonsJa._(_root);
+	@override String lessonProgress({required Object current, required Object total}) => 'Lesson ${current} of ${total}';
 }
 
 // Path: notifications
@@ -338,6 +358,49 @@ class _TranslationsParentalGateJa implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => 'Parental gate';
 	@override String get question => 'What is the result of this operation?';
+	@override String get submit => 'Submit';
+}
+
+// Path: activities
+class _TranslationsActivitiesJa implements TranslationsActivitiesEn {
+	_TranslationsActivitiesJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String get flashCards => 'Flash Cards';
+	@override String get drawing => 'Drawing';
+	@override String get flipCards => 'Flip Cards';
+	@override String get trueFalse => 'True False';
+	@override String get spelling => 'Spelling';
+}
+
+// Path: resultSheet
+class _TranslationsResultSheetJa implements TranslationsResultSheetEn {
+	_TranslationsResultSheetJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String get correct => 'Correct';
+	@override String get tryAgain => 'Try Again';
+	@override String get correctBody => 'You are doing great!';
+	@override String get tryAgainBody => 'Try one more time!';
+}
+
+// Path: trueFalseView
+class _TranslationsTrueFalseViewJa implements TranslationsTrueFalseViewEn {
+	_TranslationsTrueFalseViewJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String isThisLetter({required Object letter}) => 'Is this letter ${letter}?';
+	@override String isThisNumber({required Object number}) => 'Is this number ${number}?';
+	@override String isThisShape({required Object shape}) => 'Is this shape ${shape}?';
+	@override String isThisSubject({required Object subject}) => 'Is this ${subject}?';
+	@override String get trueText => 'True';
+	@override String get falseText => 'False';
 }
 
 // Path: termOfService.privacyPolicy
@@ -524,6 +587,38 @@ class _TranslationsOnboardingKFinalJa implements TranslationsOnboardingKFinalEn 
 	@override String get subtitle => 'Enjoy communication with any character';
 }
 
+// Path: onboarding.login
+class _TranslationsOnboardingLoginJa implements TranslationsOnboardingLoginEn {
+	_TranslationsOnboardingLoginJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Continue Your\nLearning Journey';
+	@override String get subtitle => 'Save progress, unlock lessons, and\nkeep learning across devices.';
+	@override String get failed => 'Sign-in could not be completed.';
+}
+
+// Path: onboarding.reward
+class _TranslationsOnboardingRewardJa implements TranslationsOnboardingRewardEn {
+	_TranslationsOnboardingRewardJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String get points => '⭐️ +50 points';
+	@override String get title => 'Great Work 🎉';
+	@override String get subtitle => '200+ more lessons are waiting for you!';
+	@override String get progressLabel => 'First step completed!';
+	@override String get featureAlphabetTitle => 'Full Alphabet & Numbers';
+	@override String get featureAlphabetSubtitle => '200+ interactive lessons';
+	@override String get featureVoiceTitle => 'Voice Pronunciation';
+	@override String get featureVoiceSubtitle => 'Audio support for every word';
+	@override String get featureQuizTitle => 'Playful Mini Quizzes';
+	@override String get featureQuizSubtitle => 'Learn while having fun';
+	@override String get continueButton => 'Keep Exploring';
+}
+
 // Path: splash.initial
 class _TranslationsSplashInitialJa implements TranslationsSplashInitialEn {
 	_TranslationsSplashInitialJa._(this._root);
@@ -583,6 +678,24 @@ class _TranslationsHomePlaceholdersJa implements TranslationsHomePlaceholdersEn 
 	@override String get influencer => 'Influencer';
 	@override String get teacher => 'Teacher';
 	@override String get friend => 'Friend';
+}
+
+// Path: home.lessons
+class _TranslationsHomeLessonsJa implements TranslationsHomeLessonsEn {
+	_TranslationsHomeLessonsJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String get alphabet => 'Alphabet';
+	@override String get numbers => 'Numbers';
+	@override String get colors => 'Colors';
+	@override String get shapes => 'Shapes';
+	@override String get fruit => 'Fruit';
+	@override String get vegetables => 'Vegetables';
+	@override String get sports => 'Sports';
+	@override String get fillIn => 'Fill in';
+	@override String get fillInBlank => 'Fill in the Blank';
 }
 
 // Path: deleteAccount.steps
@@ -772,6 +885,24 @@ extension on TranslationsJa {
 			'onboarding.kFinal.subtitle' => 'Enjoy communication with any character',
 			'onboarding.allowAccess' => 'Allow Access',
 			'onboarding.iUnderstand' => 'I Understand',
+			'onboarding.login.title' => 'Continue Your\nLearning Journey',
+			'onboarding.login.subtitle' => 'Save progress, unlock lessons, and\nkeep learning across devices.',
+			'onboarding.login.failed' => 'Sign-in could not be completed.',
+			'onboarding.reward.points' => '⭐️ +50 points',
+			'onboarding.reward.title' => 'Great Work 🎉',
+			'onboarding.reward.subtitle' => '200+ more lessons are waiting for you!',
+			'onboarding.reward.progressLabel' => 'First step completed!',
+			'onboarding.reward.featureAlphabetTitle' => 'Full Alphabet & Numbers',
+			'onboarding.reward.featureAlphabetSubtitle' => '200+ interactive lessons',
+			'onboarding.reward.featureVoiceTitle' => 'Voice Pronunciation',
+			'onboarding.reward.featureVoiceSubtitle' => 'Audio support for every word',
+			'onboarding.reward.featureQuizTitle' => 'Playful Mini Quizzes',
+			'onboarding.reward.featureQuizSubtitle' => 'Learn while having fun',
+			'onboarding.reward.continueButton' => 'Keep Exploring',
+			'onboarding.spellTitle' => 'Spell the word you see!',
+			'onboarding.spellSubtitle' => 'Can you spell "LION"?',
+			'onboarding.spellSuccessTitle' => 'Nice! It\'s LION',
+			'onboarding.spellSuccessSubtitle' => 'tap to hear',
 			'pressBackAgainToExit' => 'Press back again to exit',
 			'splash.initial.hello' => 'Hello',
 			'splash.initial.title' => 'PLAYFUL ENGLISH FOR KIDS',
@@ -806,6 +937,23 @@ extension on TranslationsJa {
 			'home.startLearning' => 'Start learning',
 			'home.resumeActivity' => ({required Object activity}) => 'Resume ${activity}',
 			'home.continueButton' => 'Continue',
+			'home.weekDays.0' => 'MON',
+			'home.weekDays.1' => 'TUE',
+			'home.weekDays.2' => 'WED',
+			'home.weekDays.3' => 'THU',
+			'home.weekDays.4' => 'FRI',
+			'home.weekDays.5' => 'SAT',
+			'home.weekDays.6' => 'SUN',
+			'home.lessons.alphabet' => 'Alphabet',
+			'home.lessons.numbers' => 'Numbers',
+			'home.lessons.colors' => 'Colors',
+			'home.lessons.shapes' => 'Shapes',
+			'home.lessons.fruit' => 'Fruit',
+			'home.lessons.vegetables' => 'Vegetables',
+			'home.lessons.sports' => 'Sports',
+			'home.lessons.fillIn' => 'Fill in',
+			'home.lessons.fillInBlank' => 'Fill in the Blank',
+			'home.lessonProgress' => ({required Object current, required Object total}) => 'Lesson ${current} of ${total}',
 			'notifications.today' => 'Today',
 			'notifications.yesterday' => 'Yesterday',
 			'notifications.weekAgo' => ({required Object week}) => '${week} week ago',
@@ -927,6 +1075,22 @@ extension on TranslationsJa {
 			'premiumAccess.openFailed' => 'Premium screen could not be opened. Please try again.',
 			'parentalGate.barrierLabel' => 'Parental gate',
 			'parentalGate.question' => 'What is the result of this operation?',
+			'parentalGate.submit' => 'Submit',
+			'activities.flashCards' => 'Flash Cards',
+			'activities.drawing' => 'Drawing',
+			'activities.flipCards' => 'Flip Cards',
+			'activities.trueFalse' => 'True False',
+			'activities.spelling' => 'Spelling',
+			'resultSheet.correct' => 'Correct',
+			'resultSheet.tryAgain' => 'Try Again',
+			'resultSheet.correctBody' => 'You are doing great!',
+			'resultSheet.tryAgainBody' => 'Try one more time!',
+			'trueFalseView.isThisLetter' => ({required Object letter}) => 'Is this letter ${letter}?',
+			'trueFalseView.isThisNumber' => ({required Object number}) => 'Is this number ${number}?',
+			'trueFalseView.isThisShape' => ({required Object shape}) => 'Is this shape ${shape}?',
+			'trueFalseView.isThisSubject' => ({required Object subject}) => 'Is this ${subject}?',
+			'trueFalseView.trueText' => 'True',
+			'trueFalseView.falseText' => 'False',
 			_ => null,
 		};
 	}

@@ -24,7 +24,7 @@ class ProfileAvatar extends StatelessWidget {
         child: InkWell(
           customBorder: const CircleBorder(),
           onTap: onTap,
-          child: _AvatarImage(assetPath: assetPath),
+          child: _AvatarImage(assetPath: assetPath, size: size),
         ),
       ),
     );
@@ -32,9 +32,10 @@ class ProfileAvatar extends StatelessWidget {
 }
 
 class _AvatarImage extends StatelessWidget {
-  const _AvatarImage({required this.assetPath});
+  const _AvatarImage({required this.assetPath, required this.size});
 
   final String assetPath;
+  final double size;
 
   @override
   Widget build(BuildContext context) {
@@ -42,16 +43,15 @@ class _AvatarImage extends StatelessWidget {
       return SvgPicture.asset(assetPath, fit: BoxFit.cover);
     }
 
-    return Container(
-      color: const Color(0xFFFFD43D),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 6),
-        child: Image.asset(
-          assetPath,
-          fit: BoxFit.cover,
-          alignment: Alignment.topCenter,
-        ),
+    return Image(
+      image: ResizeImage(
+        AssetImage(assetPath),
+        width: (size * 3).round(),
+        height: (size * 3).round(),
       ),
+      fit: BoxFit.cover,
+      filterQuality: FilterQuality.high,
+      alignment: Alignment.topCenter,
     );
   }
 }

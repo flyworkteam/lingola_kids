@@ -1,3 +1,4 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:flutter/material.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_navigation_arrows.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
@@ -59,7 +60,7 @@ class _NumberFlashCardsViewState extends State<NumberFlashCardsView> {
     final number = NumberData.numbers[_currentIndex];
 
     return AlphabetPageShell(
-      title: 'Flash Cards',
+      title: context.t.activities.flashCards,
       bottom: Padding(
         padding: const EdgeInsets.only(bottom: 2),
         child: AlphabetNavigationArrows(

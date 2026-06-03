@@ -1,3 +1,4 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -123,7 +124,7 @@ class _TrueFalseViewState extends State<TrueFalseView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'True False',
+          title: context.t.activities.trueFalse,
           trailing: GestureDetector(
             onTap: () => playLessonItemVoice(
               context,
@@ -136,7 +137,7 @@ class _TrueFalseViewState extends State<TrueFalseView> {
             children: [
               const SizedBox(height: 28),
               Text(
-                'Is this letter ${askedLetter.letter}?',
+                context.t.trueFalseView.isThisLetter(letter: askedLetter.letter),
                 textAlign: TextAlign.center,
                 style: GoogleFonts.dynaPuff(
                   fontSize: 24,
@@ -163,7 +164,7 @@ class _TrueFalseViewState extends State<TrueFalseView> {
                 children: [
                   Expanded(
                     child: _AnswerButton(
-                      label: 'False',
+                      label: context.t.trueFalseView.falseText,
                       icon: AppIcons.falseIcon,
                       color: AlphabetPageShell.red,
                       onTap: () => _answer(false),
@@ -172,7 +173,7 @@ class _TrueFalseViewState extends State<TrueFalseView> {
                   const SizedBox(width: 36),
                   Expanded(
                     child: _AnswerButton(
-                      label: 'True',
+                      label: context.t.trueFalseView.trueText,
                       icon: AppIcons.trueIcon,
                       color: AlphabetPageShell.green,
                       onTap: () => _answer(true),

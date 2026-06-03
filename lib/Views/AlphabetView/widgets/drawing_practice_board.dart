@@ -277,7 +277,14 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
             fit: StackFit.expand,
             children: [
               Center(
-                child: SvgPicture.asset(widget.assetPath, fit: BoxFit.contain),
+                child: SvgPicture.asset(
+                  widget.assetPath,
+                  fit: BoxFit.contain,
+                  colorFilter: const ColorFilter.mode(
+                    Colors.black,
+                    BlendMode.srcIn,
+                  ),
+                ),
               ),
               CustomPaint(painter: _DrawingPainter(strokes: _strokes)),
             ],

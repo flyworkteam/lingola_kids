@@ -157,7 +157,9 @@ class SplashWidget2 extends StatelessWidget {
                   width: buttonWidth,
                   child: CustomButton(
                     label: context.t.get_started,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed('/onboarding');
+                    },
                     size: CustomButtonSize.large,
                     fullWidth: true,
                     backgroundColor: _buttonColor,

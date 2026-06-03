@@ -1,3 +1,4 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:flutter/material.dart';
 import 'package:lingola_kids/Views/AlphabetView/alphabet_data.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
@@ -33,7 +34,7 @@ class _FlipCardsViewState extends State<FlipCardsView> {
   @override
   Widget build(BuildContext context) {
     return AlphabetPageShell(
-      title: 'Flip Cards',
+      title: context.t.activities.flipCards,
       padding: const EdgeInsets.fromLTRB(15, 32, 15, 0),
       child: LetterAssetGrid(
         letters: AlphabetData.letters,

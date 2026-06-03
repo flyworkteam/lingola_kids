@@ -18,10 +18,11 @@ class OnboardingFeatureRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(9),
+      height: 70,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(28),
+        borderRadius: BorderRadius.circular(999),
         border: Border.all(color: const Color(0xFFFFC08A)),
       ),
       child: Row(
@@ -43,7 +44,7 @@ class OnboardingFeatureRow extends StatelessWidget {
                 Text(
                   subtitle,
                   style: GoogleFonts.quicksand(
-                    fontSize: 15,
+                    fontSize: 14,
                     fontWeight: FontWeight.w700,
                     color: const Color(0xFF858585),
                   ),

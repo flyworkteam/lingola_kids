@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lingola_kids/shared/custom_button.dart';
+import 'package:lingola_kids/theme/app_text_styles.dart';
 
 class OnboardingPrimaryButton extends StatelessWidget {
   const OnboardingPrimaryButton({
@@ -27,6 +28,11 @@ class OnboardingPrimaryButton extends StatelessWidget {
       fullWidth: true,
       backgroundColor: Color(0xFFF29033),
       labelColor: Colors.white,
+      labelStyle: AppTextStyles.body(
+        24,
+        weight: FontWeight.w700,
+        color: Colors.white,
+      ),
       shadow: [
         BoxShadow(
           color: Color(0xffA35810),
@@ -73,9 +79,9 @@ class OnboardingAuthButton extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 label,
-                style: GoogleFonts.quicksand(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w700,
+                style: GoogleFonts.manrope(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
                   color: textColor,
                 ),
               ),

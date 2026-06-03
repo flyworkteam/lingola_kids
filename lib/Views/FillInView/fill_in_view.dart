@@ -1,14 +1,17 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_navigation_arrows.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_result_overlay.dart';
 import 'package:lingola_kids/Views/FillInView/widgets/fill_in_puzzle_content.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/learning_category_data.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/models/learning_item_model.dart';
+import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/progress_reporting.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/voice_playback.dart';
 
 class FillInView extends StatefulWidget {
@@ -165,14 +168,14 @@ class _FillInViewState extends State<FillInView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'Fill in the Blank',
+          title: context.t.home.lessons.fillInBlank,
           trailing: IconButton(
             onPressed: () => playLessonItemVoice(
               context,
               lessonSlug: 'fill-in',
               itemKey: lessonItemKey(_currentAnimal.name),
             ),
-            icon: const Icon(Icons.volume_up_outlined, color: Colors.black),
+            icon: SvgPicture.asset(AppIcons.onboardingSound),
           ),
           bottom: Padding(
             padding: const EdgeInsets.only(bottom: 2),

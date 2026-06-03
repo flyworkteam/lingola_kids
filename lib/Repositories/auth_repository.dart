@@ -115,10 +115,10 @@ class AuthRepository {
     CancelToken? cancelToken,
   }) async {
     try {
-      final data = {
-        'identityToken': identityToken,
-        ...?(appleUserInfo == null ? null : {'user': appleUserInfo}),
-      };
+      final data = <String, dynamic>{'identityToken': identityToken};
+      if (appleUserInfo != null) {
+        data['user'] = appleUserInfo;
+      }
       final response = await _dioService.postRaw(
         'auth/apple',
         data: data,

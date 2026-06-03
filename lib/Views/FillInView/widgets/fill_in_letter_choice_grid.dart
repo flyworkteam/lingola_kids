@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lingola_kids/Views/FillInView/widgets/fill_in_choice_tile.dart';
 import 'package:lingola_kids/Views/FillInView/widgets/fill_in_styles.dart';
+import 'package:lingola_kids/utils/app_assets.dart';
 
 class FillInLetterChoiceGrid extends StatelessWidget {
   const FillInLetterChoiceGrid({
@@ -30,7 +32,7 @@ class FillInLetterChoiceGrid extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 4,
         crossAxisSpacing: 14,
-        mainAxisSpacing: 14,
+        mainAxisSpacing: 10,
         childAspectRatio: 1.05,
       ),
       itemBuilder: (context, index) {
@@ -39,14 +41,15 @@ class FillInLetterChoiceGrid extends StatelessWidget {
           return FillInChoiceTile(
             color: Colors.white,
             onTap: enabled ? onBackspaceTap : null,
-            child: const Icon(Icons.backspace_outlined, size: 32),
+            child: SvgPicture.asset(AppIcons.backspace, width: 32, height: 32),
           );
         }
 
         final choiceIndex = index;
-        final isSelected = selectedChoiceIndices.contains(choiceIndex);
+        final selectedOrder = selectedChoiceIndices.indexOf(choiceIndex);
+        final isSelected = selectedOrder != -1;
         final color = isSelected
-            ? FillInStyles.letterColors[index %
+            ? FillInStyles.letterColors[selectedOrder %
                   FillInStyles.letterColors.length]
             : Colors.white;
 

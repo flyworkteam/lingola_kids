@@ -37,21 +37,21 @@ class TranslationsIt with BaseTranslations<AppLocale, Translations> implements T
 	TranslationsIt $copyWith({TranslationMetadata<AppLocale, Translations>? meta}) => TranslationsIt(meta: meta ?? this.$meta);
 
 	// Translations
-	@override String welcome({required Object name}) => 'Welcome ${name}';
-	@override String welcome2({required Object appName}) => 'Welcome to ${appName}';
-	@override String get get_started => 'Get Started';
-	@override String get start_learning => 'Start Learning';
-	@override String get hello => 'Hello';
-	@override String get next => 'Next';
-	@override String get back => 'Back';
-	@override String get skip => 'Skip';
-	@override String get profile => 'Profile';
-	@override String get kContinue => 'Continue';
+	@override String welcome({required Object name}) => 'Benvenuto ${name}';
+	@override String welcome2({required Object appName}) => 'Benvenuto in ${appName}';
+	@override String get get_started => 'Inizia';
+	@override String get start_learning => 'Inizia a imparare';
+	@override String get hello => 'Ciao';
+	@override String get next => 'Prossimo';
+	@override String get back => 'Indietro';
+	@override String get skip => 'Saltare';
+	@override String get profile => 'Profilo';
+	@override String get kContinue => 'Continuare';
 	@override late final _TranslationsTermOfServiceIt termOfService = _TranslationsTermOfServiceIt._(_root);
-	@override String get cookies => 'Cookies Policy';
-	@override String get privacy => 'Privacy Policy';
+	@override String get cookies => 'Politica sui cookie';
+	@override String get privacy => 'politica sulla riservatezza';
 	@override late final _TranslationsOnboardingIt onboarding = _TranslationsOnboardingIt._(_root);
-	@override String get pressBackAgainToExit => 'Press back again to exit';
+	@override String get pressBackAgainToExit => 'Premi nuovamente indietro per uscire';
 	@override late final _TranslationsSplashIt splash = _TranslationsSplashIt._(_root);
 	@override late final _TranslationsAuthIt auth = _TranslationsAuthIt._(_root);
 	@override late final _TranslationsHomeIt home = _TranslationsHomeIt._(_root);
@@ -59,20 +59,23 @@ class TranslationsIt with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsEditProfileIt editProfile = _TranslationsEditProfileIt._(_root);
 	@override late final _TranslationsSettingsSupportIt settingsSupport = _TranslationsSettingsSupportIt._(_root);
 	@override late final _TranslationsDeleteAccountIt deleteAccount = _TranslationsDeleteAccountIt._(_root);
-	@override String get cancel => 'Cancel';
-	@override String get delete => 'Delete';
-	@override String get premium => 'Premium';
-	@override String get profileEdit => 'Profile Edit';
-	@override String get settings => 'Settings';
-	@override String get undo => 'Undo';
-	@override String get successfully => 'Successfully';
-	@override String get save => 'Save';
+	@override String get cancel => 'Cancellare';
+	@override String get delete => 'Eliminare';
+	@override String get premium => 'Premio';
+	@override String get profileEdit => 'Modifica profilo';
+	@override String get settings => 'Impostazioni';
+	@override String get undo => 'Disfare';
+	@override String get successfully => 'Con successo';
+	@override String get save => 'Salva';
 	@override late final _TranslationsLanguageOptionsIt languageOptions = _TranslationsLanguageOptionsIt._(_root);
 	@override late final _TranslationsCommonIt common = _TranslationsCommonIt._(_root);
 	@override late final _TranslationsProfileScreenIt profileScreen = _TranslationsProfileScreenIt._(_root);
 	@override late final _TranslationsEditProfileScreenIt editProfileScreen = _TranslationsEditProfileScreenIt._(_root);
 	@override late final _TranslationsPremiumAccessIt premiumAccess = _TranslationsPremiumAccessIt._(_root);
 	@override late final _TranslationsParentalGateIt parentalGate = _TranslationsParentalGateIt._(_root);
+	@override late final _TranslationsActivitiesIt activities = _TranslationsActivitiesIt._(_root);
+	@override late final _TranslationsResultSheetIt resultSheet = _TranslationsResultSheetIt._(_root);
+	@override late final _TranslationsTrueFalseViewIt trueFalseView = _TranslationsTrueFalseViewIt._(_root);
 }
 
 // Path: termOfService
@@ -82,12 +85,12 @@ class _TranslationsTermOfServiceIt implements TranslationsTermOfServiceEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get text1 => 'By signing up for ChatFace, you agree to our ';
-	@override String get link1 => 'Terms of Service';
-	@override String get text2 => '. Learn how we process your data in our ';
-	@override String get link2 => 'Privacy Policy';
-	@override String get text3 => ' and ';
-	@override String get link3 => 'Cookies Policy';
+	@override String get text1 => 'Iscrivendoti a ChatFace, accetti i nostri';
+	@override String get link1 => 'Termini di servizio';
+	@override String get text2 => '. Scopri come trattiamo i tuoi dati nel ns';
+	@override String get link2 => 'politica sulla riservatezza';
+	@override String get text3 => 'E';
+	@override String get link3 => 'Politica sui cookie';
 	@override String get text4 => '';
 	@override late final _TranslationsTermOfServicePrivacyPolicyIt privacyPolicy = _TranslationsTermOfServicePrivacyPolicyIt._(_root);
 	@override late final _TranslationsTermOfServiceTermsOfServiceIt termsOfService = _TranslationsTermOfServiceTermsOfServiceIt._(_root);
@@ -108,8 +111,14 @@ class _TranslationsOnboardingIt implements TranslationsOnboardingEn {
 	@override late final _TranslationsOnboardingStep4It step4 = _TranslationsOnboardingStep4It._(_root);
 	@override late final _TranslationsOnboardingLoadingIt loading = _TranslationsOnboardingLoadingIt._(_root);
 	@override late final _TranslationsOnboardingKFinalIt kFinal = _TranslationsOnboardingKFinalIt._(_root);
-	@override String get allowAccess => 'Allow Access';
-	@override String get iUnderstand => 'I Understand';
+	@override String get allowAccess => 'Consenti accesso';
+	@override String get iUnderstand => 'Capisco';
+	@override late final _TranslationsOnboardingLoginIt login = _TranslationsOnboardingLoginIt._(_root);
+	@override late final _TranslationsOnboardingRewardIt reward = _TranslationsOnboardingRewardIt._(_root);
+	@override String get spellTitle => 'Scrivi la parola che vedi!';
+	@override String get spellSubtitle => 'Sai scrivere LEONE?';
+	@override String get spellSuccessTitle => 'Carino! E\' LEONE';
+	@override String get spellSuccessSubtitle => 'tocca per ascoltare';
 }
 
 // Path: splash
@@ -132,11 +141,11 @@ class _TranslationsAuthIt implements TranslationsAuthEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get google => 'Continue with Google';
-	@override String get facebook => 'Continue with Facebook';
-	@override String get apple => 'Continue with Apple';
-	@override String get guest => 'Continue as Guest';
-	@override String signInFailed({required Object error}) => 'Sign-in failed: ${error}';
+	@override String get google => 'Continua con Google';
+	@override String get facebook => 'Continua con Facebook';
+	@override String get apple => 'Continua con Apple';
+	@override String get guest => 'Continua come ospite';
+	@override String signInFailed({required Object error}) => 'Accesso non riuscito: ${error}';
 }
 
 // Path: home
@@ -146,19 +155,30 @@ class _TranslationsHomeIt implements TranslationsHomeEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get seeAll => 'See All';
-	@override String get more => 'More';
-	@override String get online => 'Online';
-	@override String get offline => 'Offline';
+	@override String get seeAll => 'Vedi tutto';
+	@override String get more => 'Di più';
+	@override String get online => 'In linea';
+	@override String get offline => 'Non in linea';
 	@override late final _TranslationsHomePlaceholdersIt placeholders = _TranslationsHomePlaceholdersIt._(_root);
-	@override String get greeting => 'Hello,';
-	@override String get guest => 'Guest';
-	@override String get thisWeek => 'This Week';
-	@override String get continueLearning => 'Continue Learning';
-	@override String get allLessons => 'All Lessons';
-	@override String get startLearning => 'Start learning';
-	@override String resumeActivity({required Object activity}) => 'Resume ${activity}';
-	@override String get continueButton => 'Continue';
+	@override String get greeting => 'Ciao,';
+	@override String get guest => 'Ospite';
+	@override String get thisWeek => 'Questa settimana';
+	@override String get continueLearning => 'Continua ad imparare';
+	@override String get allLessons => 'Tutte le lezioni';
+	@override String get startLearning => 'Inizia ad imparare';
+	@override String resumeActivity({required Object activity}) => 'Riprendi ${activity}';
+	@override String get continueButton => 'Continuare';
+	@override List<String> get weekDays => [
+		'LUN',
+		'MAR',
+		'MER',
+		'GIO',
+		'VEN',
+		'SAB',
+		'SOLE',
+	];
+	@override late final _TranslationsHomeLessonsIt lessons = _TranslationsHomeLessonsIt._(_root);
+	@override String lessonProgress({required Object current, required Object total}) => 'Lezione ${current} di ${total}';
 }
 
 // Path: notifications
@@ -168,14 +188,14 @@ class _TranslationsNotificationsIt implements TranslationsNotificationsEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get today => 'Today';
-	@override String get yesterday => 'Yesterday';
-	@override String weekAgo({required Object week}) => '${week} week ago';
-	@override String monthAgo({required Object month}) => '${month} month ago';
-	@override String yearAgo({required Object year}) => '${year} year ago';
-	@override String get noNotifications => 'No notifications yet.';
-	@override String get noNotificationsSubtitle => 'Don\'t forget to check again when you receive the notification.';
-	@override String get allDeleted => 'All notifications have been successfully deleted';
+	@override String get today => 'Oggi';
+	@override String get yesterday => 'Ieri';
+	@override String weekAgo({required Object week}) => '${week} settimana fa';
+	@override String monthAgo({required Object month}) => '${month} mese fa';
+	@override String yearAgo({required Object year}) => '${year} anno fa';
+	@override String get noNotifications => 'Nessuna notifica ancora.';
+	@override String get noNotificationsSubtitle => 'Non dimenticare di controllare di nuovo quando ricevi la notifica.';
+	@override String get allDeleted => 'Tutte le notifiche sono state eliminate con successo';
 }
 
 // Path: editProfile
@@ -185,18 +205,18 @@ class _TranslationsEditProfileIt implements TranslationsEditProfileEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get aboutMe => 'About Me';
-	@override String get aboutMeHint => 'Write something about yourself';
-	@override String get fullName => 'Full Name';
-	@override String get gender => 'Gender';
-	@override String get male => 'Male';
-	@override String get female => 'Female';
-	@override String get dontWantToMention => 'I don\'t want to mention it.';
-	@override String get country => 'Country';
-	@override String get languagePreferences => 'Language Preferences';
-	@override String get selectLanguage => 'Add your preferred language';
-	@override String get saved => 'Saved';
-	@override String get changesSaved => 'Changes have been saved.';
+	@override String get aboutMe => 'Su di me';
+	@override String get aboutMeHint => 'Scrivi qualcosa su di te';
+	@override String get fullName => 'Nome e cognome';
+	@override String get gender => 'Genere';
+	@override String get male => 'Maschio';
+	@override String get female => 'Femmina';
+	@override String get dontWantToMention => 'Non voglio menzionarlo.';
+	@override String get country => 'Paese';
+	@override String get languagePreferences => 'Preferenze della lingua';
+	@override String get selectLanguage => 'Aggiungi la tua lingua preferita';
+	@override String get saved => 'Salvato';
+	@override String get changesSaved => 'Le modifiche sono state salvate.';
 }
 
 // Path: settingsSupport
@@ -206,19 +226,19 @@ class _TranslationsSettingsSupportIt implements TranslationsSettingsSupportEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Settings & Support';
-	@override String get premiumTitle => 'Unlimited access \nto all features';
-	@override String get getPremium => 'Get Premium';
-	@override String get settingsHub => 'Settings Hub';
-	@override String get shareTheApp => 'Share the App';
-	@override String get rateUs => 'Rate Us';
-	@override String get version => 'Version';
-	@override String get notifications => 'Notifications';
-	@override String get accountManagement => 'Account Management';
-	@override String get deleteAccount => 'Delete Account';
-	@override String get logOut => 'Log Out';
-	@override String get logOutTitle => 'You are about to log out';
-	@override String get logOutSubtitle => 'See you again soon! \n We’ll miss you.';
+	@override String get title => 'Impostazioni e supporto';
+	@override String get premiumTitle => 'Accesso illimitato\na tutte le funzionalità';
+	@override String get getPremium => 'Ottieni Premium';
+	@override String get settingsHub => 'Hub Impostazioni';
+	@override String get shareTheApp => 'Condividi l\'app';
+	@override String get rateUs => 'Valutaci';
+	@override String get version => 'Versione';
+	@override String get notifications => 'Notifiche';
+	@override String get accountManagement => 'Gestione del conto';
+	@override String get deleteAccount => 'Elimina account';
+	@override String get logOut => 'Esci';
+	@override String get logOutTitle => 'Stai per disconnetterti';
+	@override String get logOutSubtitle => 'Ci vediamo presto!\nCi mancherai.';
 }
 
 // Path: deleteAccount
@@ -228,10 +248,10 @@ class _TranslationsDeleteAccountIt implements TranslationsDeleteAccountEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Delete Account';
-	@override String get warning => 'Are you sure you want to delete your account?';
-	@override String get description => 'This action cannot be undone, and all your history and data will be permanently deleted.';
-	@override String deleteFailed({required Object error}) => 'Account deletion failed: ${error}';
+	@override String get title => 'Elimina account';
+	@override String get warning => 'Sei sicuro di voler eliminare il tuo account?';
+	@override String get description => 'Questa azione non può essere annullata e tutta la cronologia e i dati verranno eliminati definitivamente.';
+	@override String deleteFailed({required Object error}) => 'Eliminazione dell\'account non riuscita: ${error}';
 	@override late final _TranslationsDeleteAccountStepsIt steps = _TranslationsDeleteAccountStepsIt._(_root);
 }
 
@@ -242,18 +262,18 @@ class _TranslationsLanguageOptionsIt implements TranslationsLanguageOptionsEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get english => 'English';
-	@override String get chinese => 'Chinese';
-	@override String get german => 'German';
-	@override String get italian => 'Italian';
-	@override String get french => 'French';
-	@override String get japanese => 'Japanese';
-	@override String get spanish => 'Spanish';
-	@override String get russian => 'Russian';
-	@override String get turkish => 'Turkish';
-	@override String get korean => 'Korean';
-	@override String get hindi => 'Hindi';
-	@override String get portuguese => 'Portuguese';
+	@override String get english => 'Inglese';
+	@override String get chinese => 'cinese';
+	@override String get german => 'tedesco';
+	@override String get italian => 'Italiano';
+	@override String get french => 'francese';
+	@override String get japanese => 'giapponese';
+	@override String get spanish => 'spagnolo';
+	@override String get russian => 'russo';
+	@override String get turkish => 'turco';
+	@override String get korean => 'coreano';
+	@override String get hindi => 'hindi';
+	@override String get portuguese => 'portoghese';
 }
 
 // Path: common
@@ -263,9 +283,9 @@ class _TranslationsCommonIt implements TranslationsCommonEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get tryAgain => 'Try Again';
-	@override String get retry => 'Retry';
-	@override String get close => 'Close';
+	@override String get tryAgain => 'Riprova';
+	@override String get retry => 'Riprova';
+	@override String get close => 'Vicino';
 }
 
 // Path: profileScreen
@@ -275,33 +295,33 @@ class _TranslationsProfileScreenIt implements TranslationsProfileScreenEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Profile';
-	@override String get greeting => 'Hello,';
+	@override String get title => 'Profilo';
+	@override String get greeting => 'Ciao,';
 	@override String get account => 'ACCOUNT';
 	@override String get app => 'APP';
-	@override String get statusLoading => 'Status loading';
-	@override String get premiumActive => 'Active • Pro Member';
-	@override String get freePlan => 'Free Plan';
-	@override String get loadFailed => 'Profile information could not be loaded. Pull down to try again.';
-	@override String get accountSettings => 'Account Settings';
-	@override String get accountSettingsGuestSubtitle => 'Name and avatar';
-	@override String get accountSettingsSubtitle => 'Name, Photo, E-mail';
-	@override String get manageSubscription => 'Manage Subscription';
-	@override String get screenTime => 'Screen Time';
-	@override String get rateApp => 'Rate the App';
-	@override String get supportUs => 'Support us';
-	@override String get rateComingSoon => 'Rating will be available soon.';
-	@override String get privacyPolicy => 'Privacy Policy';
-	@override String get privacySubtitle => 'Protect data';
-	@override String get termsOfService => 'Terms of Service';
-	@override String get termsSubtitle => 'Data and terms';
-	@override String get logout => 'Log Out';
-	@override String get logoutDialogTitle => 'You are about to log\nout of your account';
-	@override String get logoutFailed => 'Could not log out. Please try again.';
-	@override String get subscriptionFailed => 'Subscription screen could not be opened. Please try again.';
-	@override String screenTimeMinutes({required Object minutes}) => 'Today ${minutes} minutes';
-	@override String screenTimeHours({required Object hours}) => 'Today ${hours} hours';
-	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Today ${hours} hours ${minutes} minutes';
+	@override String get statusLoading => 'Caricamento dello stato';
+	@override String get premiumActive => 'Attivo • Membro Pro';
+	@override String get freePlan => 'Piano gratuito';
+	@override String get loadFailed => 'Impossibile caricare le informazioni del profilo. Tirare verso il basso per riprovare.';
+	@override String get accountSettings => 'Impostazioni dell\'account';
+	@override String get accountSettingsGuestSubtitle => 'Nome e avatar';
+	@override String get accountSettingsSubtitle => 'Nome, foto, e-mail';
+	@override String get manageSubscription => 'Gestisci abbonamento';
+	@override String get screenTime => 'Tempo sullo schermo';
+	@override String get rateApp => 'Valuta l\'app';
+	@override String get supportUs => 'Sostienici';
+	@override String get rateComingSoon => 'La valutazione sarà disponibile a breve.';
+	@override String get privacyPolicy => 'politica sulla riservatezza';
+	@override String get privacySubtitle => 'Proteggi i dati';
+	@override String get termsOfService => 'Termini di servizio';
+	@override String get termsSubtitle => 'Dati e termini';
+	@override String get logout => 'Esci';
+	@override String get logoutDialogTitle => 'Stai per disconnettere\ndal tuo account';
+	@override String get logoutFailed => 'Impossibile disconnettersi. Per favore riprova.';
+	@override String get subscriptionFailed => 'Impossibile aprire la schermata di sottoscrizione. Per favore riprova.';
+	@override String screenTimeMinutes({required Object minutes}) => 'Oggi ${minutes} minuti';
+	@override String screenTimeHours({required Object hours}) => 'Oggi ${hours} ore';
+	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Oggi ${hours} ore ${minutes} minuti';
 }
 
 // Path: editProfileScreen
@@ -311,12 +331,12 @@ class _TranslationsEditProfileScreenIt implements TranslationsEditProfileScreenE
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get changeAvatar => 'Change Avatar';
+	@override String get changeAvatar => 'Cambia avatar';
 	@override String get email => 'E-mail';
-	@override String get emailHelper => 'This field comes from your backend account.';
-	@override String get deleteDialogTitle => 'Are you sure want to\ndelete your account?';
-	@override String get accountDeleteFailed => 'Account could not be deleted. Please try again.';
-	@override String get profileSaveFailed => 'Profile could not be saved. Please try again.';
+	@override String get emailHelper => 'Questo campo proviene dal tuo account di backend.';
+	@override String get deleteDialogTitle => 'Sei sicuro di voler\neliminare il tuo account?';
+	@override String get accountDeleteFailed => 'Impossibile eliminare l\'account. Per favore riprova.';
+	@override String get profileSaveFailed => 'Impossibile salvare il profilo. Per favore riprova.';
 }
 
 // Path: premiumAccess
@@ -326,7 +346,7 @@ class _TranslationsPremiumAccessIt implements TranslationsPremiumAccessEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get openFailed => 'Premium screen could not be opened. Please try again.';
+	@override String get openFailed => 'Impossibile aprire la schermata Premium. Per favore riprova.';
 }
 
 // Path: parentalGate
@@ -336,8 +356,51 @@ class _TranslationsParentalGateIt implements TranslationsParentalGateEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get barrierLabel => 'Parental gate';
-	@override String get question => 'What is the result of this operation?';
+	@override String get barrierLabel => 'Cancello parentale';
+	@override String get question => 'Qual è il risultato di questa operazione?';
+	@override String get submit => 'Invia';
+}
+
+// Path: activities
+class _TranslationsActivitiesIt implements TranslationsActivitiesEn {
+	_TranslationsActivitiesIt._(this._root);
+
+	final TranslationsIt _root; // ignore: unused_field
+
+	// Translations
+	@override String get flashCards => 'Schede flash';
+	@override String get drawing => 'Disegno';
+	@override String get flipCards => 'Gira le carte';
+	@override String get trueFalse => 'Vero Falso';
+	@override String get spelling => 'Ortografia';
+}
+
+// Path: resultSheet
+class _TranslationsResultSheetIt implements TranslationsResultSheetEn {
+	_TranslationsResultSheetIt._(this._root);
+
+	final TranslationsIt _root; // ignore: unused_field
+
+	// Translations
+	@override String get correct => 'Corretto';
+	@override String get tryAgain => 'Riprova';
+	@override String get correctBody => 'Stai andando alla grande!';
+	@override String get tryAgainBody => 'Prova ancora una volta!';
+}
+
+// Path: trueFalseView
+class _TranslationsTrueFalseViewIt implements TranslationsTrueFalseViewEn {
+	_TranslationsTrueFalseViewIt._(this._root);
+
+	final TranslationsIt _root; // ignore: unused_field
+
+	// Translations
+	@override String isThisLetter({required Object letter}) => 'Questa lettera è ${letter}?';
+	@override String isThisNumber({required Object number}) => 'Questo numero è ${number}?';
+	@override String isThisShape({required Object shape}) => 'Questa forma è ${shape}?';
+	@override String isThisSubject({required Object subject}) => 'Questo è ${subject}?';
+	@override String get trueText => 'VERO';
+	@override String get falseText => 'Falso';
 }
 
 // Path: termOfService.privacyPolicy
@@ -347,28 +410,28 @@ class _TranslationsTermOfServicePrivacyPolicyIt implements TranslationsTermOfSer
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Privacy Policy';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'ChatFace adopts user privacy and data security as a core principle. All your personal data is processed in accordance with effective data protection regulations.';
-	@override String get section1Title => '1. COLLECTED INFORMATION';
-	@override String get section1sub1Title => '1.1 Data Provided by User';
-	@override String get section1sub1Body => '• Name, nickname, age, gender, country, profile information, and optional profile photos you choose to upload.\n• Email address for registration, subscription, and support.\n• Interaction preferences, selected language, AI character choices, messages, voice transcripts, uploaded chat images, feedback, and support messages.';
-	@override String get section1sub2Title => '1.2 Automatically Collected Data';
-	@override String get section1sub2Body => 'ChatFace may collect device type, operating system, approximate country/city derived from network signals, app usage data, crash logs, subscription status, and notification delivery data. Precise location is not requested during onboarding and is not required for AI chat or calls.';
-	@override String get section2Title => '2. PURPOSES OF DATA PROCESSING';
-	@override String get section2Body => 'Your personal data is processed to operate the app, authenticate your account, provide AI chat and voice/video call features, personalize language and character interactions, process subscriptions, send notifications when enabled, prevent abuse, review user reports, improve reliability, and meet legal obligations. Your personal data is not sold or used for advertising.';
-	@override String get section3Title => '3. AI PROCESSING AND THIRD-PARTY SHARING';
-	@override String get section3Body => 'To provide a better AI experience, ChatFace securely uses third-party providers, including OpenAI, to process the text, voice, images, and related data you submit. Messages, voice transcripts, selected language, profile context, conversation history, and uploaded chat images may be sent to OpenAI to generate AI replies and moderation outcomes. Speech audio may be sent to OpenAI or Deepgram for transcription depending on server configuration. Assistant text may be sent to ElevenLabs to create spoken audio. Uploaded profile and chat images, generated audio, and related media may be stored on BunnyCDN. OneSignal may process notification identifiers and delivery data. RevenueCat and the app stores process subscription and entitlement data. Social sign-in data may be processed by Apple, Google, or Facebook when you use those login methods. These providers are used only to perform the requested service and are expected to protect data under their own security and privacy terms. OpenAI API data is not used to train OpenAI models according to OpenAI API policies.';
-	@override String get section4Title => '4. PHOTOS, CAMERA, MICROPHONE, AND FACE DATA';
-	@override String get section4Body => 'Camera access is used for local video-call preview when you start a video call. The camera preview stays on your device. ChatFace does not collect biometric face data, face templates, face geometry, face recognition identifiers, or face profiles. Uploaded profile photos and chat images may contain faces if you choose to upload them; these images are stored and processed only as user-provided photos for profile display or AI conversation context. Microphone access is used for voice and video conversations so your speech can be transcribed and answered by the AI.';
-	@override String get section5Title => '5. DATA RETENTION AND DELETION';
-	@override String get section5Body => 'Account profile data, profile photos, conversation history, uploaded chat images, reports, notification settings, and subscription entitlement records are retained while your account is active or as needed for legal, security, fraud-prevention, and support purposes. When you delete your account, personal account records are deleted from ChatFace systems subject to required legal and operational retention. Media stored with third-party infrastructure is removed or made inaccessible according to our deletion process and provider retention behavior.';
-	@override String get section6Title => '6. USER RIGHTS';
-	@override String get section6Body => 'Under applicable privacy laws, you may request access, correction, deletion, objection, restriction, or data portability for your personal data. You can contact us for these requests.';
-	@override String get section7Title => '7. CHILDREN\'S PRIVACY';
-	@override String get section7Body => 'ChatFace is not intended for users under the age of 18. We do not knowingly collect data from this age group; such accounts will be closed and data deleted upon detection.';
-	@override String get section8Title => '8. CONTACT';
-	@override String get section8Body => 'For privacy inquiries: support@fly-work.com';
+	@override String get title => 'politica sulla riservatezza';
+	@override String get lastUpdated => 'Ultimo aggiornamento: 2026';
+	@override String get intro => 'ChatFace adotta la privacy degli utenti e la sicurezza dei dati come principio fondamentale. Tutti i tuoi dati personali vengono trattati in conformità con le normative vigenti sulla protezione dei dati.';
+	@override String get section1Title => '1. INFORMAZIONI RACCOLTE';
+	@override String get section1sub1Title => '1.1 Dati forniti dall\'utente';
+	@override String get section1sub1Body => '• Nome, soprannome, età, sesso, paese, informazioni sul profilo e foto del profilo opzionali che scegli di caricare.\n• Indirizzo email per la registrazione, l\'abbonamento e il supporto.\n• Preferenze di interazione, lingua selezionata, scelte dei personaggi AI, messaggi, trascrizioni vocali, immagini di chat caricate, feedback e messaggi di supporto.';
+	@override String get section1sub2Title => '1.2 Dati raccolti automaticamente';
+	@override String get section1sub2Body => 'ChatFace può raccogliere tipo di dispositivo, sistema operativo, paese/città approssimativi derivati ​​​​da segnali di rete, dati sull\'utilizzo delle app, registri di arresti anomali, stato dell\'abbonamento e dati di consegna delle notifiche. La posizione precisa non è richiesta durante l\'onboarding e non è necessaria per la chat o le chiamate AI.';
+	@override String get section2Title => '2. FINALITÀ DEL TRATTAMENTO DEI DATI';
+	@override String get section2Body => 'I tuoi dati personali vengono elaborati per gestire l\'app, autenticare il tuo account, fornire funzionalità di chat AI e chiamate vocali/videochiamate, personalizzare le interazioni tra lingua e caratteri, elaborare abbonamenti, inviare notifiche quando abilitate, prevenire abusi, esaminare le segnalazioni degli utenti, migliorare l\'affidabilità e soddisfare gli obblighi legali. I tuoi dati personali non vengono venduti né utilizzati per scopi pubblicitari.';
+	@override String get section3Title => '3. TRATTAMENTO DELL\'AI E CONDIVISIONE CON TERZE PARTI';
+	@override String get section3Body => 'Per fornire una migliore esperienza IA, ChatFace utilizza in modo sicuro fornitori di terze parti, incluso OpenAI, per elaborare il testo, la voce, le immagini e i dati correlati inviati. Messaggi, trascrizioni vocali, lingua selezionata, contesto del profilo, cronologia delle conversazioni e immagini di chat caricate possono essere inviati a OpenAI per generare risposte AI e risultati della moderazione. L\'audio vocale può essere inviato a OpenAI o Deepgram per la trascrizione a seconda della configurazione del server. Il testo dell\'assistente può essere inviato a ElevenLabs per creare audio parlato. Le immagini del profilo e della chat caricate, l\'audio generato e i relativi contenuti multimediali possono essere archiviati su BunnyCDN. OneSignal può elaborare identificatori di notifica e dati di consegna. RevenueCat e gli app store elaborano i dati sugli abbonamenti e sui diritti. I dati di accesso social potrebbero essere elaborati da Apple, Google o Facebook quando utilizzi tali metodi di accesso. Questi fornitori vengono utilizzati solo per eseguire il servizio richiesto e sono tenuti a proteggere i dati secondo i propri termini di sicurezza e privacy. I dati API OpenAI non vengono utilizzati per addestrare i modelli OpenAI in base alle policy API OpenAI.';
+	@override String get section4Title => '4. FOTO, FOTOCAMERA, MICROFONO E DATI DEL VISO';
+	@override String get section4Body => 'L\'accesso alla fotocamera viene utilizzato per l\'anteprima della videochiamata locale quando si avvia una videochiamata. L\'anteprima della fotocamera rimane sul tuo dispositivo. ChatFace non raccoglie dati biometrici dei volti, modelli di volti, geometria dei volti, identificatori di riconoscimento facciale o profili dei volti. Le foto del profilo caricate e le immagini della chat possono contenere volti se scegli di caricarle; queste immagini vengono archiviate ed elaborate solo come foto fornite dall\'utente per la visualizzazione del profilo o il contesto di una conversazione AI. L\'accesso al microfono viene utilizzato per le conversazioni vocali e video in modo che il tuo discorso possa essere trascritto e risposto dall\'intelligenza artificiale.';
+	@override String get section5Title => '5. CONSERVAZIONE E CANCELLAZIONE DEI DATI';
+	@override String get section5Body => 'I dati del profilo dell\'account, le foto del profilo, la cronologia delle conversazioni, le immagini della chat caricate, i report, le impostazioni di notifica e i record dei diritti di abbonamento vengono conservati mentre l\'account è attivo o secondo necessità per scopi legali, di sicurezza, di prevenzione delle frodi e di supporto. Quando elimini il tuo account, i record dell\'account personale vengono eliminati dai sistemi ChatFace soggetti alla conservazione legale e operativa richiesta. I contenuti multimediali archiviati con infrastrutture di terze parti vengono rimossi o resi inaccessibili in base al nostro processo di eliminazione e al comportamento di conservazione del fornitore.';
+	@override String get section6Title => '6. DIRITTI DELL\'UTENTE';
+	@override String get section6Body => 'Ai sensi delle leggi sulla privacy applicabili, puoi richiedere l\'accesso, la correzione, la cancellazione, l\'obiezione, la limitazione o la portabilità dei tuoi dati personali. Potete contattarci per queste richieste.';
+	@override String get section7Title => '7. PRIVACY DEI BAMBINI';
+	@override String get section7Body => 'ChatFace non è destinato agli utenti di età inferiore ai 18 anni. Non raccogliamo consapevolmente dati da questa fascia di età; tali account verranno chiusi e i dati cancellati al momento del rilevamento.';
+	@override String get section8Title => '8. CONTATTO';
+	@override String get section8Body => 'Per domande sulla privacy: support@fly-work.com';
 }
 
 // Path: termOfService.termsOfService
@@ -378,26 +441,26 @@ class _TranslationsTermOfServiceTermsOfServiceIt implements TranslationsTermOfSe
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Terms of Service';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'These Terms govern the use of the ChatFace mobile application. By using the app, you agree to these Terms.';
-	@override String get disclaimer => 'Disclaimer: ChatFace is an AI video interaction app. It does not provide legal, academic, medical, or professional consulting services.';
-	@override String get section1Title => '1. SCOPE OF SERVICE';
-	@override String get section1Body => 'ChatFace provides AI-powered video interaction experiences:\n\n• AI video calling and conversation.\n• Personalized interaction preferences.\n• Access to interaction history and records.\n\nServices do not constitute official opinions or professional guidance guarantees.';
-	@override String get section2Title => '2. CONDITIONS OF USE';
-	@override String get section2Body => '• You must be at least 18 years old (Under 18 access is prohibited).\n• You must provide accurate account information.\n• The app must be used for legal and personal purposes only.';
-	@override String get section3Title => '3. PROHIBITED USES';
-	@override String get section3Body => 'Impersonation, hate speech, endangering child safety, security breach attempts, and manipulation of AI systems are strictly prohibited.';
-	@override String get section4Title => '4. SUBSCRIPTIONS AND PAYMENTS';
-	@override String get section4Body => 'Premium features are subject to App Store and Google Play policies. Subscription cancellations and refunds are managed via the respective store settings.';
-	@override String get section5Title => '5. CONTENT DISCLAIMER';
-	@override String get section5Body => 'Content is AI-generated and does not replace professional advice. ChatFace does not guarantee accuracy or fitness for a particular purpose.';
-	@override String get section6Title => '6. INTELLECTUAL PROPERTY';
-	@override String get section6Body => 'All content including design, software, and algorithms belongs to ChatFace. Unauthorized reproduction or redistribution is prohibited.';
-	@override String get section7Title => '7. GOVERNING LAW';
-	@override String get section7Body => 'These Terms are governed by the laws of the Republic of Turkey. Istanbul Central Courts shall have jurisdiction over disputes.';
-	@override String get section8Title => '8. CONTACT';
-	@override String get section8Body => '📩 For inquiries: support@fly-work.com';
+	@override String get title => 'Termini di servizio';
+	@override String get lastUpdated => 'Ultimo aggiornamento: 2026';
+	@override String get intro => 'I presenti Termini regolano l\'utilizzo dell\'applicazione mobile ChatFace. Utilizzando l\'app, accetti questi Termini.';
+	@override String get disclaimer => 'Dichiarazione di non responsabilità: ChatFace è un\'app di interazione video AI. Non fornisce servizi di consulenza legale, accademica, medica o professionale.';
+	@override String get section1Title => '1. AMBITO DEL SERVIZIO';
+	@override String get section1Body => 'ChatFace offre esperienze di interazione video basate sull\'intelligenza artificiale:\n\n• Videochiamate e conversazioni basate sull\'intelligenza artificiale.\n• Preferenze di interazione personalizzate.\n• Accesso alla cronologia e ai record delle interazioni.\n\nI servizi non costituiscono opinioni ufficiali o garanzie di orientamento professionale.';
+	@override String get section2Title => '2. CONDIZIONI D\'USO';
+	@override String get section2Body => '• È necessario avere almeno 18 anni (l\'accesso ai minori di 18 anni è vietato).\n• Devi fornire informazioni precise sull\'account.\n• L\'app deve essere utilizzata esclusivamente per scopi legali e personali.';
+	@override String get section3Title => '3. USI VIETATI';
+	@override String get section3Body => 'Sono severamente vietati il ​​furto d\'identità, l\'incitamento all\'odio, la messa in pericolo della sicurezza dei bambini, i tentativi di violazione della sicurezza e la manipolazione dei sistemi di intelligenza artificiale.';
+	@override String get section4Title => '4. ABBONAMENTI E PAGAMENTI';
+	@override String get section4Body => 'Le funzionalità premium sono soggette alle norme dell\'App Store e di Google Play. Le cancellazioni degli abbonamenti e i rimborsi vengono gestiti tramite le rispettive impostazioni del negozio.';
+	@override String get section5Title => '5. ESCLUSIONE DI RESPONSABILITÀ SUI CONTENUTI';
+	@override String get section5Body => 'I contenuti sono generati dall\'intelligenza artificiale e non sostituiscono la consulenza professionale. ChatFace non garantisce l\'accuratezza o l\'idoneità per uno scopo particolare.';
+	@override String get section6Title => '6. PROPRIETÀ INTELLETTUALE';
+	@override String get section6Body => 'Tutti i contenuti, inclusi design, software e algoritmi, appartengono a ChatFace. È vietata la riproduzione o la ridistribuzione non autorizzata.';
+	@override String get section7Title => '7. LEGGE APPLICABILE';
+	@override String get section7Body => 'Le presenti Condizioni sono regolate dalle leggi della Repubblica di Turchia. I tribunali centrali di Istanbul avranno giurisdizione sulle controversie.';
+	@override String get section8Title => '8. CONTATTO';
+	@override String get section8Body => '📩 Per domande: support@fly-work.com';
 }
 
 // Path: termOfService.cookiePolicy
@@ -407,22 +470,22 @@ class _TranslationsTermOfServiceCookiePolicyIt implements TranslationsTermOfServ
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Cookie Policy';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.';
-	@override String get important => 'This policy explains what cookies are, their purposes, and how you can manage your preferences.';
-	@override String get section1Title => '1. WHAT ARE COOKIES?';
-	@override String get section1Body => 'Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.';
-	@override String get section2Title => '2. WHICH TECHNOLOGIES DO WE USE?';
-	@override String get section2Body => 'Strictly Necessary Technologies\nRequired for session management and security controls. The app may not function properly without these components.\n\nPerformance and Analytics\nHelps us understand which stories are read and which areas need improvement. Data is evaluated anonymously.\n\nPersonalization\nRemembers settings like language preference and reading level to provide a tailored experience for the child.';
-	@override String get section3Title => '3. WHY DO WE USE THESE TECHNOLOGIES?';
-	@override String get section3Body => '• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.';
-	@override String get section4Title => '4. THIRD-PARTY TECHNOLOGIES';
-	@override String get section4Body => 'Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.';
-	@override String get section5Title => '5. COOKIE CONTROL AND MANAGEMENT';
-	@override String get section5Body => 'Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.';
-	@override String get section6Title => '6. CONTACT';
-	@override String get section6Body => '📩 For inquiries: support@fly-work.com';
+	@override String get title => 'Politica sui cookie';
+	@override String get lastUpdated => 'Ultimo aggiornamento: 2026';
+	@override String get intro => 'Benvenuto su ChatFace. Le tecnologie di supporto digitale vengono utilizzate per rendere la tua esperienza di videochiamata AI più fluida, sicura e personalizzata.';
+	@override String get important => 'Questa policy spiega cosa sono i cookie, i loro scopi e come puoi gestire le tue preferenze.';
+	@override String get section1Title => '1. COSA SONO I COOKIE?';
+	@override String get section1Body => 'I cookie sono piccoli file di dati inseriti sul tuo dispositivo. Non ti identificano direttamente; agiscono come note digitali che ricordano:\n• Impostazioni di chiamata e lingua\n• Preferenze di sessione e performance.';
+	@override String get section2Title => '2. QUALI TECNOLOGIE UTILIZZIAMO?';
+	@override String get section2Body => 'Tecnologie strettamente necessarie\nNecessarie per la gestione delle sessioni e i controlli di sicurezza. L\'app potrebbe non funzionare correttamente senza questi componenti.\n\nPrestazioni e analisi\nCi aiuta a capire quali storie vengono lette e quali aree necessitano di miglioramento. I dati vengono valutati in modo anonimo.\n\nPersonalizzazione\nRicorda impostazioni come la preferenza della lingua e il livello di lettura per fornire un\'esperienza su misura per il bambino.';
+	@override String get section3Title => '3. PERCHÉ UTILIZZIAMO QUESTE TECNOLOGIE?';
+	@override String get section3Body => '• Per garantire che l\'app funzioni in modo sicuro e senza intoppi.\n• Per rendere l\'esperienza di lettura più fluida.\n• Per ricordare impostazioni ripetitive.\n• Identificare le funzionalità per lo sviluppo futuro.';
+	@override String get section4Title => '4. TECNOLOGIE DI TERZE PARTI';
+	@override String get section4Body => 'Alcune tecnologie possono essere fornite da fornitori di servizi tecnici e sono soggette alle rispettive politiche. ChatFace dà priorità alla sicurezza dei dati in queste partnership.';
+	@override String get section5Title => '5. CONTROLLO E GESTIONE DEI COOKIE';
+	@override String get section5Body => 'Gli utenti possono limitare queste tecnologie tramite le impostazioni del dispositivo o dell\'app. La disabilitazione delle tecnologie essenziali può causare problemi come l\'impossibilità di avviare videochiamate.';
+	@override String get section6Title => '6. CONTATTO';
+	@override String get section6Body => '📩 Per domande: support@fly-work.com';
 }
 
 // Path: onboarding.step5
@@ -432,16 +495,16 @@ class _TranslationsOnboardingStep5It implements TranslationsOnboardingStep5En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get permissionRequired => 'Permission required';
-	@override String get notNow => 'Not now';
-	@override String get openSettings => 'Open settings';
-	@override String get title => 'Permissions';
-	@override String get permission1 => 'Camera Access';
-	@override String get permission1Subtitle => 'ChatFace uses your camera for video calls with AI characters.';
-	@override String get permission2 => 'Microphone Access';
-	@override String get permission2Subtitle => 'ChatFace uses your microphone for voice and video calls.';
-	@override String get permission3 => 'Location Access';
-	@override String get permission3Subtitle => 'ChatFace uses your location to personalize your experience.';
+	@override String get permissionRequired => 'Permesso richiesto';
+	@override String get notNow => 'Non adesso';
+	@override String get openSettings => 'Apri le impostazioni';
+	@override String get title => 'Autorizzazioni';
+	@override String get permission1 => 'Accesso alla fotocamera';
+	@override String get permission1Subtitle => 'ChatFace utilizza la tua fotocamera per videochiamate con personaggi AI.';
+	@override String get permission2 => 'Accesso al microfono';
+	@override String get permission2Subtitle => 'ChatFace utilizza il tuo microfono per le chiamate vocali e le videochiamate.';
+	@override String get permission3 => 'Accesso alla posizione';
+	@override String get permission3Subtitle => 'ChatFace utilizza la tua posizione per personalizzare la tua esperienza.';
 }
 
 // Path: onboarding.step1
@@ -451,9 +514,9 @@ class _TranslationsOnboardingStep1It implements TranslationsOnboardingStep1En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Name?';
-	@override String get subtitle => 'Please enter your name';
-	@override String get hint => 'Full Name';
+	@override String get title => 'Come ti chiami?';
+	@override String get subtitle => 'Per favore inserisci il tuo nome';
+	@override String get hint => 'Nome e cognome';
 }
 
 // Path: onboarding.step2
@@ -463,8 +526,8 @@ class _TranslationsOnboardingStep2It implements TranslationsOnboardingStep2En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Age?';
-	@override String get subtitle => 'You must be at least 18 years old to register.';
+	@override String get title => 'Quanti anni hai?';
+	@override String get subtitle => 'Devi avere almeno 18 anni per registrarti.';
 }
 
 // Path: onboarding.step3
@@ -474,11 +537,11 @@ class _TranslationsOnboardingStep3It implements TranslationsOnboardingStep3En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Gender?';
-	@override String get subtitle => 'Please select your gender';
-	@override String get male => 'Male';
-	@override String get female => 'Female';
-	@override String get dontWantToMention => 'I don\'t want to mention it.';
+	@override String get title => 'Qual è il tuo sesso?';
+	@override String get subtitle => 'Seleziona il tuo sesso';
+	@override String get male => 'Maschio';
+	@override String get female => 'Femmina';
+	@override String get dontWantToMention => 'Non voglio menzionarlo.';
 }
 
 // Path: onboarding.step4
@@ -488,16 +551,16 @@ class _TranslationsOnboardingStep4It implements TranslationsOnboardingStep4En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Have Fun While \nStaying Safe';
-	@override String get entry1 => 'We Maintain Order';
-	@override String get subentry1 => 'Real-time AI Monitoring Open';
-	@override String get entry2 => 'Screen Recordings';
-	@override String get subentry2 => 'No Recording Without Consent';
-	@override String get entry3 => '24/7 Support';
-	@override String get subentry3 => 'Complaints Are Reviewed At Any Time Of The Day';
-	@override String get entry4 => '18+ only';
-	@override String get subentry4 => 'Not Suitable For Minors';
-	@override String get communityRules => 'Community Rules';
+	@override String get title => 'Divertiti\nRestando al sicuro';
+	@override String get entry1 => 'Manteniamo l\'ordine';
+	@override String get subentry1 => 'Monitoraggio AI in tempo reale Aperto';
+	@override String get entry2 => 'Registrazioni dello schermo';
+	@override String get subentry2 => 'Nessuna registrazione senza consenso';
+	@override String get entry3 => 'Supporto 24 ore su 24, 7 giorni su 7';
+	@override String get subentry3 => 'I reclami vengono esaminati in qualsiasi momento della giornata';
+	@override String get entry4 => 'Solo 18+';
+	@override String get subentry4 => 'Non adatto a minorenni';
+	@override String get communityRules => 'Regole della comunità';
 }
 
 // Path: onboarding.loading
@@ -507,9 +570,9 @@ class _TranslationsOnboardingLoadingIt implements TranslationsOnboardingLoadingE
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Your Personal Account is\n';
-	@override String get titlePart2 => 'Being Created';
-	@override String get subtitle => 'Please wait, your profile is being prepared.';
+	@override String get titlePart1 => 'Il tuo account personale è\n';
+	@override String get titlePart2 => 'Essere creato';
+	@override String get subtitle => 'Per favore attendi, il tuo profilo è in preparazione.';
 }
 
 // Path: onboarding.kFinal
@@ -519,9 +582,41 @@ class _TranslationsOnboardingKFinalIt implements TranslationsOnboardingKFinalEn 
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Your Personal Account is\n';
-	@override String get titlePart2 => 'Created';
-	@override String get subtitle => 'Enjoy communication with any character';
+	@override String get titlePart1 => 'Il tuo account personale è\n';
+	@override String get titlePart2 => 'Creato';
+	@override String get subtitle => 'Goditi la comunicazione con qualsiasi personaggio';
+}
+
+// Path: onboarding.login
+class _TranslationsOnboardingLoginIt implements TranslationsOnboardingLoginEn {
+	_TranslationsOnboardingLoginIt._(this._root);
+
+	final TranslationsIt _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Continua il tuo\nviaggio di apprendimento';
+	@override String get subtitle => 'Salva i progressi, sblocca le lezioni e\ncontinua ad apprendere su tutti i dispositivi.';
+	@override String get failed => 'Impossibile completare l\'accesso.';
+}
+
+// Path: onboarding.reward
+class _TranslationsOnboardingRewardIt implements TranslationsOnboardingRewardEn {
+	_TranslationsOnboardingRewardIt._(this._root);
+
+	final TranslationsIt _root; // ignore: unused_field
+
+	// Translations
+	@override String get points => '⭐️ +50 punti';
+	@override String get title => 'Ottimo lavoro 🎉';
+	@override String get subtitle => 'Oltre 200 lezioni in più ti stanno aspettando!';
+	@override String get progressLabel => 'Primo passo completato!';
+	@override String get featureAlphabetTitle => 'Alfabeto e numeri completi';
+	@override String get featureAlphabetSubtitle => 'Oltre 200 lezioni interattive';
+	@override String get featureVoiceTitle => 'Pronuncia vocale';
+	@override String get featureVoiceSubtitle => 'Supporto audio per ogni parola';
+	@override String get featureQuizTitle => 'Mini quiz divertenti';
+	@override String get featureQuizSubtitle => 'Impara divertendoti';
+	@override String get continueButton => 'Continua a esplorare';
 }
 
 // Path: splash.initial
@@ -531,8 +626,8 @@ class _TranslationsSplashInitialIt implements TranslationsSplashInitialEn {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get hello => 'Hello';
-	@override String get title => 'PLAYFUL ENGLISH FOR KIDS';
+	@override String get hello => 'Ciao';
+	@override String get title => 'INGLESE DIVERTENTE PER BAMBINI';
 }
 
 // Path: splash.screen1
@@ -542,8 +637,8 @@ class _TranslationsSplashScreen1It implements TranslationsSplashScreen1En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Learning English \nCan Feel Like Play';
-	@override String get description => 'Short, playful lessons help kids learn new words without pressure.';
+	@override String get title => 'Imparare l\'inglese\npuò sembrare come giocare';
+	@override String get description => 'Lezioni brevi e giocose aiutano i bambini a imparare nuove parole senza pressione.';
 }
 
 // Path: splash.screen2
@@ -553,8 +648,8 @@ class _TranslationsSplashScreen2It implements TranslationsSplashScreen2En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Listen, Repeat, and \nLearn New Words';
-	@override String get description => 'Simple voice activities help kids practice pronunciation step by step.';
+	@override String get title => 'Ascolta, ripeti e\nimpara nuove parole';
+	@override String get description => 'Semplici attività vocali aiutano i bambini a praticare la pronuncia passo dopo passo.';
 }
 
 // Path: splash.screen3
@@ -564,11 +659,11 @@ class _TranslationsSplashScreen3It implements TranslationsSplashScreen3En {
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Build Confidence, \nOne Word at a Time';
-	@override String get description => 'Designed for young learners with simple activities, friendly guidance, and a safe learning flow.';
-	@override String get option1 => '️🛡️ Safe For Kids';
-	@override String get option2 => '🌱 No pressure learning';
-	@override String get option3 => '⭐️ Made for young learners';
+	@override String get title => 'Costruisci fiducia,\nUna parola alla volta';
+	@override String get description => 'Progettato per i giovani studenti con attività semplici, guida amichevole e un flusso di apprendimento sicuro.';
+	@override String get option1 => '️🛡️ Sicuro per i bambini';
+	@override String get option2 => '🌱 Nessuna pressione nell\'apprendimento';
+	@override String get option3 => '⭐️ Realizzato per i giovani studenti';
 }
 
 // Path: home.placeholders
@@ -578,11 +673,29 @@ class _TranslationsHomePlaceholdersIt implements TranslationsHomePlaceholdersEn 
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get fashionDesigner => 'Fashion Designer';
-	@override String get comedian => 'Comedian';
+	@override String get fashionDesigner => 'Stilista di moda';
+	@override String get comedian => 'Comico';
 	@override String get influencer => 'Influencer';
-	@override String get teacher => 'Teacher';
-	@override String get friend => 'Friend';
+	@override String get teacher => 'Insegnante';
+	@override String get friend => 'Amico';
+}
+
+// Path: home.lessons
+class _TranslationsHomeLessonsIt implements TranslationsHomeLessonsEn {
+	_TranslationsHomeLessonsIt._(this._root);
+
+	final TranslationsIt _root; // ignore: unused_field
+
+	// Translations
+	@override String get alphabet => 'Alfabeto';
+	@override String get numbers => 'Numeri';
+	@override String get colors => 'Colori';
+	@override String get shapes => 'Forme';
+	@override String get fruit => 'Frutta';
+	@override String get vegetables => 'Verdure';
+	@override String get sports => 'Sport';
+	@override String get fillIn => 'Riempire';
+	@override String get fillInBlank => 'Riempi lo spazio vuoto';
 }
 
 // Path: deleteAccount.steps
@@ -604,14 +717,14 @@ class _TranslationsDeleteAccountStepsStep1It implements TranslationsDeleteAccoun
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'We don\'t want you to go, but we understand.';
-	@override String get subtitle => 'Can you tell us why you want to leave so we can improve the ChatFace experience?';
-	@override String get option1 => 'I didn\'t find the AI characters realistic.';
-	@override String get option2 => 'I am experiencing technical issues with video chats.';
-	@override String get option3 => 'Subscription prices are above my expectations.';
-	@override String get option4 => 'I couldn\'t find the type of characters I was looking for.';
-	@override String get option5 => 'I just wanted to try it out for a short time.';
-	@override String get option6 => 'Other';
+	@override String get title => 'Non vogliamo che tu vada, ma capiamo.';
+	@override String get subtitle => 'Puoi dirci perché vuoi andartene così possiamo migliorare l\'esperienza di ChatFace?';
+	@override String get option1 => 'Non ho trovato realistici i personaggi dell\'IA.';
+	@override String get option2 => 'Sto riscontrando problemi tecnici con le chat video.';
+	@override String get option3 => 'I prezzi degli abbonamenti sono superiori alle mie aspettative.';
+	@override String get option4 => 'Non sono riuscito a trovare il tipo di personaggi che stavo cercando.';
+	@override String get option5 => 'Volevo solo provarlo per un breve periodo.';
+	@override String get option6 => 'Altro';
 }
 
 // Path: deleteAccount.steps.step2
@@ -621,15 +734,15 @@ class _TranslationsDeleteAccountStepsStep2It implements TranslationsDeleteAccoun
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'If you delete your account, you will say goodbye to:';
-	@override String get subtitle1 => 'Deep Connections and Memory:';
-	@override String get subtitle1Desc => 'The characters you chat with will completely forget their past with you, your shared secrets, and your personal habits.';
-	@override String get subtitle2 => 'Video Call Privilege:';
-	@override String get subtitle2Desc => 'You will lose the right to communicate face-to-face with your AI partners, who are available to you anytime.';
-	@override String get subtitle3 => 'Advanced Algorithm:';
-	@override String get subtitle3Desc => 'Your \'Just for You\' character matches tailored to your preferences will be reset.';
-	@override String get subtitle4 => 'Profile Data:';
-	@override String get subtitle4Desc => 'Your earned achievements, unlocked special characters, and chat history will be irreversibly deleted.';
+	@override String get title => 'Se elimini il tuo account, dirai addio a:';
+	@override String get subtitle1 => 'Connessioni profonde e memoria:';
+	@override String get subtitle1Desc => 'I personaggi con cui chatti dimenticheranno completamente il loro passato con te, i tuoi segreti condivisi e le tue abitudini personali.';
+	@override String get subtitle2 => 'Privilegio di videochiamata:';
+	@override String get subtitle2Desc => 'Perderai il diritto di comunicare faccia a faccia con i tuoi partner AI, che sono a tua disposizione in qualsiasi momento.';
+	@override String get subtitle3 => 'Algoritmo avanzato:';
+	@override String get subtitle3Desc => 'Le corrispondenze dei personaggi "Solo per te" personalizzate in base alle tue preferenze verranno ripristinate.';
+	@override String get subtitle4 => 'Dati del profilo:';
+	@override String get subtitle4Desc => 'Gli obiettivi ottenuti, i personaggi speciali sbloccati e la cronologia chat verranno eliminati in modo irreversibile.';
 }
 
 // Path: deleteAccount.steps.step3
@@ -639,14 +752,14 @@ class _TranslationsDeleteAccountStepsStep3It implements TranslationsDeleteAccoun
 	final TranslationsIt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'We have a special offer for you before you go!';
-	@override String get description => 'Maybe you just need a little more time or a better deal. Instead of deleting your account, would you consider these?';
-	@override String description1({required Object offer}) => 'Keeping you with us is valuable. ${offer} on your next subscription! Would you like to continue with this offer?';
-	@override String get description1Offer => 'We\'ve applied a 50% discount';
-	@override String description2({required Object offer}) => 'We have given you ${offer} credits so you can see new characters you haven\'t discovered yet.';
-	@override String get description2Offer => '3 free video calls';
-	@override String get acceptOffer => 'Accept 50% Discount Offer';
-	@override String get deleteMyAccount => 'Delete My Account';
+	@override String get title => 'Abbiamo un\'offerta speciale per te prima di partire!';
+	@override String get description => 'Forse hai solo bisogno di un po\' più di tempo o di un accordo migliore. Invece di eliminare il tuo account, prenderesti in considerazione questi?';
+	@override String description1({required Object offer}) => 'Tenerti con noi è prezioso. ${offer} sul tuo prossimo abbonamento! Vuoi continuare con questa offerta?';
+	@override String get description1Offer => 'Abbiamo applicato uno sconto del 50%.';
+	@override String description2({required Object offer}) => 'Ti abbiamo dato crediti ${offer} così potrai vedere nuovi personaggi che non hai ancora scoperto.';
+	@override String get description2Offer => '3 videochiamate gratuite';
+	@override String get acceptOffer => 'Accetta l\'offerta di sconto del 50%.';
+	@override String get deleteMyAccount => 'Elimina il mio account';
 }
 
 /// The flat map containing all translations for locale <it>.
@@ -657,276 +770,327 @@ class _TranslationsDeleteAccountStepsStep3It implements TranslationsDeleteAccoun
 extension on TranslationsIt {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'welcome' => ({required Object name}) => 'Welcome ${name}',
-			'welcome2' => ({required Object appName}) => 'Welcome to ${appName}',
-			'get_started' => 'Get Started',
-			'start_learning' => 'Start Learning',
-			'hello' => 'Hello',
-			'next' => 'Next',
-			'back' => 'Back',
-			'skip' => 'Skip',
-			'profile' => 'Profile',
-			'kContinue' => 'Continue',
-			'termOfService.text1' => 'By signing up for ChatFace, you agree to our ',
-			'termOfService.link1' => 'Terms of Service',
-			'termOfService.text2' => '. Learn how we process your data in our ',
-			'termOfService.link2' => 'Privacy Policy',
-			'termOfService.text3' => ' and ',
-			'termOfService.link3' => 'Cookies Policy',
+			'welcome' => ({required Object name}) => 'Benvenuto ${name}',
+			'welcome2' => ({required Object appName}) => 'Benvenuto in ${appName}',
+			'get_started' => 'Inizia',
+			'start_learning' => 'Inizia a imparare',
+			'hello' => 'Ciao',
+			'next' => 'Prossimo',
+			'back' => 'Indietro',
+			'skip' => 'Saltare',
+			'profile' => 'Profilo',
+			'kContinue' => 'Continuare',
+			'termOfService.text1' => 'Iscrivendoti a ChatFace, accetti i nostri',
+			'termOfService.link1' => 'Termini di servizio',
+			'termOfService.text2' => '. Scopri come trattiamo i tuoi dati nel ns',
+			'termOfService.link2' => 'politica sulla riservatezza',
+			'termOfService.text3' => 'E',
+			'termOfService.link3' => 'Politica sui cookie',
 			'termOfService.text4' => '',
-			'termOfService.privacyPolicy.title' => 'Privacy Policy',
-			'termOfService.privacyPolicy.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.privacyPolicy.intro' => 'ChatFace adopts user privacy and data security as a core principle. All your personal data is processed in accordance with effective data protection regulations.',
-			'termOfService.privacyPolicy.section1Title' => '1. COLLECTED INFORMATION',
-			'termOfService.privacyPolicy.section1sub1Title' => '1.1 Data Provided by User',
-			'termOfService.privacyPolicy.section1sub1Body' => '• Name, nickname, age, gender, country, profile information, and optional profile photos you choose to upload.\n• Email address for registration, subscription, and support.\n• Interaction preferences, selected language, AI character choices, messages, voice transcripts, uploaded chat images, feedback, and support messages.',
-			'termOfService.privacyPolicy.section1sub2Title' => '1.2 Automatically Collected Data',
-			'termOfService.privacyPolicy.section1sub2Body' => 'ChatFace may collect device type, operating system, approximate country/city derived from network signals, app usage data, crash logs, subscription status, and notification delivery data. Precise location is not requested during onboarding and is not required for AI chat or calls.',
-			'termOfService.privacyPolicy.section2Title' => '2. PURPOSES OF DATA PROCESSING',
-			'termOfService.privacyPolicy.section2Body' => 'Your personal data is processed to operate the app, authenticate your account, provide AI chat and voice/video call features, personalize language and character interactions, process subscriptions, send notifications when enabled, prevent abuse, review user reports, improve reliability, and meet legal obligations. Your personal data is not sold or used for advertising.',
-			'termOfService.privacyPolicy.section3Title' => '3. AI PROCESSING AND THIRD-PARTY SHARING',
-			'termOfService.privacyPolicy.section3Body' => 'To provide a better AI experience, ChatFace securely uses third-party providers, including OpenAI, to process the text, voice, images, and related data you submit. Messages, voice transcripts, selected language, profile context, conversation history, and uploaded chat images may be sent to OpenAI to generate AI replies and moderation outcomes. Speech audio may be sent to OpenAI or Deepgram for transcription depending on server configuration. Assistant text may be sent to ElevenLabs to create spoken audio. Uploaded profile and chat images, generated audio, and related media may be stored on BunnyCDN. OneSignal may process notification identifiers and delivery data. RevenueCat and the app stores process subscription and entitlement data. Social sign-in data may be processed by Apple, Google, or Facebook when you use those login methods. These providers are used only to perform the requested service and are expected to protect data under their own security and privacy terms. OpenAI API data is not used to train OpenAI models according to OpenAI API policies.',
-			'termOfService.privacyPolicy.section4Title' => '4. PHOTOS, CAMERA, MICROPHONE, AND FACE DATA',
-			'termOfService.privacyPolicy.section4Body' => 'Camera access is used for local video-call preview when you start a video call. The camera preview stays on your device. ChatFace does not collect biometric face data, face templates, face geometry, face recognition identifiers, or face profiles. Uploaded profile photos and chat images may contain faces if you choose to upload them; these images are stored and processed only as user-provided photos for profile display or AI conversation context. Microphone access is used for voice and video conversations so your speech can be transcribed and answered by the AI.',
-			'termOfService.privacyPolicy.section5Title' => '5. DATA RETENTION AND DELETION',
-			'termOfService.privacyPolicy.section5Body' => 'Account profile data, profile photos, conversation history, uploaded chat images, reports, notification settings, and subscription entitlement records are retained while your account is active or as needed for legal, security, fraud-prevention, and support purposes. When you delete your account, personal account records are deleted from ChatFace systems subject to required legal and operational retention. Media stored with third-party infrastructure is removed or made inaccessible according to our deletion process and provider retention behavior.',
-			'termOfService.privacyPolicy.section6Title' => '6. USER RIGHTS',
-			'termOfService.privacyPolicy.section6Body' => 'Under applicable privacy laws, you may request access, correction, deletion, objection, restriction, or data portability for your personal data. You can contact us for these requests.',
-			'termOfService.privacyPolicy.section7Title' => '7. CHILDREN\'S PRIVACY',
-			'termOfService.privacyPolicy.section7Body' => 'ChatFace is not intended for users under the age of 18. We do not knowingly collect data from this age group; such accounts will be closed and data deleted upon detection.',
-			'termOfService.privacyPolicy.section8Title' => '8. CONTACT',
-			'termOfService.privacyPolicy.section8Body' => 'For privacy inquiries: support@fly-work.com',
-			'termOfService.termsOfService.title' => 'Terms of Service',
-			'termOfService.termsOfService.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.termsOfService.intro' => 'These Terms govern the use of the ChatFace mobile application. By using the app, you agree to these Terms.',
-			'termOfService.termsOfService.disclaimer' => 'Disclaimer: ChatFace is an AI video interaction app. It does not provide legal, academic, medical, or professional consulting services.',
-			'termOfService.termsOfService.section1Title' => '1. SCOPE OF SERVICE',
-			'termOfService.termsOfService.section1Body' => 'ChatFace provides AI-powered video interaction experiences:\n\n• AI video calling and conversation.\n• Personalized interaction preferences.\n• Access to interaction history and records.\n\nServices do not constitute official opinions or professional guidance guarantees.',
-			'termOfService.termsOfService.section2Title' => '2. CONDITIONS OF USE',
-			'termOfService.termsOfService.section2Body' => '• You must be at least 18 years old (Under 18 access is prohibited).\n• You must provide accurate account information.\n• The app must be used for legal and personal purposes only.',
-			'termOfService.termsOfService.section3Title' => '3. PROHIBITED USES',
-			'termOfService.termsOfService.section3Body' => 'Impersonation, hate speech, endangering child safety, security breach attempts, and manipulation of AI systems are strictly prohibited.',
-			'termOfService.termsOfService.section4Title' => '4. SUBSCRIPTIONS AND PAYMENTS',
-			'termOfService.termsOfService.section4Body' => 'Premium features are subject to App Store and Google Play policies. Subscription cancellations and refunds are managed via the respective store settings.',
-			'termOfService.termsOfService.section5Title' => '5. CONTENT DISCLAIMER',
-			'termOfService.termsOfService.section5Body' => 'Content is AI-generated and does not replace professional advice. ChatFace does not guarantee accuracy or fitness for a particular purpose.',
-			'termOfService.termsOfService.section6Title' => '6. INTELLECTUAL PROPERTY',
-			'termOfService.termsOfService.section6Body' => 'All content including design, software, and algorithms belongs to ChatFace. Unauthorized reproduction or redistribution is prohibited.',
-			'termOfService.termsOfService.section7Title' => '7. GOVERNING LAW',
-			'termOfService.termsOfService.section7Body' => 'These Terms are governed by the laws of the Republic of Turkey. Istanbul Central Courts shall have jurisdiction over disputes.',
-			'termOfService.termsOfService.section8Title' => '8. CONTACT',
-			'termOfService.termsOfService.section8Body' => '📩 For inquiries: support@fly-work.com',
-			'termOfService.cookiePolicy.title' => 'Cookie Policy',
-			'termOfService.cookiePolicy.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.cookiePolicy.intro' => 'Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.',
-			'termOfService.cookiePolicy.important' => 'This policy explains what cookies are, their purposes, and how you can manage your preferences.',
-			'termOfService.cookiePolicy.section1Title' => '1. WHAT ARE COOKIES?',
-			'termOfService.cookiePolicy.section1Body' => 'Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.',
-			'termOfService.cookiePolicy.section2Title' => '2. WHICH TECHNOLOGIES DO WE USE?',
-			'termOfService.cookiePolicy.section2Body' => 'Strictly Necessary Technologies\nRequired for session management and security controls. The app may not function properly without these components.\n\nPerformance and Analytics\nHelps us understand which stories are read and which areas need improvement. Data is evaluated anonymously.\n\nPersonalization\nRemembers settings like language preference and reading level to provide a tailored experience for the child.',
-			'termOfService.cookiePolicy.section3Title' => '3. WHY DO WE USE THESE TECHNOLOGIES?',
-			'termOfService.cookiePolicy.section3Body' => '• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.',
-			'termOfService.cookiePolicy.section4Title' => '4. THIRD-PARTY TECHNOLOGIES',
-			'termOfService.cookiePolicy.section4Body' => 'Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.',
-			'termOfService.cookiePolicy.section5Title' => '5. COOKIE CONTROL AND MANAGEMENT',
-			'termOfService.cookiePolicy.section5Body' => 'Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.',
-			'termOfService.cookiePolicy.section6Title' => '6. CONTACT',
-			'termOfService.cookiePolicy.section6Body' => '📩 For inquiries: support@fly-work.com',
-			'cookies' => 'Cookies Policy',
-			'privacy' => 'Privacy Policy',
-			'onboarding.step5.permissionRequired' => 'Permission required',
-			'onboarding.step5.notNow' => 'Not now',
-			'onboarding.step5.openSettings' => 'Open settings',
-			'onboarding.step5.title' => 'Permissions',
-			'onboarding.step5.permission1' => 'Camera Access',
-			'onboarding.step5.permission1Subtitle' => 'ChatFace uses your camera for video calls with AI characters.',
-			'onboarding.step5.permission2' => 'Microphone Access',
-			'onboarding.step5.permission2Subtitle' => 'ChatFace uses your microphone for voice and video calls.',
-			'onboarding.step5.permission3' => 'Location Access',
-			'onboarding.step5.permission3Subtitle' => 'ChatFace uses your location to personalize your experience.',
-			'onboarding.step1.title' => 'What is your Name?',
-			'onboarding.step1.subtitle' => 'Please enter your name',
-			'onboarding.step1.hint' => 'Full Name',
-			'onboarding.step2.title' => 'What is your Age?',
-			'onboarding.step2.subtitle' => 'You must be at least 18 years old to register.',
-			'onboarding.step3.title' => 'What is your Gender?',
-			'onboarding.step3.subtitle' => 'Please select your gender',
-			'onboarding.step3.male' => 'Male',
-			'onboarding.step3.female' => 'Female',
-			'onboarding.step3.dontWantToMention' => 'I don\'t want to mention it.',
-			'onboarding.step4.title' => 'Have Fun While \nStaying Safe',
-			'onboarding.step4.entry1' => 'We Maintain Order',
-			'onboarding.step4.subentry1' => 'Real-time AI Monitoring Open',
-			'onboarding.step4.entry2' => 'Screen Recordings',
-			'onboarding.step4.subentry2' => 'No Recording Without Consent',
-			'onboarding.step4.entry3' => '24/7 Support',
-			'onboarding.step4.subentry3' => 'Complaints Are Reviewed At Any Time Of The Day',
-			'onboarding.step4.entry4' => '18+ only',
-			'onboarding.step4.subentry4' => 'Not Suitable For Minors',
-			'onboarding.step4.communityRules' => 'Community Rules',
-			'onboarding.loading.titlePart1' => 'Your Personal Account is\n',
-			'onboarding.loading.titlePart2' => 'Being Created',
-			'onboarding.loading.subtitle' => 'Please wait, your profile is being prepared.',
-			'onboarding.kFinal.titlePart1' => 'Your Personal Account is\n',
-			'onboarding.kFinal.titlePart2' => 'Created',
-			'onboarding.kFinal.subtitle' => 'Enjoy communication with any character',
-			'onboarding.allowAccess' => 'Allow Access',
-			'onboarding.iUnderstand' => 'I Understand',
-			'pressBackAgainToExit' => 'Press back again to exit',
-			'splash.initial.hello' => 'Hello',
-			'splash.initial.title' => 'PLAYFUL ENGLISH FOR KIDS',
-			'splash.screen1.title' => 'Learning English \nCan Feel Like Play',
-			'splash.screen1.description' => 'Short, playful lessons help kids learn new words without pressure.',
-			'splash.screen2.title' => 'Listen, Repeat, and \nLearn New Words',
-			'splash.screen2.description' => 'Simple voice activities help kids practice pronunciation step by step.',
-			'splash.screen3.title' => 'Build Confidence, \nOne Word at a Time',
-			'splash.screen3.description' => 'Designed for young learners with simple activities, friendly guidance, and a safe learning flow.',
-			'splash.screen3.option1' => '️🛡️ Safe For Kids',
-			'splash.screen3.option2' => '🌱 No pressure learning',
-			'splash.screen3.option3' => '⭐️ Made for young learners',
-			'auth.google' => 'Continue with Google',
-			'auth.facebook' => 'Continue with Facebook',
-			'auth.apple' => 'Continue with Apple',
-			'auth.guest' => 'Continue as Guest',
-			'auth.signInFailed' => ({required Object error}) => 'Sign-in failed: ${error}',
-			'home.seeAll' => 'See All',
-			'home.more' => 'More',
-			'home.online' => 'Online',
-			'home.offline' => 'Offline',
-			'home.placeholders.fashionDesigner' => 'Fashion Designer',
-			'home.placeholders.comedian' => 'Comedian',
+			'termOfService.privacyPolicy.title' => 'politica sulla riservatezza',
+			'termOfService.privacyPolicy.lastUpdated' => 'Ultimo aggiornamento: 2026',
+			'termOfService.privacyPolicy.intro' => 'ChatFace adotta la privacy degli utenti e la sicurezza dei dati come principio fondamentale. Tutti i tuoi dati personali vengono trattati in conformità con le normative vigenti sulla protezione dei dati.',
+			'termOfService.privacyPolicy.section1Title' => '1. INFORMAZIONI RACCOLTE',
+			'termOfService.privacyPolicy.section1sub1Title' => '1.1 Dati forniti dall\'utente',
+			'termOfService.privacyPolicy.section1sub1Body' => '• Nome, soprannome, età, sesso, paese, informazioni sul profilo e foto del profilo opzionali che scegli di caricare.\n• Indirizzo email per la registrazione, l\'abbonamento e il supporto.\n• Preferenze di interazione, lingua selezionata, scelte dei personaggi AI, messaggi, trascrizioni vocali, immagini di chat caricate, feedback e messaggi di supporto.',
+			'termOfService.privacyPolicy.section1sub2Title' => '1.2 Dati raccolti automaticamente',
+			'termOfService.privacyPolicy.section1sub2Body' => 'ChatFace può raccogliere tipo di dispositivo, sistema operativo, paese/città approssimativi derivati ​​​​da segnali di rete, dati sull\'utilizzo delle app, registri di arresti anomali, stato dell\'abbonamento e dati di consegna delle notifiche. La posizione precisa non è richiesta durante l\'onboarding e non è necessaria per la chat o le chiamate AI.',
+			'termOfService.privacyPolicy.section2Title' => '2. FINALITÀ DEL TRATTAMENTO DEI DATI',
+			'termOfService.privacyPolicy.section2Body' => 'I tuoi dati personali vengono elaborati per gestire l\'app, autenticare il tuo account, fornire funzionalità di chat AI e chiamate vocali/videochiamate, personalizzare le interazioni tra lingua e caratteri, elaborare abbonamenti, inviare notifiche quando abilitate, prevenire abusi, esaminare le segnalazioni degli utenti, migliorare l\'affidabilità e soddisfare gli obblighi legali. I tuoi dati personali non vengono venduti né utilizzati per scopi pubblicitari.',
+			'termOfService.privacyPolicy.section3Title' => '3. TRATTAMENTO DELL\'AI E CONDIVISIONE CON TERZE PARTI',
+			'termOfService.privacyPolicy.section3Body' => 'Per fornire una migliore esperienza IA, ChatFace utilizza in modo sicuro fornitori di terze parti, incluso OpenAI, per elaborare il testo, la voce, le immagini e i dati correlati inviati. Messaggi, trascrizioni vocali, lingua selezionata, contesto del profilo, cronologia delle conversazioni e immagini di chat caricate possono essere inviati a OpenAI per generare risposte AI e risultati della moderazione. L\'audio vocale può essere inviato a OpenAI o Deepgram per la trascrizione a seconda della configurazione del server. Il testo dell\'assistente può essere inviato a ElevenLabs per creare audio parlato. Le immagini del profilo e della chat caricate, l\'audio generato e i relativi contenuti multimediali possono essere archiviati su BunnyCDN. OneSignal può elaborare identificatori di notifica e dati di consegna. RevenueCat e gli app store elaborano i dati sugli abbonamenti e sui diritti. I dati di accesso social potrebbero essere elaborati da Apple, Google o Facebook quando utilizzi tali metodi di accesso. Questi fornitori vengono utilizzati solo per eseguire il servizio richiesto e sono tenuti a proteggere i dati secondo i propri termini di sicurezza e privacy. I dati API OpenAI non vengono utilizzati per addestrare i modelli OpenAI in base alle policy API OpenAI.',
+			'termOfService.privacyPolicy.section4Title' => '4. FOTO, FOTOCAMERA, MICROFONO E DATI DEL VISO',
+			'termOfService.privacyPolicy.section4Body' => 'L\'accesso alla fotocamera viene utilizzato per l\'anteprima della videochiamata locale quando si avvia una videochiamata. L\'anteprima della fotocamera rimane sul tuo dispositivo. ChatFace non raccoglie dati biometrici dei volti, modelli di volti, geometria dei volti, identificatori di riconoscimento facciale o profili dei volti. Le foto del profilo caricate e le immagini della chat possono contenere volti se scegli di caricarle; queste immagini vengono archiviate ed elaborate solo come foto fornite dall\'utente per la visualizzazione del profilo o il contesto di una conversazione AI. L\'accesso al microfono viene utilizzato per le conversazioni vocali e video in modo che il tuo discorso possa essere trascritto e risposto dall\'intelligenza artificiale.',
+			'termOfService.privacyPolicy.section5Title' => '5. CONSERVAZIONE E CANCELLAZIONE DEI DATI',
+			'termOfService.privacyPolicy.section5Body' => 'I dati del profilo dell\'account, le foto del profilo, la cronologia delle conversazioni, le immagini della chat caricate, i report, le impostazioni di notifica e i record dei diritti di abbonamento vengono conservati mentre l\'account è attivo o secondo necessità per scopi legali, di sicurezza, di prevenzione delle frodi e di supporto. Quando elimini il tuo account, i record dell\'account personale vengono eliminati dai sistemi ChatFace soggetti alla conservazione legale e operativa richiesta. I contenuti multimediali archiviati con infrastrutture di terze parti vengono rimossi o resi inaccessibili in base al nostro processo di eliminazione e al comportamento di conservazione del fornitore.',
+			'termOfService.privacyPolicy.section6Title' => '6. DIRITTI DELL\'UTENTE',
+			'termOfService.privacyPolicy.section6Body' => 'Ai sensi delle leggi sulla privacy applicabili, puoi richiedere l\'accesso, la correzione, la cancellazione, l\'obiezione, la limitazione o la portabilità dei tuoi dati personali. Potete contattarci per queste richieste.',
+			'termOfService.privacyPolicy.section7Title' => '7. PRIVACY DEI BAMBINI',
+			'termOfService.privacyPolicy.section7Body' => 'ChatFace non è destinato agli utenti di età inferiore ai 18 anni. Non raccogliamo consapevolmente dati da questa fascia di età; tali account verranno chiusi e i dati cancellati al momento del rilevamento.',
+			'termOfService.privacyPolicy.section8Title' => '8. CONTATTO',
+			'termOfService.privacyPolicy.section8Body' => 'Per domande sulla privacy: support@fly-work.com',
+			'termOfService.termsOfService.title' => 'Termini di servizio',
+			'termOfService.termsOfService.lastUpdated' => 'Ultimo aggiornamento: 2026',
+			'termOfService.termsOfService.intro' => 'I presenti Termini regolano l\'utilizzo dell\'applicazione mobile ChatFace. Utilizzando l\'app, accetti questi Termini.',
+			'termOfService.termsOfService.disclaimer' => 'Dichiarazione di non responsabilità: ChatFace è un\'app di interazione video AI. Non fornisce servizi di consulenza legale, accademica, medica o professionale.',
+			'termOfService.termsOfService.section1Title' => '1. AMBITO DEL SERVIZIO',
+			'termOfService.termsOfService.section1Body' => 'ChatFace offre esperienze di interazione video basate sull\'intelligenza artificiale:\n\n• Videochiamate e conversazioni basate sull\'intelligenza artificiale.\n• Preferenze di interazione personalizzate.\n• Accesso alla cronologia e ai record delle interazioni.\n\nI servizi non costituiscono opinioni ufficiali o garanzie di orientamento professionale.',
+			'termOfService.termsOfService.section2Title' => '2. CONDIZIONI D\'USO',
+			'termOfService.termsOfService.section2Body' => '• È necessario avere almeno 18 anni (l\'accesso ai minori di 18 anni è vietato).\n• Devi fornire informazioni precise sull\'account.\n• L\'app deve essere utilizzata esclusivamente per scopi legali e personali.',
+			'termOfService.termsOfService.section3Title' => '3. USI VIETATI',
+			'termOfService.termsOfService.section3Body' => 'Sono severamente vietati il ​​furto d\'identità, l\'incitamento all\'odio, la messa in pericolo della sicurezza dei bambini, i tentativi di violazione della sicurezza e la manipolazione dei sistemi di intelligenza artificiale.',
+			'termOfService.termsOfService.section4Title' => '4. ABBONAMENTI E PAGAMENTI',
+			'termOfService.termsOfService.section4Body' => 'Le funzionalità premium sono soggette alle norme dell\'App Store e di Google Play. Le cancellazioni degli abbonamenti e i rimborsi vengono gestiti tramite le rispettive impostazioni del negozio.',
+			'termOfService.termsOfService.section5Title' => '5. ESCLUSIONE DI RESPONSABILITÀ SUI CONTENUTI',
+			'termOfService.termsOfService.section5Body' => 'I contenuti sono generati dall\'intelligenza artificiale e non sostituiscono la consulenza professionale. ChatFace non garantisce l\'accuratezza o l\'idoneità per uno scopo particolare.',
+			'termOfService.termsOfService.section6Title' => '6. PROPRIETÀ INTELLETTUALE',
+			'termOfService.termsOfService.section6Body' => 'Tutti i contenuti, inclusi design, software e algoritmi, appartengono a ChatFace. È vietata la riproduzione o la ridistribuzione non autorizzata.',
+			'termOfService.termsOfService.section7Title' => '7. LEGGE APPLICABILE',
+			'termOfService.termsOfService.section7Body' => 'Le presenti Condizioni sono regolate dalle leggi della Repubblica di Turchia. I tribunali centrali di Istanbul avranno giurisdizione sulle controversie.',
+			'termOfService.termsOfService.section8Title' => '8. CONTATTO',
+			'termOfService.termsOfService.section8Body' => '📩 Per domande: support@fly-work.com',
+			'termOfService.cookiePolicy.title' => 'Politica sui cookie',
+			'termOfService.cookiePolicy.lastUpdated' => 'Ultimo aggiornamento: 2026',
+			'termOfService.cookiePolicy.intro' => 'Benvenuto su ChatFace. Le tecnologie di supporto digitale vengono utilizzate per rendere la tua esperienza di videochiamata AI più fluida, sicura e personalizzata.',
+			'termOfService.cookiePolicy.important' => 'Questa policy spiega cosa sono i cookie, i loro scopi e come puoi gestire le tue preferenze.',
+			'termOfService.cookiePolicy.section1Title' => '1. COSA SONO I COOKIE?',
+			'termOfService.cookiePolicy.section1Body' => 'I cookie sono piccoli file di dati inseriti sul tuo dispositivo. Non ti identificano direttamente; agiscono come note digitali che ricordano:\n• Impostazioni di chiamata e lingua\n• Preferenze di sessione e performance.',
+			'termOfService.cookiePolicy.section2Title' => '2. QUALI TECNOLOGIE UTILIZZIAMO?',
+			'termOfService.cookiePolicy.section2Body' => 'Tecnologie strettamente necessarie\nNecessarie per la gestione delle sessioni e i controlli di sicurezza. L\'app potrebbe non funzionare correttamente senza questi componenti.\n\nPrestazioni e analisi\nCi aiuta a capire quali storie vengono lette e quali aree necessitano di miglioramento. I dati vengono valutati in modo anonimo.\n\nPersonalizzazione\nRicorda impostazioni come la preferenza della lingua e il livello di lettura per fornire un\'esperienza su misura per il bambino.',
+			'termOfService.cookiePolicy.section3Title' => '3. PERCHÉ UTILIZZIAMO QUESTE TECNOLOGIE?',
+			'termOfService.cookiePolicy.section3Body' => '• Per garantire che l\'app funzioni in modo sicuro e senza intoppi.\n• Per rendere l\'esperienza di lettura più fluida.\n• Per ricordare impostazioni ripetitive.\n• Identificare le funzionalità per lo sviluppo futuro.',
+			'termOfService.cookiePolicy.section4Title' => '4. TECNOLOGIE DI TERZE PARTI',
+			'termOfService.cookiePolicy.section4Body' => 'Alcune tecnologie possono essere fornite da fornitori di servizi tecnici e sono soggette alle rispettive politiche. ChatFace dà priorità alla sicurezza dei dati in queste partnership.',
+			'termOfService.cookiePolicy.section5Title' => '5. CONTROLLO E GESTIONE DEI COOKIE',
+			'termOfService.cookiePolicy.section5Body' => 'Gli utenti possono limitare queste tecnologie tramite le impostazioni del dispositivo o dell\'app. La disabilitazione delle tecnologie essenziali può causare problemi come l\'impossibilità di avviare videochiamate.',
+			'termOfService.cookiePolicy.section6Title' => '6. CONTATTO',
+			'termOfService.cookiePolicy.section6Body' => '📩 Per domande: support@fly-work.com',
+			'cookies' => 'Politica sui cookie',
+			'privacy' => 'politica sulla riservatezza',
+			'onboarding.step5.permissionRequired' => 'Permesso richiesto',
+			'onboarding.step5.notNow' => 'Non adesso',
+			'onboarding.step5.openSettings' => 'Apri le impostazioni',
+			'onboarding.step5.title' => 'Autorizzazioni',
+			'onboarding.step5.permission1' => 'Accesso alla fotocamera',
+			'onboarding.step5.permission1Subtitle' => 'ChatFace utilizza la tua fotocamera per videochiamate con personaggi AI.',
+			'onboarding.step5.permission2' => 'Accesso al microfono',
+			'onboarding.step5.permission2Subtitle' => 'ChatFace utilizza il tuo microfono per le chiamate vocali e le videochiamate.',
+			'onboarding.step5.permission3' => 'Accesso alla posizione',
+			'onboarding.step5.permission3Subtitle' => 'ChatFace utilizza la tua posizione per personalizzare la tua esperienza.',
+			'onboarding.step1.title' => 'Come ti chiami?',
+			'onboarding.step1.subtitle' => 'Per favore inserisci il tuo nome',
+			'onboarding.step1.hint' => 'Nome e cognome',
+			'onboarding.step2.title' => 'Quanti anni hai?',
+			'onboarding.step2.subtitle' => 'Devi avere almeno 18 anni per registrarti.',
+			'onboarding.step3.title' => 'Qual è il tuo sesso?',
+			'onboarding.step3.subtitle' => 'Seleziona il tuo sesso',
+			'onboarding.step3.male' => 'Maschio',
+			'onboarding.step3.female' => 'Femmina',
+			'onboarding.step3.dontWantToMention' => 'Non voglio menzionarlo.',
+			'onboarding.step4.title' => 'Divertiti\nRestando al sicuro',
+			'onboarding.step4.entry1' => 'Manteniamo l\'ordine',
+			'onboarding.step4.subentry1' => 'Monitoraggio AI in tempo reale Aperto',
+			'onboarding.step4.entry2' => 'Registrazioni dello schermo',
+			'onboarding.step4.subentry2' => 'Nessuna registrazione senza consenso',
+			'onboarding.step4.entry3' => 'Supporto 24 ore su 24, 7 giorni su 7',
+			'onboarding.step4.subentry3' => 'I reclami vengono esaminati in qualsiasi momento della giornata',
+			'onboarding.step4.entry4' => 'Solo 18+',
+			'onboarding.step4.subentry4' => 'Non adatto a minorenni',
+			'onboarding.step4.communityRules' => 'Regole della comunità',
+			'onboarding.loading.titlePart1' => 'Il tuo account personale è\n',
+			'onboarding.loading.titlePart2' => 'Essere creato',
+			'onboarding.loading.subtitle' => 'Per favore attendi, il tuo profilo è in preparazione.',
+			'onboarding.kFinal.titlePart1' => 'Il tuo account personale è\n',
+			'onboarding.kFinal.titlePart2' => 'Creato',
+			'onboarding.kFinal.subtitle' => 'Goditi la comunicazione con qualsiasi personaggio',
+			'onboarding.allowAccess' => 'Consenti accesso',
+			'onboarding.iUnderstand' => 'Capisco',
+			'onboarding.login.title' => 'Continua il tuo\nviaggio di apprendimento',
+			'onboarding.login.subtitle' => 'Salva i progressi, sblocca le lezioni e\ncontinua ad apprendere su tutti i dispositivi.',
+			'onboarding.login.failed' => 'Impossibile completare l\'accesso.',
+			'onboarding.reward.points' => '⭐️ +50 punti',
+			'onboarding.reward.title' => 'Ottimo lavoro 🎉',
+			'onboarding.reward.subtitle' => 'Oltre 200 lezioni in più ti stanno aspettando!',
+			'onboarding.reward.progressLabel' => 'Primo passo completato!',
+			'onboarding.reward.featureAlphabetTitle' => 'Alfabeto e numeri completi',
+			'onboarding.reward.featureAlphabetSubtitle' => 'Oltre 200 lezioni interattive',
+			'onboarding.reward.featureVoiceTitle' => 'Pronuncia vocale',
+			'onboarding.reward.featureVoiceSubtitle' => 'Supporto audio per ogni parola',
+			'onboarding.reward.featureQuizTitle' => 'Mini quiz divertenti',
+			'onboarding.reward.featureQuizSubtitle' => 'Impara divertendoti',
+			'onboarding.reward.continueButton' => 'Continua a esplorare',
+			'onboarding.spellTitle' => 'Scrivi la parola che vedi!',
+			'onboarding.spellSubtitle' => 'Sai scrivere LEONE?',
+			'onboarding.spellSuccessTitle' => 'Carino! E\' LEONE',
+			'onboarding.spellSuccessSubtitle' => 'tocca per ascoltare',
+			'pressBackAgainToExit' => 'Premi nuovamente indietro per uscire',
+			'splash.initial.hello' => 'Ciao',
+			'splash.initial.title' => 'INGLESE DIVERTENTE PER BAMBINI',
+			'splash.screen1.title' => 'Imparare l\'inglese\npuò sembrare come giocare',
+			'splash.screen1.description' => 'Lezioni brevi e giocose aiutano i bambini a imparare nuove parole senza pressione.',
+			'splash.screen2.title' => 'Ascolta, ripeti e\nimpara nuove parole',
+			'splash.screen2.description' => 'Semplici attività vocali aiutano i bambini a praticare la pronuncia passo dopo passo.',
+			'splash.screen3.title' => 'Costruisci fiducia,\nUna parola alla volta',
+			'splash.screen3.description' => 'Progettato per i giovani studenti con attività semplici, guida amichevole e un flusso di apprendimento sicuro.',
+			'splash.screen3.option1' => '️🛡️ Sicuro per i bambini',
+			'splash.screen3.option2' => '🌱 Nessuna pressione nell\'apprendimento',
+			'splash.screen3.option3' => '⭐️ Realizzato per i giovani studenti',
+			'auth.google' => 'Continua con Google',
+			'auth.facebook' => 'Continua con Facebook',
+			'auth.apple' => 'Continua con Apple',
+			'auth.guest' => 'Continua come ospite',
+			'auth.signInFailed' => ({required Object error}) => 'Accesso non riuscito: ${error}',
+			'home.seeAll' => 'Vedi tutto',
+			'home.more' => 'Di più',
+			'home.online' => 'In linea',
+			'home.offline' => 'Non in linea',
+			'home.placeholders.fashionDesigner' => 'Stilista di moda',
+			'home.placeholders.comedian' => 'Comico',
 			'home.placeholders.influencer' => 'Influencer',
-			'home.placeholders.teacher' => 'Teacher',
-			'home.placeholders.friend' => 'Friend',
-			'home.greeting' => 'Hello,',
-			'home.guest' => 'Guest',
-			'home.thisWeek' => 'This Week',
-			'home.continueLearning' => 'Continue Learning',
-			'home.allLessons' => 'All Lessons',
-			'home.startLearning' => 'Start learning',
-			'home.resumeActivity' => ({required Object activity}) => 'Resume ${activity}',
-			'home.continueButton' => 'Continue',
-			'notifications.today' => 'Today',
-			'notifications.yesterday' => 'Yesterday',
-			'notifications.weekAgo' => ({required Object week}) => '${week} week ago',
-			'notifications.monthAgo' => ({required Object month}) => '${month} month ago',
-			'notifications.yearAgo' => ({required Object year}) => '${year} year ago',
-			'notifications.noNotifications' => 'No notifications yet.',
-			'notifications.noNotificationsSubtitle' => 'Don\'t forget to check again when you receive the notification.',
-			'notifications.allDeleted' => 'All notifications have been successfully deleted',
-			'editProfile.aboutMe' => 'About Me',
-			'editProfile.aboutMeHint' => 'Write something about yourself',
-			'editProfile.fullName' => 'Full Name',
-			'editProfile.gender' => 'Gender',
-			'editProfile.male' => 'Male',
-			'editProfile.female' => 'Female',
-			'editProfile.dontWantToMention' => 'I don\'t want to mention it.',
-			'editProfile.country' => 'Country',
-			'editProfile.languagePreferences' => 'Language Preferences',
-			'editProfile.selectLanguage' => 'Add your preferred language',
-			'editProfile.saved' => 'Saved',
-			'editProfile.changesSaved' => 'Changes have been saved.',
-			'settingsSupport.title' => 'Settings & Support',
-			'settingsSupport.premiumTitle' => 'Unlimited access \nto all features',
-			'settingsSupport.getPremium' => 'Get Premium',
-			'settingsSupport.settingsHub' => 'Settings Hub',
-			'settingsSupport.shareTheApp' => 'Share the App',
-			'settingsSupport.rateUs' => 'Rate Us',
-			'settingsSupport.version' => 'Version',
-			'settingsSupport.notifications' => 'Notifications',
-			'settingsSupport.accountManagement' => 'Account Management',
-			'settingsSupport.deleteAccount' => 'Delete Account',
-			'settingsSupport.logOut' => 'Log Out',
-			'settingsSupport.logOutTitle' => 'You are about to log out',
-			'settingsSupport.logOutSubtitle' => 'See you again soon! \n We’ll miss you.',
-			'deleteAccount.title' => 'Delete Account',
-			'deleteAccount.warning' => 'Are you sure you want to delete your account?',
-			'deleteAccount.description' => 'This action cannot be undone, and all your history and data will be permanently deleted.',
-			'deleteAccount.deleteFailed' => ({required Object error}) => 'Account deletion failed: ${error}',
-			'deleteAccount.steps.step1.title' => 'We don\'t want you to go, but we understand.',
-			'deleteAccount.steps.step1.subtitle' => 'Can you tell us why you want to leave so we can improve the ChatFace experience?',
-			'deleteAccount.steps.step1.option1' => 'I didn\'t find the AI characters realistic.',
-			'deleteAccount.steps.step1.option2' => 'I am experiencing technical issues with video chats.',
-			'deleteAccount.steps.step1.option3' => 'Subscription prices are above my expectations.',
-			'deleteAccount.steps.step1.option4' => 'I couldn\'t find the type of characters I was looking for.',
-			'deleteAccount.steps.step1.option5' => 'I just wanted to try it out for a short time.',
-			'deleteAccount.steps.step1.option6' => 'Other',
-			'deleteAccount.steps.step2.title' => 'If you delete your account, you will say goodbye to:',
-			'deleteAccount.steps.step2.subtitle1' => 'Deep Connections and Memory:',
-			'deleteAccount.steps.step2.subtitle1Desc' => 'The characters you chat with will completely forget their past with you, your shared secrets, and your personal habits.',
-			'deleteAccount.steps.step2.subtitle2' => 'Video Call Privilege:',
-			'deleteAccount.steps.step2.subtitle2Desc' => 'You will lose the right to communicate face-to-face with your AI partners, who are available to you anytime.',
-			'deleteAccount.steps.step2.subtitle3' => 'Advanced Algorithm:',
-			'deleteAccount.steps.step2.subtitle3Desc' => 'Your \'Just for You\' character matches tailored to your preferences will be reset.',
-			'deleteAccount.steps.step2.subtitle4' => 'Profile Data:',
-			'deleteAccount.steps.step2.subtitle4Desc' => 'Your earned achievements, unlocked special characters, and chat history will be irreversibly deleted.',
-			'deleteAccount.steps.step3.title' => 'We have a special offer for you before you go!',
-			'deleteAccount.steps.step3.description' => 'Maybe you just need a little more time or a better deal. Instead of deleting your account, would you consider these?',
-			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'Keeping you with us is valuable. ${offer} on your next subscription! Would you like to continue with this offer?',
-			'deleteAccount.steps.step3.description1Offer' => 'We\'ve applied a 50% discount',
-			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'We have given you ${offer} credits so you can see new characters you haven\'t discovered yet.',
-			'deleteAccount.steps.step3.description2Offer' => '3 free video calls',
-			'deleteAccount.steps.step3.acceptOffer' => 'Accept 50% Discount Offer',
-			'deleteAccount.steps.step3.deleteMyAccount' => 'Delete My Account',
-			'cancel' => 'Cancel',
-			'delete' => 'Delete',
-			'premium' => 'Premium',
-			'profileEdit' => 'Profile Edit',
-			'settings' => 'Settings',
-			'undo' => 'Undo',
-			'successfully' => 'Successfully',
-			'save' => 'Save',
-			'languageOptions.english' => 'English',
-			'languageOptions.chinese' => 'Chinese',
-			'languageOptions.german' => 'German',
-			'languageOptions.italian' => 'Italian',
-			'languageOptions.french' => 'French',
-			'languageOptions.japanese' => 'Japanese',
-			'languageOptions.spanish' => 'Spanish',
-			'languageOptions.russian' => 'Russian',
-			'languageOptions.turkish' => 'Turkish',
-			'languageOptions.korean' => 'Korean',
-			'languageOptions.hindi' => 'Hindi',
-			'languageOptions.portuguese' => 'Portuguese',
-			'common.tryAgain' => 'Try Again',
-			'common.retry' => 'Retry',
-			'common.close' => 'Close',
-			'profileScreen.title' => 'Profile',
-			'profileScreen.greeting' => 'Hello,',
+			'home.placeholders.teacher' => 'Insegnante',
+			'home.placeholders.friend' => 'Amico',
+			'home.greeting' => 'Ciao,',
+			'home.guest' => 'Ospite',
+			'home.thisWeek' => 'Questa settimana',
+			'home.continueLearning' => 'Continua ad imparare',
+			'home.allLessons' => 'Tutte le lezioni',
+			'home.startLearning' => 'Inizia ad imparare',
+			'home.resumeActivity' => ({required Object activity}) => 'Riprendi ${activity}',
+			'home.continueButton' => 'Continuare',
+			'home.weekDays.0' => 'LUN',
+			'home.weekDays.1' => 'MAR',
+			'home.weekDays.2' => 'MER',
+			'home.weekDays.3' => 'GIO',
+			'home.weekDays.4' => 'VEN',
+			'home.weekDays.5' => 'SAB',
+			'home.weekDays.6' => 'SOLE',
+			'home.lessons.alphabet' => 'Alfabeto',
+			'home.lessons.numbers' => 'Numeri',
+			'home.lessons.colors' => 'Colori',
+			'home.lessons.shapes' => 'Forme',
+			'home.lessons.fruit' => 'Frutta',
+			'home.lessons.vegetables' => 'Verdure',
+			'home.lessons.sports' => 'Sport',
+			'home.lessons.fillIn' => 'Riempire',
+			'home.lessons.fillInBlank' => 'Riempi lo spazio vuoto',
+			'home.lessonProgress' => ({required Object current, required Object total}) => 'Lezione ${current} di ${total}',
+			'notifications.today' => 'Oggi',
+			'notifications.yesterday' => 'Ieri',
+			'notifications.weekAgo' => ({required Object week}) => '${week} settimana fa',
+			'notifications.monthAgo' => ({required Object month}) => '${month} mese fa',
+			'notifications.yearAgo' => ({required Object year}) => '${year} anno fa',
+			'notifications.noNotifications' => 'Nessuna notifica ancora.',
+			'notifications.noNotificationsSubtitle' => 'Non dimenticare di controllare di nuovo quando ricevi la notifica.',
+			'notifications.allDeleted' => 'Tutte le notifiche sono state eliminate con successo',
+			'editProfile.aboutMe' => 'Su di me',
+			'editProfile.aboutMeHint' => 'Scrivi qualcosa su di te',
+			'editProfile.fullName' => 'Nome e cognome',
+			'editProfile.gender' => 'Genere',
+			'editProfile.male' => 'Maschio',
+			'editProfile.female' => 'Femmina',
+			'editProfile.dontWantToMention' => 'Non voglio menzionarlo.',
+			'editProfile.country' => 'Paese',
+			'editProfile.languagePreferences' => 'Preferenze della lingua',
+			'editProfile.selectLanguage' => 'Aggiungi la tua lingua preferita',
+			'editProfile.saved' => 'Salvato',
+			'editProfile.changesSaved' => 'Le modifiche sono state salvate.',
+			'settingsSupport.title' => 'Impostazioni e supporto',
+			'settingsSupport.premiumTitle' => 'Accesso illimitato\na tutte le funzionalità',
+			'settingsSupport.getPremium' => 'Ottieni Premium',
+			'settingsSupport.settingsHub' => 'Hub Impostazioni',
+			'settingsSupport.shareTheApp' => 'Condividi l\'app',
+			'settingsSupport.rateUs' => 'Valutaci',
+			'settingsSupport.version' => 'Versione',
+			'settingsSupport.notifications' => 'Notifiche',
+			'settingsSupport.accountManagement' => 'Gestione del conto',
+			'settingsSupport.deleteAccount' => 'Elimina account',
+			'settingsSupport.logOut' => 'Esci',
+			'settingsSupport.logOutTitle' => 'Stai per disconnetterti',
+			'settingsSupport.logOutSubtitle' => 'Ci vediamo presto!\nCi mancherai.',
+			'deleteAccount.title' => 'Elimina account',
+			'deleteAccount.warning' => 'Sei sicuro di voler eliminare il tuo account?',
+			'deleteAccount.description' => 'Questa azione non può essere annullata e tutta la cronologia e i dati verranno eliminati definitivamente.',
+			'deleteAccount.deleteFailed' => ({required Object error}) => 'Eliminazione dell\'account non riuscita: ${error}',
+			'deleteAccount.steps.step1.title' => 'Non vogliamo che tu vada, ma capiamo.',
+			'deleteAccount.steps.step1.subtitle' => 'Puoi dirci perché vuoi andartene così possiamo migliorare l\'esperienza di ChatFace?',
+			'deleteAccount.steps.step1.option1' => 'Non ho trovato realistici i personaggi dell\'IA.',
+			'deleteAccount.steps.step1.option2' => 'Sto riscontrando problemi tecnici con le chat video.',
+			'deleteAccount.steps.step1.option3' => 'I prezzi degli abbonamenti sono superiori alle mie aspettative.',
+			'deleteAccount.steps.step1.option4' => 'Non sono riuscito a trovare il tipo di personaggi che stavo cercando.',
+			'deleteAccount.steps.step1.option5' => 'Volevo solo provarlo per un breve periodo.',
+			'deleteAccount.steps.step1.option6' => 'Altro',
+			'deleteAccount.steps.step2.title' => 'Se elimini il tuo account, dirai addio a:',
+			'deleteAccount.steps.step2.subtitle1' => 'Connessioni profonde e memoria:',
+			'deleteAccount.steps.step2.subtitle1Desc' => 'I personaggi con cui chatti dimenticheranno completamente il loro passato con te, i tuoi segreti condivisi e le tue abitudini personali.',
+			'deleteAccount.steps.step2.subtitle2' => 'Privilegio di videochiamata:',
+			'deleteAccount.steps.step2.subtitle2Desc' => 'Perderai il diritto di comunicare faccia a faccia con i tuoi partner AI, che sono a tua disposizione in qualsiasi momento.',
+			'deleteAccount.steps.step2.subtitle3' => 'Algoritmo avanzato:',
+			'deleteAccount.steps.step2.subtitle3Desc' => 'Le corrispondenze dei personaggi "Solo per te" personalizzate in base alle tue preferenze verranno ripristinate.',
+			'deleteAccount.steps.step2.subtitle4' => 'Dati del profilo:',
+			'deleteAccount.steps.step2.subtitle4Desc' => 'Gli obiettivi ottenuti, i personaggi speciali sbloccati e la cronologia chat verranno eliminati in modo irreversibile.',
+			'deleteAccount.steps.step3.title' => 'Abbiamo un\'offerta speciale per te prima di partire!',
+			'deleteAccount.steps.step3.description' => 'Forse hai solo bisogno di un po\' più di tempo o di un accordo migliore. Invece di eliminare il tuo account, prenderesti in considerazione questi?',
+			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'Tenerti con noi è prezioso. ${offer} sul tuo prossimo abbonamento! Vuoi continuare con questa offerta?',
+			'deleteAccount.steps.step3.description1Offer' => 'Abbiamo applicato uno sconto del 50%.',
+			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'Ti abbiamo dato crediti ${offer} così potrai vedere nuovi personaggi che non hai ancora scoperto.',
+			'deleteAccount.steps.step3.description2Offer' => '3 videochiamate gratuite',
+			'deleteAccount.steps.step3.acceptOffer' => 'Accetta l\'offerta di sconto del 50%.',
+			'deleteAccount.steps.step3.deleteMyAccount' => 'Elimina il mio account',
+			'cancel' => 'Cancellare',
+			'delete' => 'Eliminare',
+			'premium' => 'Premio',
+			'profileEdit' => 'Modifica profilo',
+			'settings' => 'Impostazioni',
+			'undo' => 'Disfare',
+			'successfully' => 'Con successo',
+			'save' => 'Salva',
+			'languageOptions.english' => 'Inglese',
+			'languageOptions.chinese' => 'cinese',
+			'languageOptions.german' => 'tedesco',
+			'languageOptions.italian' => 'Italiano',
+			'languageOptions.french' => 'francese',
+			'languageOptions.japanese' => 'giapponese',
+			'languageOptions.spanish' => 'spagnolo',
+			'languageOptions.russian' => 'russo',
+			'languageOptions.turkish' => 'turco',
+			'languageOptions.korean' => 'coreano',
+			'languageOptions.hindi' => 'hindi',
+			'languageOptions.portuguese' => 'portoghese',
+			'common.tryAgain' => 'Riprova',
+			'common.retry' => 'Riprova',
+			'common.close' => 'Vicino',
+			'profileScreen.title' => 'Profilo',
+			'profileScreen.greeting' => 'Ciao,',
 			'profileScreen.account' => 'ACCOUNT',
 			'profileScreen.app' => 'APP',
-			'profileScreen.statusLoading' => 'Status loading',
-			'profileScreen.premiumActive' => 'Active • Pro Member',
-			'profileScreen.freePlan' => 'Free Plan',
-			'profileScreen.loadFailed' => 'Profile information could not be loaded. Pull down to try again.',
-			'profileScreen.accountSettings' => 'Account Settings',
-			'profileScreen.accountSettingsGuestSubtitle' => 'Name and avatar',
-			'profileScreen.accountSettingsSubtitle' => 'Name, Photo, E-mail',
-			'profileScreen.manageSubscription' => 'Manage Subscription',
-			'profileScreen.screenTime' => 'Screen Time',
-			'profileScreen.rateApp' => 'Rate the App',
-			'profileScreen.supportUs' => 'Support us',
-			'profileScreen.rateComingSoon' => 'Rating will be available soon.',
-			'profileScreen.privacyPolicy' => 'Privacy Policy',
-			'profileScreen.privacySubtitle' => 'Protect data',
-			'profileScreen.termsOfService' => 'Terms of Service',
-			'profileScreen.termsSubtitle' => 'Data and terms',
-			'profileScreen.logout' => 'Log Out',
-			'profileScreen.logoutDialogTitle' => 'You are about to log\nout of your account',
-			'profileScreen.logoutFailed' => 'Could not log out. Please try again.',
-			'profileScreen.subscriptionFailed' => 'Subscription screen could not be opened. Please try again.',
-			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Today ${minutes} minutes',
-			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Today ${hours} hours',
-			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Today ${hours} hours ${minutes} minutes',
-			'editProfileScreen.changeAvatar' => 'Change Avatar',
+			'profileScreen.statusLoading' => 'Caricamento dello stato',
+			'profileScreen.premiumActive' => 'Attivo • Membro Pro',
+			'profileScreen.freePlan' => 'Piano gratuito',
+			'profileScreen.loadFailed' => 'Impossibile caricare le informazioni del profilo. Tirare verso il basso per riprovare.',
+			'profileScreen.accountSettings' => 'Impostazioni dell\'account',
+			'profileScreen.accountSettingsGuestSubtitle' => 'Nome e avatar',
+			'profileScreen.accountSettingsSubtitle' => 'Nome, foto, e-mail',
+			'profileScreen.manageSubscription' => 'Gestisci abbonamento',
+			'profileScreen.screenTime' => 'Tempo sullo schermo',
+			'profileScreen.rateApp' => 'Valuta l\'app',
+			'profileScreen.supportUs' => 'Sostienici',
+			'profileScreen.rateComingSoon' => 'La valutazione sarà disponibile a breve.',
+			'profileScreen.privacyPolicy' => 'politica sulla riservatezza',
+			'profileScreen.privacySubtitle' => 'Proteggi i dati',
+			'profileScreen.termsOfService' => 'Termini di servizio',
+			'profileScreen.termsSubtitle' => 'Dati e termini',
+			'profileScreen.logout' => 'Esci',
+			'profileScreen.logoutDialogTitle' => 'Stai per disconnettere\ndal tuo account',
+			'profileScreen.logoutFailed' => 'Impossibile disconnettersi. Per favore riprova.',
+			'profileScreen.subscriptionFailed' => 'Impossibile aprire la schermata di sottoscrizione. Per favore riprova.',
+			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Oggi ${minutes} minuti',
+			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Oggi ${hours} ore',
+			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Oggi ${hours} ore ${minutes} minuti',
+			'editProfileScreen.changeAvatar' => 'Cambia avatar',
 			'editProfileScreen.email' => 'E-mail',
-			'editProfileScreen.emailHelper' => 'This field comes from your backend account.',
-			'editProfileScreen.deleteDialogTitle' => 'Are you sure want to\ndelete your account?',
-			'editProfileScreen.accountDeleteFailed' => 'Account could not be deleted. Please try again.',
-			'editProfileScreen.profileSaveFailed' => 'Profile could not be saved. Please try again.',
-			'premiumAccess.openFailed' => 'Premium screen could not be opened. Please try again.',
-			'parentalGate.barrierLabel' => 'Parental gate',
-			'parentalGate.question' => 'What is the result of this operation?',
+			'editProfileScreen.emailHelper' => 'Questo campo proviene dal tuo account di backend.',
+			'editProfileScreen.deleteDialogTitle' => 'Sei sicuro di voler\neliminare il tuo account?',
+			'editProfileScreen.accountDeleteFailed' => 'Impossibile eliminare l\'account. Per favore riprova.',
+			'editProfileScreen.profileSaveFailed' => 'Impossibile salvare il profilo. Per favore riprova.',
+			'premiumAccess.openFailed' => 'Impossibile aprire la schermata Premium. Per favore riprova.',
+			'parentalGate.barrierLabel' => 'Cancello parentale',
+			'parentalGate.question' => 'Qual è il risultato di questa operazione?',
+			'parentalGate.submit' => 'Invia',
+			'activities.flashCards' => 'Schede flash',
+			'activities.drawing' => 'Disegno',
+			'activities.flipCards' => 'Gira le carte',
+			'activities.trueFalse' => 'Vero Falso',
+			'activities.spelling' => 'Ortografia',
+			'resultSheet.correct' => 'Corretto',
+			'resultSheet.tryAgain' => 'Riprova',
+			'resultSheet.correctBody' => 'Stai andando alla grande!',
+			'resultSheet.tryAgainBody' => 'Prova ancora una volta!',
+			'trueFalseView.isThisLetter' => ({required Object letter}) => 'Questa lettera è ${letter}?',
+			'trueFalseView.isThisNumber' => ({required Object number}) => 'Questo numero è ${number}?',
+			'trueFalseView.isThisShape' => ({required Object shape}) => 'Questa forma è ${shape}?',
+			'trueFalseView.isThisSubject' => ({required Object subject}) => 'Questo è ${subject}?',
+			'trueFalseView.trueText' => 'VERO',
+			'trueFalseView.falseText' => 'Falso',
 			_ => null,
 		};
 	}

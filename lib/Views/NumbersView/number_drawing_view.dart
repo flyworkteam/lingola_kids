@@ -1,10 +1,13 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_navigation_arrows.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_result_overlay.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/drawing_palette.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/drawing_practice_board.dart';
 import 'package:lingola_kids/Views/NumbersView/number_data.dart';
+import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/progress_reporting.dart';
 
@@ -110,11 +113,11 @@ class _NumberDrawingViewState extends State<NumberDrawingView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'Drawing',
+          title: context.t.activities.drawing,
           trailing: IconButton(
             visualDensity: VisualDensity.compact,
             onPressed: _clearDrawing,
-            icon: const Icon(Icons.delete_outline_rounded, color: Colors.black),
+            icon: SvgPicture.asset(AppLearningAssets.delete),
           ),
           bottom: Padding(
             padding: const EdgeInsets.only(bottom: 2),

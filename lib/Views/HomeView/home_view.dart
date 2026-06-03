@@ -11,6 +11,7 @@ import 'package:lingola_kids/Views/HomeView/widgets/home_header.dart';
 import 'package:lingola_kids/Views/HomeView/widgets/home_section_title.dart';
 import 'package:lingola_kids/Views/HomeView/widgets/lesson_card.dart';
 import 'package:lingola_kids/Views/HomeView/widgets/weekly_progress_card.dart';
+import 'package:lingola_kids/Views/LearningCategoryView/learning_category_data.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
@@ -111,23 +112,66 @@ class _HomeViewState extends ConsumerState<HomeView> {
     }
   }
 
-  List<HomeLessonModel> _mergedLessons(List<BackendLesson> backendLessons) {
+  List<HomeLessonModel> _mergedLessons(
+    BuildContext context,
+    List<BackendLesson> backendLessons,
+  ) {
     final backendBySlug = {
       for (final lesson in backendLessons) lesson.slug: lesson,
     };
 
     return _lessons.map((lesson) {
       final backend = backendBySlug[lesson.slug];
-      if (backend == null) return lesson;
+      final title = _localizedLessonTitle(context, lesson.slug, lesson.title);
+      if (backend == null) {
+        return HomeLessonModel(
+          slug: lesson.slug,
+          title: title,
+          assetPath: lesson.assetPath,
+          progress: lesson.progress,
+          routeName: lesson.routeName,
+          itemCount: _localItemCountForSlug(lesson.slug),
+          isPrimary: lesson.isPrimary,
+        );
+      }
       return HomeLessonModel(
         slug: lesson.slug,
-        title: backend.title.isEmpty ? lesson.title : backend.title,
-        assetPath: backend.assetPath,
+        title: title,
+        assetPath: lesson.assetPath,
         progress: backend.normalizedProgress,
         routeName: lesson.routeName,
+        itemCount: backend.itemCount > 0
+            ? backend.itemCount
+            : _localItemCountForSlug(lesson.slug),
         isPrimary: lesson.isPrimary,
       );
     }).toList();
+  }
+
+  int _localItemCountForSlug(String slug) {
+    return switch (slug) {
+      'fill-in' => LearningCategoryData.animals.length,
+      _ => 0,
+    };
+  }
+
+  String _localizedLessonTitle(
+    BuildContext context,
+    String slug,
+    String fallback,
+  ) {
+    final lessons = context.t.home.lessons;
+    return switch (slug) {
+      'alphabet' => lessons.alphabet,
+      'numbers' => lessons.numbers,
+      'colors' => lessons.colors,
+      'shapes' => lessons.shapes,
+      'fruit' => lessons.fruit,
+      'vegetables' => lessons.vegetables,
+      'sports' => lessons.sports,
+      'fill-in' => lessons.fillInBlank,
+      _ => fallback,
+    };
   }
 
   String _routeForSlug(String slug) {
@@ -137,6 +181,31 @@ class _HomeViewState extends ConsumerState<HomeView> {
           orElse: () => _lessons.first,
         )
         .routeName;
+  }
+
+  String _continueLessonSubtitle(
+    BuildContext context,
+    BackendProgress? currentProgress,
+    HomeLessonModel continueLesson,
+    List<HomeLessonModel> lessons,
+  ) {
+    if (currentProgress == null) {
+      return context.t.home.startLearning;
+    }
+
+    final totalItems = continueLesson.itemCount;
+    if (totalItems <= 0) {
+      return context.t.home.startLearning;
+    }
+
+    final currentItemNumber = (currentProgress.currentItemIndex + 1).clamp(
+      1,
+      totalItems,
+    );
+    return context.t.home.lessonProgress(
+      current: currentItemNumber,
+      total: totalItems,
+    );
   }
 
   Future<void> _refreshBackendData() async {
@@ -174,7 +243,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
           'BackendData: ${snapshot.data != null ? "loaded" : "null"}',
         );
         final data = snapshot.data ?? const _HomeBackendData();
-        final lessons = _mergedLessons(data.lessons);
+        final lessons = _mergedLessons(context, data.lessons);
         final currentProgress = data.currentProgress;
         final continueLesson = currentProgress == null
             ? lessons.first
@@ -220,6 +289,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
                           const SizedBox(height: 10),
                           WeeklyProgressCard(
                             weekActivity: streak?.weekActivity,
+                            streakCount: streak?.currentStreak ?? 0,
                           ),
                           const SizedBox(height: 28),
                           HomeSectionTitle(
@@ -229,12 +299,12 @@ class _HomeViewState extends ConsumerState<HomeView> {
                           ContinueLearningCard(
                             title: continueLesson.title.toUpperCase(),
                             assetPath: continueLesson.assetPath,
-                            subtitle: currentProgress == null
-                                ? context.t.home.startLearning
-                                : context.t.home.resumeActivity(
-                                    activity: currentProgress.activitySlug
-                                        .replaceAll('-', ' '),
-                                  ),
+                            subtitle: _continueLessonSubtitle(
+                              context,
+                              currentProgress,
+                              continueLesson,
+                              lessons,
+                            ),
                             onTap: () => _openRoute(continueRoute),
                           ),
                           const SizedBox(height: 28),

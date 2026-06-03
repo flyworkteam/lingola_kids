@@ -44,6 +44,10 @@ class _ParentalGateDialogState extends State<_ParentalGateDialog> {
     Navigator.of(context).pop(input == widget.challenge.answer);
   }
 
+  void _submitCurrentAnswer() {
+    _submit(_controller.text);
+  }
+
   @override
   Widget build(BuildContext context) {
     return BackdropFilter(
@@ -120,6 +124,28 @@ class _ParentalGateDialogState extends State<_ParentalGateDialog> {
                       ),
                     ),
                     onSubmitted: _submit,
+                  ),
+                  const SizedBox(height: 18),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 54,
+                    child: FilledButton(
+                      onPressed: _submitCurrentAnswer,
+                      style: FilledButton.styleFrom(
+                        backgroundColor: const Color(0xFFFF972C),
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                      ),
+                      child: Text(
+                        context.t.parentalGate.submit,
+                        style: GoogleFonts.dynaPuff(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

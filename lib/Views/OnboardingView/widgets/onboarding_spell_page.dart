@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lingola_kids/Views/FillInView/widgets/fill_in_answer_slots.dart';
 import 'package:lingola_kids/Views/FillInView/widgets/fill_in_letter_choice_grid.dart';
-import 'package:lingola_kids/Views/LearningCategoryView/learning_category_data.dart';
-import 'package:lingola_kids/Views/LearningCategoryView/widgets/learning_item_asset.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_primary_button.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_speech_bubble.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 
 class OnboardingSpellPage extends StatefulWidget {
@@ -74,26 +73,41 @@ class _OnboardingSpellPageState extends State<OnboardingSpellPage> {
 
   @override
   Widget build(BuildContext context) {
-    final lion = LearningCategoryData.animals.first;
     final isComplete = _selectedChoiceIndices.length == _target.length;
     final selectedLetters = _selectedLetters;
 
     return LayoutBuilder(
       builder: (context, constraints) {
+        final tight = constraints.maxHeight < 760;
         final compact = constraints.maxHeight < 900;
-        final lionHeight = compact ? 205.0 : 250.0;
-        final gridSpacing = compact ? 18.0 : 24.0;
+        final lionStageHeight = tight ? 258.0 : (compact ? 278.0 : 304.0);
+        final lionWidth = tight ? 390.0 : (compact ? 420.0 : 450.0);
+        final lionTop = tight ? -78.0 : (compact ? -84.0 : -90.0);
+        final gridSpacing = tight ? 20.0 : (compact ? 24.0 : 30.0);
+        final buttonSpacing = tight ? 14.0 : 20.0;
+        final horizontalPadding = tight ? 20.0 : 24.0;
+        final verticalPadding = tight ? 20.0 : 32.0;
+        final slotSize = tight ? 44.0 : (compact ? 48.0 : 56.0);
+        final giraffeWidth = tight ? 148.0 : 168.0;
 
         return SafeArea(
           child: Stack(
             children: [
               Positioned(
-                top: 36,
-                right: -28,
-                child: Image.asset(AppIcons.onboardinGiraffe, width: 168),
+                top: tight ? 24 : 36,
+                right: tight ? -34 : -28,
+                child: Image.asset(
+                  AppIcons.onboardinGiraffe,
+                  width: giraffeWidth,
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(26, 48, 26, 28),
+                padding: EdgeInsets.fromLTRB(
+                  horizontalPadding,
+                  verticalPadding,
+                  horizontalPadding,
+                  verticalPadding,
+                ),
                 child: Column(
                   children: [
                     Align(
@@ -103,16 +117,30 @@ class _OnboardingSpellPageState extends State<OnboardingSpellPage> {
                         subtitle: widget.subtitle,
                       ),
                     ),
-                    const Spacer(),
                     SizedBox(
-                      height: lionHeight,
-                      child: LearningItemAsset(item: lion),
+                      height: lionStageHeight,
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        alignment: Alignment.topCenter,
+                        children: [
+                          Positioned(
+                            top: lionTop,
+                            child: Image.asset(
+                              widget.prefilled
+                                  ? AppIcons.onboardingLion2
+                                  : AppIcons.onboardingLion1,
+                              width: lionWidth,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    SizedBox(height: compact ? 18 : 28),
+                    SizedBox(height: tight ? 0 : 4),
                     FillInAnswerSlots(
                       letters: selectedLetters,
                       targetLength: _target.length,
-                      slotSize: compact ? 50 : 56,
+                      slotSize: slotSize,
                     ),
                     SizedBox(height: gridSpacing),
                     FillInLetterChoiceGrid(
@@ -122,9 +150,9 @@ class _OnboardingSpellPageState extends State<OnboardingSpellPage> {
                       onLetterTap: _selectLetter,
                       onBackspaceTap: _removeLastLetter,
                     ),
-                    const SizedBox(height: 28),
+                    SizedBox(height: buttonSpacing),
                     OnboardingPrimaryButton(
-                      label: 'Continue',
+                      label: context.t.kContinue,
                       enabled: widget.prefilled || isComplete,
                       onTap: _continue,
                     ),

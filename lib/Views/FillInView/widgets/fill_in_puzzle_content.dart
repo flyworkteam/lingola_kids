@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lingola_kids/Views/FillInView/widgets/fill_in_answer_slots.dart';
 import 'package:lingola_kids/Views/FillInView/widgets/fill_in_letter_choice_grid.dart';
+import 'package:lingola_kids/Views/FillInView/widgets/fill_in_styles.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/models/learning_item_model.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/widgets/learning_item_asset.dart';
 
@@ -29,6 +30,10 @@ class FillInPuzzleContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final targetLength = item.name.toUpperCase().length;
+    final selectedLetterColors = List.generate(selectedLetters.length, (index) {
+      return FillInStyles.letterColors[index %
+          FillInStyles.letterColors.length];
+    });
 
     return Column(
       children: [
@@ -48,7 +53,11 @@ class FillInPuzzleContent extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 28),
-        FillInAnswerSlots(letters: selectedLetters, targetLength: targetLength),
+        FillInAnswerSlots(
+          letters: selectedLetters,
+          targetLength: targetLength,
+          letterColors: selectedLetterColors,
+        ),
         const SizedBox(height: 24),
         FillInLetterChoiceGrid(
           choices: choices,

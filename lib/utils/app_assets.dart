@@ -75,8 +75,8 @@ class AppIcons {
   static const String loginElephant = 'assets/loginElephant.svg';
   static const String onboardinGiraffe = 'assets/onboardinGiraffe.png';
   static const String onboardingCup = 'assets/onboardingCup.svg';
-  static const String onboardingLion1 = 'assets/onboardingLion1.svg';
-  static const String onboardingLion2 = 'assets/onboardingLion2.svg';
+  static const String onboardingLion1 = 'assets/onboardingLion1.png';
+  static const String onboardingLion2 = 'assets/onboardingLion2.png';
   static const String onboardingOption1 = 'assets/onboardingOption1.svg';
   static const String onboardingOption2 = 'assets/onboardingOption2.svg';
   static const String onboardingOption3 = 'assets/onboardingOption3.svg';
@@ -98,6 +98,7 @@ class AppIcons {
 
   static const String falseIcon = 'assets/falseIcon.svg';
   static const String trueIcon = 'assets/trueIcon.svg';
+  static const String backspace = 'assets/backspace.svg';
 }
 
 class AppLearningAssets {

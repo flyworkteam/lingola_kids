@@ -6,6 +6,7 @@ import 'package:lingola_kids/Services/social_auth_service.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_login_page.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_reward_page.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_spell_page.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/print.dart';
 
 class OnboardingView extends ConsumerStatefulWidget {
@@ -98,7 +99,7 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
       Print.error('[OnboardingAuth] failed error=$error');
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Giriş işlemi tamamlanamadı.')),
+        SnackBar(content: Text(context.t.onboarding.login.failed)),
       );
     } finally {
       if (mounted) {
@@ -116,14 +117,14 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
         onPageChanged: (page) => setState(() => _page = page),
         children: [
           OnboardingSpellPage(
-            title: "Spell the word you see!",
-            subtitle: 'Can you spell "LION"?',
+            title: context.t.onboarding.spellTitle,
+            subtitle: context.t.onboarding.spellSubtitle,
             prefilled: false,
             onSolved: _next,
           ),
           OnboardingSpellPage(
-            title: "Nice! It's LION",
-            subtitle: 'tap to hear',
+            title: context.t.onboarding.spellSuccessTitle,
+            subtitle: context.t.onboarding.spellSuccessSubtitle,
             prefilled: true,
             onSolved: _next,
           ),

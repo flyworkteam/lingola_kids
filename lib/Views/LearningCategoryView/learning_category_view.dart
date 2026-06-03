@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lingola_kids/Views/AlphabetView/models/alphabet_activity_model.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_activity_button.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 
@@ -25,22 +26,22 @@ class LearningCategoryView extends StatelessWidget {
   Widget build(BuildContext context) {
     final activities = [
       AlphabetActivityModel(
-        title: 'Flash Cards',
+        title: context.t.activities.flashCards,
         assetPath: AppLearningAssets.flashCardsButton,
         routeName: flashCardsRoute,
       ),
       AlphabetActivityModel(
-        title: 'Flip Cards',
+        title: context.t.activities.flipCards,
         assetPath: AppLearningAssets.flipCardButton,
         routeName: flipCardsRoute,
       ),
       AlphabetActivityModel(
-        title: 'True False',
+        title: context.t.activities.trueFalse,
         assetPath: AppLearningAssets.trueFalseButton,
         routeName: trueFalseRoute,
       ),
       AlphabetActivityModel(
-        title: 'Spelling',
+        title: context.t.activities.spelling,
         assetPath: AppLearningAssets.spellingButton,
         routeName: spellingRoute,
       ),

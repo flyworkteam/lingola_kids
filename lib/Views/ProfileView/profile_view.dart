@@ -59,7 +59,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
       if (!mounted) return;
       Navigator.of(
         context,
-      ).pushNamedAndRemoveUntil(AppRoutes.onboarding, (route) => false);
+      ).pushNamedAndRemoveUntil(AppRoutes.splash, (route) => false);
     } catch (error) {
       Print.error('Profile logout failed: $error');
       if (mounted) _showMessage(context.t.profileScreen.logoutFailed);

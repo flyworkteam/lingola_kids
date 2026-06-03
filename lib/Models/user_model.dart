@@ -43,6 +43,7 @@ class UserProfile {
   final String? authProvider;
   final bool isGuest;
   final bool isPremium;
+  final DateTime? premiumEndTime;
   final bool onboardingCompleted;
   final String preferredLanguage;
   final String? profilePictureUrl;
@@ -60,6 +61,7 @@ class UserProfile {
     this.authProvider,
     required this.isGuest,
     required this.isPremium,
+    this.premiumEndTime,
     required this.onboardingCompleted,
     this.preferredLanguage = 'en',
     this.profilePictureUrl,
@@ -80,6 +82,9 @@ class UserProfile {
           json['authProvider'] as String? ?? json['auth_provider'] as String?,
       isGuest: _parseBool(json['isGuest'] ?? json['is_guest']),
       isPremium: _parseBool(json['isPremium'] ?? json['is_premium']),
+      premiumEndTime: _parseDate(
+        json['premiumEndTime'] ?? json['premium_endtime'],
+      ),
       onboardingCompleted: _parseBool(
         json['onboardingCompleted'] ?? json['onboarding_completed'],
       ),
@@ -111,6 +116,7 @@ class UserProfile {
     String? authProvider,
     bool? isGuest,
     bool? isPremium,
+    DateTime? premiumEndTime,
     bool? onboardingCompleted,
     String? preferredLanguage,
     String? profilePictureUrl,
@@ -128,6 +134,7 @@ class UserProfile {
       authProvider: authProvider ?? this.authProvider,
       isGuest: isGuest ?? this.isGuest,
       isPremium: isPremium ?? this.isPremium,
+      premiumEndTime: premiumEndTime ?? this.premiumEndTime,
       onboardingCompleted: onboardingCompleted ?? this.onboardingCompleted,
       preferredLanguage: preferredLanguage ?? this.preferredLanguage,
       profilePictureUrl: profilePictureUrl ?? this.profilePictureUrl,

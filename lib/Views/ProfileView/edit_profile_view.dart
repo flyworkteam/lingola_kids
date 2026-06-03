@@ -119,56 +119,70 @@ class _EditProfileViewState extends ConsumerState<EditProfileView> {
   Widget build(BuildContext context) {
     return AlphabetPageShell(
       title: context.t.profileScreen.title,
-      child: ListView(
+      child: Padding(
         padding: const EdgeInsets.only(top: 38, bottom: 22),
-        physics: const BouncingScrollPhysics(),
-        children: [
-          Center(child: ProfileAvatar(assetPath: _selectedAvatar, size: 94)),
-          const SizedBox(height: 18),
-          Center(
-            child: Text(
-              context.t.editProfileScreen.changeAvatar,
-              style: GoogleFonts.quicksand(
-                fontSize: 18,
-                fontWeight: FontWeight.w800,
-                color: Colors.black,
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  children: [
+                    Center(
+                      child: ProfileAvatar(
+                        assetPath: _selectedAvatar,
+                        size: 94,
+                      ),
+                    ),
+                    const SizedBox(height: 18),
+                    Center(
+                      child: Text(
+                        context.t.editProfileScreen.changeAvatar,
+                        style: GoogleFonts.quicksand(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 14),
+                    _AvatarPicker(
+                      avatars: _avatars,
+                      selectedAvatar: _selectedAvatar,
+                      onSelected: (avatar) =>
+                          setState(() => _selectedAvatar = avatar),
+                    ),
+                    const SizedBox(height: 24),
+                    _ProfileTextField(
+                      label: context.t.editProfile.fullName,
+                      controller: _nameController,
+                    ),
+                    const SizedBox(height: 14),
+                    _ProfileTextField(
+                      label: context.t.editProfileScreen.email,
+                      controller: _emailController,
+                      keyboardType: TextInputType.emailAddress,
+                      readOnly: true,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          const SizedBox(height: 24),
-          _AvatarPicker(
-            avatars: _avatars,
-            selectedAvatar: _selectedAvatar,
-            onSelected: (avatar) => setState(() => _selectedAvatar = avatar),
-          ),
-          const SizedBox(height: 32),
-          _ProfileTextField(
-            label: context.t.editProfile.fullName,
-            controller: _nameController,
-          ),
-          const SizedBox(height: 28),
-          _ProfileTextField(
-            label: context.t.editProfileScreen.email,
-            controller: _emailController,
-            keyboardType: TextInputType.emailAddress,
-            readOnly: true,
-            helperText: context.t.editProfileScreen.emailHelper,
-          ),
-          const SizedBox(height: 230),
-          _SaveButton(isLoading: _isSaving, onTap: () => _save()),
-          const SizedBox(height: 20),
-          TextButton(
-            onPressed: _showDeleteDialog,
-            child: Text(
-              context.t.deleteAccount.title,
-              style: GoogleFonts.quicksand(
-                fontSize: 22,
-                fontWeight: FontWeight.w800,
-                color: const Color(0xFFC60000),
+            const SizedBox(height: 12),
+            _SaveButton(isLoading: _isSaving, onTap: () => _save()),
+            TextButton(
+              onPressed: _showDeleteDialog,
+              child: Text(
+                context.t.deleteAccount.title,
+                style: GoogleFonts.quicksand(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xFFC60000),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -197,6 +211,7 @@ class _AvatarPicker extends StatelessWidget {
         itemBuilder: (context, index) {
           final avatar = avatars[index];
           final selected = avatar == selectedAvatar;
+
           return GestureDetector(
             onTap: () => onSelected(avatar),
             child: Container(
@@ -212,7 +227,9 @@ class _AvatarPicker extends StatelessWidget {
                   width: selected ? 3 : 1,
                 ),
               ),
-              child: SvgPicture.asset(avatar, fit: BoxFit.cover),
+              child: avatar.endsWith('.svg')
+                  ? SvgPicture.asset(avatar, fit: BoxFit.cover)
+                  : Image.asset(avatar),
             ),
           );
         },
@@ -227,14 +244,12 @@ class _ProfileTextField extends StatelessWidget {
     required this.controller,
     this.keyboardType,
     this.readOnly = false,
-    this.helperText,
   });
 
   final String label;
   final TextEditingController controller;
   final TextInputType? keyboardType;
   final bool readOnly;
-  final String? helperText;
 
   @override
   Widget build(BuildContext context) {
@@ -262,15 +277,9 @@ class _ProfileTextField extends StatelessWidget {
           decoration: InputDecoration(
             filled: true,
             fillColor: readOnly ? const Color(0xFFF7F7F7) : Colors.white,
-            helperText: helperText,
-            helperStyle: GoogleFonts.quicksand(
-              fontSize: 13,
-              fontWeight: FontWeight.w700,
-              color: const Color(0xFF777777),
-            ),
             contentPadding: const EdgeInsets.symmetric(
-              horizontal: 16,
-              vertical: 18,
+              horizontal: 8,
+              vertical: 9,
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),

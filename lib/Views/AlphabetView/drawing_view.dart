@@ -1,6 +1,8 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:lingola_kids/Views/AlphabetView/alphabet_data.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_navigation_arrows.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
@@ -53,7 +55,7 @@ class _DrawingViewState extends State<DrawingView> {
   int _currentLetterIndex = 0;
   bool _showResult = false;
   bool _isCorrect = false;
-  Color _selectedColor = DrawingPalette.colors.first;
+  Color _selectedColor = Colors.black;
 
   @override
   void didChangeDependencies() {
@@ -141,11 +143,11 @@ class _DrawingViewState extends State<DrawingView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'Drawing',
+          title: context.t.activities.drawing,
           trailing: IconButton(
             visualDensity: VisualDensity.compact,
             onPressed: _clearDrawing,
-            icon: const Icon(Icons.delete_outline_rounded, color: Colors.black),
+            icon: SvgPicture.asset(AppLearningAssets.delete),
           ),
           bottom: Padding(
             padding: const EdgeInsets.only(bottom: 2),

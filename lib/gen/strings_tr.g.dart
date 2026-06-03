@@ -37,21 +37,21 @@ class TranslationsTr with BaseTranslations<AppLocale, Translations> implements T
 	TranslationsTr $copyWith({TranslationMetadata<AppLocale, Translations>? meta}) => TranslationsTr(meta: meta ?? this.$meta);
 
 	// Translations
-	@override String welcome({required Object name}) => 'Welcome ${name}';
-	@override String welcome2({required Object appName}) => 'Welcome to ${appName}';
-	@override String get get_started => 'Get Started';
-	@override String get start_learning => 'Start Learning';
-	@override String get hello => 'Hello';
-	@override String get next => 'Next';
-	@override String get back => 'Back';
-	@override String get skip => 'Skip';
-	@override String get profile => 'Profile';
-	@override String get kContinue => 'Continue';
+	@override String welcome({required Object name}) => 'Hoş geldiniz ${name}';
+	@override String welcome2({required Object appName}) => '${appName}\'ye hoş geldiniz';
+	@override String get get_started => 'Başlayın';
+	@override String get start_learning => 'Öğrenmeye Başla';
+	@override String get hello => 'Merhaba';
+	@override String get next => 'Sonraki';
+	@override String get back => 'Geri';
+	@override String get skip => 'Atlamak';
+	@override String get profile => 'Profil';
+	@override String get kContinue => 'Devam etmek';
 	@override late final _TranslationsTermOfServiceTr termOfService = _TranslationsTermOfServiceTr._(_root);
-	@override String get cookies => 'Cookies Policy';
-	@override String get privacy => 'Privacy Policy';
+	@override String get cookies => 'Çerez Politikası';
+	@override String get privacy => 'Gizlilik Politikası';
 	@override late final _TranslationsOnboardingTr onboarding = _TranslationsOnboardingTr._(_root);
-	@override String get pressBackAgainToExit => 'Press back again to exit';
+	@override String get pressBackAgainToExit => 'Çıkmak için tekrar geri tuşuna basın';
 	@override late final _TranslationsSplashTr splash = _TranslationsSplashTr._(_root);
 	@override late final _TranslationsAuthTr auth = _TranslationsAuthTr._(_root);
 	@override late final _TranslationsHomeTr home = _TranslationsHomeTr._(_root);
@@ -59,20 +59,23 @@ class TranslationsTr with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsEditProfileTr editProfile = _TranslationsEditProfileTr._(_root);
 	@override late final _TranslationsSettingsSupportTr settingsSupport = _TranslationsSettingsSupportTr._(_root);
 	@override late final _TranslationsDeleteAccountTr deleteAccount = _TranslationsDeleteAccountTr._(_root);
-	@override String get cancel => 'Cancel';
-	@override String get delete => 'Delete';
-	@override String get premium => 'Premium';
-	@override String get profileEdit => 'Profile Edit';
-	@override String get settings => 'Settings';
-	@override String get undo => 'Undo';
-	@override String get successfully => 'Successfully';
-	@override String get save => 'Save';
+	@override String get cancel => 'İptal etmek';
+	@override String get delete => 'Silmek';
+	@override String get premium => 'prim';
+	@override String get profileEdit => 'Profil Düzenleme';
+	@override String get settings => 'Ayarlar';
+	@override String get undo => 'Geri al';
+	@override String get successfully => 'Başarıyla';
+	@override String get save => 'Kaydetmek';
 	@override late final _TranslationsLanguageOptionsTr languageOptions = _TranslationsLanguageOptionsTr._(_root);
 	@override late final _TranslationsCommonTr common = _TranslationsCommonTr._(_root);
 	@override late final _TranslationsProfileScreenTr profileScreen = _TranslationsProfileScreenTr._(_root);
 	@override late final _TranslationsEditProfileScreenTr editProfileScreen = _TranslationsEditProfileScreenTr._(_root);
 	@override late final _TranslationsPremiumAccessTr premiumAccess = _TranslationsPremiumAccessTr._(_root);
 	@override late final _TranslationsParentalGateTr parentalGate = _TranslationsParentalGateTr._(_root);
+	@override late final _TranslationsActivitiesTr activities = _TranslationsActivitiesTr._(_root);
+	@override late final _TranslationsResultSheetTr resultSheet = _TranslationsResultSheetTr._(_root);
+	@override late final _TranslationsTrueFalseViewTr trueFalseView = _TranslationsTrueFalseViewTr._(_root);
 }
 
 // Path: termOfService
@@ -82,12 +85,12 @@ class _TranslationsTermOfServiceTr implements TranslationsTermOfServiceEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get text1 => 'By signing up for ChatFace, you agree to our ';
-	@override String get link1 => 'Terms of Service';
-	@override String get text2 => '. Learn how we process your data in our ';
-	@override String get link2 => 'Privacy Policy';
-	@override String get text3 => ' and ';
-	@override String get link3 => 'Cookies Policy';
+	@override String get text1 => 'ChatFace\'e kaydolarak şunları kabul etmiş olursunuz:';
+	@override String get link1 => 'Hizmet Şartları';
+	@override String get text2 => '. Verilerinizi nasıl işlediğimizi öğrenin';
+	@override String get link2 => 'Gizlilik Politikası';
+	@override String get text3 => 'Ve';
+	@override String get link3 => 'Çerez Politikası';
 	@override String get text4 => '';
 	@override late final _TranslationsTermOfServicePrivacyPolicyTr privacyPolicy = _TranslationsTermOfServicePrivacyPolicyTr._(_root);
 	@override late final _TranslationsTermOfServiceTermsOfServiceTr termsOfService = _TranslationsTermOfServiceTermsOfServiceTr._(_root);
@@ -108,8 +111,14 @@ class _TranslationsOnboardingTr implements TranslationsOnboardingEn {
 	@override late final _TranslationsOnboardingStep4Tr step4 = _TranslationsOnboardingStep4Tr._(_root);
 	@override late final _TranslationsOnboardingLoadingTr loading = _TranslationsOnboardingLoadingTr._(_root);
 	@override late final _TranslationsOnboardingKFinalTr kFinal = _TranslationsOnboardingKFinalTr._(_root);
-	@override String get allowAccess => 'Allow Access';
-	@override String get iUnderstand => 'I Understand';
+	@override String get allowAccess => 'Erişime İzin Ver';
+	@override String get iUnderstand => 'Anladım';
+	@override late final _TranslationsOnboardingLoginTr login = _TranslationsOnboardingLoginTr._(_root);
+	@override late final _TranslationsOnboardingRewardTr reward = _TranslationsOnboardingRewardTr._(_root);
+	@override String get spellTitle => 'Gördüğün kelimeyi hecele!';
+	@override String get spellSubtitle => 'LION kelimesini heceleyebilir misin?';
+	@override String get spellSuccessTitle => 'Harika! Bu bir LION';
+	@override String get spellSuccessSubtitle => 'duymak için dokun';
 }
 
 // Path: splash
@@ -132,11 +141,11 @@ class _TranslationsAuthTr implements TranslationsAuthEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get google => 'Continue with Google';
-	@override String get facebook => 'Continue with Facebook';
-	@override String get apple => 'Continue with Apple';
-	@override String get guest => 'Continue as Guest';
-	@override String signInFailed({required Object error}) => 'Sign-in failed: ${error}';
+	@override String get google => 'Google ile devam et';
+	@override String get facebook => 'Facebook\'la devam et';
+	@override String get apple => 'Apple\'la devam et';
+	@override String get guest => 'Misafir olarak devam et';
+	@override String signInFailed({required Object error}) => 'Oturum açma başarısız oldu: ${error}';
 }
 
 // Path: home
@@ -146,10 +155,10 @@ class _TranslationsHomeTr implements TranslationsHomeEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get seeAll => 'See All';
-	@override String get more => 'More';
-	@override String get online => 'Online';
-	@override String get offline => 'Offline';
+	@override String get seeAll => 'Tümünü Gör';
+	@override String get more => 'Daha';
+	@override String get online => 'Çevrimiçi';
+	@override String get offline => 'Çevrimdışı';
 	@override late final _TranslationsHomePlaceholdersTr placeholders = _TranslationsHomePlaceholdersTr._(_root);
 	@override String get greeting => 'Merhaba,';
 	@override String get guest => 'Misafir';
@@ -159,6 +168,17 @@ class _TranslationsHomeTr implements TranslationsHomeEn {
 	@override String get startLearning => 'Öğrenmeye başla';
 	@override String resumeActivity({required Object activity}) => '${activity} ile devam et';
 	@override String get continueButton => 'Devam Et';
+	@override List<String> get weekDays => [
+		'PZT',
+		'SAL',
+		'ÇAR',
+		'PER',
+		'CUM',
+		'CMT',
+		'PAZ',
+	];
+	@override late final _TranslationsHomeLessonsTr lessons = _TranslationsHomeLessonsTr._(_root);
+	@override String lessonProgress({required Object current, required Object total}) => 'Ders ${current} / ${total}';
 }
 
 // Path: notifications
@@ -168,14 +188,14 @@ class _TranslationsNotificationsTr implements TranslationsNotificationsEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get today => 'Today';
-	@override String get yesterday => 'Yesterday';
-	@override String weekAgo({required Object week}) => '${week} week ago';
-	@override String monthAgo({required Object month}) => '${month} month ago';
-	@override String yearAgo({required Object year}) => '${year} year ago';
-	@override String get noNotifications => 'No notifications yet.';
-	@override String get noNotificationsSubtitle => 'Don\'t forget to check again when you receive the notification.';
-	@override String get allDeleted => 'All notifications have been successfully deleted';
+	@override String get today => 'Bugün';
+	@override String get yesterday => 'Dün';
+	@override String weekAgo({required Object week}) => '${week} hafta önce';
+	@override String monthAgo({required Object month}) => '${month} ay önce';
+	@override String yearAgo({required Object year}) => '${year} yıl önce';
+	@override String get noNotifications => 'Henüz bildirim yok.';
+	@override String get noNotificationsSubtitle => 'Bildirim geldiğinde tekrar kontrol etmeyi unutmayın.';
+	@override String get allDeleted => 'Tüm bildirimler başarıyla silindi';
 }
 
 // Path: editProfile
@@ -185,18 +205,18 @@ class _TranslationsEditProfileTr implements TranslationsEditProfileEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get aboutMe => 'About Me';
-	@override String get aboutMeHint => 'Write something about yourself';
-	@override String get fullName => 'Full Name';
-	@override String get gender => 'Gender';
-	@override String get male => 'Male';
-	@override String get female => 'Female';
-	@override String get dontWantToMention => 'I don\'t want to mention it.';
-	@override String get country => 'Country';
-	@override String get languagePreferences => 'Language Preferences';
-	@override String get selectLanguage => 'Add your preferred language';
-	@override String get saved => 'Saved';
-	@override String get changesSaved => 'Changes have been saved.';
+	@override String get aboutMe => 'Hakkımda';
+	@override String get aboutMeHint => 'Kendin hakkında bir şeyler yaz';
+	@override String get fullName => 'Ad Soyad';
+	@override String get gender => 'Cinsiyet';
+	@override String get male => 'Erkek';
+	@override String get female => 'Dişi';
+	@override String get dontWantToMention => 'Bundan bahsetmek istemiyorum.';
+	@override String get country => 'Ülke';
+	@override String get languagePreferences => 'Dil Tercihleri';
+	@override String get selectLanguage => 'Tercih ettiğiniz dili ekleyin';
+	@override String get saved => 'Kaydedildi';
+	@override String get changesSaved => 'Değişiklikler kaydedildi.';
 }
 
 // Path: settingsSupport
@@ -206,19 +226,19 @@ class _TranslationsSettingsSupportTr implements TranslationsSettingsSupportEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Settings & Support';
-	@override String get premiumTitle => 'Unlimited access \nto all features';
-	@override String get getPremium => 'Get Premium';
-	@override String get settingsHub => 'Settings Hub';
-	@override String get shareTheApp => 'Share the App';
-	@override String get rateUs => 'Rate Us';
-	@override String get version => 'Version';
-	@override String get notifications => 'Notifications';
-	@override String get accountManagement => 'Account Management';
-	@override String get deleteAccount => 'Delete Account';
-	@override String get logOut => 'Log Out';
-	@override String get logOutTitle => 'You are about to log out';
-	@override String get logOutSubtitle => 'See you again soon! \n We’ll miss you.';
+	@override String get title => 'Ayarlar ve Destek';
+	@override String get premiumTitle => 'Tüm özelliklere sınırsız erişim\n';
+	@override String get getPremium => 'Premium\'u Alın';
+	@override String get settingsHub => 'Ayarlar Merkezi';
+	@override String get shareTheApp => 'Uygulamayı Paylaş';
+	@override String get rateUs => 'Bizi Değerlendirin';
+	@override String get version => 'Sürüm';
+	@override String get notifications => 'Bildirimler';
+	@override String get accountManagement => 'Hesap Yönetimi';
+	@override String get deleteAccount => 'Hesabı Sil';
+	@override String get logOut => 'Oturumu Kapat';
+	@override String get logOutTitle => 'Oturumu kapatmak üzeresiniz';
+	@override String get logOutSubtitle => 'Yakında tekrar görüşürüz!\nSeni özleyeceğiz.';
 }
 
 // Path: deleteAccount
@@ -228,10 +248,10 @@ class _TranslationsDeleteAccountTr implements TranslationsDeleteAccountEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Delete Account';
-	@override String get warning => 'Are you sure you want to delete your account?';
-	@override String get description => 'This action cannot be undone, and all your history and data will be permanently deleted.';
-	@override String deleteFailed({required Object error}) => 'Account deletion failed: ${error}';
+	@override String get title => 'Hesabı Sil';
+	@override String get warning => 'Hesabınızı silmek istediğinizden emin misiniz?';
+	@override String get description => 'Bu işlem geri alınamaz ve tüm geçmişiniz ve verileriniz kalıcı olarak silinecektir.';
+	@override String deleteFailed({required Object error}) => 'Hesap silme işlemi başarısız oldu: ${error}';
 	@override late final _TranslationsDeleteAccountStepsTr steps = _TranslationsDeleteAccountStepsTr._(_root);
 }
 
@@ -242,18 +262,18 @@ class _TranslationsLanguageOptionsTr implements TranslationsLanguageOptionsEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get english => 'English';
-	@override String get chinese => 'Chinese';
-	@override String get german => 'German';
-	@override String get italian => 'Italian';
-	@override String get french => 'French';
-	@override String get japanese => 'Japanese';
-	@override String get spanish => 'Spanish';
-	@override String get russian => 'Russian';
-	@override String get turkish => 'Turkish';
-	@override String get korean => 'Korean';
-	@override String get hindi => 'Hindi';
-	@override String get portuguese => 'Portuguese';
+	@override String get english => 'İngilizce';
+	@override String get chinese => 'Çince';
+	@override String get german => 'Almanca';
+	@override String get italian => 'İtalyan';
+	@override String get french => 'Fransızca';
+	@override String get japanese => 'Japonca';
+	@override String get spanish => 'İspanyol';
+	@override String get russian => 'Rusça';
+	@override String get turkish => 'Türkçe';
+	@override String get korean => 'Korece';
+	@override String get hindi => 'Hintçe';
+	@override String get portuguese => 'Portekizce';
 }
 
 // Path: common
@@ -263,9 +283,9 @@ class _TranslationsCommonTr implements TranslationsCommonEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get tryAgain => 'Try Again';
-	@override String get retry => 'Retry';
-	@override String get close => 'Close';
+	@override String get tryAgain => 'Tekrar deneyin';
+	@override String get retry => 'Yeniden dene';
+	@override String get close => 'Kapalı';
 }
 
 // Path: profileScreen
@@ -338,6 +358,49 @@ class _TranslationsParentalGateTr implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => 'Ebeveyn kontrolü';
 	@override String get question => 'İşlemin sonucu kaçtır?';
+	@override String get submit => 'Gönder';
+}
+
+// Path: activities
+class _TranslationsActivitiesTr implements TranslationsActivitiesEn {
+	_TranslationsActivitiesTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String get flashCards => 'Flaş Kartlar';
+	@override String get drawing => 'Çizim';
+	@override String get flipCards => 'Kart Çevirme';
+	@override String get trueFalse => 'Doğru Yanlış';
+	@override String get spelling => 'Heceleme';
+}
+
+// Path: resultSheet
+class _TranslationsResultSheetTr implements TranslationsResultSheetEn {
+	_TranslationsResultSheetTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String get correct => 'Doğru';
+	@override String get tryAgain => 'Tekrar Dene';
+	@override String get correctBody => 'Harika gidiyorsun!';
+	@override String get tryAgainBody => 'Bir kez daha dene!';
+}
+
+// Path: trueFalseView
+class _TranslationsTrueFalseViewTr implements TranslationsTrueFalseViewEn {
+	_TranslationsTrueFalseViewTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String isThisLetter({required Object letter}) => 'Bu harf ${letter} mi?';
+	@override String isThisNumber({required Object number}) => 'Bu sayı ${number} mi?';
+	@override String isThisShape({required Object shape}) => 'Bu şekil ${shape} mi?';
+	@override String isThisSubject({required Object subject}) => 'Bu ${subject} mi?';
+	@override String get trueText => 'Doğru';
+	@override String get falseText => 'Yanlış';
 }
 
 // Path: termOfService.privacyPolicy
@@ -347,28 +410,28 @@ class _TranslationsTermOfServicePrivacyPolicyTr implements TranslationsTermOfSer
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Privacy Policy';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'ChatFace adopts user privacy and data security as a core principle. All your personal data is processed in accordance with effective data protection regulations.';
-	@override String get section1Title => '1. COLLECTED INFORMATION';
-	@override String get section1sub1Title => '1.1 Data Provided by User';
-	@override String get section1sub1Body => '• Name, nickname, age, gender, country, profile information, and optional profile photos you choose to upload.\n• Email address for registration, subscription, and support.\n• Interaction preferences, selected language, AI character choices, messages, voice transcripts, uploaded chat images, feedback, and support messages.';
-	@override String get section1sub2Title => '1.2 Automatically Collected Data';
-	@override String get section1sub2Body => 'ChatFace may collect device type, operating system, approximate country/city derived from network signals, app usage data, crash logs, subscription status, and notification delivery data. Precise location is not requested during onboarding and is not required for AI chat or calls.';
-	@override String get section2Title => '2. PURPOSES OF DATA PROCESSING';
-	@override String get section2Body => 'Your personal data is processed to operate the app, authenticate your account, provide AI chat and voice/video call features, personalize language and character interactions, process subscriptions, send notifications when enabled, prevent abuse, review user reports, improve reliability, and meet legal obligations. Your personal data is not sold or used for advertising.';
-	@override String get section3Title => '3. AI PROCESSING AND THIRD-PARTY SHARING';
-	@override String get section3Body => 'To provide a better AI experience, ChatFace securely uses third-party providers, including OpenAI, to process the text, voice, images, and related data you submit. Messages, voice transcripts, selected language, profile context, conversation history, and uploaded chat images may be sent to OpenAI to generate AI replies and moderation outcomes. Speech audio may be sent to OpenAI or Deepgram for transcription depending on server configuration. Assistant text may be sent to ElevenLabs to create spoken audio. Uploaded profile and chat images, generated audio, and related media may be stored on BunnyCDN. OneSignal may process notification identifiers and delivery data. RevenueCat and the app stores process subscription and entitlement data. Social sign-in data may be processed by Apple, Google, or Facebook when you use those login methods. These providers are used only to perform the requested service and are expected to protect data under their own security and privacy terms. OpenAI API data is not used to train OpenAI models according to OpenAI API policies.';
-	@override String get section4Title => '4. PHOTOS, CAMERA, MICROPHONE, AND FACE DATA';
-	@override String get section4Body => 'Camera access is used for local video-call preview when you start a video call. The camera preview stays on your device. ChatFace does not collect biometric face data, face templates, face geometry, face recognition identifiers, or face profiles. Uploaded profile photos and chat images may contain faces if you choose to upload them; these images are stored and processed only as user-provided photos for profile display or AI conversation context. Microphone access is used for voice and video conversations so your speech can be transcribed and answered by the AI.';
-	@override String get section5Title => '5. DATA RETENTION AND DELETION';
-	@override String get section5Body => 'Account profile data, profile photos, conversation history, uploaded chat images, reports, notification settings, and subscription entitlement records are retained while your account is active or as needed for legal, security, fraud-prevention, and support purposes. When you delete your account, personal account records are deleted from ChatFace systems subject to required legal and operational retention. Media stored with third-party infrastructure is removed or made inaccessible according to our deletion process and provider retention behavior.';
-	@override String get section6Title => '6. USER RIGHTS';
-	@override String get section6Body => 'Under applicable privacy laws, you may request access, correction, deletion, objection, restriction, or data portability for your personal data. You can contact us for these requests.';
-	@override String get section7Title => '7. CHILDREN\'S PRIVACY';
-	@override String get section7Body => 'ChatFace is not intended for users under the age of 18. We do not knowingly collect data from this age group; such accounts will be closed and data deleted upon detection.';
-	@override String get section8Title => '8. CONTACT';
-	@override String get section8Body => 'For privacy inquiries: support@fly-work.com';
+	@override String get title => 'Gizlilik Politikası';
+	@override String get lastUpdated => 'Son Güncelleme: 2026';
+	@override String get intro => 'ChatFace, kullanıcı gizliliğini ve veri güvenliğini temel prensip olarak benimser. Tüm kişisel verileriniz etkili veri koruma düzenlemelerine uygun olarak işlenir.';
+	@override String get section1Title => '1. TOPLANAN BİLGİLER';
+	@override String get section1sub1Title => '1.1 Kullanıcı Tarafından Sağlanan Veriler';
+	@override String get section1sub1Body => '• Yüklemeyi seçtiğiniz ad, takma ad, yaş, cinsiyet, ülke, profil bilgileri ve isteğe bağlı profil fotoğrafları.\n• Kayıt, abonelik ve destek için e-posta adresi.\n• Etkileşim tercihleri, seçilen dil, AI karakter seçenekleri, mesajlar, ses dökümleri, yüklenen sohbet görüntüleri, geri bildirim ve destek mesajları.';
+	@override String get section1sub2Title => '1.2 Otomatik Olarak Toplanan Veriler';
+	@override String get section1sub2Body => 'ChatFace, ağ sinyallerinden elde edilen cihaz türünü, işletim sistemini, yaklaşık ülke/şehir bilgisini, uygulama kullanım verilerini, kilitlenme günlüklerini, abonelik durumunu ve bildirim dağıtım verilerini toplayabilir. Katılım sırasında kesin konum istenmez ve AI sohbeti veya aramaları için gerekli değildir.';
+	@override String get section2Title => '2. VERİ İŞLEMENİN AMAÇLARI';
+	@override String get section2Body => 'Kişisel verileriniz, uygulamayı çalıştırmak, hesabınızı doğrulamak, AI sohbet ve sesli/görüntülü arama özellikleri sağlamak, dil ve karakter etkileşimlerini kişiselleştirmek, abonelikleri işlemek, etkinleştirildiğinde bildirim göndermek, kötüye kullanımı önlemek, kullanıcı raporlarını incelemek, güvenilirliği artırmak ve yasal yükümlülükleri karşılamak için işlenir. Kişisel verileriniz satılmaz veya reklam amacıyla kullanılmaz.';
+	@override String get section3Title => '3. YZ İŞLEME VE ÜÇÜNCÜ TARAF PAYLAŞIMI';
+	@override String get section3Body => 'Daha iyi bir yapay zeka deneyimi sağlamak amacıyla ChatFace, gönderdiğiniz metni, sesi, görüntüleri ve ilgili verileri işlemek için OpenAI dahil üçüncü taraf sağlayıcıları güvenli bir şekilde kullanır. Yapay zeka yanıtları ve denetleme sonuçları oluşturmak için mesajlar, ses dökümleri, seçilen dil, profil içeriği, konuşma geçmişi ve yüklenen sohbet görüntüleri OpenAI\'ye gönderilebilir. Konuşma sesi, sunucu yapılandırmasına bağlı olarak transkripsiyon için OpenAI veya Deepgram\'a gönderilebilir. Konuşma sesi oluşturmak için Asistan metni ElevenLabs\'a gönderilebilir. Yüklenen profil ve sohbet görüntüleri, oluşturulan ses ve ilgili medya BunnyCDN\'de saklanabilir. OneSignal, bildirim tanımlayıcılarını ve teslimat verilerini işleyebilir. RevenueCat ve uygulama mağazaları abonelik ve yetki verilerini işler. Sosyal oturum açma verileri, söz konusu oturum açma yöntemlerini kullandığınızda Apple, Google veya Facebook tarafından işlenebilir. Bu sağlayıcılar yalnızca istenen hizmeti gerçekleştirmek için kullanılır ve kendi güvenlik ve gizlilik koşulları kapsamında verileri korumaları beklenir. OpenAI API verileri, OpenAI modellerini OpenAI API politikalarına göre eğitmek için kullanılmaz.';
+	@override String get section4Title => '4. FOTOĞRAFLAR, KAMERA, MİKROFON VE YÜZ VERİLERİ';
+	@override String get section4Body => 'Bir video görüşmesi başlattığınızda yerel video görüşmesi önizlemesi için kamera erişimi kullanılır. Kamera önizlemesi cihazınızda kalır. ChatFace biyometrik yüz verilerini, yüz şablonlarını, yüz geometrisini, yüz tanıma tanımlayıcılarını veya yüz profillerini toplamaz. Yüklenen profil fotoğrafları ve sohbet görselleri, yüklemeyi seçmeniz halinde yüzler içerebilir; bu görüntüler yalnızca profil görüntüleme veya AI konuşma bağlamı için kullanıcı tarafından sağlanan fotoğraflar olarak saklanır ve işlenir. Mikrofon erişimi sesli ve görüntülü görüşmeler için kullanılır, böylece konuşmanız yapay zeka tarafından yazıya geçirilebilir ve yanıtlanabilir.';
+	@override String get section5Title => '5. VERİLERİN SAKLANMASI VE SİLİNMESİ';
+	@override String get section5Body => 'Hesap profili verileri, profil fotoğrafları, konuşma geçmişi, yüklenen sohbet görüntüleri, raporlar, bildirim ayarları ve abonelik yetki kayıtları, hesabınız etkin olduğu sürece veya yasal, güvenlik, sahtekarlığı önleme ve destek amacıyla gerektiğinde saklanır. Hesabınızı sildiğinizde, kişisel hesap kayıtları gerekli yasal ve operasyonel saklama koşullarına tabi olarak ChatFace sistemlerinden silinir. Üçüncü taraf altyapısıyla saklanan medya, silme sürecimize ve sağlayıcıyı elde tutma davranışlarımıza göre kaldırılır veya erişilemez hale getirilir.';
+	@override String get section6Title => '6. KULLANICI HAKLARI';
+	@override String get section6Body => 'Geçerli gizlilik yasaları kapsamında kişisel verilerinize erişim, düzeltme, silme, itiraz, kısıtlama veya veri taşınabilirliği talep edebilirsiniz. Bu istekleriniz için bizimle iletişime geçebilirsiniz.';
+	@override String get section7Title => '7. ÇOCUKLARIN GİZLİLİĞİ';
+	@override String get section7Body => 'ChatFace, 18 yaşın altındaki kullanıcılara yönelik değildir. Bu yaş grubundan bilerek veri toplamıyoruz; tespit edilmesi üzerine bu tür hesaplar kapatılacak ve veriler silinecektir.';
+	@override String get section8Title => '8. İLETİŞİM';
+	@override String get section8Body => 'Gizlilikle ilgili sorularınız için: support@fly-work.com';
 }
 
 // Path: termOfService.termsOfService
@@ -378,26 +441,26 @@ class _TranslationsTermOfServiceTermsOfServiceTr implements TranslationsTermOfSe
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Terms of Service';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'These Terms govern the use of the ChatFace mobile application. By using the app, you agree to these Terms.';
-	@override String get disclaimer => 'Disclaimer: ChatFace is an AI video interaction app. It does not provide legal, academic, medical, or professional consulting services.';
-	@override String get section1Title => '1. SCOPE OF SERVICE';
-	@override String get section1Body => 'ChatFace provides AI-powered video interaction experiences:\n\n• AI video calling and conversation.\n• Personalized interaction preferences.\n• Access to interaction history and records.\n\nServices do not constitute official opinions or professional guidance guarantees.';
-	@override String get section2Title => '2. CONDITIONS OF USE';
-	@override String get section2Body => '• You must be at least 18 years old (Under 18 access is prohibited).\n• You must provide accurate account information.\n• The app must be used for legal and personal purposes only.';
-	@override String get section3Title => '3. PROHIBITED USES';
-	@override String get section3Body => 'Impersonation, hate speech, endangering child safety, security breach attempts, and manipulation of AI systems are strictly prohibited.';
-	@override String get section4Title => '4. SUBSCRIPTIONS AND PAYMENTS';
-	@override String get section4Body => 'Premium features are subject to App Store and Google Play policies. Subscription cancellations and refunds are managed via the respective store settings.';
-	@override String get section5Title => '5. CONTENT DISCLAIMER';
-	@override String get section5Body => 'Content is AI-generated and does not replace professional advice. ChatFace does not guarantee accuracy or fitness for a particular purpose.';
-	@override String get section6Title => '6. INTELLECTUAL PROPERTY';
-	@override String get section6Body => 'All content including design, software, and algorithms belongs to ChatFace. Unauthorized reproduction or redistribution is prohibited.';
-	@override String get section7Title => '7. GOVERNING LAW';
-	@override String get section7Body => 'These Terms are governed by the laws of the Republic of Turkey. Istanbul Central Courts shall have jurisdiction over disputes.';
-	@override String get section8Title => '8. CONTACT';
-	@override String get section8Body => '📩 For inquiries: support@fly-work.com';
+	@override String get title => 'Hizmet Şartları';
+	@override String get lastUpdated => 'Son Güncelleme: 2026';
+	@override String get intro => 'Bu Şartlar, ChatFace mobil uygulamasının kullanımını yönetir. Uygulamayı kullanarak bu Şartları kabul etmiş olursunuz.';
+	@override String get disclaimer => 'Yasal Uyarı: ChatFace bir yapay zeka video etkileşim uygulamasıdır. Hukuki, akademik, tıbbi veya profesyonel danışmanlık hizmetleri sağlamaz.';
+	@override String get section1Title => '1. HİZMET KAPSAMI';
+	@override String get section1Body => 'ChatFace, yapay zeka destekli video etkileşim deneyimleri sağlar:\n\n• Yapay zeka görüntülü arama ve sohbet.\n• Kişiselleştirilmiş etkileşim tercihleri.\n• Etkileşim geçmişine ve kayıtlara erişim.\n\nHizmetler resmi görüş veya profesyonel rehberlik garantisi teşkil etmez.';
+	@override String get section2Title => '2. KULLANIM KOŞULLARI';
+	@override String get section2Body => '• En az 18 yaşında olmalısınız (18 yaş altının erişimi yasaktır).\n• Hesap bilgilerinizi doğru vermelisiniz.\n• Uygulama yalnızca yasal ve kişisel amaçlarla kullanılmalıdır.';
+	@override String get section3Title => '3. YASAK KULLANIMLAR';
+	@override String get section3Body => 'Kimliğe bürünme, nefret söylemi, çocuk güvenliğini tehlikeye atma, güvenlik ihlali girişimleri ve yapay zeka sistemlerinin manipülasyonu kesinlikle yasaktır.';
+	@override String get section4Title => '4. ABONELİKLER VE ÖDEMELER';
+	@override String get section4Body => 'Premium özellikler App Store ve Google Play politikalarına tabidir. Abonelik iptalleri ve geri ödemeler ilgili mağaza ayarları aracılığıyla yönetilir.';
+	@override String get section5Title => '5. İÇERİK REDDİ';
+	@override String get section5Body => 'İçerik yapay zeka tarafından oluşturulmuştur ve profesyonel tavsiyelerin yerini almaz. ChatFace belirli bir amaca yönelik doğruluğu veya uygunluğu garanti etmez.';
+	@override String get section6Title => '6. FİKRİ MÜLKİYET';
+	@override String get section6Body => 'Tasarım, yazılım ve algoritmalar dahil tüm içerik ChatFace\'e aittir. İzinsiz çoğaltılması veya yeniden dağıtılması yasaktır.';
+	@override String get section7Title => '7. GEÇERLİ HUKUK';
+	@override String get section7Body => 'Bu Şartlar Türkiye Cumhuriyeti kanunlarına tabidir. Uyuşmazlıklara ilişkin yargı yetkisi İstanbul Merkez Mahkemelerindedir.';
+	@override String get section8Title => '8. İLETİŞİM';
+	@override String get section8Body => '📩 Sorularınız için: support@fly-work.com';
 }
 
 // Path: termOfService.cookiePolicy
@@ -407,22 +470,22 @@ class _TranslationsTermOfServiceCookiePolicyTr implements TranslationsTermOfServ
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Cookie Policy';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.';
-	@override String get important => 'This policy explains what cookies are, their purposes, and how you can manage your preferences.';
-	@override String get section1Title => '1. WHAT ARE COOKIES?';
-	@override String get section1Body => 'Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.';
-	@override String get section2Title => '2. WHICH TECHNOLOGIES DO WE USE?';
-	@override String get section2Body => 'Strictly Necessary Technologies\nRequired for session management and security controls. The app may not function properly without these components.\n\nPerformance and Analytics\nHelps us understand which stories are read and which areas need improvement. Data is evaluated anonymously.\n\nPersonalization\nRemembers settings like language preference and reading level to provide a tailored experience for the child.';
-	@override String get section3Title => '3. WHY DO WE USE THESE TECHNOLOGIES?';
-	@override String get section3Body => '• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.';
-	@override String get section4Title => '4. THIRD-PARTY TECHNOLOGIES';
-	@override String get section4Body => 'Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.';
-	@override String get section5Title => '5. COOKIE CONTROL AND MANAGEMENT';
-	@override String get section5Body => 'Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.';
-	@override String get section6Title => '6. CONTACT';
-	@override String get section6Body => '📩 For inquiries: support@fly-work.com';
+	@override String get title => 'Çerez Politikası';
+	@override String get lastUpdated => 'Son Güncelleme: 2026';
+	@override String get intro => 'ChatFace\'e hoş geldiniz. Yapay zeka görüntülü görüşme deneyiminizi daha sorunsuz, daha güvenli ve kişisel hale getirmek için dijital yardımcı teknolojiler kullanılır.';
+	@override String get important => 'Bu politika çerezlerin ne olduğunu, amaçlarını ve tercihlerinizi nasıl yönetebileceğinizi açıklamaktadır.';
+	@override String get section1Title => '1. ÇEREZLER NEDİR?';
+	@override String get section1Body => 'Çerezler cihazınıza yerleştirilen küçük veri dosyalarıdır. Sizi doğrudan tanımlamazlar; şunları hatırlayan dijital notlar görevi görürler:\n• Çağrı ve dil ayarları\n• Oturum ve performans tercihleri.';
+	@override String get section2Title => '2. HANGİ TEKNOLOJİLERİ KULLANIYORUZ?';
+	@override String get section2Body => 'Kesinlikle Gerekli Teknolojiler\nOturum yönetimi ve güvenlik kontrolleri için gereklidir. Uygulama bu bileşenler olmadan düzgün çalışmayabilir.\n\nPerformans ve Analiz\nHangi hikayelerin okunduğunu ve hangi alanların iyileştirilmesi gerektiğini anlamamıza yardımcı olur. Veriler anonim olarak değerlendirilir.\n\nKişiselleştirme\nÇocuğa özel bir deneyim sağlamak için dil tercihi ve okuma düzeyi gibi ayarları hatırlar.';
+	@override String get section3Title => '3. NEDEN BU TEKNOLOJİLERİ KULLANIYORUZ?';
+	@override String get section3Body => '• Uygulamanın güvenli ve sorunsuz çalışmasını sağlamak.\n• Okuma deneyimini daha akıcı hale getirmek için.\n• Tekrarlanan ayarları hatırlamak için.\n• Gelecekteki geliştirmelere yönelik özellikleri belirlemek.';
+	@override String get section4Title => '4. ÜÇÜNCÜ TARAF TEKNOLOJİLERİ';
+	@override String get section4Body => 'Bazı teknolojiler teknik servis sağlayıcılar tarafından sağlanabilmektedir ve onların kendi politikalarına tabidir. ChatFace bu ortaklıklarda veri güvenliğine öncelik veriyor.';
+	@override String get section5Title => '5. ÇEREZ KONTROLÜ VE YÖNETİMİ';
+	@override String get section5Body => 'Kullanıcılar bu teknolojileri cihaz veya uygulama ayarları aracılığıyla sınırlayabilir. Temel teknolojilerin devre dışı bırakılması, görüntülü görüşmelerin başlatılamaması gibi sorunlara neden olabilir.';
+	@override String get section6Title => '6. İLETİŞİM';
+	@override String get section6Body => '📩 Sorularınız için: support@fly-work.com';
 }
 
 // Path: onboarding.step5
@@ -432,16 +495,16 @@ class _TranslationsOnboardingStep5Tr implements TranslationsOnboardingStep5En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get permissionRequired => 'Permission required';
-	@override String get notNow => 'Not now';
-	@override String get openSettings => 'Open settings';
-	@override String get title => 'Permissions';
-	@override String get permission1 => 'Camera Access';
-	@override String get permission1Subtitle => 'ChatFace uses your camera for video calls with AI characters.';
-	@override String get permission2 => 'Microphone Access';
-	@override String get permission2Subtitle => 'ChatFace uses your microphone for voice and video calls.';
-	@override String get permission3 => 'Location Access';
-	@override String get permission3Subtitle => 'ChatFace uses your location to personalize your experience.';
+	@override String get permissionRequired => 'İzin gerekli';
+	@override String get notNow => 'Şimdi değil';
+	@override String get openSettings => 'Ayarları aç';
+	@override String get title => 'İzinler';
+	@override String get permission1 => 'Kamera Erişimi';
+	@override String get permission1Subtitle => 'ChatFace, AI karakterleriyle görüntülü aramalar için kameranızı kullanır.';
+	@override String get permission2 => 'Mikrofon Erişimi';
+	@override String get permission2Subtitle => 'ChatFace, sesli ve görüntülü aramalar için mikrofonunuzu kullanır.';
+	@override String get permission3 => 'Konum Erişimi';
+	@override String get permission3Subtitle => 'ChatFace deneyiminizi kişiselleştirmek için konumunuzu kullanır.';
 }
 
 // Path: onboarding.step1
@@ -451,9 +514,9 @@ class _TranslationsOnboardingStep1Tr implements TranslationsOnboardingStep1En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Name?';
-	@override String get subtitle => 'Please enter your name';
-	@override String get hint => 'Full Name';
+	@override String get title => 'Adın ne?';
+	@override String get subtitle => 'Lütfen adınızı girin';
+	@override String get hint => 'Ad Soyad';
 }
 
 // Path: onboarding.step2
@@ -463,8 +526,8 @@ class _TranslationsOnboardingStep2Tr implements TranslationsOnboardingStep2En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Age?';
-	@override String get subtitle => 'You must be at least 18 years old to register.';
+	@override String get title => 'Yaşınız nedir?';
+	@override String get subtitle => 'Kayıt olabilmek için en az 18 yaşında olmanız gerekmektedir.';
 }
 
 // Path: onboarding.step3
@@ -474,11 +537,11 @@ class _TranslationsOnboardingStep3Tr implements TranslationsOnboardingStep3En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Gender?';
-	@override String get subtitle => 'Please select your gender';
-	@override String get male => 'Male';
-	@override String get female => 'Female';
-	@override String get dontWantToMention => 'I don\'t want to mention it.';
+	@override String get title => 'Cinsiyetiniz nedir?';
+	@override String get subtitle => 'Lütfen cinsiyetinizi seçin';
+	@override String get male => 'Erkek';
+	@override String get female => 'Dişi';
+	@override String get dontWantToMention => 'Bundan bahsetmek istemiyorum.';
 }
 
 // Path: onboarding.step4
@@ -488,16 +551,16 @@ class _TranslationsOnboardingStep4Tr implements TranslationsOnboardingStep4En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Have Fun While \nStaying Safe';
-	@override String get entry1 => 'We Maintain Order';
-	@override String get subentry1 => 'Real-time AI Monitoring Open';
-	@override String get entry2 => 'Screen Recordings';
-	@override String get subentry2 => 'No Recording Without Consent';
-	@override String get entry3 => '24/7 Support';
-	@override String get subentry3 => 'Complaints Are Reviewed At Any Time Of The Day';
-	@override String get entry4 => '18+ only';
-	@override String get subentry4 => 'Not Suitable For Minors';
-	@override String get communityRules => 'Community Rules';
+	@override String get title => '\nGüvende Kalırken Eğlenin';
+	@override String get entry1 => 'Düzeni Koruyoruz';
+	@override String get subentry1 => 'Gerçek Zamanlı Yapay Zeka İzleme Açık';
+	@override String get entry2 => 'Ekran Kayıtları';
+	@override String get subentry2 => 'Rıza Olmadan Kayıt Yapılamaz';
+	@override String get entry3 => '7/24 Destek';
+	@override String get subentry3 => 'Şikayetler Günün Her Saatinde İncelenir';
+	@override String get entry4 => 'yalnızca 18+';
+	@override String get subentry4 => 'Küçükler İçin Uygun Değil';
+	@override String get communityRules => 'Topluluk Kuralları';
 }
 
 // Path: onboarding.loading
@@ -507,9 +570,9 @@ class _TranslationsOnboardingLoadingTr implements TranslationsOnboardingLoadingE
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Your Personal Account is\n';
-	@override String get titlePart2 => 'Being Created';
-	@override String get subtitle => 'Please wait, your profile is being prepared.';
+	@override String get titlePart1 => 'Kişisel Hesabınız\n';
+	@override String get titlePart2 => 'Oluşturuluyor';
+	@override String get subtitle => 'Lütfen bekleyin, profiliniz hazırlanıyor.';
 }
 
 // Path: onboarding.kFinal
@@ -519,9 +582,41 @@ class _TranslationsOnboardingKFinalTr implements TranslationsOnboardingKFinalEn 
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Your Personal Account is\n';
-	@override String get titlePart2 => 'Created';
-	@override String get subtitle => 'Enjoy communication with any character';
+	@override String get titlePart1 => 'Kişisel Hesabınız\n';
+	@override String get titlePart2 => 'Oluşturuldu';
+	@override String get subtitle => 'Herhangi bir karakterle iletişimin tadını çıkarın';
+}
+
+// Path: onboarding.login
+class _TranslationsOnboardingLoginTr implements TranslationsOnboardingLoginEn {
+	_TranslationsOnboardingLoginTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Öğrenme Yolculuğuna\nDevam Et';
+	@override String get subtitle => 'İlerlemeni kaydet, dersleri aç ve\ncihazlar arasında öğrenmeye devam et.';
+	@override String get failed => 'Giriş işlemi tamamlanamadı.';
+}
+
+// Path: onboarding.reward
+class _TranslationsOnboardingRewardTr implements TranslationsOnboardingRewardEn {
+	_TranslationsOnboardingRewardTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String get points => '⭐️ +50 puan';
+	@override String get title => 'Harika İş 🎉';
+	@override String get subtitle => 'Seni bekleyen 200+ ders daha var!';
+	@override String get progressLabel => 'İlk adım tamamlandı!';
+	@override String get featureAlphabetTitle => 'Tüm Alfabe & Sayılar';
+	@override String get featureAlphabetSubtitle => '200+ interaktif ders';
+	@override String get featureVoiceTitle => 'Sesli Telaffuz';
+	@override String get featureVoiceSubtitle => 'Her kelimede ses desteği';
+	@override String get featureQuizTitle => 'Oyunlu Mini Testler';
+	@override String get featureQuizSubtitle => 'Eğlenerek Öğren';
+	@override String get continueButton => 'Keşfetmeye Devam Et';
 }
 
 // Path: splash.initial
@@ -531,8 +626,8 @@ class _TranslationsSplashInitialTr implements TranslationsSplashInitialEn {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get hello => 'Hello';
-	@override String get title => 'PLAYFUL ENGLISH FOR KIDS';
+	@override String get hello => 'Merhaba';
+	@override String get title => 'ÇOCUKLAR İÇİN OYUN İNGİLİZCE';
 }
 
 // Path: splash.screen1
@@ -542,8 +637,8 @@ class _TranslationsSplashScreen1Tr implements TranslationsSplashScreen1En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Learning English \nCan Feel Like Play';
-	@override String get description => 'Short, playful lessons help kids learn new words without pressure.';
+	@override String get title => 'İngilizce Öğrenmek\nOyun Gibi Hissettirebilir';
+	@override String get description => 'Kısa, eğlenceli dersler çocukların baskı olmadan yeni kelimeler öğrenmesine yardımcı olur.';
 }
 
 // Path: splash.screen2
@@ -553,8 +648,8 @@ class _TranslationsSplashScreen2Tr implements TranslationsSplashScreen2En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Listen, Repeat, and \nLearn New Words';
-	@override String get description => 'Simple voice activities help kids practice pronunciation step by step.';
+	@override String get title => 'Dinleyin, Tekrarlayın ve\nYeni Kelimeler Öğrenin';
+	@override String get description => 'Basit sesli aktiviteler çocukların adım adım telaffuz pratiği yapmasına yardımcı olur.';
 }
 
 // Path: splash.screen3
@@ -564,11 +659,11 @@ class _TranslationsSplashScreen3Tr implements TranslationsSplashScreen3En {
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Build Confidence, \nOne Word at a Time';
-	@override String get description => 'Designed for young learners with simple activities, friendly guidance, and a safe learning flow.';
-	@override String get option1 => '️🛡️ Safe For Kids';
-	@override String get option2 => '🌱 No pressure learning';
-	@override String get option3 => '⭐️ Made for young learners';
+	@override String get title => 'Güven Oluşturun,\nTek Kelimeyle';
+	@override String get description => 'Basit aktiviteler, arkadaşça rehberlik ve güvenli bir öğrenme akışıyla genç öğrenciler için tasarlandı.';
+	@override String get option1 => '️🛡️ Çocuklar İçin Güvenli';
+	@override String get option2 => '🌱 Baskı olmadan öğrenme';
+	@override String get option3 => '⭐️ Genç öğrenciler için tasarlandı';
 }
 
 // Path: home.placeholders
@@ -578,11 +673,29 @@ class _TranslationsHomePlaceholdersTr implements TranslationsHomePlaceholdersEn 
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get fashionDesigner => 'Fashion Designer';
-	@override String get comedian => 'Comedian';
-	@override String get influencer => 'Influencer';
-	@override String get teacher => 'Teacher';
-	@override String get friend => 'Friend';
+	@override String get fashionDesigner => 'Moda Tasarımcısı';
+	@override String get comedian => 'Komedyen';
+	@override String get influencer => 'Etkileyici';
+	@override String get teacher => 'Öğretmen';
+	@override String get friend => 'Arkadaş';
+}
+
+// Path: home.lessons
+class _TranslationsHomeLessonsTr implements TranslationsHomeLessonsEn {
+	_TranslationsHomeLessonsTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String get alphabet => 'Alfabe';
+	@override String get numbers => 'Sayılar';
+	@override String get colors => 'Renkler';
+	@override String get shapes => 'Şekiller';
+	@override String get fruit => 'Meyveler';
+	@override String get vegetables => 'Sebzeler';
+	@override String get sports => 'Spor';
+	@override String get fillIn => 'Boşluk Doldur';
+	@override String get fillInBlank => 'Boşluk Doldur';
 }
 
 // Path: deleteAccount.steps
@@ -604,14 +717,14 @@ class _TranslationsDeleteAccountStepsStep1Tr implements TranslationsDeleteAccoun
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'We don\'t want you to go, but we understand.';
-	@override String get subtitle => 'Can you tell us why you want to leave so we can improve the ChatFace experience?';
-	@override String get option1 => 'I didn\'t find the AI characters realistic.';
-	@override String get option2 => 'I am experiencing technical issues with video chats.';
-	@override String get option3 => 'Subscription prices are above my expectations.';
-	@override String get option4 => 'I couldn\'t find the type of characters I was looking for.';
-	@override String get option5 => 'I just wanted to try it out for a short time.';
-	@override String get option6 => 'Other';
+	@override String get title => 'Gitmeni istemiyoruz ama anlıyoruz.';
+	@override String get subtitle => 'ChatFace deneyimini geliştirebilmemiz için neden ayrılmak istediğinizi bize söyleyebilir misiniz?';
+	@override String get option1 => 'AI karakterlerini gerçekçi bulmadım.';
+	@override String get option2 => 'Görüntülü sohbetlerde teknik sorunlar yaşıyorum.';
+	@override String get option3 => 'Abonelik fiyatları beklentilerimin üzerinde.';
+	@override String get option4 => 'Aradığım türde karakterleri bulamadım.';
+	@override String get option5 => 'Kısa bir süreliğine denemek istedim.';
+	@override String get option6 => 'Diğer';
 }
 
 // Path: deleteAccount.steps.step2
@@ -621,15 +734,15 @@ class _TranslationsDeleteAccountStepsStep2Tr implements TranslationsDeleteAccoun
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'If you delete your account, you will say goodbye to:';
-	@override String get subtitle1 => 'Deep Connections and Memory:';
-	@override String get subtitle1Desc => 'The characters you chat with will completely forget their past with you, your shared secrets, and your personal habits.';
-	@override String get subtitle2 => 'Video Call Privilege:';
-	@override String get subtitle2Desc => 'You will lose the right to communicate face-to-face with your AI partners, who are available to you anytime.';
-	@override String get subtitle3 => 'Advanced Algorithm:';
-	@override String get subtitle3Desc => 'Your \'Just for You\' character matches tailored to your preferences will be reset.';
-	@override String get subtitle4 => 'Profile Data:';
-	@override String get subtitle4Desc => 'Your earned achievements, unlocked special characters, and chat history will be irreversibly deleted.';
+	@override String get title => 'Hesabınızı silerseniz, şunlara elveda diyeceksiniz:';
+	@override String get subtitle1 => 'Derin Bağlantılar ve Bellek:';
+	@override String get subtitle1Desc => 'Sohbet ettiğiniz karakterler sizinle olan geçmişlerini, ortak sırlarınızı, kişisel alışkanlıklarınızı tamamen unutacak.';
+	@override String get subtitle2 => 'Görüntülü Görüşme Ayrıcalığı:';
+	@override String get subtitle2Desc => 'İstediğiniz zaman ulaşabildiğiniz yapay zeka ortaklarınızla yüz yüze iletişim kurma hakkınızı kaybedeceksiniz.';
+	@override String get subtitle3 => 'Gelişmiş Algoritma:';
+	@override String get subtitle3Desc => 'Tercihlerinize göre uyarlanmış \'Sadece Size Özel\' karakter eşleşmeleriniz sıfırlanacaktır.';
+	@override String get subtitle4 => 'Profil Verileri:';
+	@override String get subtitle4Desc => 'Kazandığınız başarılarınız, kilidi açılmış özel karakterleriniz ve sohbet geçmişiniz geri dönüşü olmayacak şekilde silinecektir.';
 }
 
 // Path: deleteAccount.steps.step3
@@ -639,14 +752,14 @@ class _TranslationsDeleteAccountStepsStep3Tr implements TranslationsDeleteAccoun
 	final TranslationsTr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'We have a special offer for you before you go!';
-	@override String get description => 'Maybe you just need a little more time or a better deal. Instead of deleting your account, would you consider these?';
-	@override String description1({required Object offer}) => 'Keeping you with us is valuable. ${offer} on your next subscription! Would you like to continue with this offer?';
-	@override String get description1Offer => 'We\'ve applied a 50% discount';
-	@override String description2({required Object offer}) => 'We have given you ${offer} credits so you can see new characters you haven\'t discovered yet.';
-	@override String get description2Offer => '3 free video calls';
-	@override String get acceptOffer => 'Accept 50% Discount Offer';
-	@override String get deleteMyAccount => 'Delete My Account';
+	@override String get title => 'Gitmeden önce size özel bir teklifimiz var!';
+	@override String get description => 'Belki biraz daha zamana ya da daha iyi bir anlaşmaya ihtiyacın var. Hesabınızı silmek yerine bunları düşünür müsünüz?';
+	@override String description1({required Object offer}) => 'Sizi aramızda tutmak çok değerli. Bir sonraki aboneliğinizde ${offer}! Bu teklife devam etmek ister misiniz?';
+	@override String get description1Offer => '%50 indirim uyguladık';
+	@override String description2({required Object offer}) => 'Henüz keşfetmediğiniz yeni karakterleri görebilmeniz için size ${offer} kredi verdik.';
+	@override String get description2Offer => '3 ücretsiz görüntülü görüşme';
+	@override String get acceptOffer => '%50 İndirim Teklifini Kabul Edin';
+	@override String get deleteMyAccount => 'Hesabımı Sil';
 }
 
 /// The flat map containing all translations for locale <tr>.
@@ -657,147 +770,165 @@ class _TranslationsDeleteAccountStepsStep3Tr implements TranslationsDeleteAccoun
 extension on TranslationsTr {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'welcome' => ({required Object name}) => 'Welcome ${name}',
-			'welcome2' => ({required Object appName}) => 'Welcome to ${appName}',
-			'get_started' => 'Get Started',
-			'start_learning' => 'Start Learning',
-			'hello' => 'Hello',
-			'next' => 'Next',
-			'back' => 'Back',
-			'skip' => 'Skip',
-			'profile' => 'Profile',
-			'kContinue' => 'Continue',
-			'termOfService.text1' => 'By signing up for ChatFace, you agree to our ',
-			'termOfService.link1' => 'Terms of Service',
-			'termOfService.text2' => '. Learn how we process your data in our ',
-			'termOfService.link2' => 'Privacy Policy',
-			'termOfService.text3' => ' and ',
-			'termOfService.link3' => 'Cookies Policy',
+			'welcome' => ({required Object name}) => 'Hoş geldiniz ${name}',
+			'welcome2' => ({required Object appName}) => '${appName}\'ye hoş geldiniz',
+			'get_started' => 'Başlayın',
+			'start_learning' => 'Öğrenmeye Başla',
+			'hello' => 'Merhaba',
+			'next' => 'Sonraki',
+			'back' => 'Geri',
+			'skip' => 'Atlamak',
+			'profile' => 'Profil',
+			'kContinue' => 'Devam etmek',
+			'termOfService.text1' => 'ChatFace\'e kaydolarak şunları kabul etmiş olursunuz:',
+			'termOfService.link1' => 'Hizmet Şartları',
+			'termOfService.text2' => '. Verilerinizi nasıl işlediğimizi öğrenin',
+			'termOfService.link2' => 'Gizlilik Politikası',
+			'termOfService.text3' => 'Ve',
+			'termOfService.link3' => 'Çerez Politikası',
 			'termOfService.text4' => '',
-			'termOfService.privacyPolicy.title' => 'Privacy Policy',
-			'termOfService.privacyPolicy.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.privacyPolicy.intro' => 'ChatFace adopts user privacy and data security as a core principle. All your personal data is processed in accordance with effective data protection regulations.',
-			'termOfService.privacyPolicy.section1Title' => '1. COLLECTED INFORMATION',
-			'termOfService.privacyPolicy.section1sub1Title' => '1.1 Data Provided by User',
-			'termOfService.privacyPolicy.section1sub1Body' => '• Name, nickname, age, gender, country, profile information, and optional profile photos you choose to upload.\n• Email address for registration, subscription, and support.\n• Interaction preferences, selected language, AI character choices, messages, voice transcripts, uploaded chat images, feedback, and support messages.',
-			'termOfService.privacyPolicy.section1sub2Title' => '1.2 Automatically Collected Data',
-			'termOfService.privacyPolicy.section1sub2Body' => 'ChatFace may collect device type, operating system, approximate country/city derived from network signals, app usage data, crash logs, subscription status, and notification delivery data. Precise location is not requested during onboarding and is not required for AI chat or calls.',
-			'termOfService.privacyPolicy.section2Title' => '2. PURPOSES OF DATA PROCESSING',
-			'termOfService.privacyPolicy.section2Body' => 'Your personal data is processed to operate the app, authenticate your account, provide AI chat and voice/video call features, personalize language and character interactions, process subscriptions, send notifications when enabled, prevent abuse, review user reports, improve reliability, and meet legal obligations. Your personal data is not sold or used for advertising.',
-			'termOfService.privacyPolicy.section3Title' => '3. AI PROCESSING AND THIRD-PARTY SHARING',
-			'termOfService.privacyPolicy.section3Body' => 'To provide a better AI experience, ChatFace securely uses third-party providers, including OpenAI, to process the text, voice, images, and related data you submit. Messages, voice transcripts, selected language, profile context, conversation history, and uploaded chat images may be sent to OpenAI to generate AI replies and moderation outcomes. Speech audio may be sent to OpenAI or Deepgram for transcription depending on server configuration. Assistant text may be sent to ElevenLabs to create spoken audio. Uploaded profile and chat images, generated audio, and related media may be stored on BunnyCDN. OneSignal may process notification identifiers and delivery data. RevenueCat and the app stores process subscription and entitlement data. Social sign-in data may be processed by Apple, Google, or Facebook when you use those login methods. These providers are used only to perform the requested service and are expected to protect data under their own security and privacy terms. OpenAI API data is not used to train OpenAI models according to OpenAI API policies.',
-			'termOfService.privacyPolicy.section4Title' => '4. PHOTOS, CAMERA, MICROPHONE, AND FACE DATA',
-			'termOfService.privacyPolicy.section4Body' => 'Camera access is used for local video-call preview when you start a video call. The camera preview stays on your device. ChatFace does not collect biometric face data, face templates, face geometry, face recognition identifiers, or face profiles. Uploaded profile photos and chat images may contain faces if you choose to upload them; these images are stored and processed only as user-provided photos for profile display or AI conversation context. Microphone access is used for voice and video conversations so your speech can be transcribed and answered by the AI.',
-			'termOfService.privacyPolicy.section5Title' => '5. DATA RETENTION AND DELETION',
-			'termOfService.privacyPolicy.section5Body' => 'Account profile data, profile photos, conversation history, uploaded chat images, reports, notification settings, and subscription entitlement records are retained while your account is active or as needed for legal, security, fraud-prevention, and support purposes. When you delete your account, personal account records are deleted from ChatFace systems subject to required legal and operational retention. Media stored with third-party infrastructure is removed or made inaccessible according to our deletion process and provider retention behavior.',
-			'termOfService.privacyPolicy.section6Title' => '6. USER RIGHTS',
-			'termOfService.privacyPolicy.section6Body' => 'Under applicable privacy laws, you may request access, correction, deletion, objection, restriction, or data portability for your personal data. You can contact us for these requests.',
-			'termOfService.privacyPolicy.section7Title' => '7. CHILDREN\'S PRIVACY',
-			'termOfService.privacyPolicy.section7Body' => 'ChatFace is not intended for users under the age of 18. We do not knowingly collect data from this age group; such accounts will be closed and data deleted upon detection.',
-			'termOfService.privacyPolicy.section8Title' => '8. CONTACT',
-			'termOfService.privacyPolicy.section8Body' => 'For privacy inquiries: support@fly-work.com',
-			'termOfService.termsOfService.title' => 'Terms of Service',
-			'termOfService.termsOfService.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.termsOfService.intro' => 'These Terms govern the use of the ChatFace mobile application. By using the app, you agree to these Terms.',
-			'termOfService.termsOfService.disclaimer' => 'Disclaimer: ChatFace is an AI video interaction app. It does not provide legal, academic, medical, or professional consulting services.',
-			'termOfService.termsOfService.section1Title' => '1. SCOPE OF SERVICE',
-			'termOfService.termsOfService.section1Body' => 'ChatFace provides AI-powered video interaction experiences:\n\n• AI video calling and conversation.\n• Personalized interaction preferences.\n• Access to interaction history and records.\n\nServices do not constitute official opinions or professional guidance guarantees.',
-			'termOfService.termsOfService.section2Title' => '2. CONDITIONS OF USE',
-			'termOfService.termsOfService.section2Body' => '• You must be at least 18 years old (Under 18 access is prohibited).\n• You must provide accurate account information.\n• The app must be used for legal and personal purposes only.',
-			'termOfService.termsOfService.section3Title' => '3. PROHIBITED USES',
-			'termOfService.termsOfService.section3Body' => 'Impersonation, hate speech, endangering child safety, security breach attempts, and manipulation of AI systems are strictly prohibited.',
-			'termOfService.termsOfService.section4Title' => '4. SUBSCRIPTIONS AND PAYMENTS',
-			'termOfService.termsOfService.section4Body' => 'Premium features are subject to App Store and Google Play policies. Subscription cancellations and refunds are managed via the respective store settings.',
-			'termOfService.termsOfService.section5Title' => '5. CONTENT DISCLAIMER',
-			'termOfService.termsOfService.section5Body' => 'Content is AI-generated and does not replace professional advice. ChatFace does not guarantee accuracy or fitness for a particular purpose.',
-			'termOfService.termsOfService.section6Title' => '6. INTELLECTUAL PROPERTY',
-			'termOfService.termsOfService.section6Body' => 'All content including design, software, and algorithms belongs to ChatFace. Unauthorized reproduction or redistribution is prohibited.',
-			'termOfService.termsOfService.section7Title' => '7. GOVERNING LAW',
-			'termOfService.termsOfService.section7Body' => 'These Terms are governed by the laws of the Republic of Turkey. Istanbul Central Courts shall have jurisdiction over disputes.',
-			'termOfService.termsOfService.section8Title' => '8. CONTACT',
-			'termOfService.termsOfService.section8Body' => '📩 For inquiries: support@fly-work.com',
-			'termOfService.cookiePolicy.title' => 'Cookie Policy',
-			'termOfService.cookiePolicy.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.cookiePolicy.intro' => 'Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.',
-			'termOfService.cookiePolicy.important' => 'This policy explains what cookies are, their purposes, and how you can manage your preferences.',
-			'termOfService.cookiePolicy.section1Title' => '1. WHAT ARE COOKIES?',
-			'termOfService.cookiePolicy.section1Body' => 'Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.',
-			'termOfService.cookiePolicy.section2Title' => '2. WHICH TECHNOLOGIES DO WE USE?',
-			'termOfService.cookiePolicy.section2Body' => 'Strictly Necessary Technologies\nRequired for session management and security controls. The app may not function properly without these components.\n\nPerformance and Analytics\nHelps us understand which stories are read and which areas need improvement. Data is evaluated anonymously.\n\nPersonalization\nRemembers settings like language preference and reading level to provide a tailored experience for the child.',
-			'termOfService.cookiePolicy.section3Title' => '3. WHY DO WE USE THESE TECHNOLOGIES?',
-			'termOfService.cookiePolicy.section3Body' => '• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.',
-			'termOfService.cookiePolicy.section4Title' => '4. THIRD-PARTY TECHNOLOGIES',
-			'termOfService.cookiePolicy.section4Body' => 'Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.',
-			'termOfService.cookiePolicy.section5Title' => '5. COOKIE CONTROL AND MANAGEMENT',
-			'termOfService.cookiePolicy.section5Body' => 'Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.',
-			'termOfService.cookiePolicy.section6Title' => '6. CONTACT',
-			'termOfService.cookiePolicy.section6Body' => '📩 For inquiries: support@fly-work.com',
-			'cookies' => 'Cookies Policy',
-			'privacy' => 'Privacy Policy',
-			'onboarding.step5.permissionRequired' => 'Permission required',
-			'onboarding.step5.notNow' => 'Not now',
-			'onboarding.step5.openSettings' => 'Open settings',
-			'onboarding.step5.title' => 'Permissions',
-			'onboarding.step5.permission1' => 'Camera Access',
-			'onboarding.step5.permission1Subtitle' => 'ChatFace uses your camera for video calls with AI characters.',
-			'onboarding.step5.permission2' => 'Microphone Access',
-			'onboarding.step5.permission2Subtitle' => 'ChatFace uses your microphone for voice and video calls.',
-			'onboarding.step5.permission3' => 'Location Access',
-			'onboarding.step5.permission3Subtitle' => 'ChatFace uses your location to personalize your experience.',
-			'onboarding.step1.title' => 'What is your Name?',
-			'onboarding.step1.subtitle' => 'Please enter your name',
-			'onboarding.step1.hint' => 'Full Name',
-			'onboarding.step2.title' => 'What is your Age?',
-			'onboarding.step2.subtitle' => 'You must be at least 18 years old to register.',
-			'onboarding.step3.title' => 'What is your Gender?',
-			'onboarding.step3.subtitle' => 'Please select your gender',
-			'onboarding.step3.male' => 'Male',
-			'onboarding.step3.female' => 'Female',
-			'onboarding.step3.dontWantToMention' => 'I don\'t want to mention it.',
-			'onboarding.step4.title' => 'Have Fun While \nStaying Safe',
-			'onboarding.step4.entry1' => 'We Maintain Order',
-			'onboarding.step4.subentry1' => 'Real-time AI Monitoring Open',
-			'onboarding.step4.entry2' => 'Screen Recordings',
-			'onboarding.step4.subentry2' => 'No Recording Without Consent',
-			'onboarding.step4.entry3' => '24/7 Support',
-			'onboarding.step4.subentry3' => 'Complaints Are Reviewed At Any Time Of The Day',
-			'onboarding.step4.entry4' => '18+ only',
-			'onboarding.step4.subentry4' => 'Not Suitable For Minors',
-			'onboarding.step4.communityRules' => 'Community Rules',
-			'onboarding.loading.titlePart1' => 'Your Personal Account is\n',
-			'onboarding.loading.titlePart2' => 'Being Created',
-			'onboarding.loading.subtitle' => 'Please wait, your profile is being prepared.',
-			'onboarding.kFinal.titlePart1' => 'Your Personal Account is\n',
-			'onboarding.kFinal.titlePart2' => 'Created',
-			'onboarding.kFinal.subtitle' => 'Enjoy communication with any character',
-			'onboarding.allowAccess' => 'Allow Access',
-			'onboarding.iUnderstand' => 'I Understand',
-			'pressBackAgainToExit' => 'Press back again to exit',
-			'splash.initial.hello' => 'Hello',
-			'splash.initial.title' => 'PLAYFUL ENGLISH FOR KIDS',
-			'splash.screen1.title' => 'Learning English \nCan Feel Like Play',
-			'splash.screen1.description' => 'Short, playful lessons help kids learn new words without pressure.',
-			'splash.screen2.title' => 'Listen, Repeat, and \nLearn New Words',
-			'splash.screen2.description' => 'Simple voice activities help kids practice pronunciation step by step.',
-			'splash.screen3.title' => 'Build Confidence, \nOne Word at a Time',
-			'splash.screen3.description' => 'Designed for young learners with simple activities, friendly guidance, and a safe learning flow.',
-			'splash.screen3.option1' => '️🛡️ Safe For Kids',
-			'splash.screen3.option2' => '🌱 No pressure learning',
-			'splash.screen3.option3' => '⭐️ Made for young learners',
-			'auth.google' => 'Continue with Google',
-			'auth.facebook' => 'Continue with Facebook',
-			'auth.apple' => 'Continue with Apple',
-			'auth.guest' => 'Continue as Guest',
-			'auth.signInFailed' => ({required Object error}) => 'Sign-in failed: ${error}',
-			'home.seeAll' => 'See All',
-			'home.more' => 'More',
-			'home.online' => 'Online',
-			'home.offline' => 'Offline',
-			'home.placeholders.fashionDesigner' => 'Fashion Designer',
-			'home.placeholders.comedian' => 'Comedian',
-			'home.placeholders.influencer' => 'Influencer',
-			'home.placeholders.teacher' => 'Teacher',
-			'home.placeholders.friend' => 'Friend',
+			'termOfService.privacyPolicy.title' => 'Gizlilik Politikası',
+			'termOfService.privacyPolicy.lastUpdated' => 'Son Güncelleme: 2026',
+			'termOfService.privacyPolicy.intro' => 'ChatFace, kullanıcı gizliliğini ve veri güvenliğini temel prensip olarak benimser. Tüm kişisel verileriniz etkili veri koruma düzenlemelerine uygun olarak işlenir.',
+			'termOfService.privacyPolicy.section1Title' => '1. TOPLANAN BİLGİLER',
+			'termOfService.privacyPolicy.section1sub1Title' => '1.1 Kullanıcı Tarafından Sağlanan Veriler',
+			'termOfService.privacyPolicy.section1sub1Body' => '• Yüklemeyi seçtiğiniz ad, takma ad, yaş, cinsiyet, ülke, profil bilgileri ve isteğe bağlı profil fotoğrafları.\n• Kayıt, abonelik ve destek için e-posta adresi.\n• Etkileşim tercihleri, seçilen dil, AI karakter seçenekleri, mesajlar, ses dökümleri, yüklenen sohbet görüntüleri, geri bildirim ve destek mesajları.',
+			'termOfService.privacyPolicy.section1sub2Title' => '1.2 Otomatik Olarak Toplanan Veriler',
+			'termOfService.privacyPolicy.section1sub2Body' => 'ChatFace, ağ sinyallerinden elde edilen cihaz türünü, işletim sistemini, yaklaşık ülke/şehir bilgisini, uygulama kullanım verilerini, kilitlenme günlüklerini, abonelik durumunu ve bildirim dağıtım verilerini toplayabilir. Katılım sırasında kesin konum istenmez ve AI sohbeti veya aramaları için gerekli değildir.',
+			'termOfService.privacyPolicy.section2Title' => '2. VERİ İŞLEMENİN AMAÇLARI',
+			'termOfService.privacyPolicy.section2Body' => 'Kişisel verileriniz, uygulamayı çalıştırmak, hesabınızı doğrulamak, AI sohbet ve sesli/görüntülü arama özellikleri sağlamak, dil ve karakter etkileşimlerini kişiselleştirmek, abonelikleri işlemek, etkinleştirildiğinde bildirim göndermek, kötüye kullanımı önlemek, kullanıcı raporlarını incelemek, güvenilirliği artırmak ve yasal yükümlülükleri karşılamak için işlenir. Kişisel verileriniz satılmaz veya reklam amacıyla kullanılmaz.',
+			'termOfService.privacyPolicy.section3Title' => '3. YZ İŞLEME VE ÜÇÜNCÜ TARAF PAYLAŞIMI',
+			'termOfService.privacyPolicy.section3Body' => 'Daha iyi bir yapay zeka deneyimi sağlamak amacıyla ChatFace, gönderdiğiniz metni, sesi, görüntüleri ve ilgili verileri işlemek için OpenAI dahil üçüncü taraf sağlayıcıları güvenli bir şekilde kullanır. Yapay zeka yanıtları ve denetleme sonuçları oluşturmak için mesajlar, ses dökümleri, seçilen dil, profil içeriği, konuşma geçmişi ve yüklenen sohbet görüntüleri OpenAI\'ye gönderilebilir. Konuşma sesi, sunucu yapılandırmasına bağlı olarak transkripsiyon için OpenAI veya Deepgram\'a gönderilebilir. Konuşma sesi oluşturmak için Asistan metni ElevenLabs\'a gönderilebilir. Yüklenen profil ve sohbet görüntüleri, oluşturulan ses ve ilgili medya BunnyCDN\'de saklanabilir. OneSignal, bildirim tanımlayıcılarını ve teslimat verilerini işleyebilir. RevenueCat ve uygulama mağazaları abonelik ve yetki verilerini işler. Sosyal oturum açma verileri, söz konusu oturum açma yöntemlerini kullandığınızda Apple, Google veya Facebook tarafından işlenebilir. Bu sağlayıcılar yalnızca istenen hizmeti gerçekleştirmek için kullanılır ve kendi güvenlik ve gizlilik koşulları kapsamında verileri korumaları beklenir. OpenAI API verileri, OpenAI modellerini OpenAI API politikalarına göre eğitmek için kullanılmaz.',
+			'termOfService.privacyPolicy.section4Title' => '4. FOTOĞRAFLAR, KAMERA, MİKROFON VE YÜZ VERİLERİ',
+			'termOfService.privacyPolicy.section4Body' => 'Bir video görüşmesi başlattığınızda yerel video görüşmesi önizlemesi için kamera erişimi kullanılır. Kamera önizlemesi cihazınızda kalır. ChatFace biyometrik yüz verilerini, yüz şablonlarını, yüz geometrisini, yüz tanıma tanımlayıcılarını veya yüz profillerini toplamaz. Yüklenen profil fotoğrafları ve sohbet görselleri, yüklemeyi seçmeniz halinde yüzler içerebilir; bu görüntüler yalnızca profil görüntüleme veya AI konuşma bağlamı için kullanıcı tarafından sağlanan fotoğraflar olarak saklanır ve işlenir. Mikrofon erişimi sesli ve görüntülü görüşmeler için kullanılır, böylece konuşmanız yapay zeka tarafından yazıya geçirilebilir ve yanıtlanabilir.',
+			'termOfService.privacyPolicy.section5Title' => '5. VERİLERİN SAKLANMASI VE SİLİNMESİ',
+			'termOfService.privacyPolicy.section5Body' => 'Hesap profili verileri, profil fotoğrafları, konuşma geçmişi, yüklenen sohbet görüntüleri, raporlar, bildirim ayarları ve abonelik yetki kayıtları, hesabınız etkin olduğu sürece veya yasal, güvenlik, sahtekarlığı önleme ve destek amacıyla gerektiğinde saklanır. Hesabınızı sildiğinizde, kişisel hesap kayıtları gerekli yasal ve operasyonel saklama koşullarına tabi olarak ChatFace sistemlerinden silinir. Üçüncü taraf altyapısıyla saklanan medya, silme sürecimize ve sağlayıcıyı elde tutma davranışlarımıza göre kaldırılır veya erişilemez hale getirilir.',
+			'termOfService.privacyPolicy.section6Title' => '6. KULLANICI HAKLARI',
+			'termOfService.privacyPolicy.section6Body' => 'Geçerli gizlilik yasaları kapsamında kişisel verilerinize erişim, düzeltme, silme, itiraz, kısıtlama veya veri taşınabilirliği talep edebilirsiniz. Bu istekleriniz için bizimle iletişime geçebilirsiniz.',
+			'termOfService.privacyPolicy.section7Title' => '7. ÇOCUKLARIN GİZLİLİĞİ',
+			'termOfService.privacyPolicy.section7Body' => 'ChatFace, 18 yaşın altındaki kullanıcılara yönelik değildir. Bu yaş grubundan bilerek veri toplamıyoruz; tespit edilmesi üzerine bu tür hesaplar kapatılacak ve veriler silinecektir.',
+			'termOfService.privacyPolicy.section8Title' => '8. İLETİŞİM',
+			'termOfService.privacyPolicy.section8Body' => 'Gizlilikle ilgili sorularınız için: support@fly-work.com',
+			'termOfService.termsOfService.title' => 'Hizmet Şartları',
+			'termOfService.termsOfService.lastUpdated' => 'Son Güncelleme: 2026',
+			'termOfService.termsOfService.intro' => 'Bu Şartlar, ChatFace mobil uygulamasının kullanımını yönetir. Uygulamayı kullanarak bu Şartları kabul etmiş olursunuz.',
+			'termOfService.termsOfService.disclaimer' => 'Yasal Uyarı: ChatFace bir yapay zeka video etkileşim uygulamasıdır. Hukuki, akademik, tıbbi veya profesyonel danışmanlık hizmetleri sağlamaz.',
+			'termOfService.termsOfService.section1Title' => '1. HİZMET KAPSAMI',
+			'termOfService.termsOfService.section1Body' => 'ChatFace, yapay zeka destekli video etkileşim deneyimleri sağlar:\n\n• Yapay zeka görüntülü arama ve sohbet.\n• Kişiselleştirilmiş etkileşim tercihleri.\n• Etkileşim geçmişine ve kayıtlara erişim.\n\nHizmetler resmi görüş veya profesyonel rehberlik garantisi teşkil etmez.',
+			'termOfService.termsOfService.section2Title' => '2. KULLANIM KOŞULLARI',
+			'termOfService.termsOfService.section2Body' => '• En az 18 yaşında olmalısınız (18 yaş altının erişimi yasaktır).\n• Hesap bilgilerinizi doğru vermelisiniz.\n• Uygulama yalnızca yasal ve kişisel amaçlarla kullanılmalıdır.',
+			'termOfService.termsOfService.section3Title' => '3. YASAK KULLANIMLAR',
+			'termOfService.termsOfService.section3Body' => 'Kimliğe bürünme, nefret söylemi, çocuk güvenliğini tehlikeye atma, güvenlik ihlali girişimleri ve yapay zeka sistemlerinin manipülasyonu kesinlikle yasaktır.',
+			'termOfService.termsOfService.section4Title' => '4. ABONELİKLER VE ÖDEMELER',
+			'termOfService.termsOfService.section4Body' => 'Premium özellikler App Store ve Google Play politikalarına tabidir. Abonelik iptalleri ve geri ödemeler ilgili mağaza ayarları aracılığıyla yönetilir.',
+			'termOfService.termsOfService.section5Title' => '5. İÇERİK REDDİ',
+			'termOfService.termsOfService.section5Body' => 'İçerik yapay zeka tarafından oluşturulmuştur ve profesyonel tavsiyelerin yerini almaz. ChatFace belirli bir amaca yönelik doğruluğu veya uygunluğu garanti etmez.',
+			'termOfService.termsOfService.section6Title' => '6. FİKRİ MÜLKİYET',
+			'termOfService.termsOfService.section6Body' => 'Tasarım, yazılım ve algoritmalar dahil tüm içerik ChatFace\'e aittir. İzinsiz çoğaltılması veya yeniden dağıtılması yasaktır.',
+			'termOfService.termsOfService.section7Title' => '7. GEÇERLİ HUKUK',
+			'termOfService.termsOfService.section7Body' => 'Bu Şartlar Türkiye Cumhuriyeti kanunlarına tabidir. Uyuşmazlıklara ilişkin yargı yetkisi İstanbul Merkez Mahkemelerindedir.',
+			'termOfService.termsOfService.section8Title' => '8. İLETİŞİM',
+			'termOfService.termsOfService.section8Body' => '📩 Sorularınız için: support@fly-work.com',
+			'termOfService.cookiePolicy.title' => 'Çerez Politikası',
+			'termOfService.cookiePolicy.lastUpdated' => 'Son Güncelleme: 2026',
+			'termOfService.cookiePolicy.intro' => 'ChatFace\'e hoş geldiniz. Yapay zeka görüntülü görüşme deneyiminizi daha sorunsuz, daha güvenli ve kişisel hale getirmek için dijital yardımcı teknolojiler kullanılır.',
+			'termOfService.cookiePolicy.important' => 'Bu politika çerezlerin ne olduğunu, amaçlarını ve tercihlerinizi nasıl yönetebileceğinizi açıklamaktadır.',
+			'termOfService.cookiePolicy.section1Title' => '1. ÇEREZLER NEDİR?',
+			'termOfService.cookiePolicy.section1Body' => 'Çerezler cihazınıza yerleştirilen küçük veri dosyalarıdır. Sizi doğrudan tanımlamazlar; şunları hatırlayan dijital notlar görevi görürler:\n• Çağrı ve dil ayarları\n• Oturum ve performans tercihleri.',
+			'termOfService.cookiePolicy.section2Title' => '2. HANGİ TEKNOLOJİLERİ KULLANIYORUZ?',
+			'termOfService.cookiePolicy.section2Body' => 'Kesinlikle Gerekli Teknolojiler\nOturum yönetimi ve güvenlik kontrolleri için gereklidir. Uygulama bu bileşenler olmadan düzgün çalışmayabilir.\n\nPerformans ve Analiz\nHangi hikayelerin okunduğunu ve hangi alanların iyileştirilmesi gerektiğini anlamamıza yardımcı olur. Veriler anonim olarak değerlendirilir.\n\nKişiselleştirme\nÇocuğa özel bir deneyim sağlamak için dil tercihi ve okuma düzeyi gibi ayarları hatırlar.',
+			'termOfService.cookiePolicy.section3Title' => '3. NEDEN BU TEKNOLOJİLERİ KULLANIYORUZ?',
+			'termOfService.cookiePolicy.section3Body' => '• Uygulamanın güvenli ve sorunsuz çalışmasını sağlamak.\n• Okuma deneyimini daha akıcı hale getirmek için.\n• Tekrarlanan ayarları hatırlamak için.\n• Gelecekteki geliştirmelere yönelik özellikleri belirlemek.',
+			'termOfService.cookiePolicy.section4Title' => '4. ÜÇÜNCÜ TARAF TEKNOLOJİLERİ',
+			'termOfService.cookiePolicy.section4Body' => 'Bazı teknolojiler teknik servis sağlayıcılar tarafından sağlanabilmektedir ve onların kendi politikalarına tabidir. ChatFace bu ortaklıklarda veri güvenliğine öncelik veriyor.',
+			'termOfService.cookiePolicy.section5Title' => '5. ÇEREZ KONTROLÜ VE YÖNETİMİ',
+			'termOfService.cookiePolicy.section5Body' => 'Kullanıcılar bu teknolojileri cihaz veya uygulama ayarları aracılığıyla sınırlayabilir. Temel teknolojilerin devre dışı bırakılması, görüntülü görüşmelerin başlatılamaması gibi sorunlara neden olabilir.',
+			'termOfService.cookiePolicy.section6Title' => '6. İLETİŞİM',
+			'termOfService.cookiePolicy.section6Body' => '📩 Sorularınız için: support@fly-work.com',
+			'cookies' => 'Çerez Politikası',
+			'privacy' => 'Gizlilik Politikası',
+			'onboarding.step5.permissionRequired' => 'İzin gerekli',
+			'onboarding.step5.notNow' => 'Şimdi değil',
+			'onboarding.step5.openSettings' => 'Ayarları aç',
+			'onboarding.step5.title' => 'İzinler',
+			'onboarding.step5.permission1' => 'Kamera Erişimi',
+			'onboarding.step5.permission1Subtitle' => 'ChatFace, AI karakterleriyle görüntülü aramalar için kameranızı kullanır.',
+			'onboarding.step5.permission2' => 'Mikrofon Erişimi',
+			'onboarding.step5.permission2Subtitle' => 'ChatFace, sesli ve görüntülü aramalar için mikrofonunuzu kullanır.',
+			'onboarding.step5.permission3' => 'Konum Erişimi',
+			'onboarding.step5.permission3Subtitle' => 'ChatFace deneyiminizi kişiselleştirmek için konumunuzu kullanır.',
+			'onboarding.step1.title' => 'Adın ne?',
+			'onboarding.step1.subtitle' => 'Lütfen adınızı girin',
+			'onboarding.step1.hint' => 'Ad Soyad',
+			'onboarding.step2.title' => 'Yaşınız nedir?',
+			'onboarding.step2.subtitle' => 'Kayıt olabilmek için en az 18 yaşında olmanız gerekmektedir.',
+			'onboarding.step3.title' => 'Cinsiyetiniz nedir?',
+			'onboarding.step3.subtitle' => 'Lütfen cinsiyetinizi seçin',
+			'onboarding.step3.male' => 'Erkek',
+			'onboarding.step3.female' => 'Dişi',
+			'onboarding.step3.dontWantToMention' => 'Bundan bahsetmek istemiyorum.',
+			'onboarding.step4.title' => '\nGüvende Kalırken Eğlenin',
+			'onboarding.step4.entry1' => 'Düzeni Koruyoruz',
+			'onboarding.step4.subentry1' => 'Gerçek Zamanlı Yapay Zeka İzleme Açık',
+			'onboarding.step4.entry2' => 'Ekran Kayıtları',
+			'onboarding.step4.subentry2' => 'Rıza Olmadan Kayıt Yapılamaz',
+			'onboarding.step4.entry3' => '7/24 Destek',
+			'onboarding.step4.subentry3' => 'Şikayetler Günün Her Saatinde İncelenir',
+			'onboarding.step4.entry4' => 'yalnızca 18+',
+			'onboarding.step4.subentry4' => 'Küçükler İçin Uygun Değil',
+			'onboarding.step4.communityRules' => 'Topluluk Kuralları',
+			'onboarding.loading.titlePart1' => 'Kişisel Hesabınız\n',
+			'onboarding.loading.titlePart2' => 'Oluşturuluyor',
+			'onboarding.loading.subtitle' => 'Lütfen bekleyin, profiliniz hazırlanıyor.',
+			'onboarding.kFinal.titlePart1' => 'Kişisel Hesabınız\n',
+			'onboarding.kFinal.titlePart2' => 'Oluşturuldu',
+			'onboarding.kFinal.subtitle' => 'Herhangi bir karakterle iletişimin tadını çıkarın',
+			'onboarding.allowAccess' => 'Erişime İzin Ver',
+			'onboarding.iUnderstand' => 'Anladım',
+			'onboarding.login.title' => 'Öğrenme Yolculuğuna\nDevam Et',
+			'onboarding.login.subtitle' => 'İlerlemeni kaydet, dersleri aç ve\ncihazlar arasında öğrenmeye devam et.',
+			'onboarding.login.failed' => 'Giriş işlemi tamamlanamadı.',
+			'onboarding.reward.points' => '⭐️ +50 puan',
+			'onboarding.reward.title' => 'Harika İş 🎉',
+			'onboarding.reward.subtitle' => 'Seni bekleyen 200+ ders daha var!',
+			'onboarding.reward.progressLabel' => 'İlk adım tamamlandı!',
+			'onboarding.reward.featureAlphabetTitle' => 'Tüm Alfabe & Sayılar',
+			'onboarding.reward.featureAlphabetSubtitle' => '200+ interaktif ders',
+			'onboarding.reward.featureVoiceTitle' => 'Sesli Telaffuz',
+			'onboarding.reward.featureVoiceSubtitle' => 'Her kelimede ses desteği',
+			'onboarding.reward.featureQuizTitle' => 'Oyunlu Mini Testler',
+			'onboarding.reward.featureQuizSubtitle' => 'Eğlenerek Öğren',
+			'onboarding.reward.continueButton' => 'Keşfetmeye Devam Et',
+			'onboarding.spellTitle' => 'Gördüğün kelimeyi hecele!',
+			'onboarding.spellSubtitle' => 'LION kelimesini heceleyebilir misin?',
+			'onboarding.spellSuccessTitle' => 'Harika! Bu bir LION',
+			'onboarding.spellSuccessSubtitle' => 'duymak için dokun',
+			'pressBackAgainToExit' => 'Çıkmak için tekrar geri tuşuna basın',
+			'splash.initial.hello' => 'Merhaba',
+			'splash.initial.title' => 'ÇOCUKLAR İÇİN OYUN İNGİLİZCE',
+			'splash.screen1.title' => 'İngilizce Öğrenmek\nOyun Gibi Hissettirebilir',
+			'splash.screen1.description' => 'Kısa, eğlenceli dersler çocukların baskı olmadan yeni kelimeler öğrenmesine yardımcı olur.',
+			'splash.screen2.title' => 'Dinleyin, Tekrarlayın ve\nYeni Kelimeler Öğrenin',
+			'splash.screen2.description' => 'Basit sesli aktiviteler çocukların adım adım telaffuz pratiği yapmasına yardımcı olur.',
+			'splash.screen3.title' => 'Güven Oluşturun,\nTek Kelimeyle',
+			'splash.screen3.description' => 'Basit aktiviteler, arkadaşça rehberlik ve güvenli bir öğrenme akışıyla genç öğrenciler için tasarlandı.',
+			'splash.screen3.option1' => '️🛡️ Çocuklar İçin Güvenli',
+			'splash.screen3.option2' => '🌱 Baskı olmadan öğrenme',
+			'splash.screen3.option3' => '⭐️ Genç öğrenciler için tasarlandı',
+			'auth.google' => 'Google ile devam et',
+			'auth.facebook' => 'Facebook\'la devam et',
+			'auth.apple' => 'Apple\'la devam et',
+			'auth.guest' => 'Misafir olarak devam et',
+			'auth.signInFailed' => ({required Object error}) => 'Oturum açma başarısız oldu: ${error}',
+			'home.seeAll' => 'Tümünü Gör',
+			'home.more' => 'Daha',
+			'home.online' => 'Çevrimiçi',
+			'home.offline' => 'Çevrimdışı',
+			'home.placeholders.fashionDesigner' => 'Moda Tasarımcısı',
+			'home.placeholders.comedian' => 'Komedyen',
+			'home.placeholders.influencer' => 'Etkileyici',
+			'home.placeholders.teacher' => 'Öğretmen',
+			'home.placeholders.friend' => 'Arkadaş',
 			'home.greeting' => 'Merhaba,',
 			'home.guest' => 'Misafir',
 			'home.thisWeek' => 'Bu Hafta',
@@ -806,91 +937,108 @@ extension on TranslationsTr {
 			'home.startLearning' => 'Öğrenmeye başla',
 			'home.resumeActivity' => ({required Object activity}) => '${activity} ile devam et',
 			'home.continueButton' => 'Devam Et',
-			'notifications.today' => 'Today',
-			'notifications.yesterday' => 'Yesterday',
-			'notifications.weekAgo' => ({required Object week}) => '${week} week ago',
-			'notifications.monthAgo' => ({required Object month}) => '${month} month ago',
-			'notifications.yearAgo' => ({required Object year}) => '${year} year ago',
-			'notifications.noNotifications' => 'No notifications yet.',
-			'notifications.noNotificationsSubtitle' => 'Don\'t forget to check again when you receive the notification.',
-			'notifications.allDeleted' => 'All notifications have been successfully deleted',
-			'editProfile.aboutMe' => 'About Me',
-			'editProfile.aboutMeHint' => 'Write something about yourself',
-			'editProfile.fullName' => 'Full Name',
-			'editProfile.gender' => 'Gender',
-			'editProfile.male' => 'Male',
-			'editProfile.female' => 'Female',
-			'editProfile.dontWantToMention' => 'I don\'t want to mention it.',
-			'editProfile.country' => 'Country',
-			'editProfile.languagePreferences' => 'Language Preferences',
-			'editProfile.selectLanguage' => 'Add your preferred language',
-			'editProfile.saved' => 'Saved',
-			'editProfile.changesSaved' => 'Changes have been saved.',
-			'settingsSupport.title' => 'Settings & Support',
-			'settingsSupport.premiumTitle' => 'Unlimited access \nto all features',
-			'settingsSupport.getPremium' => 'Get Premium',
-			'settingsSupport.settingsHub' => 'Settings Hub',
-			'settingsSupport.shareTheApp' => 'Share the App',
-			'settingsSupport.rateUs' => 'Rate Us',
-			'settingsSupport.version' => 'Version',
-			'settingsSupport.notifications' => 'Notifications',
-			'settingsSupport.accountManagement' => 'Account Management',
-			'settingsSupport.deleteAccount' => 'Delete Account',
-			'settingsSupport.logOut' => 'Log Out',
-			'settingsSupport.logOutTitle' => 'You are about to log out',
-			'settingsSupport.logOutSubtitle' => 'See you again soon! \n We’ll miss you.',
-			'deleteAccount.title' => 'Delete Account',
-			'deleteAccount.warning' => 'Are you sure you want to delete your account?',
-			'deleteAccount.description' => 'This action cannot be undone, and all your history and data will be permanently deleted.',
-			'deleteAccount.deleteFailed' => ({required Object error}) => 'Account deletion failed: ${error}',
-			'deleteAccount.steps.step1.title' => 'We don\'t want you to go, but we understand.',
-			'deleteAccount.steps.step1.subtitle' => 'Can you tell us why you want to leave so we can improve the ChatFace experience?',
-			'deleteAccount.steps.step1.option1' => 'I didn\'t find the AI characters realistic.',
-			'deleteAccount.steps.step1.option2' => 'I am experiencing technical issues with video chats.',
-			'deleteAccount.steps.step1.option3' => 'Subscription prices are above my expectations.',
-			'deleteAccount.steps.step1.option4' => 'I couldn\'t find the type of characters I was looking for.',
-			'deleteAccount.steps.step1.option5' => 'I just wanted to try it out for a short time.',
-			'deleteAccount.steps.step1.option6' => 'Other',
-			'deleteAccount.steps.step2.title' => 'If you delete your account, you will say goodbye to:',
-			'deleteAccount.steps.step2.subtitle1' => 'Deep Connections and Memory:',
-			'deleteAccount.steps.step2.subtitle1Desc' => 'The characters you chat with will completely forget their past with you, your shared secrets, and your personal habits.',
-			'deleteAccount.steps.step2.subtitle2' => 'Video Call Privilege:',
-			'deleteAccount.steps.step2.subtitle2Desc' => 'You will lose the right to communicate face-to-face with your AI partners, who are available to you anytime.',
-			'deleteAccount.steps.step2.subtitle3' => 'Advanced Algorithm:',
-			'deleteAccount.steps.step2.subtitle3Desc' => 'Your \'Just for You\' character matches tailored to your preferences will be reset.',
-			'deleteAccount.steps.step2.subtitle4' => 'Profile Data:',
-			'deleteAccount.steps.step2.subtitle4Desc' => 'Your earned achievements, unlocked special characters, and chat history will be irreversibly deleted.',
-			'deleteAccount.steps.step3.title' => 'We have a special offer for you before you go!',
-			'deleteAccount.steps.step3.description' => 'Maybe you just need a little more time or a better deal. Instead of deleting your account, would you consider these?',
-			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'Keeping you with us is valuable. ${offer} on your next subscription! Would you like to continue with this offer?',
-			'deleteAccount.steps.step3.description1Offer' => 'We\'ve applied a 50% discount',
-			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'We have given you ${offer} credits so you can see new characters you haven\'t discovered yet.',
-			'deleteAccount.steps.step3.description2Offer' => '3 free video calls',
-			'deleteAccount.steps.step3.acceptOffer' => 'Accept 50% Discount Offer',
-			'deleteAccount.steps.step3.deleteMyAccount' => 'Delete My Account',
-			'cancel' => 'Cancel',
-			'delete' => 'Delete',
-			'premium' => 'Premium',
-			'profileEdit' => 'Profile Edit',
-			'settings' => 'Settings',
-			'undo' => 'Undo',
-			'successfully' => 'Successfully',
-			'save' => 'Save',
-			'languageOptions.english' => 'English',
-			'languageOptions.chinese' => 'Chinese',
-			'languageOptions.german' => 'German',
-			'languageOptions.italian' => 'Italian',
-			'languageOptions.french' => 'French',
-			'languageOptions.japanese' => 'Japanese',
-			'languageOptions.spanish' => 'Spanish',
-			'languageOptions.russian' => 'Russian',
-			'languageOptions.turkish' => 'Turkish',
-			'languageOptions.korean' => 'Korean',
-			'languageOptions.hindi' => 'Hindi',
-			'languageOptions.portuguese' => 'Portuguese',
-			'common.tryAgain' => 'Try Again',
-			'common.retry' => 'Retry',
-			'common.close' => 'Close',
+			'home.weekDays.0' => 'PZT',
+			'home.weekDays.1' => 'SAL',
+			'home.weekDays.2' => 'ÇAR',
+			'home.weekDays.3' => 'PER',
+			'home.weekDays.4' => 'CUM',
+			'home.weekDays.5' => 'CMT',
+			'home.weekDays.6' => 'PAZ',
+			'home.lessons.alphabet' => 'Alfabe',
+			'home.lessons.numbers' => 'Sayılar',
+			'home.lessons.colors' => 'Renkler',
+			'home.lessons.shapes' => 'Şekiller',
+			'home.lessons.fruit' => 'Meyveler',
+			'home.lessons.vegetables' => 'Sebzeler',
+			'home.lessons.sports' => 'Spor',
+			'home.lessons.fillIn' => 'Boşluk Doldur',
+			'home.lessons.fillInBlank' => 'Boşluk Doldur',
+			'home.lessonProgress' => ({required Object current, required Object total}) => 'Ders ${current} / ${total}',
+			'notifications.today' => 'Bugün',
+			'notifications.yesterday' => 'Dün',
+			'notifications.weekAgo' => ({required Object week}) => '${week} hafta önce',
+			'notifications.monthAgo' => ({required Object month}) => '${month} ay önce',
+			'notifications.yearAgo' => ({required Object year}) => '${year} yıl önce',
+			'notifications.noNotifications' => 'Henüz bildirim yok.',
+			'notifications.noNotificationsSubtitle' => 'Bildirim geldiğinde tekrar kontrol etmeyi unutmayın.',
+			'notifications.allDeleted' => 'Tüm bildirimler başarıyla silindi',
+			'editProfile.aboutMe' => 'Hakkımda',
+			'editProfile.aboutMeHint' => 'Kendin hakkında bir şeyler yaz',
+			'editProfile.fullName' => 'Ad Soyad',
+			'editProfile.gender' => 'Cinsiyet',
+			'editProfile.male' => 'Erkek',
+			'editProfile.female' => 'Dişi',
+			'editProfile.dontWantToMention' => 'Bundan bahsetmek istemiyorum.',
+			'editProfile.country' => 'Ülke',
+			'editProfile.languagePreferences' => 'Dil Tercihleri',
+			'editProfile.selectLanguage' => 'Tercih ettiğiniz dili ekleyin',
+			'editProfile.saved' => 'Kaydedildi',
+			'editProfile.changesSaved' => 'Değişiklikler kaydedildi.',
+			'settingsSupport.title' => 'Ayarlar ve Destek',
+			'settingsSupport.premiumTitle' => 'Tüm özelliklere sınırsız erişim\n',
+			'settingsSupport.getPremium' => 'Premium\'u Alın',
+			'settingsSupport.settingsHub' => 'Ayarlar Merkezi',
+			'settingsSupport.shareTheApp' => 'Uygulamayı Paylaş',
+			'settingsSupport.rateUs' => 'Bizi Değerlendirin',
+			'settingsSupport.version' => 'Sürüm',
+			'settingsSupport.notifications' => 'Bildirimler',
+			'settingsSupport.accountManagement' => 'Hesap Yönetimi',
+			'settingsSupport.deleteAccount' => 'Hesabı Sil',
+			'settingsSupport.logOut' => 'Oturumu Kapat',
+			'settingsSupport.logOutTitle' => 'Oturumu kapatmak üzeresiniz',
+			'settingsSupport.logOutSubtitle' => 'Yakında tekrar görüşürüz!\nSeni özleyeceğiz.',
+			'deleteAccount.title' => 'Hesabı Sil',
+			'deleteAccount.warning' => 'Hesabınızı silmek istediğinizden emin misiniz?',
+			'deleteAccount.description' => 'Bu işlem geri alınamaz ve tüm geçmişiniz ve verileriniz kalıcı olarak silinecektir.',
+			'deleteAccount.deleteFailed' => ({required Object error}) => 'Hesap silme işlemi başarısız oldu: ${error}',
+			'deleteAccount.steps.step1.title' => 'Gitmeni istemiyoruz ama anlıyoruz.',
+			'deleteAccount.steps.step1.subtitle' => 'ChatFace deneyimini geliştirebilmemiz için neden ayrılmak istediğinizi bize söyleyebilir misiniz?',
+			'deleteAccount.steps.step1.option1' => 'AI karakterlerini gerçekçi bulmadım.',
+			'deleteAccount.steps.step1.option2' => 'Görüntülü sohbetlerde teknik sorunlar yaşıyorum.',
+			'deleteAccount.steps.step1.option3' => 'Abonelik fiyatları beklentilerimin üzerinde.',
+			'deleteAccount.steps.step1.option4' => 'Aradığım türde karakterleri bulamadım.',
+			'deleteAccount.steps.step1.option5' => 'Kısa bir süreliğine denemek istedim.',
+			'deleteAccount.steps.step1.option6' => 'Diğer',
+			'deleteAccount.steps.step2.title' => 'Hesabınızı silerseniz, şunlara elveda diyeceksiniz:',
+			'deleteAccount.steps.step2.subtitle1' => 'Derin Bağlantılar ve Bellek:',
+			'deleteAccount.steps.step2.subtitle1Desc' => 'Sohbet ettiğiniz karakterler sizinle olan geçmişlerini, ortak sırlarınızı, kişisel alışkanlıklarınızı tamamen unutacak.',
+			'deleteAccount.steps.step2.subtitle2' => 'Görüntülü Görüşme Ayrıcalığı:',
+			'deleteAccount.steps.step2.subtitle2Desc' => 'İstediğiniz zaman ulaşabildiğiniz yapay zeka ortaklarınızla yüz yüze iletişim kurma hakkınızı kaybedeceksiniz.',
+			'deleteAccount.steps.step2.subtitle3' => 'Gelişmiş Algoritma:',
+			'deleteAccount.steps.step2.subtitle3Desc' => 'Tercihlerinize göre uyarlanmış \'Sadece Size Özel\' karakter eşleşmeleriniz sıfırlanacaktır.',
+			'deleteAccount.steps.step2.subtitle4' => 'Profil Verileri:',
+			'deleteAccount.steps.step2.subtitle4Desc' => 'Kazandığınız başarılarınız, kilidi açılmış özel karakterleriniz ve sohbet geçmişiniz geri dönüşü olmayacak şekilde silinecektir.',
+			'deleteAccount.steps.step3.title' => 'Gitmeden önce size özel bir teklifimiz var!',
+			'deleteAccount.steps.step3.description' => 'Belki biraz daha zamana ya da daha iyi bir anlaşmaya ihtiyacın var. Hesabınızı silmek yerine bunları düşünür müsünüz?',
+			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'Sizi aramızda tutmak çok değerli. Bir sonraki aboneliğinizde ${offer}! Bu teklife devam etmek ister misiniz?',
+			'deleteAccount.steps.step3.description1Offer' => '%50 indirim uyguladık',
+			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'Henüz keşfetmediğiniz yeni karakterleri görebilmeniz için size ${offer} kredi verdik.',
+			'deleteAccount.steps.step3.description2Offer' => '3 ücretsiz görüntülü görüşme',
+			'deleteAccount.steps.step3.acceptOffer' => '%50 İndirim Teklifini Kabul Edin',
+			'deleteAccount.steps.step3.deleteMyAccount' => 'Hesabımı Sil',
+			'cancel' => 'İptal etmek',
+			'delete' => 'Silmek',
+			'premium' => 'prim',
+			'profileEdit' => 'Profil Düzenleme',
+			'settings' => 'Ayarlar',
+			'undo' => 'Geri al',
+			'successfully' => 'Başarıyla',
+			'save' => 'Kaydetmek',
+			'languageOptions.english' => 'İngilizce',
+			'languageOptions.chinese' => 'Çince',
+			'languageOptions.german' => 'Almanca',
+			'languageOptions.italian' => 'İtalyan',
+			'languageOptions.french' => 'Fransızca',
+			'languageOptions.japanese' => 'Japonca',
+			'languageOptions.spanish' => 'İspanyol',
+			'languageOptions.russian' => 'Rusça',
+			'languageOptions.turkish' => 'Türkçe',
+			'languageOptions.korean' => 'Korece',
+			'languageOptions.hindi' => 'Hintçe',
+			'languageOptions.portuguese' => 'Portekizce',
+			'common.tryAgain' => 'Tekrar deneyin',
+			'common.retry' => 'Yeniden dene',
+			'common.close' => 'Kapalı',
 			'profileScreen.title' => 'Profil',
 			'profileScreen.greeting' => 'Merhaba,',
 			'profileScreen.account' => 'HESAP',
@@ -927,6 +1075,22 @@ extension on TranslationsTr {
 			'premiumAccess.openFailed' => 'Premium ekranı açılamadı. Lütfen tekrar dene.',
 			'parentalGate.barrierLabel' => 'Ebeveyn kontrolü',
 			'parentalGate.question' => 'İşlemin sonucu kaçtır?',
+			'parentalGate.submit' => 'Gönder',
+			'activities.flashCards' => 'Flaş Kartlar',
+			'activities.drawing' => 'Çizim',
+			'activities.flipCards' => 'Kart Çevirme',
+			'activities.trueFalse' => 'Doğru Yanlış',
+			'activities.spelling' => 'Heceleme',
+			'resultSheet.correct' => 'Doğru',
+			'resultSheet.tryAgain' => 'Tekrar Dene',
+			'resultSheet.correctBody' => 'Harika gidiyorsun!',
+			'resultSheet.tryAgainBody' => 'Bir kez daha dene!',
+			'trueFalseView.isThisLetter' => ({required Object letter}) => 'Bu harf ${letter} mi?',
+			'trueFalseView.isThisNumber' => ({required Object number}) => 'Bu sayı ${number} mi?',
+			'trueFalseView.isThisShape' => ({required Object shape}) => 'Bu şekil ${shape} mi?',
+			'trueFalseView.isThisSubject' => ({required Object subject}) => 'Bu ${subject} mi?',
+			'trueFalseView.trueText' => 'Doğru',
+			'trueFalseView.falseText' => 'Yanlış',
 			_ => null,
 		};
 	}

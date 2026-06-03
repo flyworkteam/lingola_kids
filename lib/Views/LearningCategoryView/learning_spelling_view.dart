@@ -1,12 +1,15 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_result_overlay.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/primary_letter_button.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/models/learning_item_model.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/widgets/learning_item_asset.dart';
+import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/progress_reporting.dart';
 import 'package:lingola_kids/utils/voice_playback.dart';
@@ -136,14 +139,14 @@ class _LearningSpellingViewState extends State<LearningSpellingView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'Spelling',
+          title: context.t.activities.spelling,
           trailing: IconButton(
             onPressed: () => playLessonItemVoice(
               context,
               lessonSlug: widget.lessonSlug,
               itemKey: lessonItemKey(target.name),
             ),
-            icon: const Icon(Icons.volume_up_outlined, color: Colors.black),
+            icon: SvgPicture.asset(AppIcons.onboardingSound),
           ),
           child: Column(
             children: [

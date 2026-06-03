@@ -20,22 +20,15 @@ class LessonCard extends StatelessWidget {
         : const Color(0xFFFF972C);
 
     return Material(
-      color: Colors.white,
+      color: lesson.isPrimary
+          ? buttonColor.withValues(alpha: 0.2)
+          : Colors.white,
       borderRadius: BorderRadius.circular(15),
       child: InkWell(
         borderRadius: BorderRadius.circular(15),
         onTap: onTap,
         child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.06),
-                blurRadius: 9,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 11, 10, 11),
             child: Column(

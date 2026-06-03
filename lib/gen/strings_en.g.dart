@@ -122,6 +122,9 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	late final TranslationsEditProfileScreenEn editProfileScreen = TranslationsEditProfileScreenEn._(_root);
 	late final TranslationsPremiumAccessEn premiumAccess = TranslationsPremiumAccessEn._(_root);
 	late final TranslationsParentalGateEn parentalGate = TranslationsParentalGateEn._(_root);
+	late final TranslationsActivitiesEn activities = TranslationsActivitiesEn._(_root);
+	late final TranslationsResultSheetEn resultSheet = TranslationsResultSheetEn._(_root);
+	late final TranslationsTrueFalseViewEn trueFalseView = TranslationsTrueFalseViewEn._(_root);
 }
 
 // Path: termOfService
@@ -178,6 +181,21 @@ class TranslationsOnboardingEn {
 
 	/// en: 'I Understand'
 	String get iUnderstand => 'I Understand';
+
+	late final TranslationsOnboardingLoginEn login = TranslationsOnboardingLoginEn._(_root);
+	late final TranslationsOnboardingRewardEn reward = TranslationsOnboardingRewardEn._(_root);
+
+	/// en: 'Spell the word you see!'
+	String get spellTitle => 'Spell the word you see!';
+
+	/// en: 'Can you spell "LION"?'
+	String get spellSubtitle => 'Can you spell "LION"?';
+
+	/// en: 'Nice! It's LION'
+	String get spellSuccessTitle => 'Nice! It\'s LION';
+
+	/// en: 'tap to hear'
+	String get spellSuccessSubtitle => 'tap to hear';
 }
 
 // Path: splash
@@ -262,6 +280,20 @@ class TranslationsHomeEn {
 
 	/// en: 'Continue'
 	String get continueButton => 'Continue';
+
+	List<String> get weekDays => [
+		'MON',
+		'TUE',
+		'WED',
+		'THU',
+		'FRI',
+		'SAT',
+		'SUN',
+	];
+	late final TranslationsHomeLessonsEn lessons = TranslationsHomeLessonsEn._(_root);
+
+	/// en: 'Lesson $current of $total'
+	String lessonProgress({required Object current, required Object total}) => 'Lesson ${current} of ${total}';
 }
 
 // Path: notifications
@@ -618,6 +650,81 @@ class TranslationsParentalGateEn {
 
 	/// en: 'What is the result of this operation?'
 	String get question => 'What is the result of this operation?';
+
+	/// en: 'Submit'
+	String get submit => 'Submit';
+}
+
+// Path: activities
+class TranslationsActivitiesEn {
+	TranslationsActivitiesEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Flash Cards'
+	String get flashCards => 'Flash Cards';
+
+	/// en: 'Drawing'
+	String get drawing => 'Drawing';
+
+	/// en: 'Flip Cards'
+	String get flipCards => 'Flip Cards';
+
+	/// en: 'True False'
+	String get trueFalse => 'True False';
+
+	/// en: 'Spelling'
+	String get spelling => 'Spelling';
+}
+
+// Path: resultSheet
+class TranslationsResultSheetEn {
+	TranslationsResultSheetEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Correct'
+	String get correct => 'Correct';
+
+	/// en: 'Try Again'
+	String get tryAgain => 'Try Again';
+
+	/// en: 'You are doing great!'
+	String get correctBody => 'You are doing great!';
+
+	/// en: 'Try one more time!'
+	String get tryAgainBody => 'Try one more time!';
+}
+
+// Path: trueFalseView
+class TranslationsTrueFalseViewEn {
+	TranslationsTrueFalseViewEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Is this letter ${letter}?'
+	String isThisLetter({required Object letter}) => 'Is this letter ${letter}?';
+
+	/// en: 'Is this number ${number}?'
+	String isThisNumber({required Object number}) => 'Is this number ${number}?';
+
+	/// en: 'Is this shape ${shape}?'
+	String isThisShape({required Object shape}) => 'Is this shape ${shape}?';
+
+	/// en: 'Is this ${subject}?'
+	String isThisSubject({required Object subject}) => 'Is this ${subject}?';
+
+	/// en: 'True'
+	String get trueText => 'True';
+
+	/// en: 'False'
+	String get falseText => 'False';
 }
 
 // Path: termOfService.privacyPolicy
@@ -992,6 +1099,66 @@ class TranslationsOnboardingKFinalEn {
 	String get subtitle => 'Enjoy communication with any character';
 }
 
+// Path: onboarding.login
+class TranslationsOnboardingLoginEn {
+	TranslationsOnboardingLoginEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Continue Your Learning Journey'
+	String get title => 'Continue Your\nLearning Journey';
+
+	/// en: 'Save progress, unlock lessons, and keep learning across devices.'
+	String get subtitle => 'Save progress, unlock lessons, and\nkeep learning across devices.';
+
+	/// en: 'Sign-in could not be completed.'
+	String get failed => 'Sign-in could not be completed.';
+}
+
+// Path: onboarding.reward
+class TranslationsOnboardingRewardEn {
+	TranslationsOnboardingRewardEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: '⭐️ +50 points'
+	String get points => '⭐️ +50 points';
+
+	/// en: 'Great Work 🎉'
+	String get title => 'Great Work 🎉';
+
+	/// en: '200+ more lessons are waiting for you!'
+	String get subtitle => '200+ more lessons are waiting for you!';
+
+	/// en: 'First step completed!'
+	String get progressLabel => 'First step completed!';
+
+	/// en: 'Full Alphabet & Numbers'
+	String get featureAlphabetTitle => 'Full Alphabet & Numbers';
+
+	/// en: '200+ interactive lessons'
+	String get featureAlphabetSubtitle => '200+ interactive lessons';
+
+	/// en: 'Voice Pronunciation'
+	String get featureVoiceTitle => 'Voice Pronunciation';
+
+	/// en: 'Audio support for every word'
+	String get featureVoiceSubtitle => 'Audio support for every word';
+
+	/// en: 'Playful Mini Quizzes'
+	String get featureQuizTitle => 'Playful Mini Quizzes';
+
+	/// en: 'Learn while having fun'
+	String get featureQuizSubtitle => 'Learn while having fun';
+
+	/// en: 'Keep Exploring'
+	String get continueButton => 'Keep Exploring';
+}
+
 // Path: splash.initial
 class TranslationsSplashInitialEn {
 	TranslationsSplashInitialEn._(this._root);
@@ -1083,6 +1250,42 @@ class TranslationsHomePlaceholdersEn {
 
 	/// en: 'Friend'
 	String get friend => 'Friend';
+}
+
+// Path: home.lessons
+class TranslationsHomeLessonsEn {
+	TranslationsHomeLessonsEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Alphabet'
+	String get alphabet => 'Alphabet';
+
+	/// en: 'Numbers'
+	String get numbers => 'Numbers';
+
+	/// en: 'Colors'
+	String get colors => 'Colors';
+
+	/// en: 'Shapes'
+	String get shapes => 'Shapes';
+
+	/// en: 'Fruit'
+	String get fruit => 'Fruit';
+
+	/// en: 'Vegetables'
+	String get vegetables => 'Vegetables';
+
+	/// en: 'Sports'
+	String get sports => 'Sports';
+
+	/// en: 'Fill in'
+	String get fillIn => 'Fill in';
+
+	/// en: 'Fill in the Blank'
+	String get fillInBlank => 'Fill in the Blank';
 }
 
 // Path: deleteAccount.steps
@@ -1322,6 +1525,24 @@ extension on Translations {
 			'onboarding.kFinal.subtitle' => 'Enjoy communication with any character',
 			'onboarding.allowAccess' => 'Allow Access',
 			'onboarding.iUnderstand' => 'I Understand',
+			'onboarding.login.title' => 'Continue Your\nLearning Journey',
+			'onboarding.login.subtitle' => 'Save progress, unlock lessons, and\nkeep learning across devices.',
+			'onboarding.login.failed' => 'Sign-in could not be completed.',
+			'onboarding.reward.points' => '⭐️ +50 points',
+			'onboarding.reward.title' => 'Great Work 🎉',
+			'onboarding.reward.subtitle' => '200+ more lessons are waiting for you!',
+			'onboarding.reward.progressLabel' => 'First step completed!',
+			'onboarding.reward.featureAlphabetTitle' => 'Full Alphabet & Numbers',
+			'onboarding.reward.featureAlphabetSubtitle' => '200+ interactive lessons',
+			'onboarding.reward.featureVoiceTitle' => 'Voice Pronunciation',
+			'onboarding.reward.featureVoiceSubtitle' => 'Audio support for every word',
+			'onboarding.reward.featureQuizTitle' => 'Playful Mini Quizzes',
+			'onboarding.reward.featureQuizSubtitle' => 'Learn while having fun',
+			'onboarding.reward.continueButton' => 'Keep Exploring',
+			'onboarding.spellTitle' => 'Spell the word you see!',
+			'onboarding.spellSubtitle' => 'Can you spell "LION"?',
+			'onboarding.spellSuccessTitle' => 'Nice! It\'s LION',
+			'onboarding.spellSuccessSubtitle' => 'tap to hear',
 			'pressBackAgainToExit' => 'Press back again to exit',
 			'splash.initial.hello' => 'Hello',
 			'splash.initial.title' => 'PLAYFUL ENGLISH FOR KIDS',
@@ -1356,6 +1577,23 @@ extension on Translations {
 			'home.startLearning' => 'Start learning',
 			'home.resumeActivity' => ({required Object activity}) => 'Resume ${activity}',
 			'home.continueButton' => 'Continue',
+			'home.weekDays.0' => 'MON',
+			'home.weekDays.1' => 'TUE',
+			'home.weekDays.2' => 'WED',
+			'home.weekDays.3' => 'THU',
+			'home.weekDays.4' => 'FRI',
+			'home.weekDays.5' => 'SAT',
+			'home.weekDays.6' => 'SUN',
+			'home.lessons.alphabet' => 'Alphabet',
+			'home.lessons.numbers' => 'Numbers',
+			'home.lessons.colors' => 'Colors',
+			'home.lessons.shapes' => 'Shapes',
+			'home.lessons.fruit' => 'Fruit',
+			'home.lessons.vegetables' => 'Vegetables',
+			'home.lessons.sports' => 'Sports',
+			'home.lessons.fillIn' => 'Fill in',
+			'home.lessons.fillInBlank' => 'Fill in the Blank',
+			'home.lessonProgress' => ({required Object current, required Object total}) => 'Lesson ${current} of ${total}',
 			'notifications.today' => 'Today',
 			'notifications.yesterday' => 'Yesterday',
 			'notifications.weekAgo' => ({required Object week}) => '${week} week ago',
@@ -1477,6 +1715,22 @@ extension on Translations {
 			'premiumAccess.openFailed' => 'Premium screen could not be opened. Please try again.',
 			'parentalGate.barrierLabel' => 'Parental gate',
 			'parentalGate.question' => 'What is the result of this operation?',
+			'parentalGate.submit' => 'Submit',
+			'activities.flashCards' => 'Flash Cards',
+			'activities.drawing' => 'Drawing',
+			'activities.flipCards' => 'Flip Cards',
+			'activities.trueFalse' => 'True False',
+			'activities.spelling' => 'Spelling',
+			'resultSheet.correct' => 'Correct',
+			'resultSheet.tryAgain' => 'Try Again',
+			'resultSheet.correctBody' => 'You are doing great!',
+			'resultSheet.tryAgainBody' => 'Try one more time!',
+			'trueFalseView.isThisLetter' => ({required Object letter}) => 'Is this letter ${letter}?',
+			'trueFalseView.isThisNumber' => ({required Object number}) => 'Is this number ${number}?',
+			'trueFalseView.isThisShape' => ({required Object shape}) => 'Is this shape ${shape}?',
+			'trueFalseView.isThisSubject' => ({required Object subject}) => 'Is this ${subject}?',
+			'trueFalseView.trueText' => 'True',
+			'trueFalseView.falseText' => 'False',
 			_ => null,
 		};
 	}

@@ -1,3 +1,4 @@
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_result_overlay.dart';
 import 'package:lingola_kids/Views/ShapesView/shape_data.dart';
 import 'package:lingola_kids/Views/ShapesView/widgets/shape_asset.dart';
+import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/progress_reporting.dart';
 import 'package:lingola_kids/utils/voice_playback.dart';
@@ -123,20 +125,20 @@ class _ShapeTrueFalseViewState extends State<ShapeTrueFalseView> {
     return Stack(
       children: [
         AlphabetPageShell(
-          title: 'True False',
+          title: context.t.activities.trueFalse,
           trailing: IconButton(
             onPressed: () => playLessonItemVoice(
               context,
               lessonSlug: 'shapes',
               itemKey: lessonItemKey(askedShape.name),
             ),
-            icon: const Icon(Icons.volume_up_outlined, color: Colors.black),
+            icon: SvgPicture.asset(AppIcons.onboardingSound),
           ),
           child: Column(
             children: [
               const SizedBox(height: 28),
               Text(
-                'Is this shape ${askedShape.name}?',
+                context.t.trueFalseView.isThisShape(shape: askedShape.name),
                 textAlign: TextAlign.center,
                 style: GoogleFonts.dynaPuff(
                   fontSize: 20,
@@ -162,7 +164,7 @@ class _ShapeTrueFalseViewState extends State<ShapeTrueFalseView> {
                 children: [
                   Expanded(
                     child: _AnswerButton(
-                      label: 'False',
+                      label: context.t.trueFalseView.falseText,
                       assetPath: null,
                       icon: Icons.close_rounded,
                       color: AlphabetPageShell.red,
@@ -172,7 +174,7 @@ class _ShapeTrueFalseViewState extends State<ShapeTrueFalseView> {
                   const SizedBox(width: 36),
                   Expanded(
                     child: _AnswerButton(
-                      label: 'True',
+                      label: context.t.trueFalseView.trueText,
                       assetPath: null,
                       icon: Icons.check_rounded,
                       color: AlphabetPageShell.green,
