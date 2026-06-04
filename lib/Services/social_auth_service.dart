@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:crypto/crypto.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lingola_kids/utils/print.dart';
@@ -20,14 +21,25 @@ class SocialAuthService {
   static final _appleRedirectUri = Uri.parse(
     'https://lingola-kids.firebaseapp.com/__/auth/handler',
   );
+  bool _isGoogleInitialized = false;
+
+  String? get _googleClientId {
+    return switch (defaultTargetPlatform) {
+      TargetPlatform.iOS || TargetPlatform.macOS => _googleIosClientId,
+      _ => null,
+    };
+  }
 
   Future<String?> signInWithGoogle() async {
     try {
       final googleSignIn = GoogleSignIn.instance;
-      await googleSignIn.initialize(
-        clientId: _googleIosClientId,
-        serverClientId: _googleServerClientId,
-      );
+      if (!_isGoogleInitialized) {
+        await googleSignIn.initialize(
+          clientId: _googleClientId,
+          serverClientId: _googleServerClientId,
+        );
+        _isGoogleInitialized = true;
+      }
 
       final GoogleSignInAccount account = await googleSignIn.authenticate();
 

@@ -92,9 +92,15 @@ class AppIcons {
   static const String avatar4 = 'assets/avatar4.svg';
   static const String avatar5 = 'assets/avatar5.svg';
   static const String avatar6 = 'assets/avatar6.svg';
+
+  static const String accountSettings = 'assets/accountSettings.svg';
+  static const String handlePremium = 'assets/handlePremium.svg';
+  static const String language = 'assets/changeLanguage.svg';
   static const String timeSpend = 'assets/timeSpend.svg';
+  static const String rateUs = 'assets/rateUs.svg';
   static const String privacyPolicy = 'assets/privacyPolicy.svg';
-  static const String termsOfUse = 'assets/termsOfUse.png';
+  static const String termsOfUse = 'assets/termsOfUse.svg';
+  static const String logOut = 'assets/logOut.svg';
 
   static const String falseIcon = 'assets/falseIcon.svg';
   static const String trueIcon = 'assets/trueIcon.svg';
@@ -320,10 +326,19 @@ class AppLearningAssets {
   static const String letterY = 'assets/letterY.svg';
   static const String letterZ = 'assets/letterZ.svg';
 
-  static const String colorBlue = 'assets/colorBlue.svg';
+  static const String colorLightBlue = 'assets/colorLightBlue.svg';
   static const String colorOrange = 'assets/colorOrange.svg';
   static const String colorWhite = 'assets/colorWhite.svg';
   static const String colorYellow = 'assets/colorYellow.svg';
+  static const String colorBlue = 'assets/colorBlue.svg';
+  static const String colorGreen = 'assets/colorGreen.svg';
+  static const String colorRed = 'assets/colorRed.svg';
+  static const String colorPurple = 'assets/colorPurple.svg';
+  static const String colorDarkGray = 'assets/colorDarkGray.svg';
+  static const String colorPink = 'assets/colorPink.svg';
+  static const String colorBrown = 'assets/colorBrown.svg';
+  static const String colorMintGreen = 'assets/colorMintGreen.svg';
+
   static const String colour = 'assets/colour.svg';
 
   static const String crown = 'assets/crown.svg';
@@ -347,16 +362,16 @@ class AppLearningAssets {
 class AppFlags {
   AppFlags._();
 
-  static const String english = 'assets/icons/flags/english_icon.svg';
-  static const String french = 'assets/icons/flags/french_icon.svg';
-  static const String german = 'assets/icons/flags/german_icon.svg';
-  static const String italian = 'assets/icons/flags/italian_icon.svg';
-  static const String japanese = 'assets/icons/flags/japanese_icon.svg';
-  static const String korean = 'assets/icons/flags/korean_icon.svg';
-  static const String hindi = 'assets/icons/flags/hindi_icon.svg';
-  static const String portugal = 'assets/icons/flags/portugal.svg';
-  static const String russian = 'assets/icons/flags/russian_icon.svg';
-  static const String spanish = 'assets/icons/flags/spanish_icon.svg';
-  static const String turkey = 'assets/icons/flags/turkey.svg';
-  static const String china = 'assets/icons/flags/china_icon.svg';
+  static const String english = 'assets/english_icon.svg';
+  static const String french = 'assets/french_icon.svg';
+  static const String german = 'assets/german_icon.svg';
+  static const String italian = 'assets/italian_icon.svg';
+  static const String japanese = 'assets/japanese_icon.svg';
+  static const String korean = 'assets/korean_icon.svg';
+  static const String hindi = 'assets/hindi_icon.svg';
+  static const String portugal = 'assets/portugal.svg';
+  static const String russian = 'assets/russian_icon.svg';
+  static const String spanish = 'assets/spanish_icon.svg';
+  static const String turkey = 'assets/turkey.svg';
+  static const String china = 'assets/china_icon.svg';
 }

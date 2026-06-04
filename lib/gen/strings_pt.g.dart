@@ -85,15 +85,15 @@ class _TranslationsTermOfServicePt implements TranslationsTermOfServiceEn {
 	final TranslationsPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get text1 => 'Ao se inscrever no ChatFace, você concorda com nossos ';
+	@override String get text1 => 'Ao se inscrever no Lingola Kids, você concorda com nossos ';
 	@override String get link1 => 'Termos de Serviço';
 	@override String get text2 => '. Saiba como processamos seus dados em nossa ';
 	@override String get link2 => 'Política de Privacidade';
 	@override String get text3 => ' e na ';
 	@override String get link3 => 'Política de Cookies';
 	@override String get text4 => '';
-	@override late final _TranslationsTermOfServicePrivacyPolicyPt privacyPolicy = _TranslationsTermOfServicePrivacyPolicyPt._(_root);
 	@override late final _TranslationsTermOfServiceTermsOfServicePt termsOfService = _TranslationsTermOfServiceTermsOfServicePt._(_root);
+	@override late final _TranslationsTermOfServicePrivacyPolicyPt privacyPolicy = _TranslationsTermOfServicePrivacyPolicyPt._(_root);
 	@override late final _TranslationsTermOfServiceCookiePolicyPt cookiePolicy = _TranslationsTermOfServiceCookiePolicyPt._(_root);
 }
 
@@ -313,6 +313,8 @@ class _TranslationsProfileScreenPt implements TranslationsProfileScreenEn {
 	@override String get rateComingSoon => 'Avaliação estará disponível em breve.';
 	@override String get privacyPolicy => 'Política de Privacidade';
 	@override String get privacySubtitle => 'Proteger dados';
+	@override String get changeLanguage => 'Idioma';
+	@override String get changeLanguageSubtitle => 'Alterar Idioma da App';
 	@override String get termsOfService => 'Termos de Serviço';
 	@override String get termsSubtitle => 'Dados e termos';
 	@override String get logout => 'Sair';
@@ -403,37 +405,6 @@ class _TranslationsTrueFalseViewPt implements TranslationsTrueFalseViewEn {
 	@override String get falseText => 'Falso';
 }
 
-// Path: termOfService.privacyPolicy
-class _TranslationsTermOfServicePrivacyPolicyPt implements TranslationsTermOfServicePrivacyPolicyEn {
-	_TranslationsTermOfServicePrivacyPolicyPt._(this._root);
-
-	final TranslationsPt _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Política de Privacidade';
-	@override String get lastUpdated => 'Última atualização: 2026';
-	@override String get intro => 'O ChatFace adota a privacidade do usuário e a segurança de dados como princípio central. Todos os seus dados pessoais são processados de acordo com as regulamentações de proteção de dados vigentes.';
-	@override String get section1Title => '1. INFORMAÇÕES COLETADAS';
-	@override String get section1sub1Title => '1.1 Dados Fornecidos pelo Usuário';
-	@override String get section1sub1Body => '• Nome, apelido, idade, gênero, país, informações de perfil e fotos de perfil opcionais que você escolher enviar.\n• Endereço de e-mail para registro, assinatura e suporte.\n• Preferências de interação, idioma selecionado, escolha de personagem de IA, mensagens, transcrições de voz, imagens de chat enviadas, feedback e mensagens de suporte.';
-	@override String get section1sub2Title => '1.2 Dados Coletados Automaticamente';
-	@override String get section1sub2Body => 'O ChatFace pode coletar tipo de dispositivo, sistema operacional, país/cidade aproximado derivado de sinais de rede, dados de uso do app, registros de falhas, status de assinatura e dados de entrega de notificações. Localização precisa não é solicitada durante o onboarding e não é necessária para chat de IA ou chamadas.';
-	@override String get section2Title => '2. FINALIDADES DO PROCESSAMENTO DE DADOS';
-	@override String get section2Body => 'Seus dados pessoais são processados para operar o aplicativo, autenticar sua conta, fornecer recursos de chat de IA e chamadas de voz/vídeo, personalizar interações de idioma e personagem, processar assinaturas, enviar notificações quando ativadas, prevenir abusos, revisar denúncias de usuários, melhorar a confiabilidade e cumprir obrigações legais. Seus dados pessoais não são vendidos nem utilizados para publicidade.';
-	@override String get section3Title => '3. PROCESSAMENTO DE IA E COMPARTILHAMENTO COM TERCEIROS';
-	@override String get section3Body => 'Para fornecer uma melhor experiência de IA, o ChatFace utiliza provedores terceirizados com segurança, incluindo a OpenAI, para processar texto, voz, imagens e dados relacionados que você envia. Mensagens, transcrições de voz, idioma selecionado, contexto de perfil, histórico de conversa e imagens de chat enviadas podem ser enviadas para a OpenAI para gerar respostas de IA e resultados de moderação. Áudio de fala pode ser enviado para a OpenAI ou Deepgram para transcrição, dependendo da configuração do servidor. Texto do assistente pode ser enviado para a ElevenLabs para criar áudio falado. Imagens de perfil e de chat enviadas, áudio gerado e mídias relacionadas podem ser armazenadas no BunnyCDN. A OneSignal pode processar identificadores de notificação e dados de entrega. RevenueCat e as lojas de aplicativos processam dados de assinatura e direitos. Dados de login social podem ser processados pela Apple, Google ou Facebook quando você usar esses métodos de login. Esses provedores são usados apenas para executar o serviço solicitado e espera-se que protejam os dados conforme seus próprios termos de segurança e privacidade. Os dados da API da OpenAI não são usados para treinar modelos da OpenAI, de acordo com as políticas da API da OpenAI.';
-	@override String get section4Title => '4. FOTOS, CÂMERA, MICROFONE E DADOS FACIAIS';
-	@override String get section4Body => 'O acesso à câmera é usado para a visualização local da videochamada quando você inicia uma chamada de vídeo. A visualização da câmera permanece em seu dispositivo. O ChatFace não coleta dados biométricos faciais, modelos faciais, geometria facial, identificadores de reconhecimento facial ou perfis faciais. Fotos de perfil e imagens de chat enviadas podem conter rostos se você optar por enviá-las; essas imagens são armazenadas e processadas apenas como fotos fornecidas pelo usuário para exibição de perfil ou contexto de conversa de IA. O acesso ao microfone é usado para conversas por voz e vídeo para que sua fala possa ser transcrita e respondida pela IA.';
-	@override String get section5Title => '5. RETENÇÃO E EXCLUSÃO DE DADOS';
-	@override String get section5Body => 'Dados de perfil da conta, fotos de perfil, histórico de conversas, imagens de chat enviadas, denúncias, configurações de notificação e registros de direitos de assinatura são mantidos enquanto sua conta estiver ativa ou conforme necessário por motivos legais, de segurança, prevenção de fraudes e suporte. Quando você excluir sua conta, os registros pessoais da conta são excluídos dos sistemas do ChatFace, sujeitos à retenção legal e operacional necessária. Mídia armazenada em infraestrutura de terceiros é removida ou tornada inacessível de acordo com nosso processo de exclusão e a política de retenção do provedor.';
-	@override String get section6Title => '6. DIREITOS DO USUÁRIO';
-	@override String get section6Body => 'De acordo com as leis de privacidade aplicáveis, você pode solicitar acesso, correção, exclusão, objeção, limitação ou portabilidade dos seus dados pessoais. Você pode entrar em contato conosco para essas solicitações.';
-	@override String get section7Title => '7. PRIVACIDADE DE CRIANÇAS';
-	@override String get section7Body => 'O ChatFace não é destinado a usuários com menos de 18 anos. Não coletamos conscientemente dados dessa faixa etária; tais contas serão encerradas e os dados excluídos quando detectados.';
-	@override String get section8Title => '8. CONTATO';
-	@override String get section8Body => 'Para consultas sobre privacidade: support@fly-work.com';
-}
-
 // Path: termOfService.termsOfService
 class _TranslationsTermOfServiceTermsOfServicePt implements TranslationsTermOfServiceTermsOfServiceEn {
 	_TranslationsTermOfServiceTermsOfServicePt._(this._root);
@@ -441,26 +412,45 @@ class _TranslationsTermOfServiceTermsOfServicePt implements TranslationsTermOfSe
 	final TranslationsPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Termos de Serviço';
+	@override String get title => 'Lingola Kids – Termos de Serviço';
 	@override String get lastUpdated => 'Última atualização: 2026';
-	@override String get intro => 'Estes Termos regem o uso do aplicativo móvel ChatFace. Ao usar o aplicativo, você concorda com estes Termos.';
-	@override String get disclaimer => 'Isenção de responsabilidade: o ChatFace é um aplicativo de interação por vídeo com IA. Não fornece serviços de consultoria jurídica, acadêmica, médica ou profissional.';
-	@override String get section1Title => '1. ABRANGÊNCIA DO SERVIÇO';
-	@override String get section1Body => 'O ChatFace fornece experiências de interação por vídeo com IA:\n\n• Chamadas de vídeo com IA e conversas.\n• Preferências de interação personalizadas.\n• Acesso ao histórico de interações e registros.\n\nOs serviços não constituem opiniões oficiais ou garantias de orientação profissional.';
-	@override String get section2Title => '2. CONDIÇÕES DE USO';
-	@override String get section2Body => '• Você deve ter pelo menos 18 anos (acesso proibido para menores de 18 anos).\n• Você deve fornecer informações de conta precisas.\n• O aplicativo deve ser usado apenas para fins legais e pessoais.';
-	@override String get section3Title => '3. USOS PROIBIDOS';
-	@override String get section3Body => 'Falsificação de identidade, discurso de ódio, colocar em risco a segurança de crianças, tentativas de violação de segurança e manipulação de sistemas de IA são estritamente proibidos.';
-	@override String get section4Title => '4. ASSINATURAS E PAGAMENTOS';
-	@override String get section4Body => 'Recursos premium estão sujeitos às políticas da App Store e Google Play. Cancelamentos de assinatura e reembolsos são gerenciados via configurações das respectivas lojas.';
-	@override String get section5Title => '5. ISENÇÃO DE RESPONSABILIDADE DO CONTEÚDO';
-	@override String get section5Body => 'O conteúdo é gerado por IA e não substitui aconselhamento profissional. O ChatFace não garante precisão ou adequação a um propósito específico.';
-	@override String get section6Title => '6. PROPRIEDADE INTELECTUAL';
-	@override String get section6Body => 'Todo o conteúdo, incluindo design, software e algoritmos, pertence ao ChatFace. Reprodução ou redistribuição não autorizada é proibida.';
-	@override String get section7Title => '7. LEI APLICÁVEL';
-	@override String get section7Body => 'Estes Termos são regidos pelas leis da República da Turquia. Os Tribunais Centrais de Istambul terão jurisdição sobre disputas.';
-	@override String get section8Title => '8. CONTATO';
-	@override String get section8Body => '📩 Para consultas: support@fly-work.com';
+	@override String get intro => 'Estes Termos de Serviço ("Termos") regulam as regras e condições de uso do aplicativo móvel Lingola Kids ("Aplicativo"). Ao baixar ou usar o Aplicativo, você concorda com estes Termos.';
+	@override String get section1Title => '1. Escopo do Serviço e Isenção de Responsabilidade';
+	@override String get section1Body => 'O Lingola Kids oferece flashcards visuais, de áudio e jogos educativos para ajudar as crianças a aprender o vocabulário em inglês. O Aplicativo não é uma instituição educacional oficial; não garante sucesso em exames, diplomas acadêmicos ou certificados de proficiência linguística.';
+	@override String get section2Title => '2. Condições de Uso';
+	@override String get section2Body => '- O Aplicativo é projetado para crianças a partir de 4 anos.\n- Recomenda-se estritamente que usuários com menos de 13/18 anos usem o aplicativo sob a supervisão dos pais ou responsáveis legais.\n- Como pai ou responsável legal, ao permitir que seu filho use o aplicativo, você concorda com estes termos em nome dele.\n- É estritamente proibido copiar, vender, fazer engenharia reversa ou distribuição em massa não autorizada do conteúdo do aplicativo.';
+	@override String get section3Title => '3. Serviços Premium e Pagos';
+	@override String get section3Body => 'Os pagamentos por serviços pagos, como pacotes de vocabulário premium e uso sem anúncios, são processados através da App Store ou Google Play. Cancelamentos para assinaturas de renovação automática são gerenciados pelo usuário/pai através de sua conta da loja. O Lingola Kids não fornece reembolsos diretamente.';
+	@override String get section4Title => '4. Dados de Aprendizagem e Privacidade';
+	@override String get section4Body => 'Os dados de aprendizagem (palavras aprendidas, atividades concluídas) processados para melhorar a experiência do usuário e o acompanhamento do progresso são protegidos pela nossa Política de Privacidade. Qualquer pessoa que use o Aplicativo é considerada como tendo aceito a Política de Privacidade.';
+	@override String get section5Title => '5. Legislação Aplicável';
+	@override String get section5Body => 'Estes Termos são regidos pelas leis da República da Turquia. Os Tribunais Centrais e Escritórios de Execução de Istambul terão jurisdição sobre quaisquer disputas.';
+	@override String get section6Title => '6. Contato';
+	@override String get section6Body => '📩 Para quaisquer dúvidas, solicitações ou avisos, você pode nos contatar em: support@fly-work.com';
+}
+
+// Path: termOfService.privacyPolicy
+class _TranslationsTermOfServicePrivacyPolicyPt implements TranslationsTermOfServicePrivacyPolicyEn {
+	_TranslationsTermOfServicePrivacyPolicyPt._(this._root);
+
+	final TranslationsPt _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Lingola Kids – Política de Privacidade';
+	@override String get lastUpdated => 'Última atualização: 2026';
+	@override String get intro => 'Bem-vindo ao Lingola Kids. Proteger a privacidade das crianças e famílias é nossa maior prioridade. Esta Política de Privacidade descreve quais informações são coletadas, usadas, protegidas e como os usuários podem gerenciar seus dados.';
+	@override String get section1Title => '1. Informações Coletadas';
+	@override String get section1Body => '- Fornecidas pelo Usuário/Pai: Endereço de e-mail (se uma conta for criada), nome de usuário, preferências de idioma e aprendizagem, palavras salvas.\n- Coletadas Automaticamente: Modelo do dispositivo, sistema operacional, endereço IP, versão do aplicativo, registros de falhas e dados de progresso de aprendizagem.';
+	@override String get section2Title => '2. Privacidade Infantil (Importante)';
+	@override String get section2Body => 'O Lingola Kids é projetado para crianças a partir de 4 anos. A proteção de dados infantis é nosso foco central:\n- Não coletamos dados pessoais desnecessários ou confidenciais de crianças.\n- Crianças não têm permissão ou são solicitadas a compartilhar detalhes de contato publicamente.\n- Perfis comportamentais ou publicidade personalizada direcionada a crianças é estritamente proibida.\n- Pais ou responsáveis legais podem solicitar a revisão ou exclusão dos dados de seus filhos a qualquer momento.';
+	@override String get section3Title => '3. Finalidades de Processamento e Compartilhamento de Dados';
+	@override String get section3Body => 'Seus dados são processados para rastrear o progresso da aprendizagem, personalizar o conteúdo do vocabulário e corrigir problemas técnicos. Informações pessoais nunca são vendidas ou compartilhadas com terceiros para uso comercial. Provedores de serviços confiáveis (armazenamento em nuvem, análises, etc.) processam os dados estritamente sob suas obrigações de confidencialidade.';
+	@override String get section4Title => '4. Direitos do Usuário e dos Pais';
+	@override String get section4Body => 'Usuários e pais têm o direito de acessar, retificar, solicitar a exclusão da conta e exigir a remoção permanente de dados. Você pode exercer esses direitos entrando em contato com nossa equipe de suporte.';
+	@override String get section5Title => '5. Segurança e Retenção de Dados';
+	@override String get section5Body => 'Os dados são protegidos por meio de criptografia e controles de acesso padrão da indústria. As estatísticas de aprendizado são armazenadas enquanto a conta permanece ativa para garantir a continuidade e são eliminadas após a exclusão da conta.';
+	@override String get section6Title => '6. Contato';
+	@override String get section6Body => '📩 Para dúvidas sobre privacidade, remoção de dados ou solicitações dos pais, contate-nos em: support@fly-work.com';
 }
 
 // Path: termOfService.cookiePolicy
@@ -472,20 +462,20 @@ class _TranslationsTermOfServiceCookiePolicyPt implements TranslationsTermOfServ
 	// Translations
 	@override String get title => 'Política de Cookies';
 	@override String get lastUpdated => 'Última atualização: 2026';
-	@override String get intro => 'Bem-vindo ao ChatFace. Tecnologias auxiliares digitais são usadas para tornar sua experiência de videochamada com IA mais fluida, segura e personalizada.';
+	@override String get intro => 'Bem-vindo ao ChatFace. Tecnologias de ajuda digital são usadas para tornar sua experiência de videochamada com IA mais fluida, segura e personalizada.';
 	@override String get important => 'Esta política explica o que são cookies, seus propósitos e como você pode gerenciar suas preferências.';
 	@override String get section1Title => '1. O QUE SÃO COOKIES?';
-	@override String get section1Body => 'Cookies são pequenos arquivos de dados colocados no seu dispositivo. Eles não identificam você diretamente; funcionam como notas digitais que lembram:\n• Configurações de chamada e idioma\n• Preferências de sessão e desempenho.';
+	@override String get section1Body => 'Cookies são pequenos arquivos de dados colocados no seu dispositivo. Eles não identificam você diretamente; agem como notas digitais que lembram:\n• Configurações de chamada e idioma\n• Preferências de sessão e desempenho.';
 	@override String get section2Title => '2. QUAIS TECNOLOGIAS USAMOS?';
-	@override String get section2Body => 'Tecnologias Estritamente Necessárias\nNecessárias para gerenciamento de sessão e controles de segurança. O aplicativo pode não funcionar corretamente sem esses componentes.\n\nDesempenho e Análise\nAjuda-nos a entender quais histórias são lidas e quais áreas precisam de melhoria. Os dados são avaliados de forma anônima.\n\nPersonalização\nLembra configurações como preferência de idioma e nível de leitura para fornecer uma experiência adaptada à criança.';
+	@override String get section2Body => 'Tecnologias Estritamente Necessárias\nNecessárias para gerenciamento de sessão e controles de segurança. O aplicativo pode não funcionar corretamente sem esses componentes.\n\nDesempenho e Análises\nAjuda-nos a entender quais histórias são lidas e quais áreas precisam de melhoria. Os dados são avaliados anonimamente.\n\nPersonalização\nLembra configurações como preferência de idioma e nível de leitura para fornecer uma experiência sob medida para a criança.';
 	@override String get section3Title => '3. POR QUE USAMOS ESSAS TECNOLOGIAS?';
-	@override String get section3Body => '• Para garantir que o aplicativo funcione de forma segura e fluida.\n• Para tornar a experiência de leitura mais fluida.\n• Para lembrar configurações repetitivas.\n• Para identificar recursos para desenvolvimento futuro.';
+	@override String get section3Body => '• Para garantir que o aplicativo funcione com segurança e fluidez.\n• Para tornar a experiência de leitura mais fluida.\n• Para lembrar configurações repetitivas.\n• Para identificar recursos para desenvolvimento futuro.';
 	@override String get section4Title => '4. TECNOLOGIAS DE TERCEIROS';
-	@override String get section4Body => 'Algumas tecnologias podem ser fornecidas por prestadores de serviços técnicos e estão sujeitas às suas próprias políticas. O ChatFace prioriza a segurança dos dados nessas parcerias.';
-	@override String get section5Title => '5. CONTROLE E GESTÃO DE COOKIES';
-	@override String get section5Body => 'Usuários podem limitar essas tecnologias via configurações do dispositivo ou do aplicativo. Desativar tecnologias essenciais pode causar problemas, como a incapacidade de iniciar videochamadas.';
-	@override String get section6Title => '6. CONTATO';
-	@override String get section6Body => '📩 Para consultas: support@fly-work.com';
+	@override String get section4Body => 'Algumas tecnologias podem ser fornecidas por provedores de serviços técnicos e estão sujeitas a suas próprias políticas. O ChatFace prioriza a segurança de dados nessas parcerias.';
+	@override String get section5Title => '5. CONTROLE E GERENCIAMENTO DE COOKIES';
+	@override String get section5Body => 'Os usuários podem limitar essas tecnologias por meio das configurações do dispositivo ou do aplicativo. A desativação de tecnologias essenciais pode causar problemas, como a impossibilidade de iniciar videochamadas.';
+	@override String get section6Title => '6. Contato';
+	@override String get section6Body => '📩 Para dúvidas: support@fly-work.com';
 }
 
 // Path: onboarding.step5
@@ -780,71 +770,59 @@ extension on TranslationsPt {
 			'skip' => 'Pular',
 			'profile' => 'Perfil',
 			'kContinue' => 'Continuar',
-			'termOfService.text1' => 'Ao se inscrever no ChatFace, você concorda com nossos ',
+			'termOfService.text1' => 'Ao se inscrever no Lingola Kids, você concorda com nossos ',
 			'termOfService.link1' => 'Termos de Serviço',
 			'termOfService.text2' => '. Saiba como processamos seus dados em nossa ',
 			'termOfService.link2' => 'Política de Privacidade',
 			'termOfService.text3' => ' e na ',
 			'termOfService.link3' => 'Política de Cookies',
 			'termOfService.text4' => '',
-			'termOfService.privacyPolicy.title' => 'Política de Privacidade',
-			'termOfService.privacyPolicy.lastUpdated' => 'Última atualização: 2026',
-			'termOfService.privacyPolicy.intro' => 'O ChatFace adota a privacidade do usuário e a segurança de dados como princípio central. Todos os seus dados pessoais são processados de acordo com as regulamentações de proteção de dados vigentes.',
-			'termOfService.privacyPolicy.section1Title' => '1. INFORMAÇÕES COLETADAS',
-			'termOfService.privacyPolicy.section1sub1Title' => '1.1 Dados Fornecidos pelo Usuário',
-			'termOfService.privacyPolicy.section1sub1Body' => '• Nome, apelido, idade, gênero, país, informações de perfil e fotos de perfil opcionais que você escolher enviar.\n• Endereço de e-mail para registro, assinatura e suporte.\n• Preferências de interação, idioma selecionado, escolha de personagem de IA, mensagens, transcrições de voz, imagens de chat enviadas, feedback e mensagens de suporte.',
-			'termOfService.privacyPolicy.section1sub2Title' => '1.2 Dados Coletados Automaticamente',
-			'termOfService.privacyPolicy.section1sub2Body' => 'O ChatFace pode coletar tipo de dispositivo, sistema operacional, país/cidade aproximado derivado de sinais de rede, dados de uso do app, registros de falhas, status de assinatura e dados de entrega de notificações. Localização precisa não é solicitada durante o onboarding e não é necessária para chat de IA ou chamadas.',
-			'termOfService.privacyPolicy.section2Title' => '2. FINALIDADES DO PROCESSAMENTO DE DADOS',
-			'termOfService.privacyPolicy.section2Body' => 'Seus dados pessoais são processados para operar o aplicativo, autenticar sua conta, fornecer recursos de chat de IA e chamadas de voz/vídeo, personalizar interações de idioma e personagem, processar assinaturas, enviar notificações quando ativadas, prevenir abusos, revisar denúncias de usuários, melhorar a confiabilidade e cumprir obrigações legais. Seus dados pessoais não são vendidos nem utilizados para publicidade.',
-			'termOfService.privacyPolicy.section3Title' => '3. PROCESSAMENTO DE IA E COMPARTILHAMENTO COM TERCEIROS',
-			'termOfService.privacyPolicy.section3Body' => 'Para fornecer uma melhor experiência de IA, o ChatFace utiliza provedores terceirizados com segurança, incluindo a OpenAI, para processar texto, voz, imagens e dados relacionados que você envia. Mensagens, transcrições de voz, idioma selecionado, contexto de perfil, histórico de conversa e imagens de chat enviadas podem ser enviadas para a OpenAI para gerar respostas de IA e resultados de moderação. Áudio de fala pode ser enviado para a OpenAI ou Deepgram para transcrição, dependendo da configuração do servidor. Texto do assistente pode ser enviado para a ElevenLabs para criar áudio falado. Imagens de perfil e de chat enviadas, áudio gerado e mídias relacionadas podem ser armazenadas no BunnyCDN. A OneSignal pode processar identificadores de notificação e dados de entrega. RevenueCat e as lojas de aplicativos processam dados de assinatura e direitos. Dados de login social podem ser processados pela Apple, Google ou Facebook quando você usar esses métodos de login. Esses provedores são usados apenas para executar o serviço solicitado e espera-se que protejam os dados conforme seus próprios termos de segurança e privacidade. Os dados da API da OpenAI não são usados para treinar modelos da OpenAI, de acordo com as políticas da API da OpenAI.',
-			'termOfService.privacyPolicy.section4Title' => '4. FOTOS, CÂMERA, MICROFONE E DADOS FACIAIS',
-			'termOfService.privacyPolicy.section4Body' => 'O acesso à câmera é usado para a visualização local da videochamada quando você inicia uma chamada de vídeo. A visualização da câmera permanece em seu dispositivo. O ChatFace não coleta dados biométricos faciais, modelos faciais, geometria facial, identificadores de reconhecimento facial ou perfis faciais. Fotos de perfil e imagens de chat enviadas podem conter rostos se você optar por enviá-las; essas imagens são armazenadas e processadas apenas como fotos fornecidas pelo usuário para exibição de perfil ou contexto de conversa de IA. O acesso ao microfone é usado para conversas por voz e vídeo para que sua fala possa ser transcrita e respondida pela IA.',
-			'termOfService.privacyPolicy.section5Title' => '5. RETENÇÃO E EXCLUSÃO DE DADOS',
-			'termOfService.privacyPolicy.section5Body' => 'Dados de perfil da conta, fotos de perfil, histórico de conversas, imagens de chat enviadas, denúncias, configurações de notificação e registros de direitos de assinatura são mantidos enquanto sua conta estiver ativa ou conforme necessário por motivos legais, de segurança, prevenção de fraudes e suporte. Quando você excluir sua conta, os registros pessoais da conta são excluídos dos sistemas do ChatFace, sujeitos à retenção legal e operacional necessária. Mídia armazenada em infraestrutura de terceiros é removida ou tornada inacessível de acordo com nosso processo de exclusão e a política de retenção do provedor.',
-			'termOfService.privacyPolicy.section6Title' => '6. DIREITOS DO USUÁRIO',
-			'termOfService.privacyPolicy.section6Body' => 'De acordo com as leis de privacidade aplicáveis, você pode solicitar acesso, correção, exclusão, objeção, limitação ou portabilidade dos seus dados pessoais. Você pode entrar em contato conosco para essas solicitações.',
-			'termOfService.privacyPolicy.section7Title' => '7. PRIVACIDADE DE CRIANÇAS',
-			'termOfService.privacyPolicy.section7Body' => 'O ChatFace não é destinado a usuários com menos de 18 anos. Não coletamos conscientemente dados dessa faixa etária; tais contas serão encerradas e os dados excluídos quando detectados.',
-			'termOfService.privacyPolicy.section8Title' => '8. CONTATO',
-			'termOfService.privacyPolicy.section8Body' => 'Para consultas sobre privacidade: support@fly-work.com',
-			'termOfService.termsOfService.title' => 'Termos de Serviço',
+			'termOfService.termsOfService.title' => 'Lingola Kids – Termos de Serviço',
 			'termOfService.termsOfService.lastUpdated' => 'Última atualização: 2026',
-			'termOfService.termsOfService.intro' => 'Estes Termos regem o uso do aplicativo móvel ChatFace. Ao usar o aplicativo, você concorda com estes Termos.',
-			'termOfService.termsOfService.disclaimer' => 'Isenção de responsabilidade: o ChatFace é um aplicativo de interação por vídeo com IA. Não fornece serviços de consultoria jurídica, acadêmica, médica ou profissional.',
-			'termOfService.termsOfService.section1Title' => '1. ABRANGÊNCIA DO SERVIÇO',
-			'termOfService.termsOfService.section1Body' => 'O ChatFace fornece experiências de interação por vídeo com IA:\n\n• Chamadas de vídeo com IA e conversas.\n• Preferências de interação personalizadas.\n• Acesso ao histórico de interações e registros.\n\nOs serviços não constituem opiniões oficiais ou garantias de orientação profissional.',
-			'termOfService.termsOfService.section2Title' => '2. CONDIÇÕES DE USO',
-			'termOfService.termsOfService.section2Body' => '• Você deve ter pelo menos 18 anos (acesso proibido para menores de 18 anos).\n• Você deve fornecer informações de conta precisas.\n• O aplicativo deve ser usado apenas para fins legais e pessoais.',
-			'termOfService.termsOfService.section3Title' => '3. USOS PROIBIDOS',
-			'termOfService.termsOfService.section3Body' => 'Falsificação de identidade, discurso de ódio, colocar em risco a segurança de crianças, tentativas de violação de segurança e manipulação de sistemas de IA são estritamente proibidos.',
-			'termOfService.termsOfService.section4Title' => '4. ASSINATURAS E PAGAMENTOS',
-			'termOfService.termsOfService.section4Body' => 'Recursos premium estão sujeitos às políticas da App Store e Google Play. Cancelamentos de assinatura e reembolsos são gerenciados via configurações das respectivas lojas.',
-			'termOfService.termsOfService.section5Title' => '5. ISENÇÃO DE RESPONSABILIDADE DO CONTEÚDO',
-			'termOfService.termsOfService.section5Body' => 'O conteúdo é gerado por IA e não substitui aconselhamento profissional. O ChatFace não garante precisão ou adequação a um propósito específico.',
-			'termOfService.termsOfService.section6Title' => '6. PROPRIEDADE INTELECTUAL',
-			'termOfService.termsOfService.section6Body' => 'Todo o conteúdo, incluindo design, software e algoritmos, pertence ao ChatFace. Reprodução ou redistribuição não autorizada é proibida.',
-			'termOfService.termsOfService.section7Title' => '7. LEI APLICÁVEL',
-			'termOfService.termsOfService.section7Body' => 'Estes Termos são regidos pelas leis da República da Turquia. Os Tribunais Centrais de Istambul terão jurisdição sobre disputas.',
-			'termOfService.termsOfService.section8Title' => '8. CONTATO',
-			'termOfService.termsOfService.section8Body' => '📩 Para consultas: support@fly-work.com',
+			'termOfService.termsOfService.intro' => 'Estes Termos de Serviço ("Termos") regulam as regras e condições de uso do aplicativo móvel Lingola Kids ("Aplicativo"). Ao baixar ou usar o Aplicativo, você concorda com estes Termos.',
+			'termOfService.termsOfService.section1Title' => '1. Escopo do Serviço e Isenção de Responsabilidade',
+			'termOfService.termsOfService.section1Body' => 'O Lingola Kids oferece flashcards visuais, de áudio e jogos educativos para ajudar as crianças a aprender o vocabulário em inglês. O Aplicativo não é uma instituição educacional oficial; não garante sucesso em exames, diplomas acadêmicos ou certificados de proficiência linguística.',
+			'termOfService.termsOfService.section2Title' => '2. Condições de Uso',
+			'termOfService.termsOfService.section2Body' => '- O Aplicativo é projetado para crianças a partir de 4 anos.\n- Recomenda-se estritamente que usuários com menos de 13/18 anos usem o aplicativo sob a supervisão dos pais ou responsáveis legais.\n- Como pai ou responsável legal, ao permitir que seu filho use o aplicativo, você concorda com estes termos em nome dele.\n- É estritamente proibido copiar, vender, fazer engenharia reversa ou distribuição em massa não autorizada do conteúdo do aplicativo.',
+			'termOfService.termsOfService.section3Title' => '3. Serviços Premium e Pagos',
+			'termOfService.termsOfService.section3Body' => 'Os pagamentos por serviços pagos, como pacotes de vocabulário premium e uso sem anúncios, são processados através da App Store ou Google Play. Cancelamentos para assinaturas de renovação automática são gerenciados pelo usuário/pai através de sua conta da loja. O Lingola Kids não fornece reembolsos diretamente.',
+			'termOfService.termsOfService.section4Title' => '4. Dados de Aprendizagem e Privacidade',
+			'termOfService.termsOfService.section4Body' => 'Os dados de aprendizagem (palavras aprendidas, atividades concluídas) processados para melhorar a experiência do usuário e o acompanhamento do progresso são protegidos pela nossa Política de Privacidade. Qualquer pessoa que use o Aplicativo é considerada como tendo aceito a Política de Privacidade.',
+			'termOfService.termsOfService.section5Title' => '5. Legislação Aplicável',
+			'termOfService.termsOfService.section5Body' => 'Estes Termos são regidos pelas leis da República da Turquia. Os Tribunais Centrais e Escritórios de Execução de Istambul terão jurisdição sobre quaisquer disputas.',
+			'termOfService.termsOfService.section6Title' => '6. Contato',
+			'termOfService.termsOfService.section6Body' => '📩 Para quaisquer dúvidas, solicitações ou avisos, você pode nos contatar em: support@fly-work.com',
+			'termOfService.privacyPolicy.title' => 'Lingola Kids – Política de Privacidade',
+			'termOfService.privacyPolicy.lastUpdated' => 'Última atualização: 2026',
+			'termOfService.privacyPolicy.intro' => 'Bem-vindo ao Lingola Kids. Proteger a privacidade das crianças e famílias é nossa maior prioridade. Esta Política de Privacidade descreve quais informações são coletadas, usadas, protegidas e como os usuários podem gerenciar seus dados.',
+			'termOfService.privacyPolicy.section1Title' => '1. Informações Coletadas',
+			'termOfService.privacyPolicy.section1Body' => '- Fornecidas pelo Usuário/Pai: Endereço de e-mail (se uma conta for criada), nome de usuário, preferências de idioma e aprendizagem, palavras salvas.\n- Coletadas Automaticamente: Modelo do dispositivo, sistema operacional, endereço IP, versão do aplicativo, registros de falhas e dados de progresso de aprendizagem.',
+			'termOfService.privacyPolicy.section2Title' => '2. Privacidade Infantil (Importante)',
+			'termOfService.privacyPolicy.section2Body' => 'O Lingola Kids é projetado para crianças a partir de 4 anos. A proteção de dados infantis é nosso foco central:\n- Não coletamos dados pessoais desnecessários ou confidenciais de crianças.\n- Crianças não têm permissão ou são solicitadas a compartilhar detalhes de contato publicamente.\n- Perfis comportamentais ou publicidade personalizada direcionada a crianças é estritamente proibida.\n- Pais ou responsáveis legais podem solicitar a revisão ou exclusão dos dados de seus filhos a qualquer momento.',
+			'termOfService.privacyPolicy.section3Title' => '3. Finalidades de Processamento e Compartilhamento de Dados',
+			'termOfService.privacyPolicy.section3Body' => 'Seus dados são processados para rastrear o progresso da aprendizagem, personalizar o conteúdo do vocabulário e corrigir problemas técnicos. Informações pessoais nunca são vendidas ou compartilhadas com terceiros para uso comercial. Provedores de serviços confiáveis (armazenamento em nuvem, análises, etc.) processam os dados estritamente sob suas obrigações de confidencialidade.',
+			'termOfService.privacyPolicy.section4Title' => '4. Direitos do Usuário e dos Pais',
+			'termOfService.privacyPolicy.section4Body' => 'Usuários e pais têm o direito de acessar, retificar, solicitar a exclusão da conta e exigir a remoção permanente de dados. Você pode exercer esses direitos entrando em contato com nossa equipe de suporte.',
+			'termOfService.privacyPolicy.section5Title' => '5. Segurança e Retenção de Dados',
+			'termOfService.privacyPolicy.section5Body' => 'Os dados são protegidos por meio de criptografia e controles de acesso padrão da indústria. As estatísticas de aprendizado são armazenadas enquanto a conta permanece ativa para garantir a continuidade e são eliminadas após a exclusão da conta.',
+			'termOfService.privacyPolicy.section6Title' => '6. Contato',
+			'termOfService.privacyPolicy.section6Body' => '📩 Para dúvidas sobre privacidade, remoção de dados ou solicitações dos pais, contate-nos em: support@fly-work.com',
 			'termOfService.cookiePolicy.title' => 'Política de Cookies',
 			'termOfService.cookiePolicy.lastUpdated' => 'Última atualização: 2026',
-			'termOfService.cookiePolicy.intro' => 'Bem-vindo ao ChatFace. Tecnologias auxiliares digitais são usadas para tornar sua experiência de videochamada com IA mais fluida, segura e personalizada.',
+			'termOfService.cookiePolicy.intro' => 'Bem-vindo ao ChatFace. Tecnologias de ajuda digital são usadas para tornar sua experiência de videochamada com IA mais fluida, segura e personalizada.',
 			'termOfService.cookiePolicy.important' => 'Esta política explica o que são cookies, seus propósitos e como você pode gerenciar suas preferências.',
 			'termOfService.cookiePolicy.section1Title' => '1. O QUE SÃO COOKIES?',
-			'termOfService.cookiePolicy.section1Body' => 'Cookies são pequenos arquivos de dados colocados no seu dispositivo. Eles não identificam você diretamente; funcionam como notas digitais que lembram:\n• Configurações de chamada e idioma\n• Preferências de sessão e desempenho.',
+			'termOfService.cookiePolicy.section1Body' => 'Cookies são pequenos arquivos de dados colocados no seu dispositivo. Eles não identificam você diretamente; agem como notas digitais que lembram:\n• Configurações de chamada e idioma\n• Preferências de sessão e desempenho.',
 			'termOfService.cookiePolicy.section2Title' => '2. QUAIS TECNOLOGIAS USAMOS?',
-			'termOfService.cookiePolicy.section2Body' => 'Tecnologias Estritamente Necessárias\nNecessárias para gerenciamento de sessão e controles de segurança. O aplicativo pode não funcionar corretamente sem esses componentes.\n\nDesempenho e Análise\nAjuda-nos a entender quais histórias são lidas e quais áreas precisam de melhoria. Os dados são avaliados de forma anônima.\n\nPersonalização\nLembra configurações como preferência de idioma e nível de leitura para fornecer uma experiência adaptada à criança.',
+			'termOfService.cookiePolicy.section2Body' => 'Tecnologias Estritamente Necessárias\nNecessárias para gerenciamento de sessão e controles de segurança. O aplicativo pode não funcionar corretamente sem esses componentes.\n\nDesempenho e Análises\nAjuda-nos a entender quais histórias são lidas e quais áreas precisam de melhoria. Os dados são avaliados anonimamente.\n\nPersonalização\nLembra configurações como preferência de idioma e nível de leitura para fornecer uma experiência sob medida para a criança.',
 			'termOfService.cookiePolicy.section3Title' => '3. POR QUE USAMOS ESSAS TECNOLOGIAS?',
-			'termOfService.cookiePolicy.section3Body' => '• Para garantir que o aplicativo funcione de forma segura e fluida.\n• Para tornar a experiência de leitura mais fluida.\n• Para lembrar configurações repetitivas.\n• Para identificar recursos para desenvolvimento futuro.',
+			'termOfService.cookiePolicy.section3Body' => '• Para garantir que o aplicativo funcione com segurança e fluidez.\n• Para tornar a experiência de leitura mais fluida.\n• Para lembrar configurações repetitivas.\n• Para identificar recursos para desenvolvimento futuro.',
 			'termOfService.cookiePolicy.section4Title' => '4. TECNOLOGIAS DE TERCEIROS',
-			'termOfService.cookiePolicy.section4Body' => 'Algumas tecnologias podem ser fornecidas por prestadores de serviços técnicos e estão sujeitas às suas próprias políticas. O ChatFace prioriza a segurança dos dados nessas parcerias.',
-			'termOfService.cookiePolicy.section5Title' => '5. CONTROLE E GESTÃO DE COOKIES',
-			'termOfService.cookiePolicy.section5Body' => 'Usuários podem limitar essas tecnologias via configurações do dispositivo ou do aplicativo. Desativar tecnologias essenciais pode causar problemas, como a incapacidade de iniciar videochamadas.',
-			'termOfService.cookiePolicy.section6Title' => '6. CONTATO',
-			'termOfService.cookiePolicy.section6Body' => '📩 Para consultas: support@fly-work.com',
+			'termOfService.cookiePolicy.section4Body' => 'Algumas tecnologias podem ser fornecidas por provedores de serviços técnicos e estão sujeitas a suas próprias políticas. O ChatFace prioriza a segurança de dados nessas parcerias.',
+			'termOfService.cookiePolicy.section5Title' => '5. CONTROLE E GERENCIAMENTO DE COOKIES',
+			'termOfService.cookiePolicy.section5Body' => 'Os usuários podem limitar essas tecnologias por meio das configurações do dispositivo ou do aplicativo. A desativação de tecnologias essenciais pode causar problemas, como a impossibilidade de iniciar videochamadas.',
+			'termOfService.cookiePolicy.section6Title' => '6. Contato',
+			'termOfService.cookiePolicy.section6Body' => '📩 Para dúvidas: support@fly-work.com',
 			'cookies' => 'Política de Cookies',
 			'privacy' => 'Política de Privacidade',
 			'onboarding.step5.permissionRequired' => 'Permissão necessária',
@@ -1057,6 +1035,8 @@ extension on TranslationsPt {
 			'profileScreen.rateComingSoon' => 'Avaliação estará disponível em breve.',
 			'profileScreen.privacyPolicy' => 'Política de Privacidade',
 			'profileScreen.privacySubtitle' => 'Proteger dados',
+			'profileScreen.changeLanguage' => 'Idioma',
+			'profileScreen.changeLanguageSubtitle' => 'Alterar Idioma da App',
 			'profileScreen.termsOfService' => 'Termos de Serviço',
 			'profileScreen.termsSubtitle' => 'Dados e termos',
 			'profileScreen.logout' => 'Sair',

@@ -33,15 +33,11 @@ class _PolicySheet extends StatelessWidget {
         sections = [
           _PolicySection(body: p.intro),
           _PolicySection(title: p.section1Title, body: null),
-          _PolicySection(title: p.section1sub1Title, body: p.section1sub1Body),
-          _PolicySection(title: p.section1sub2Title, body: p.section1sub2Body),
           _PolicySection(title: p.section2Title, body: p.section2Body),
           _PolicySection(title: p.section3Title, body: p.section3Body),
           _PolicySection(title: p.section4Title, body: p.section4Body),
           _PolicySection(title: p.section5Title, body: p.section5Body),
           _PolicySection(title: p.section6Title, body: p.section6Body),
-          _PolicySection(title: p.section7Title, body: p.section7Body),
-          _PolicySection(title: p.section8Title, body: p.section8Body),
         ];
         break;
 
@@ -50,15 +46,12 @@ class _PolicySheet extends StatelessWidget {
         title = p.title;
         sections = [
           _PolicySection(body: p.intro),
-          _PolicySection(isDisclaimer: true, body: p.disclaimer),
           _PolicySection(title: p.section1Title, body: p.section1Body),
           _PolicySection(title: p.section2Title, body: p.section2Body),
           _PolicySection(title: p.section3Title, body: p.section3Body),
           _PolicySection(title: p.section4Title, body: p.section4Body),
           _PolicySection(title: p.section5Title, body: p.section5Body),
           _PolicySection(title: p.section6Title, body: p.section6Body),
-          _PolicySection(title: p.section7Title, body: p.section7Body),
-          _PolicySection(title: p.section8Title, body: p.section8Body),
         ];
         break;
 

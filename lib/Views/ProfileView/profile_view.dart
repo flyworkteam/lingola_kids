@@ -165,16 +165,14 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                       subtitle: backendProfile?.isGuest == true
                           ? context.t.profileScreen.accountSettingsGuestSubtitle
                           : context.t.profileScreen.accountSettingsSubtitle,
-                      icon: Icons.manage_accounts_outlined,
-                      iconBackground: const Color(0xFFEFF4FF),
+                      assetPath: AppIcons.accountSettings,
                       onTap: _openAccountSettings,
                     ),
                     const SizedBox(height: 12),
                     ProfileMenuRow(
                       title: context.t.profileScreen.manageSubscription,
                       subtitle: subscriptionSubtitle,
-                      icon: Icons.workspace_premium_outlined,
-                      iconBackground: const Color(0xFFFFF7E9),
+                      assetPath: AppIcons.handlePremium,
                       onTap: () => _openSubscriptionCenter(isPremium),
                     ),
                     const SizedBox(height: 12),
@@ -185,7 +183,6 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                           title: context.t.profileScreen.screenTime,
                           subtitle: screenTime.todayLabel,
                           assetPath: AppIcons.timeSpend,
-                          iconBackground: const Color(0xFFF3F0FF),
                           trailing: Switch(
                             value: screenTime.enabled,
                             activeThumbColor: Colors.white,
@@ -199,10 +196,17 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                     _SectionLabel(label: context.t.profileScreen.app),
                     const SizedBox(height: 12),
                     ProfileMenuRow(
+                      title: context.t.profileScreen.changeLanguage,
+                      subtitle: context.t.profileScreen.changeLanguageSubtitle,
+                      assetPath: AppIcons.language,
+                      onTap: () =>
+                          Navigator.pushNamed(context, AppRoutes.appLanguage),
+                    ),
+                    const SizedBox(height: 12),
+                    ProfileMenuRow(
                       title: context.t.profileScreen.rateApp,
                       subtitle: context.t.profileScreen.supportUs,
-                      icon: Icons.favorite_border_rounded,
-                      iconBackground: const Color(0xFFFFEEF6),
+                      assetPath: AppIcons.rateUs,
                       onTap: () =>
                           _showMessage(context.t.profileScreen.rateComingSoon),
                     ),
@@ -211,7 +215,6 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                       title: context.t.profileScreen.privacyPolicy,
                       subtitle: context.t.profileScreen.privacySubtitle,
                       assetPath: AppIcons.privacyPolicy,
-                      iconBackground: const Color(0xFFF1FFF1),
                       onTap: () => showPolicySheet(context, PolicyType.privacy),
                     ),
                     const SizedBox(height: 12),
@@ -219,7 +222,6 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                       title: context.t.profileScreen.termsOfService,
                       subtitle: context.t.profileScreen.termsSubtitle,
                       assetPath: AppIcons.termsOfUse,
-                      iconBackground: const Color(0xFFF1FFF1),
                       onTap: () => showPolicySheet(context, PolicyType.terms),
                     ),
                     const SizedBox(height: 12),
@@ -227,8 +229,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                       title: context.t.profileScreen.logout,
                       subtitle: '',
                       titleOnly: true,
-                      icon: Icons.logout_rounded,
-                      iconBackground: const Color(0xFFFFEEF1),
+                      assetPath: AppIcons.logOut,
                       trailing: const SizedBox(width: 32),
                       onTap: _showLogoutDialog,
                     ),

@@ -5,6 +5,7 @@ import 'package:lingola_kids/Views/AlphabetView/flash_cards_view.dart';
 import 'package:lingola_kids/Views/AlphabetView/flip_cards_view.dart';
 import 'package:lingola_kids/Views/AlphabetView/spelling_view.dart';
 import 'package:lingola_kids/Views/AlphabetView/true_false_view.dart';
+import 'package:lingola_kids/Views/AppLanguageView/app_language_view.dart';
 import 'package:lingola_kids/Views/FillInView/fill_in_view.dart';
 import 'package:lingola_kids/Views/HomeView/home_view.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/learning_category_data.dart';
@@ -79,6 +80,7 @@ class AppRoutes {
   static const String sportsTrueFalse = '/sports/true-false';
   static const String sportsSpelling = '/sports/spelling';
   static const String fillIn = '/fill-in';
+  static const String appLanguage = '/app-language';
 
   static Map<String, WidgetBuilder> getRoutes() {
     return {
@@ -107,7 +109,7 @@ class AppRoutes {
       shapesTrueFalse: (context) => const ShapeTrueFalseView(),
       shapesSpelling: (context) => const ShapeSpellingView(),
       vegetables: (context) => const LearningCategoryView(
-        title: 'Vegetables',
+        lessonSlug: 'vegetables',
         flashCardsRoute: vegetablesFlashCards,
         flipCardsRoute: vegetablesFlipCards,
         trueFalseRoute: vegetablesTrueFalse,
@@ -132,7 +134,7 @@ class AppRoutes {
         lessonSlug: 'vegetables',
       ),
       fruit: (context) => const LearningCategoryView(
-        title: 'Fruit',
+        lessonSlug: 'fruit',
         flashCardsRoute: fruitFlashCards,
         flipCardsRoute: fruitFlipCards,
         trueFalseRoute: fruitTrueFalse,
@@ -157,7 +159,7 @@ class AppRoutes {
         lessonSlug: 'fruit',
       ),
       colors: (context) => const LearningCategoryView(
-        title: 'Colors',
+        lessonSlug: 'colors',
         flashCardsRoute: colorsFlashCards,
         flipCardsRoute: colorsFlipCards,
         trueFalseRoute: colorsTrueFalse,
@@ -182,7 +184,7 @@ class AppRoutes {
         lessonSlug: 'colors',
       ),
       sports: (context) => const LearningCategoryView(
-        title: 'Sport',
+        lessonSlug: 'sports',
         flashCardsRoute: sportsFlashCards,
         flipCardsRoute: sportsFlipCards,
         trueFalseRoute: sportsTrueFalse,
@@ -206,6 +208,7 @@ class AppRoutes {
         choiceCount: 4,
         lessonSlug: 'sports',
       ),
+      appLanguage: (context) => const AppLanguageView(),
       fillIn: (context) => const FillInView(),
     };
   }

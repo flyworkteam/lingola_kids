@@ -8,9 +8,7 @@ class ProfileMenuRow extends StatelessWidget {
     required this.title,
     required this.subtitle,
     this.titleOnly = false,
-    this.icon,
     this.assetPath,
-    this.iconBackground = const Color(0xFFEFF4FF),
     this.onTap,
     this.trailing,
     super.key,
@@ -19,9 +17,7 @@ class ProfileMenuRow extends StatelessWidget {
   final String title;
   final String subtitle;
   final bool titleOnly;
-  final IconData? icon;
   final String? assetPath;
-  final Color iconBackground;
   final VoidCallback? onTap;
   final Widget? trailing;
 
@@ -39,18 +35,13 @@ class ProfileMenuRow extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 48,
-                height: 48,
+                width: 40,
+                height: 40,
                 decoration: BoxDecoration(
-                  color: iconBackground,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 alignment: Alignment.center,
-                child: assetPath == null
-                    ? Icon(icon, color: Colors.black, size: 27)
-                    : assetPath!.endsWith('.svg')
-                    ? SvgPicture.asset(assetPath!, width: 28, height: 28)
-                    : Image.asset(assetPath!, width: 28, height: 28),
+                child: SvgPicture.asset(assetPath!, width: 40, height: 40),
               ),
               const SizedBox(width: 14),
               Expanded(

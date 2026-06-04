@@ -8,7 +8,7 @@ import 'package:lingola_kids/utils/premium_access.dart';
 
 class LearningCategoryView extends StatelessWidget {
   const LearningCategoryView({
-    required this.title,
+    required this.lessonSlug,
     required this.flashCardsRoute,
     required this.flipCardsRoute,
     required this.trueFalseRoute,
@@ -16,11 +16,22 @@ class LearningCategoryView extends StatelessWidget {
     super.key,
   });
 
-  final String title;
+  final String lessonSlug;
   final String flashCardsRoute;
   final String flipCardsRoute;
   final String trueFalseRoute;
   final String spellingRoute;
+
+  String _localizedTitle(BuildContext context) {
+    final lessons = context.t.home.lessons;
+    return switch (lessonSlug) {
+      'colors' => lessons.colors,
+      'fruit' => lessons.fruit,
+      'vegetables' => lessons.vegetables,
+      'sports' => lessons.sports,
+      _ => lessonSlug,
+    };
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +59,7 @@ class LearningCategoryView extends StatelessWidget {
     ];
 
     return AlphabetPageShell(
-      title: title,
+      title: _localizedTitle(context),
       child: ListView.separated(
         padding: const EdgeInsets.only(top: 28),
         itemCount: activities.length,

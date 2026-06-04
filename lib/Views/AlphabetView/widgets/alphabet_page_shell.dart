@@ -65,7 +65,7 @@ class _AlphabetTopBar extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: _RoundIconButton(
+            child: RoundIconButton(
               icon: Icons.chevron_left_rounded,
               onPressed: () => Navigator.of(context).maybePop(),
             ),
@@ -111,7 +111,7 @@ class AlphabetRoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _RoundIconButton(
+    return RoundIconButton(
       icon: icon,
       onPressed: onPressed,
       backgroundColor: backgroundColor,
@@ -122,8 +122,9 @@ class AlphabetRoundButton extends StatelessWidget {
   }
 }
 
-class _RoundIconButton extends StatelessWidget {
-  const _RoundIconButton({
+class RoundIconButton extends StatelessWidget {
+  const RoundIconButton({
+    super.key,
     required this.icon,
     required this.onPressed,
     this.backgroundColor = AlphabetPageShell.orange,

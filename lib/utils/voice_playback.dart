@@ -17,13 +17,23 @@ Future<void> playLessonItemVoice(
   String languageCode = 'en',
 }) async {
   try {
-    final voice = await ProviderScope.containerOf(context, listen: false)
-        .read(AllProviders.voiceRepositoryProvider)
-        .resolveVoice(
-          lessonSlug: lessonSlug,
-          itemKey: itemKey,
-          languageCode: languageCode,
-        );
+    final repository = ProviderScope.containerOf(
+      context,
+      listen: false,
+    ).read(AllProviders.voiceRepositoryProvider);
+    var voice = await repository.resolveVoice(
+      lessonSlug: lessonSlug,
+      itemKey: itemKey,
+      languageCode: languageCode,
+    );
+    if ((voice?.voiceUrl == null || voice!.voiceUrl!.isEmpty) &&
+        lessonSlug == 'fruit') {
+      voice = await repository.resolveVoice(
+        lessonSlug: 'fruits',
+        itemKey: itemKey,
+        languageCode: languageCode,
+      );
+    }
     final url = voice?.voiceUrl;
     if (url == null || url.isEmpty) {
       Print.error(

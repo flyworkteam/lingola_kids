@@ -183,6 +183,13 @@ class _HomeViewState extends ConsumerState<HomeView> {
         .routeName;
   }
 
+  bool _hasContinueProgress(BackendProgress? progress) {
+    if (progress == null) return false;
+    return progress.lessonSlug.trim().isNotEmpty &&
+        progress.activitySlug.trim().isNotEmpty &&
+        progress.routeName.trim().isNotEmpty;
+  }
+
   String _continueLessonSubtitle(
     BuildContext context,
     BackendProgress? currentProgress,
@@ -245,14 +252,18 @@ class _HomeViewState extends ConsumerState<HomeView> {
         final data = snapshot.data ?? const _HomeBackendData();
         final lessons = _mergedLessons(context, data.lessons);
         final currentProgress = data.currentProgress;
-        final continueLesson = currentProgress == null
-            ? lessons.first
-            : lessons.firstWhere(
-                (lesson) => lesson.slug == currentProgress.lessonSlug,
+        final hasContinueProgress = _hasContinueProgress(currentProgress);
+        final activeProgress = hasContinueProgress ? currentProgress : null;
+        final continueLesson = activeProgress != null
+            ? lessons.firstWhere(
+                (lesson) => lesson.slug == activeProgress.lessonSlug,
                 orElse: () => lessons.first,
-              );
-        final continueRoute = currentProgress?.routeName.isNotEmpty == true
-            ? currentProgress!.routeName
+              )
+            : null;
+        final continueRoute = continueLesson == null
+            ? AppRoutes.home
+            : activeProgress?.routeName.isNotEmpty == true
+            ? activeProgress!.routeName
             : _routeForSlug(continueLesson.slug);
 
         return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -292,22 +303,24 @@ class _HomeViewState extends ConsumerState<HomeView> {
                             streakCount: streak?.currentStreak ?? 0,
                           ),
                           const SizedBox(height: 28),
-                          HomeSectionTitle(
-                            title: context.t.home.continueLearning,
-                          ),
-                          const SizedBox(height: 10),
-                          ContinueLearningCard(
-                            title: continueLesson.title.toUpperCase(),
-                            assetPath: continueLesson.assetPath,
-                            subtitle: _continueLessonSubtitle(
-                              context,
-                              currentProgress,
-                              continueLesson,
-                              lessons,
+                          if (continueLesson != null) ...[
+                            HomeSectionTitle(
+                              title: context.t.home.continueLearning,
                             ),
-                            onTap: () => _openRoute(continueRoute),
-                          ),
-                          const SizedBox(height: 28),
+                            const SizedBox(height: 10),
+                            ContinueLearningCard(
+                              title: continueLesson.title.toUpperCase(),
+                              assetPath: continueLesson.assetPath,
+                              subtitle: _continueLessonSubtitle(
+                                context,
+                                currentProgress,
+                                continueLesson,
+                                lessons,
+                              ),
+                              onTap: () => _openRoute(continueRoute),
+                            ),
+                            const SizedBox(height: 28),
+                          ],
                           HomeSectionTitle(title: context.t.home.allLessons),
                           const SizedBox(height: 10),
                         ],

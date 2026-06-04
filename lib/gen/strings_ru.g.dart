@@ -37,21 +37,21 @@ class TranslationsRu with BaseTranslations<AppLocale, Translations> implements T
 	TranslationsRu $copyWith({TranslationMetadata<AppLocale, Translations>? meta}) => TranslationsRu(meta: meta ?? this.$meta);
 
 	// Translations
-	@override String welcome({required Object name}) => 'Welcome ${name}';
-	@override String welcome2({required Object appName}) => 'Welcome to ${appName}';
-	@override String get get_started => 'Get Started';
-	@override String get start_learning => 'Start Learning';
-	@override String get hello => 'Hello';
-	@override String get next => 'Next';
-	@override String get back => 'Back';
-	@override String get skip => 'Skip';
-	@override String get profile => 'Profile';
-	@override String get kContinue => 'Continue';
+	@override String welcome({required Object name}) => 'Добро пожаловать, ${name}';
+	@override String welcome2({required Object appName}) => 'Добро пожаловать в ${appName}';
+	@override String get get_started => 'Начать';
+	@override String get start_learning => 'Начать обучение';
+	@override String get hello => 'Привет';
+	@override String get next => 'Далее';
+	@override String get back => 'Назад';
+	@override String get skip => 'Пропустить';
+	@override String get profile => 'Профиль';
+	@override String get kContinue => 'Продолжить';
 	@override late final _TranslationsTermOfServiceRu termOfService = _TranslationsTermOfServiceRu._(_root);
-	@override String get cookies => 'Cookies Policy';
-	@override String get privacy => 'Privacy Policy';
+	@override String get cookies => 'Политика использования файлов cookie';
+	@override String get privacy => 'Политика конфиденциальности';
 	@override late final _TranslationsOnboardingRu onboarding = _TranslationsOnboardingRu._(_root);
-	@override String get pressBackAgainToExit => 'Press back again to exit';
+	@override String get pressBackAgainToExit => 'Нажмите назад еще раз, чтобы выйти';
 	@override late final _TranslationsSplashRu splash = _TranslationsSplashRu._(_root);
 	@override late final _TranslationsAuthRu auth = _TranslationsAuthRu._(_root);
 	@override late final _TranslationsHomeRu home = _TranslationsHomeRu._(_root);
@@ -59,14 +59,14 @@ class TranslationsRu with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsEditProfileRu editProfile = _TranslationsEditProfileRu._(_root);
 	@override late final _TranslationsSettingsSupportRu settingsSupport = _TranslationsSettingsSupportRu._(_root);
 	@override late final _TranslationsDeleteAccountRu deleteAccount = _TranslationsDeleteAccountRu._(_root);
-	@override String get cancel => 'Cancel';
-	@override String get delete => 'Delete';
+	@override String get cancel => 'Отмена';
+	@override String get delete => 'Удалить';
 	@override String get premium => 'Premium';
-	@override String get profileEdit => 'Profile Edit';
-	@override String get settings => 'Settings';
-	@override String get undo => 'Undo';
-	@override String get successfully => 'Successfully';
-	@override String get save => 'Save';
+	@override String get profileEdit => 'Редактировать профиль';
+	@override String get settings => 'Настройки';
+	@override String get undo => 'Отменить';
+	@override String get successfully => 'Успешно';
+	@override String get save => 'Сохранить';
 	@override late final _TranslationsLanguageOptionsRu languageOptions = _TranslationsLanguageOptionsRu._(_root);
 	@override late final _TranslationsCommonRu common = _TranslationsCommonRu._(_root);
 	@override late final _TranslationsProfileScreenRu profileScreen = _TranslationsProfileScreenRu._(_root);
@@ -85,15 +85,15 @@ class _TranslationsTermOfServiceRu implements TranslationsTermOfServiceEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get text1 => 'By signing up for ChatFace, you agree to our ';
-	@override String get link1 => 'Terms of Service';
-	@override String get text2 => '. Learn how we process your data in our ';
-	@override String get link2 => 'Privacy Policy';
-	@override String get text3 => ' and ';
-	@override String get link3 => 'Cookies Policy';
+	@override String get text1 => 'Регистрируясь в Lingola Kids, вы соглашаетесь с нашими ';
+	@override String get link1 => 'Условиями обслуживания';
+	@override String get text2 => '. Узнайте, как мы обрабатываем ваши данные, в нашей ';
+	@override String get link2 => 'Политике конфиденциальности';
+	@override String get text3 => ' и ';
+	@override String get link3 => 'Политике использования файлов cookie';
 	@override String get text4 => '';
-	@override late final _TranslationsTermOfServicePrivacyPolicyRu privacyPolicy = _TranslationsTermOfServicePrivacyPolicyRu._(_root);
 	@override late final _TranslationsTermOfServiceTermsOfServiceRu termsOfService = _TranslationsTermOfServiceTermsOfServiceRu._(_root);
+	@override late final _TranslationsTermOfServicePrivacyPolicyRu privacyPolicy = _TranslationsTermOfServicePrivacyPolicyRu._(_root);
 	@override late final _TranslationsTermOfServiceCookiePolicyRu cookiePolicy = _TranslationsTermOfServiceCookiePolicyRu._(_root);
 }
 
@@ -111,14 +111,14 @@ class _TranslationsOnboardingRu implements TranslationsOnboardingEn {
 	@override late final _TranslationsOnboardingStep4Ru step4 = _TranslationsOnboardingStep4Ru._(_root);
 	@override late final _TranslationsOnboardingLoadingRu loading = _TranslationsOnboardingLoadingRu._(_root);
 	@override late final _TranslationsOnboardingKFinalRu kFinal = _TranslationsOnboardingKFinalRu._(_root);
-	@override String get allowAccess => 'Allow Access';
-	@override String get iUnderstand => 'I Understand';
+	@override String get allowAccess => 'Разрешить доступ';
+	@override String get iUnderstand => 'Я понимаю';
 	@override late final _TranslationsOnboardingLoginRu login = _TranslationsOnboardingLoginRu._(_root);
 	@override late final _TranslationsOnboardingRewardRu reward = _TranslationsOnboardingRewardRu._(_root);
-	@override String get spellTitle => 'Spell the word you see!';
-	@override String get spellSubtitle => 'Can you spell "LION"?';
-	@override String get spellSuccessTitle => 'Nice! It\'s LION';
-	@override String get spellSuccessSubtitle => 'tap to hear';
+	@override String get spellTitle => 'Напиши слово, которое видишь!';
+	@override String get spellSubtitle => 'Сможешь написать «LION»?';
+	@override String get spellSuccessTitle => 'Отлично! Это LION';
+	@override String get spellSuccessSubtitle => 'нажмите, чтобы послушать';
 }
 
 // Path: splash
@@ -141,11 +141,11 @@ class _TranslationsAuthRu implements TranslationsAuthEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get google => 'Continue with Google';
-	@override String get facebook => 'Continue with Facebook';
-	@override String get apple => 'Continue with Apple';
-	@override String get guest => 'Continue as Guest';
-	@override String signInFailed({required Object error}) => 'Sign-in failed: ${error}';
+	@override String get google => 'Продолжить с Google';
+	@override String get facebook => 'Продолжить с Facebook';
+	@override String get apple => 'Продолжить с Apple';
+	@override String get guest => 'Продолжить как гость';
+	@override String signInFailed({required Object error}) => 'Ошибка входа: ${error}';
 }
 
 // Path: home
@@ -155,30 +155,30 @@ class _TranslationsHomeRu implements TranslationsHomeEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get seeAll => 'See All';
-	@override String get more => 'More';
-	@override String get online => 'Online';
-	@override String get offline => 'Offline';
+	@override String get seeAll => 'Смотреть все';
+	@override String get more => 'Еще';
+	@override String get online => 'В сети';
+	@override String get offline => 'Не в сети';
 	@override late final _TranslationsHomePlaceholdersRu placeholders = _TranslationsHomePlaceholdersRu._(_root);
-	@override String get greeting => 'Hello,';
-	@override String get guest => 'Guest';
-	@override String get thisWeek => 'This Week';
-	@override String get continueLearning => 'Continue Learning';
-	@override String get allLessons => 'All Lessons';
-	@override String get startLearning => 'Start learning';
-	@override String resumeActivity({required Object activity}) => 'Resume ${activity}';
-	@override String get continueButton => 'Continue';
+	@override String get greeting => 'Привет,';
+	@override String get guest => 'Гость';
+	@override String get thisWeek => 'На этой неделе';
+	@override String get continueLearning => 'Продолжить обучение';
+	@override String get allLessons => 'Все уроки';
+	@override String get startLearning => 'Начать обучение';
+	@override String resumeActivity({required Object activity}) => 'Возобновить ${activity}';
+	@override String get continueButton => 'Продолжить';
 	@override List<String> get weekDays => [
-		'MON',
-		'TUE',
-		'WED',
-		'THU',
-		'FRI',
-		'SAT',
-		'SUN',
+		'ПН',
+		'ВТ',
+		'СР',
+		'ЧТ',
+		'ПТ',
+		'СБ',
+		'ВС',
 	];
 	@override late final _TranslationsHomeLessonsRu lessons = _TranslationsHomeLessonsRu._(_root);
-	@override String lessonProgress({required Object current, required Object total}) => 'Lesson ${current} of ${total}';
+	@override String lessonProgress({required Object current, required Object total}) => 'Урок ${current} из ${total}';
 }
 
 // Path: notifications
@@ -188,14 +188,14 @@ class _TranslationsNotificationsRu implements TranslationsNotificationsEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get today => 'Today';
-	@override String get yesterday => 'Yesterday';
-	@override String weekAgo({required Object week}) => '${week} week ago';
-	@override String monthAgo({required Object month}) => '${month} month ago';
-	@override String yearAgo({required Object year}) => '${year} year ago';
-	@override String get noNotifications => 'No notifications yet.';
-	@override String get noNotificationsSubtitle => 'Don\'t forget to check again when you receive the notification.';
-	@override String get allDeleted => 'All notifications have been successfully deleted';
+	@override String get today => 'Сегодня';
+	@override String get yesterday => 'Вчера';
+	@override String weekAgo({required Object week}) => '${week} нед. назад';
+	@override String monthAgo({required Object month}) => '${month} мес. назад';
+	@override String yearAgo({required Object year}) => '${year} год назад';
+	@override String get noNotifications => 'Пока нет уведомлений.';
+	@override String get noNotificationsSubtitle => 'Не забудьте проверить еще раз, когда получите уведомление.';
+	@override String get allDeleted => 'Все уведомления были успешно удалены';
 }
 
 // Path: editProfile
@@ -205,18 +205,18 @@ class _TranslationsEditProfileRu implements TranslationsEditProfileEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get aboutMe => 'About Me';
-	@override String get aboutMeHint => 'Write something about yourself';
-	@override String get fullName => 'Full Name';
-	@override String get gender => 'Gender';
-	@override String get male => 'Male';
-	@override String get female => 'Female';
-	@override String get dontWantToMention => 'I don\'t want to mention it.';
-	@override String get country => 'Country';
-	@override String get languagePreferences => 'Language Preferences';
-	@override String get selectLanguage => 'Add your preferred language';
-	@override String get saved => 'Saved';
-	@override String get changesSaved => 'Changes have been saved.';
+	@override String get aboutMe => 'Обо мне';
+	@override String get aboutMeHint => 'Напишите что-нибудь о себе';
+	@override String get fullName => 'Полное имя';
+	@override String get gender => 'Пол';
+	@override String get male => 'Мужской';
+	@override String get female => 'Женский';
+	@override String get dontWantToMention => 'Я не хочу указывать.';
+	@override String get country => 'Страна';
+	@override String get languagePreferences => 'Языковые предпочтения';
+	@override String get selectLanguage => 'Добавьте предпочитаемый язык';
+	@override String get saved => 'Сохранено';
+	@override String get changesSaved => 'Изменения сохранены.';
 }
 
 // Path: settingsSupport
@@ -226,19 +226,19 @@ class _TranslationsSettingsSupportRu implements TranslationsSettingsSupportEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Settings & Support';
-	@override String get premiumTitle => 'Unlimited access \nto all features';
-	@override String get getPremium => 'Get Premium';
-	@override String get settingsHub => 'Settings Hub';
-	@override String get shareTheApp => 'Share the App';
-	@override String get rateUs => 'Rate Us';
-	@override String get version => 'Version';
-	@override String get notifications => 'Notifications';
-	@override String get accountManagement => 'Account Management';
-	@override String get deleteAccount => 'Delete Account';
-	@override String get logOut => 'Log Out';
-	@override String get logOutTitle => 'You are about to log out';
-	@override String get logOutSubtitle => 'See you again soon! \n We’ll miss you.';
+	@override String get title => 'Настройки и поддержка';
+	@override String get premiumTitle => 'Неограниченный доступ \nко всем функциям';
+	@override String get getPremium => 'Получить Premium';
+	@override String get settingsHub => 'Центр настроек';
+	@override String get shareTheApp => 'Поделиться приложением';
+	@override String get rateUs => 'Оцените нас';
+	@override String get version => 'Версия';
+	@override String get notifications => 'Уведомления';
+	@override String get accountManagement => 'Управление аккаунтом';
+	@override String get deleteAccount => 'Удалить аккаунт';
+	@override String get logOut => 'Выйти';
+	@override String get logOutTitle => 'Вы собираетесь выйти';
+	@override String get logOutSubtitle => 'До скорой встречи! \n Мы будем скучать по вам.';
 }
 
 // Path: deleteAccount
@@ -248,10 +248,10 @@ class _TranslationsDeleteAccountRu implements TranslationsDeleteAccountEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Delete Account';
-	@override String get warning => 'Are you sure you want to delete your account?';
-	@override String get description => 'This action cannot be undone, and all your history and data will be permanently deleted.';
-	@override String deleteFailed({required Object error}) => 'Account deletion failed: ${error}';
+	@override String get title => 'Удалить аккаунт';
+	@override String get warning => 'Вы уверены, что хотите удалить свой аккаунт?';
+	@override String get description => 'Это действие нельзя отменить, и вся ваша история и данные будут навсегда удалены.';
+	@override String deleteFailed({required Object error}) => 'Ошибка удаления аккаунта: ${error}';
 	@override late final _TranslationsDeleteAccountStepsRu steps = _TranslationsDeleteAccountStepsRu._(_root);
 }
 
@@ -262,18 +262,18 @@ class _TranslationsLanguageOptionsRu implements TranslationsLanguageOptionsEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get english => 'English';
-	@override String get chinese => 'Chinese';
-	@override String get german => 'German';
-	@override String get italian => 'Italian';
-	@override String get french => 'French';
-	@override String get japanese => 'Japanese';
-	@override String get spanish => 'Spanish';
-	@override String get russian => 'Russian';
-	@override String get turkish => 'Turkish';
-	@override String get korean => 'Korean';
-	@override String get hindi => 'Hindi';
-	@override String get portuguese => 'Portuguese';
+	@override String get english => 'Английский';
+	@override String get chinese => 'Китайский';
+	@override String get german => 'Немецкий';
+	@override String get italian => 'Итальянский';
+	@override String get french => 'Французский';
+	@override String get japanese => 'Японский';
+	@override String get spanish => 'Испанский';
+	@override String get russian => 'Русский';
+	@override String get turkish => 'Турецкий';
+	@override String get korean => 'Корейский';
+	@override String get hindi => 'Хинди';
+	@override String get portuguese => 'Португальский';
 }
 
 // Path: common
@@ -283,9 +283,9 @@ class _TranslationsCommonRu implements TranslationsCommonEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get tryAgain => 'Try Again';
-	@override String get retry => 'Retry';
-	@override String get close => 'Close';
+	@override String get tryAgain => 'Попробовать снова';
+	@override String get retry => 'Повторить';
+	@override String get close => 'Закрыть';
 }
 
 // Path: profileScreen
@@ -295,33 +295,35 @@ class _TranslationsProfileScreenRu implements TranslationsProfileScreenEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Profile';
-	@override String get greeting => 'Hello,';
-	@override String get account => 'ACCOUNT';
-	@override String get app => 'APP';
-	@override String get statusLoading => 'Status loading';
-	@override String get premiumActive => 'Active • Pro Member';
-	@override String get freePlan => 'Free Plan';
-	@override String get loadFailed => 'Profile information could not be loaded. Pull down to try again.';
-	@override String get accountSettings => 'Account Settings';
-	@override String get accountSettingsGuestSubtitle => 'Name and avatar';
-	@override String get accountSettingsSubtitle => 'Name, Photo, E-mail';
-	@override String get manageSubscription => 'Manage Subscription';
-	@override String get screenTime => 'Screen Time';
-	@override String get rateApp => 'Rate the App';
-	@override String get supportUs => 'Support us';
-	@override String get rateComingSoon => 'Rating will be available soon.';
-	@override String get privacyPolicy => 'Privacy Policy';
-	@override String get privacySubtitle => 'Protect data';
-	@override String get termsOfService => 'Terms of Service';
-	@override String get termsSubtitle => 'Data and terms';
-	@override String get logout => 'Log Out';
-	@override String get logoutDialogTitle => 'You are about to log\nout of your account';
-	@override String get logoutFailed => 'Could not log out. Please try again.';
-	@override String get subscriptionFailed => 'Subscription screen could not be opened. Please try again.';
-	@override String screenTimeMinutes({required Object minutes}) => 'Today ${minutes} minutes';
-	@override String screenTimeHours({required Object hours}) => 'Today ${hours} hours';
-	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Today ${hours} hours ${minutes} minutes';
+	@override String get title => 'Профиль';
+	@override String get greeting => 'Привет,';
+	@override String get account => 'АККАУНТ';
+	@override String get app => 'ПРИЛОЖЕНИЕ';
+	@override String get statusLoading => 'Загрузка статуса';
+	@override String get premiumActive => 'Активен • Pro Подписка';
+	@override String get freePlan => 'Бесплатный план';
+	@override String get loadFailed => 'Не удалось загрузить информацию профиля. Потяните вниз, чтобы попробовать снова.';
+	@override String get accountSettings => 'Настройки аккаунта';
+	@override String get accountSettingsGuestSubtitle => 'Имя и аватар';
+	@override String get accountSettingsSubtitle => 'Имя, Фото, Электронная почта';
+	@override String get manageSubscription => 'Управление подпиской';
+	@override String get screenTime => 'Экранное время';
+	@override String get rateApp => 'Оценить приложение';
+	@override String get supportUs => 'Поддержите нас';
+	@override String get rateComingSoon => 'Оценка скоро будет доступна.';
+	@override String get changeLanguage => 'Язык';
+	@override String get changeLanguageSubtitle => 'Изменить язык приложения';
+	@override String get privacyPolicy => 'Политика конфиденциальности';
+	@override String get privacySubtitle => 'Защита данных';
+	@override String get termsOfService => 'Условия обслуживания';
+	@override String get termsSubtitle => 'Данные и условия';
+	@override String get logout => 'Выйти';
+	@override String get logoutDialogTitle => 'Вы собираетесь выйти\nиз своего аккаунта';
+	@override String get logoutFailed => 'Не удалось выйти. Пожалуйста, попробуйте снова.';
+	@override String get subscriptionFailed => 'Не удалось открыть экран подписки. Пожалуйста, попробуйте снова.';
+	@override String screenTimeMinutes({required Object minutes}) => 'Сегодня ${minutes} минут';
+	@override String screenTimeHours({required Object hours}) => 'Сегодня ${hours} часов';
+	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Сегодня ${hours} часов ${minutes} минут';
 }
 
 // Path: editProfileScreen
@@ -331,12 +333,12 @@ class _TranslationsEditProfileScreenRu implements TranslationsEditProfileScreenE
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get changeAvatar => 'Change Avatar';
-	@override String get email => 'E-mail';
-	@override String get emailHelper => 'This field comes from your backend account.';
-	@override String get deleteDialogTitle => 'Are you sure want to\ndelete your account?';
-	@override String get accountDeleteFailed => 'Account could not be deleted. Please try again.';
-	@override String get profileSaveFailed => 'Profile could not be saved. Please try again.';
+	@override String get changeAvatar => 'Изменить аватар';
+	@override String get email => 'Эл. почта';
+	@override String get emailHelper => 'Это поле поступает из вашего внутреннего аккаунта.';
+	@override String get deleteDialogTitle => 'Вы уверены, что хотите\nудалить свой аккаунт?';
+	@override String get accountDeleteFailed => 'Не удалось удалить аккаунт. Пожалуйста, попробуйте снова.';
+	@override String get profileSaveFailed => 'Не удалось сохранить профиль. Пожалуйста, попробуйте снова.';
 }
 
 // Path: premiumAccess
@@ -346,7 +348,7 @@ class _TranslationsPremiumAccessRu implements TranslationsPremiumAccessEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get openFailed => 'Premium screen could not be opened. Please try again.';
+	@override String get openFailed => 'Не удалось открыть экран Premium. Пожалуйста, попробуйте снова.';
 }
 
 // Path: parentalGate
@@ -356,9 +358,9 @@ class _TranslationsParentalGateRu implements TranslationsParentalGateEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get barrierLabel => 'Parental gate';
-	@override String get question => 'What is the result of this operation?';
-	@override String get submit => 'Submit';
+	@override String get barrierLabel => 'Родительский контроль';
+	@override String get question => 'Каков результат этой операции?';
+	@override String get submit => 'Отправить';
 }
 
 // Path: activities
@@ -368,11 +370,11 @@ class _TranslationsActivitiesRu implements TranslationsActivitiesEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get flashCards => 'Flash Cards';
-	@override String get drawing => 'Drawing';
-	@override String get flipCards => 'Flip Cards';
-	@override String get trueFalse => 'True False';
-	@override String get spelling => 'Spelling';
+	@override String get flashCards => 'Флэш-карточки';
+	@override String get drawing => 'Рисование';
+	@override String get flipCards => 'Переворот карточек';
+	@override String get trueFalse => 'Правда Ложь';
+	@override String get spelling => 'Орфография';
 }
 
 // Path: resultSheet
@@ -382,10 +384,10 @@ class _TranslationsResultSheetRu implements TranslationsResultSheetEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get correct => 'Correct';
-	@override String get tryAgain => 'Try Again';
-	@override String get correctBody => 'You are doing great!';
-	@override String get tryAgainBody => 'Try one more time!';
+	@override String get correct => 'Правильно';
+	@override String get tryAgain => 'Попробовать снова';
+	@override String get correctBody => 'У тебя отлично получается!';
+	@override String get tryAgainBody => 'Попробуй еще раз!';
 }
 
 // Path: trueFalseView
@@ -395,43 +397,12 @@ class _TranslationsTrueFalseViewRu implements TranslationsTrueFalseViewEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String isThisLetter({required Object letter}) => 'Is this letter ${letter}?';
-	@override String isThisNumber({required Object number}) => 'Is this number ${number}?';
-	@override String isThisShape({required Object shape}) => 'Is this shape ${shape}?';
-	@override String isThisSubject({required Object subject}) => 'Is this ${subject}?';
-	@override String get trueText => 'True';
-	@override String get falseText => 'False';
-}
-
-// Path: termOfService.privacyPolicy
-class _TranslationsTermOfServicePrivacyPolicyRu implements TranslationsTermOfServicePrivacyPolicyEn {
-	_TranslationsTermOfServicePrivacyPolicyRu._(this._root);
-
-	final TranslationsRu _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Privacy Policy';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'ChatFace adopts user privacy and data security as a core principle. All your personal data is processed in accordance with effective data protection regulations.';
-	@override String get section1Title => '1. COLLECTED INFORMATION';
-	@override String get section1sub1Title => '1.1 Data Provided by User';
-	@override String get section1sub1Body => '• Name, nickname, age, gender, country, profile information, and optional profile photos you choose to upload.\n• Email address for registration, subscription, and support.\n• Interaction preferences, selected language, AI character choices, messages, voice transcripts, uploaded chat images, feedback, and support messages.';
-	@override String get section1sub2Title => '1.2 Automatically Collected Data';
-	@override String get section1sub2Body => 'ChatFace may collect device type, operating system, approximate country/city derived from network signals, app usage data, crash logs, subscription status, and notification delivery data. Precise location is not requested during onboarding and is not required for AI chat or calls.';
-	@override String get section2Title => '2. PURPOSES OF DATA PROCESSING';
-	@override String get section2Body => 'Your personal data is processed to operate the app, authenticate your account, provide AI chat and voice/video call features, personalize language and character interactions, process subscriptions, send notifications when enabled, prevent abuse, review user reports, improve reliability, and meet legal obligations. Your personal data is not sold or used for advertising.';
-	@override String get section3Title => '3. AI PROCESSING AND THIRD-PARTY SHARING';
-	@override String get section3Body => 'To provide a better AI experience, ChatFace securely uses third-party providers, including OpenAI, to process the text, voice, images, and related data you submit. Messages, voice transcripts, selected language, profile context, conversation history, and uploaded chat images may be sent to OpenAI to generate AI replies and moderation outcomes. Speech audio may be sent to OpenAI or Deepgram for transcription depending on server configuration. Assistant text may be sent to ElevenLabs to create spoken audio. Uploaded profile and chat images, generated audio, and related media may be stored on BunnyCDN. OneSignal may process notification identifiers and delivery data. RevenueCat and the app stores process subscription and entitlement data. Social sign-in data may be processed by Apple, Google, or Facebook when you use those login methods. These providers are used only to perform the requested service and are expected to protect data under their own security and privacy terms. OpenAI API data is not used to train OpenAI models according to OpenAI API policies.';
-	@override String get section4Title => '4. PHOTOS, CAMERA, MICROPHONE, AND FACE DATA';
-	@override String get section4Body => 'Camera access is used for local video-call preview when you start a video call. The camera preview stays on your device. ChatFace does not collect biometric face data, face templates, face geometry, face recognition identifiers, or face profiles. Uploaded profile photos and chat images may contain faces if you choose to upload them; these images are stored and processed only as user-provided photos for profile display or AI conversation context. Microphone access is used for voice and video conversations so your speech can be transcribed and answered by the AI.';
-	@override String get section5Title => '5. DATA RETENTION AND DELETION';
-	@override String get section5Body => 'Account profile data, profile photos, conversation history, uploaded chat images, reports, notification settings, and subscription entitlement records are retained while your account is active or as needed for legal, security, fraud-prevention, and support purposes. When you delete your account, personal account records are deleted from ChatFace systems subject to required legal and operational retention. Media stored with third-party infrastructure is removed or made inaccessible according to our deletion process and provider retention behavior.';
-	@override String get section6Title => '6. USER RIGHTS';
-	@override String get section6Body => 'Under applicable privacy laws, you may request access, correction, deletion, objection, restriction, or data portability for your personal data. You can contact us for these requests.';
-	@override String get section7Title => '7. CHILDREN\'S PRIVACY';
-	@override String get section7Body => 'ChatFace is not intended for users under the age of 18. We do not knowingly collect data from this age group; such accounts will be closed and data deleted upon detection.';
-	@override String get section8Title => '8. CONTACT';
-	@override String get section8Body => 'For privacy inquiries: support@fly-work.com';
+	@override String isThisLetter({required Object letter}) => 'Эта буква ${letter}?';
+	@override String isThisNumber({required Object number}) => 'Это число ${number}?';
+	@override String isThisShape({required Object shape}) => 'Эта форма ${shape}?';
+	@override String isThisSubject({required Object subject}) => 'Это ${subject}?';
+	@override String get trueText => 'Правда';
+	@override String get falseText => 'Ложь';
 }
 
 // Path: termOfService.termsOfService
@@ -441,26 +412,45 @@ class _TranslationsTermOfServiceTermsOfServiceRu implements TranslationsTermOfSe
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Terms of Service';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'These Terms govern the use of the ChatFace mobile application. By using the app, you agree to these Terms.';
-	@override String get disclaimer => 'Disclaimer: ChatFace is an AI video interaction app. It does not provide legal, academic, medical, or professional consulting services.';
-	@override String get section1Title => '1. SCOPE OF SERVICE';
-	@override String get section1Body => 'ChatFace provides AI-powered video interaction experiences:\n\n• AI video calling and conversation.\n• Personalized interaction preferences.\n• Access to interaction history and records.\n\nServices do not constitute official opinions or professional guidance guarantees.';
-	@override String get section2Title => '2. CONDITIONS OF USE';
-	@override String get section2Body => '• You must be at least 18 years old (Under 18 access is prohibited).\n• You must provide accurate account information.\n• The app must be used for legal and personal purposes only.';
-	@override String get section3Title => '3. PROHIBITED USES';
-	@override String get section3Body => 'Impersonation, hate speech, endangering child safety, security breach attempts, and manipulation of AI systems are strictly prohibited.';
-	@override String get section4Title => '4. SUBSCRIPTIONS AND PAYMENTS';
-	@override String get section4Body => 'Premium features are subject to App Store and Google Play policies. Subscription cancellations and refunds are managed via the respective store settings.';
-	@override String get section5Title => '5. CONTENT DISCLAIMER';
-	@override String get section5Body => 'Content is AI-generated and does not replace professional advice. ChatFace does not guarantee accuracy or fitness for a particular purpose.';
-	@override String get section6Title => '6. INTELLECTUAL PROPERTY';
-	@override String get section6Body => 'All content including design, software, and algorithms belongs to ChatFace. Unauthorized reproduction or redistribution is prohibited.';
-	@override String get section7Title => '7. GOVERNING LAW';
-	@override String get section7Body => 'These Terms are governed by the laws of the Republic of Turkey. Istanbul Central Courts shall have jurisdiction over disputes.';
-	@override String get section8Title => '8. CONTACT';
-	@override String get section8Body => '📩 For inquiries: support@fly-work.com';
+	@override String get title => 'Lingola Kids – Условия обслуживания';
+	@override String get lastUpdated => 'Последнее обновление: 2026';
+	@override String get intro => 'Эти Условия обслуживания («Условия») регулируют правила и условия использования мобильного приложения Lingola Kids («Приложение»). Загружая или используя Приложение, вы соглашаетесь с этими Условиями.';
+	@override String get section1Title => '1. Область предоставления услуг и отказ от ответственности';
+	@override String get section1Body => 'Lingola Kids предлагает визуальные, звуковые карточки и обучающие игры, чтобы помочь детям выучить английскую лексику. Приложение не является официальным образовательным учреждением; оно не гарантирует успех на экзаменах, получение ученых степеней или сертификатов о знании языка.';
+	@override String get section2Title => '2. Условия использования';
+	@override String get section2Body => '- Приложение предназначено для детей от 4 лет и старше.\n- Пользователям младше 13/18 лет настоятельно рекомендуется использовать приложение под присмотром родителей или законных опекунов.\n- Как родитель или законный опекун, разрешая своему ребенку использовать приложение, вы соглашаетесь с этими условиями от его имени.\n- Несанкционированное копирование, продажа, обратное проектирование или массовое распространение контента приложения строго запрещены.';
+	@override String get section3Title => '3. Премиум и платные услуги';
+	@override String get section3Body => 'Оплата за платные услуги, такие как премиум-пакеты слов и использование без рекламы, обрабатывается через App Store или Google Play. Отмена автоматически продлеваемых подписок осуществляется пользователем/родителем через их учетную запись в магазине. Lingola Kids не предоставляет возвраты напрямую.';
+	@override String get section4Title => '4. Данные об обучении и конфиденциальность';
+	@override String get section4Body => 'Данные об обучении (выученные слова, выполненные действия), обрабатываемые для улучшения пользовательского опыта и отслеживания прогресса, защищены нашей Политикой конфиденциальности. Считается, что любой пользователь Приложения принял Политику конфиденциальности.';
+	@override String get section5Title => '5. Применимое право';
+	@override String get section5Body => 'Настоящие Условия регулируются законодательством Турецкой Республики. Центральные суды и исполнительные органы Стамбула обладают юрисдикцией в отношении любых споров.';
+	@override String get section6Title => '6. Контакты';
+	@override String get section6Body => '📩 По любым вопросам, запросам или уведомлениям вы можете связаться с нами по адресу: support@fly-work.com';
+}
+
+// Path: termOfService.privacyPolicy
+class _TranslationsTermOfServicePrivacyPolicyRu implements TranslationsTermOfServicePrivacyPolicyEn {
+	_TranslationsTermOfServicePrivacyPolicyRu._(this._root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Lingola Kids – Политика конфиденциальности';
+	@override String get lastUpdated => 'Последнее обновление: 2026';
+	@override String get intro => 'Добро пожаловать в Lingola Kids. Защита конфиденциальности детей и семей — наш главный приоритет. В этой Политике конфиденциальности описывается, какая информация собирается, используется, защищается и как пользователи могут управлять своими данными.';
+	@override String get section1Title => '1. Собранная информация';
+	@override String get section1Body => '- Предоставляется пользователем/родителем: адрес электронной почты (если учетная запись создана), имя пользователя, предпочтения по языку и обучению, сохраненные слова.\n- Автоматически собирается: модель устройства, операционная система, IP-адрес, версия приложения, журналы сбоев и данные о прогрессе обучения.';
+	@override String get section2Title => '2. Конфиденциальность детей (Важно)';
+	@override String get section2Body => 'Lingola Kids предназначено для детей в возрасте от 4 лет и старше. Защита данных детей — наша главная цель:\n- Мы не собираем ненужные или конфиденциальные личные данные детей.\n- Детям не разрешается и не предлагается публично делиться контактными данными.\n- Поведенческое или персонализированное рекламное профилирование, ориентированное на детей, строго запрещено.\n- Родители или законные опекуны могут запросить проверку или удаление данных своего ребенка в любое время.';
+	@override String get section3Title => '3. Цели обработки и обмена данными';
+	@override String get section3Body => 'Ваши данные обрабатываются для отслеживания прогресса обучения, персонализации словарного контента и устранения технических проблем. Личная информация никогда не продается и не передается третьим лицам для коммерческого использования. Надежные поставщики услуг (облачное хранилище, аналитика и т. д.) обрабатывают данные строго в соответствии со своими обязательствами по конфиденциальности.';
+	@override String get section4Title => '4. Права пользователей и родителей';
+	@override String get section4Body => 'Пользователи и родители имеют право на доступ, исправление, запрос удаления учетной записи и требование постоянного удаления данных. Вы можете воспользоваться этими правами, связавшись с нашей службой поддержки.';
+	@override String get section5Title => '5. Безопасность и хранение данных';
+	@override String get section5Body => 'Данные защищены с помощью отраслевых стандартов шифрования и контроля доступа. Статистика обучения хранится до тех пор, пока учетная запись остается активной для обеспечения непрерывности, и удаляется при удалении учетной записи.';
+	@override String get section6Title => '6. Контакты';
+	@override String get section6Body => '📩 По вопросам конфиденциальности, удаления данных или запросам родителей обращайтесь к нам: support@fly-work.com';
 }
 
 // Path: termOfService.cookiePolicy
@@ -470,22 +460,22 @@ class _TranslationsTermOfServiceCookiePolicyRu implements TranslationsTermOfServ
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Cookie Policy';
-	@override String get lastUpdated => 'Last Updated: 2026';
-	@override String get intro => 'Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.';
-	@override String get important => 'This policy explains what cookies are, their purposes, and how you can manage your preferences.';
-	@override String get section1Title => '1. WHAT ARE COOKIES?';
-	@override String get section1Body => 'Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.';
-	@override String get section2Title => '2. WHICH TECHNOLOGIES DO WE USE?';
-	@override String get section2Body => 'Strictly Necessary Technologies\nRequired for session management and security controls. The app may not function properly without these components.\n\nPerformance and Analytics\nHelps us understand which stories are read and which areas need improvement. Data is evaluated anonymously.\n\nPersonalization\nRemembers settings like language preference and reading level to provide a tailored experience for the child.';
-	@override String get section3Title => '3. WHY DO WE USE THESE TECHNOLOGIES?';
-	@override String get section3Body => '• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.';
-	@override String get section4Title => '4. THIRD-PARTY TECHNOLOGIES';
-	@override String get section4Body => 'Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.';
-	@override String get section5Title => '5. COOKIE CONTROL AND MANAGEMENT';
-	@override String get section5Body => 'Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.';
-	@override String get section6Title => '6. CONTACT';
-	@override String get section6Body => '📩 For inquiries: support@fly-work.com';
+	@override String get title => 'Политика использования файлов cookie';
+	@override String get lastUpdated => 'Последнее обновление: 2026';
+	@override String get intro => 'Добро пожаловать в ChatFace. Технологии цифровых помощников используются для того, чтобы сделать ваш опыт видеозвонков с ИИ более плавным, безопасным и персонализированным.';
+	@override String get important => 'Эта политика объясняет, что такое файлы cookie, их назначение и как вы можете управлять своими предпочтениями.';
+	@override String get section1Title => '1. ЧТО ТАКОЕ ФАЙЛЫ COOKIE?';
+	@override String get section1Body => 'Файлы cookie — это небольшие файлы данных, размещаемые на вашем устройстве. Они не идентифицируют вас напрямую; они действуют как цифровые заметки, которые запоминают:\n• Настройки вызова и языка\n• Настройки сеанса и производительности.';
+	@override String get section2Title => '2. КАКИЕ ТЕХНОЛОГИИ МЫ ИСПОЛЬЗУЕМ?';
+	@override String get section2Body => 'Строго необходимые технологии\nТребуются для управления сеансами и контроля безопасности. Приложение может не работать должным образом без этих компонентов.\n\nПроизводительность и аналитика\nПомогает нам понять, какие истории читаются и какие области нуждаются в улучшении. Данные оцениваются анонимно.\n\nПерсонализация\nЗапоминает такие настройки, как языковые предпочтения и уровень чтения, чтобы обеспечить индивидуальный подход для ребенка.';
+	@override String get section3Title => '3. ПОЧЕМУ МЫ ИСПОЛЬЗУЕМ ЭТИ ТЕХНОЛОГИИ?';
+	@override String get section3Body => '• Чтобы приложение работало безопасно и бесперебойно.\n• Чтобы сделать чтение более плавным.\n• Чтобы запомнить повторяющиеся настройки.\n• Для определения функций для будущей разработки.';
+	@override String get section4Title => '4. ТЕХНОЛОГИИ ТРЕТЬИХ ЛИЦ';
+	@override String get section4Body => 'Некоторые технологии могут предоставляться поставщиками технических услуг и подпадают под их собственную политику. ChatFace уделяет первостепенное внимание безопасности данных в этих партнерствах.';
+	@override String get section5Title => '5. КОНТРОЛЬ И УПРАВЛЕНИЕ COOKIE';
+	@override String get section5Body => 'Пользователи могут ограничить эти технологии с помощью настроек устройства или приложения. Отключение основных технологий может вызвать проблемы, такие как невозможность начать видеозвонок.';
+	@override String get section6Title => '6. КОНТАКТЫ';
+	@override String get section6Body => '📩 По вопросам обращайтесь: support@fly-work.com';
 }
 
 // Path: onboarding.step5
@@ -495,16 +485,16 @@ class _TranslationsOnboardingStep5Ru implements TranslationsOnboardingStep5En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get permissionRequired => 'Permission required';
-	@override String get notNow => 'Not now';
-	@override String get openSettings => 'Open settings';
-	@override String get title => 'Permissions';
-	@override String get permission1 => 'Camera Access';
-	@override String get permission1Subtitle => 'ChatFace uses your camera for video calls with AI characters.';
-	@override String get permission2 => 'Microphone Access';
-	@override String get permission2Subtitle => 'ChatFace uses your microphone for voice and video calls.';
-	@override String get permission3 => 'Location Access';
-	@override String get permission3Subtitle => 'ChatFace uses your location to personalize your experience.';
+	@override String get permissionRequired => 'Требуется разрешение';
+	@override String get notNow => 'Не сейчас';
+	@override String get openSettings => 'Открыть настройки';
+	@override String get title => 'Разрешения';
+	@override String get permission1 => 'Доступ к камере';
+	@override String get permission1Subtitle => 'ChatFace использует вашу камереру для видеозвонков с ИИ-персонажами.';
+	@override String get permission2 => 'Доступ к микрофону';
+	@override String get permission2Subtitle => 'ChatFace использует ваш микрофон для голосовых и видеозвонков.';
+	@override String get permission3 => 'Доступ к местоположению';
+	@override String get permission3Subtitle => 'ChatFace использует ваше местоположение для персонализации вашего опыта.';
 }
 
 // Path: onboarding.step1
@@ -514,9 +504,9 @@ class _TranslationsOnboardingStep1Ru implements TranslationsOnboardingStep1En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Name?';
-	@override String get subtitle => 'Please enter your name';
-	@override String get hint => 'Full Name';
+	@override String get title => 'Как вас зовут?';
+	@override String get subtitle => 'Пожалуйста, введите ваше имя';
+	@override String get hint => 'Полное имя';
 }
 
 // Path: onboarding.step2
@@ -526,8 +516,8 @@ class _TranslationsOnboardingStep2Ru implements TranslationsOnboardingStep2En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Age?';
-	@override String get subtitle => 'You must be at least 18 years old to register.';
+	@override String get title => 'Сколько вам лет?';
+	@override String get subtitle => 'Вам должно быть не менее 18 лет для регистрации.';
 }
 
 // Path: onboarding.step3
@@ -537,11 +527,11 @@ class _TranslationsOnboardingStep3Ru implements TranslationsOnboardingStep3En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'What is your Gender?';
-	@override String get subtitle => 'Please select your gender';
-	@override String get male => 'Male';
-	@override String get female => 'Female';
-	@override String get dontWantToMention => 'I don\'t want to mention it.';
+	@override String get title => 'Какой у вас пол?';
+	@override String get subtitle => 'Пожалуйста, выберите ваш пол';
+	@override String get male => 'Мужской';
+	@override String get female => 'Женский';
+	@override String get dontWantToMention => 'Я не хочу указывать.';
 }
 
 // Path: onboarding.step4
@@ -551,16 +541,16 @@ class _TranslationsOnboardingStep4Ru implements TranslationsOnboardingStep4En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Have Fun While \nStaying Safe';
-	@override String get entry1 => 'We Maintain Order';
-	@override String get subentry1 => 'Real-time AI Monitoring Open';
-	@override String get entry2 => 'Screen Recordings';
-	@override String get subentry2 => 'No Recording Without Consent';
-	@override String get entry3 => '24/7 Support';
-	@override String get subentry3 => 'Complaints Are Reviewed At Any Time Of The Day';
-	@override String get entry4 => '18+ only';
-	@override String get subentry4 => 'Not Suitable For Minors';
-	@override String get communityRules => 'Community Rules';
+	@override String get title => 'Развлекайтесь, \nоставаясь в безопасности';
+	@override String get entry1 => 'Мы поддерживаем порядок';
+	@override String get subentry1 => 'Мониторинг ИИ в реальном времени открыт';
+	@override String get entry2 => 'Записи экрана';
+	@override String get subentry2 => 'Нет записи без согласия';
+	@override String get entry3 => 'Поддержка 24/7';
+	@override String get subentry3 => 'Жалобы рассматриваются в любое время суток';
+	@override String get entry4 => 'Только 18+';
+	@override String get subentry4 => 'Не подходит для несовершеннолетних';
+	@override String get communityRules => 'Правила сообщества';
 }
 
 // Path: onboarding.loading
@@ -570,9 +560,9 @@ class _TranslationsOnboardingLoadingRu implements TranslationsOnboardingLoadingE
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Your Personal Account is\n';
-	@override String get titlePart2 => 'Being Created';
-	@override String get subtitle => 'Please wait, your profile is being prepared.';
+	@override String get titlePart1 => 'Ваш личный аккаунт\n';
+	@override String get titlePart2 => 'Создается';
+	@override String get subtitle => 'Пожалуйста, подождите, ваш профиль готовится.';
 }
 
 // Path: onboarding.kFinal
@@ -582,9 +572,9 @@ class _TranslationsOnboardingKFinalRu implements TranslationsOnboardingKFinalEn 
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Your Personal Account is\n';
-	@override String get titlePart2 => 'Created';
-	@override String get subtitle => 'Enjoy communication with any character';
+	@override String get titlePart1 => 'Ваш личный аккаунт\n';
+	@override String get titlePart2 => 'Создан';
+	@override String get subtitle => 'Наслаждайтесь общением с любым персонажем';
 }
 
 // Path: onboarding.login
@@ -594,9 +584,9 @@ class _TranslationsOnboardingLoginRu implements TranslationsOnboardingLoginEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Continue Your\nLearning Journey';
-	@override String get subtitle => 'Save progress, unlock lessons, and\nkeep learning across devices.';
-	@override String get failed => 'Sign-in could not be completed.';
+	@override String get title => 'Продолжите ваше\nОбучающее путешествие';
+	@override String get subtitle => 'Сохраняйте прогресс, открывайте уроки и\nпродолжайте учиться на всех устройствах.';
+	@override String get failed => 'Вход не может быть выполнен.';
 }
 
 // Path: onboarding.reward
@@ -606,17 +596,17 @@ class _TranslationsOnboardingRewardRu implements TranslationsOnboardingRewardEn 
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get points => '⭐️ +50 points';
-	@override String get title => 'Great Work 🎉';
-	@override String get subtitle => '200+ more lessons are waiting for you!';
-	@override String get progressLabel => 'First step completed!';
-	@override String get featureAlphabetTitle => 'Full Alphabet & Numbers';
-	@override String get featureAlphabetSubtitle => '200+ interactive lessons';
-	@override String get featureVoiceTitle => 'Voice Pronunciation';
-	@override String get featureVoiceSubtitle => 'Audio support for every word';
-	@override String get featureQuizTitle => 'Playful Mini Quizzes';
-	@override String get featureQuizSubtitle => 'Learn while having fun';
-	@override String get continueButton => 'Keep Exploring';
+	@override String get points => '⭐️ +50 очков';
+	@override String get title => 'Отличная работа 🎉';
+	@override String get subtitle => 'Вас ждут еще 200+ уроков!';
+	@override String get progressLabel => 'Первый шаг выполнен!';
+	@override String get featureAlphabetTitle => 'Полный алфавит и числа';
+	@override String get featureAlphabetSubtitle => '200+ интерактивных уроков';
+	@override String get featureVoiceTitle => 'Голосовое произношение';
+	@override String get featureVoiceSubtitle => 'Аудиоподдержка каждого слова';
+	@override String get featureQuizTitle => 'Игровые мини-викторины';
+	@override String get featureQuizSubtitle => 'Учитесь, развлекаясь';
+	@override String get continueButton => 'Продолжить исследование';
 }
 
 // Path: splash.initial
@@ -626,8 +616,8 @@ class _TranslationsSplashInitialRu implements TranslationsSplashInitialEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get hello => 'Hello';
-	@override String get title => 'PLAYFUL ENGLISH FOR KIDS';
+	@override String get hello => 'Привет';
+	@override String get title => 'ИГРОВОЙ АНГЛИЙСКИЙ ДЛЯ ДЕТЕЙ';
 }
 
 // Path: splash.screen1
@@ -637,8 +627,8 @@ class _TranslationsSplashScreen1Ru implements TranslationsSplashScreen1En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Learning English \nCan Feel Like Play';
-	@override String get description => 'Short, playful lessons help kids learn new words without pressure.';
+	@override String get title => 'Изучение английского \nМожет казаться игрой';
+	@override String get description => 'Короткие, игровые уроки помогают детям учить новые слова без давления.';
 }
 
 // Path: splash.screen2
@@ -648,8 +638,8 @@ class _TranslationsSplashScreen2Ru implements TranslationsSplashScreen2En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Listen, Repeat, and \nLearn New Words';
-	@override String get description => 'Simple voice activities help kids practice pronunciation step by step.';
+	@override String get title => 'Слушайте, повторяйте и \nУчите новые слова';
+	@override String get description => 'Простые голосовые упражнения помогают детям шаг за шагом практиковать произношение.';
 }
 
 // Path: splash.screen3
@@ -659,11 +649,11 @@ class _TranslationsSplashScreen3Ru implements TranslationsSplashScreen3En {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Build Confidence, \nOne Word at a Time';
-	@override String get description => 'Designed for young learners with simple activities, friendly guidance, and a safe learning flow.';
-	@override String get option1 => '️🛡️ Safe For Kids';
-	@override String get option2 => '🌱 No pressure learning';
-	@override String get option3 => '⭐️ Made for young learners';
+	@override String get title => 'Развивайте уверенность, \nПо одному слову';
+	@override String get description => 'Разработано для юных учеников с простыми заданиями, дружелюбным руководством и безопасным процессом обучения.';
+	@override String get option1 => '️🛡️ Безопасно для детей';
+	@override String get option2 => '🌱 Обучение без давления';
+	@override String get option3 => '⭐️ Создано для юных учеников';
 }
 
 // Path: home.placeholders
@@ -673,11 +663,11 @@ class _TranslationsHomePlaceholdersRu implements TranslationsHomePlaceholdersEn 
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get fashionDesigner => 'Fashion Designer';
-	@override String get comedian => 'Comedian';
-	@override String get influencer => 'Influencer';
-	@override String get teacher => 'Teacher';
-	@override String get friend => 'Friend';
+	@override String get fashionDesigner => 'Модельер';
+	@override String get comedian => 'Комик';
+	@override String get influencer => 'Инфлюенсер';
+	@override String get teacher => 'Учитель';
+	@override String get friend => 'Друг';
 }
 
 // Path: home.lessons
@@ -687,15 +677,15 @@ class _TranslationsHomeLessonsRu implements TranslationsHomeLessonsEn {
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get alphabet => 'Alphabet';
-	@override String get numbers => 'Numbers';
-	@override String get colors => 'Colors';
-	@override String get shapes => 'Shapes';
-	@override String get fruit => 'Fruit';
-	@override String get vegetables => 'Vegetables';
-	@override String get sports => 'Sports';
-	@override String get fillIn => 'Fill in';
-	@override String get fillInBlank => 'Fill in the Blank';
+	@override String get alphabet => 'Алфавит';
+	@override String get numbers => 'Цифры';
+	@override String get colors => 'Цвета';
+	@override String get shapes => 'Формы';
+	@override String get fruit => 'Фрукты';
+	@override String get vegetables => 'Овощи';
+	@override String get sports => 'Спорт';
+	@override String get fillIn => 'Вставить';
+	@override String get fillInBlank => 'Заполнить пропуск';
 }
 
 // Path: deleteAccount.steps
@@ -717,14 +707,14 @@ class _TranslationsDeleteAccountStepsStep1Ru implements TranslationsDeleteAccoun
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'We don\'t want you to go, but we understand.';
-	@override String get subtitle => 'Can you tell us why you want to leave so we can improve the ChatFace experience?';
-	@override String get option1 => 'I didn\'t find the AI characters realistic.';
-	@override String get option2 => 'I am experiencing technical issues with video chats.';
-	@override String get option3 => 'Subscription prices are above my expectations.';
-	@override String get option4 => 'I couldn\'t find the type of characters I was looking for.';
-	@override String get option5 => 'I just wanted to try it out for a short time.';
-	@override String get option6 => 'Other';
+	@override String get title => 'Мы не хотим, чтобы вы уходили, но мы понимаем.';
+	@override String get subtitle => 'Не могли бы вы сказать нам, почему вы хотите уйти, чтобы мы могли улучшить ChatFace?';
+	@override String get option1 => 'Мне не показались реалистичными ИИ-персонажи.';
+	@override String get option2 => 'Я испытываю технические проблемы с видеочатами.';
+	@override String get option3 => 'Цены на подписку выше моих ожиданий.';
+	@override String get option4 => 'Я не смог найти тип персонажей, который искал.';
+	@override String get option5 => 'Я просто хотел попробовать ненадолго.';
+	@override String get option6 => 'Другое';
 }
 
 // Path: deleteAccount.steps.step2
@@ -734,15 +724,15 @@ class _TranslationsDeleteAccountStepsStep2Ru implements TranslationsDeleteAccoun
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'If you delete your account, you will say goodbye to:';
-	@override String get subtitle1 => 'Deep Connections and Memory:';
-	@override String get subtitle1Desc => 'The characters you chat with will completely forget their past with you, your shared secrets, and your personal habits.';
-	@override String get subtitle2 => 'Video Call Privilege:';
-	@override String get subtitle2Desc => 'You will lose the right to communicate face-to-face with your AI partners, who are available to you anytime.';
-	@override String get subtitle3 => 'Advanced Algorithm:';
-	@override String get subtitle3Desc => 'Your \'Just for You\' character matches tailored to your preferences will be reset.';
-	@override String get subtitle4 => 'Profile Data:';
-	@override String get subtitle4Desc => 'Your earned achievements, unlocked special characters, and chat history will be irreversibly deleted.';
+	@override String get title => 'Если вы удалите свой аккаунт, вы попрощаетесь с:';
+	@override String get subtitle1 => 'Глубокими связями и памятью:';
+	@override String get subtitle1Desc => 'Персонажи, с которыми вы общаетесь, полностью забудут свое прошлое с вами, ваши общие секреты и личные привычки.';
+	@override String get subtitle2 => 'Привилегией видеозвонка:';
+	@override String get subtitle2Desc => 'Вы потеряете право общаться лицом к лицу с вашими ИИ-партнерами, которые доступны вам в любое время.';
+	@override String get subtitle3 => 'Продвинутым алгоритмом:';
+	@override String get subtitle3Desc => 'Ваши совпадения персонажей «Только для вас», созданные с учетом ваших предпочтений, будут сброшены.';
+	@override String get subtitle4 => 'Данными профиля:';
+	@override String get subtitle4Desc => 'Ваши заработанные достижения, разблокированные специальные персонажи и история чатов будут безвозвратно удалены.';
 }
 
 // Path: deleteAccount.steps.step3
@@ -752,14 +742,14 @@ class _TranslationsDeleteAccountStepsStep3Ru implements TranslationsDeleteAccoun
 	final TranslationsRu _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'We have a special offer for you before you go!';
-	@override String get description => 'Maybe you just need a little more time or a better deal. Instead of deleting your account, would you consider these?';
-	@override String description1({required Object offer}) => 'Keeping you with us is valuable. ${offer} on your next subscription! Would you like to continue with this offer?';
-	@override String get description1Offer => 'We\'ve applied a 50% discount';
-	@override String description2({required Object offer}) => 'We have given you ${offer} credits so you can see new characters you haven\'t discovered yet.';
-	@override String get description2Offer => '3 free video calls';
-	@override String get acceptOffer => 'Accept 50% Discount Offer';
-	@override String get deleteMyAccount => 'Delete My Account';
+	@override String get title => 'У нас есть для вас специальное предложение, прежде чем вы уйдете!';
+	@override String get description => 'Может быть, вам просто нужно немного больше времени или лучшее предложение. Вместо того чтобы удалять аккаунт, не рассмотрите ли вы это?';
+	@override String description1({required Object offer}) => 'Держать вас с нами — это ценно. ${offer} на вашу следующую подписку! Хотели бы вы продолжить с этим предложением?';
+	@override String get description1Offer => 'Мы применили скидку 50%';
+	@override String description2({required Object offer}) => 'Мы дали вам ${offer} кредитов, чтобы вы могли увидеть новых персонажей, которых вы еще не обнаружили.';
+	@override String get description2Offer => '3 бесплатных видеозвонка';
+	@override String get acceptOffer => 'Принять предложение со скидкой 50%';
+	@override String get deleteMyAccount => 'Удалить мой аккаунт';
 }
 
 /// The flat map containing all translations for locale <ru>.
@@ -770,327 +760,317 @@ class _TranslationsDeleteAccountStepsStep3Ru implements TranslationsDeleteAccoun
 extension on TranslationsRu {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'welcome' => ({required Object name}) => 'Welcome ${name}',
-			'welcome2' => ({required Object appName}) => 'Welcome to ${appName}',
-			'get_started' => 'Get Started',
-			'start_learning' => 'Start Learning',
-			'hello' => 'Hello',
-			'next' => 'Next',
-			'back' => 'Back',
-			'skip' => 'Skip',
-			'profile' => 'Profile',
-			'kContinue' => 'Continue',
-			'termOfService.text1' => 'By signing up for ChatFace, you agree to our ',
-			'termOfService.link1' => 'Terms of Service',
-			'termOfService.text2' => '. Learn how we process your data in our ',
-			'termOfService.link2' => 'Privacy Policy',
-			'termOfService.text3' => ' and ',
-			'termOfService.link3' => 'Cookies Policy',
+			'welcome' => ({required Object name}) => 'Добро пожаловать, ${name}',
+			'welcome2' => ({required Object appName}) => 'Добро пожаловать в ${appName}',
+			'get_started' => 'Начать',
+			'start_learning' => 'Начать обучение',
+			'hello' => 'Привет',
+			'next' => 'Далее',
+			'back' => 'Назад',
+			'skip' => 'Пропустить',
+			'profile' => 'Профиль',
+			'kContinue' => 'Продолжить',
+			'termOfService.text1' => 'Регистрируясь в Lingola Kids, вы соглашаетесь с нашими ',
+			'termOfService.link1' => 'Условиями обслуживания',
+			'termOfService.text2' => '. Узнайте, как мы обрабатываем ваши данные, в нашей ',
+			'termOfService.link2' => 'Политике конфиденциальности',
+			'termOfService.text3' => ' и ',
+			'termOfService.link3' => 'Политике использования файлов cookie',
 			'termOfService.text4' => '',
-			'termOfService.privacyPolicy.title' => 'Privacy Policy',
-			'termOfService.privacyPolicy.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.privacyPolicy.intro' => 'ChatFace adopts user privacy and data security as a core principle. All your personal data is processed in accordance with effective data protection regulations.',
-			'termOfService.privacyPolicy.section1Title' => '1. COLLECTED INFORMATION',
-			'termOfService.privacyPolicy.section1sub1Title' => '1.1 Data Provided by User',
-			'termOfService.privacyPolicy.section1sub1Body' => '• Name, nickname, age, gender, country, profile information, and optional profile photos you choose to upload.\n• Email address for registration, subscription, and support.\n• Interaction preferences, selected language, AI character choices, messages, voice transcripts, uploaded chat images, feedback, and support messages.',
-			'termOfService.privacyPolicy.section1sub2Title' => '1.2 Automatically Collected Data',
-			'termOfService.privacyPolicy.section1sub2Body' => 'ChatFace may collect device type, operating system, approximate country/city derived from network signals, app usage data, crash logs, subscription status, and notification delivery data. Precise location is not requested during onboarding and is not required for AI chat or calls.',
-			'termOfService.privacyPolicy.section2Title' => '2. PURPOSES OF DATA PROCESSING',
-			'termOfService.privacyPolicy.section2Body' => 'Your personal data is processed to operate the app, authenticate your account, provide AI chat and voice/video call features, personalize language and character interactions, process subscriptions, send notifications when enabled, prevent abuse, review user reports, improve reliability, and meet legal obligations. Your personal data is not sold or used for advertising.',
-			'termOfService.privacyPolicy.section3Title' => '3. AI PROCESSING AND THIRD-PARTY SHARING',
-			'termOfService.privacyPolicy.section3Body' => 'To provide a better AI experience, ChatFace securely uses third-party providers, including OpenAI, to process the text, voice, images, and related data you submit. Messages, voice transcripts, selected language, profile context, conversation history, and uploaded chat images may be sent to OpenAI to generate AI replies and moderation outcomes. Speech audio may be sent to OpenAI or Deepgram for transcription depending on server configuration. Assistant text may be sent to ElevenLabs to create spoken audio. Uploaded profile and chat images, generated audio, and related media may be stored on BunnyCDN. OneSignal may process notification identifiers and delivery data. RevenueCat and the app stores process subscription and entitlement data. Social sign-in data may be processed by Apple, Google, or Facebook when you use those login methods. These providers are used only to perform the requested service and are expected to protect data under their own security and privacy terms. OpenAI API data is not used to train OpenAI models according to OpenAI API policies.',
-			'termOfService.privacyPolicy.section4Title' => '4. PHOTOS, CAMERA, MICROPHONE, AND FACE DATA',
-			'termOfService.privacyPolicy.section4Body' => 'Camera access is used for local video-call preview when you start a video call. The camera preview stays on your device. ChatFace does not collect biometric face data, face templates, face geometry, face recognition identifiers, or face profiles. Uploaded profile photos and chat images may contain faces if you choose to upload them; these images are stored and processed only as user-provided photos for profile display or AI conversation context. Microphone access is used for voice and video conversations so your speech can be transcribed and answered by the AI.',
-			'termOfService.privacyPolicy.section5Title' => '5. DATA RETENTION AND DELETION',
-			'termOfService.privacyPolicy.section5Body' => 'Account profile data, profile photos, conversation history, uploaded chat images, reports, notification settings, and subscription entitlement records are retained while your account is active or as needed for legal, security, fraud-prevention, and support purposes. When you delete your account, personal account records are deleted from ChatFace systems subject to required legal and operational retention. Media stored with third-party infrastructure is removed or made inaccessible according to our deletion process and provider retention behavior.',
-			'termOfService.privacyPolicy.section6Title' => '6. USER RIGHTS',
-			'termOfService.privacyPolicy.section6Body' => 'Under applicable privacy laws, you may request access, correction, deletion, objection, restriction, or data portability for your personal data. You can contact us for these requests.',
-			'termOfService.privacyPolicy.section7Title' => '7. CHILDREN\'S PRIVACY',
-			'termOfService.privacyPolicy.section7Body' => 'ChatFace is not intended for users under the age of 18. We do not knowingly collect data from this age group; such accounts will be closed and data deleted upon detection.',
-			'termOfService.privacyPolicy.section8Title' => '8. CONTACT',
-			'termOfService.privacyPolicy.section8Body' => 'For privacy inquiries: support@fly-work.com',
-			'termOfService.termsOfService.title' => 'Terms of Service',
-			'termOfService.termsOfService.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.termsOfService.intro' => 'These Terms govern the use of the ChatFace mobile application. By using the app, you agree to these Terms.',
-			'termOfService.termsOfService.disclaimer' => 'Disclaimer: ChatFace is an AI video interaction app. It does not provide legal, academic, medical, or professional consulting services.',
-			'termOfService.termsOfService.section1Title' => '1. SCOPE OF SERVICE',
-			'termOfService.termsOfService.section1Body' => 'ChatFace provides AI-powered video interaction experiences:\n\n• AI video calling and conversation.\n• Personalized interaction preferences.\n• Access to interaction history and records.\n\nServices do not constitute official opinions or professional guidance guarantees.',
-			'termOfService.termsOfService.section2Title' => '2. CONDITIONS OF USE',
-			'termOfService.termsOfService.section2Body' => '• You must be at least 18 years old (Under 18 access is prohibited).\n• You must provide accurate account information.\n• The app must be used for legal and personal purposes only.',
-			'termOfService.termsOfService.section3Title' => '3. PROHIBITED USES',
-			'termOfService.termsOfService.section3Body' => 'Impersonation, hate speech, endangering child safety, security breach attempts, and manipulation of AI systems are strictly prohibited.',
-			'termOfService.termsOfService.section4Title' => '4. SUBSCRIPTIONS AND PAYMENTS',
-			'termOfService.termsOfService.section4Body' => 'Premium features are subject to App Store and Google Play policies. Subscription cancellations and refunds are managed via the respective store settings.',
-			'termOfService.termsOfService.section5Title' => '5. CONTENT DISCLAIMER',
-			'termOfService.termsOfService.section5Body' => 'Content is AI-generated and does not replace professional advice. ChatFace does not guarantee accuracy or fitness for a particular purpose.',
-			'termOfService.termsOfService.section6Title' => '6. INTELLECTUAL PROPERTY',
-			'termOfService.termsOfService.section6Body' => 'All content including design, software, and algorithms belongs to ChatFace. Unauthorized reproduction or redistribution is prohibited.',
-			'termOfService.termsOfService.section7Title' => '7. GOVERNING LAW',
-			'termOfService.termsOfService.section7Body' => 'These Terms are governed by the laws of the Republic of Turkey. Istanbul Central Courts shall have jurisdiction over disputes.',
-			'termOfService.termsOfService.section8Title' => '8. CONTACT',
-			'termOfService.termsOfService.section8Body' => '📩 For inquiries: support@fly-work.com',
-			'termOfService.cookiePolicy.title' => 'Cookie Policy',
-			'termOfService.cookiePolicy.lastUpdated' => 'Last Updated: 2026',
-			'termOfService.cookiePolicy.intro' => 'Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.',
-			'termOfService.cookiePolicy.important' => 'This policy explains what cookies are, their purposes, and how you can manage your preferences.',
-			'termOfService.cookiePolicy.section1Title' => '1. WHAT ARE COOKIES?',
-			'termOfService.cookiePolicy.section1Body' => 'Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.',
-			'termOfService.cookiePolicy.section2Title' => '2. WHICH TECHNOLOGIES DO WE USE?',
-			'termOfService.cookiePolicy.section2Body' => 'Strictly Necessary Technologies\nRequired for session management and security controls. The app may not function properly without these components.\n\nPerformance and Analytics\nHelps us understand which stories are read and which areas need improvement. Data is evaluated anonymously.\n\nPersonalization\nRemembers settings like language preference and reading level to provide a tailored experience for the child.',
-			'termOfService.cookiePolicy.section3Title' => '3. WHY DO WE USE THESE TECHNOLOGIES?',
-			'termOfService.cookiePolicy.section3Body' => '• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.',
-			'termOfService.cookiePolicy.section4Title' => '4. THIRD-PARTY TECHNOLOGIES',
-			'termOfService.cookiePolicy.section4Body' => 'Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.',
-			'termOfService.cookiePolicy.section5Title' => '5. COOKIE CONTROL AND MANAGEMENT',
-			'termOfService.cookiePolicy.section5Body' => 'Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.',
-			'termOfService.cookiePolicy.section6Title' => '6. CONTACT',
-			'termOfService.cookiePolicy.section6Body' => '📩 For inquiries: support@fly-work.com',
-			'cookies' => 'Cookies Policy',
-			'privacy' => 'Privacy Policy',
-			'onboarding.step5.permissionRequired' => 'Permission required',
-			'onboarding.step5.notNow' => 'Not now',
-			'onboarding.step5.openSettings' => 'Open settings',
-			'onboarding.step5.title' => 'Permissions',
-			'onboarding.step5.permission1' => 'Camera Access',
-			'onboarding.step5.permission1Subtitle' => 'ChatFace uses your camera for video calls with AI characters.',
-			'onboarding.step5.permission2' => 'Microphone Access',
-			'onboarding.step5.permission2Subtitle' => 'ChatFace uses your microphone for voice and video calls.',
-			'onboarding.step5.permission3' => 'Location Access',
-			'onboarding.step5.permission3Subtitle' => 'ChatFace uses your location to personalize your experience.',
-			'onboarding.step1.title' => 'What is your Name?',
-			'onboarding.step1.subtitle' => 'Please enter your name',
-			'onboarding.step1.hint' => 'Full Name',
-			'onboarding.step2.title' => 'What is your Age?',
-			'onboarding.step2.subtitle' => 'You must be at least 18 years old to register.',
-			'onboarding.step3.title' => 'What is your Gender?',
-			'onboarding.step3.subtitle' => 'Please select your gender',
-			'onboarding.step3.male' => 'Male',
-			'onboarding.step3.female' => 'Female',
-			'onboarding.step3.dontWantToMention' => 'I don\'t want to mention it.',
-			'onboarding.step4.title' => 'Have Fun While \nStaying Safe',
-			'onboarding.step4.entry1' => 'We Maintain Order',
-			'onboarding.step4.subentry1' => 'Real-time AI Monitoring Open',
-			'onboarding.step4.entry2' => 'Screen Recordings',
-			'onboarding.step4.subentry2' => 'No Recording Without Consent',
-			'onboarding.step4.entry3' => '24/7 Support',
-			'onboarding.step4.subentry3' => 'Complaints Are Reviewed At Any Time Of The Day',
-			'onboarding.step4.entry4' => '18+ only',
-			'onboarding.step4.subentry4' => 'Not Suitable For Minors',
-			'onboarding.step4.communityRules' => 'Community Rules',
-			'onboarding.loading.titlePart1' => 'Your Personal Account is\n',
-			'onboarding.loading.titlePart2' => 'Being Created',
-			'onboarding.loading.subtitle' => 'Please wait, your profile is being prepared.',
-			'onboarding.kFinal.titlePart1' => 'Your Personal Account is\n',
-			'onboarding.kFinal.titlePart2' => 'Created',
-			'onboarding.kFinal.subtitle' => 'Enjoy communication with any character',
-			'onboarding.allowAccess' => 'Allow Access',
-			'onboarding.iUnderstand' => 'I Understand',
-			'onboarding.login.title' => 'Continue Your\nLearning Journey',
-			'onboarding.login.subtitle' => 'Save progress, unlock lessons, and\nkeep learning across devices.',
-			'onboarding.login.failed' => 'Sign-in could not be completed.',
-			'onboarding.reward.points' => '⭐️ +50 points',
-			'onboarding.reward.title' => 'Great Work 🎉',
-			'onboarding.reward.subtitle' => '200+ more lessons are waiting for you!',
-			'onboarding.reward.progressLabel' => 'First step completed!',
-			'onboarding.reward.featureAlphabetTitle' => 'Full Alphabet & Numbers',
-			'onboarding.reward.featureAlphabetSubtitle' => '200+ interactive lessons',
-			'onboarding.reward.featureVoiceTitle' => 'Voice Pronunciation',
-			'onboarding.reward.featureVoiceSubtitle' => 'Audio support for every word',
-			'onboarding.reward.featureQuizTitle' => 'Playful Mini Quizzes',
-			'onboarding.reward.featureQuizSubtitle' => 'Learn while having fun',
-			'onboarding.reward.continueButton' => 'Keep Exploring',
-			'onboarding.spellTitle' => 'Spell the word you see!',
-			'onboarding.spellSubtitle' => 'Can you spell "LION"?',
-			'onboarding.spellSuccessTitle' => 'Nice! It\'s LION',
-			'onboarding.spellSuccessSubtitle' => 'tap to hear',
-			'pressBackAgainToExit' => 'Press back again to exit',
-			'splash.initial.hello' => 'Hello',
-			'splash.initial.title' => 'PLAYFUL ENGLISH FOR KIDS',
-			'splash.screen1.title' => 'Learning English \nCan Feel Like Play',
-			'splash.screen1.description' => 'Short, playful lessons help kids learn new words without pressure.',
-			'splash.screen2.title' => 'Listen, Repeat, and \nLearn New Words',
-			'splash.screen2.description' => 'Simple voice activities help kids practice pronunciation step by step.',
-			'splash.screen3.title' => 'Build Confidence, \nOne Word at a Time',
-			'splash.screen3.description' => 'Designed for young learners with simple activities, friendly guidance, and a safe learning flow.',
-			'splash.screen3.option1' => '️🛡️ Safe For Kids',
-			'splash.screen3.option2' => '🌱 No pressure learning',
-			'splash.screen3.option3' => '⭐️ Made for young learners',
-			'auth.google' => 'Continue with Google',
-			'auth.facebook' => 'Continue with Facebook',
-			'auth.apple' => 'Continue with Apple',
-			'auth.guest' => 'Continue as Guest',
-			'auth.signInFailed' => ({required Object error}) => 'Sign-in failed: ${error}',
-			'home.seeAll' => 'See All',
-			'home.more' => 'More',
-			'home.online' => 'Online',
-			'home.offline' => 'Offline',
-			'home.placeholders.fashionDesigner' => 'Fashion Designer',
-			'home.placeholders.comedian' => 'Comedian',
-			'home.placeholders.influencer' => 'Influencer',
-			'home.placeholders.teacher' => 'Teacher',
-			'home.placeholders.friend' => 'Friend',
-			'home.greeting' => 'Hello,',
-			'home.guest' => 'Guest',
-			'home.thisWeek' => 'This Week',
-			'home.continueLearning' => 'Continue Learning',
-			'home.allLessons' => 'All Lessons',
-			'home.startLearning' => 'Start learning',
-			'home.resumeActivity' => ({required Object activity}) => 'Resume ${activity}',
-			'home.continueButton' => 'Continue',
-			'home.weekDays.0' => 'MON',
-			'home.weekDays.1' => 'TUE',
-			'home.weekDays.2' => 'WED',
-			'home.weekDays.3' => 'THU',
-			'home.weekDays.4' => 'FRI',
-			'home.weekDays.5' => 'SAT',
-			'home.weekDays.6' => 'SUN',
-			'home.lessons.alphabet' => 'Alphabet',
-			'home.lessons.numbers' => 'Numbers',
-			'home.lessons.colors' => 'Colors',
-			'home.lessons.shapes' => 'Shapes',
-			'home.lessons.fruit' => 'Fruit',
-			'home.lessons.vegetables' => 'Vegetables',
-			'home.lessons.sports' => 'Sports',
-			'home.lessons.fillIn' => 'Fill in',
-			'home.lessons.fillInBlank' => 'Fill in the Blank',
-			'home.lessonProgress' => ({required Object current, required Object total}) => 'Lesson ${current} of ${total}',
-			'notifications.today' => 'Today',
-			'notifications.yesterday' => 'Yesterday',
-			'notifications.weekAgo' => ({required Object week}) => '${week} week ago',
-			'notifications.monthAgo' => ({required Object month}) => '${month} month ago',
-			'notifications.yearAgo' => ({required Object year}) => '${year} year ago',
-			'notifications.noNotifications' => 'No notifications yet.',
-			'notifications.noNotificationsSubtitle' => 'Don\'t forget to check again when you receive the notification.',
-			'notifications.allDeleted' => 'All notifications have been successfully deleted',
-			'editProfile.aboutMe' => 'About Me',
-			'editProfile.aboutMeHint' => 'Write something about yourself',
-			'editProfile.fullName' => 'Full Name',
-			'editProfile.gender' => 'Gender',
-			'editProfile.male' => 'Male',
-			'editProfile.female' => 'Female',
-			'editProfile.dontWantToMention' => 'I don\'t want to mention it.',
-			'editProfile.country' => 'Country',
-			'editProfile.languagePreferences' => 'Language Preferences',
-			'editProfile.selectLanguage' => 'Add your preferred language',
-			'editProfile.saved' => 'Saved',
-			'editProfile.changesSaved' => 'Changes have been saved.',
-			'settingsSupport.title' => 'Settings & Support',
-			'settingsSupport.premiumTitle' => 'Unlimited access \nto all features',
-			'settingsSupport.getPremium' => 'Get Premium',
-			'settingsSupport.settingsHub' => 'Settings Hub',
-			'settingsSupport.shareTheApp' => 'Share the App',
-			'settingsSupport.rateUs' => 'Rate Us',
-			'settingsSupport.version' => 'Version',
-			'settingsSupport.notifications' => 'Notifications',
-			'settingsSupport.accountManagement' => 'Account Management',
-			'settingsSupport.deleteAccount' => 'Delete Account',
-			'settingsSupport.logOut' => 'Log Out',
-			'settingsSupport.logOutTitle' => 'You are about to log out',
-			'settingsSupport.logOutSubtitle' => 'See you again soon! \n We’ll miss you.',
-			'deleteAccount.title' => 'Delete Account',
-			'deleteAccount.warning' => 'Are you sure you want to delete your account?',
-			'deleteAccount.description' => 'This action cannot be undone, and all your history and data will be permanently deleted.',
-			'deleteAccount.deleteFailed' => ({required Object error}) => 'Account deletion failed: ${error}',
-			'deleteAccount.steps.step1.title' => 'We don\'t want you to go, but we understand.',
-			'deleteAccount.steps.step1.subtitle' => 'Can you tell us why you want to leave so we can improve the ChatFace experience?',
-			'deleteAccount.steps.step1.option1' => 'I didn\'t find the AI characters realistic.',
-			'deleteAccount.steps.step1.option2' => 'I am experiencing technical issues with video chats.',
-			'deleteAccount.steps.step1.option3' => 'Subscription prices are above my expectations.',
-			'deleteAccount.steps.step1.option4' => 'I couldn\'t find the type of characters I was looking for.',
-			'deleteAccount.steps.step1.option5' => 'I just wanted to try it out for a short time.',
-			'deleteAccount.steps.step1.option6' => 'Other',
-			'deleteAccount.steps.step2.title' => 'If you delete your account, you will say goodbye to:',
-			'deleteAccount.steps.step2.subtitle1' => 'Deep Connections and Memory:',
-			'deleteAccount.steps.step2.subtitle1Desc' => 'The characters you chat with will completely forget their past with you, your shared secrets, and your personal habits.',
-			'deleteAccount.steps.step2.subtitle2' => 'Video Call Privilege:',
-			'deleteAccount.steps.step2.subtitle2Desc' => 'You will lose the right to communicate face-to-face with your AI partners, who are available to you anytime.',
-			'deleteAccount.steps.step2.subtitle3' => 'Advanced Algorithm:',
-			'deleteAccount.steps.step2.subtitle3Desc' => 'Your \'Just for You\' character matches tailored to your preferences will be reset.',
-			'deleteAccount.steps.step2.subtitle4' => 'Profile Data:',
-			'deleteAccount.steps.step2.subtitle4Desc' => 'Your earned achievements, unlocked special characters, and chat history will be irreversibly deleted.',
-			'deleteAccount.steps.step3.title' => 'We have a special offer for you before you go!',
-			'deleteAccount.steps.step3.description' => 'Maybe you just need a little more time or a better deal. Instead of deleting your account, would you consider these?',
-			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'Keeping you with us is valuable. ${offer} on your next subscription! Would you like to continue with this offer?',
-			'deleteAccount.steps.step3.description1Offer' => 'We\'ve applied a 50% discount',
-			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'We have given you ${offer} credits so you can see new characters you haven\'t discovered yet.',
-			'deleteAccount.steps.step3.description2Offer' => '3 free video calls',
-			'deleteAccount.steps.step3.acceptOffer' => 'Accept 50% Discount Offer',
-			'deleteAccount.steps.step3.deleteMyAccount' => 'Delete My Account',
-			'cancel' => 'Cancel',
-			'delete' => 'Delete',
+			'termOfService.termsOfService.title' => 'Lingola Kids – Условия обслуживания',
+			'termOfService.termsOfService.lastUpdated' => 'Последнее обновление: 2026',
+			'termOfService.termsOfService.intro' => 'Эти Условия обслуживания («Условия») регулируют правила и условия использования мобильного приложения Lingola Kids («Приложение»). Загружая или используя Приложение, вы соглашаетесь с этими Условиями.',
+			'termOfService.termsOfService.section1Title' => '1. Область предоставления услуг и отказ от ответственности',
+			'termOfService.termsOfService.section1Body' => 'Lingola Kids предлагает визуальные, звуковые карточки и обучающие игры, чтобы помочь детям выучить английскую лексику. Приложение не является официальным образовательным учреждением; оно не гарантирует успех на экзаменах, получение ученых степеней или сертификатов о знании языка.',
+			'termOfService.termsOfService.section2Title' => '2. Условия использования',
+			'termOfService.termsOfService.section2Body' => '- Приложение предназначено для детей от 4 лет и старше.\n- Пользователям младше 13/18 лет настоятельно рекомендуется использовать приложение под присмотром родителей или законных опекунов.\n- Как родитель или законный опекун, разрешая своему ребенку использовать приложение, вы соглашаетесь с этими условиями от его имени.\n- Несанкционированное копирование, продажа, обратное проектирование или массовое распространение контента приложения строго запрещены.',
+			'termOfService.termsOfService.section3Title' => '3. Премиум и платные услуги',
+			'termOfService.termsOfService.section3Body' => 'Оплата за платные услуги, такие как премиум-пакеты слов и использование без рекламы, обрабатывается через App Store или Google Play. Отмена автоматически продлеваемых подписок осуществляется пользователем/родителем через их учетную запись в магазине. Lingola Kids не предоставляет возвраты напрямую.',
+			'termOfService.termsOfService.section4Title' => '4. Данные об обучении и конфиденциальность',
+			'termOfService.termsOfService.section4Body' => 'Данные об обучении (выученные слова, выполненные действия), обрабатываемые для улучшения пользовательского опыта и отслеживания прогресса, защищены нашей Политикой конфиденциальности. Считается, что любой пользователь Приложения принял Политику конфиденциальности.',
+			'termOfService.termsOfService.section5Title' => '5. Применимое право',
+			'termOfService.termsOfService.section5Body' => 'Настоящие Условия регулируются законодательством Турецкой Республики. Центральные суды и исполнительные органы Стамбула обладают юрисдикцией в отношении любых споров.',
+			'termOfService.termsOfService.section6Title' => '6. Контакты',
+			'termOfService.termsOfService.section6Body' => '📩 По любым вопросам, запросам или уведомлениям вы можете связаться с нами по адресу: support@fly-work.com',
+			'termOfService.privacyPolicy.title' => 'Lingola Kids – Политика конфиденциальности',
+			'termOfService.privacyPolicy.lastUpdated' => 'Последнее обновление: 2026',
+			'termOfService.privacyPolicy.intro' => 'Добро пожаловать в Lingola Kids. Защита конфиденциальности детей и семей — наш главный приоритет. В этой Политике конфиденциальности описывается, какая информация собирается, используется, защищается и как пользователи могут управлять своими данными.',
+			'termOfService.privacyPolicy.section1Title' => '1. Собранная информация',
+			'termOfService.privacyPolicy.section1Body' => '- Предоставляется пользователем/родителем: адрес электронной почты (если учетная запись создана), имя пользователя, предпочтения по языку и обучению, сохраненные слова.\n- Автоматически собирается: модель устройства, операционная система, IP-адрес, версия приложения, журналы сбоев и данные о прогрессе обучения.',
+			'termOfService.privacyPolicy.section2Title' => '2. Конфиденциальность детей (Важно)',
+			'termOfService.privacyPolicy.section2Body' => 'Lingola Kids предназначено для детей в возрасте от 4 лет и старше. Защита данных детей — наша главная цель:\n- Мы не собираем ненужные или конфиденциальные личные данные детей.\n- Детям не разрешается и не предлагается публично делиться контактными данными.\n- Поведенческое или персонализированное рекламное профилирование, ориентированное на детей, строго запрещено.\n- Родители или законные опекуны могут запросить проверку или удаление данных своего ребенка в любое время.',
+			'termOfService.privacyPolicy.section3Title' => '3. Цели обработки и обмена данными',
+			'termOfService.privacyPolicy.section3Body' => 'Ваши данные обрабатываются для отслеживания прогресса обучения, персонализации словарного контента и устранения технических проблем. Личная информация никогда не продается и не передается третьим лицам для коммерческого использования. Надежные поставщики услуг (облачное хранилище, аналитика и т. д.) обрабатывают данные строго в соответствии со своими обязательствами по конфиденциальности.',
+			'termOfService.privacyPolicy.section4Title' => '4. Права пользователей и родителей',
+			'termOfService.privacyPolicy.section4Body' => 'Пользователи и родители имеют право на доступ, исправление, запрос удаления учетной записи и требование постоянного удаления данных. Вы можете воспользоваться этими правами, связавшись с нашей службой поддержки.',
+			'termOfService.privacyPolicy.section5Title' => '5. Безопасность и хранение данных',
+			'termOfService.privacyPolicy.section5Body' => 'Данные защищены с помощью отраслевых стандартов шифрования и контроля доступа. Статистика обучения хранится до тех пор, пока учетная запись остается активной для обеспечения непрерывности, и удаляется при удалении учетной записи.',
+			'termOfService.privacyPolicy.section6Title' => '6. Контакты',
+			'termOfService.privacyPolicy.section6Body' => '📩 По вопросам конфиденциальности, удаления данных или запросам родителей обращайтесь к нам: support@fly-work.com',
+			'termOfService.cookiePolicy.title' => 'Политика использования файлов cookie',
+			'termOfService.cookiePolicy.lastUpdated' => 'Последнее обновление: 2026',
+			'termOfService.cookiePolicy.intro' => 'Добро пожаловать в ChatFace. Технологии цифровых помощников используются для того, чтобы сделать ваш опыт видеозвонков с ИИ более плавным, безопасным и персонализированным.',
+			'termOfService.cookiePolicy.important' => 'Эта политика объясняет, что такое файлы cookie, их назначение и как вы можете управлять своими предпочтениями.',
+			'termOfService.cookiePolicy.section1Title' => '1. ЧТО ТАКОЕ ФАЙЛЫ COOKIE?',
+			'termOfService.cookiePolicy.section1Body' => 'Файлы cookie — это небольшие файлы данных, размещаемые на вашем устройстве. Они не идентифицируют вас напрямую; они действуют как цифровые заметки, которые запоминают:\n• Настройки вызова и языка\n• Настройки сеанса и производительности.',
+			'termOfService.cookiePolicy.section2Title' => '2. КАКИЕ ТЕХНОЛОГИИ МЫ ИСПОЛЬЗУЕМ?',
+			'termOfService.cookiePolicy.section2Body' => 'Строго необходимые технологии\nТребуются для управления сеансами и контроля безопасности. Приложение может не работать должным образом без этих компонентов.\n\nПроизводительность и аналитика\nПомогает нам понять, какие истории читаются и какие области нуждаются в улучшении. Данные оцениваются анонимно.\n\nПерсонализация\nЗапоминает такие настройки, как языковые предпочтения и уровень чтения, чтобы обеспечить индивидуальный подход для ребенка.',
+			'termOfService.cookiePolicy.section3Title' => '3. ПОЧЕМУ МЫ ИСПОЛЬЗУЕМ ЭТИ ТЕХНОЛОГИИ?',
+			'termOfService.cookiePolicy.section3Body' => '• Чтобы приложение работало безопасно и бесперебойно.\n• Чтобы сделать чтение более плавным.\n• Чтобы запомнить повторяющиеся настройки.\n• Для определения функций для будущей разработки.',
+			'termOfService.cookiePolicy.section4Title' => '4. ТЕХНОЛОГИИ ТРЕТЬИХ ЛИЦ',
+			'termOfService.cookiePolicy.section4Body' => 'Некоторые технологии могут предоставляться поставщиками технических услуг и подпадают под их собственную политику. ChatFace уделяет первостепенное внимание безопасности данных в этих партнерствах.',
+			'termOfService.cookiePolicy.section5Title' => '5. КОНТРОЛЬ И УПРАВЛЕНИЕ COOKIE',
+			'termOfService.cookiePolicy.section5Body' => 'Пользователи могут ограничить эти технологии с помощью настроек устройства или приложения. Отключение основных технологий может вызвать проблемы, такие как невозможность начать видеозвонок.',
+			'termOfService.cookiePolicy.section6Title' => '6. КОНТАКТЫ',
+			'termOfService.cookiePolicy.section6Body' => '📩 По вопросам обращайтесь: support@fly-work.com',
+			'cookies' => 'Политика использования файлов cookie',
+			'privacy' => 'Политика конфиденциальности',
+			'onboarding.step5.permissionRequired' => 'Требуется разрешение',
+			'onboarding.step5.notNow' => 'Не сейчас',
+			'onboarding.step5.openSettings' => 'Открыть настройки',
+			'onboarding.step5.title' => 'Разрешения',
+			'onboarding.step5.permission1' => 'Доступ к камере',
+			'onboarding.step5.permission1Subtitle' => 'ChatFace использует вашу камереру для видеозвонков с ИИ-персонажами.',
+			'onboarding.step5.permission2' => 'Доступ к микрофону',
+			'onboarding.step5.permission2Subtitle' => 'ChatFace использует ваш микрофон для голосовых и видеозвонков.',
+			'onboarding.step5.permission3' => 'Доступ к местоположению',
+			'onboarding.step5.permission3Subtitle' => 'ChatFace использует ваше местоположение для персонализации вашего опыта.',
+			'onboarding.step1.title' => 'Как вас зовут?',
+			'onboarding.step1.subtitle' => 'Пожалуйста, введите ваше имя',
+			'onboarding.step1.hint' => 'Полное имя',
+			'onboarding.step2.title' => 'Сколько вам лет?',
+			'onboarding.step2.subtitle' => 'Вам должно быть не менее 18 лет для регистрации.',
+			'onboarding.step3.title' => 'Какой у вас пол?',
+			'onboarding.step3.subtitle' => 'Пожалуйста, выберите ваш пол',
+			'onboarding.step3.male' => 'Мужской',
+			'onboarding.step3.female' => 'Женский',
+			'onboarding.step3.dontWantToMention' => 'Я не хочу указывать.',
+			'onboarding.step4.title' => 'Развлекайтесь, \nоставаясь в безопасности',
+			'onboarding.step4.entry1' => 'Мы поддерживаем порядок',
+			'onboarding.step4.subentry1' => 'Мониторинг ИИ в реальном времени открыт',
+			'onboarding.step4.entry2' => 'Записи экрана',
+			'onboarding.step4.subentry2' => 'Нет записи без согласия',
+			'onboarding.step4.entry3' => 'Поддержка 24/7',
+			'onboarding.step4.subentry3' => 'Жалобы рассматриваются в любое время суток',
+			'onboarding.step4.entry4' => 'Только 18+',
+			'onboarding.step4.subentry4' => 'Не подходит для несовершеннолетних',
+			'onboarding.step4.communityRules' => 'Правила сообщества',
+			'onboarding.loading.titlePart1' => 'Ваш личный аккаунт\n',
+			'onboarding.loading.titlePart2' => 'Создается',
+			'onboarding.loading.subtitle' => 'Пожалуйста, подождите, ваш профиль готовится.',
+			'onboarding.kFinal.titlePart1' => 'Ваш личный аккаунт\n',
+			'onboarding.kFinal.titlePart2' => 'Создан',
+			'onboarding.kFinal.subtitle' => 'Наслаждайтесь общением с любым персонажем',
+			'onboarding.allowAccess' => 'Разрешить доступ',
+			'onboarding.iUnderstand' => 'Я понимаю',
+			'onboarding.login.title' => 'Продолжите ваше\nОбучающее путешествие',
+			'onboarding.login.subtitle' => 'Сохраняйте прогресс, открывайте уроки и\nпродолжайте учиться на всех устройствах.',
+			'onboarding.login.failed' => 'Вход не может быть выполнен.',
+			'onboarding.reward.points' => '⭐️ +50 очков',
+			'onboarding.reward.title' => 'Отличная работа 🎉',
+			'onboarding.reward.subtitle' => 'Вас ждут еще 200+ уроков!',
+			'onboarding.reward.progressLabel' => 'Первый шаг выполнен!',
+			'onboarding.reward.featureAlphabetTitle' => 'Полный алфавит и числа',
+			'onboarding.reward.featureAlphabetSubtitle' => '200+ интерактивных уроков',
+			'onboarding.reward.featureVoiceTitle' => 'Голосовое произношение',
+			'onboarding.reward.featureVoiceSubtitle' => 'Аудиоподдержка каждого слова',
+			'onboarding.reward.featureQuizTitle' => 'Игровые мини-викторины',
+			'onboarding.reward.featureQuizSubtitle' => 'Учитесь, развлекаясь',
+			'onboarding.reward.continueButton' => 'Продолжить исследование',
+			'onboarding.spellTitle' => 'Напиши слово, которое видишь!',
+			'onboarding.spellSubtitle' => 'Сможешь написать «LION»?',
+			'onboarding.spellSuccessTitle' => 'Отлично! Это LION',
+			'onboarding.spellSuccessSubtitle' => 'нажмите, чтобы послушать',
+			'pressBackAgainToExit' => 'Нажмите назад еще раз, чтобы выйти',
+			'splash.initial.hello' => 'Привет',
+			'splash.initial.title' => 'ИГРОВОЙ АНГЛИЙСКИЙ ДЛЯ ДЕТЕЙ',
+			'splash.screen1.title' => 'Изучение английского \nМожет казаться игрой',
+			'splash.screen1.description' => 'Короткие, игровые уроки помогают детям учить новые слова без давления.',
+			'splash.screen2.title' => 'Слушайте, повторяйте и \nУчите новые слова',
+			'splash.screen2.description' => 'Простые голосовые упражнения помогают детям шаг за шагом практиковать произношение.',
+			'splash.screen3.title' => 'Развивайте уверенность, \nПо одному слову',
+			'splash.screen3.description' => 'Разработано для юных учеников с простыми заданиями, дружелюбным руководством и безопасным процессом обучения.',
+			'splash.screen3.option1' => '️🛡️ Безопасно для детей',
+			'splash.screen3.option2' => '🌱 Обучение без давления',
+			'splash.screen3.option3' => '⭐️ Создано для юных учеников',
+			'auth.google' => 'Продолжить с Google',
+			'auth.facebook' => 'Продолжить с Facebook',
+			'auth.apple' => 'Продолжить с Apple',
+			'auth.guest' => 'Продолжить как гость',
+			'auth.signInFailed' => ({required Object error}) => 'Ошибка входа: ${error}',
+			'home.seeAll' => 'Смотреть все',
+			'home.more' => 'Еще',
+			'home.online' => 'В сети',
+			'home.offline' => 'Не в сети',
+			'home.placeholders.fashionDesigner' => 'Модельер',
+			'home.placeholders.comedian' => 'Комик',
+			'home.placeholders.influencer' => 'Инфлюенсер',
+			'home.placeholders.teacher' => 'Учитель',
+			'home.placeholders.friend' => 'Друг',
+			'home.greeting' => 'Привет,',
+			'home.guest' => 'Гость',
+			'home.thisWeek' => 'На этой неделе',
+			'home.continueLearning' => 'Продолжить обучение',
+			'home.allLessons' => 'Все уроки',
+			'home.startLearning' => 'Начать обучение',
+			'home.resumeActivity' => ({required Object activity}) => 'Возобновить ${activity}',
+			'home.continueButton' => 'Продолжить',
+			'home.weekDays.0' => 'ПН',
+			'home.weekDays.1' => 'ВТ',
+			'home.weekDays.2' => 'СР',
+			'home.weekDays.3' => 'ЧТ',
+			'home.weekDays.4' => 'ПТ',
+			'home.weekDays.5' => 'СБ',
+			'home.weekDays.6' => 'ВС',
+			'home.lessons.alphabet' => 'Алфавит',
+			'home.lessons.numbers' => 'Цифры',
+			'home.lessons.colors' => 'Цвета',
+			'home.lessons.shapes' => 'Формы',
+			'home.lessons.fruit' => 'Фрукты',
+			'home.lessons.vegetables' => 'Овощи',
+			'home.lessons.sports' => 'Спорт',
+			'home.lessons.fillIn' => 'Вставить',
+			'home.lessons.fillInBlank' => 'Заполнить пропуск',
+			'home.lessonProgress' => ({required Object current, required Object total}) => 'Урок ${current} из ${total}',
+			'notifications.today' => 'Сегодня',
+			'notifications.yesterday' => 'Вчера',
+			'notifications.weekAgo' => ({required Object week}) => '${week} нед. назад',
+			'notifications.monthAgo' => ({required Object month}) => '${month} мес. назад',
+			'notifications.yearAgo' => ({required Object year}) => '${year} год назад',
+			'notifications.noNotifications' => 'Пока нет уведомлений.',
+			'notifications.noNotificationsSubtitle' => 'Не забудьте проверить еще раз, когда получите уведомление.',
+			'notifications.allDeleted' => 'Все уведомления были успешно удалены',
+			'editProfile.aboutMe' => 'Обо мне',
+			'editProfile.aboutMeHint' => 'Напишите что-нибудь о себе',
+			'editProfile.fullName' => 'Полное имя',
+			'editProfile.gender' => 'Пол',
+			'editProfile.male' => 'Мужской',
+			'editProfile.female' => 'Женский',
+			'editProfile.dontWantToMention' => 'Я не хочу указывать.',
+			'editProfile.country' => 'Страна',
+			'editProfile.languagePreferences' => 'Языковые предпочтения',
+			'editProfile.selectLanguage' => 'Добавьте предпочитаемый язык',
+			'editProfile.saved' => 'Сохранено',
+			'editProfile.changesSaved' => 'Изменения сохранены.',
+			'settingsSupport.title' => 'Настройки и поддержка',
+			'settingsSupport.premiumTitle' => 'Неограниченный доступ \nко всем функциям',
+			'settingsSupport.getPremium' => 'Получить Premium',
+			'settingsSupport.settingsHub' => 'Центр настроек',
+			'settingsSupport.shareTheApp' => 'Поделиться приложением',
+			'settingsSupport.rateUs' => 'Оцените нас',
+			'settingsSupport.version' => 'Версия',
+			'settingsSupport.notifications' => 'Уведомления',
+			'settingsSupport.accountManagement' => 'Управление аккаунтом',
+			'settingsSupport.deleteAccount' => 'Удалить аккаунт',
+			'settingsSupport.logOut' => 'Выйти',
+			'settingsSupport.logOutTitle' => 'Вы собираетесь выйти',
+			'settingsSupport.logOutSubtitle' => 'До скорой встречи! \n Мы будем скучать по вам.',
+			'deleteAccount.title' => 'Удалить аккаунт',
+			'deleteAccount.warning' => 'Вы уверены, что хотите удалить свой аккаунт?',
+			'deleteAccount.description' => 'Это действие нельзя отменить, и вся ваша история и данные будут навсегда удалены.',
+			'deleteAccount.deleteFailed' => ({required Object error}) => 'Ошибка удаления аккаунта: ${error}',
+			'deleteAccount.steps.step1.title' => 'Мы не хотим, чтобы вы уходили, но мы понимаем.',
+			'deleteAccount.steps.step1.subtitle' => 'Не могли бы вы сказать нам, почему вы хотите уйти, чтобы мы могли улучшить ChatFace?',
+			'deleteAccount.steps.step1.option1' => 'Мне не показались реалистичными ИИ-персонажи.',
+			'deleteAccount.steps.step1.option2' => 'Я испытываю технические проблемы с видеочатами.',
+			'deleteAccount.steps.step1.option3' => 'Цены на подписку выше моих ожиданий.',
+			'deleteAccount.steps.step1.option4' => 'Я не смог найти тип персонажей, который искал.',
+			'deleteAccount.steps.step1.option5' => 'Я просто хотел попробовать ненадолго.',
+			'deleteAccount.steps.step1.option6' => 'Другое',
+			'deleteAccount.steps.step2.title' => 'Если вы удалите свой аккаунт, вы попрощаетесь с:',
+			'deleteAccount.steps.step2.subtitle1' => 'Глубокими связями и памятью:',
+			'deleteAccount.steps.step2.subtitle1Desc' => 'Персонажи, с которыми вы общаетесь, полностью забудут свое прошлое с вами, ваши общие секреты и личные привычки.',
+			'deleteAccount.steps.step2.subtitle2' => 'Привилегией видеозвонка:',
+			'deleteAccount.steps.step2.subtitle2Desc' => 'Вы потеряете право общаться лицом к лицу с вашими ИИ-партнерами, которые доступны вам в любое время.',
+			'deleteAccount.steps.step2.subtitle3' => 'Продвинутым алгоритмом:',
+			'deleteAccount.steps.step2.subtitle3Desc' => 'Ваши совпадения персонажей «Только для вас», созданные с учетом ваших предпочтений, будут сброшены.',
+			'deleteAccount.steps.step2.subtitle4' => 'Данными профиля:',
+			'deleteAccount.steps.step2.subtitle4Desc' => 'Ваши заработанные достижения, разблокированные специальные персонажи и история чатов будут безвозвратно удалены.',
+			'deleteAccount.steps.step3.title' => 'У нас есть для вас специальное предложение, прежде чем вы уйдете!',
+			'deleteAccount.steps.step3.description' => 'Может быть, вам просто нужно немного больше времени или лучшее предложение. Вместо того чтобы удалять аккаунт, не рассмотрите ли вы это?',
+			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'Держать вас с нами — это ценно. ${offer} на вашу следующую подписку! Хотели бы вы продолжить с этим предложением?',
+			'deleteAccount.steps.step3.description1Offer' => 'Мы применили скидку 50%',
+			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'Мы дали вам ${offer} кредитов, чтобы вы могли увидеть новых персонажей, которых вы еще не обнаружили.',
+			'deleteAccount.steps.step3.description2Offer' => '3 бесплатных видеозвонка',
+			'deleteAccount.steps.step3.acceptOffer' => 'Принять предложение со скидкой 50%',
+			'deleteAccount.steps.step3.deleteMyAccount' => 'Удалить мой аккаунт',
+			'cancel' => 'Отмена',
+			'delete' => 'Удалить',
 			'premium' => 'Premium',
-			'profileEdit' => 'Profile Edit',
-			'settings' => 'Settings',
-			'undo' => 'Undo',
-			'successfully' => 'Successfully',
-			'save' => 'Save',
-			'languageOptions.english' => 'English',
-			'languageOptions.chinese' => 'Chinese',
-			'languageOptions.german' => 'German',
-			'languageOptions.italian' => 'Italian',
-			'languageOptions.french' => 'French',
-			'languageOptions.japanese' => 'Japanese',
-			'languageOptions.spanish' => 'Spanish',
-			'languageOptions.russian' => 'Russian',
-			'languageOptions.turkish' => 'Turkish',
-			'languageOptions.korean' => 'Korean',
-			'languageOptions.hindi' => 'Hindi',
-			'languageOptions.portuguese' => 'Portuguese',
-			'common.tryAgain' => 'Try Again',
-			'common.retry' => 'Retry',
-			'common.close' => 'Close',
-			'profileScreen.title' => 'Profile',
-			'profileScreen.greeting' => 'Hello,',
-			'profileScreen.account' => 'ACCOUNT',
-			'profileScreen.app' => 'APP',
-			'profileScreen.statusLoading' => 'Status loading',
-			'profileScreen.premiumActive' => 'Active • Pro Member',
-			'profileScreen.freePlan' => 'Free Plan',
-			'profileScreen.loadFailed' => 'Profile information could not be loaded. Pull down to try again.',
-			'profileScreen.accountSettings' => 'Account Settings',
-			'profileScreen.accountSettingsGuestSubtitle' => 'Name and avatar',
-			'profileScreen.accountSettingsSubtitle' => 'Name, Photo, E-mail',
-			'profileScreen.manageSubscription' => 'Manage Subscription',
-			'profileScreen.screenTime' => 'Screen Time',
-			'profileScreen.rateApp' => 'Rate the App',
-			'profileScreen.supportUs' => 'Support us',
-			'profileScreen.rateComingSoon' => 'Rating will be available soon.',
-			'profileScreen.privacyPolicy' => 'Privacy Policy',
-			'profileScreen.privacySubtitle' => 'Protect data',
-			'profileScreen.termsOfService' => 'Terms of Service',
-			'profileScreen.termsSubtitle' => 'Data and terms',
-			'profileScreen.logout' => 'Log Out',
-			'profileScreen.logoutDialogTitle' => 'You are about to log\nout of your account',
-			'profileScreen.logoutFailed' => 'Could not log out. Please try again.',
-			'profileScreen.subscriptionFailed' => 'Subscription screen could not be opened. Please try again.',
-			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Today ${minutes} minutes',
-			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Today ${hours} hours',
-			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Today ${hours} hours ${minutes} minutes',
-			'editProfileScreen.changeAvatar' => 'Change Avatar',
-			'editProfileScreen.email' => 'E-mail',
-			'editProfileScreen.emailHelper' => 'This field comes from your backend account.',
-			'editProfileScreen.deleteDialogTitle' => 'Are you sure want to\ndelete your account?',
-			'editProfileScreen.accountDeleteFailed' => 'Account could not be deleted. Please try again.',
-			'editProfileScreen.profileSaveFailed' => 'Profile could not be saved. Please try again.',
-			'premiumAccess.openFailed' => 'Premium screen could not be opened. Please try again.',
-			'parentalGate.barrierLabel' => 'Parental gate',
-			'parentalGate.question' => 'What is the result of this operation?',
-			'parentalGate.submit' => 'Submit',
-			'activities.flashCards' => 'Flash Cards',
-			'activities.drawing' => 'Drawing',
-			'activities.flipCards' => 'Flip Cards',
-			'activities.trueFalse' => 'True False',
-			'activities.spelling' => 'Spelling',
-			'resultSheet.correct' => 'Correct',
-			'resultSheet.tryAgain' => 'Try Again',
-			'resultSheet.correctBody' => 'You are doing great!',
-			'resultSheet.tryAgainBody' => 'Try one more time!',
-			'trueFalseView.isThisLetter' => ({required Object letter}) => 'Is this letter ${letter}?',
-			'trueFalseView.isThisNumber' => ({required Object number}) => 'Is this number ${number}?',
-			'trueFalseView.isThisShape' => ({required Object shape}) => 'Is this shape ${shape}?',
-			'trueFalseView.isThisSubject' => ({required Object subject}) => 'Is this ${subject}?',
-			'trueFalseView.trueText' => 'True',
-			'trueFalseView.falseText' => 'False',
+			'profileEdit' => 'Редактировать профиль',
+			'settings' => 'Настройки',
+			'undo' => 'Отменить',
+			'successfully' => 'Успешно',
+			'save' => 'Сохранить',
+			'languageOptions.english' => 'Английский',
+			'languageOptions.chinese' => 'Китайский',
+			'languageOptions.german' => 'Немецкий',
+			'languageOptions.italian' => 'Итальянский',
+			'languageOptions.french' => 'Французский',
+			'languageOptions.japanese' => 'Японский',
+			'languageOptions.spanish' => 'Испанский',
+			'languageOptions.russian' => 'Русский',
+			'languageOptions.turkish' => 'Турецкий',
+			'languageOptions.korean' => 'Корейский',
+			'languageOptions.hindi' => 'Хинди',
+			'languageOptions.portuguese' => 'Португальский',
+			'common.tryAgain' => 'Попробовать снова',
+			'common.retry' => 'Повторить',
+			'common.close' => 'Закрыть',
+			'profileScreen.title' => 'Профиль',
+			'profileScreen.greeting' => 'Привет,',
+			'profileScreen.account' => 'АККАУНТ',
+			'profileScreen.app' => 'ПРИЛОЖЕНИЕ',
+			'profileScreen.statusLoading' => 'Загрузка статуса',
+			'profileScreen.premiumActive' => 'Активен • Pro Подписка',
+			'profileScreen.freePlan' => 'Бесплатный план',
+			'profileScreen.loadFailed' => 'Не удалось загрузить информацию профиля. Потяните вниз, чтобы попробовать снова.',
+			'profileScreen.accountSettings' => 'Настройки аккаунта',
+			'profileScreen.accountSettingsGuestSubtitle' => 'Имя и аватар',
+			'profileScreen.accountSettingsSubtitle' => 'Имя, Фото, Электронная почта',
+			'profileScreen.manageSubscription' => 'Управление подпиской',
+			'profileScreen.screenTime' => 'Экранное время',
+			'profileScreen.rateApp' => 'Оценить приложение',
+			'profileScreen.supportUs' => 'Поддержите нас',
+			'profileScreen.rateComingSoon' => 'Оценка скоро будет доступна.',
+			'profileScreen.changeLanguage' => 'Язык',
+			'profileScreen.changeLanguageSubtitle' => 'Изменить язык приложения',
+			'profileScreen.privacyPolicy' => 'Политика конфиденциальности',
+			'profileScreen.privacySubtitle' => 'Защита данных',
+			'profileScreen.termsOfService' => 'Условия обслуживания',
+			'profileScreen.termsSubtitle' => 'Данные и условия',
+			'profileScreen.logout' => 'Выйти',
+			'profileScreen.logoutDialogTitle' => 'Вы собираетесь выйти\nиз своего аккаунта',
+			'profileScreen.logoutFailed' => 'Не удалось выйти. Пожалуйста, попробуйте снова.',
+			'profileScreen.subscriptionFailed' => 'Не удалось открыть экран подписки. Пожалуйста, попробуйте снова.',
+			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Сегодня ${minutes} минут',
+			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Сегодня ${hours} часов',
+			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Сегодня ${hours} часов ${minutes} минут',
+			'editProfileScreen.changeAvatar' => 'Изменить аватар',
+			'editProfileScreen.email' => 'Эл. почта',
+			'editProfileScreen.emailHelper' => 'Это поле поступает из вашего внутреннего аккаунта.',
+			'editProfileScreen.deleteDialogTitle' => 'Вы уверены, что хотите\nудалить свой аккаунт?',
+			'editProfileScreen.accountDeleteFailed' => 'Не удалось удалить аккаунт. Пожалуйста, попробуйте снова.',
+			'editProfileScreen.profileSaveFailed' => 'Не удалось сохранить профиль. Пожалуйста, попробуйте снова.',
+			'premiumAccess.openFailed' => 'Не удалось открыть экран Premium. Пожалуйста, попробуйте снова.',
+			'parentalGate.barrierLabel' => 'Родительский контроль',
+			'parentalGate.question' => 'Каков результат этой операции?',
+			'parentalGate.submit' => 'Отправить',
+			'activities.flashCards' => 'Флэш-карточки',
+			'activities.drawing' => 'Рисование',
+			'activities.flipCards' => 'Переворот карточек',
+			'activities.trueFalse' => 'Правда Ложь',
+			'activities.spelling' => 'Орфография',
+			'resultSheet.correct' => 'Правильно',
+			'resultSheet.tryAgain' => 'Попробовать снова',
+			'resultSheet.correctBody' => 'У тебя отлично получается!',
+			'resultSheet.tryAgainBody' => 'Попробуй еще раз!',
+			'trueFalseView.isThisLetter' => ({required Object letter}) => 'Эта буква ${letter}?',
+			'trueFalseView.isThisNumber' => ({required Object number}) => 'Это число ${number}?',
+			'trueFalseView.isThisShape' => ({required Object shape}) => 'Эта форма ${shape}?',
+			'trueFalseView.isThisSubject' => ({required Object subject}) => 'Это ${subject}?',
+			'trueFalseView.trueText' => 'Правда',
+			'trueFalseView.falseText' => 'Ложь',
 			_ => null,
 		};
 	}

@@ -85,15 +85,15 @@ class _TranslationsTermOfServiceZh implements TranslationsTermOfServiceEn {
 	final TranslationsZh _root; // ignore: unused_field
 
 	// Translations
-	@override String get text1 => '注册 ChatFace 即表示您同意我们的 ';
+	@override String get text1 => '注册 Lingola Kids 即表示您同意我们的 ';
 	@override String get link1 => '服务条款';
-	@override String get text2 => '。了解我们如何处理您的数据，请查阅我们的 ';
+	@override String get text2 => '。在我们的 ';
 	@override String get link2 => '隐私政策';
 	@override String get text3 => ' 和 ';
 	@override String get link3 => 'Cookie 政策';
-	@override String get text4 => '';
-	@override late final _TranslationsTermOfServicePrivacyPolicyZh privacyPolicy = _TranslationsTermOfServicePrivacyPolicyZh._(_root);
+	@override String get text4 => '中了解我们如何处理您的数据。';
 	@override late final _TranslationsTermOfServiceTermsOfServiceZh termsOfService = _TranslationsTermOfServiceTermsOfServiceZh._(_root);
+	@override late final _TranslationsTermOfServicePrivacyPolicyZh privacyPolicy = _TranslationsTermOfServicePrivacyPolicyZh._(_root);
 	@override late final _TranslationsTermOfServiceCookiePolicyZh cookiePolicy = _TranslationsTermOfServiceCookiePolicyZh._(_root);
 }
 
@@ -315,6 +315,8 @@ class _TranslationsProfileScreenZh implements TranslationsProfileScreenEn {
 	@override String get privacySubtitle => '保护数据';
 	@override String get termsOfService => '服务条款';
 	@override String get termsSubtitle => '数据与条款';
+	@override String get changeLanguage => '语言';
+	@override String get changeLanguageSubtitle => '更改应用语言';
 	@override String get logout => '登出';
 	@override String get logoutDialogTitle => '您即将从帐户\n登出';
 	@override String get logoutFailed => '无法登出。请重试。';
@@ -403,37 +405,6 @@ class _TranslationsTrueFalseViewZh implements TranslationsTrueFalseViewEn {
 	@override String get falseText => '错误';
 }
 
-// Path: termOfService.privacyPolicy
-class _TranslationsTermOfServicePrivacyPolicyZh implements TranslationsTermOfServicePrivacyPolicyEn {
-	_TranslationsTermOfServicePrivacyPolicyZh._(this._root);
-
-	final TranslationsZh _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => '隐私政策';
-	@override String get lastUpdated => '最后更新：2026';
-	@override String get intro => 'ChatFace 将用户隐私和数据安全作为核心原则。您的所有个人数据均按照有效的数据保护法规进行处理。';
-	@override String get section1Title => '1. 收集的信息';
-	@override String get section1sub1Title => '1.1 用户提供的数据';
-	@override String get section1sub1Body => '• 名称、昵称、年龄、性别、国家、个人资料信息以及您选择上传的可选个人资料照片。\n• 用于注册、订阅和支持的电子邮件地址。\n• 交互偏好、所选语言、AI 角色选择、消息、语音转录、上传的聊天图片、反馈和支持消息。';
-	@override String get section1sub2Title => '1.2 自动收集的数据';
-	@override String get section1sub2Body => 'ChatFace 可能会收集设备类型、操作系统、从网络信号推断的近似国家/城市、应用使用数据、崩溃日志、订阅状态和通知投递数据。在入门过程中不会请求精确位置，AI 聊天或通话也不要求提供精确位置。';
-	@override String get section2Title => '2. 数据处理目的';
-	@override String get section2Body => '您的个人数据用于运行应用、验证您的帐户、提供 AI 聊天及语音/视频通话功能、个性化语言和角色交互、处理订阅、在启用时发送通知、预防滥用、审查用户报告、提高可靠性并履行法律义务。您的个人数据不会被出售或用于广告目的。';
-	@override String get section3Title => '3. AI 处理与第三方共享';
-	@override String get section3Body => '为提供更好的 AI 体验，ChatFace 会安全地使用包括 OpenAI 在内的第三方服务提供商来处理您提交的文本、语音、图像及相关数据。消息、语音转录、所选语言、个人资料上下文、会话历史和上传的聊天图片可能会发送到 OpenAI 以生成 AI 回复和审核结果。语音音频可能根据服务器配置发送到 OpenAI 或 Deepgram 进行转录。助手文本可能会发送到 ElevenLabs 以生成语音。上传的个人资料和聊天图片、生成的音频及相关媒体可能存储在 BunnyCDN。OneSignal 可能处理通知标识和投递数据。RevenueCat 和应用商店处理订阅及权限数据。当您使用社交登录时，Apple、Google 或 Facebook 可能会处理相应的登录数据。这些提供商仅用于执行请求的服务，并应根据其自身的安全与隐私条款保护数据。根据 OpenAI 的 API 政策，OpenAI API 的数据不会用于训练 OpenAI 的模型。';
-	@override String get section4Title => '4. 照片、相机、麦克风和面部数据';
-	@override String get section4Body => '相机访问用于在您开始视频通话时进行本地预览。相机预览保留在您的设备上。ChatFace 不会收集面部生物特征数据、面部模板、面部几何、面部识别标识符或面部档案。若您选择上传，个人资料照片和聊天图片可能包含人脸；这些图片仅作为用户提供的照片用于个人资料显示或 AI 会话上下文进行存储和处理。麦克风访问用于语音和视频会话，以便将您的语音转录并由 AI 作出回应。';
-	@override String get section5Title => '5. 数据保留与删除';
-	@override String get section5Body => '个人资料数据、个人资料照片、会话历史、上传的聊天图片、报告、通知设置和订阅权限记录在您的帐户处于激活状态期间或出于法律、安全、欺诈预防和支持目的所需期间保留。当您删除帐户时，个人帐户记录会在符合法律和运营保留要求的前提下从 ChatFace 系统中删除。与第三方基础设施存储的媒体将根据我们的删除流程和提供商的保留行为被移除或设为不可访问。';
-	@override String get section6Title => '6. 用户权利';
-	@override String get section6Body => '根据适用的隐私法律，您可以请求访问、更正、删除、反对、限制或便携您的个人数据。您可以联系我们提出这些请求。';
-	@override String get section7Title => '7. 儿童隐私';
-	@override String get section7Body => 'ChatFace 不面向 18 岁以下用户。我们不会有意收集该年龄组的数据；一经发现，此类帐户将被关闭并删除数据。';
-	@override String get section8Title => '8. 联系方式';
-	@override String get section8Body => '隐私问题请联系：support@fly-work.com';
-}
-
 // Path: termOfService.termsOfService
 class _TranslationsTermOfServiceTermsOfServiceZh implements TranslationsTermOfServiceTermsOfServiceEn {
 	_TranslationsTermOfServiceTermsOfServiceZh._(this._root);
@@ -441,26 +412,45 @@ class _TranslationsTermOfServiceTermsOfServiceZh implements TranslationsTermOfSe
 	final TranslationsZh _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '服务条款';
-	@override String get lastUpdated => '最后更新：2026';
-	@override String get intro => '本条款约束 ChatFace 移动应用的使用。使用该应用即表示您同意这些条款。';
-	@override String get disclaimer => '免责声明：ChatFace 是一个 AI 视频交互应用。它不提供法律、学术、医疗或专业咨询服务。';
-	@override String get section1Title => '1. 服务范围';
-	@override String get section1Body => 'ChatFace 提供基于 AI 的视频交互体验：\n\n• AI 视频通话与会话。\n• 个性化交互偏好。\n• 访问交互历史和记录。\n\n本服务不构成正式意见或专业指导保证。';
+	@override String get title => 'Lingola Kids – 服务条款';
+	@override String get lastUpdated => '最后更新：2026年';
+	@override String get intro => '本服务条款（“条款”）规定了使用 Lingola Kids 移动应用程序（“应用”）的规则和条件。下载或使用本应用，即表示您同意本条款。';
+	@override String get section1Title => '1. 服务范围与免责声明';
+	@override String get section1Body => 'Lingola Kids 提供视觉、音频抽认卡和教育游戏，帮助儿童学习英语词汇。本应用非官方教育机构；不保证考试成功、学位获得或语言能力证书的取得。';
 	@override String get section2Title => '2. 使用条件';
-	@override String get section2Body => '• 您必须年满 18 岁（禁止 18 岁以下访问）。\n• 您必须提供准确的帐户信息。\n• 应仅将该应用用于合法和个人用途。';
-	@override String get section3Title => '3. 禁止的使用';
-	@override String get section3Body => '冒充他人、仇恨言论、危及儿童安全、尝试违反安全以及操纵 AI 系统的行为严禁。';
-	@override String get section4Title => '4. 订阅与付款';
-	@override String get section4Body => '高级功能受 App Store 和 Google Play 政策约束。订阅取消和退款通过各自商店的设置管理。';
-	@override String get section5Title => '5. 内容免责声明';
-	@override String get section5Body => '内容由 AI 生成，不代替专业建议。ChatFace 不保证内容的准确性或适用性。';
-	@override String get section6Title => '6. 知识产权';
-	@override String get section6Body => '包括设计、软件和算法在内的所有内容均归 ChatFace 所有。未经授权的复制或再分发被禁止。';
-	@override String get section7Title => '7. 适用法律';
-	@override String get section7Body => '本条款受土耳其共和国法律管辖。伊斯坦布尔中央法院对争议具有管辖权。';
-	@override String get section8Title => '8. 联系方式';
-	@override String get section8Body => '📩 咨询请联系：support@fly-work.com';
+	@override String get section2Body => '- 本应用专为 4 岁及以上儿童设计。\n- 强烈建议未满 13/18 岁的用户在父母或法定监护人的监督下使用本应用。\n- 作为父母或法定监护人，允许您的孩子使用本应用，即表示您代表他们同意这些条款。\n- 严禁未经授权复制、出售、逆向工程或批量分发应用内容。';
+	@override String get section3Title => '3. 高级与付费服务';
+	@override String get section3Body => '付费服务（如高级词汇包和无广告体验）的付款通过 App Store 或 Google Play 进行处理。自动续订订阅的取消由用户/父母通过其商店账户进行管理。Lingola Kids 不直接提供退款。';
+	@override String get section4Title => '4. 学习数据与隐私';
+	@override String get section4Body => '为改善用户体验和进度跟踪而处理的学习数据（学习的单词、完成的活动）受我们隐私政策的保护。任何使用本应用的人均被视为接受隐私政策。';
+	@override String get section5Title => '5. 适用法律';
+	@override String get section5Body => '本条款受土耳其共和国法律管辖。伊斯坦布尔中央法院和执行办公室对任何争议拥有管辖权。';
+	@override String get section6Title => '6. 联系方式';
+	@override String get section6Body => '📩 如有任何疑问、请求或通知，您可以联系我们：support@fly-work.com';
+}
+
+// Path: termOfService.privacyPolicy
+class _TranslationsTermOfServicePrivacyPolicyZh implements TranslationsTermOfServicePrivacyPolicyEn {
+	_TranslationsTermOfServicePrivacyPolicyZh._(this._root);
+
+	final TranslationsZh _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Lingola Kids – 隐私政策';
+	@override String get lastUpdated => '最后更新：2026年';
+	@override String get intro => '欢迎使用 Lingola Kids。保护儿童和家庭的隐私是我们的首要任务。本隐私政策概述了我们收集、使用、保护的信息，以及用户如何管理他们的数据。';
+	@override String get section1Title => '1. 收集的信息';
+	@override String get section1Body => '- 用户/父母提供：电子邮件地址（如果创建了帐户）、用户名、语言和学习偏好、保存的单词。\n- 自动收集：设备型号、操作系统、IP 地址、应用程序版本、崩溃日志和学习进度数据。';
+	@override String get section2Title => '2. 儿童隐私（重要）';
+	@override String get section2Body => 'Lingola Kids 专为 4 岁及以上儿童设计。保护儿童数据是我们的核心重点：\n- 我们不会向儿童收集不必要或敏感的个人数据。\n- 不允许也未提示儿童公开分享联系方式。\n- 严禁针对儿童的基于行为或个性化的广告分析。\n- 父母或法定监护人可以随时要求查看或删除其孩子的数据。';
+	@override String get section3Title => '3. 数据处理和共享的目的';
+	@override String get section3Body => '处理您的数据是为了跟踪学习进度、个性化词汇内容并修复技术问题。个人信息绝对不会为了商业用途而出售或与第三方共享。受信任的服务提供商（云存储、分析等）在严格保密义务下处理数据。';
+	@override String get section4Title => '4. 用户和父母的权利';
+	@override String get section4Body => '用户和父母有权访问、纠正、请求删除帐户以及要求永久删除数据。您可以通过联系我们的支持团队来行使这些权利。';
+	@override String get section5Title => '5. 数据安全与保留';
+	@override String get section5Body => '数据通过行业标准加密和访问控制得到保护。只要帐户保持活跃，学习统计数据就会被保存以确保连续性，并在帐户删除时被清除。';
+	@override String get section6Title => '6. 联系方式';
+	@override String get section6Body => '📩 对于隐私查询、数据删除或父母请求，请联系我们：support@fly-work.com';
 }
 
 // Path: termOfService.cookiePolicy
@@ -471,21 +461,21 @@ class _TranslationsTermOfServiceCookiePolicyZh implements TranslationsTermOfServ
 
 	// Translations
 	@override String get title => 'Cookie 政策';
-	@override String get lastUpdated => '最后更新：2026';
-	@override String get intro => '欢迎使用 ChatFace。我们使用数字辅助技术以使您的 AI 视频通话体验更顺畅、更安全并更具个性化。';
-	@override String get important => '本政策解释了什么是 Cookie、其用途以及如何管理您的偏好。';
+	@override String get lastUpdated => '最后更新：2026年';
+	@override String get intro => '欢迎使用 ChatFace。使用数字助手技术是为了让您的 AI 视频通话体验更加顺畅、安全和个性化。';
+	@override String get important => '本政策说明了什么是 Cookie、它们的用途以及您如何管理您的偏好设置。';
 	@override String get section1Title => '1. 什么是 Cookie？';
-	@override String get section1Body => 'Cookie 是放置在您设备上的小数据文件。它们不会直接识别您；它们像数字便签一样记住：\n• 通话和语言设置\n• 会话和性能偏好。';
+	@override String get section1Body => 'Cookie 是放置在您的设备上的小型数据文件。它们不会直接识别您的身份；它们充当数字便签，记住：\n• 通话和语言设置\n• 会话和性能偏好。';
 	@override String get section2Title => '2. 我们使用哪些技术？';
-	@override String get section2Body => '必要的技术\n用于会话管理和安全控制。没有这些组件，应用可能无法正常运行。\n\n性能与分析\n帮助我们理解哪些故事被阅读和哪些领域需要改进。数据以匿名方式评估。\n\n个性化\n记住语言偏好和阅读等级等设置，以为孩子提供定制体验。';
+	@override String get section2Body => '绝对必要的技术\n为会话管理和安全控制所必需。如果没有这些组件，应用程序可能无法正常运行。\n\n性能和分析\n帮助我们了解哪些故事被阅读以及哪些领域需要改进。数据将匿名评估。\n\n个性化\n记住语言偏好和阅读水平等设置，为儿童提供量身定制的体验。';
 	@override String get section3Title => '3. 我们为什么使用这些技术？';
-	@override String get section3Body => '• 确保应用安全且顺畅运行。\n• 使阅读体验更流畅。\n• 记住重复性设置。\n• 识别未来开发的功能。';
+	@override String get section3Body => '• 为了确保应用程序安全顺畅地运行。\n• 为了使阅读体验更加流畅。\n• 为了记住重复性的设置。\n• 为了确定未来开发的功能。';
 	@override String get section4Title => '4. 第三方技术';
-	@override String get section4Body => '某些技术可能由技术服务提供商提供并受其自身政策约束。ChatFace 在这些合作中优先考虑数据安全。';
-	@override String get section5Title => '5. Cookie 控制与管理';
-	@override String get section5Body => '用户可以通过设备或应用设置限制这些技术。禁用必要技术可能会导致无法启动视频通话等问题。';
+	@override String get section4Body => '有些技术可能由技术服务提供商提供，并受其各自政策的约束。ChatFace 在这些合作中将数据安全放在首位。';
+	@override String get section5Title => '5. Cookie 的控制和管理';
+	@override String get section5Body => '用户可以通过设备或应用程序设置限制这些技术。禁用基本技术可能会导致无法拨打视频电话等问题。';
 	@override String get section6Title => '6. 联系方式';
-	@override String get section6Body => '📩 咨询请联系：support@fly-work.com';
+	@override String get section6Body => '📩 咨询：support@fly-work.com';
 }
 
 // Path: onboarding.step5
@@ -780,71 +770,59 @@ extension on TranslationsZh {
 			'skip' => '跳过',
 			'profile' => '个人资料',
 			'kContinue' => '继续',
-			'termOfService.text1' => '注册 ChatFace 即表示您同意我们的 ',
+			'termOfService.text1' => '注册 Lingola Kids 即表示您同意我们的 ',
 			'termOfService.link1' => '服务条款',
-			'termOfService.text2' => '。了解我们如何处理您的数据，请查阅我们的 ',
+			'termOfService.text2' => '。在我们的 ',
 			'termOfService.link2' => '隐私政策',
 			'termOfService.text3' => ' 和 ',
 			'termOfService.link3' => 'Cookie 政策',
-			'termOfService.text4' => '',
-			'termOfService.privacyPolicy.title' => '隐私政策',
-			'termOfService.privacyPolicy.lastUpdated' => '最后更新：2026',
-			'termOfService.privacyPolicy.intro' => 'ChatFace 将用户隐私和数据安全作为核心原则。您的所有个人数据均按照有效的数据保护法规进行处理。',
-			'termOfService.privacyPolicy.section1Title' => '1. 收集的信息',
-			'termOfService.privacyPolicy.section1sub1Title' => '1.1 用户提供的数据',
-			'termOfService.privacyPolicy.section1sub1Body' => '• 名称、昵称、年龄、性别、国家、个人资料信息以及您选择上传的可选个人资料照片。\n• 用于注册、订阅和支持的电子邮件地址。\n• 交互偏好、所选语言、AI 角色选择、消息、语音转录、上传的聊天图片、反馈和支持消息。',
-			'termOfService.privacyPolicy.section1sub2Title' => '1.2 自动收集的数据',
-			'termOfService.privacyPolicy.section1sub2Body' => 'ChatFace 可能会收集设备类型、操作系统、从网络信号推断的近似国家/城市、应用使用数据、崩溃日志、订阅状态和通知投递数据。在入门过程中不会请求精确位置，AI 聊天或通话也不要求提供精确位置。',
-			'termOfService.privacyPolicy.section2Title' => '2. 数据处理目的',
-			'termOfService.privacyPolicy.section2Body' => '您的个人数据用于运行应用、验证您的帐户、提供 AI 聊天及语音/视频通话功能、个性化语言和角色交互、处理订阅、在启用时发送通知、预防滥用、审查用户报告、提高可靠性并履行法律义务。您的个人数据不会被出售或用于广告目的。',
-			'termOfService.privacyPolicy.section3Title' => '3. AI 处理与第三方共享',
-			'termOfService.privacyPolicy.section3Body' => '为提供更好的 AI 体验，ChatFace 会安全地使用包括 OpenAI 在内的第三方服务提供商来处理您提交的文本、语音、图像及相关数据。消息、语音转录、所选语言、个人资料上下文、会话历史和上传的聊天图片可能会发送到 OpenAI 以生成 AI 回复和审核结果。语音音频可能根据服务器配置发送到 OpenAI 或 Deepgram 进行转录。助手文本可能会发送到 ElevenLabs 以生成语音。上传的个人资料和聊天图片、生成的音频及相关媒体可能存储在 BunnyCDN。OneSignal 可能处理通知标识和投递数据。RevenueCat 和应用商店处理订阅及权限数据。当您使用社交登录时，Apple、Google 或 Facebook 可能会处理相应的登录数据。这些提供商仅用于执行请求的服务，并应根据其自身的安全与隐私条款保护数据。根据 OpenAI 的 API 政策，OpenAI API 的数据不会用于训练 OpenAI 的模型。',
-			'termOfService.privacyPolicy.section4Title' => '4. 照片、相机、麦克风和面部数据',
-			'termOfService.privacyPolicy.section4Body' => '相机访问用于在您开始视频通话时进行本地预览。相机预览保留在您的设备上。ChatFace 不会收集面部生物特征数据、面部模板、面部几何、面部识别标识符或面部档案。若您选择上传，个人资料照片和聊天图片可能包含人脸；这些图片仅作为用户提供的照片用于个人资料显示或 AI 会话上下文进行存储和处理。麦克风访问用于语音和视频会话，以便将您的语音转录并由 AI 作出回应。',
-			'termOfService.privacyPolicy.section5Title' => '5. 数据保留与删除',
-			'termOfService.privacyPolicy.section5Body' => '个人资料数据、个人资料照片、会话历史、上传的聊天图片、报告、通知设置和订阅权限记录在您的帐户处于激活状态期间或出于法律、安全、欺诈预防和支持目的所需期间保留。当您删除帐户时，个人帐户记录会在符合法律和运营保留要求的前提下从 ChatFace 系统中删除。与第三方基础设施存储的媒体将根据我们的删除流程和提供商的保留行为被移除或设为不可访问。',
-			'termOfService.privacyPolicy.section6Title' => '6. 用户权利',
-			'termOfService.privacyPolicy.section6Body' => '根据适用的隐私法律，您可以请求访问、更正、删除、反对、限制或便携您的个人数据。您可以联系我们提出这些请求。',
-			'termOfService.privacyPolicy.section7Title' => '7. 儿童隐私',
-			'termOfService.privacyPolicy.section7Body' => 'ChatFace 不面向 18 岁以下用户。我们不会有意收集该年龄组的数据；一经发现，此类帐户将被关闭并删除数据。',
-			'termOfService.privacyPolicy.section8Title' => '8. 联系方式',
-			'termOfService.privacyPolicy.section8Body' => '隐私问题请联系：support@fly-work.com',
-			'termOfService.termsOfService.title' => '服务条款',
-			'termOfService.termsOfService.lastUpdated' => '最后更新：2026',
-			'termOfService.termsOfService.intro' => '本条款约束 ChatFace 移动应用的使用。使用该应用即表示您同意这些条款。',
-			'termOfService.termsOfService.disclaimer' => '免责声明：ChatFace 是一个 AI 视频交互应用。它不提供法律、学术、医疗或专业咨询服务。',
-			'termOfService.termsOfService.section1Title' => '1. 服务范围',
-			'termOfService.termsOfService.section1Body' => 'ChatFace 提供基于 AI 的视频交互体验：\n\n• AI 视频通话与会话。\n• 个性化交互偏好。\n• 访问交互历史和记录。\n\n本服务不构成正式意见或专业指导保证。',
+			'termOfService.text4' => '中了解我们如何处理您的数据。',
+			'termOfService.termsOfService.title' => 'Lingola Kids – 服务条款',
+			'termOfService.termsOfService.lastUpdated' => '最后更新：2026年',
+			'termOfService.termsOfService.intro' => '本服务条款（“条款”）规定了使用 Lingola Kids 移动应用程序（“应用”）的规则和条件。下载或使用本应用，即表示您同意本条款。',
+			'termOfService.termsOfService.section1Title' => '1. 服务范围与免责声明',
+			'termOfService.termsOfService.section1Body' => 'Lingola Kids 提供视觉、音频抽认卡和教育游戏，帮助儿童学习英语词汇。本应用非官方教育机构；不保证考试成功、学位获得或语言能力证书的取得。',
 			'termOfService.termsOfService.section2Title' => '2. 使用条件',
-			'termOfService.termsOfService.section2Body' => '• 您必须年满 18 岁（禁止 18 岁以下访问）。\n• 您必须提供准确的帐户信息。\n• 应仅将该应用用于合法和个人用途。',
-			'termOfService.termsOfService.section3Title' => '3. 禁止的使用',
-			'termOfService.termsOfService.section3Body' => '冒充他人、仇恨言论、危及儿童安全、尝试违反安全以及操纵 AI 系统的行为严禁。',
-			'termOfService.termsOfService.section4Title' => '4. 订阅与付款',
-			'termOfService.termsOfService.section4Body' => '高级功能受 App Store 和 Google Play 政策约束。订阅取消和退款通过各自商店的设置管理。',
-			'termOfService.termsOfService.section5Title' => '5. 内容免责声明',
-			'termOfService.termsOfService.section5Body' => '内容由 AI 生成，不代替专业建议。ChatFace 不保证内容的准确性或适用性。',
-			'termOfService.termsOfService.section6Title' => '6. 知识产权',
-			'termOfService.termsOfService.section6Body' => '包括设计、软件和算法在内的所有内容均归 ChatFace 所有。未经授权的复制或再分发被禁止。',
-			'termOfService.termsOfService.section7Title' => '7. 适用法律',
-			'termOfService.termsOfService.section7Body' => '本条款受土耳其共和国法律管辖。伊斯坦布尔中央法院对争议具有管辖权。',
-			'termOfService.termsOfService.section8Title' => '8. 联系方式',
-			'termOfService.termsOfService.section8Body' => '📩 咨询请联系：support@fly-work.com',
+			'termOfService.termsOfService.section2Body' => '- 本应用专为 4 岁及以上儿童设计。\n- 强烈建议未满 13/18 岁的用户在父母或法定监护人的监督下使用本应用。\n- 作为父母或法定监护人，允许您的孩子使用本应用，即表示您代表他们同意这些条款。\n- 严禁未经授权复制、出售、逆向工程或批量分发应用内容。',
+			'termOfService.termsOfService.section3Title' => '3. 高级与付费服务',
+			'termOfService.termsOfService.section3Body' => '付费服务（如高级词汇包和无广告体验）的付款通过 App Store 或 Google Play 进行处理。自动续订订阅的取消由用户/父母通过其商店账户进行管理。Lingola Kids 不直接提供退款。',
+			'termOfService.termsOfService.section4Title' => '4. 学习数据与隐私',
+			'termOfService.termsOfService.section4Body' => '为改善用户体验和进度跟踪而处理的学习数据（学习的单词、完成的活动）受我们隐私政策的保护。任何使用本应用的人均被视为接受隐私政策。',
+			'termOfService.termsOfService.section5Title' => '5. 适用法律',
+			'termOfService.termsOfService.section5Body' => '本条款受土耳其共和国法律管辖。伊斯坦布尔中央法院和执行办公室对任何争议拥有管辖权。',
+			'termOfService.termsOfService.section6Title' => '6. 联系方式',
+			'termOfService.termsOfService.section6Body' => '📩 如有任何疑问、请求或通知，您可以联系我们：support@fly-work.com',
+			'termOfService.privacyPolicy.title' => 'Lingola Kids – 隐私政策',
+			'termOfService.privacyPolicy.lastUpdated' => '最后更新：2026年',
+			'termOfService.privacyPolicy.intro' => '欢迎使用 Lingola Kids。保护儿童和家庭的隐私是我们的首要任务。本隐私政策概述了我们收集、使用、保护的信息，以及用户如何管理他们的数据。',
+			'termOfService.privacyPolicy.section1Title' => '1. 收集的信息',
+			'termOfService.privacyPolicy.section1Body' => '- 用户/父母提供：电子邮件地址（如果创建了帐户）、用户名、语言和学习偏好、保存的单词。\n- 自动收集：设备型号、操作系统、IP 地址、应用程序版本、崩溃日志和学习进度数据。',
+			'termOfService.privacyPolicy.section2Title' => '2. 儿童隐私（重要）',
+			'termOfService.privacyPolicy.section2Body' => 'Lingola Kids 专为 4 岁及以上儿童设计。保护儿童数据是我们的核心重点：\n- 我们不会向儿童收集不必要或敏感的个人数据。\n- 不允许也未提示儿童公开分享联系方式。\n- 严禁针对儿童的基于行为或个性化的广告分析。\n- 父母或法定监护人可以随时要求查看或删除其孩子的数据。',
+			'termOfService.privacyPolicy.section3Title' => '3. 数据处理和共享的目的',
+			'termOfService.privacyPolicy.section3Body' => '处理您的数据是为了跟踪学习进度、个性化词汇内容并修复技术问题。个人信息绝对不会为了商业用途而出售或与第三方共享。受信任的服务提供商（云存储、分析等）在严格保密义务下处理数据。',
+			'termOfService.privacyPolicy.section4Title' => '4. 用户和父母的权利',
+			'termOfService.privacyPolicy.section4Body' => '用户和父母有权访问、纠正、请求删除帐户以及要求永久删除数据。您可以通过联系我们的支持团队来行使这些权利。',
+			'termOfService.privacyPolicy.section5Title' => '5. 数据安全与保留',
+			'termOfService.privacyPolicy.section5Body' => '数据通过行业标准加密和访问控制得到保护。只要帐户保持活跃，学习统计数据就会被保存以确保连续性，并在帐户删除时被清除。',
+			'termOfService.privacyPolicy.section6Title' => '6. 联系方式',
+			'termOfService.privacyPolicy.section6Body' => '📩 对于隐私查询、数据删除或父母请求，请联系我们：support@fly-work.com',
 			'termOfService.cookiePolicy.title' => 'Cookie 政策',
-			'termOfService.cookiePolicy.lastUpdated' => '最后更新：2026',
-			'termOfService.cookiePolicy.intro' => '欢迎使用 ChatFace。我们使用数字辅助技术以使您的 AI 视频通话体验更顺畅、更安全并更具个性化。',
-			'termOfService.cookiePolicy.important' => '本政策解释了什么是 Cookie、其用途以及如何管理您的偏好。',
+			'termOfService.cookiePolicy.lastUpdated' => '最后更新：2026年',
+			'termOfService.cookiePolicy.intro' => '欢迎使用 ChatFace。使用数字助手技术是为了让您的 AI 视频通话体验更加顺畅、安全和个性化。',
+			'termOfService.cookiePolicy.important' => '本政策说明了什么是 Cookie、它们的用途以及您如何管理您的偏好设置。',
 			'termOfService.cookiePolicy.section1Title' => '1. 什么是 Cookie？',
-			'termOfService.cookiePolicy.section1Body' => 'Cookie 是放置在您设备上的小数据文件。它们不会直接识别您；它们像数字便签一样记住：\n• 通话和语言设置\n• 会话和性能偏好。',
+			'termOfService.cookiePolicy.section1Body' => 'Cookie 是放置在您的设备上的小型数据文件。它们不会直接识别您的身份；它们充当数字便签，记住：\n• 通话和语言设置\n• 会话和性能偏好。',
 			'termOfService.cookiePolicy.section2Title' => '2. 我们使用哪些技术？',
-			'termOfService.cookiePolicy.section2Body' => '必要的技术\n用于会话管理和安全控制。没有这些组件，应用可能无法正常运行。\n\n性能与分析\n帮助我们理解哪些故事被阅读和哪些领域需要改进。数据以匿名方式评估。\n\n个性化\n记住语言偏好和阅读等级等设置，以为孩子提供定制体验。',
+			'termOfService.cookiePolicy.section2Body' => '绝对必要的技术\n为会话管理和安全控制所必需。如果没有这些组件，应用程序可能无法正常运行。\n\n性能和分析\n帮助我们了解哪些故事被阅读以及哪些领域需要改进。数据将匿名评估。\n\n个性化\n记住语言偏好和阅读水平等设置，为儿童提供量身定制的体验。',
 			'termOfService.cookiePolicy.section3Title' => '3. 我们为什么使用这些技术？',
-			'termOfService.cookiePolicy.section3Body' => '• 确保应用安全且顺畅运行。\n• 使阅读体验更流畅。\n• 记住重复性设置。\n• 识别未来开发的功能。',
+			'termOfService.cookiePolicy.section3Body' => '• 为了确保应用程序安全顺畅地运行。\n• 为了使阅读体验更加流畅。\n• 为了记住重复性的设置。\n• 为了确定未来开发的功能。',
 			'termOfService.cookiePolicy.section4Title' => '4. 第三方技术',
-			'termOfService.cookiePolicy.section4Body' => '某些技术可能由技术服务提供商提供并受其自身政策约束。ChatFace 在这些合作中优先考虑数据安全。',
-			'termOfService.cookiePolicy.section5Title' => '5. Cookie 控制与管理',
-			'termOfService.cookiePolicy.section5Body' => '用户可以通过设备或应用设置限制这些技术。禁用必要技术可能会导致无法启动视频通话等问题。',
+			'termOfService.cookiePolicy.section4Body' => '有些技术可能由技术服务提供商提供，并受其各自政策的约束。ChatFace 在这些合作中将数据安全放在首位。',
+			'termOfService.cookiePolicy.section5Title' => '5. Cookie 的控制和管理',
+			'termOfService.cookiePolicy.section5Body' => '用户可以通过设备或应用程序设置限制这些技术。禁用基本技术可能会导致无法拨打视频电话等问题。',
 			'termOfService.cookiePolicy.section6Title' => '6. 联系方式',
-			'termOfService.cookiePolicy.section6Body' => '📩 咨询请联系：support@fly-work.com',
+			'termOfService.cookiePolicy.section6Body' => '📩 咨询：support@fly-work.com',
 			'cookies' => 'Cookie 政策',
 			'privacy' => '隐私政策',
 			'onboarding.step5.permissionRequired' => '需要权限',
@@ -1059,6 +1037,8 @@ extension on TranslationsZh {
 			'profileScreen.privacySubtitle' => '保护数据',
 			'profileScreen.termsOfService' => '服务条款',
 			'profileScreen.termsSubtitle' => '数据与条款',
+			'profileScreen.changeLanguage' => '语言',
+			'profileScreen.changeLanguageSubtitle' => '更改应用语言',
 			'profileScreen.logout' => '登出',
 			'profileScreen.logoutDialogTitle' => '您即将从帐户\n登出',
 			'profileScreen.logoutFailed' => '无法登出。请重试。',

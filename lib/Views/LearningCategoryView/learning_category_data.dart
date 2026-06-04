@@ -89,10 +89,27 @@ class LearningCategoryData {
   ];
 
   static const colors = [
-    LearningItemModel(name: 'blue', assetPath: AppLearningAssets.colorBlue),
+    LearningItemModel(
+      name: 'light blue',
+      assetPath: AppLearningAssets.colorLightBlue,
+    ),
     LearningItemModel(name: 'white', assetPath: AppLearningAssets.colorWhite),
-    LearningItemModel(name: 'orange', assetPath: AppLearningAssets.colorOrange),
     LearningItemModel(name: 'yellow', assetPath: AppLearningAssets.colorYellow),
+    LearningItemModel(name: 'orange', assetPath: AppLearningAssets.colorOrange),
+    LearningItemModel(name: 'green', assetPath: AppLearningAssets.colorGreen),
+    LearningItemModel(name: 'pink', assetPath: AppLearningAssets.colorPink),
+    LearningItemModel(
+      name: 'mint green',
+      assetPath: AppLearningAssets.colorMintGreen,
+    ),
+    LearningItemModel(
+      name: 'dark gray',
+      assetPath: AppLearningAssets.colorDarkGray,
+    ),
+    LearningItemModel(name: 'purple', assetPath: AppLearningAssets.colorPurple),
+    LearningItemModel(name: 'red', assetPath: AppLearningAssets.colorRed),
+    LearningItemModel(name: 'blue', assetPath: AppLearningAssets.colorBlue),
+    LearningItemModel(name: 'brown', assetPath: AppLearningAssets.colorBrown),
   ];
 
   static const sports = [
@@ -117,7 +134,7 @@ class LearningCategoryData {
       assetPath: AppLearningAssets.sportsTableTennis,
     ),
     LearningItemModel(
-      name: 'golf',
+      name: 'billiards',
       assetPath: AppLearningAssets.sportsBilliards,
     ),
     LearningItemModel(
