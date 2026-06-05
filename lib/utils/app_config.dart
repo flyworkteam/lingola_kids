@@ -3,10 +3,8 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 
 class AppConfig {
-  static const String _defaultApiBase = String.fromEnvironment(
-    'LINGOLA_API_BASE',
-    defaultValue: 'http://localhost:3000/api/',
-  );
+  static const String _defaultApiBase =
+      'https://lingolakids.fly-work.com/api/';
 
   static String apiBaseUrl() => _normalizeLocalhost(_defaultApiBase);
 
