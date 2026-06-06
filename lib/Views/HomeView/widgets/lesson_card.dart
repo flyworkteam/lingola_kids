@@ -5,24 +5,26 @@ import 'package:lingola_kids/Views/HomeView/models/home_lesson_model.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
 
 class LessonCard extends StatelessWidget {
-  const LessonCard({required this.lesson, this.onTap, super.key});
+  const LessonCard({
+    required this.lesson,
+    this.isActive = false,
+    this.onTap,
+    super.key,
+  });
 
   final HomeLessonModel lesson;
+  final bool isActive;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    final buttonColor = lesson.isPrimary
+    final buttonColor = isActive
         ? const Color(0xFFFF972C)
         : const Color(0xFFFBE8D5);
-    final buttonTextColor = lesson.isPrimary
-        ? Colors.white
-        : const Color(0xFFFF972C);
+    final buttonTextColor = isActive ? Colors.white : const Color(0xFFFF972C);
 
     return Material(
-      color: lesson.isPrimary
-          ? buttonColor.withValues(alpha: 0.2)
-          : Colors.white,
+      color: isActive ? buttonColor.withValues(alpha: 0.2) : Colors.white,
       borderRadius: BorderRadius.circular(15),
       child: InkWell(
         borderRadius: BorderRadius.circular(15),

@@ -342,6 +342,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         final lesson = lessons[index];
                         return LessonCard(
                           lesson: lesson,
+                          isActive: continueLesson?.slug == lesson.slug,
                           onTap: () => _openRoute(lesson.routeName),
                         );
                       },

@@ -97,6 +97,11 @@ class _AppLanguageViewState extends State<AppLanguageView> {
       label: (t) => t.languageOptions.portuguese,
       locale: AppLocale.pt,
     ),
+    _LanguageOption(
+      flag: AppFlags.china,
+      label: (t) => t.languageOptions.chinese,
+      locale: AppLocale.zh,
+    ),
   ];
 
   @override

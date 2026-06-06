@@ -1,4 +1,3 @@
-import 'package:lingola_kids/gen/strings.g.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -9,6 +8,7 @@ import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_result_overlay.
 import 'package:lingola_kids/Views/AlphabetView/widgets/primary_letter_button.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/models/learning_item_model.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/widgets/learning_item_asset.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/progress_reporting.dart';

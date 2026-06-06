@@ -13,8 +13,6 @@ final socialAuthServiceProvider = Provider<SocialAuthService>((ref) {
 });
 
 class SocialAuthService {
-  static const _googleIosClientId =
-      '395792097824-ge17gk0uv6hqaq1sd0bl2kmen62ja3rv.apps.googleusercontent.com';
   static const _googleServerClientId =
       '395792097824-htddih19lauke1fufv99ifku8e17ded6.apps.googleusercontent.com';
   static const _appleServiceId = 'com.flywork.lingolakidsapp.sid';
@@ -23,21 +21,15 @@ class SocialAuthService {
   );
   bool _isGoogleInitialized = false;
 
-  String? get _googleClientId {
-    return switch (defaultTargetPlatform) {
-      TargetPlatform.iOS || TargetPlatform.macOS => _googleIosClientId,
-      _ => null,
-    };
-  }
-
   Future<String?> signInWithGoogle() async {
     try {
       final googleSignIn = GoogleSignIn.instance;
       if (!_isGoogleInitialized) {
-        await googleSignIn.initialize(
-          clientId: _googleClientId,
-          serverClientId: _googleServerClientId,
-        );
+        if (defaultTargetPlatform == TargetPlatform.android) {
+          await googleSignIn.initialize(serverClientId: _googleServerClientId);
+        } else {
+          await googleSignIn.initialize();
+        }
         _isGoogleInitialized = true;
       }
 
