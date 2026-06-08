@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:lingola_kids/Services/secure_storage_service.dart';
 import 'package:lingola_kids/utils/print.dart';
 import 'package:timezone/data/latest.dart' as tz_data;
@@ -32,7 +33,7 @@ class LocalNotificationService {
   }) async {
     if (_initialized || kIsWeb) return;
 
-    _configureLocalTimeZone();
+    await _configureLocalTimeZone();
 
     const darwinSettings = DarwinInitializationSettings(
       requestAlertPermission: false,
@@ -135,17 +136,10 @@ class LocalNotificationService {
     );
   }
 
-  static void _configureLocalTimeZone() {
+  static Future<void> _configureLocalTimeZone() async {
     tz_data.initializeTimeZones();
-    final now = DateTime.now();
-    final local = tz.Location('device-local', [tz.minTime], [0], [
-      tz.TimeZone(
-        now.timeZoneOffset,
-        isDst: false,
-        abbreviation: now.timeZoneName,
-      ),
-    ]);
-    tz.setLocalLocation(local);
+    final timezoneInfo = await FlutterTimezone.getLocalTimezone();
+    tz.setLocalLocation(tz.getLocation(timezoneInfo.identifier));
   }
 
   static tz.TZDateTime _nextDailyTime({

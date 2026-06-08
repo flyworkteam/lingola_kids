@@ -14,6 +14,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "395792097824-1tr57onnl3iebke0q292f4akk198rujr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flywork.lingolakidsapp",
+            "certificate_hash": "be29c4e3d2b90c27e71526837855139b2f6d7613"
+          }
+        },
+        {
+          "client_id": "395792097824-7fhtrpfq7onffeti03s36d4aplcm3jba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flywork.lingolakidsapp",
+            "certificate_hash": "1967fc340d59ab625d8614222948c3071e254b16"
+          }
+        },
+        {
+          "client_id": "395792097824-ik4mromr2p4epj67cbc3opl271sp6r2f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flywork.lingolakidsapp",
+            "certificate_hash": "584b19663715d7e261637c5faa09f8027755f7cc"
+          }
+        },
+        {
           "client_id": "395792097824-htddih19lauke1fufv99ifku8e17ded6.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +53,13 @@
             {
               "client_id": "395792097824-htddih19lauke1fufv99ifku8e17ded6.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "395792097824-ge17gk0uv6hqaq1sd0bl2kmen62ja3rv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flywork.lingolakidsapp"
+              }
             }
           ]
         }

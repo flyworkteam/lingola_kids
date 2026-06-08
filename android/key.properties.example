@@ -1,0 +1,13 @@
+# Release imzalama için bu dosyayı `key.properties` olarak kopyalayın.
+# key.properties git'e eklenmez.
+#
+# Keystore oluşturmak için:
+# keytool -genkey -v -keystore upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+#
+# Oluşan SHA-1 parmak izini Firebase Console > Project settings > Android app > Add fingerprint
+# bölümüne ekleyin ve google-services.json dosyasını yeniden indirin.
+
+storePassword=YOUR_STORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=upload
+storeFile=upload-keystore.jks
