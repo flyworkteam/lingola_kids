@@ -113,6 +113,7 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
     return Scaffold(
       backgroundColor: const Color(0xFFFAF5F1),
       body: PageView(
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: (page) => setState(() => _page = page),
         children: [

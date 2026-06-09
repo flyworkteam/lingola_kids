@@ -1,37 +1,5 @@
 PODS:
-  - AppAuth (2.0.0):
-    - AppAuth/Core (= 2.0.0)
-    - AppAuth/ExternalUserAgent (= 2.0.0)
-  - AppAuth/Core (2.0.0)
-  - AppAuth/ExternalUserAgent (2.0.0):
-    - AppAuth/Core
-  - AppCheckCore (11.2.0):
-    - GoogleUtilities/Environment (~> 8.0)
-    - GoogleUtilities/UserDefaults (~> 8.0)
-    - PromisesObjC (~> 2.4)
-  - audio_session (0.0.1):
-    - Flutter
-  - Firebase/CoreOnly (12.13.0):
-    - FirebaseCore (~> 12.13.0)
-  - firebase_core (4.9.0):
-    - Firebase/CoreOnly (= 12.13.0)
-    - Flutter
-  - FirebaseCore (12.13.0):
-    - FirebaseCoreInternal (~> 12.13.0)
-    - GoogleUtilities/Environment (~> 8.1)
-    - GoogleUtilities/Logger (~> 8.1)
-  - FirebaseCoreInternal (12.13.0):
-    - "GoogleUtilities/NSData+zlib (~> 8.1)"
   - Flutter (1.0.0)
-  - flutter_local_notifications (0.0.1):
-    - Flutter
-  - flutter_native_splash (2.4.3):
-    - Flutter
-  - flutter_secure_storage_darwin (10.0.0):
-    - Flutter
-    - FlutterMacOS
-  - flutter_timezone (0.0.1):
-    - Flutter
   - google_mlkit_commons (0.11.1):
     - Flutter
     - MLKitVision (~> 10.0.0)
@@ -39,11 +7,6 @@ PODS:
     - Flutter
     - google_mlkit_commons
     - GoogleMLKit/DigitalInkRecognition (~> 9.0.0)
-  - google_sign_in_ios (0.0.1):
-    - Flutter
-    - FlutterMacOS
-    - GoogleSignIn (~> 9.0)
-    - GTMSessionFetcher (>= 3.4.0)
   - GoogleDataTransport (10.1.0):
     - nanopb (~> 3.30910.0)
     - PromisesObjC (~> 2.4)
@@ -52,11 +15,6 @@ PODS:
     - MLKitDigitalInkRecognition (~> 8.0.0)
   - GoogleMLKit/MLKitCore (9.0.0):
     - MLKitCommon (~> 14.0.0)
-  - GoogleSignIn (9.1.0):
-    - AppAuth (~> 2.0)
-    - AppCheckCore (~> 11.0)
-    - GTMAppAuth (~> 5.0)
-    - GTMSessionFetcher/Core (~> 3.3)
   - GoogleToolboxForMac/Defines (4.2.1)
   - GoogleToolboxForMac/Logger (4.2.1):
     - GoogleToolboxForMac/Defines (= 4.2.1)
@@ -67,25 +25,11 @@ PODS:
   - GoogleUtilities/Logger (8.1.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Privacy
-  - "GoogleUtilities/NSData+zlib (8.1.0)":
-    - GoogleUtilities/Privacy
   - GoogleUtilities/Privacy (8.1.0)
   - GoogleUtilities/UserDefaults (8.1.0):
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
-  - GTMAppAuth (5.0.0):
-    - AppAuth/Core (~> 2.0)
-    - GTMSessionFetcher/Core (< 4.0, >= 3.3)
-  - GTMSessionFetcher (3.5.0):
-    - GTMSessionFetcher/Full (= 3.5.0)
   - GTMSessionFetcher/Core (3.5.0)
-  - GTMSessionFetcher/Full (3.5.0):
-    - GTMSessionFetcher/Core
-  - image_picker_ios (0.0.1):
-    - Flutter
-  - just_audio (0.0.1):
-    - Flutter
-    - FlutterMacOS
   - MLImage (1.0.0-beta8)
   - MLKitCommon (14.0.0):
     - GoogleDataTransport (~> 10.0)
@@ -114,59 +58,23 @@ PODS:
   - permission_handler_apple (9.3.0):
     - Flutter
   - PromisesObjC (2.4.0)
-  - purchases_flutter (10.1.0):
-    - Flutter
-    - PurchasesHybridCommon (= 18.6.0)
-  - purchases_ui_flutter (10.1.0):
-    - Flutter
-    - PurchasesHybridCommonUI (= 18.6.0)
-  - PurchasesHybridCommon (18.6.0):
-    - RevenueCat (= 5.72.0)
-  - PurchasesHybridCommonUI (18.6.0):
-    - PurchasesHybridCommon (= 18.6.0)
-    - RevenueCatUI (= 5.72.0)
-  - RevenueCat (5.72.0)
-  - RevenueCatUI (5.72.0):
-    - RevenueCat (= 5.72.0)
   - sign_in_with_apple (0.0.1):
     - Flutter
-  - sqflite_darwin (0.0.4):
-    - Flutter
-    - FlutterMacOS
   - SSZipArchive (2.6.0)
 
 DEPENDENCIES:
-  - audio_session (from `.symlinks/plugins/audio_session/ios`)
-  - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
-  - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
-  - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
-  - flutter_secure_storage_darwin (from `.symlinks/plugins/flutter_secure_storage_darwin/darwin`)
-  - flutter_timezone (from `.symlinks/plugins/flutter_timezone/ios`)
   - google_mlkit_commons (from `.symlinks/plugins/google_mlkit_commons/ios`)
   - google_mlkit_digital_ink_recognition (from `.symlinks/plugins/google_mlkit_digital_ink_recognition/ios`)
-  - google_sign_in_ios (from `.symlinks/plugins/google_sign_in_ios/darwin`)
-  - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
-  - just_audio (from `.symlinks/plugins/just_audio/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
-  - purchases_flutter (from `.symlinks/plugins/purchases_flutter/ios`)
-  - purchases_ui_flutter (from `.symlinks/plugins/purchases_ui_flutter/ios`)
   - sign_in_with_apple (from `.symlinks/plugins/sign_in_with_apple/ios`)
-  - sqflite_darwin (from `.symlinks/plugins/sqflite_darwin/darwin`)
 
 SPEC REPOS:
   trunk:
-    - AppAuth
-    - AppCheckCore
-    - Firebase
-    - FirebaseCore
-    - FirebaseCoreInternal
     - GoogleDataTransport
     - GoogleMLKit
-    - GoogleSignIn
     - GoogleToolboxForMac
     - GoogleUtilities
-    - GTMAppAuth
     - GTMSessionFetcher
     - MLImage
     - MLKitCommon
@@ -175,73 +83,29 @@ SPEC REPOS:
     - MLKitVision
     - nanopb
     - PromisesObjC
-    - PurchasesHybridCommon
-    - PurchasesHybridCommonUI
-    - RevenueCat
-    - RevenueCatUI
     - SSZipArchive
 
 EXTERNAL SOURCES:
-  audio_session:
-    :path: ".symlinks/plugins/audio_session/ios"
-  firebase_core:
-    :path: ".symlinks/plugins/firebase_core/ios"
   Flutter:
     :path: Flutter
-  flutter_local_notifications:
-    :path: ".symlinks/plugins/flutter_local_notifications/ios"
-  flutter_native_splash:
-    :path: ".symlinks/plugins/flutter_native_splash/ios"
-  flutter_secure_storage_darwin:
-    :path: ".symlinks/plugins/flutter_secure_storage_darwin/darwin"
-  flutter_timezone:
-    :path: ".symlinks/plugins/flutter_timezone/ios"
   google_mlkit_commons:
     :path: ".symlinks/plugins/google_mlkit_commons/ios"
   google_mlkit_digital_ink_recognition:
     :path: ".symlinks/plugins/google_mlkit_digital_ink_recognition/ios"
-  google_sign_in_ios:
-    :path: ".symlinks/plugins/google_sign_in_ios/darwin"
-  image_picker_ios:
-    :path: ".symlinks/plugins/image_picker_ios/ios"
-  just_audio:
-    :path: ".symlinks/plugins/just_audio/darwin"
   permission_handler_apple:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
-  purchases_flutter:
-    :path: ".symlinks/plugins/purchases_flutter/ios"
-  purchases_ui_flutter:
-    :path: ".symlinks/plugins/purchases_ui_flutter/ios"
   sign_in_with_apple:
     :path: ".symlinks/plugins/sign_in_with_apple/ios"
-  sqflite_darwin:
-    :path: ".symlinks/plugins/sqflite_darwin/darwin"
 
 SPEC CHECKSUMS:
-  AppAuth: 1c1a8afa7e12f2ec3a294d9882dfa5ab7d3cb063
-  AppCheckCore: cc8fd0a3a230ddd401f326489c99990b013f0c4f
-  audio_session: 9bb7f6c970f21241b19f5a3658097ae459681ba0
-  Firebase: 7d62445aeabdaea36f7d372f33052fed9a72514f
-  firebase_core: 0013f886fbd0b4950865551eaab47784424bfdb5
-  FirebaseCore: 58905958aa00a061397a0fd759ae4b55bddb3576
-  FirebaseCoreInternal: 37bee58388fc6d183f0ab1b32d69ae44f2cf8aad
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
-  flutter_local_notifications: 643a3eda1ce1c0599413ca31672536d423dee214
-  flutter_native_splash: c32d145d68aeda5502d5f543ee38c192065986cf
-  flutter_secure_storage_darwin: acdb3f316ed05a3e68f856e0353b133eec373a23
-  flutter_timezone: 7c838e17ffd4645d261e87037e5bebf6d38fe544
   google_mlkit_commons: a5e4ffae5bc59ea4c7b9025dc72cb6cb79dc1166
   google_mlkit_digital_ink_recognition: a9f14c9a75bad980ea26f2d3ce277f5963f413ba
-  google_sign_in_ios: 000870aa06da9b28d1d0bf7ef70ff0213059dd28
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleMLKit: b1eee21a41c57704fe72483b15c85cb2c0cd7444
-  GoogleSignIn: fcee2257188d5eda57a5e2b6a715550ffff9206d
   GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
-  GTMAppAuth: 217a876b249c3c585a54fd6f73e6b58c4f5c4238
   GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
-  image_picker_ios: e0ece4aa2a75771a7de3fa735d26d90817041326
-  just_audio: 4e391f57b79cad2b0674030a00453ca5ce817eed
   MLImage: 0de5c6c2bf9e93b80ef752e2797f0836f03b58c0
   MLKitCommon: 47d47b50a031d00db62f1b0efe5a1d8b09a3b2e6
   MLKitDigitalInkRecognition: d352ba532b816e7a930b8fa2e180288352c4736c
@@ -250,14 +114,7 @@ SPEC CHECKSUMS:
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   permission_handler_apple: 4ed2196e43d0651e8ff7ca3483a069d469701f2d
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
-  purchases_flutter: 136a8e1e9c28e9afb78d40b06e2b6ff3f16fc47e
-  purchases_ui_flutter: 45723a53789c880bbb9f7492066d6314fc1e1e31
-  PurchasesHybridCommon: 89a3ddba365c20457a4712bc3d6377b0ea3c9b4f
-  PurchasesHybridCommonUI: 4aba51371b9d6c0e2859a2e514e47bf37c8fb9eb
-  RevenueCat: 136390ad99039cdd692156af5e479293ae83b2a9
-  RevenueCatUI: 3fb3791bba4f7532b3b83dd2947824f8f702f6fa
   sign_in_with_apple: c5dcc141574c8c54d5ac99dd2163c0c72ad22418
-  sqflite_darwin: 20b2a3a3b70e43edae938624ce550a3cbf66a3d0
   SSZipArchive: 8a6ee5677c8e304bebc109e39cf0da91ccef22ea
 
 PODFILE CHECKSUM: 4984fd2fa25632704ed632f80576d41070eb527f
