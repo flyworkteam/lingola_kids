@@ -246,14 +246,14 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                           Navigator.pushNamed(context, AppRoutes.appLanguage),
                     ),
                     const SizedBox(height: 12),
-                    ProfileMenuRow(
-                      title: context.t.profileScreen.rateApp,
-                      subtitle: context.t.profileScreen.supportUs,
-                      assetPath: AppIcons.rateUs,
-                      onTap: () =>
-                          _showMessage(context.t.profileScreen.rateComingSoon),
-                    ),
-                    const SizedBox(height: 12),
+                    // ProfileMenuRow(
+                    //   title: context.t.profileScreen.rateApp,
+                    //   subtitle: context.t.profileScreen.supportUs,
+                    //   assetPath: AppIcons.rateUs,
+                    //   onTap: () =>
+                    //       _showMessage(context.t.profileScreen.rateComingSoon),
+                    // ),
+                    // const SizedBox(height: 12),
                     ProfileMenuRow(
                       title: context.t.profileScreen.privacyPolicy,
                       subtitle: context.t.profileScreen.privacySubtitle,
