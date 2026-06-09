@@ -9,6 +9,21 @@
     "skip": "Skip",
     "profile": "Profile",
     "continue": "Continue",
+    "ok": "OK",
+    "voicePlayback": {
+        "loading": "Audio is loading...",
+        "playing": "Audio is ready, playing.",
+        "missing": "Audio was not found. Please try again.",
+        "failed": "Audio could not be prepared. Please try again."
+    },
+    "localNotifications": {
+        "channelName": "Daily learning reminders",
+        "channelDescription": "Reminders that help kids keep their daily learning streak.",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "Keep your streak going with a quick lesson today.",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "Local notifications are working."
+    },
     "termOfService": {
         "text1": "By signing up for Lingola Kids, you agree to our ",
         "link1": "Terms of Service",
@@ -197,6 +212,9 @@
         "startLearning": "Start learning",
         "resumeActivity": "Resume $activity",
         "continueButton": "Continue",
+        "streakTitle": "Streak status",
+        "streakActive": "You currently have a $count-day learning streak. Complete a lesson every day to keep your streak.",
+        "streakEmpty": "Your learning streak has not started yet. Complete a lesson today to start your streak.",
         "weekDays": [
             "MON",
             "TUE",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "Subscription screen could not be opened. Please try again.",
         "screenTimeMinutes": "Today $minutes minutes",
         "screenTimeHours": "Today $hours hours",
-        "screenTimeHoursMinutes": "Today $hours hours $minutes minutes"
+        "screenTimeHoursMinutes": "Today $hours hours $minutes minutes",
+        "trialSubscriptionTitle": "Trial Premium Active",
+        "trialSubscriptionPrompt": "You are currently using a trial premium subscription. Would you like to subscribe?",
+        "yes": "Yes",
+        "no": "No"
     },
     "editProfileScreen": {
         "changeAvatar": "Change Avatar",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "Parental gate",
         "question": "What is the result of this operation?",
+        "wrongAnswer": "Wrong answer. Please try again.",
         "submit": "Submit"
     },
     "activities": {

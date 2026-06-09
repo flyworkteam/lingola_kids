@@ -9,6 +9,21 @@
     "skip": "跳过",
     "profile": "个人资料",
     "continue": "继续",
+    "ok": "确定",
+    "voicePlayback": {
+        "loading": "音频正在加载...",
+        "playing": "音频已准备好，正在播放。",
+        "missing": "未找到音频。请重试。",
+        "failed": "无法准备音频。请重试。"
+    },
+    "localNotifications": {
+        "channelName": "每日学习提醒",
+        "channelDescription": "帮助孩子保持每日学习连续记录的提醒。",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "今天完成一节简短课程，继续保持连续记录。",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "本地通知正在工作。"
+    },
     "termOfService": {
         "text1": "注册 Lingola Kids 即表示您同意我们的 ",
         "link1": "服务条款",
@@ -197,6 +212,9 @@
         "startLearning": "开始学习",
         "resumeActivity": "继续 $activity",
         "continueButton": "继续",
+        "streakTitle": "连续学习状态",
+        "streakActive": "你目前已有 $count 天连续学习。每天完成一节课即可保持连续记录。",
+        "streakEmpty": "你的连续学习还没有开始。今天完成一节课即可开始。",
         "weekDays": [
             "周一",
             "周二",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "无法打开订阅界面。请重试。",
         "screenTimeMinutes": "今天 $minutes 分钟",
         "screenTimeHours": "今天 $hours 小时",
-        "screenTimeHoursMinutes": "今天 $hours 小时 $minutes 分钟"
+        "screenTimeHoursMinutes": "今天 $hours 小时 $minutes 分钟",
+        "trialSubscriptionTitle": "试用高级会员激活",
+        "trialSubscriptionPrompt": "您当前正在使用试用高级会员订阅。您想要订阅吗？",
+        "yes": "是",
+        "no": "否"
     },
     "editProfileScreen": {
         "changeAvatar": "更改头像",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "家长验证",
         "question": "此操作的结果是什么？",
+        "wrongAnswer": "答案错误。请再试一次。",
         "submit": "提交"
     },
     "activities": {

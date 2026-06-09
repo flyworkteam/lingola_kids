@@ -156,6 +156,7 @@ class _EditProfileViewState extends ConsumerState<EditProfileView> {
                     _ProfileTextField(
                       label: context.t.editProfile.fullName,
                       controller: _nameController,
+                      maxChars: 20,
                     ),
                     const SizedBox(height: 14),
                     _ProfileTextField(
@@ -243,6 +244,7 @@ class _ProfileTextField extends StatelessWidget {
     required this.label,
     required this.controller,
     this.keyboardType,
+    this.maxChars = 50,
     this.readOnly = false,
   });
 
@@ -250,6 +252,7 @@ class _ProfileTextField extends StatelessWidget {
   final TextEditingController controller;
   final TextInputType? keyboardType;
   final bool readOnly;
+  final int maxChars;
 
   @override
   Widget build(BuildContext context) {
@@ -269,6 +272,7 @@ class _ProfileTextField extends StatelessWidget {
           controller: controller,
           keyboardType: keyboardType,
           readOnly: readOnly,
+          maxLength: maxChars,
           style: GoogleFonts.dynaPuff(
             fontSize: 18,
             fontWeight: FontWeight.w700,

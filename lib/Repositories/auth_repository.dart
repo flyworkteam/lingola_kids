@@ -4,6 +4,7 @@ import 'package:lingola_kids/Models/auth_model.dart';
 import 'package:lingola_kids/Riverpod/Providers/all_providers.dart';
 import 'package:lingola_kids/Services/dio_service.dart';
 import 'package:lingola_kids/Services/secure_storage_service.dart';
+import 'package:lingola_kids/Views/ProfileView/models/screen_time_controller.dart';
 import 'package:lingola_kids/utils/print.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -49,6 +50,7 @@ class AuthRepository {
       if (authResponse.user != null) {
         await _storageService.saveUserId(authResponse.user!.id);
         await _storageService.saveIsGuest(authResponse.user!.isGuest);
+        await ScreenTimeController.handleUserChanged();
       }
       try {
         await Purchases.logIn(authResponse.user!.id.toString());
@@ -92,6 +94,7 @@ class AuthRepository {
       if (authResponse.user != null) {
         await _storageService.saveUserId(authResponse.user!.id);
         await _storageService.saveIsGuest(authResponse.user!.isGuest);
+        await ScreenTimeController.handleUserChanged();
       }
       try {
         await Purchases.logIn(authResponse.user!.id.toString());
@@ -140,6 +143,7 @@ class AuthRepository {
       if (authResponse.user != null) {
         await _storageService.saveUserId(authResponse.user!.id);
         await _storageService.saveIsGuest(authResponse.user!.isGuest);
+        await ScreenTimeController.handleUserChanged();
       }
       try {
         await Purchases.logIn(authResponse.user!.id.toString());
@@ -212,12 +216,18 @@ class AuthRepository {
       }
       // Clear local storage
       await _storageService.clearAll();
+      await ScreenTimeController.handleUserChanged(
+        preserveCurrentSession: false,
+      );
 
       Print.info('Logout successful');
     } catch (e) {
       Print.error('Error logging out: $e');
       // Clear local storage even if API call fails
       await _storageService.clearAll();
+      await ScreenTimeController.handleUserChanged(
+        preserveCurrentSession: false,
+      );
       rethrow;
     }
   }
@@ -239,6 +249,7 @@ class AuthRepository {
       if (authResponse.user != null) {
         await _storageService.saveUserId(authResponse.user!.id);
         await _storageService.saveIsGuest(authResponse.user!.isGuest);
+        await ScreenTimeController.handleUserChanged();
       }
 
       Print.info('Current user info retrieved');

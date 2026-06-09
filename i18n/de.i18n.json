@@ -9,6 +9,21 @@
     "skip": "Überspringen",
     "profile": "Profil",
     "continue": "Weitermachen",
+    "ok": "OK",
+    "voicePlayback": {
+        "loading": "Audio wird geladen...",
+        "playing": "Audio ist bereit und wird abgespielt.",
+        "missing": "Audio wurde nicht gefunden. Bitte versuchen Sie es erneut.",
+        "failed": "Audio konnte nicht vorbereitet werden. Bitte versuchen Sie es erneut."
+    },
+    "localNotifications": {
+        "channelName": "Tägliche Lern-Erinnerungen",
+        "channelDescription": "Erinnerungen, die Kindern helfen, ihre tägliche Lernserie beizubehalten.",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "Halte deine Serie heute mit einer kurzen Lektion aufrecht.",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "Lokale Benachrichtigungen funktionieren."
+    },
     "termOfService": {
         "text1": "Indem Sie sich bei Lingola Kids anmelden, stimmen Sie unseren ",
         "link1": "Nutzungsbedingungen",
@@ -197,6 +212,9 @@
         "startLearning": "Fangen Sie an zu lernen",
         "resumeActivity": "Fortsetzen $activity",
         "continueButton": "Weitermachen",
+        "streakTitle": "Serienstatus",
+        "streakActive": "Sie haben derzeit eine Lernserie von $count Tagen. Schließen Sie jeden Tag eine Lektion ab, um Ihre Serie zu behalten.",
+        "streakEmpty": "Ihre Lernserie hat noch nicht begonnen. Schließen Sie heute eine Lektion ab, um Ihre Serie zu starten.",
         "weekDays": [
             "MO",
             "DI",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "Der Abonnementbildschirm konnte nicht geöffnet werden. Bitte versuchen Sie es erneut.",
         "screenTimeMinutes": "Heute $minutes Minuten",
         "screenTimeHours": "Heute $hours Stunden",
-        "screenTimeHoursMinutes": "Heute $hours Stunden $minutes Minuten"
+        "screenTimeHoursMinutes": "Heute $hours Stunden $minutes Minuten",
+        "trialSubscriptionTitle": "Test Premium Aktiv",
+        "trialSubscriptionPrompt": "Sie verwenden derzeit eine Test-Premium-Abonnement. Möchten Sie sich anmelden?",
+        "yes": "Ja",
+        "no": "Nein"
     },
     "editProfileScreen": {
         "changeAvatar": "Avatar ändern",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "Elterntor",
         "question": "Was ist das Ergebnis dieser Operation?",
+        "wrongAnswer": "Falsche Antwort. Bitte versuchen Sie es erneut.",
         "submit": "Einreichen"
     },
     "activities": {

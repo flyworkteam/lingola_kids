@@ -47,6 +47,9 @@ class TranslationsRu with BaseTranslations<AppLocale, Translations> implements T
 	@override String get skip => 'Пропустить';
 	@override String get profile => 'Профиль';
 	@override String get kContinue => 'Продолжить';
+	@override String get ok => 'OK';
+	@override late final _TranslationsVoicePlaybackRu voicePlayback = _TranslationsVoicePlaybackRu._(_root);
+	@override late final _TranslationsLocalNotificationsRu localNotifications = _TranslationsLocalNotificationsRu._(_root);
 	@override late final _TranslationsTermOfServiceRu termOfService = _TranslationsTermOfServiceRu._(_root);
 	@override String get cookies => 'Политика использования файлов cookie';
 	@override String get privacy => 'Политика конфиденциальности';
@@ -76,6 +79,34 @@ class TranslationsRu with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsActivitiesRu activities = _TranslationsActivitiesRu._(_root);
 	@override late final _TranslationsResultSheetRu resultSheet = _TranslationsResultSheetRu._(_root);
 	@override late final _TranslationsTrueFalseViewRu trueFalseView = _TranslationsTrueFalseViewRu._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackRu implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackRu._(this._root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => 'Аудио загружается...';
+	@override String get playing => 'Аудио готово, воспроизводится.';
+	@override String get missing => 'Аудио не найдено. Пожалуйста, попробуйте снова.';
+	@override String get failed => 'Не удалось подготовить аудио. Пожалуйста, попробуйте снова.';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsRu implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsRu._(this._root);
+
+	final TranslationsRu _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => 'Ежедневные напоминания об обучении';
+	@override String get channelDescription => 'Напоминания, которые помогают детям сохранять ежедневную серию обучения.';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => 'Продолжите свою серию коротким уроком сегодня.';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => 'Локальные уведомления работают.';
 }
 
 // Path: termOfService
@@ -168,6 +199,9 @@ class _TranslationsHomeRu implements TranslationsHomeEn {
 	@override String get startLearning => 'Начать обучение';
 	@override String resumeActivity({required Object activity}) => 'Возобновить ${activity}';
 	@override String get continueButton => 'Продолжить';
+	@override String get streakTitle => 'Статус серии';
+	@override String streakActive({required Object count}) => 'Сейчас у вас серия обучения ${count} дн. Завершайте урок каждый день, чтобы сохранить серию.';
+	@override String get streakEmpty => 'Ваша серия обучения еще не началась. Завершите урок сегодня, чтобы начать ее.';
 	@override List<String> get weekDays => [
 		'ПН',
 		'ВТ',
@@ -324,6 +358,10 @@ class _TranslationsProfileScreenRu implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => 'Сегодня ${minutes} минут';
 	@override String screenTimeHours({required Object hours}) => 'Сегодня ${hours} часов';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Сегодня ${hours} часов ${minutes} минут';
+	@override String get trialSubscriptionTitle => 'Триал премиум активен';
+	@override String get trialSubscriptionPrompt => 'Вы в настоящее время используете пробную версию премиум-подписки. Хотите подписаться?';
+	@override String get yes => 'Да';
+	@override String get no => 'Нет';
 }
 
 // Path: editProfileScreen
@@ -360,6 +398,7 @@ class _TranslationsParentalGateRu implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => 'Родительский контроль';
 	@override String get question => 'Каков результат этой операции?';
+	@override String get wrongAnswer => 'Неправильный ответ. Пожалуйста, попробуйте снова.';
 	@override String get submit => 'Отправить';
 }
 
@@ -770,6 +809,17 @@ extension on TranslationsRu {
 			'skip' => 'Пропустить',
 			'profile' => 'Профиль',
 			'kContinue' => 'Продолжить',
+			'ok' => 'OK',
+			'voicePlayback.loading' => 'Аудио загружается...',
+			'voicePlayback.playing' => 'Аудио готово, воспроизводится.',
+			'voicePlayback.missing' => 'Аудио не найдено. Пожалуйста, попробуйте снова.',
+			'voicePlayback.failed' => 'Не удалось подготовить аудио. Пожалуйста, попробуйте снова.',
+			'localNotifications.channelName' => 'Ежедневные напоминания об обучении',
+			'localNotifications.channelDescription' => 'Напоминания, которые помогают детям сохранять ежедневную серию обучения.',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => 'Продолжите свою серию коротким уроком сегодня.',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => 'Локальные уведомления работают.',
 			'termOfService.text1' => 'Регистрируясь в Lingola Kids, вы соглашаетесь с нашими ',
 			'termOfService.link1' => 'Условиями обслуживания',
 			'termOfService.text2' => '. Узнайте, как мы обрабатываем ваши данные, в нашей ',
@@ -915,6 +965,9 @@ extension on TranslationsRu {
 			'home.startLearning' => 'Начать обучение',
 			'home.resumeActivity' => ({required Object activity}) => 'Возобновить ${activity}',
 			'home.continueButton' => 'Продолжить',
+			'home.streakTitle' => 'Статус серии',
+			'home.streakActive' => ({required Object count}) => 'Сейчас у вас серия обучения ${count} дн. Завершайте урок каждый день, чтобы сохранить серию.',
+			'home.streakEmpty' => 'Ваша серия обучения еще не началась. Завершите урок сегодня, чтобы начать ее.',
 			'home.weekDays.0' => 'ПН',
 			'home.weekDays.1' => 'ВТ',
 			'home.weekDays.2' => 'СР',
@@ -1046,6 +1099,10 @@ extension on TranslationsRu {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Сегодня ${minutes} минут',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Сегодня ${hours} часов',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Сегодня ${hours} часов ${minutes} минут',
+			'profileScreen.trialSubscriptionTitle' => 'Триал премиум активен',
+			'profileScreen.trialSubscriptionPrompt' => 'Вы в настоящее время используете пробную версию премиум-подписки. Хотите подписаться?',
+			'profileScreen.yes' => 'Да',
+			'profileScreen.no' => 'Нет',
 			'editProfileScreen.changeAvatar' => 'Изменить аватар',
 			'editProfileScreen.email' => 'Эл. почта',
 			'editProfileScreen.emailHelper' => 'Это поле поступает из вашего внутреннего аккаунта.',
@@ -1055,6 +1112,7 @@ extension on TranslationsRu {
 			'premiumAccess.openFailed' => 'Не удалось открыть экран Premium. Пожалуйста, попробуйте снова.',
 			'parentalGate.barrierLabel' => 'Родительский контроль',
 			'parentalGate.question' => 'Каков результат этой операции?',
+			'parentalGate.wrongAnswer' => 'Неправильный ответ. Пожалуйста, попробуйте снова.',
 			'parentalGate.submit' => 'Отправить',
 			'activities.flashCards' => 'Флэш-карточки',
 			'activities.drawing' => 'Рисование',

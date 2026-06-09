@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lingola_kids/Core/Routes/app_routes.dart';
 import 'package:lingola_kids/Models/lesson_model.dart';
+import 'package:lingola_kids/Models/user_model.dart';
 import 'package:lingola_kids/Riverpod/Providers/all_providers.dart';
 import 'package:lingola_kids/Riverpod/Providers/user_provider.dart';
 import 'package:lingola_kids/Views/HomeView/models/home_lesson_model.dart';
@@ -16,6 +17,7 @@ import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/print.dart';
+import 'package:purchases_ui_flutter/purchases_ui_flutter.dart';
 
 class HomeView extends ConsumerStatefulWidget {
   const HomeView({super.key});
@@ -230,10 +232,87 @@ class _HomeViewState extends ConsumerState<HomeView> {
     await _refreshBackendData();
   }
 
-  Future<void> _openPremium() async {
-    final result = await PremiumAccess.openPaywall(context);
-    if (!mounted || !PremiumAccess.shouldRefreshPremiumStatus(result)) return;
+  Future<void> _openPremium(UserProfile? user) async {
+    if (user == null) return;
+
+    final isTrialPremium = _isTrialPremium(user);
+    if (isTrialPremium) {
+      final confirmed = await _confirmTrialSubscription();
+      if (!mounted || !confirmed) return;
+    }
+
+    if (isTrialPremium || !user.isPremium) {
+      final result = await PremiumAccess.openPaywall(context);
+      if (!mounted || !PremiumAccess.shouldRefreshPremiumStatus(result)) {
+        return;
+      }
+    } else {
+      try {
+        await RevenueCatUI.presentCustomerCenter();
+      } catch (error) {
+        Print.error('Customer center failed: $error');
+      }
+      if (!mounted) return;
+    }
+
     await ref.read(userProfileProvider.notifier).refresh();
+  }
+
+  Future<bool> _confirmTrialSubscription() async {
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(context.t.profileScreen.trialSubscriptionTitle),
+          content: Text(context.t.profileScreen.trialSubscriptionPrompt),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: Text(context.t.profileScreen.no),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              child: Text(context.t.profileScreen.yes),
+            ),
+          ],
+        );
+      },
+    );
+
+    return result == true;
+  }
+
+  bool _isTrialPremium(UserProfile user) {
+    final createdAt = user.createdAt;
+    final premiumEndTime = user.premiumEndTime;
+    if (!user.isPremium || createdAt == null || premiumEndTime == null) {
+      return false;
+    }
+
+    final premiumDuration = premiumEndTime.difference(createdAt);
+    return premiumDuration.inHours >= 46 && premiumDuration.inHours <= 74;
+  }
+
+  Future<void> _showStreakInfo(int streakCount) async {
+    await showDialog<void>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(context.t.home.streakTitle),
+          content: Text(
+            streakCount > 0
+                ? context.t.home.streakActive(count: streakCount)
+                : context.t.home.streakEmpty,
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: Text(context.t.ok),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -291,9 +370,9 @@ class _HomeViewState extends ConsumerState<HomeView> {
                             avatarKey: user?.avatarKey,
                             streakCount: streak?.currentStreak ?? 0,
                             isPremium: user?.isPremium ?? false,
-                            onPremiumTap: (user?.isPremium ?? false)
-                                ? null
-                                : _openPremium,
+                            onPremiumTap: () => _openPremium(user),
+                            onStreakTap: () =>
+                                _showStreakInfo(streak?.currentStreak ?? 0),
                           ),
                           const SizedBox(height: 37),
                           HomeSectionTitle(title: context.t.home.thisWeek),

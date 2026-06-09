@@ -9,6 +9,21 @@
     "skip": "スキップ",
     "profile": "プロフィール",
     "continue": "続ける",
+    "ok": "OK",
+    "voicePlayback": {
+        "loading": "音声を読み込んでいます...",
+        "playing": "音声の準備ができました。再生しています。",
+        "missing": "音声が見つかりませんでした。もう一度お試しください。",
+        "failed": "音声を準備できませんでした。もう一度お試しください。"
+    },
+    "localNotifications": {
+        "channelName": "毎日の学習リマインダー",
+        "channelDescription": "子どもたちが毎日の学習記録を続けるためのリマインダーです。",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "今日も短いレッスンで連続記録を続けましょう。",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "ローカル通知は動作しています。"
+    },
     "termOfService": {
         "text1": "Lingola Kidsに登録することにより、当社の",
         "link1": "利用規約",
@@ -197,6 +212,9 @@
         "startLearning": "学習を開始",
         "resumeActivity": "$activity を再開",
         "continueButton": "続ける",
+        "streakTitle": "連続学習の状況",
+        "streakActive": "現在、$count日間の連続学習があります。毎日レッスンを完了して連続記録を保ちましょう。",
+        "streakEmpty": "連続学習はまだ始まっていません。今日レッスンを完了して始めましょう。",
         "weekDays": [
             "月",
             "火",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "サブスクリプション画面を開けませんでした。もう一度お試しください。",
         "screenTimeMinutes": "今日 $minutes 分",
         "screenTimeHours": "今日 $hours 時間",
-        "screenTimeHoursMinutes": "今日 $hours 時間 $minutes 分"
+        "screenTimeHoursMinutes": "今日 $hours 時間 $minutes 分",
+        "trialSubscriptionTitle": "トライアルプレミアムアクティブ",
+        "trialSubscriptionPrompt": "現在、トライアルプレミアムサブスクリプションを使用しています。サブスクライブしますか？",
+        "yes": "はい",
+        "no": "いいえ"
     },
     "editProfileScreen": {
         "changeAvatar": "アバターを変更",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "ペアレンタルゲート",
         "question": "この計算の結果は何ですか？",
+        "wrongAnswer": "間違った答えです。もう一度試してください。",
         "submit": "送信"
     },
     "activities": {

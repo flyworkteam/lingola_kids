@@ -460,10 +460,13 @@ class SecureStorageService {
 
   // ==================== Screen Time helpers ====================
 
-  Future<void> saveScreenTimeTrackingEnabled(bool enabled) async {
+  Future<void> saveScreenTimeTrackingEnabled(
+    bool enabled, {
+    int? userId,
+  }) async {
     try {
       await _storage.write(
-        key: _screenTimeTrackingEnabledKey,
+        key: _screenTimeKey(_screenTimeTrackingEnabledKey, userId),
         value: enabled ? '1' : '0',
       );
     } catch (e) {
@@ -472,9 +475,11 @@ class SecureStorageService {
     }
   }
 
-  Future<bool> getScreenTimeTrackingEnabled() async {
+  Future<bool> getScreenTimeTrackingEnabled({int? userId}) async {
     try {
-      final value = await _storage.read(key: _screenTimeTrackingEnabledKey);
+      final value = await _storage.read(
+        key: _screenTimeKey(_screenTimeTrackingEnabledKey, userId),
+      );
       if (value == null) return true;
       return value == '1';
     } catch (e) {
@@ -486,11 +491,15 @@ class SecureStorageService {
   Future<void> saveScreenTimeUsage({
     required String date,
     required int seconds,
+    int? userId,
   }) async {
     try {
-      await _storage.write(key: _screenTimeDateKey, value: date);
       await _storage.write(
-        key: _screenTimeSecondsKey,
+        key: _screenTimeKey(_screenTimeDateKey, userId),
+        value: date,
+      );
+      await _storage.write(
+        key: _screenTimeKey(_screenTimeSecondsKey, userId),
         value: seconds.toString(),
       );
     } catch (e) {
@@ -499,22 +508,31 @@ class SecureStorageService {
     }
   }
 
-  Future<String?> getScreenTimeDate() async {
+  Future<String?> getScreenTimeDate({int? userId}) async {
     try {
-      return await _storage.read(key: _screenTimeDateKey);
+      return await _storage.read(
+        key: _screenTimeKey(_screenTimeDateKey, userId),
+      );
     } catch (e) {
       Print.error('Error reading screen time date: $e');
       return null;
     }
   }
 
-  Future<int> getScreenTimeSeconds() async {
+  Future<int> getScreenTimeSeconds({int? userId}) async {
     try {
-      final value = await _storage.read(key: _screenTimeSecondsKey);
+      final value = await _storage.read(
+        key: _screenTimeKey(_screenTimeSecondsKey, userId),
+      );
       return int.tryParse(value ?? '') ?? 0;
     } catch (e) {
       Print.error('Error reading screen time seconds: $e');
       return 0;
     }
+  }
+
+  String _screenTimeKey(String baseKey, int? userId) {
+    if (userId == null) return baseKey;
+    return '${baseKey}_user_$userId';
   }
 }

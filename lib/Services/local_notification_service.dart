@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:lingola_kids/Services/secure_storage_service.dart';
+import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/print.dart';
 import 'package:timezone/data/latest.dart' as tz_data;
 import 'package:timezone/timezone.dart' as tz;
@@ -111,8 +112,8 @@ class LocalNotificationService {
 
     await _plugin.zonedSchedule(
       id: _dailyLearningReminderId,
-      title: 'Lingola Kids',
-      body: 'Keep your streak going with a quick lesson today.',
+      title: t.localNotifications.reminderTitle,
+      body: t.localNotifications.reminderBody,
       scheduledDate: _nextDailyTime(hour: hour, minute: minute),
       notificationDetails: _notificationDetails,
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
@@ -130,8 +131,8 @@ class LocalNotificationService {
   static Future<void> showDebugNotification() {
     return _plugin.show(
       id: 9001,
-      title: 'Lingola Kids',
-      body: 'Local notifications are working.',
+      title: t.localNotifications.debugTitle,
+      body: t.localNotifications.debugBody,
       notificationDetails: _notificationDetails,
     );
   }

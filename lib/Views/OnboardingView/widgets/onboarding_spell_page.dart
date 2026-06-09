@@ -78,8 +78,11 @@ class _OnboardingSpellPageState extends State<OnboardingSpellPage> {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final tight = constraints.maxHeight < 760;
-        final compact = constraints.maxHeight < 900;
+        final safeInsets = MediaQuery.paddingOf(context);
+        final safeHeight =
+            constraints.maxHeight - safeInsets.top - safeInsets.bottom;
+        final tight = safeHeight < 760;
+        final compact = safeHeight < 900;
         final lionStageHeight = tight ? 258.0 : (compact ? 278.0 : 304.0);
         final lionWidth = tight ? 390.0 : (compact ? 420.0 : 450.0);
         final lionTop = tight ? -78.0 : (compact ? -84.0 : -90.0);

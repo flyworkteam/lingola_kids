@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lingola_kids/Core/Routes/app_routes.dart';
+import 'package:lingola_kids/Models/user_model.dart';
 import 'package:lingola_kids/Riverpod/Providers/all_providers.dart';
 import 'package:lingola_kids/Riverpod/Providers/user_provider.dart';
 import 'package:lingola_kids/Views/AlphabetView/widgets/alphabet_page_shell.dart';
@@ -74,14 +75,21 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
     await ref.read(userProfileProvider.notifier).refresh();
   }
 
-  Future<void> _openSubscriptionCenter(bool isPremium) async {
+  Future<void> _openSubscriptionCenter(UserProfile? profile) async {
+    if (profile == null) return;
     if (_isBusy) return;
+
+    final shouldOpenPaywall =
+        !profile.isPremium ||
+        (_isTrialPremium(profile) && await _confirmTrialSubscription());
+    if (!shouldOpenPaywall && _isTrialPremium(profile)) return;
+
     setState(() => _isBusy = true);
     try {
-      if (isPremium) {
-        await RevenueCatUI.presentCustomerCenter();
-      } else {
+      if (shouldOpenPaywall) {
         await RevenueCatUI.presentPaywall(displayCloseButton: true);
+      } else {
+        await RevenueCatUI.presentCustomerCenter();
       }
       await ref.read(userProfileProvider.notifier).refresh();
     } catch (error) {
@@ -92,6 +100,41 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
     } finally {
       if (mounted) setState(() => _isBusy = false);
     }
+  }
+
+  Future<bool> _confirmTrialSubscription() async {
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(context.t.profileScreen.trialSubscriptionTitle),
+          content: Text(context.t.profileScreen.trialSubscriptionPrompt),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: Text(context.t.profileScreen.no),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              child: Text(context.t.profileScreen.yes),
+            ),
+          ],
+        );
+      },
+    );
+
+    return result == true;
+  }
+
+  bool _isTrialPremium(UserProfile profile) {
+    final createdAt = profile.createdAt;
+    final premiumEndTime = profile.premiumEndTime;
+    if (!profile.isPremium || createdAt == null || premiumEndTime == null) {
+      return false;
+    }
+
+    final premiumDuration = premiumEndTime.difference(createdAt);
+    return premiumDuration.inHours >= 0 && premiumDuration.inHours <= 74;
   }
 
   void _showMessage(String message) {
@@ -173,7 +216,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                       title: context.t.profileScreen.manageSubscription,
                       subtitle: subscriptionSubtitle,
                       assetPath: AppIcons.handlePremium,
-                      onTap: () => _openSubscriptionCenter(isPremium),
+                      onTap: () => _openSubscriptionCenter(backendProfile),
                     ),
                     const SizedBox(height: 12),
                     ValueListenableBuilder<ScreenTimeState>(

@@ -71,6 +71,11 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	/// en: 'Continue'
 	String get kContinue => 'Continue';
 
+	/// en: 'OK'
+	String get ok => 'OK';
+
+	late final TranslationsVoicePlaybackEn voicePlayback = TranslationsVoicePlaybackEn._(_root);
+	late final TranslationsLocalNotificationsEn localNotifications = TranslationsLocalNotificationsEn._(_root);
 	late final TranslationsTermOfServiceEn termOfService = TranslationsTermOfServiceEn._(_root);
 
 	/// en: 'Cookies Policy'
@@ -125,6 +130,54 @@ class Translations with BaseTranslations<AppLocale, Translations> {
 	late final TranslationsActivitiesEn activities = TranslationsActivitiesEn._(_root);
 	late final TranslationsResultSheetEn resultSheet = TranslationsResultSheetEn._(_root);
 	late final TranslationsTrueFalseViewEn trueFalseView = TranslationsTrueFalseViewEn._(_root);
+}
+
+// Path: voicePlayback
+class TranslationsVoicePlaybackEn {
+	TranslationsVoicePlaybackEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Audio is loading...'
+	String get loading => 'Audio is loading...';
+
+	/// en: 'Audio is ready, playing.'
+	String get playing => 'Audio is ready, playing.';
+
+	/// en: 'Audio was not found. Please try again.'
+	String get missing => 'Audio was not found. Please try again.';
+
+	/// en: 'Audio could not be prepared. Please try again.'
+	String get failed => 'Audio could not be prepared. Please try again.';
+}
+
+// Path: localNotifications
+class TranslationsLocalNotificationsEn {
+	TranslationsLocalNotificationsEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+
+	/// en: 'Daily learning reminders'
+	String get channelName => 'Daily learning reminders';
+
+	/// en: 'Reminders that help kids keep their daily learning streak.'
+	String get channelDescription => 'Reminders that help kids keep their daily learning streak.';
+
+	/// en: 'Lingola Kids'
+	String get reminderTitle => 'Lingola Kids';
+
+	/// en: 'Keep your streak going with a quick lesson today.'
+	String get reminderBody => 'Keep your streak going with a quick lesson today.';
+
+	/// en: 'Lingola Kids'
+	String get debugTitle => 'Lingola Kids';
+
+	/// en: 'Local notifications are working.'
+	String get debugBody => 'Local notifications are working.';
 }
 
 // Path: termOfService
@@ -280,6 +333,15 @@ class TranslationsHomeEn {
 
 	/// en: 'Continue'
 	String get continueButton => 'Continue';
+
+	/// en: 'Streak status'
+	String get streakTitle => 'Streak status';
+
+	/// en: 'You currently have a $count-day learning streak. Complete a lesson every day to keep your streak.'
+	String streakActive({required Object count}) => 'You currently have a ${count}-day learning streak. Complete a lesson every day to keep your streak.';
+
+	/// en: 'Your learning streak has not started yet. Complete a lesson today to start your streak.'
+	String get streakEmpty => 'Your learning streak has not started yet. Complete a lesson today to start your streak.';
 
 	List<String> get weekDays => [
 		'MON',
@@ -602,6 +664,18 @@ class TranslationsProfileScreenEn {
 
 	/// en: 'Today $hours hours $minutes minutes'
 	String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Today ${hours} hours ${minutes} minutes';
+
+	/// en: 'Trial Premium Active'
+	String get trialSubscriptionTitle => 'Trial Premium Active';
+
+	/// en: 'You are currently using a trial premium subscription. Would you like to subscribe?'
+	String get trialSubscriptionPrompt => 'You are currently using a trial premium subscription. Would you like to subscribe?';
+
+	/// en: 'Yes'
+	String get yes => 'Yes';
+
+	/// en: 'No'
+	String get no => 'No';
 }
 
 // Path: editProfileScreen
@@ -656,6 +730,9 @@ class TranslationsParentalGateEn {
 
 	/// en: 'What is the result of this operation?'
 	String get question => 'What is the result of this operation?';
+
+	/// en: 'Wrong answer. Please try again.'
+	String get wrongAnswer => 'Wrong answer. Please try again.';
 
 	/// en: 'Submit'
 	String get submit => 'Submit';
@@ -1390,6 +1467,17 @@ extension on Translations {
 			'skip' => 'Skip',
 			'profile' => 'Profile',
 			'kContinue' => 'Continue',
+			'ok' => 'OK',
+			'voicePlayback.loading' => 'Audio is loading...',
+			'voicePlayback.playing' => 'Audio is ready, playing.',
+			'voicePlayback.missing' => 'Audio was not found. Please try again.',
+			'voicePlayback.failed' => 'Audio could not be prepared. Please try again.',
+			'localNotifications.channelName' => 'Daily learning reminders',
+			'localNotifications.channelDescription' => 'Reminders that help kids keep their daily learning streak.',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => 'Keep your streak going with a quick lesson today.',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => 'Local notifications are working.',
 			'termOfService.text1' => 'By signing up for Lingola Kids, you agree to our ',
 			'termOfService.link1' => 'Terms of Service',
 			'termOfService.text2' => '. Learn how we process your data in our ',
@@ -1535,6 +1623,9 @@ extension on Translations {
 			'home.startLearning' => 'Start learning',
 			'home.resumeActivity' => ({required Object activity}) => 'Resume ${activity}',
 			'home.continueButton' => 'Continue',
+			'home.streakTitle' => 'Streak status',
+			'home.streakActive' => ({required Object count}) => 'You currently have a ${count}-day learning streak. Complete a lesson every day to keep your streak.',
+			'home.streakEmpty' => 'Your learning streak has not started yet. Complete a lesson today to start your streak.',
 			'home.weekDays.0' => 'MON',
 			'home.weekDays.1' => 'TUE',
 			'home.weekDays.2' => 'WED',
@@ -1666,6 +1757,10 @@ extension on Translations {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Today ${minutes} minutes',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Today ${hours} hours',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Today ${hours} hours ${minutes} minutes',
+			'profileScreen.trialSubscriptionTitle' => 'Trial Premium Active',
+			'profileScreen.trialSubscriptionPrompt' => 'You are currently using a trial premium subscription. Would you like to subscribe?',
+			'profileScreen.yes' => 'Yes',
+			'profileScreen.no' => 'No',
 			'editProfileScreen.changeAvatar' => 'Change Avatar',
 			'editProfileScreen.email' => 'E-mail',
 			'editProfileScreen.emailHelper' => 'This field comes from your backend account.',
@@ -1675,6 +1770,7 @@ extension on Translations {
 			'premiumAccess.openFailed' => 'Premium screen could not be opened. Please try again.',
 			'parentalGate.barrierLabel' => 'Parental gate',
 			'parentalGate.question' => 'What is the result of this operation?',
+			'parentalGate.wrongAnswer' => 'Wrong answer. Please try again.',
 			'parentalGate.submit' => 'Submit',
 			'activities.flashCards' => 'Flash Cards',
 			'activities.drawing' => 'Drawing',

@@ -14,6 +14,7 @@ class HomeHeader extends StatelessWidget {
     this.avatarKey,
     this.isPremium = false,
     this.onPremiumTap,
+    this.onStreakTap,
     super.key,
   });
 
@@ -22,6 +23,7 @@ class HomeHeader extends StatelessWidget {
   final String? avatarKey;
   final bool isPremium;
   final VoidCallback? onPremiumTap;
+  final VoidCallback? onStreakTap;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +65,11 @@ class HomeHeader extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 12),
-        _StreakBadge(count: streakCount),
+        GestureDetector(
+          behavior: HitTestBehavior.opaque,
+          onTap: onStreakTap,
+          child: _StreakBadge(count: streakCount),
+        ),
         const SizedBox(width: 14),
         !isPremium
             ? SizedBox.shrink()

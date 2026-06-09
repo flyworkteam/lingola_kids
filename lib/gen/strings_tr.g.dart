@@ -47,6 +47,9 @@ class TranslationsTr with BaseTranslations<AppLocale, Translations> implements T
 	@override String get skip => 'Atlamak';
 	@override String get profile => 'Profil';
 	@override String get kContinue => 'Devam etmek';
+	@override String get ok => 'Tamam';
+	@override late final _TranslationsVoicePlaybackTr voicePlayback = _TranslationsVoicePlaybackTr._(_root);
+	@override late final _TranslationsLocalNotificationsTr localNotifications = _TranslationsLocalNotificationsTr._(_root);
 	@override late final _TranslationsTermOfServiceTr termOfService = _TranslationsTermOfServiceTr._(_root);
 	@override String get cookies => 'Çerez Politikası';
 	@override String get privacy => 'Gizlilik Politikası';
@@ -76,6 +79,34 @@ class TranslationsTr with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsActivitiesTr activities = _TranslationsActivitiesTr._(_root);
 	@override late final _TranslationsResultSheetTr resultSheet = _TranslationsResultSheetTr._(_root);
 	@override late final _TranslationsTrueFalseViewTr trueFalseView = _TranslationsTrueFalseViewTr._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackTr implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => 'Ses yükleniyor...';
+	@override String get playing => 'Ses hazır, oynatılıyor.';
+	@override String get missing => 'Ses bulunamadı. Lütfen tekrar deneyin.';
+	@override String get failed => 'Ses hazırlanamadı. Lütfen tekrar deneyin.';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsTr implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsTr._(this._root);
+
+	final TranslationsTr _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => 'Günlük öğrenme hatırlatmaları';
+	@override String get channelDescription => 'Çocukların günlük öğrenme serisini korumasına yardımcı olan hatırlatmalar.';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => 'Bugün kısa bir dersle serini devam ettir.';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => 'Yerel bildirimler çalışıyor.';
 }
 
 // Path: termOfService
@@ -168,6 +199,9 @@ class _TranslationsHomeTr implements TranslationsHomeEn {
 	@override String get startLearning => 'Öğrenmeye başla';
 	@override String resumeActivity({required Object activity}) => '${activity} ile devam et';
 	@override String get continueButton => 'Devam Et';
+	@override String get streakTitle => 'Seri durumu';
+	@override String streakActive({required Object count}) => 'Şu anda ${count} günlük öğrenme seriniz var. Her gün ders tamamlayarak serinizi koruyabilirsiniz.';
+	@override String get streakEmpty => 'Henüz öğrenme seriniz başlamadı. Bugün bir ders tamamlayarak serinizi başlatabilirsiniz.';
 	@override List<String> get weekDays => [
 		'PZT',
 		'SAL',
@@ -324,6 +358,10 @@ class _TranslationsProfileScreenTr implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => 'Bugün ${minutes} dakika';
 	@override String screenTimeHours({required Object hours}) => 'Bugün ${hours} saat';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Bugün ${hours} saat ${minutes} dakika';
+	@override String get trialSubscriptionTitle => 'Deneme Aboneliği';
+	@override String get trialSubscriptionPrompt => 'Deneme süreniz sona erdi. Premium özelliklere erişmeye devam etmek ister misiniz?';
+	@override String get yes => 'Evet';
+	@override String get no => 'Hayır';
 }
 
 // Path: editProfileScreen
@@ -360,6 +398,7 @@ class _TranslationsParentalGateTr implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => 'Ebeveyn kontrolü';
 	@override String get question => 'İşlemin sonucu kaçtır?';
+	@override String get wrongAnswer => 'Yanlış cevap. Lütfen tekrar deneyin.';
 	@override String get submit => 'Gönder';
 }
 
@@ -770,6 +809,17 @@ extension on TranslationsTr {
 			'skip' => 'Atlamak',
 			'profile' => 'Profil',
 			'kContinue' => 'Devam etmek',
+			'ok' => 'Tamam',
+			'voicePlayback.loading' => 'Ses yükleniyor...',
+			'voicePlayback.playing' => 'Ses hazır, oynatılıyor.',
+			'voicePlayback.missing' => 'Ses bulunamadı. Lütfen tekrar deneyin.',
+			'voicePlayback.failed' => 'Ses hazırlanamadı. Lütfen tekrar deneyin.',
+			'localNotifications.channelName' => 'Günlük öğrenme hatırlatmaları',
+			'localNotifications.channelDescription' => 'Çocukların günlük öğrenme serisini korumasına yardımcı olan hatırlatmalar.',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => 'Bugün kısa bir dersle serini devam ettir.',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => 'Yerel bildirimler çalışıyor.',
 			'termOfService.text1' => 'Lingola Kids\'e kaydolarak ',
 			'termOfService.link1' => 'Hizmet Şartlarımızı',
 			'termOfService.text2' => ' kabul etmiş olursunuz. Verilerinizi nasıl işlediğimizi ',
@@ -915,6 +965,9 @@ extension on TranslationsTr {
 			'home.startLearning' => 'Öğrenmeye başla',
 			'home.resumeActivity' => ({required Object activity}) => '${activity} ile devam et',
 			'home.continueButton' => 'Devam Et',
+			'home.streakTitle' => 'Seri durumu',
+			'home.streakActive' => ({required Object count}) => 'Şu anda ${count} günlük öğrenme seriniz var. Her gün ders tamamlayarak serinizi koruyabilirsiniz.',
+			'home.streakEmpty' => 'Henüz öğrenme seriniz başlamadı. Bugün bir ders tamamlayarak serinizi başlatabilirsiniz.',
 			'home.weekDays.0' => 'PZT',
 			'home.weekDays.1' => 'SAL',
 			'home.weekDays.2' => 'ÇAR',
@@ -1046,6 +1099,10 @@ extension on TranslationsTr {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Bugün ${minutes} dakika',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Bugün ${hours} saat',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Bugün ${hours} saat ${minutes} dakika',
+			'profileScreen.trialSubscriptionTitle' => 'Deneme Aboneliği',
+			'profileScreen.trialSubscriptionPrompt' => 'Deneme süreniz sona erdi. Premium özelliklere erişmeye devam etmek ister misiniz?',
+			'profileScreen.yes' => 'Evet',
+			'profileScreen.no' => 'Hayır',
 			'editProfileScreen.changeAvatar' => 'Avatarı Değiştir',
 			'editProfileScreen.email' => 'E-posta',
 			'editProfileScreen.emailHelper' => 'Bu alan backend hesabından gelir.',
@@ -1055,6 +1112,7 @@ extension on TranslationsTr {
 			'premiumAccess.openFailed' => 'Premium ekranı açılamadı. Lütfen tekrar dene.',
 			'parentalGate.barrierLabel' => 'Ebeveyn kontrolü',
 			'parentalGate.question' => 'İşlemin sonucu kaçtır?',
+			'parentalGate.wrongAnswer' => 'Yanlış cevap. Lütfen tekrar deneyin.',
 			'parentalGate.submit' => 'Gönder',
 			'activities.flashCards' => 'Flaş Kartlar',
 			'activities.drawing' => 'Çizim',

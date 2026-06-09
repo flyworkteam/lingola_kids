@@ -40,7 +40,14 @@ class AlphabetPageShell extends StatelessWidget {
               children: [
                 _AlphabetTopBar(title: title, trailing: trailing),
                 Expanded(child: child),
-                ?bottom,
+                if (bottom != null)
+                  SafeArea(
+                    top: false,
+                    left: false,
+                    right: false,
+                    minimum: const EdgeInsets.only(bottom: 8),
+                    child: bottom!,
+                  ),
               ],
             ),
           ),

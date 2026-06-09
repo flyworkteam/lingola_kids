@@ -9,6 +9,21 @@
   "skip": "Пропустить",
   "profile": "Профиль",
   "continue": "Продолжить",
+  "ok": "OK",
+  "voicePlayback": {
+    "loading": "Аудио загружается...",
+    "playing": "Аудио готово, воспроизводится.",
+    "missing": "Аудио не найдено. Пожалуйста, попробуйте снова.",
+    "failed": "Не удалось подготовить аудио. Пожалуйста, попробуйте снова."
+  },
+  "localNotifications": {
+    "channelName": "Ежедневные напоминания об обучении",
+    "channelDescription": "Напоминания, которые помогают детям сохранять ежедневную серию обучения.",
+    "reminderTitle": "Lingola Kids",
+    "reminderBody": "Продолжите свою серию коротким уроком сегодня.",
+    "debugTitle": "Lingola Kids",
+    "debugBody": "Локальные уведомления работают."
+  },
   "termOfService": {
     "text1": "Регистрируясь в Lingola Kids, вы соглашаетесь с нашими ",
     "link1": "Условиями обслуживания",
@@ -197,6 +212,9 @@
     "startLearning": "Начать обучение",
     "resumeActivity": "Возобновить $activity",
     "continueButton": "Продолжить",
+    "streakTitle": "Статус серии",
+    "streakActive": "Сейчас у вас серия обучения $count дн. Завершайте урок каждый день, чтобы сохранить серию.",
+    "streakEmpty": "Ваша серия обучения еще не началась. Завершите урок сегодня, чтобы начать ее.",
     "weekDays": [
       "ПН",
       "ВТ",
@@ -353,7 +371,11 @@
     "subscriptionFailed": "Не удалось открыть экран подписки. Пожалуйста, попробуйте снова.",
     "screenTimeMinutes": "Сегодня $minutes минут",
     "screenTimeHours": "Сегодня $hours часов",
-    "screenTimeHoursMinutes": "Сегодня $hours часов $minutes минут"
+    "screenTimeHoursMinutes": "Сегодня $hours часов $minutes минут",
+    "trialSubscriptionTitle": "Триал премиум активен",
+    "trialSubscriptionPrompt": "Вы в настоящее время используете пробную версию премиум-подписки. Хотите подписаться?",
+    "yes": "Да",
+    "no": "Нет"
   },
   "editProfileScreen": {
     "changeAvatar": "Изменить аватар",
@@ -369,6 +391,7 @@
   "parentalGate": {
     "barrierLabel": "Родительский контроль",
     "question": "Каков результат этой операции?",
+    "wrongAnswer": "Неправильный ответ. Пожалуйста, попробуйте снова.",
     "submit": "Отправить"
   },
   "activities": {

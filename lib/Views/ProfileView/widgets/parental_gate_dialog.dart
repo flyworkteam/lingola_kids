@@ -33,6 +33,8 @@ class _ParentalGateDialog extends StatefulWidget {
 class _ParentalGateDialogState extends State<_ParentalGateDialog> {
   late final TextEditingController _controller = TextEditingController();
 
+  String? _errorText;
+
   @override
   void dispose() {
     _controller.dispose();
@@ -41,7 +43,17 @@ class _ParentalGateDialogState extends State<_ParentalGateDialog> {
 
   void _submit(String value) {
     final input = int.tryParse(value.trim());
-    Navigator.of(context).pop(input == widget.challenge.answer);
+
+    if (input == widget.challenge.answer) {
+      Navigator.of(context).pop(true);
+      return;
+    }
+
+    setState(() {
+      _errorText = context.t.parentalGate.wrongAnswer;
+    });
+
+    _controller.clear();
   }
 
   void _submitCurrentAnswer() {
@@ -100,6 +112,13 @@ class _ParentalGateDialogState extends State<_ParentalGateDialog> {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
+                      errorText: _errorText,
+                      errorMaxLines: 2,
+                      errorStyle: GoogleFonts.dynaPuff(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        color: const Color(0xFFE53935),
+                      ),
                       contentPadding: const EdgeInsets.symmetric(
                         horizontal: 16,
                         vertical: 17,
@@ -122,7 +141,22 @@ class _ParentalGateDialogState extends State<_ParentalGateDialog> {
                           color: Colors.black.withValues(alpha: 0.18),
                         ),
                       ),
+                      errorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: const BorderSide(color: Color(0xFFE53935)),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: const BorderSide(color: Color(0xFFE53935)),
+                      ),
                     ),
+                    onChanged: (_) {
+                      if (_errorText != null) {
+                        setState(() {
+                          _errorText = null;
+                        });
+                      }
+                    },
                     onSubmitted: _submit,
                   ),
                   const SizedBox(height: 18),

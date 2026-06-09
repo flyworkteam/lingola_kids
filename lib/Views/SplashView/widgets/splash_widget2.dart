@@ -151,7 +151,7 @@ class SplashWidget2 extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 32 * scale,
+                bottom: mediaQuery.padding.bottom + (32 * scale),
                 left: (width - buttonWidth) / 2,
                 child: SizedBox(
                   width: buttonWidth,

@@ -47,6 +47,9 @@ class TranslationsEs with BaseTranslations<AppLocale, Translations> implements T
 	@override String get skip => 'Saltar';
 	@override String get profile => 'Perfil';
 	@override String get kContinue => 'Continuar';
+	@override String get ok => 'Aceptar';
+	@override late final _TranslationsVoicePlaybackEs voicePlayback = _TranslationsVoicePlaybackEs._(_root);
+	@override late final _TranslationsLocalNotificationsEs localNotifications = _TranslationsLocalNotificationsEs._(_root);
 	@override late final _TranslationsTermOfServiceEs termOfService = _TranslationsTermOfServiceEs._(_root);
 	@override String get cookies => 'Política de cookies';
 	@override String get privacy => 'política de privacidad';
@@ -76,6 +79,34 @@ class TranslationsEs with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsActivitiesEs activities = _TranslationsActivitiesEs._(_root);
 	@override late final _TranslationsResultSheetEs resultSheet = _TranslationsResultSheetEs._(_root);
 	@override late final _TranslationsTrueFalseViewEs trueFalseView = _TranslationsTrueFalseViewEs._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackEs implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackEs._(this._root);
+
+	final TranslationsEs _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => 'El audio se está cargando...';
+	@override String get playing => 'El audio está listo, reproduciendo.';
+	@override String get missing => 'No se encontró el audio. Inténtalo de nuevo.';
+	@override String get failed => 'No se pudo preparar el audio. Inténtalo de nuevo.';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsEs implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsEs._(this._root);
+
+	final TranslationsEs _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => 'Recordatorios diarios de aprendizaje';
+	@override String get channelDescription => 'Recordatorios que ayudan a los niños a mantener su racha diaria de aprendizaje.';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => 'Mantén tu racha con una lección rápida hoy.';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => 'Las notificaciones locales funcionan.';
 }
 
 // Path: termOfService
@@ -168,6 +199,9 @@ class _TranslationsHomeEs implements TranslationsHomeEn {
 	@override String get startLearning => 'Empezar a aprender';
 	@override String resumeActivity({required Object activity}) => 'Reanudar ${activity}';
 	@override String get continueButton => 'Continuar';
+	@override String get streakTitle => 'Estado de la racha';
+	@override String streakActive({required Object count}) => 'Actualmente tienes una racha de aprendizaje de ${count} días. Completa una lección cada día para mantenerla.';
+	@override String get streakEmpty => 'Tu racha de aprendizaje aún no ha comenzado. Completa una lección hoy para empezarla.';
 	@override List<String> get weekDays => [
 		'LUN',
 		'MAR',
@@ -324,6 +358,10 @@ class _TranslationsProfileScreenEs implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => 'Hoy ${minutes} minutos';
 	@override String screenTimeHours({required Object hours}) => 'Hoy ${hours} horas';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Hoy ${hours} horas ${minutes} minutos';
+	@override String get trialSubscriptionTitle => 'Prueba Premium Activa';
+	@override String get trialSubscriptionPrompt => 'Estás utilizando actualmente una suscripción de prueba premium. ¿Te gustaría suscribirte?';
+	@override String get yes => 'Sí';
+	@override String get no => 'No';
 }
 
 // Path: editProfileScreen
@@ -360,6 +398,7 @@ class _TranslationsParentalGateEs implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => 'puerta parental';
 	@override String get question => '¿Cuál es el resultado de esta operación?';
+	@override String get wrongAnswer => 'Respuesta incorrecta. Por favor inténtalo de nuevo.';
 	@override String get submit => 'Entregar';
 }
 
@@ -770,6 +809,17 @@ extension on TranslationsEs {
 			'skip' => 'Saltar',
 			'profile' => 'Perfil',
 			'kContinue' => 'Continuar',
+			'ok' => 'Aceptar',
+			'voicePlayback.loading' => 'El audio se está cargando...',
+			'voicePlayback.playing' => 'El audio está listo, reproduciendo.',
+			'voicePlayback.missing' => 'No se encontró el audio. Inténtalo de nuevo.',
+			'voicePlayback.failed' => 'No se pudo preparar el audio. Inténtalo de nuevo.',
+			'localNotifications.channelName' => 'Recordatorios diarios de aprendizaje',
+			'localNotifications.channelDescription' => 'Recordatorios que ayudan a los niños a mantener su racha diaria de aprendizaje.',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => 'Mantén tu racha con una lección rápida hoy.',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => 'Las notificaciones locales funcionan.',
 			'termOfService.text1' => 'Al registrarse en Lingola Kids, acepta nuestros ',
 			'termOfService.link1' => 'Términos de servicio',
 			'termOfService.text2' => '. Conozca cómo procesamos sus datos en nuestra ',
@@ -915,6 +965,9 @@ extension on TranslationsEs {
 			'home.startLearning' => 'Empezar a aprender',
 			'home.resumeActivity' => ({required Object activity}) => 'Reanudar ${activity}',
 			'home.continueButton' => 'Continuar',
+			'home.streakTitle' => 'Estado de la racha',
+			'home.streakActive' => ({required Object count}) => 'Actualmente tienes una racha de aprendizaje de ${count} días. Completa una lección cada día para mantenerla.',
+			'home.streakEmpty' => 'Tu racha de aprendizaje aún no ha comenzado. Completa una lección hoy para empezarla.',
 			'home.weekDays.0' => 'LUN',
 			'home.weekDays.1' => 'MAR',
 			'home.weekDays.2' => 'CASARSE',
@@ -1046,6 +1099,10 @@ extension on TranslationsEs {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Hoy ${minutes} minutos',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Hoy ${hours} horas',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Hoy ${hours} horas ${minutes} minutos',
+			'profileScreen.trialSubscriptionTitle' => 'Prueba Premium Activa',
+			'profileScreen.trialSubscriptionPrompt' => 'Estás utilizando actualmente una suscripción de prueba premium. ¿Te gustaría suscribirte?',
+			'profileScreen.yes' => 'Sí',
+			'profileScreen.no' => 'No',
 			'editProfileScreen.changeAvatar' => 'Cambiar avatar',
 			'editProfileScreen.email' => 'Correo electrónico',
 			'editProfileScreen.emailHelper' => 'Este campo proviene de su cuenta backend.',
@@ -1055,6 +1112,7 @@ extension on TranslationsEs {
 			'premiumAccess.openFailed' => 'No se pudo abrir la pantalla premium. Por favor inténtalo de nuevo.',
 			'parentalGate.barrierLabel' => 'puerta parental',
 			'parentalGate.question' => '¿Cuál es el resultado de esta operación?',
+			'parentalGate.wrongAnswer' => 'Respuesta incorrecta. Por favor inténtalo de nuevo.',
 			'parentalGate.submit' => 'Entregar',
 			'activities.flashCards' => 'Tarjetas didácticas',
 			'activities.drawing' => 'Dibujo',

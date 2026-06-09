@@ -47,6 +47,9 @@ class TranslationsHi with BaseTranslations<AppLocale, Translations> implements T
 	@override String get skip => 'छोडना';
 	@override String get profile => 'प्रोफ़ाइल';
 	@override String get kContinue => 'जारी रखना';
+	@override String get ok => 'ठीक है';
+	@override late final _TranslationsVoicePlaybackHi voicePlayback = _TranslationsVoicePlaybackHi._(_root);
+	@override late final _TranslationsLocalNotificationsHi localNotifications = _TranslationsLocalNotificationsHi._(_root);
 	@override late final _TranslationsTermOfServiceHi termOfService = _TranslationsTermOfServiceHi._(_root);
 	@override String get cookies => 'कुकीज़ नीति';
 	@override String get privacy => 'गोपनीयता नीति';
@@ -76,6 +79,34 @@ class TranslationsHi with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsActivitiesHi activities = _TranslationsActivitiesHi._(_root);
 	@override late final _TranslationsResultSheetHi resultSheet = _TranslationsResultSheetHi._(_root);
 	@override late final _TranslationsTrueFalseViewHi trueFalseView = _TranslationsTrueFalseViewHi._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackHi implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => 'ऑडियो लोड हो रहा है...';
+	@override String get playing => 'ऑडियो तैयार है, चल रहा है।';
+	@override String get missing => 'ऑडियो नहीं मिला। कृपया फिर से प्रयास करें।';
+	@override String get failed => 'ऑडियो तैयार नहीं हो सका। कृपया फिर से प्रयास करें।';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsHi implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => 'दैनिक सीखने की याद दिलाने वाली सूचनाएं';
+	@override String get channelDescription => 'बच्चों को दैनिक सीखने की स्ट्रीक बनाए रखने में मदद करने वाली याद दिलाने वाली सूचनाएं।';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => 'आज एक छोटा पाठ करके अपनी स्ट्रीक जारी रखें।';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => 'स्थानीय सूचनाएं काम कर रही हैं।';
 }
 
 // Path: termOfService
@@ -168,6 +199,9 @@ class _TranslationsHomeHi implements TranslationsHomeEn {
 	@override String get startLearning => 'सीखना शुरू करें';
 	@override String resumeActivity({required Object activity}) => '${activity} फिर से शुरू करें';
 	@override String get continueButton => 'जारी रखना';
+	@override String get streakTitle => 'स्ट्रीक स्थिति';
+	@override String streakActive({required Object count}) => 'आपकी अभी ${count} दिन की सीखने की स्ट्रीक है। इसे बनाए रखने के लिए हर दिन एक पाठ पूरा करें।';
+	@override String get streakEmpty => 'आपकी सीखने की स्ट्रीक अभी शुरू नहीं हुई है। इसे शुरू करने के लिए आज एक पाठ पूरा करें।';
 	@override List<String> get weekDays => [
 		'सोम',
 		'मंगल',
@@ -324,6 +358,10 @@ class _TranslationsProfileScreenHi implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => 'आज ${minutes} मिनट';
 	@override String screenTimeHours({required Object hours}) => 'आज ${hours} घंटे';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'आज ${hours} घंटे ${minutes} मिनट';
+	@override String get trialSubscriptionTitle => 'ट्रायल प्रीमियम सक्रिय';
+	@override String get trialSubscriptionPrompt => 'आप वर्तमान में एक ट्रायल प्रीमियम सब्सक्रिप्शन का उपयोग कर रहे हैं. क्या आप सब्सक्राइब करना चाहेंगे?';
+	@override String get yes => 'हाँ';
+	@override String get no => 'नहीं';
 }
 
 // Path: editProfileScreen
@@ -360,6 +398,7 @@ class _TranslationsParentalGateHi implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => 'पैतृक द्वार';
 	@override String get question => 'इस ऑपरेशन का परिणाम क्या है?';
+	@override String get wrongAnswer => 'गलत उत्तर. कृपया पुन: प्रयास करें.';
 	@override String get submit => 'जमा करना';
 }
 
@@ -770,6 +809,17 @@ extension on TranslationsHi {
 			'skip' => 'छोडना',
 			'profile' => 'प्रोफ़ाइल',
 			'kContinue' => 'जारी रखना',
+			'ok' => 'ठीक है',
+			'voicePlayback.loading' => 'ऑडियो लोड हो रहा है...',
+			'voicePlayback.playing' => 'ऑडियो तैयार है, चल रहा है।',
+			'voicePlayback.missing' => 'ऑडियो नहीं मिला। कृपया फिर से प्रयास करें।',
+			'voicePlayback.failed' => 'ऑडियो तैयार नहीं हो सका। कृपया फिर से प्रयास करें।',
+			'localNotifications.channelName' => 'दैनिक सीखने की याद दिलाने वाली सूचनाएं',
+			'localNotifications.channelDescription' => 'बच्चों को दैनिक सीखने की स्ट्रीक बनाए रखने में मदद करने वाली याद दिलाने वाली सूचनाएं।',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => 'आज एक छोटा पाठ करके अपनी स्ट्रीक जारी रखें।',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => 'स्थानीय सूचनाएं काम कर रही हैं।',
 			'termOfService.text1' => 'लिंगोला किड्स (Lingola Kids) के लिए साइन अप करके, आप हमारी ',
 			'termOfService.link1' => 'सेवा की शर्तों',
 			'termOfService.text2' => ' से सहमत होते हैं। जानें कि हम आपके डेटा को अपनी ',
@@ -915,6 +965,9 @@ extension on TranslationsHi {
 			'home.startLearning' => 'सीखना शुरू करें',
 			'home.resumeActivity' => ({required Object activity}) => '${activity} फिर से शुरू करें',
 			'home.continueButton' => 'जारी रखना',
+			'home.streakTitle' => 'स्ट्रीक स्थिति',
+			'home.streakActive' => ({required Object count}) => 'आपकी अभी ${count} दिन की सीखने की स्ट्रीक है। इसे बनाए रखने के लिए हर दिन एक पाठ पूरा करें।',
+			'home.streakEmpty' => 'आपकी सीखने की स्ट्रीक अभी शुरू नहीं हुई है। इसे शुरू करने के लिए आज एक पाठ पूरा करें।',
 			'home.weekDays.0' => 'सोम',
 			'home.weekDays.1' => 'मंगल',
 			'home.weekDays.2' => 'बुध',
@@ -1046,6 +1099,10 @@ extension on TranslationsHi {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'आज ${minutes} मिनट',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => 'आज ${hours} घंटे',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'आज ${hours} घंटे ${minutes} मिनट',
+			'profileScreen.trialSubscriptionTitle' => 'ट्रायल प्रीमियम सक्रिय',
+			'profileScreen.trialSubscriptionPrompt' => 'आप वर्तमान में एक ट्रायल प्रीमियम सब्सक्रिप्शन का उपयोग कर रहे हैं. क्या आप सब्सक्राइब करना चाहेंगे?',
+			'profileScreen.yes' => 'हाँ',
+			'profileScreen.no' => 'नहीं',
 			'editProfileScreen.changeAvatar' => 'परिवर्तन अवतार',
 			'editProfileScreen.email' => 'ई-मेल',
 			'editProfileScreen.emailHelper' => 'यह फ़ील्ड आपके बैकएंड खाते से आती है.',
@@ -1055,6 +1112,7 @@ extension on TranslationsHi {
 			'premiumAccess.openFailed' => 'प्रीमियम स्क्रीन नहीं खोली जा सकी. कृपया पुन: प्रयास करें।',
 			'parentalGate.barrierLabel' => 'पैतृक द्वार',
 			'parentalGate.question' => 'इस ऑपरेशन का परिणाम क्या है?',
+			'parentalGate.wrongAnswer' => 'गलत उत्तर. कृपया पुन: प्रयास करें.',
 			'parentalGate.submit' => 'जमा करना',
 			'activities.flashCards' => 'फ़्लैश कार्ड',
 			'activities.drawing' => 'चित्रकला',

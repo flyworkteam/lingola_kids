@@ -9,6 +9,21 @@
     "skip": "छोडना",
     "profile": "प्रोफ़ाइल",
     "continue": "जारी रखना",
+    "ok": "ठीक है",
+    "voicePlayback": {
+        "loading": "ऑडियो लोड हो रहा है...",
+        "playing": "ऑडियो तैयार है, चल रहा है।",
+        "missing": "ऑडियो नहीं मिला। कृपया फिर से प्रयास करें।",
+        "failed": "ऑडियो तैयार नहीं हो सका। कृपया फिर से प्रयास करें।"
+    },
+    "localNotifications": {
+        "channelName": "दैनिक सीखने की याद दिलाने वाली सूचनाएं",
+        "channelDescription": "बच्चों को दैनिक सीखने की स्ट्रीक बनाए रखने में मदद करने वाली याद दिलाने वाली सूचनाएं।",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "आज एक छोटा पाठ करके अपनी स्ट्रीक जारी रखें।",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "स्थानीय सूचनाएं काम कर रही हैं।"
+    },
     "termOfService": {
         "text1": "लिंगोला किड्स (Lingola Kids) के लिए साइन अप करके, आप हमारी ",
         "link1": "सेवा की शर्तों",
@@ -197,6 +212,9 @@
         "startLearning": "सीखना शुरू करें",
         "resumeActivity": "$activity फिर से शुरू करें",
         "continueButton": "जारी रखना",
+        "streakTitle": "स्ट्रीक स्थिति",
+        "streakActive": "आपकी अभी $count दिन की सीखने की स्ट्रीक है। इसे बनाए रखने के लिए हर दिन एक पाठ पूरा करें।",
+        "streakEmpty": "आपकी सीखने की स्ट्रीक अभी शुरू नहीं हुई है। इसे शुरू करने के लिए आज एक पाठ पूरा करें।",
         "weekDays": [
             "सोम",
             "मंगल",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "सदस्यता स्क्रीन नहीं खोली जा सकी. कृपया पुन: प्रयास करें।",
         "screenTimeMinutes": "आज $minutes मिनट",
         "screenTimeHours": "आज $hours घंटे",
-        "screenTimeHoursMinutes": "आज $hours घंटे $minutes मिनट"
+        "screenTimeHoursMinutes": "आज $hours घंटे $minutes मिनट",
+        "trialSubscriptionTitle": "ट्रायल प्रीमियम सक्रिय",
+        "trialSubscriptionPrompt": "आप वर्तमान में एक ट्रायल प्रीमियम सब्सक्रिप्शन का उपयोग कर रहे हैं. क्या आप सब्सक्राइब करना चाहेंगे?",
+        "yes": "हाँ",
+        "no": "नहीं"
     },
     "editProfileScreen": {
         "changeAvatar": "परिवर्तन अवतार",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "पैतृक द्वार",
         "question": "इस ऑपरेशन का परिणाम क्या है?",
+        "wrongAnswer": "गलत उत्तर. कृपया पुन: प्रयास करें.",
         "submit": "जमा करना"
     },
     "activities": {

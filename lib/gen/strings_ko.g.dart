@@ -47,6 +47,9 @@ class TranslationsKo with BaseTranslations<AppLocale, Translations> implements T
 	@override String get skip => '건너뛰기';
 	@override String get profile => '프로필';
 	@override String get kContinue => '계속';
+	@override String get ok => '확인';
+	@override late final _TranslationsVoicePlaybackKo voicePlayback = _TranslationsVoicePlaybackKo._(_root);
+	@override late final _TranslationsLocalNotificationsKo localNotifications = _TranslationsLocalNotificationsKo._(_root);
 	@override late final _TranslationsTermOfServiceKo termOfService = _TranslationsTermOfServiceKo._(_root);
 	@override String get cookies => '쿠키 정책';
 	@override String get privacy => '개인정보 처리방침';
@@ -76,6 +79,34 @@ class TranslationsKo with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsActivitiesKo activities = _TranslationsActivitiesKo._(_root);
 	@override late final _TranslationsResultSheetKo resultSheet = _TranslationsResultSheetKo._(_root);
 	@override late final _TranslationsTrueFalseViewKo trueFalseView = _TranslationsTrueFalseViewKo._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackKo implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackKo._(this._root);
+
+	final TranslationsKo _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => '오디오를 불러오는 중입니다...';
+	@override String get playing => '오디오가 준비되어 재생 중입니다.';
+	@override String get missing => '오디오를 찾을 수 없습니다. 다시 시도해 주세요.';
+	@override String get failed => '오디오를 준비할 수 없습니다. 다시 시도해 주세요.';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsKo implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsKo._(this._root);
+
+	final TranslationsKo _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => '일일 학습 알림';
+	@override String get channelDescription => '아이들이 매일 학습 연속 기록을 유지하도록 돕는 알림입니다.';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => '오늘 짧은 수업으로 연속 기록을 이어가세요.';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => '로컬 알림이 작동 중입니다.';
 }
 
 // Path: termOfService
@@ -168,6 +199,9 @@ class _TranslationsHomeKo implements TranslationsHomeEn {
 	@override String get startLearning => '학습 시작';
 	@override String resumeActivity({required Object activity}) => '${activity} 계속하기';
 	@override String get continueButton => '계속';
+	@override String get streakTitle => '연속 학습 상태';
+	@override String streakActive({required Object count}) => '현재 ${count}일 연속 학습 중입니다. 매일 수업을 완료해 연속 기록을 유지하세요.';
+	@override String get streakEmpty => '아직 연속 학습이 시작되지 않았습니다. 오늘 수업을 완료해 시작하세요.';
 	@override List<String> get weekDays => [
 		'월',
 		'화',
@@ -324,6 +358,10 @@ class _TranslationsProfileScreenKo implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => '오늘 ${minutes} 분';
 	@override String screenTimeHours({required Object hours}) => '오늘 ${hours} 시간';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => '오늘 ${hours} 시간 ${minutes} 분';
+	@override String get trialSubscriptionTitle => '트라이얼 프리미엄 활성';
+	@override String get trialSubscriptionPrompt => '현재 트라이얼 프리미엄 구독을 사용하고 있습니다. 구독하시겠습니까?';
+	@override String get yes => '예';
+	@override String get no => '아니오';
 }
 
 // Path: editProfileScreen
@@ -360,6 +398,7 @@ class _TranslationsParentalGateKo implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => '부모 인증';
 	@override String get question => '이 작업의 결과는 무엇인가요?';
+	@override String get wrongAnswer => '잘못된 답변입니다. 다시 시도해 주세요.';
 	@override String get submit => '제출';
 }
 
@@ -770,6 +809,17 @@ extension on TranslationsKo {
 			'skip' => '건너뛰기',
 			'profile' => '프로필',
 			'kContinue' => '계속',
+			'ok' => '확인',
+			'voicePlayback.loading' => '오디오를 불러오는 중입니다...',
+			'voicePlayback.playing' => '오디오가 준비되어 재생 중입니다.',
+			'voicePlayback.missing' => '오디오를 찾을 수 없습니다. 다시 시도해 주세요.',
+			'voicePlayback.failed' => '오디오를 준비할 수 없습니다. 다시 시도해 주세요.',
+			'localNotifications.channelName' => '일일 학습 알림',
+			'localNotifications.channelDescription' => '아이들이 매일 학습 연속 기록을 유지하도록 돕는 알림입니다.',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => '오늘 짧은 수업으로 연속 기록을 이어가세요.',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => '로컬 알림이 작동 중입니다.',
 			'termOfService.text1' => 'Lingola Kids에 가입함으로써 귀하는 당사의 ',
 			'termOfService.link1' => '서비스 약관',
 			'termOfService.text2' => '에 동의하게 됩니다. 당사가 데이터를 처리하는 방법은 ',
@@ -915,6 +965,9 @@ extension on TranslationsKo {
 			'home.startLearning' => '학습 시작',
 			'home.resumeActivity' => ({required Object activity}) => '${activity} 계속하기',
 			'home.continueButton' => '계속',
+			'home.streakTitle' => '연속 학습 상태',
+			'home.streakActive' => ({required Object count}) => '현재 ${count}일 연속 학습 중입니다. 매일 수업을 완료해 연속 기록을 유지하세요.',
+			'home.streakEmpty' => '아직 연속 학습이 시작되지 않았습니다. 오늘 수업을 완료해 시작하세요.',
 			'home.weekDays.0' => '월',
 			'home.weekDays.1' => '화',
 			'home.weekDays.2' => '수',
@@ -1046,6 +1099,10 @@ extension on TranslationsKo {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => '오늘 ${minutes} 분',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => '오늘 ${hours} 시간',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => '오늘 ${hours} 시간 ${minutes} 분',
+			'profileScreen.trialSubscriptionTitle' => '트라이얼 프리미엄 활성',
+			'profileScreen.trialSubscriptionPrompt' => '현재 트라이얼 프리미엄 구독을 사용하고 있습니다. 구독하시겠습니까?',
+			'profileScreen.yes' => '예',
+			'profileScreen.no' => '아니오',
 			'editProfileScreen.changeAvatar' => '아바타 변경',
 			'editProfileScreen.email' => '이메일',
 			'editProfileScreen.emailHelper' => '이 필드는 백엔드 계정에서 가져옵니다.',
@@ -1055,6 +1112,7 @@ extension on TranslationsKo {
 			'premiumAccess.openFailed' => '프리미엄 화면을 열 수 없습니다. 다시 시도해 주세요.',
 			'parentalGate.barrierLabel' => '부모 인증',
 			'parentalGate.question' => '이 작업의 결과는 무엇인가요?',
+			'parentalGate.wrongAnswer' => '잘못된 답변입니다. 다시 시도해 주세요.',
 			'parentalGate.submit' => '제출',
 			'activities.flashCards' => '플래시 카드',
 			'activities.drawing' => '그림',

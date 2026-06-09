@@ -54,8 +54,6 @@ void main() async {
   final container = ProviderContainer();
 
   final storageService = SecureStorageService();
-  await LocalNotificationService.initialize(storageService: storageService);
-
   final savedLanguageCode = await storageService.getLanguage();
   Print.info('Saved language code from storage: $savedLanguageCode');
   if (savedLanguageCode != null) {
@@ -70,6 +68,8 @@ void main() async {
   } else {
     await LocaleSettings.useDeviceLocale();
   }
+
+  await LocalNotificationService.initialize(storageService: storageService);
 
   runApp(
     UncontrolledProviderScope(

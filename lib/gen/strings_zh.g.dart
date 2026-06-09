@@ -47,6 +47,9 @@ class TranslationsZh with BaseTranslations<AppLocale, Translations> implements T
 	@override String get skip => '跳过';
 	@override String get profile => '个人资料';
 	@override String get kContinue => '继续';
+	@override String get ok => '确定';
+	@override late final _TranslationsVoicePlaybackZh voicePlayback = _TranslationsVoicePlaybackZh._(_root);
+	@override late final _TranslationsLocalNotificationsZh localNotifications = _TranslationsLocalNotificationsZh._(_root);
 	@override late final _TranslationsTermOfServiceZh termOfService = _TranslationsTermOfServiceZh._(_root);
 	@override String get cookies => 'Cookie 政策';
 	@override String get privacy => '隐私政策';
@@ -76,6 +79,34 @@ class TranslationsZh with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsActivitiesZh activities = _TranslationsActivitiesZh._(_root);
 	@override late final _TranslationsResultSheetZh resultSheet = _TranslationsResultSheetZh._(_root);
 	@override late final _TranslationsTrueFalseViewZh trueFalseView = _TranslationsTrueFalseViewZh._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackZh implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackZh._(this._root);
+
+	final TranslationsZh _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => '音频正在加载...';
+	@override String get playing => '音频已准备好，正在播放。';
+	@override String get missing => '未找到音频。请重试。';
+	@override String get failed => '无法准备音频。请重试。';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsZh implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsZh._(this._root);
+
+	final TranslationsZh _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => '每日学习提醒';
+	@override String get channelDescription => '帮助孩子保持每日学习连续记录的提醒。';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => '今天完成一节简短课程，继续保持连续记录。';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => '本地通知正在工作。';
 }
 
 // Path: termOfService
@@ -168,6 +199,9 @@ class _TranslationsHomeZh implements TranslationsHomeEn {
 	@override String get startLearning => '开始学习';
 	@override String resumeActivity({required Object activity}) => '继续 ${activity}';
 	@override String get continueButton => '继续';
+	@override String get streakTitle => '连续学习状态';
+	@override String streakActive({required Object count}) => '你目前已有 ${count} 天连续学习。每天完成一节课即可保持连续记录。';
+	@override String get streakEmpty => '你的连续学习还没有开始。今天完成一节课即可开始。';
 	@override List<String> get weekDays => [
 		'周一',
 		'周二',
@@ -324,6 +358,10 @@ class _TranslationsProfileScreenZh implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => '今天 ${minutes} 分钟';
 	@override String screenTimeHours({required Object hours}) => '今天 ${hours} 小时';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => '今天 ${hours} 小时 ${minutes} 分钟';
+	@override String get trialSubscriptionTitle => '试用高级会员激活';
+	@override String get trialSubscriptionPrompt => '您当前正在使用试用高级会员订阅。您想要订阅吗？';
+	@override String get yes => '是';
+	@override String get no => '否';
 }
 
 // Path: editProfileScreen
@@ -360,6 +398,7 @@ class _TranslationsParentalGateZh implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => '家长验证';
 	@override String get question => '此操作的结果是什么？';
+	@override String get wrongAnswer => '答案错误。请再试一次。';
 	@override String get submit => '提交';
 }
 
@@ -770,6 +809,17 @@ extension on TranslationsZh {
 			'skip' => '跳过',
 			'profile' => '个人资料',
 			'kContinue' => '继续',
+			'ok' => '确定',
+			'voicePlayback.loading' => '音频正在加载...',
+			'voicePlayback.playing' => '音频已准备好，正在播放。',
+			'voicePlayback.missing' => '未找到音频。请重试。',
+			'voicePlayback.failed' => '无法准备音频。请重试。',
+			'localNotifications.channelName' => '每日学习提醒',
+			'localNotifications.channelDescription' => '帮助孩子保持每日学习连续记录的提醒。',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => '今天完成一节简短课程，继续保持连续记录。',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => '本地通知正在工作。',
 			'termOfService.text1' => '注册 Lingola Kids 即表示您同意我们的 ',
 			'termOfService.link1' => '服务条款',
 			'termOfService.text2' => '。在我们的 ',
@@ -915,6 +965,9 @@ extension on TranslationsZh {
 			'home.startLearning' => '开始学习',
 			'home.resumeActivity' => ({required Object activity}) => '继续 ${activity}',
 			'home.continueButton' => '继续',
+			'home.streakTitle' => '连续学习状态',
+			'home.streakActive' => ({required Object count}) => '你目前已有 ${count} 天连续学习。每天完成一节课即可保持连续记录。',
+			'home.streakEmpty' => '你的连续学习还没有开始。今天完成一节课即可开始。',
 			'home.weekDays.0' => '周一',
 			'home.weekDays.1' => '周二',
 			'home.weekDays.2' => '周三',
@@ -1046,6 +1099,10 @@ extension on TranslationsZh {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => '今天 ${minutes} 分钟',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => '今天 ${hours} 小时',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => '今天 ${hours} 小时 ${minutes} 分钟',
+			'profileScreen.trialSubscriptionTitle' => '试用高级会员激活',
+			'profileScreen.trialSubscriptionPrompt' => '您当前正在使用试用高级会员订阅。您想要订阅吗？',
+			'profileScreen.yes' => '是',
+			'profileScreen.no' => '否',
 			'editProfileScreen.changeAvatar' => '更改头像',
 			'editProfileScreen.email' => '电子邮件',
 			'editProfileScreen.emailHelper' => '该字段来自您的后端帐户。',
@@ -1055,6 +1112,7 @@ extension on TranslationsZh {
 			'premiumAccess.openFailed' => '无法打开高级界面。请重试。',
 			'parentalGate.barrierLabel' => '家长验证',
 			'parentalGate.question' => '此操作的结果是什么？',
+			'parentalGate.wrongAnswer' => '答案错误。请再试一次。',
 			'parentalGate.submit' => '提交',
 			'activities.flashCards' => '单词卡',
 			'activities.drawing' => '绘画',

@@ -9,6 +9,21 @@
     "skip": "Pular",
     "profile": "Perfil",
     "continue": "Continuar",
+    "ok": "OK",
+    "voicePlayback": {
+        "loading": "Áudio carregando...",
+        "playing": "Áudio pronto, reproduzindo.",
+        "missing": "Áudio não encontrado. Tente novamente.",
+        "failed": "Não foi possível preparar o áudio. Tente novamente."
+    },
+    "localNotifications": {
+        "channelName": "Lembretes diários de aprendizagem",
+        "channelDescription": "Lembretes que ajudam as crianças a manter sua sequência diária de aprendizagem.",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "Mantenha sua sequência com uma lição rápida hoje.",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "As notificações locais estão funcionando."
+    },
     "termOfService": {
         "text1": "Ao se inscrever no Lingola Kids, você concorda com nossos ",
         "link1": "Termos de Serviço",
@@ -197,6 +212,9 @@
         "startLearning": "Começar a aprender",
         "resumeActivity": "Retomar $activity",
         "continueButton": "Continuar",
+        "streakTitle": "Status da sequência",
+        "streakActive": "Você está com uma sequência de aprendizado de $count dias. Complete uma lição todos os dias para mantê-la.",
+        "streakEmpty": "Sua sequência de aprendizado ainda não começou. Complete uma lição hoje para iniciá-la.",
         "weekDays": [
             "SEG",
             "TER",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "Não foi possível abrir a tela de assinatura. Por favor, tente novamente.",
         "screenTimeMinutes": "Hoje $minutes minutos",
         "screenTimeHours": "Hoje $hours horas",
-        "screenTimeHoursMinutes": "Hoje $hours horas $minutes minutos"
+        "screenTimeHoursMinutes": "Hoje $hours horas $minutes minutos",
+        "trialSubscriptionTitle": "Teste Premium Ativo",
+        "trialSubscriptionPrompt": "Você está usando atualmente uma assinatura de teste premium. Deseja se inscrever?",
+        "yes": "Sim",
+        "no": "Não"
     },
     "editProfileScreen": {
         "changeAvatar": "Alterar avatar",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "Controle dos pais",
         "question": "Qual é o resultado desta operação?",
+        "wrongAnswer": "Resposta incorreta. Por favor, tente novamente.",
         "submit": "Enviar"
     },
     "activities": {

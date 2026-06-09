@@ -50,6 +50,7 @@ class ScreenTimeController with WidgetsBindingObserver {
 
   bool _initialized = false;
   bool _enabled = true;
+  int? _userId;
   String _activeDate = _todayKey();
   int _storedSeconds = 0;
   DateTime? _sessionStartedAt;
@@ -60,13 +61,17 @@ class ScreenTimeController with WidgetsBindingObserver {
   static Future<void> setEnabled(bool enabled) =>
       _instance._setEnabled(enabled);
 
+  static Future<void> handleUserChanged({bool preserveCurrentSession = true}) =>
+      _instance._handleUserChanged(
+        preserveCurrentSession: preserveCurrentSession,
+      );
+
   Future<void> _initialize() async {
     if (_initialized) return;
     _initialized = true;
 
-    _enabled = await _storage.getScreenTimeTrackingEnabled();
-    _activeDate = await _storage.getScreenTimeDate() ?? _todayKey();
-    _storedSeconds = await _storage.getScreenTimeSeconds();
+    _userId = await _storage.getUserId();
+    await _loadStoredState();
     await _rolloverIfNeeded();
 
     WidgetsBinding.instance.addObserver(this);
@@ -86,10 +91,38 @@ class ScreenTimeController with WidgetsBindingObserver {
     }
 
     _enabled = enabled;
-    await _storage.saveScreenTimeTrackingEnabled(enabled);
+    await _storage.saveScreenTimeTrackingEnabled(enabled, userId: _userId);
 
     if (enabled) {
       await _rolloverIfNeeded();
+      _startSession();
+    } else {
+      _publish();
+    }
+  }
+
+  Future<void> _handleUserChanged({
+    required bool preserveCurrentSession,
+  }) async {
+    if (!_initialized) {
+      await _initialize();
+      return;
+    }
+
+    final nextUserId = await _storage.getUserId();
+    if (nextUserId == _userId) return;
+
+    if (preserveCurrentSession) {
+      await _flushSession();
+    }
+    _stopTicker();
+
+    _userId = nextUserId;
+    _sessionStartedAt = null;
+    await _loadStoredState();
+    await _rolloverIfNeeded();
+
+    if (_enabled) {
       _startSession();
     } else {
       _publish();
@@ -133,6 +166,7 @@ class ScreenTimeController with WidgetsBindingObserver {
       await _storage.saveScreenTimeUsage(
         date: _activeDate,
         seconds: _storedSeconds,
+        userId: _userId,
       );
     }
 
@@ -157,6 +191,7 @@ class ScreenTimeController with WidgetsBindingObserver {
     await _storage.saveScreenTimeUsage(
       date: _activeDate,
       seconds: _storedSeconds,
+      userId: _userId,
     );
   }
 
@@ -172,6 +207,7 @@ class ScreenTimeController with WidgetsBindingObserver {
       await _storage.saveScreenTimeUsage(
         date: _activeDate,
         seconds: _currentSeconds(),
+        userId: _userId,
       );
       _publish();
     } catch (error) {
@@ -197,6 +233,13 @@ class ScreenTimeController with WidgetsBindingObserver {
       enabled: _enabled,
       todaySeconds: _currentSeconds(),
     );
+  }
+
+  Future<void> _loadStoredState() async {
+    _enabled = await _storage.getScreenTimeTrackingEnabled(userId: _userId);
+    _activeDate =
+        await _storage.getScreenTimeDate(userId: _userId) ?? _todayKey();
+    _storedSeconds = await _storage.getScreenTimeSeconds(userId: _userId);
   }
 
   static String _todayKey() {

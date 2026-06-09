@@ -9,6 +9,21 @@
     "skip": "Atlamak",
     "profile": "Profil",
     "continue": "Devam etmek",
+    "ok": "Tamam",
+    "voicePlayback": {
+        "loading": "Ses yükleniyor...",
+        "playing": "Ses hazır, oynatılıyor.",
+        "missing": "Ses bulunamadı. Lütfen tekrar deneyin.",
+        "failed": "Ses hazırlanamadı. Lütfen tekrar deneyin."
+    },
+    "localNotifications": {
+        "channelName": "Günlük öğrenme hatırlatmaları",
+        "channelDescription": "Çocukların günlük öğrenme serisini korumasına yardımcı olan hatırlatmalar.",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "Bugün kısa bir dersle serini devam ettir.",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "Yerel bildirimler çalışıyor."
+    },
     "termOfService": {
         "text1": "Lingola Kids'e kaydolarak ",
         "link1": "Hizmet Şartlarımızı",
@@ -197,6 +212,9 @@
         "startLearning": "Öğrenmeye başla",
         "resumeActivity": "$activity ile devam et",
         "continueButton": "Devam Et",
+        "streakTitle": "Seri durumu",
+        "streakActive": "Şu anda $count günlük öğrenme seriniz var. Her gün ders tamamlayarak serinizi koruyabilirsiniz.",
+        "streakEmpty": "Henüz öğrenme seriniz başlamadı. Bugün bir ders tamamlayarak serinizi başlatabilirsiniz.",
         "weekDays": [
             "PZT",
             "SAL",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "Abonelik ekranı açılamadı. Lütfen tekrar dene.",
         "screenTimeMinutes": "Bugün $minutes dakika",
         "screenTimeHours": "Bugün $hours saat",
-        "screenTimeHoursMinutes": "Bugün $hours saat $minutes dakika"
+        "screenTimeHoursMinutes": "Bugün $hours saat $minutes dakika",
+        "trialSubscriptionTitle": "Deneme Aboneliği",
+        "trialSubscriptionPrompt": "Deneme süreniz sona erdi. Premium özelliklere erişmeye devam etmek ister misiniz?",
+        "yes": "Evet",
+        "no": "Hayır"
     },
     "editProfileScreen": {
         "changeAvatar": "Avatarı Değiştir",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "Ebeveyn kontrolü",
         "question": "İşlemin sonucu kaçtır?",
+        "wrongAnswer": "Yanlış cevap. Lütfen tekrar deneyin.",
         "submit": "Gönder"
     },
     "activities": {

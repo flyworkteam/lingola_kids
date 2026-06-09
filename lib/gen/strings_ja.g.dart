@@ -47,6 +47,9 @@ class TranslationsJa with BaseTranslations<AppLocale, Translations> implements T
 	@override String get skip => 'スキップ';
 	@override String get profile => 'プロフィール';
 	@override String get kContinue => '続ける';
+	@override String get ok => 'OK';
+	@override late final _TranslationsVoicePlaybackJa voicePlayback = _TranslationsVoicePlaybackJa._(_root);
+	@override late final _TranslationsLocalNotificationsJa localNotifications = _TranslationsLocalNotificationsJa._(_root);
 	@override late final _TranslationsTermOfServiceJa termOfService = _TranslationsTermOfServiceJa._(_root);
 	@override String get cookies => 'Cookieポリシー';
 	@override String get privacy => 'プライバシーポリシー';
@@ -76,6 +79,34 @@ class TranslationsJa with BaseTranslations<AppLocale, Translations> implements T
 	@override late final _TranslationsActivitiesJa activities = _TranslationsActivitiesJa._(_root);
 	@override late final _TranslationsResultSheetJa resultSheet = _TranslationsResultSheetJa._(_root);
 	@override late final _TranslationsTrueFalseViewJa trueFalseView = _TranslationsTrueFalseViewJa._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackJa implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => '音声を読み込んでいます...';
+	@override String get playing => '音声の準備ができました。再生しています。';
+	@override String get missing => '音声が見つかりませんでした。もう一度お試しください。';
+	@override String get failed => '音声を準備できませんでした。もう一度お試しください。';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsJa implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsJa._(this._root);
+
+	final TranslationsJa _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => '毎日の学習リマインダー';
+	@override String get channelDescription => '子どもたちが毎日の学習記録を続けるためのリマインダーです。';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => '今日も短いレッスンで連続記録を続けましょう。';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => 'ローカル通知は動作しています。';
 }
 
 // Path: termOfService
@@ -168,6 +199,9 @@ class _TranslationsHomeJa implements TranslationsHomeEn {
 	@override String get startLearning => '学習を開始';
 	@override String resumeActivity({required Object activity}) => '${activity} を再開';
 	@override String get continueButton => '続ける';
+	@override String get streakTitle => '連続学習の状況';
+	@override String streakActive({required Object count}) => '現在、${count}日間の連続学習があります。毎日レッスンを完了して連続記録を保ちましょう。';
+	@override String get streakEmpty => '連続学習はまだ始まっていません。今日レッスンを完了して始めましょう。';
 	@override List<String> get weekDays => [
 		'月',
 		'火',
@@ -324,6 +358,10 @@ class _TranslationsProfileScreenJa implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => '今日 ${minutes} 分';
 	@override String screenTimeHours({required Object hours}) => '今日 ${hours} 時間';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => '今日 ${hours} 時間 ${minutes} 分';
+	@override String get trialSubscriptionTitle => 'トライアルプレミアムアクティブ';
+	@override String get trialSubscriptionPrompt => '現在、トライアルプレミアムサブスクリプションを使用しています。サブスクライブしますか？';
+	@override String get yes => 'はい';
+	@override String get no => 'いいえ';
 }
 
 // Path: editProfileScreen
@@ -360,6 +398,7 @@ class _TranslationsParentalGateJa implements TranslationsParentalGateEn {
 	// Translations
 	@override String get barrierLabel => 'ペアレンタルゲート';
 	@override String get question => 'この計算の結果は何ですか？';
+	@override String get wrongAnswer => '間違った答えです。もう一度試してください。';
 	@override String get submit => '送信';
 }
 
@@ -770,6 +809,17 @@ extension on TranslationsJa {
 			'skip' => 'スキップ',
 			'profile' => 'プロフィール',
 			'kContinue' => '続ける',
+			'ok' => 'OK',
+			'voicePlayback.loading' => '音声を読み込んでいます...',
+			'voicePlayback.playing' => '音声の準備ができました。再生しています。',
+			'voicePlayback.missing' => '音声が見つかりませんでした。もう一度お試しください。',
+			'voicePlayback.failed' => '音声を準備できませんでした。もう一度お試しください。',
+			'localNotifications.channelName' => '毎日の学習リマインダー',
+			'localNotifications.channelDescription' => '子どもたちが毎日の学習記録を続けるためのリマインダーです。',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => '今日も短いレッスンで連続記録を続けましょう。',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => 'ローカル通知は動作しています。',
 			'termOfService.text1' => 'Lingola Kidsに登録することにより、当社の',
 			'termOfService.link1' => '利用規約',
 			'termOfService.text2' => 'に同意したことになります。データの取り扱いについては、',
@@ -915,6 +965,9 @@ extension on TranslationsJa {
 			'home.startLearning' => '学習を開始',
 			'home.resumeActivity' => ({required Object activity}) => '${activity} を再開',
 			'home.continueButton' => '続ける',
+			'home.streakTitle' => '連続学習の状況',
+			'home.streakActive' => ({required Object count}) => '現在、${count}日間の連続学習があります。毎日レッスンを完了して連続記録を保ちましょう。',
+			'home.streakEmpty' => '連続学習はまだ始まっていません。今日レッスンを完了して始めましょう。',
 			'home.weekDays.0' => '月',
 			'home.weekDays.1' => '火',
 			'home.weekDays.2' => '水',
@@ -1046,6 +1099,10 @@ extension on TranslationsJa {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => '今日 ${minutes} 分',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => '今日 ${hours} 時間',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => '今日 ${hours} 時間 ${minutes} 分',
+			'profileScreen.trialSubscriptionTitle' => 'トライアルプレミアムアクティブ',
+			'profileScreen.trialSubscriptionPrompt' => '現在、トライアルプレミアムサブスクリプションを使用しています。サブスクライブしますか？',
+			'profileScreen.yes' => 'はい',
+			'profileScreen.no' => 'いいえ',
 			'editProfileScreen.changeAvatar' => 'アバターを変更',
 			'editProfileScreen.email' => 'Eメール',
 			'editProfileScreen.emailHelper' => 'このフィールドはバックエンドアカウントから取得されます。',
@@ -1055,6 +1112,7 @@ extension on TranslationsJa {
 			'premiumAccess.openFailed' => 'プレミアム画面を開けませんでした。もう一度お試しください。',
 			'parentalGate.barrierLabel' => 'ペアレンタルゲート',
 			'parentalGate.question' => 'この計算の結果は何ですか？',
+			'parentalGate.wrongAnswer' => '間違った答えです。もう一度試してください。',
 			'parentalGate.submit' => '送信',
 			'activities.flashCards' => 'フラッシュカード',
 			'activities.drawing' => 'お絵かき',

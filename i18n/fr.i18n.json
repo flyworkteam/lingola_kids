@@ -9,6 +9,21 @@
     "skip": "Sauter",
     "profile": "Profil",
     "continue": "Continuer",
+    "ok": "OK",
+    "voicePlayback": {
+        "loading": "L'audio se charge...",
+        "playing": "L'audio est prêt, lecture en cours.",
+        "missing": "Audio introuvable. Veuillez réessayer.",
+        "failed": "L'audio n'a pas pu être préparé. Veuillez réessayer."
+    },
+    "localNotifications": {
+        "channelName": "Rappels d'apprentissage quotidiens",
+        "channelDescription": "Des rappels qui aident les enfants à garder leur série d'apprentissage quotidienne.",
+        "reminderTitle": "Lingola Kids",
+        "reminderBody": "Continuez votre série avec une courte leçon aujourd'hui.",
+        "debugTitle": "Lingola Kids",
+        "debugBody": "Les notifications locales fonctionnent."
+    },
     "termOfService": {
         "text1": "En vous inscrivant à Lingola Kids, vous acceptez nos ",
         "link1": "Conditions d'utilisation",
@@ -197,6 +212,9 @@
         "startLearning": "Commencez à apprendre",
         "resumeActivity": "Reprendre $activity",
         "continueButton": "Continuer",
+        "streakTitle": "État de la série",
+        "streakActive": "Vous avez actuellement une série d'apprentissage de $count jours. Terminez une leçon chaque jour pour la conserver.",
+        "streakEmpty": "Votre série d'apprentissage n'a pas encore commencé. Terminez une leçon aujourd'hui pour la démarrer.",
         "weekDays": [
             "LUN",
             "MAR",
@@ -353,7 +371,11 @@
         "subscriptionFailed": "L'écran d'abonnement n'a pas pu être ouvert. Veuillez réessayer.",
         "screenTimeMinutes": "Aujourd'hui $minutes minutes",
         "screenTimeHours": "Aujourd'hui $hours heures",
-        "screenTimeHoursMinutes": "Aujourd'hui $hours heures $minutes minutes"
+        "screenTimeHoursMinutes": "Aujourd'hui $hours heures $minutes minutes",
+        "trialSubscriptionTitle": "Essai Premium Actif",
+        "trialSubscriptionPrompt": "Vous utilisez actuellement un abonnement d'essai premium. Souhaitez-vous vous abonner ?",
+        "yes": "Oui",
+        "no": "Non"
     },
     "editProfileScreen": {
         "changeAvatar": "Changer d'avatar",
@@ -369,6 +391,7 @@
     "parentalGate": {
         "barrierLabel": "Portail parental",
         "question": "Quel est le résultat de cette opération ?",
+        "wrongAnswer": "Mauvaise réponse. Veuillez réessayer.",
         "submit": "Soumettre"
     },
     "activities": {

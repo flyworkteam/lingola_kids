@@ -4,6 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lingola_kids/Riverpod/Providers/all_providers.dart';
+import 'package:lingola_kids/Views/ProfileView/models/screen_time_controller.dart';
 import 'package:lingola_kids/utils/app_config.dart';
 import 'package:lingola_kids/utils/print.dart';
 
@@ -81,6 +82,9 @@ class DioService {
       if (refreshToken == null || refreshToken.isEmpty) {
         Print.error('No refresh token available');
         await storageService.clearAll();
+        await ScreenTimeController.handleUserChanged(
+          preserveCurrentSession: false,
+        );
         return false;
       }
 
@@ -106,6 +110,9 @@ class DioService {
 
       Print.error('Token refresh failed with status: ${response.statusCode}');
       await storageService.clearAll();
+      await ScreenTimeController.handleUserChanged(
+        preserveCurrentSession: false,
+      );
       return false;
     } catch (e, st) {
       Print.error('Token refresh error: $e');
@@ -117,6 +124,9 @@ class DioService {
           AllProviders.secureStorageServiceProvider,
         );
         await storageService.clearAll();
+        await ScreenTimeController.handleUserChanged(
+          preserveCurrentSession: false,
+        );
       } catch (_) {}
 
       return false;

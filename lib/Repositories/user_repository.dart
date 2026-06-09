@@ -4,6 +4,7 @@ import 'package:lingola_kids/Models/user_model.dart';
 import 'package:lingola_kids/Riverpod/Providers/all_providers.dart';
 import 'package:lingola_kids/Services/dio_service.dart';
 import 'package:lingola_kids/Services/secure_storage_service.dart';
+import 'package:lingola_kids/Views/ProfileView/models/screen_time_controller.dart';
 import 'package:lingola_kids/utils/print.dart';
 
 class UserRepository {
@@ -143,6 +144,9 @@ class UserRepository {
       final success = response.data['success'] == true;
       if (success) {
         await _storageService.clearAll();
+        await ScreenTimeController.handleUserChanged(
+          preserveCurrentSession: false,
+        );
       }
 
       return success;
