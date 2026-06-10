@@ -77,6 +77,7 @@ class _OnboardingSpellPageState extends State<OnboardingSpellPage> {
     final selectedLetters = _selectedLetters;
 
     return LayoutBuilder(
+      
       builder: (context, constraints) {
         final safeInsets = MediaQuery.paddingOf(context);
         final safeHeight =
@@ -97,6 +98,7 @@ class _OnboardingSpellPageState extends State<OnboardingSpellPage> {
           child: Stack(
             children: [
               Positioned(
+              
                 top: tight ? 24 : 36,
                 right: tight ? -34 : -28,
                 child: Image.asset(
