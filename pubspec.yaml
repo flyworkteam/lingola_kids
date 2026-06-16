@@ -3,7 +3,7 @@ description: "A new Flutter project."
 
 publish_to: "none"
 
-version: 1.0.0+6
+version: 1.0.0+7
 
 environment:
   sdk: ^3.11.5
@@ -32,7 +32,6 @@ dependencies:
   flutter_launcher_icons: ^0.14.4
   hooks_riverpod: ^3.3.1
   cross_fade: ^0.5.0
-  flutter_native_splash: ^2.4.7
   slang_flutter: ^4.14.0
   purchases_ui_flutter: ^10.0.1
   intl: ^0.20.2
@@ -60,16 +59,6 @@ flutter:
 
   assets:
     - assets/
-
-flutter_native_splash:
-  background_image: assets/splash.png
-  fullscreen: false
-  android_12:
-    background_image: assets/splash.png
-  android: true
-  ios: true
-  ios_content_mode: scaleAspectFill
-  web: false
 
 flutter_launcher_icons:
   android: "launcher_icon"

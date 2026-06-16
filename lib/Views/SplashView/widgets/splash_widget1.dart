@@ -29,8 +29,10 @@ class SplashWidget1 extends StatelessWidget {
         builder: (context, constraints) {
           final width = constraints.maxWidth;
           final height = constraints.maxHeight;
+          final upperBound = height / _designHeight;
+          final lowerBound = upperBound < 0.88 ? upperBound : 0.88;
           final scale = (width / _designWidth)
-              .clamp(0.88, height / _designHeight)
+              .clamp(lowerBound, upperBound)
               .toDouble();
           final contentTop = mediaQuery.padding.top + (24 * scale);
           final contentWidth = width - (48 * scale);

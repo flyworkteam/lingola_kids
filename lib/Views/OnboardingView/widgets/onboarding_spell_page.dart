@@ -106,62 +106,72 @@ class _OnboardingSpellPageState extends State<OnboardingSpellPage> {
                   width: giraffeWidth,
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(
-                  horizontalPadding,
-                  verticalPadding,
-                  horizontalPadding,
-                  verticalPadding,
-                ),
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: OnboardingSpeechBubble(
-                        title: widget.title,
-                        subtitle: widget.subtitle,
-                      ),
+              Positioned.fill(
+                child: SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minHeight: safeHeight,
                     ),
-                    SizedBox(
-                      height: lionStageHeight,
-                      child: Stack(
-                        clipBehavior: Clip.none,
-                        alignment: Alignment.topCenter,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(
+                        horizontalPadding,
+                        verticalPadding,
+                        horizontalPadding,
+                        verticalPadding,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Positioned(
-                            top: lionTop,
-                            child: Image.asset(
-                              widget.prefilled
-                                  ? AppIcons.onboardingLion2
-                                  : AppIcons.onboardingLion1,
-                              width: lionWidth,
-                              fit: BoxFit.contain,
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: OnboardingSpeechBubble(
+                              title: widget.title,
+                              subtitle: widget.subtitle,
                             ),
+                          ),
+                          SizedBox(
+                            height: lionStageHeight,
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              alignment: Alignment.topCenter,
+                              children: [
+                                Positioned(
+                                  top: lionTop,
+                                  child: Image.asset(
+                                    widget.prefilled
+                                        ? AppIcons.onboardingLion2
+                                        : AppIcons.onboardingLion1,
+                                    width: lionWidth,
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: tight ? 0 : 4),
+                          FillInAnswerSlots(
+                            letters: selectedLetters,
+                            targetLength: _target.length,
+                            slotSize: slotSize,
+                          ),
+                          SizedBox(height: gridSpacing),
+                          FillInLetterChoiceGrid(
+                            choices: _choices,
+                            selectedChoiceIndices: _selectedChoiceIndices,
+                            enabled: !widget.prefilled,
+                            onLetterTap: _selectLetter,
+                            onBackspaceTap: _removeLastLetter,
+                          ),
+                          SizedBox(height: buttonSpacing),
+                          OnboardingPrimaryButton(
+                            label: context.t.kContinue,
+                            enabled: widget.prefilled || isComplete,
+                            onTap: _continue,
                           ),
                         ],
                       ),
                     ),
-                    SizedBox(height: tight ? 0 : 4),
-                    FillInAnswerSlots(
-                      letters: selectedLetters,
-                      targetLength: _target.length,
-                      slotSize: slotSize,
-                    ),
-                    SizedBox(height: gridSpacing),
-                    FillInLetterChoiceGrid(
-                      choices: _choices,
-                      selectedChoiceIndices: _selectedChoiceIndices,
-                      enabled: !widget.prefilled,
-                      onLetterTap: _selectLetter,
-                      onBackspaceTap: _removeLastLetter,
-                    ),
-                    SizedBox(height: buttonSpacing),
-                    OnboardingPrimaryButton(
-                      label: context.t.kContinue,
-                      enabled: widget.prefilled || isComplete,
-                      onTap: _continue,
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
