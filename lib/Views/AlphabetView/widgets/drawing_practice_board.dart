@@ -3,8 +3,6 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_recognition.dart'
-    as mlkit;
 import 'package:lingola_kids/utils/print.dart';
 import 'package:vector_graphics_compiler/vector_graphics_compiler.dart' as vg;
 
@@ -13,7 +11,7 @@ class DrawingPracticeBoard extends StatefulWidget {
     required this.assetPath,
     required this.strokeColor,
     required this.targetLetter,
-    this.useRecognition = true,
+    this.strictEvaluation = true,
     this.onEvaluationChanged,
     super.key,
   });
@@ -21,7 +19,7 @@ class DrawingPracticeBoard extends StatefulWidget {
   final String assetPath;
   final Color strokeColor;
   final String targetLetter;
-  final bool useRecognition;
+  final bool strictEvaluation;
   final ValueChanged<bool>? onEvaluationChanged;
 
   @override
@@ -29,7 +27,6 @@ class DrawingPracticeBoard extends StatefulWidget {
 }
 
 class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
-  static const String _languageCode = 'en-US';
   static const double _targetStep = 8;
   static const int _gridColumns = 18;
   static const int _gridRows = 14;
@@ -54,26 +51,10 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
   Set<int> _targetCells = {};
   Size _assetSize = Size.zero;
   Size _lastSize = Size.zero;
-  late final mlkit.DigitalInkRecognizer _inkRecognizer;
-  late final mlkit.DigitalInkRecognizerModelManager _modelManager;
-  bool _isRecognitionModelReady = false;
-  bool _isPreparingRecognitionModel = false;
-
   @override
   void initState() {
     super.initState();
-    _inkRecognizer = mlkit.DigitalInkRecognizer(languageCode: _languageCode);
-    _modelManager = mlkit.DigitalInkRecognizerModelManager();
     _loadTargetPoints();
-    if (widget.useRecognition) {
-      _prepareRecognitionModel();
-    }
-  }
-
-  @override
-  void dispose() {
-    _inkRecognizer.close();
-    super.dispose();
   }
 
   @override
@@ -98,26 +79,6 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
   void undoLastStroke() {
     if (_strokes.isEmpty) return;
     setState(_strokes.removeLast);
-  }
-
-  Future<void> _prepareRecognitionModel() async {
-    if (_isRecognitionModelReady || _isPreparingRecognitionModel) return;
-
-    _isPreparingRecognitionModel = true;
-    try {
-      final isDownloaded = await _modelManager.isModelDownloaded(_languageCode);
-      if (!isDownloaded) {
-        await _modelManager.downloadModel(_languageCode, isWifiRequired: false);
-      }
-      _isRecognitionModelReady = true;
-      Print.info('[DrawingML] model ready language=$_languageCode');
-    } catch (error) {
-      Print.error(
-        '[DrawingML] model failed language=$_languageCode error=$error',
-      );
-    } finally {
-      _isPreparingRecognitionModel = false;
-    }
   }
 
   Future<bool> evaluate() async {
@@ -203,7 +164,7 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
           math.min(targetBounds.width, targetBounds.height) * 0.45,
           tolerance * 2.2,
         );
-    final shapeTraceMode = !widget.useRecognition;
+    final shapeTraceMode = !widget.strictEvaluation;
     final componentGate = shapeTraceMode
         ? coveredComponentRatio >= 0.45 && averageComponentCoverage >= 0.35
         : coveredComponentRatio >= 0.72 && averageComponentCoverage >= 0.50;
@@ -222,20 +183,12 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
         offTrackRatio <= (shapeTraceMode ? 0.42 : 0.18) &&
         averageDistance <= tolerance * (shapeTraceMode ? 2.20 : 1.30);
     final tracingAccepted = targetGate && strokeGate;
-    final recognitionResult = tracingAccepted && widget.useRecognition
-        ? await _recognizeCurrentLetter()
-        : _LetterRecognitionResult(
-            isReady: !widget.useRecognition,
-            isMatch: !widget.useRecognition,
-            candidates: widget.useRecognition ? const [] : const ['trace'],
-          );
-    final accepted = tracingAccepted && recognitionResult.isMatch;
+    final accepted = tracingAccepted;
 
     Print.info(
       '[DrawingEvaluate] accepted=$accepted targetGate=$targetGate '
       'groupGate=$effectiveGroupGate componentGate=$componentGate strokeGate=$strokeGate '
-      'mlReady=${recognitionResult.isReady} mlMatch=${recognitionResult.isMatch} '
-      'mlCandidates=${recognitionResult.candidates.join('/')} target=${widget.targetLetter} '
+      'target=${widget.targetLetter} '
       'shapeTraceMode=$shapeTraceMode '
       'rawPoints=${rawDrawnPoints.length} sampledPoints=${drawnPoints.length} '
       'targetPoints=${targetPoints.length} components=${targetComponents.length} '
@@ -276,7 +229,6 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
                 _Stroke(
                   color: widget.strokeColor,
                   points: [details.localPosition],
-                  times: [_nowMs()],
                 ),
               );
             });
@@ -285,15 +237,10 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
             setState(() {
               if (_strokes.isEmpty) {
                 _strokes.add(
-                  _Stroke(
-                    color: widget.strokeColor,
-                    points: <Offset>[],
-                    times: <int>[],
-                  ),
+                  _Stroke(color: widget.strokeColor, points: <Offset>[]),
                 );
               }
               _strokes.last.points.add(details.localPosition);
-              _strokes.last.times.add(_nowMs());
             });
           },
           onPanEnd: (_) async {
@@ -343,75 +290,6 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
 
     return samples;
   }
-
-  Future<_LetterRecognitionResult> _recognizeCurrentLetter() async {
-    await _prepareRecognitionModel();
-    if (!_isRecognitionModelReady) {
-      return const _LetterRecognitionResult(
-        isReady: false,
-        isMatch: false,
-        candidates: [],
-      );
-    }
-
-    try {
-      final candidates = await _inkRecognizer.recognize(
-        _toInk(),
-        context: mlkit.DigitalInkRecognitionContext(
-          writingArea: mlkit.WritingArea(
-            width: _lastSize.width,
-            height: _lastSize.height,
-          ),
-        ),
-      );
-      final candidateTexts = candidates
-          .map((candidate) => candidate.text)
-          .toList();
-      final isMatch = candidateTexts.any(_candidateMatchesTargetLetter);
-
-      return _LetterRecognitionResult(
-        isReady: true,
-        isMatch: isMatch,
-        candidates: candidateTexts,
-      );
-    } catch (error) {
-      Print.error('[DrawingML] recognize failed error=$error');
-      return const _LetterRecognitionResult(
-        isReady: false,
-        isMatch: false,
-        candidates: [],
-      );
-    }
-  }
-
-  mlkit.Ink _toInk() {
-    final ink = mlkit.Ink();
-    ink.strokes = _strokes.where((stroke) => stroke.points.isNotEmpty).map((
-      stroke,
-    ) {
-      final inkStroke = mlkit.Stroke();
-      inkStroke.points = List.generate(stroke.points.length, (index) {
-        final point = stroke.points[index];
-        return mlkit.StrokePoint(
-          x: point.dx,
-          y: point.dy,
-          t: index < stroke.times.length ? stroke.times[index] : _nowMs(),
-        );
-      });
-      return inkStroke;
-    }).toList();
-    return ink;
-  }
-
-  bool _candidateMatchesTargetLetter(String text) {
-    final lettersOnly = text.toUpperCase().replaceAll(RegExp('[^A-Z0-9]'), '');
-    final target = widget.targetLetter.toUpperCase();
-
-    return lettersOnly.isNotEmpty &&
-        lettersOnly.split('').every((letter) => letter == target);
-  }
-
-  int _nowMs() => DateTime.now().millisecondsSinceEpoch;
 
   Future<void> _loadTargetPoints() async {
     try {
@@ -849,23 +727,10 @@ class DrawingPracticeBoardState extends State<DrawingPracticeBoard> {
 }
 
 class _Stroke {
-  _Stroke({required this.color, required this.points, required this.times});
+  _Stroke({required this.color, required this.points});
 
   final Color color;
   final List<Offset> points;
-  final List<int> times;
-}
-
-class _LetterRecognitionResult {
-  const _LetterRecognitionResult({
-    required this.isReady,
-    required this.isMatch,
-    required this.candidates,
-  });
-
-  final bool isReady;
-  final bool isMatch;
-  final List<String> candidates;
 }
 
 class _DrawingPainter extends CustomPainter {

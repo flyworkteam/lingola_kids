@@ -139,7 +139,7 @@ class _ShapeDrawingViewState extends State<ShapeDrawingView> {
                     assetPath: shape.drawAssetPath,
                     strokeColor: _selectedColor,
                     targetLetter: shape.name,
-                    useRecognition: false,
+                    strictEvaluation: false,
                     onEvaluationChanged: _handleEvaluation,
                   ),
                 ),
