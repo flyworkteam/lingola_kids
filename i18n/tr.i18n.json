@@ -58,7 +58,7 @@
             "section2Title": "2. Çocukların Gizliliği (Önemli)",
             "section2Body": "Lingola Kids, 4 yaş ve üzeri çocuklar için tasarlanmıştır. Çocukların veri koruması temel odağımızdır:\n- Çocuklardan gereksiz veya hassas kişisel veriler toplamıyoruz.\n- Çocukların iletişim bilgilerini herkese açık olarak paylaşmalarına izin verilmez veya yönlendirilmez.\n- Çocukları hedefleyen davranışsal veya kişiselleştirilmiş reklam profili oluşturma kesinlikle yasaktır.\n- Ebeveynler veya yasal vasiler, istedikleri zaman çocuklarının verilerini incelemeyi veya silmeyi talep edebilirler.",
             "section3Title": "3. Veri İşleme ve Paylaşma Amaçları",
-            "section3Body": "Verileriniz öğrenme ilerlemesini izlemek, kelime içeriğini kişiselleştirmek ve teknik sorunları gidermek için işlenir. Kişisel bilgiler asla ticari kullanım amacıyla üçüncü şahıslara satılmaz veya paylaşılmaz. Güvenilir servis sağlayıcılar (bulut depolama, analitik vb.) verileri kesinlikle gizlilik yükümlülükleri altında işler.",
+            "section3Body": "Verileriniz öğrenme ilerlemesini izlemek, kelime içeriğini kişiselleştirmek ve teknik sorunları gidermek için işlenir. Kişisel bilgiler asla ticari kullanım amacıyla üçüncü şahıslara satılmaz veya paylaşılmaz. Güvenilir servis sağlayıcılar (bulut depolama, kimlik doğrulama ve abonelik yönetimi) verileri kesinlikle gizlilik yükümlülükleri altında işler.",
             "section4Title": "4. Kullanıcı ve Ebeveyn Hakları",
             "section4Body": "Kullanıcılar ve ebeveynler, erişim sağlama, düzeltme yapma, hesap silme talebinde bulunma ve verilerin kalıcı olarak kaldırılmasını isteme hakkına sahiptir. Bu haklarınızı destek ekibimizle iletişime geçerek kullanabilirsiniz.",
             "section5Title": "5. Veri Güvenliği ve Saklama",
@@ -69,7 +69,7 @@
         "cookiePolicy": {
             "title": "Çerez Politikası",
             "lastUpdated": "Son Güncelleme: 2026",
-            "intro": "ChatFace'e hoş geldiniz. Dijital yardımcı teknolojiler, yapay zeka video görüşme deneyiminizi daha sorunsuz, daha güvenli ve kişiselleştirilmiş hale getirmek için kullanılır.",
+            "intro": "Lingola Kids'e hoş geldiniz. Dijital yardımcı teknolojiler, yapay zeka video görüşme deneyiminizi daha sorunsuz, daha güvenli ve kişiselleştirilmiş hale getirmek için kullanılır.",
             "important": "Bu politika, çerezlerin ne olduğunu, amaçlarını ve tercihlerinizi nasıl yönetebileceğinizi açıklar.",
             "section1Title": "1. ÇEREZ NEDİR?",
             "section1Body": "Çerezler, cihazınıza yerleştirilen küçük veri dosyalarıdır. Sizi doğrudan tanımlamazlar; şunları hatırlayan dijital notlar olarak işlev görürler:\n• Arama ve dil ayarları\n• Oturum ve performans tercihleri.",
@@ -78,7 +78,7 @@
             "section3Title": "3. BU TEKNOLOJİLERİ NEDEN KULLANIYORUZ?",
             "section3Body": "• Uygulamanın güvenli ve sorunsuz çalışmasını sağlamak için.\n• Okuma deneyimini daha akıcı hale getirmek için.\n• Tekrarlayan ayarları hatırlamak için.\n• Gelecekteki geliştirmeler için özellikleri belirlemek amacıyla.",
             "section4Title": "4. ÜÇÜNCÜ TARAF TEKNOLOJİLERİ",
-            "section4Body": "Bazı teknolojiler teknik hizmet sağlayıcıları tarafından sağlanabilir ve kendi politikalarına tabidir. ChatFace, bu ortaklıklarda veri güvenliğine öncelik verir.",
+            "section4Body": "Bazı teknolojiler teknik hizmet sağlayıcıları tarafından sağlanabilir ve kendi politikalarına tabidir. Lingola Kids, bu ortaklıklarda veri güvenliğine öncelik verir.",
             "section5Title": "5. ÇEREZ KONTROLÜ VE YÖNETİMİ",
             "section5Body": "Kullanıcılar cihaz veya uygulama ayarları üzerinden bu teknolojileri sınırlayabilir. Gerekli teknolojilerin devre dışı bırakılması, video görüşmelerinin başlatılamaması gibi sorunlara neden olabilir.",
             "section6Title": "6. İletişim",
@@ -94,11 +94,11 @@
             "openSettings": "Ayarları aç",
             "title": "İzinler",
             "permission1": "Kamera Erişimi",
-            "permission1Subtitle": "ChatFace, AI karakterleriyle görüntülü aramalar için kameranızı kullanır.",
+            "permission1Subtitle": "Lingola Kids, AI karakterleriyle görüntülü aramalar için kameranızı kullanır.",
             "permission2": "Mikrofon Erişimi",
-            "permission2Subtitle": "ChatFace, sesli ve görüntülü aramalar için mikrofonunuzu kullanır.",
+            "permission2Subtitle": "Lingola Kids, sesli ve görüntülü aramalar için mikrofonunuzu kullanır.",
             "permission3": "Konum Erişimi",
-            "permission3Subtitle": "ChatFace deneyiminizi kişiselleştirmek için konumunuzu kullanır."
+            "permission3Subtitle": "Lingola Kids deneyiminizi kişiselleştirmek için konumunuzu kullanır."
         },
         "step1": {
             "title": "Adın ne?",
@@ -284,7 +284,7 @@
         "steps": {
             "step1": {
                 "title": "Gitmeni istemiyoruz ama anlıyoruz.",
-                "subtitle": "ChatFace deneyimini geliştirebilmemiz için neden ayrılmak istediğinizi bize söyleyebilir misiniz?",
+                "subtitle": "Lingola Kids deneyimini geliştirebilmemiz için neden ayrılmak istediğinizi bize söyleyebilir misiniz?",
                 "option1": "AI karakterlerini gerçekçi bulmadım.",
                 "option2": "Görüntülü sohbetlerde teknik sorunlar yaşıyorum.",
                 "option3": "Abonelik fiyatları beklentilerimin üzerinde.",

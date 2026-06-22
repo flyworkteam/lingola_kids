@@ -58,7 +58,7 @@
             "section2Title": "2. Datenschutz von Kindern (Wichtig)",
             "section2Body": "Lingola Kids ist für Kinder ab 4 Jahren konzipiert. Der Schutz der Daten von Kindern steht im Mittelpunkt:\n- Wir sammeln keine unnötigen oder sensiblen personenbezogenen Daten von Kindern.\n- Kinder werden nicht aufgefordert, Kontaktinformationen öffentlich zu teilen.\n- Verhaltens- oder personalisierte Werbeprofile, die auf Kinder abzielen, sind strengstens untersagt.\n- Eltern oder gesetzliche Vertreter können jederzeit die Überprüfung oder Löschung der Daten ihres Kindes beantragen.",
             "section3Title": "3. Zwecke der Datenverarbeitung & Weitergabe",
-            "section3Body": "Ihre Daten werden verarbeitet, um den Lernfortschritt zu verfolgen, Vokabelinhalte zu personalisieren und technische Probleme zu beheben. Personenbezogene Informationen werden niemals verkauft oder für kommerzielle Zwecke an Dritte weitergegeben. Vertrauenswürdige Dienstleister (Cloud-Speicher, Analyseanbieter usw.) verarbeiten Daten ausschließlich unter Vertraulichkeitsverpflichtungen.",
+            "section3Body": "Ihre Daten werden verarbeitet, um den Lernfortschritt zu verfolgen, Vokabelinhalte zu personalisieren und technische Probleme zu beheben. Personenbezogene Informationen werden niemals verkauft oder für kommerzielle Zwecke an Dritte weitergegeben. Vertrauenswürdige Dienstleister (Cloud-Speicher, Authentifizierung und Abonnementverwaltung) verarbeiten Daten ausschließlich unter Vertraulichkeitsverpflichtungen.",
             "section4Title": "4. Nutzer- und Elternrechte",
             "section4Body": "Nutzer und Eltern haben das Recht auf Zugriff, Berichtigung, Löschung des Kontos und die permanente Entfernung von Daten. Sie können diese Rechte über unser Support-Team ausüben.",
             "section5Title": "5. Datensicherheit & Aufbewahrung",
@@ -94,11 +94,11 @@
             "openSettings": "Einstellungen öffnen",
             "title": "Berechtigungen",
             "permission1": "Kamerazugriff",
-            "permission1Subtitle": "ChatFace nutzt Ihre Kamera für Videoanrufe mit KI-Charakteren.",
+            "permission1Subtitle": "Lingola Kids nutzt Ihre Kamera für Videoanrufe mit KI-Charakteren.",
             "permission2": "Mikrofonzugriff",
-            "permission2Subtitle": "ChatFace nutzt Ihr Mikrofon für Sprach- und Videoanrufe.",
+            "permission2Subtitle": "Lingola Kids nutzt Ihr Mikrofon für Sprach- und Videoanrufe.",
             "permission3": "Standortzugriff",
-            "permission3Subtitle": "ChatFace verwendet Ihren Standort, um Ihr Erlebnis zu personalisieren."
+            "permission3Subtitle": "Lingola Kids verwendet Ihren Standort, um Ihr Erlebnis zu personalisieren."
         },
         "step1": {
             "title": "Wie heißt du?",
@@ -284,7 +284,7 @@
         "steps": {
             "step1": {
                 "title": "Wir wollen nicht, dass du gehst, aber wir verstehen es.",
-                "subtitle": "Können Sie uns sagen, warum Sie gehen möchten, damit wir das ChatFace-Erlebnis verbessern können?",
+                "subtitle": "Können Sie uns sagen, warum Sie gehen möchten, damit wir das Lingola Kids-Erlebnis verbessern können?",
                 "option1": "Ich fand die KI-Charaktere nicht realistisch.",
                 "option2": "Ich habe technische Probleme mit Video-Chats.",
                 "option3": "Die Abonnementpreise liegen über meinen Erwartungen.",

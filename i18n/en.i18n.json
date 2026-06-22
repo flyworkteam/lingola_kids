@@ -58,7 +58,7 @@
             "section2Title": "2. Children's Privacy (Important)",
             "section2Body": "Lingola Kids is designed for children aged 4 and older. Children's data protection is our core focus:\n- We do not collect unnecessary or sensitive personal data from children.\n- Children are not allowed or prompted to share contact details publicly.\n- Behavioral or personalized advertising profiling targeting children is strictly prohibited.\n- Parents or legal guardians can request to review or delete their child's data at any time.",
             "section3Title": "3. Purposes of Data Processing & Sharing",
-            "section3Body": "Your data is processed to track learning progress, personalize vocabulary content, and fix technical issues. Personal information is never sold or shared with third parties for commercial use. Trusted service providers (cloud storage, analytics, etc.) process data strictly under their confidentiality obligations.",
+            "section3Body": "Your data is processed to track learning progress, personalize vocabulary content, and fix technical issues. Personal information is never sold or shared with third parties for commercial use. Trusted service providers (cloud storage, authentication, and subscription management) process data strictly under their confidentiality obligations.",
             "section4Title": "4. User & Parental Rights",
             "section4Body": "Users and parents hold the right to access, rectify, request account deletion, and demand the permanent removal of data. You can exercise these rights by contacting our support team.",
             "section5Title": "5. Data Security & Retention",
@@ -69,7 +69,7 @@
         "cookiePolicy": {
             "title": "Cookie Policy",
             "lastUpdated": "Last Updated: 2026",
-            "intro": "Welcome to ChatFace. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.",
+            "intro": "Welcome to Lingola Kids. Digital helper technologies are used to make your AI video call experience smoother, more secure, and personalized.",
             "important": "This policy explains what cookies are, their purposes, and how you can manage your preferences.",
             "section1Title": "1. WHAT ARE COOKIES?",
             "section1Body": "Cookies are small data files placed on your device. They do not identify you directly; they act as digital notes that remember:\n• Call and language settings\n• Session and performance preferences.",
@@ -78,7 +78,7 @@
             "section3Title": "3. WHY DO WE USE THESE TECHNOLOGIES?",
             "section3Body": "• To ensure the app runs safely and smoothly.\n• To make the reading experience more fluid.\n• To remember repetitive settings.\n• To identify features for future development.",
             "section4Title": "4. THIRD-PARTY TECHNOLOGIES",
-            "section4Body": "Some technologies may be provided by technical service providers and are subject to their own policies. ChatFace prioritizes data security in these partnerships.",
+            "section4Body": "Some technologies may be provided by technical service providers and are subject to their own policies. Lingola Kids prioritizes data security in these partnerships.",
             "section5Title": "5. COOKIE CONTROL AND MANAGEMENT",
             "section5Body": "Users can limit these technologies via device or app settings. Disabling essential technologies may cause issues like being unable to start video calls.",
             "section6Title": "6. CONTACT",
@@ -94,11 +94,11 @@
             "openSettings": "Open settings",
             "title": "Permissions",
             "permission1": "Camera Access",
-            "permission1Subtitle": "ChatFace uses your camera for video calls with AI characters.",
+            "permission1Subtitle": "Lingola Kids uses your camera for video calls with AI characters.",
             "permission2": "Microphone Access",
-            "permission2Subtitle": "ChatFace uses your microphone for voice and video calls.",
+            "permission2Subtitle": "Lingola Kids uses your microphone for voice and video calls.",
             "permission3": "Location Access",
-            "permission3Subtitle": "ChatFace uses your location to personalize your experience."
+            "permission3Subtitle": "Lingola Kids uses your location to personalize your experience."
         },
         "step1": {
             "title": "What is your Name?",
@@ -284,7 +284,7 @@
         "steps": {
             "step1": {
                 "title": "We don't want you to go, but we understand.",
-                "subtitle": "Can you tell us why you want to leave so we can improve the ChatFace experience?",
+                "subtitle": "Can you tell us why you want to leave so we can improve the Lingola Kids experience?",
                 "option1": "I didn't find the AI characters realistic.",
                 "option2": "I am experiencing technical issues with video chats.",
                 "option3": "Subscription prices are above my expectations.",

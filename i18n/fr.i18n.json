@@ -58,7 +58,7 @@
             "section2Title": "2. Confidentialité des enfants (Important)",
             "section2Body": "Lingola Kids est conçu pour les enfants de 4 ans et plus. La protection des données des enfants est notre objectif principal :\n- Nous ne collectons pas de données personnelles inutiles ou sensibles auprès des enfants.\n- Les enfants ne sont pas autorisés ni invités à partager publiquement leurs coordonnées.\n- Le profilage publicitaire comportemental ou personnalisé ciblant les enfants est strictement interdit.\n- Les parents ou tuteurs légaux peuvent demander à consulter ou supprimer les données de leur enfant à tout moment.",
             "section3Title": "3. Finalités du traitement et du partage des données",
-            "section3Body": "Vos données sont traitées pour suivre les progrès de l'apprentissage, personnaliser le contenu du vocabulaire et résoudre les problèmes techniques. Les informations personnelles ne sont jamais vendues ou partagées avec des tiers à des fins commerciales. Des prestataires de services de confiance (stockage cloud, analyses, etc.) traitent les données strictement dans le cadre de leurs obligations de confidentialité.",
+            "section3Body": "Vos données sont traitées pour suivre les progrès de l'apprentissage, personnaliser le contenu du vocabulaire et résoudre les problèmes techniques. Les informations personnelles ne sont jamais vendues ou partagées avec des tiers à des fins commerciales. Des prestataires de services de confiance (stockage cloud, authentification et gestion des abonnements) traitent les données strictement dans le cadre de leurs obligations de confidentialité.",
             "section4Title": "4. Droits des utilisateurs et des parents",
             "section4Body": "Les utilisateurs et les parents ont le droit d'accéder, de rectifier, de demander la suppression de leur compte et d'exiger la suppression permanente des données. Vous pouvez exercer ces droits en contactant notre équipe d'assistance.",
             "section5Title": "5. Sécurité et conservation des données",
@@ -69,7 +69,7 @@
         "cookiePolicy": {
             "title": "Politique relative aux cookies",
             "lastUpdated": "Dernière mise à jour : 2026",
-            "intro": "Bienvenue sur ChatFace. Des technologies d'assistance numérique sont utilisées pour rendre votre expérience d'appel vidéo IA plus fluide, plus sécurisée et personnalisée.",
+            "intro": "Bienvenue sur Lingola Kids. Des technologies d'assistance numérique sont utilisées pour rendre votre expérience d'appel vidéo IA plus fluide, plus sécurisée et personnalisée.",
             "important": "Cette politique explique ce que sont les cookies, leurs objectifs et comment vous pouvez gérer vos préférences.",
             "section1Title": "1. QUE SONT LES COOKIES ?",
             "section1Body": "Les cookies sont de petits fichiers de données placés sur votre appareil. Ils ne vous identifient pas directement ; ils agissent comme des notes numériques qui mémorisent :\n• Les paramètres d'appel et de langue\n• Les préférences de session et de performance.",
@@ -78,7 +78,7 @@
             "section3Title": "3. POURQUOI UTILISONS-NOUS CES TECHNOLOGIES ?",
             "section3Body": "• Pour s'assurer que l'application fonctionne de manière sûre et fluide.\n• Pour rendre l'expérience de lecture plus fluide.\n• Pour mémoriser les paramètres répétitifs.\n• Pour identifier les fonctionnalités à développer à l'avenir.",
             "section4Title": "4. TECHNOLOGIES TIERCES",
-            "section4Body": "Certaines technologies peuvent être fournies par des prestataires de services techniques et sont soumises à leurs propres politiques. ChatFace donne la priorité à la sécurité des données dans ces partenariats.",
+            "section4Body": "Certaines technologies peuvent être fournies par des prestataires de services techniques et sont soumises à leurs propres politiques. Lingola Kids donne la priorité à la sécurité des données dans ces partenariats.",
             "section5Title": "5. CONTRÔLE ET GESTION DES COOKIES",
             "section5Body": "Les utilisateurs peuvent limiter ces technologies via les paramètres de l'appareil ou de l'application. La désactivation des technologies essentielles peut causer des problèmes comme l'impossibilité de démarrer des appels vidéo.",
             "section6Title": "6. Contact",
@@ -94,11 +94,11 @@
             "openSettings": "Ouvrir les paramètres",
             "title": "Autorisations",
             "permission1": "Accès à la caméra",
-            "permission1Subtitle": "ChatFace utilise votre caméra pour les appels vidéo avec des personnages IA.",
+            "permission1Subtitle": "Lingola Kids utilise votre caméra pour les appels vidéo avec des personnages IA.",
             "permission2": "Accès au microphone",
-            "permission2Subtitle": "ChatFace utilise votre microphone pour les appels vocaux et vidéo.",
+            "permission2Subtitle": "Lingola Kids utilise votre microphone pour les appels vocaux et vidéo.",
             "permission3": "Accès à la localisation",
-            "permission3Subtitle": "ChatFace utilise votre emplacement pour personnaliser votre expérience."
+            "permission3Subtitle": "Lingola Kids utilise votre emplacement pour personnaliser votre expérience."
         },
         "step1": {
             "title": "Quel est ton nom?",
@@ -284,7 +284,7 @@
         "steps": {
             "step1": {
                 "title": "Nous ne voulons pas que vous y alliez, mais nous comprenons.",
-                "subtitle": "Pouvez-vous nous dire pourquoi vous souhaitez partir afin que nous puissions améliorer l'expérience ChatFace ?",
+                "subtitle": "Pouvez-vous nous dire pourquoi vous souhaitez partir afin que nous puissions améliorer l'expérience Lingola Kids ?",
                 "option1": "Je n'ai pas trouvé les personnages IA réalistes.",
                 "option2": "Je rencontre des problèmes techniques avec les chats vidéo.",
                 "option3": "Les prix des abonnements sont au dessus de mes attentes.",

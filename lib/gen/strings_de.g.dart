@@ -39,74 +39,55 @@ class TranslationsDe with BaseTranslations<AppLocale, Translations> implements T
 	// Translations
 	@override String welcome({required Object name}) => 'Willkommen ${name}';
 	@override String welcome2({required Object appName}) => 'Willkommen bei ${appName}';
-	@override String get get_started => 'Legen Sie los';
-	@override String get start_learning => 'Beginnen Sie mit dem Lernen';
-	@override String get hello => 'Hallo';
-	@override String get next => 'Nächste';
+	@override String continue_to({required Object language}) => 'Weiter zu ${language}';
+	@override String get get_started => 'Loslegen';
+	@override String get next => 'Weiter';
 	@override String get back => 'Zurück';
 	@override String get skip => 'Überspringen';
-	@override String get profile => 'Profil';
-	@override String get kContinue => 'Weitermachen';
-	@override String get ok => 'OK';
-	@override late final _TranslationsVoicePlaybackDe voicePlayback = _TranslationsVoicePlaybackDe._(_root);
-	@override late final _TranslationsLocalNotificationsDe localNotifications = _TranslationsLocalNotificationsDe._(_root);
+	@override String get kContinue => 'Weiter';
+	@override String get logintext => 'Wo jedes Wort ein neues Abenteuer ist, das darauf wartet, erzählt zu werden.';
 	@override late final _TranslationsTermOfServiceDe termOfService = _TranslationsTermOfServiceDe._(_root);
 	@override String get cookies => 'Cookie-Richtlinie';
 	@override String get privacy => 'Datenschutzrichtlinie';
 	@override late final _TranslationsOnboardingDe onboarding = _TranslationsOnboardingDe._(_root);
-	@override String get pressBackAgainToExit => 'Drücken Sie erneut die Zurück-Taste, um den Vorgang zu beenden';
+	@override String get pressBackAgainToExit => 'Drücken Sie erneut zurück, um zu beenden';
+	@override late final _TranslationsFaqDe faq = _TranslationsFaqDe._(_root);
+	@override String get good_morning => 'Guten Morgen';
+	@override String get good_afternoon => 'Guten Tag';
+	@override String get good_evening => 'Guten Abend';
 	@override late final _TranslationsSplashDe splash = _TranslationsSplashDe._(_root);
-	@override late final _TranslationsAuthDe auth = _TranslationsAuthDe._(_root);
+	@override late final _TranslationsProfileDe profile = _TranslationsProfileDe._(_root);
 	@override late final _TranslationsHomeDe home = _TranslationsHomeDe._(_root);
-	@override late final _TranslationsNotificationsDe notifications = _TranslationsNotificationsDe._(_root);
-	@override late final _TranslationsEditProfileDe editProfile = _TranslationsEditProfileDe._(_root);
-	@override late final _TranslationsSettingsSupportDe settingsSupport = _TranslationsSettingsSupportDe._(_root);
-	@override late final _TranslationsDeleteAccountDe deleteAccount = _TranslationsDeleteAccountDe._(_root);
-	@override String get cancel => 'Stornieren';
+	@override late final _TranslationsAllStoriesDe allStories = _TranslationsAllStoriesDe._(_root);
+	@override late final _TranslationsStoriesDe stories = _TranslationsStoriesDe._(_root);
+	@override late final _TranslationsLibraryDe library = _TranslationsLibraryDe._(_root);
+	@override late final _TranslationsBottomNavDe bottomNav = _TranslationsBottomNavDe._(_root);
+	@override late final _TranslationsDayStreakDe dayStreak = _TranslationsDayStreakDe._(_root);
+	@override late final _TranslationsStoryDetailsDe storyDetails = _TranslationsStoryDetailsDe._(_root);
+	@override late final _TranslationsShareDe share = _TranslationsShareDe._(_root);
 	@override String get delete => 'Löschen';
-	@override String get premium => 'Prämie';
-	@override String get profileEdit => 'Profil bearbeiten';
-	@override String get settings => 'Einstellungen';
-	@override String get undo => 'Rückgängig machen';
-	@override String get successfully => 'Erfolgreich';
+	@override late final _TranslationsEditProfileDe editProfile = _TranslationsEditProfileDe._(_root);
+	@override late final _TranslationsNotificationsDe notifications = _TranslationsNotificationsDe._(_root);
+	@override late final _TranslationsAuthDe auth = _TranslationsAuthDe._(_root);
+	@override String get cancel => 'Abbrechen';
+	@override String get deleteAccount => 'Konto löschen';
+	@override String get deleteDialogTitle => 'Sind Sie sicher, dass Sie Ihr Konto löschen möchten?';
+	@override String get deleteDialogDescription => 'Diese Aktion ist irreversibel und löscht dauerhaft alle Ihre Übungshistorie und Daten.';
+	@override String get deleteError => 'Beim Löschen Ihres Kontos ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.';
+	@override String get enterInvitationCode => 'Einladungscode eingeben';
+	@override String get inviteFriends => 'Gib den Einladungscode ein, den du von einem Freund erhalten hast.\nTippe ihn in das vorgesehene Feld';
+	@override String get twoDaysPremium => '7 Tage Premium';
+	@override String get advantage => '\num die Vorteile zu genießen.';
+	@override String get send => 'Senden';
+	@override late final _TranslationsReferralCodeDe referralCode = _TranslationsReferralCodeDe._(_root);
+	@override String get deleteNotifications => 'Benachrichtigungen löschen';
+	@override String get deleteNotificationsDescription => 'Sind Sie sicher, dass Sie alle\nIhre Benachrichtigungen löschen möchten? Diese Aktion ist irreversibel und kann nicht rückgängig gemacht werden.';
+	@override String get deleteAll => 'Alle löschen';
+	@override String get appLanguage => 'App-Sprache';
+	@override String get selectLanguage => 'Wählen Sie Ihre bevorzugte Sprache';
 	@override String get save => 'Speichern';
 	@override late final _TranslationsLanguageOptionsDe languageOptions = _TranslationsLanguageOptionsDe._(_root);
-	@override late final _TranslationsCommonDe common = _TranslationsCommonDe._(_root);
-	@override late final _TranslationsProfileScreenDe profileScreen = _TranslationsProfileScreenDe._(_root);
-	@override late final _TranslationsEditProfileScreenDe editProfileScreen = _TranslationsEditProfileScreenDe._(_root);
-	@override late final _TranslationsPremiumAccessDe premiumAccess = _TranslationsPremiumAccessDe._(_root);
 	@override late final _TranslationsParentalGateDe parentalGate = _TranslationsParentalGateDe._(_root);
-	@override late final _TranslationsActivitiesDe activities = _TranslationsActivitiesDe._(_root);
-	@override late final _TranslationsResultSheetDe resultSheet = _TranslationsResultSheetDe._(_root);
-	@override late final _TranslationsTrueFalseViewDe trueFalseView = _TranslationsTrueFalseViewDe._(_root);
-}
-
-// Path: voicePlayback
-class _TranslationsVoicePlaybackDe implements TranslationsVoicePlaybackEn {
-	_TranslationsVoicePlaybackDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get loading => 'Audio wird geladen...';
-	@override String get playing => 'Audio ist bereit und wird abgespielt.';
-	@override String get missing => 'Audio wurde nicht gefunden. Bitte versuchen Sie es erneut.';
-	@override String get failed => 'Audio konnte nicht vorbereitet werden. Bitte versuchen Sie es erneut.';
-}
-
-// Path: localNotifications
-class _TranslationsLocalNotificationsDe implements TranslationsLocalNotificationsEn {
-	_TranslationsLocalNotificationsDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get channelName => 'Tägliche Lern-Erinnerungen';
-	@override String get channelDescription => 'Erinnerungen, die Kindern helfen, ihre tägliche Lernserie beizubehalten.';
-	@override String get reminderTitle => 'Lingola Kids';
-	@override String get reminderBody => 'Halte deine Serie heute mit einer kurzen Lektion aufrecht.';
-	@override String get debugTitle => 'Lingola Kids';
-	@override String get debugBody => 'Lokale Benachrichtigungen funktionieren.';
 }
 
 // Path: termOfService
@@ -116,15 +97,15 @@ class _TranslationsTermOfServiceDe implements TranslationsTermOfServiceEn {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get text1 => 'Indem Sie sich bei Lingola Kids anmelden, stimmen Sie unseren ';
+	@override String get text1 => 'Durch die Anmeldung bei Swipe stimmen Sie unseren ';
 	@override String get link1 => 'Nutzungsbedingungen';
-	@override String get text2 => '. Erfahren Sie, wie wir Ihre Daten verarbeiten, in unserer ';
+	@override String get text2 => ' zu. Erfahren Sie, wie wir Ihre Daten in unserer ';
 	@override String get link2 => 'Datenschutzrichtlinie';
 	@override String get text3 => ' und ';
 	@override String get link3 => 'Cookie-Richtlinie';
-	@override String get text4 => '';
-	@override late final _TranslationsTermOfServiceTermsOfServiceDe termsOfService = _TranslationsTermOfServiceTermsOfServiceDe._(_root);
+	@override String get text4 => ' verarbeiten';
 	@override late final _TranslationsTermOfServicePrivacyPolicyDe privacyPolicy = _TranslationsTermOfServicePrivacyPolicyDe._(_root);
+	@override late final _TranslationsTermOfServiceTermsOfServiceDe termsOfService = _TranslationsTermOfServiceTermsOfServiceDe._(_root);
 	@override late final _TranslationsTermOfServiceCookiePolicyDe cookiePolicy = _TranslationsTermOfServiceCookiePolicyDe._(_root);
 }
 
@@ -135,21 +116,20 @@ class _TranslationsOnboardingDe implements TranslationsOnboardingEn {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override late final _TranslationsOnboardingStep5De step5 = _TranslationsOnboardingStep5De._(_root);
 	@override late final _TranslationsOnboardingStep1De step1 = _TranslationsOnboardingStep1De._(_root);
 	@override late final _TranslationsOnboardingStep2De step2 = _TranslationsOnboardingStep2De._(_root);
-	@override late final _TranslationsOnboardingStep3De step3 = _TranslationsOnboardingStep3De._(_root);
-	@override late final _TranslationsOnboardingStep4De step4 = _TranslationsOnboardingStep4De._(_root);
 	@override late final _TranslationsOnboardingLoadingDe loading = _TranslationsOnboardingLoadingDe._(_root);
-	@override late final _TranslationsOnboardingKFinalDe kFinal = _TranslationsOnboardingKFinalDe._(_root);
-	@override String get allowAccess => 'Zugriff zulassen';
-	@override String get iUnderstand => 'Ich verstehe';
-	@override late final _TranslationsOnboardingLoginDe login = _TranslationsOnboardingLoginDe._(_root);
-	@override late final _TranslationsOnboardingRewardDe reward = _TranslationsOnboardingRewardDe._(_root);
-	@override String get spellTitle => 'Buchstabieren Sie das Wort, das Sie sehen!';
-	@override String get spellSubtitle => 'Kannst du LÖWE buchstabieren?';
-	@override String get spellSuccessTitle => 'Hübsch! Es ist LÖWE';
-	@override String get spellSuccessSubtitle => 'Zum Anhören tippen';
+}
+
+// Path: faq
+class _TranslationsFaqDe implements TranslationsFaqEn {
+	_TranslationsFaqDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Häufig gestellte Fragen';
+	@override late final _TranslationsFaqQuestionsDe questions = _TranslationsFaqQuestionsDe._(_root);
 }
 
 // Path: splash
@@ -159,10 +139,206 @@ class _TranslationsSplashDe implements TranslationsSplashEn {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override late final _TranslationsSplashInitialDe initial = _TranslationsSplashInitialDe._(_root);
 	@override late final _TranslationsSplashScreen1De screen1 = _TranslationsSplashScreen1De._(_root);
 	@override late final _TranslationsSplashScreen2De screen2 = _TranslationsSplashScreen2De._(_root);
-	@override late final _TranslationsSplashScreen3De screen3 = _TranslationsSplashScreen3De._(_root);
+}
+
+// Path: profile
+class _TranslationsProfileDe implements TranslationsProfileEn {
+	_TranslationsProfileDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Profil';
+	@override String get freeVersion => 'Kostenlose Version';
+	@override String get error => 'Fehler';
+	@override String get passive => 'Passiv';
+	@override late final _TranslationsProfileSectionsDe sections = _TranslationsProfileSectionsDe._(_root);
+	@override late final _TranslationsProfileMenuDe menu = _TranslationsProfileMenuDe._(_root);
+	@override String get manage => 'VERWALTEN';
+	@override late final _TranslationsProfileLogoutDialogDe logoutDialog = _TranslationsProfileLogoutDialogDe._(_root);
+}
+
+// Path: home
+class _TranslationsHomeDe implements TranslationsHomeEn {
+	_TranslationsHomeDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get premium => 'Premium!';
+	@override String get seeMore => 'Mehr sehen';
+	@override String get pickUpWhereYouLeftOff => 'Dort weitermachen, wo du aufgehört hast';
+	@override String get premiumSection => 'Premium';
+	@override String get history => 'Verlauf';
+	@override String get librarySection => 'Bibliothek';
+	@override String get libraryDescription => 'Die gespeicherten Wörter werden hier angezeigt.';
+	@override String get upgradeToPremium => 'Auf Premium upgraden';
+	@override String get unlimitedStories => 'Unbegrenzte Geschichten und werbefrei';
+	@override late final _TranslationsHomePremiumPlanDe premiumPlan = _TranslationsHomePremiumPlanDe._(_root);
+}
+
+// Path: allStories
+class _TranslationsAllStoriesDe implements TranslationsAllStoriesEn {
+	_TranslationsAllStoriesDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Alle Geschichten';
+	@override String get noStoriesFound => 'Keine Geschichten gefunden';
+	@override String get selectFilter => 'Filter wählen';
+	@override String get category => 'Kategorie';
+	@override String get categorySubtitle => 'Bitte wähle die Kategorie, die du lesen möchtest';
+	@override String get apply => 'Anwenden';
+}
+
+// Path: stories
+class _TranslationsStoriesDe implements TranslationsStoriesEn {
+	_TranslationsStoriesDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Geschichten';
+	@override String get popularStories => 'Beliebte Geschichten';
+	@override String get recommendForYou => 'Empfohlen für dich';
+	@override String get allStories => 'Alle Geschichten';
+	@override String get seeAll => 'Alle sehen';
+	@override late final _TranslationsStoriesCategoriesDe categories = _TranslationsStoriesCategoriesDe._(_root);
+}
+
+// Path: library
+class _TranslationsLibraryDe implements TranslationsLibraryEn {
+	_TranslationsLibraryDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Bibliothek';
+	@override String wordCount({required Object count}) => '${count} Wörter';
+	@override String get popularWords => 'Beliebte Wörter';
+	@override String get allWords => 'Alle Wörter';
+	@override String get searchWord => 'Wort suchen';
+	@override String get searchHint => 'Bitte Wort eingeben…';
+	@override String get noWordsFound => 'Keine Wörter gefunden';
+	@override String get noSavedWords => 'Noch keine gespeicherten Wörter';
+}
+
+// Path: bottomNav
+class _TranslationsBottomNavDe implements TranslationsBottomNavEn {
+	_TranslationsBottomNavDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get home => 'Startseite';
+	@override String get stories => 'Geschichten';
+	@override String get library => 'Bibliothek';
+	@override String get profile => 'Profil';
+}
+
+// Path: dayStreak
+class _TranslationsDayStreakDe implements TranslationsDayStreakEn {
+	_TranslationsDayStreakDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Tages-Serie!';
+	@override late final _TranslationsDayStreakDaysDe days = _TranslationsDayStreakDaysDe._(_root);
+}
+
+// Path: storyDetails
+class _TranslationsStoryDetailsDe implements TranslationsStoryDetailsEn {
+	_TranslationsStoryDetailsDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get introduction => 'Einleitung';
+	@override String get saved => 'Gespeichert';
+	@override String get removed => 'Entfernt';
+	@override String get storyAddedToLibrary => 'Die Geschichte wurde deiner Bibliothek hinzugefügt.';
+	@override String get storyRemovedFromLibrary => 'Die Geschichte wurde aus der Bibliothek entfernt.';
+	@override String get wordAddedToLibrary => 'Das Wort wurde der Bibliothek hinzugefügt. Rückgängig';
+	@override String get successfully => 'Erfolgreich';
+	@override String get ratingSubmitted => 'Deine Bewertung wurde erfolgreich eingereicht.';
+	@override String get warning => 'Warnung';
+	@override String get fillAllFields => 'Bitte fülle alle Felder aus.';
+	@override String get messageSent => 'Deine Nachricht wurde erfolgreich gesendet.';
+	@override String get translate => 'Übersetzen';
+	@override String get speak => 'Sprechen';
+	@override String get like => 'Gefällt mir';
+	@override String get save => 'Speichern';
+	@override String get feedback => 'Feedback';
+	@override String get rating => 'Bewertung';
+	@override String get stop => 'Stopp';
+	@override String get start => 'Start';
+	@override String get listen => 'Hören';
+	@override String get translation => 'Übersetzung';
+	@override String get translating => 'Wird übersetzt...';
+	@override String get saveToLibrary => 'In Bibliothek speichern';
+	@override String get rateThisStory => 'Diese Geschichte bewerten';
+	@override String get enjoyStory => 'Wie sehr hat dir diese Geschichte gefallen?';
+	@override String get send => 'Senden';
+	@override String get subject => 'Betreff';
+	@override late final _TranslationsStoryDetailsFeedbackSubjectsDe feedbackSubjects = _TranslationsStoryDetailsFeedbackSubjectsDe._(_root);
+}
+
+// Path: share
+class _TranslationsShareDe implements TranslationsShareEn {
+	_TranslationsShareDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Mit Freunden teilen';
+	@override String get mainTitle => 'Teilen Sie den Frieden';
+	@override String get descriptionPart1 => 'Laden Sie Ihre Freunde ein, gemeinsam zu atmen.\nFür jede Einladung erhalten Sie beide ';
+	@override String get descriptionPart2 => '1 Woche Premium';
+	@override String get descriptionPart3 => '';
+	@override String get yourReferralCode => 'IHR EMPFEHLUNGSCODE';
+	@override String get codeCopied => 'Code kopiert!';
+	@override String get copyCode => 'Code kopieren';
+	@override String get inviteDescription => 'Lade deine Freunde ein und lerne\ngemeinsam';
+	@override String get linkCopied => 'Kopiert';
+	@override String get linkCopiedMessage => 'Der Link wurde in die Zwischenablage kopiert.';
+}
+
+// Path: editProfile
+class _TranslationsEditProfileDe implements TranslationsEditProfileEn {
+	_TranslationsEditProfileDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Profil bearbeiten';
+	@override String get changePhoto => 'Avatar ändern';
+	@override String get learnLanguage => 'Sprache lernen';
+	@override String get fullName => 'Vollständiger Name';
+	@override String get email => 'E-Mail';
+	@override String get age => 'Alter';
+	@override String get save => 'Speichern';
+	@override String get saving => 'Wird gespeichert...';
+	@override String get updateSuccess => 'Profil erfolgreich aktualisiert';
+	@override String get updateError => 'Beim Aktualisieren des Profils ist ein Fehler aufgetreten';
+	@override String get deleteAccount => 'Konto löschen';
+}
+
+// Path: notifications
+class _TranslationsNotificationsDe implements TranslationsNotificationsEn {
+	_TranslationsNotificationsDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Benachrichtigungen';
+	@override String get emptyTitle => 'Noch keine Benachrichtigungen';
+	@override String get emptyDescription => 'Wir benachrichtigen Sie, wenn es ein wichtiges Update zu Ihrer Lernreise gibt.';
+	@override String get premiumBannerTitle => 'Verpassen Sie nicht die\nPremium-Vorteile!';
+	@override String get premiumBannerDescription => 'Nutzen Sie die Möglichkeiten als Premium-Abonnent.';
 }
 
 // Path: auth
@@ -179,114 +355,17 @@ class _TranslationsAuthDe implements TranslationsAuthEn {
 	@override String signInFailed({required Object error}) => 'Anmeldung fehlgeschlagen: ${error}';
 }
 
-// Path: home
-class _TranslationsHomeDe implements TranslationsHomeEn {
-	_TranslationsHomeDe._(this._root);
+// Path: referralCode
+class _TranslationsReferralCodeDe implements TranslationsReferralCodeEn {
+	_TranslationsReferralCodeDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get seeAll => 'Alle anzeigen';
-	@override String get more => 'Mehr';
-	@override String get online => 'Online';
-	@override String get offline => 'Offline';
-	@override late final _TranslationsHomePlaceholdersDe placeholders = _TranslationsHomePlaceholdersDe._(_root);
-	@override String get greeting => 'Hallo,';
-	@override String get guest => 'Gast';
-	@override String get thisWeek => 'Diese Woche';
-	@override String get continueLearning => 'Lernen Sie weiter';
-	@override String get allLessons => 'Alle Lektionen';
-	@override String get startLearning => 'Fangen Sie an zu lernen';
-	@override String resumeActivity({required Object activity}) => 'Fortsetzen ${activity}';
-	@override String get continueButton => 'Weitermachen';
-	@override String get streakTitle => 'Serienstatus';
-	@override String streakActive({required Object count}) => 'Sie haben derzeit eine Lernserie von ${count} Tagen. Schließen Sie jeden Tag eine Lektion ab, um Ihre Serie zu behalten.';
-	@override String get streakEmpty => 'Ihre Lernserie hat noch nicht begonnen. Schließen Sie heute eine Lektion ab, um Ihre Serie zu starten.';
-	@override List<String> get weekDays => [
-		'MO',
-		'DI',
-		'HEIRATEN',
-		'DO',
-		'FR',
-		'SA',
-		'SONNE',
-	];
-	@override late final _TranslationsHomeLessonsDe lessons = _TranslationsHomeLessonsDe._(_root);
-	@override String lessonProgress({required Object current, required Object total}) => 'Lektion ${current} von ${total}';
-}
-
-// Path: notifications
-class _TranslationsNotificationsDe implements TranslationsNotificationsEn {
-	_TranslationsNotificationsDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get today => 'Heute';
-	@override String get yesterday => 'Gestern';
-	@override String weekAgo({required Object week}) => '${week} Woche';
-	@override String monthAgo({required Object month}) => '${month} Monat';
-	@override String yearAgo({required Object year}) => '${year} Jahr her';
-	@override String get noNotifications => 'Noch keine Benachrichtigungen.';
-	@override String get noNotificationsSubtitle => 'Vergessen Sie nicht, noch einmal nachzuschauen, wenn Sie die Benachrichtigung erhalten.';
-	@override String get allDeleted => 'Alle Benachrichtigungen wurden erfolgreich gelöscht';
-}
-
-// Path: editProfile
-class _TranslationsEditProfileDe implements TranslationsEditProfileEn {
-	_TranslationsEditProfileDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get aboutMe => 'Über mich';
-	@override String get aboutMeHint => 'Schreiben Sie etwas über sich';
-	@override String get fullName => 'Vollständiger Name';
-	@override String get gender => 'Geschlecht';
-	@override String get male => 'Männlich';
-	@override String get female => 'Weiblich';
-	@override String get dontWantToMention => 'Ich möchte es nicht erwähnen.';
-	@override String get country => 'Land';
-	@override String get languagePreferences => 'Spracheinstellungen';
-	@override String get selectLanguage => 'Fügen Sie Ihre bevorzugte Sprache hinzu';
-	@override String get saved => 'Gespeichert';
-	@override String get changesSaved => 'Änderungen wurden gespeichert.';
-}
-
-// Path: settingsSupport
-class _TranslationsSettingsSupportDe implements TranslationsSettingsSupportEn {
-	_TranslationsSettingsSupportDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Einstellungen & Support';
-	@override String get premiumTitle => 'Unbegrenzter Zugriff\nauf alle Funktionen';
-	@override String get getPremium => 'Holen Sie sich Premium';
-	@override String get settingsHub => 'Einstellungs-Hub';
-	@override String get shareTheApp => 'Teilen Sie die App';
-	@override String get rateUs => 'Bewerten Sie uns';
-	@override String get version => 'Version';
-	@override String get notifications => 'Benachrichtigungen';
-	@override String get accountManagement => 'Kontoverwaltung';
-	@override String get deleteAccount => 'Konto löschen';
-	@override String get logOut => 'Abmelden';
-	@override String get logOutTitle => 'Sie sind dabei, sich abzumelden';
-	@override String get logOutSubtitle => 'Bis bald!\nWir werden dich vermissen.';
-}
-
-// Path: deleteAccount
-class _TranslationsDeleteAccountDe implements TranslationsDeleteAccountEn {
-	_TranslationsDeleteAccountDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Konto löschen';
-	@override String get warning => 'Sind Sie sicher, dass Sie Ihr Konto löschen möchten?';
-	@override String get description => 'Diese Aktion kann nicht rückgängig gemacht werden und Ihr gesamter Verlauf und Ihre Daten werden dauerhaft gelöscht.';
-	@override String deleteFailed({required Object error}) => 'Kontolöschung fehlgeschlagen: ${error}';
-	@override late final _TranslationsDeleteAccountStepsDe steps = _TranslationsDeleteAccountStepsDe._(_root);
+	@override String get inputPlaceholder => '8-stelligen Code eingeben';
+	@override String get applying => 'Code wird angewendet...';
+	@override late final _TranslationsReferralCodeSuccessDe success = _TranslationsReferralCodeSuccessDe._(_root);
+	@override late final _TranslationsReferralCodeErrorsDe errors = _TranslationsReferralCodeErrorsDe._(_root);
 }
 
 // Path: languageOptions
@@ -297,96 +376,16 @@ class _TranslationsLanguageOptionsDe implements TranslationsLanguageOptionsEn {
 
 	// Translations
 	@override String get english => 'Englisch';
-	@override String get chinese => 'chinesisch';
 	@override String get german => 'Deutsch';
 	@override String get italian => 'Italienisch';
 	@override String get french => 'Französisch';
-	@override String get japanese => 'japanisch';
+	@override String get japanese => 'Japanisch';
 	@override String get spanish => 'Spanisch';
 	@override String get russian => 'Russisch';
 	@override String get turkish => 'Türkisch';
 	@override String get korean => 'Koreanisch';
 	@override String get hindi => 'Hindi';
 	@override String get portuguese => 'Portugiesisch';
-}
-
-// Path: common
-class _TranslationsCommonDe implements TranslationsCommonEn {
-	_TranslationsCommonDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get tryAgain => 'Versuchen Sie es erneut';
-	@override String get retry => 'Wiederholen';
-	@override String get close => 'Schließen';
-}
-
-// Path: profileScreen
-class _TranslationsProfileScreenDe implements TranslationsProfileScreenEn {
-	_TranslationsProfileScreenDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Profil';
-	@override String get greeting => 'Hallo,';
-	@override String get account => 'KONTO';
-	@override String get app => 'APP';
-	@override String get statusLoading => 'Status wird geladen';
-	@override String get premiumActive => 'Aktives • Pro-Mitglied';
-	@override String get freePlan => 'Kostenloser Plan';
-	@override String get loadFailed => 'Profilinformationen konnten nicht geladen werden. Ziehen Sie nach unten, um es erneut zu versuchen.';
-	@override String get accountSettings => 'Kontoeinstellungen';
-	@override String get accountSettingsGuestSubtitle => 'Name und Avatar';
-	@override String get accountSettingsSubtitle => 'Name, Foto, E-Mail';
-	@override String get manageSubscription => 'Abonnement verwalten';
-	@override String get screenTime => 'Bildschirmzeit';
-	@override String get rateApp => 'Bewerten Sie die App';
-	@override String get supportUs => 'Unterstützen Sie uns';
-	@override String get rateComingSoon => 'Die Bewertung wird in Kürze verfügbar sein.';
-	@override String get changeLanguage => 'Sprache';
-	@override String get changeLanguageSubtitle => 'App-Sprache ändern';
-	@override String get privacyPolicy => 'Datenschutzrichtlinie';
-	@override String get privacySubtitle => 'Daten schützen';
-	@override String get termsOfService => 'Nutzungsbedingungen';
-	@override String get termsSubtitle => 'Daten und Bedingungen';
-	@override String get logout => 'Abmelden';
-	@override String get logoutDialogTitle => 'Sie sind dabei,\naus Ihrem Konto abzumelden';
-	@override String get logoutFailed => 'Konnte mich nicht abmelden. Bitte versuchen Sie es erneut.';
-	@override String get subscriptionFailed => 'Der Abonnementbildschirm konnte nicht geöffnet werden. Bitte versuchen Sie es erneut.';
-	@override String screenTimeMinutes({required Object minutes}) => 'Heute ${minutes} Minuten';
-	@override String screenTimeHours({required Object hours}) => 'Heute ${hours} Stunden';
-	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Heute ${hours} Stunden ${minutes} Minuten';
-	@override String get trialSubscriptionTitle => 'Test Premium Aktiv';
-	@override String get trialSubscriptionPrompt => 'Sie verwenden derzeit eine Test-Premium-Abonnement. Möchten Sie sich anmelden?';
-	@override String get yes => 'Ja';
-	@override String get no => 'Nein';
-}
-
-// Path: editProfileScreen
-class _TranslationsEditProfileScreenDe implements TranslationsEditProfileScreenEn {
-	_TranslationsEditProfileScreenDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get changeAvatar => 'Avatar ändern';
-	@override String get email => 'E-Mail';
-	@override String get emailHelper => 'Dieses Feld stammt aus Ihrem Backend-Konto.';
-	@override String get deleteDialogTitle => 'Möchten Sie\nIhr Konto wirklich löschen?';
-	@override String get accountDeleteFailed => 'Konto konnte nicht gelöscht werden. Bitte versuchen Sie es erneut.';
-	@override String get profileSaveFailed => 'Profil konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.';
-}
-
-// Path: premiumAccess
-class _TranslationsPremiumAccessDe implements TranslationsPremiumAccessEn {
-	_TranslationsPremiumAccessDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get openFailed => 'Premium-Bildschirm konnte nicht geöffnet werden. Bitte versuchen Sie es erneut.';
 }
 
 // Path: parentalGate
@@ -396,76 +395,10 @@ class _TranslationsParentalGateDe implements TranslationsParentalGateEn {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get barrierLabel => 'Elterntor';
-	@override String get question => 'Was ist das Ergebnis dieser Operation?';
-	@override String get wrongAnswer => 'Falsche Antwort. Bitte versuchen Sie es erneut.';
-	@override String get submit => 'Einreichen';
-}
-
-// Path: activities
-class _TranslationsActivitiesDe implements TranslationsActivitiesEn {
-	_TranslationsActivitiesDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get flashCards => 'Lernkarten';
-	@override String get drawing => 'Zeichnung';
-	@override String get flipCards => 'Karten umdrehen';
-	@override String get trueFalse => 'Richtig Falsch';
-	@override String get spelling => 'Rechtschreibung';
-}
-
-// Path: resultSheet
-class _TranslationsResultSheetDe implements TranslationsResultSheetEn {
-	_TranslationsResultSheetDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get correct => 'Richtig';
-	@override String get tryAgain => 'Versuchen Sie es erneut';
-	@override String get correctBody => 'Du machst das großartig!';
-	@override String get tryAgainBody => 'Versuchen Sie es noch einmal!';
-}
-
-// Path: trueFalseView
-class _TranslationsTrueFalseViewDe implements TranslationsTrueFalseViewEn {
-	_TranslationsTrueFalseViewDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String isThisLetter({required Object letter}) => 'Ist dieser Buchstabe ${letter}?';
-	@override String isThisNumber({required Object number}) => 'Ist diese Nummer ${number}?';
-	@override String isThisShape({required Object shape}) => 'Ist diese Form ${shape}?';
-	@override String isThisSubject({required Object subject}) => 'Ist das ${subject}?';
-	@override String get trueText => 'WAHR';
-	@override String get falseText => 'FALSCH';
-}
-
-// Path: termOfService.termsOfService
-class _TranslationsTermOfServiceTermsOfServiceDe implements TranslationsTermOfServiceTermsOfServiceEn {
-	_TranslationsTermOfServiceTermsOfServiceDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Lingola Kids – Nutzungsbedingungen';
-	@override String get lastUpdated => 'Letzte Aktualisierung: 2026';
-	@override String get intro => 'Diese Nutzungsbedingungen ("Bedingungen") regeln die Regeln und Bedingungen für die Nutzung der Lingola Kids Mobile-App ("App"). Durch das Herunterladen oder die Nutzung der App stimmen Sie diesen Bedingungen zu.';
-	@override String get section1Title => '1. Leistungsumfang & Haftungsausschluss';
-	@override String get section1Body => 'Lingola Kids bietet visuelle und Audio-Lernkarten sowie Lernspiele, um Kindern beim Erlernen des englischen Wortschatzes zu helfen. Die App ist keine offizielle Bildungseinrichtung; sie garantiert keinen Prüfungserfolg, akademische Abschlüsse oder Sprachzertifikate.';
-	@override String get section2Title => '2. Nutzungsbedingungen';
-	@override String get section2Body => '- Die App ist für Kinder ab 4 Jahren konzipiert.\n- Bei Nutzern unter 13/18 wird empfohlen, die App unter Aufsicht der Eltern oder eines gesetzlichen Vertreters zu verwenden.\n- Als Elternteil oder gesetzlicher Vertreter stimmen Sie diesen Bedingungen in deren Namen zu, wenn Sie Ihrem Kind die Nutzung der App erlauben.\n- Unbefugtes Kopieren, Verkaufen, Reverse Engineering oder die Massenverbreitung von App-Inhalten ist strengstens untersagt.';
-	@override String get section3Title => '3. Premium- und kostenpflichtige Dienste';
-	@override String get section3Body => 'Zahlungen für kostenpflichtige Dienste, wie Premium-Vokabelpakete und werbefreie Nutzung, werden über den App Store oder Google Play abgewickelt. Kündigungen für automatisch verlängernde Abonnements werden vom Nutzer/Elternteil über dessen Store-Konto verwaltet. Lingola Kids gewährt keine direkten Rückerstattungen.';
-	@override String get section4Title => '4. Lern-Daten & Datenschutz';
-	@override String get section4Body => 'Lerndaten (erlernte Wörter, abgeschlossene Aktivitäten), die zur Verbesserung der Benutzererfahrung und zur Fortschrittsverfolgung verarbeitet werden, sind durch unsere Datenschutzrichtlinie geschützt. Jede Person, die die App nutzt, hat die Datenschutzrichtlinie akzeptiert.';
-	@override String get section5Title => '5. Anwendbares Recht';
-	@override String get section5Body => 'Diese Bedingungen unterliegen den Gesetzen der Republik Türkei. Für Streitigkeiten sind die Zentralgerichte und Vollstreckungsstellen in Istanbul zuständig.';
-	@override String get section6Title => '6. Kontakt';
-	@override String get section6Body => '📩 Für Fragen, Anfragen oder Mitteilungen können Sie uns kontaktieren unter: support@fly-work.com';
+	@override String get title => 'Nur für Eltern';
+	@override String get subtitle => 'Bitte lösen Sie die folgende Rechenaufgabe, um fortzufahren:';
+	@override String get hint => 'Antwort';
+	@override String get incorrect => 'Falsche Antwort, bitte versuchen Sie es erneut.';
 }
 
 // Path: termOfService.privacyPolicy
@@ -475,21 +408,53 @@ class _TranslationsTermOfServicePrivacyPolicyDe implements TranslationsTermOfSer
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Lingola Kids – Datenschutzerklärung';
-	@override String get lastUpdated => 'Letzte Aktualisierung: 2026';
-	@override String get intro => 'Willkommen bei Lingola Kids. Der Schutz der Privatsphäre von Kindern und Familien hat für uns oberste Priorität. Diese Datenschutzerklärung beschreibt, welche Informationen gesammelt, verwendet und geschützt werden und wie Nutzer ihre Daten verwalten können.';
-	@override String get section1Title => '1. Gesammelte Informationen';
-	@override String get section1Body => '- Vom Nutzer/Eltern bereitgestellt: E-Mail-Adresse (falls ein Konto erstellt wird), Benutzername, Spracheinstellungen und Lernpräferenzen, gespeicherte Wörter.\n- Automatisch erfasst: Gerätemodell, Betriebssystem, IP-Adresse, App-Version, Absturzprotokolle und Lerndaten.';
-	@override String get section2Title => '2. Datenschutz von Kindern (Wichtig)';
-	@override String get section2Body => 'Lingola Kids ist für Kinder ab 4 Jahren konzipiert. Der Schutz der Daten von Kindern steht im Mittelpunkt:\n- Wir sammeln keine unnötigen oder sensiblen personenbezogenen Daten von Kindern.\n- Kinder werden nicht aufgefordert, Kontaktinformationen öffentlich zu teilen.\n- Verhaltens- oder personalisierte Werbeprofile, die auf Kinder abzielen, sind strengstens untersagt.\n- Eltern oder gesetzliche Vertreter können jederzeit die Überprüfung oder Löschung der Daten ihres Kindes beantragen.';
-	@override String get section3Title => '3. Zwecke der Datenverarbeitung & Weitergabe';
-	@override String get section3Body => 'Ihre Daten werden verarbeitet, um den Lernfortschritt zu verfolgen, Vokabelinhalte zu personalisieren und technische Probleme zu beheben. Personenbezogene Informationen werden niemals verkauft oder für kommerzielle Zwecke an Dritte weitergegeben. Vertrauenswürdige Dienstleister (Cloud-Speicher, Analyseanbieter usw.) verarbeiten Daten ausschließlich unter Vertraulichkeitsverpflichtungen.';
-	@override String get section4Title => '4. Nutzer- und Elternrechte';
-	@override String get section4Body => 'Nutzer und Eltern haben das Recht auf Zugriff, Berichtigung, Löschung des Kontos und die permanente Entfernung von Daten. Sie können diese Rechte über unser Support-Team ausüben.';
-	@override String get section5Title => '5. Datensicherheit & Aufbewahrung';
-	@override String get section5Body => 'Daten werden durch branchenübliche Verschlüsselung und Zugriffskontrollen geschützt. Lerndaten werden so lange gespeichert, wie das Konto aktiv ist, um Kontinuität zu gewährleisten, und nach Löschung des Kontos entfernt.';
-	@override String get section6Title => '6. Kontakt';
-	@override String get section6Body => '📩 Für Datenschutzanfragen, Datenlöschung oder elterliche Anfragen kontaktieren Sie uns unter: support@fly-work.com';
+	@override String get title => 'Datenschutzerklärung';
+	@override String get lastUpdated => 'Letzte Aktualisierung: 2025';
+	@override String get intro => 'Lingola Stories Kids betrachtet den Schutz der Privatsphäre von Kindern als Grundprinzip.';
+	@override String get section1Title => '1. GESAMMELTE INFORMATIONEN';
+	@override String get section1sub1Title => '1.1 Vom Nutzer bereitgestellte Daten';
+	@override String get section1sub1Body => 'Spitzname oder Profilname.\nE-Mail-Adresse.\nAltersinformation.\nSprachstand und gelernte Wörter.\n\nHinweis: Nie für Gesundheitsanalysen genutzt.';
+	@override String get section1sub2Title => '1.2 Automatisch gesammelte Daten';
+	@override String get section1sub2Body => 'Gerätetyp, Betriebssystem und App-Leistungsdaten. Genaue Standortdaten werden NICHT gesammelt.';
+	@override String get section2Title => '2. ZWECKE DER DATENVERARBEITUNG';
+	@override String get section2Body => 'Ihre Daten werden ausschließlich verwendet für:\n\n- Sichere altersgerechte Inhalte.\n- Personalisierung der Lernerfahrung.\n- Verbesserung der App-Leistung.\n- Erfüllung gesetzlicher Pflichten.';
+	@override String get section3Title => '3. DATENSPEICHERUNG UND LÖSCHUNG';
+	@override String get section3Body => 'Daten werden gespeichert, solange Ihr Konto aktiv ist. Support-Aufzeichnungen max. 12 Monate. Bei Kontolöschung werden Daten unwiderruflich gelöscht.';
+	@override String get section4Title => '4. NUTZERRECHTE';
+	@override String get section4Body => 'Gemäß DSGVO haben Eltern das Recht auf Auskunft, Berichtigung und Löschung. Anfragen an: support@fly-work.com.';
+	@override String get section5Title => '5. DATENSCHUTZ FÜR KINDER';
+	@override String get section5Body => 'Für Nutzer ab 6 Jahren. Elternzustimmung für unter 13 Jahren erforderlich.';
+	@override String get section6Title => '6. KONTAKT';
+	@override String get section6Body => 'Anfragen: support@fly-work.com';
+}
+
+// Path: termOfService.termsOfService
+class _TranslationsTermOfServiceTermsOfServiceDe implements TranslationsTermOfServiceTermsOfServiceEn {
+	_TranslationsTermOfServiceTermsOfServiceDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Nutzungsbedingungen';
+	@override String get lastUpdated => 'Letzte Aktualisierung: 2025';
+	@override String get intro => 'Diese Nutzungsbedingungen regeln die Verwendung von Lingola Stories Kids.';
+	@override String get disclaimer => 'Hinweis: Lingola Stories Kids ist ein Lernwerkzeug ohne offizielle Zertifizierung.';
+	@override String get section1Title => '1. DIENSTLEISTUNGSUMFANG';
+	@override String get section1Body => 'Die App bietet:\n\n- KI-gestützte Geschichten.\n- Altersbasiertes Leseerlebnis.\n- Wortschatz- und Ausspracheunterstützung.';
+	@override String get section2Title => '2. NUTZUNGSBEDINGUNGEN & ALTER';
+	@override String get section2Body => 'Mindestens 6 Jahre alt.\nUnter 18 unter elterlicher Aufsicht.\nKontoinformationen müssen korrekt sein.';
+	@override String get section3Title => '3. VERBOTENE NUTZUNGEN';
+	@override String get section3Body => 'Unbefugtes Kopieren, Reverse Engineering und kommerzielle Nutzung sind verboten.';
+	@override String get section4Title => '4. ABONNEMENTS UND ZAHLUNGEN';
+	@override String get section4Body => 'Premium gemäß App Store / Google Play Richtlinien.';
+	@override String get section5Title => '5. GEISTIGES EIGENTUM';
+	@override String get section5Body => 'Alle Inhalte gehören Lingola Stories Kids.';
+	@override String get section6Title => '6. HAFTUNGSBESCHRÄNKUNG';
+	@override String get section6Body => 'Die App wird ohne Gewährleistung bereitgestellt.';
+	@override String get section7Title => '7. GELTENDES RECHT';
+	@override String get section7Body => 'Türkisches Recht, Zuständigkeit bei Istanbuler Gerichten.';
+	@override String get section8Title => '8. KONTAKT';
+	@override String get section8Body => 'Anfragen: support@fly-work.com';
 }
 
 // Path: termOfService.cookiePolicy
@@ -500,40 +465,21 @@ class _TranslationsTermOfServiceCookiePolicyDe implements TranslationsTermOfServ
 
 	// Translations
 	@override String get title => 'Cookie-Richtlinie';
-	@override String get lastUpdated => 'Letzte Aktualisierung: 2026';
-	@override String get intro => 'Willkommen bei Lingola Kids. Digitale Hilfstechnologien werden verwendet, um das Nutzererlebnis sicherer und personalisierter zu gestalten.';
-	@override String get important => 'Diese Richtlinie erklärt, was Cookies sind, welche Zwecke sie erfüllen und wie Sie Ihre Präferenzen verwalten können.';
+	@override String get lastUpdated => 'Letzte Aktualisierung: 2025';
+	@override String get intro => 'Diese Richtlinie erklärt, welche digitalen Hilfsmittel bei der App-Nutzung verwendet werden.';
+	@override String get important => 'WICHTIG: Kinderschutz ist unser Grundprinzip. Für Nutzer ab 6 Jahren.';
 	@override String get section1Title => '1. WAS SIND COOKIES?';
-	@override String get section1Body => 'Cookies sind kleine Datendateien, die auf Ihrem Gerät abgelegt werden. Sie identifizieren Sie nicht direkt; sie fungieren als digitale Notizen, die Einstellungen merken, z. B. Sprache oder Sitzungspräferenzen.';
+	@override String get section1Body => 'Cookies and similar technologies (SDKs, identifiers) are small digital components that help the app function correctly. They do not directly identify you.';
 	@override String get section2Title => '2. WELCHE TECHNOLOGIEN VERWENDEN WIR?';
-	@override String get section2Body => 'Unbedingt notwendige Technologien\nErforderlich für Sitzungsverwaltung und Sicherheitskontrollen. Ohne diese Komponenten funktioniert die App möglicherweise nicht ordnungsgemäß.\n\nLeistung und Analysen\nHilft uns zu verstehen, welche Funktionen genutzt werden und welche Bereiche verbessert werden müssen. Die Daten werden anonym ausgewertet.\n\nPersonalisierung\nMerkt sich Einstellungen wie bevorzugte Sprache und Lernniveau, um ein kindgerechtes Erlebnis zu bieten.';
-	@override String get section3Title => '3. WARUM NUTZEN WIR DIESE TECHNOLOGIEN?';
-	@override String get section3Body => '• Um sicherzustellen, dass die App sicher und reibungslos läuft.\n• Um das Lernerlebnis zu verbessern.\n• Um wiederkehrende Einstellungen zu speichern.\n• Um Funktionen für die zukünftige Entwicklung zu identifizieren.';
-	@override String get section4Title => '4. TECHNOLOGIEN VON DRITTANBIETERN';
-	@override String get section4Body => 'Einige Technologien werden möglicherweise von technischen Dienstleistern bereitgestellt und unterliegen deren eigenen Richtlinien. Lingola Kids legt bei diesen Partnerschaften großen Wert auf Datensicherheit.';
-	@override String get section5Title => '5. COOKIE-KONTROLLE UND -VERWALTUNG';
-	@override String get section5Body => 'Benutzer können diese Technologien über Geräte- oder App-Einstellungen einschränken. Das Deaktivieren wesentlicher Technologien kann zu Problemen führen, z. B. dass keine Lernfunktionen verfügbar sind.';
+	@override String get section2Body => 'Strictly Necessary: For session management and security.\n\nPerformance and Analytics: Understand which stories are read, data evaluated anonymously.\n\nPersonalization: Remembers language preference and reading level.';
+	@override String get section3Title => '3. WARUM VERWENDEN WIR DIESE?';
+	@override String get section3Body => '- To ensure the app runs safely.\n- To make the reading experience more fluid.\n- To remember settings.\n- To identify features for future development.';
+	@override String get section4Title => '4. DRITTANBIETER-TECHNOLOGIEN';
+	@override String get section4Body => 'We apply minimum data usage when working with third-party partners.';
+	@override String get section5Title => '5. KONTROLLE UND VERWALTUNG';
+	@override String get section5Body => 'Parents can limit these technologies via device settings. Disabling necessary technologies may affect functionality.';
 	@override String get section6Title => '6. KONTAKT';
-	@override String get section6Body => '📩 Für Anfragen: support@fly-work.com';
-}
-
-// Path: onboarding.step5
-class _TranslationsOnboardingStep5De implements TranslationsOnboardingStep5En {
-	_TranslationsOnboardingStep5De._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get permissionRequired => 'Erlaubnis erforderlich';
-	@override String get notNow => 'Nicht jetzt';
-	@override String get openSettings => 'Einstellungen öffnen';
-	@override String get title => 'Berechtigungen';
-	@override String get permission1 => 'Kamerazugriff';
-	@override String get permission1Subtitle => 'ChatFace nutzt Ihre Kamera für Videoanrufe mit KI-Charakteren.';
-	@override String get permission2 => 'Mikrofonzugriff';
-	@override String get permission2Subtitle => 'ChatFace nutzt Ihr Mikrofon für Sprach- und Videoanrufe.';
-	@override String get permission3 => 'Standortzugriff';
-	@override String get permission3Subtitle => 'ChatFace verwendet Ihren Standort, um Ihr Erlebnis zu personalisieren.';
+	@override String get section6Body => 'Anfragen: support@fly-work.com';
 }
 
 // Path: onboarding.step1
@@ -543,9 +489,8 @@ class _TranslationsOnboardingStep1De implements TranslationsOnboardingStep1En {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Wie heißt du?';
-	@override String get subtitle => 'Bitte geben Sie Ihren Namen ein';
-	@override String get hint => 'Vollständiger Name';
+	@override String get title => 'In welche Sprache möchtest du Englisch übersetzen, um es zu lernen?';
+	@override String get subtitle => 'Bitte wähle die Sprache, in die du Englisch übersetzen möchtest.';
 }
 
 // Path: onboarding.step2
@@ -555,41 +500,9 @@ class _TranslationsOnboardingStep2De implements TranslationsOnboardingStep2En {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Wie alt bist du?';
-	@override String get subtitle => 'Für die Registrierung müssen Sie mindestens 18 Jahre alt sein.';
-}
-
-// Path: onboarding.step3
-class _TranslationsOnboardingStep3De implements TranslationsOnboardingStep3En {
-	_TranslationsOnboardingStep3De._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Was ist Ihr Geschlecht?';
-	@override String get subtitle => 'Bitte wählen Sie Ihr Geschlecht aus';
-	@override String get male => 'Männlich';
-	@override String get female => 'Weiblich';
-	@override String get dontWantToMention => 'Ich möchte es nicht erwähnen.';
-}
-
-// Path: onboarding.step4
-class _TranslationsOnboardingStep4De implements TranslationsOnboardingStep4En {
-	_TranslationsOnboardingStep4De._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Viel Spaß beim\nBleiben Sie auf der sicheren Seite';
-	@override String get entry1 => 'Wir sorgen für Ordnung';
-	@override String get subentry1 => 'Echtzeit-KI-Überwachung geöffnet';
-	@override String get entry2 => 'Bildschirmaufnahmen';
-	@override String get subentry2 => 'Keine Aufzeichnung ohne Zustimmung';
-	@override String get entry3 => '24/7-Support';
-	@override String get subentry3 => 'Beschwerden werden zu jeder Tageszeit geprüft';
-	@override String get entry4 => 'Nur 18+';
-	@override String get subentry4 => 'Nicht für Minderjährige geeignet';
-	@override String get communityRules => 'Gemeinschaftsregeln';
+	@override String get title => 'Welche Art von Geschichten\nmöchtest du?';
+	@override String get subtitle => 'Bitte gib deine Präferenz an.';
+	@override late final _TranslationsOnboardingStep2CategoriesDe categories = _TranslationsOnboardingStep2CategoriesDe._(_root);
 }
 
 // Path: onboarding.loading
@@ -599,64 +512,29 @@ class _TranslationsOnboardingLoadingDe implements TranslationsOnboardingLoadingE
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Ihr persönliches Konto ist\n';
-	@override String get titlePart2 => 'Geschaffen werden';
-	@override String get subtitle => 'Bitte warten Sie, Ihr Profil wird vorbereitet.';
+	@override String get titlePart1 => 'Dein persönliches Konto wird\n';
+	@override String get titlePart2 => 'erstellt';
+	@override String get subtitle => 'Wir erstellen wunderbare Geschichten für dich';
+	@override String get optimization => 'Optimierung';
 }
 
-// Path: onboarding.kFinal
-class _TranslationsOnboardingKFinalDe implements TranslationsOnboardingKFinalEn {
-	_TranslationsOnboardingKFinalDe._(this._root);
+// Path: faq.questions
+class _TranslationsFaqQuestionsDe implements TranslationsFaqQuestionsEn {
+	_TranslationsFaqQuestionsDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'Ihr persönliches Konto ist\n';
-	@override String get titlePart2 => 'Erstellt';
-	@override String get subtitle => 'Genießen Sie die Kommunikation mit jedem Charakter';
-}
-
-// Path: onboarding.login
-class _TranslationsOnboardingLoginDe implements TranslationsOnboardingLoginEn {
-	_TranslationsOnboardingLoginDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'Setzen Sie Ihre\nLernreise fort';
-	@override String get subtitle => 'Speichern Sie Fortschritte, schalten Sie Lektionen frei und\nlernen Sie geräteübergreifend weiter.';
-	@override String get failed => 'Die Anmeldung konnte nicht abgeschlossen werden.';
-}
-
-// Path: onboarding.reward
-class _TranslationsOnboardingRewardDe implements TranslationsOnboardingRewardEn {
-	_TranslationsOnboardingRewardDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get points => '⭐️ +50 Punkte';
-	@override String get title => 'Tolle Arbeit 🎉';
-	@override String get subtitle => 'Über 200 weitere Lektionen warten auf Sie!';
-	@override String get progressLabel => 'Erster Schritt geschafft!';
-	@override String get featureAlphabetTitle => 'Vollständiges Alphabet und Zahlen';
-	@override String get featureAlphabetSubtitle => 'Über 200 interaktive Lektionen';
-	@override String get featureVoiceTitle => 'Stimmliche Aussprache';
-	@override String get featureVoiceSubtitle => 'Audiounterstützung für jedes Wort';
-	@override String get featureQuizTitle => 'Spielerische Mini-Quiz';
-	@override String get featureQuizSubtitle => 'Lernen und dabei Spaß haben';
-	@override String get continueButton => 'Entdecken Sie weiter';
-}
-
-// Path: splash.initial
-class _TranslationsSplashInitialDe implements TranslationsSplashInitialEn {
-	_TranslationsSplashInitialDe._(this._root);
-
-	final TranslationsDe _root; // ignore: unused_field
-
-	// Translations
-	@override String get hello => 'Hallo';
-	@override String get title => 'Spielerisches Englisch für Kinder';
+	@override late final _TranslationsFaqQuestionsQ1De q1 = _TranslationsFaqQuestionsQ1De._(_root);
+	@override late final _TranslationsFaqQuestionsQ2De q2 = _TranslationsFaqQuestionsQ2De._(_root);
+	@override late final _TranslationsFaqQuestionsQ3De q3 = _TranslationsFaqQuestionsQ3De._(_root);
+	@override late final _TranslationsFaqQuestionsQ4De q4 = _TranslationsFaqQuestionsQ4De._(_root);
+	@override late final _TranslationsFaqQuestionsQ5De q5 = _TranslationsFaqQuestionsQ5De._(_root);
+	@override late final _TranslationsFaqQuestionsQ6De q6 = _TranslationsFaqQuestionsQ6De._(_root);
+	@override late final _TranslationsFaqQuestionsQ7De q7 = _TranslationsFaqQuestionsQ7De._(_root);
+	@override late final _TranslationsFaqQuestionsQ8De q8 = _TranslationsFaqQuestionsQ8De._(_root);
+	@override late final _TranslationsFaqQuestionsQ9De q9 = _TranslationsFaqQuestionsQ9De._(_root);
+	@override late final _TranslationsFaqQuestionsQ10De q10 = _TranslationsFaqQuestionsQ10De._(_root);
 }
 
 // Path: splash.screen1
@@ -666,8 +544,8 @@ class _TranslationsSplashScreen1De implements TranslationsSplashScreen1En {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Englisch lernen\nkann sich wie ein Spiel anfühlen';
-	@override String get description => 'Kurze, spielerische Lektionen helfen Kindern, ohne Druck neue Wörter zu lernen.';
+	@override String get title => 'Englisch lernen mit Geschichten';
+	@override String get description => 'Keine langweilige Auswendiglernerei. Entdecken Sie Wörter in ihrem natürlichen Fluss durch kurze und unterhaltsame Geschichten.';
 }
 
 // Path: splash.screen2
@@ -677,118 +555,342 @@ class _TranslationsSplashScreen2De implements TranslationsSplashScreen2En {
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Hören Sie zu, wiederholen Sie und\nLernen Sie neue Wörter';
-	@override String get description => 'Einfache Stimmübungen helfen Kindern, die Aussprache Schritt für Schritt zu üben.';
+	@override String get title => 'Künstliche Intelligenz führt Sie';
+	@override String get description => 'Sie verfolgt die Wörter, mit denen Sie Schwierigkeiten haben, erklärt deren Bedeutung und schlägt neue Geschichten vor, die auf Ihr Niveau zugeschnitten sind.';
 }
 
-// Path: splash.screen3
-class _TranslationsSplashScreen3De implements TranslationsSplashScreen3En {
-	_TranslationsSplashScreen3De._(this._root);
+// Path: profile.sections
+class _TranslationsProfileSectionsDe implements TranslationsProfileSectionsEn {
+	_TranslationsProfileSectionsDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Bauen Sie Selbstvertrauen auf,\nWort für Wort';
-	@override String get description => 'Konzipiert für junge Lernende mit einfachen Aktivitäten, freundlicher Anleitung und einem sicheren Lernfluss.';
-	@override String get option1 => '️🛡️ Sicher für Kinder';
-	@override String get option2 => '🌱 Kein Lerndruck';
-	@override String get option3 => '⭐️ Für junge Lernende gemacht';
+	@override String get accountSettings => 'KONTOEINSTELLUNGEN';
+	@override String get general => 'ALLGEMEINES';
 }
 
-// Path: home.placeholders
-class _TranslationsHomePlaceholdersDe implements TranslationsHomePlaceholdersEn {
-	_TranslationsHomePlaceholdersDe._(this._root);
+// Path: profile.menu
+class _TranslationsProfileMenuDe implements TranslationsProfileMenuEn {
+	_TranslationsProfileMenuDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get fashionDesigner => 'Modedesigner';
-	@override String get comedian => 'Komiker';
-	@override String get influencer => 'Influencer';
-	@override String get teacher => 'Lehrer';
-	@override String get friend => 'Freund';
+	@override String get editProfile => 'Profil bearbeiten';
+	@override String get notifications => 'Benachrichtigungen';
+	@override String get premium => 'Premium';
+	@override String get appLanguage => 'App-Sprache';
+	@override String get shareWithFriends => 'Mit Freunden teilen';
+	@override String get enterInviteCode => 'Einladungscode eingeben';
+	@override String get rateUs => 'Bewerten Sie uns';
+	@override String get faq => 'FAQ';
+	@override String get logout => 'Abmelden';
 }
 
-// Path: home.lessons
-class _TranslationsHomeLessonsDe implements TranslationsHomeLessonsEn {
-	_TranslationsHomeLessonsDe._(this._root);
+// Path: profile.logoutDialog
+class _TranslationsProfileLogoutDialogDe implements TranslationsProfileLogoutDialogEn {
+	_TranslationsProfileLogoutDialogDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get alphabet => 'Alphabet';
-	@override String get numbers => 'Zahlen';
-	@override String get colors => 'Farben';
-	@override String get shapes => 'Formen';
-	@override String get fruit => 'Obst';
-	@override String get vegetables => 'Gemüse';
-	@override String get sports => 'Sport';
-	@override String get fillIn => 'Ausfüllen';
-	@override String get fillInBlank => 'Füllen Sie die Lücke aus';
+	@override String get title => 'Sie sind dabei, sich abzumelden';
+	@override String get message => 'Bis bald! Wir werden Ihre Atemübungen weiter verfolgen.';
+	@override String get logoutButton => 'Abmelden';
+	@override String get cancelButton => 'Abbrechen';
 }
 
-// Path: deleteAccount.steps
-class _TranslationsDeleteAccountStepsDe implements TranslationsDeleteAccountStepsEn {
-	_TranslationsDeleteAccountStepsDe._(this._root);
+// Path: home.premiumPlan
+class _TranslationsHomePremiumPlanDe implements TranslationsHomePremiumPlanEn {
+	_TranslationsHomePremiumPlanDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override late final _TranslationsDeleteAccountStepsStep1De step1 = _TranslationsDeleteAccountStepsStep1De._(_root);
-	@override late final _TranslationsDeleteAccountStepsStep2De step2 = _TranslationsDeleteAccountStepsStep2De._(_root);
-	@override late final _TranslationsDeleteAccountStepsStep3De step3 = _TranslationsDeleteAccountStepsStep3De._(_root);
+	@override String get title => 'Premium-Plan';
+	@override String get description => 'Schalten Sie Ihren KI-Chatbot frei &\nerhalten Sie alle Premium-Funktionen';
+	@override String get button => 'Premium erhalten';
+	@override late final _TranslationsHomePremiumPlanDialogDe dialog = _TranslationsHomePremiumPlanDialogDe._(_root);
 }
 
-// Path: deleteAccount.steps.step1
-class _TranslationsDeleteAccountStepsStep1De implements TranslationsDeleteAccountStepsStep1En {
-	_TranslationsDeleteAccountStepsStep1De._(this._root);
+// Path: stories.categories
+class _TranslationsStoriesCategoriesDe implements TranslationsStoriesCategoriesEn {
+	_TranslationsStoriesCategoriesDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Wir wollen nicht, dass du gehst, aber wir verstehen es.';
-	@override String get subtitle => 'Können Sie uns sagen, warum Sie gehen möchten, damit wir das ChatFace-Erlebnis verbessern können?';
-	@override String get option1 => 'Ich fand die KI-Charaktere nicht realistisch.';
-	@override String get option2 => 'Ich habe technische Probleme mit Video-Chats.';
-	@override String get option3 => 'Die Abonnementpreise liegen über meinen Erwartungen.';
-	@override String get option4 => 'Ich konnte die Art von Charakteren, die ich suchte, nicht finden.';
-	@override String get option5 => 'Ich wollte es einfach mal kurz ausprobieren.';
-	@override String get option6 => 'Andere';
+	@override String get popular => 'Beliebt';
+	@override String get space => 'Weltraumabenteuer';
+	@override String get magic => 'Magische Welten';
+	@override String get animals => 'Tiere';
+	@override String get detectives => 'Detektive';
+	@override String get dinosaurs => 'Dinosaurier';
+	@override String get superhero => 'Superhelden';
+	@override String get underwater => 'Unterwasserkönigreich';
+	@override String get fairytale => 'Märchen';
 }
 
-// Path: deleteAccount.steps.step2
-class _TranslationsDeleteAccountStepsStep2De implements TranslationsDeleteAccountStepsStep2En {
-	_TranslationsDeleteAccountStepsStep2De._(this._root);
+// Path: dayStreak.days
+class _TranslationsDayStreakDaysDe implements TranslationsDayStreakDaysEn {
+	_TranslationsDayStreakDaysDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Wenn Sie Ihr Konto löschen, verabschieden Sie sich von:';
-	@override String get subtitle1 => 'Tiefe Verbindungen und Erinnerung:';
-	@override String get subtitle1Desc => 'Die Charaktere, mit denen Sie chatten, werden ihre Vergangenheit mit Ihnen, Ihre gemeinsamen Geheimnisse und Ihre persönlichen Gewohnheiten vollständig vergessen.';
-	@override String get subtitle2 => 'Privilegien für Videoanrufe:';
-	@override String get subtitle2Desc => 'Sie verlieren das Recht, persönlich mit Ihren KI-Partnern zu kommunizieren, die Ihnen jederzeit zur Verfügung stehen.';
-	@override String get subtitle3 => 'Erweiterter Algorithmus:';
-	@override String get subtitle3Desc => 'Ihre auf Ihre Vorlieben zugeschnittenen „Nur für Sie“-Charakterzuordnungen werden zurückgesetzt.';
-	@override String get subtitle4 => 'Profildaten:';
-	@override String get subtitle4Desc => 'Ihre erzielten Erfolge, freigeschalteten Sonderzeichen und Ihr Chatverlauf werden unwiderruflich gelöscht.';
+	@override String get su => 'So';
+	@override String get mo => 'Mo';
+	@override String get tu => 'Di';
+	@override String get we => 'Mi';
+	@override String get th => 'Do';
+	@override String get fr => 'Fr';
+	@override String get sa => 'Sa';
 }
 
-// Path: deleteAccount.steps.step3
-class _TranslationsDeleteAccountStepsStep3De implements TranslationsDeleteAccountStepsStep3En {
-	_TranslationsDeleteAccountStepsStep3De._(this._root);
+// Path: storyDetails.feedbackSubjects
+class _TranslationsStoryDetailsFeedbackSubjectsDe implements TranslationsStoryDetailsFeedbackSubjectsEn {
+	_TranslationsStoryDetailsFeedbackSubjectsDe._(this._root);
 
 	final TranslationsDe _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Bevor Sie losfahren, haben wir ein besonderes Angebot für Sie!';
-	@override String get description => 'Vielleicht brauchen Sie einfach etwas mehr Zeit oder ein besseres Angebot. Würden Sie Folgendes in Betracht ziehen, anstatt Ihr Konto zu löschen?';
-	@override String description1({required Object offer}) => 'Es ist wertvoll, Sie bei uns zu behalten. ${offer} auf Ihr nächstes Abonnement! Möchten Sie mit diesem Angebot fortfahren?';
-	@override String get description1Offer => 'Wir haben einen Rabatt von 50 % gewährt';
-	@override String description2({required Object offer}) => 'Wir haben Ihnen ${offer} Credits gegeben, damit Sie neue Charaktere sehen können, die Sie noch nicht entdeckt haben.';
-	@override String get description2Offer => '3 kostenlose Videoanrufe';
-	@override String get acceptOffer => 'Akzeptieren Sie das Rabattangebot von 50 %';
-	@override String get deleteMyAccount => 'Mein Konto löschen';
+	@override String get bugReport => 'Fehlerbericht';
+	@override String get storyContent => 'Story-Inhalt';
+	@override String get audioIssue => 'Audioproblem';
+	@override String get suggestion => 'Vorschlag';
+	@override String get other => 'Sonstiges';
+}
+
+// Path: referralCode.success
+class _TranslationsReferralCodeSuccessDe implements TranslationsReferralCodeSuccessEn {
+	_TranslationsReferralCodeSuccessDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Erfolg!';
+	@override String get message => 'Empfehlungscode erfolgreich angewendet! Sowohl du als auch dein Freund haben 1 Woche Premium erhalten.';
+}
+
+// Path: referralCode.errors
+class _TranslationsReferralCodeErrorsDe implements TranslationsReferralCodeErrorsEn {
+	_TranslationsReferralCodeErrorsDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override late final _TranslationsReferralCodeErrorsMissingCodeDe missingCode = _TranslationsReferralCodeErrorsMissingCodeDe._(_root);
+	@override late final _TranslationsReferralCodeErrorsInvalidFormatDe invalidFormat = _TranslationsReferralCodeErrorsInvalidFormatDe._(_root);
+	@override late final _TranslationsReferralCodeErrorsAlreadyUsedDe alreadyUsed = _TranslationsReferralCodeErrorsAlreadyUsedDe._(_root);
+	@override late final _TranslationsReferralCodeErrorsSelfReferralDe selfReferral = _TranslationsReferralCodeErrorsSelfReferralDe._(_root);
+	@override late final _TranslationsReferralCodeErrorsCodeNotFoundDe codeNotFound = _TranslationsReferralCodeErrorsCodeNotFoundDe._(_root);
+	@override late final _TranslationsReferralCodeErrorsGenericErrorDe genericError = _TranslationsReferralCodeErrorsGenericErrorDe._(_root);
+}
+
+// Path: onboarding.step2.categories
+class _TranslationsOnboardingStep2CategoriesDe implements TranslationsOnboardingStep2CategoriesEn {
+	_TranslationsOnboardingStep2CategoriesDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get space => '🚀 Weltraumabenteuer';
+	@override String get magic => '🦄 Magische Welten';
+	@override String get detectives => '🕵️ Kleine Detektive';
+	@override String get animals => '🐾 Liebenswerte Freunde';
+	@override String get dinosaurs => '🦖 Das Zeitalter der Dinosaurier';
+	@override String get superhero => '🦸 Superhelden';
+	@override String get underwater => '🌊 Unterwasserkönigreich';
+	@override String get fairytale => '🏰 Märchen von Prinz und Prinzessin';
+}
+
+// Path: faq.questions.q1
+class _TranslationsFaqQuestionsQ1De implements TranslationsFaqQuestionsQ1En {
+	_TranslationsFaqQuestionsQ1De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Was ist der Zweck dieser App?';
+	@override String get answer => 'Sie hilft Kindern, Englisch durch unterhaltsame Geschichten zu lernen. Wörter werden im Kontext gesehen, intuitiv gelernt und durch Wiederholungen verstärkt.';
+}
+
+// Path: faq.questions.q2
+class _TranslationsFaqQuestionsQ2De implements TranslationsFaqQuestionsQ2En {
+	_TranslationsFaqQuestionsQ2De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Was macht die KI hier?';
+	@override String get answer => 'Sie analysiert, mit welchen Wörtern das Kind Schwierigkeiten hat, bietet einfache Erklärungen an und schlägt neue Geschichten vor, die für dessen Niveau geeignet sind. Der Inhalt wird an das Lerntempo des Kindes angepasst.';
+}
+
+// Path: faq.questions.q3
+class _TranslationsFaqQuestionsQ3De implements TranslationsFaqQuestionsQ3En {
+	_TranslationsFaqQuestionsQ3De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Wie viel Zeit ist täglich ausreichend?';
+	@override String get answer => '5–10 Minuten pro Tag sind ausreichend. Selbst eine kurze Geschichte ist effektiv für das regelmäßige Lernen.';
+}
+
+// Path: faq.questions.q4
+class _TranslationsFaqQuestionsQ4De implements TranslationsFaqQuestionsQ4En {
+	_TranslationsFaqQuestionsQ4De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Für welche Altersgruppe sind die Geschichten geeignet?';
+	@override String get answer => 'Die Geschichten werden entsprechend dem Alter und Niveau des Kindes präsentiert. Die App bestimmt zu Beginn das Niveau und passt die Schwierigkeit basierend auf dem Fortschritt an.';
+}
+
+// Path: faq.questions.q5
+class _TranslationsFaqQuestionsQ5De implements TranslationsFaqQuestionsQ5En {
+	_TranslationsFaqQuestionsQ5De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Wie lernt das Kind unbekannte Wörter?';
+	@override String get answer => 'Wenn das Kind auf ein unbekanntes Wort tippt, wird dessen Bedeutung, eine einfache Erklärung und die korrekte Aussprache angezeigt. So wird das Wort sowohl gelesen als auch gehört.';
+}
+
+// Path: faq.questions.q6
+class _TranslationsFaqQuestionsQ6De implements TranslationsFaqQuestionsQ6En {
+	_TranslationsFaqQuestionsQ6De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Ist ein Internetanschluss erforderlich?';
+	@override String get answer => 'Bereits heruntergeladene Geschichten können offline gelesen werden. Ein Internetanschluss ist für neue Inhalte und Updates erforderlich.';
+}
+
+// Path: faq.questions.q7
+class _TranslationsFaqQuestionsQ7De implements TranslationsFaqQuestionsQ7En {
+	_TranslationsFaqQuestionsQ7De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Ist die App kostenlos?';
+	@override String get answer => 'Grundlegende Geschichten sind kostenlos verfügbar. Weitere Geschichten, erweiterte Personalisierung und zusätzliche Funktionen sind im Premium-Paket enthalten.';
+}
+
+// Path: faq.questions.q8
+class _TranslationsFaqQuestionsQ8De implements TranslationsFaqQuestionsQ8En {
+	_TranslationsFaqQuestionsQ8De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Können die Geschichten angehört werden?';
+	@override String get answer => 'Ja. Die Geschichten können mit korrekter Aussprache angehört werden. So entwickeln sich sowohl Lese- als auch Hörfähigkeiten gemeinsam.';
+}
+
+// Path: faq.questions.q9
+class _TranslationsFaqQuestionsQ9De implements TranslationsFaqQuestionsQ9En {
+	_TranslationsFaqQuestionsQ9De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Können die gelernten Wörter verfolgt werden?';
+	@override String get answer => 'Ja. Die gelernten Wörter werden aufgezeichnet und sollen in bestimmten Abständen wiederholt werden. So kann das Vergessen reduziert werden.';
+}
+
+// Path: faq.questions.q10
+class _TranslationsFaqQuestionsQ10De implements TranslationsFaqQuestionsQ10En {
+	_TranslationsFaqQuestionsQ10De._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get question => 'Wie lange dauert es, Fortschritte zu sehen?';
+	@override String get answer => 'Mit regelmäßiger Nutzung kann Fortschritt in kurzer Zeit sichtbar werden. Mit zunehmenden Lesegewohnheiten verbessern sich Wortschatz und Verständnisfähigkeiten.';
+}
+
+// Path: home.premiumPlan.dialog
+class _TranslationsHomePremiumPlanDialogDe implements TranslationsHomePremiumPlanDialogEn {
+	_TranslationsHomePremiumPlanDialogDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Funktion nicht verfügbar';
+	@override String get message => 'Diese Funktion ist derzeit nicht verfügbar.';
+	@override String get button => 'OK';
+}
+
+// Path: referralCode.errors.missingCode
+class _TranslationsReferralCodeErrorsMissingCodeDe implements TranslationsReferralCodeErrorsMissingCodeEn {
+	_TranslationsReferralCodeErrorsMissingCodeDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Code erforderlich';
+	@override String get message => 'Bitte gib einen Empfehlungscode ein, um fortzufahren.';
+}
+
+// Path: referralCode.errors.invalidFormat
+class _TranslationsReferralCodeErrorsInvalidFormatDe implements TranslationsReferralCodeErrorsInvalidFormatEn {
+	_TranslationsReferralCodeErrorsInvalidFormatDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Ungültiges Format';
+	@override String get message => 'Der Empfehlungscode muss genau 8 Zeichen lang sein.';
+}
+
+// Path: referralCode.errors.alreadyUsed
+class _TranslationsReferralCodeErrorsAlreadyUsedDe implements TranslationsReferralCodeErrorsAlreadyUsedEn {
+	_TranslationsReferralCodeErrorsAlreadyUsedDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Bereits verwendet';
+	@override String get message => 'Du hast bereits einen Empfehlungscode verwendet. Jeder Benutzer kann nur einen Code verwenden.';
+}
+
+// Path: referralCode.errors.selfReferral
+class _TranslationsReferralCodeErrorsSelfReferralDe implements TranslationsReferralCodeErrorsSelfReferralEn {
+	_TranslationsReferralCodeErrorsSelfReferralDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Ungültiger Code';
+	@override String get message => 'Du kannst deinen eigenen Einladungscode nicht verwenden. Bitte verwende einen Code von einem Freund.';
+}
+
+// Path: referralCode.errors.codeNotFound
+class _TranslationsReferralCodeErrorsCodeNotFoundDe implements TranslationsReferralCodeErrorsCodeNotFoundEn {
+	_TranslationsReferralCodeErrorsCodeNotFoundDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Code nicht gefunden';
+	@override String get message => 'Der eingegebene Empfehlungscode existiert nicht. Bitte überprüfe ihn und versuche es erneut.';
+}
+
+// Path: referralCode.errors.genericError
+class _TranslationsReferralCodeErrorsGenericErrorDe implements TranslationsReferralCodeErrorsGenericErrorEn {
+	_TranslationsReferralCodeErrorsGenericErrorDe._(this._root);
+
+	final TranslationsDe _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Fehler';
+	@override String get message => 'Beim Anwenden des Empfehlungscodes ist ein Fehler aufgetreten. Bitte versuche es erneut.';
 }
 
 /// The flat map containing all translations for locale <de>.
@@ -801,334 +903,308 @@ extension on TranslationsDe {
 		return switch (path) {
 			'welcome' => ({required Object name}) => 'Willkommen ${name}',
 			'welcome2' => ({required Object appName}) => 'Willkommen bei ${appName}',
-			'get_started' => 'Legen Sie los',
-			'start_learning' => 'Beginnen Sie mit dem Lernen',
-			'hello' => 'Hallo',
-			'next' => 'Nächste',
+			'continue_to' => ({required Object language}) => 'Weiter zu ${language}',
+			'get_started' => 'Loslegen',
+			'next' => 'Weiter',
 			'back' => 'Zurück',
 			'skip' => 'Überspringen',
-			'profile' => 'Profil',
-			'kContinue' => 'Weitermachen',
-			'ok' => 'OK',
-			'voicePlayback.loading' => 'Audio wird geladen...',
-			'voicePlayback.playing' => 'Audio ist bereit und wird abgespielt.',
-			'voicePlayback.missing' => 'Audio wurde nicht gefunden. Bitte versuchen Sie es erneut.',
-			'voicePlayback.failed' => 'Audio konnte nicht vorbereitet werden. Bitte versuchen Sie es erneut.',
-			'localNotifications.channelName' => 'Tägliche Lern-Erinnerungen',
-			'localNotifications.channelDescription' => 'Erinnerungen, die Kindern helfen, ihre tägliche Lernserie beizubehalten.',
-			'localNotifications.reminderTitle' => 'Lingola Kids',
-			'localNotifications.reminderBody' => 'Halte deine Serie heute mit einer kurzen Lektion aufrecht.',
-			'localNotifications.debugTitle' => 'Lingola Kids',
-			'localNotifications.debugBody' => 'Lokale Benachrichtigungen funktionieren.',
-			'termOfService.text1' => 'Indem Sie sich bei Lingola Kids anmelden, stimmen Sie unseren ',
+			'kContinue' => 'Weiter',
+			'logintext' => 'Wo jedes Wort ein neues Abenteuer ist, das darauf wartet, erzählt zu werden.',
+			'termOfService.text1' => 'Durch die Anmeldung bei Swipe stimmen Sie unseren ',
 			'termOfService.link1' => 'Nutzungsbedingungen',
-			'termOfService.text2' => '. Erfahren Sie, wie wir Ihre Daten verarbeiten, in unserer ',
+			'termOfService.text2' => ' zu. Erfahren Sie, wie wir Ihre Daten in unserer ',
 			'termOfService.link2' => 'Datenschutzrichtlinie',
 			'termOfService.text3' => ' und ',
 			'termOfService.link3' => 'Cookie-Richtlinie',
-			'termOfService.text4' => '',
-			'termOfService.termsOfService.title' => 'Lingola Kids – Nutzungsbedingungen',
-			'termOfService.termsOfService.lastUpdated' => 'Letzte Aktualisierung: 2026',
-			'termOfService.termsOfService.intro' => 'Diese Nutzungsbedingungen ("Bedingungen") regeln die Regeln und Bedingungen für die Nutzung der Lingola Kids Mobile-App ("App"). Durch das Herunterladen oder die Nutzung der App stimmen Sie diesen Bedingungen zu.',
-			'termOfService.termsOfService.section1Title' => '1. Leistungsumfang & Haftungsausschluss',
-			'termOfService.termsOfService.section1Body' => 'Lingola Kids bietet visuelle und Audio-Lernkarten sowie Lernspiele, um Kindern beim Erlernen des englischen Wortschatzes zu helfen. Die App ist keine offizielle Bildungseinrichtung; sie garantiert keinen Prüfungserfolg, akademische Abschlüsse oder Sprachzertifikate.',
-			'termOfService.termsOfService.section2Title' => '2. Nutzungsbedingungen',
-			'termOfService.termsOfService.section2Body' => '- Die App ist für Kinder ab 4 Jahren konzipiert.\n- Bei Nutzern unter 13/18 wird empfohlen, die App unter Aufsicht der Eltern oder eines gesetzlichen Vertreters zu verwenden.\n- Als Elternteil oder gesetzlicher Vertreter stimmen Sie diesen Bedingungen in deren Namen zu, wenn Sie Ihrem Kind die Nutzung der App erlauben.\n- Unbefugtes Kopieren, Verkaufen, Reverse Engineering oder die Massenverbreitung von App-Inhalten ist strengstens untersagt.',
-			'termOfService.termsOfService.section3Title' => '3. Premium- und kostenpflichtige Dienste',
-			'termOfService.termsOfService.section3Body' => 'Zahlungen für kostenpflichtige Dienste, wie Premium-Vokabelpakete und werbefreie Nutzung, werden über den App Store oder Google Play abgewickelt. Kündigungen für automatisch verlängernde Abonnements werden vom Nutzer/Elternteil über dessen Store-Konto verwaltet. Lingola Kids gewährt keine direkten Rückerstattungen.',
-			'termOfService.termsOfService.section4Title' => '4. Lern-Daten & Datenschutz',
-			'termOfService.termsOfService.section4Body' => 'Lerndaten (erlernte Wörter, abgeschlossene Aktivitäten), die zur Verbesserung der Benutzererfahrung und zur Fortschrittsverfolgung verarbeitet werden, sind durch unsere Datenschutzrichtlinie geschützt. Jede Person, die die App nutzt, hat die Datenschutzrichtlinie akzeptiert.',
-			'termOfService.termsOfService.section5Title' => '5. Anwendbares Recht',
-			'termOfService.termsOfService.section5Body' => 'Diese Bedingungen unterliegen den Gesetzen der Republik Türkei. Für Streitigkeiten sind die Zentralgerichte und Vollstreckungsstellen in Istanbul zuständig.',
-			'termOfService.termsOfService.section6Title' => '6. Kontakt',
-			'termOfService.termsOfService.section6Body' => '📩 Für Fragen, Anfragen oder Mitteilungen können Sie uns kontaktieren unter: support@fly-work.com',
-			'termOfService.privacyPolicy.title' => 'Lingola Kids – Datenschutzerklärung',
-			'termOfService.privacyPolicy.lastUpdated' => 'Letzte Aktualisierung: 2026',
-			'termOfService.privacyPolicy.intro' => 'Willkommen bei Lingola Kids. Der Schutz der Privatsphäre von Kindern und Familien hat für uns oberste Priorität. Diese Datenschutzerklärung beschreibt, welche Informationen gesammelt, verwendet und geschützt werden und wie Nutzer ihre Daten verwalten können.',
-			'termOfService.privacyPolicy.section1Title' => '1. Gesammelte Informationen',
-			'termOfService.privacyPolicy.section1Body' => '- Vom Nutzer/Eltern bereitgestellt: E-Mail-Adresse (falls ein Konto erstellt wird), Benutzername, Spracheinstellungen und Lernpräferenzen, gespeicherte Wörter.\n- Automatisch erfasst: Gerätemodell, Betriebssystem, IP-Adresse, App-Version, Absturzprotokolle und Lerndaten.',
-			'termOfService.privacyPolicy.section2Title' => '2. Datenschutz von Kindern (Wichtig)',
-			'termOfService.privacyPolicy.section2Body' => 'Lingola Kids ist für Kinder ab 4 Jahren konzipiert. Der Schutz der Daten von Kindern steht im Mittelpunkt:\n- Wir sammeln keine unnötigen oder sensiblen personenbezogenen Daten von Kindern.\n- Kinder werden nicht aufgefordert, Kontaktinformationen öffentlich zu teilen.\n- Verhaltens- oder personalisierte Werbeprofile, die auf Kinder abzielen, sind strengstens untersagt.\n- Eltern oder gesetzliche Vertreter können jederzeit die Überprüfung oder Löschung der Daten ihres Kindes beantragen.',
-			'termOfService.privacyPolicy.section3Title' => '3. Zwecke der Datenverarbeitung & Weitergabe',
-			'termOfService.privacyPolicy.section3Body' => 'Ihre Daten werden verarbeitet, um den Lernfortschritt zu verfolgen, Vokabelinhalte zu personalisieren und technische Probleme zu beheben. Personenbezogene Informationen werden niemals verkauft oder für kommerzielle Zwecke an Dritte weitergegeben. Vertrauenswürdige Dienstleister (Cloud-Speicher, Analyseanbieter usw.) verarbeiten Daten ausschließlich unter Vertraulichkeitsverpflichtungen.',
-			'termOfService.privacyPolicy.section4Title' => '4. Nutzer- und Elternrechte',
-			'termOfService.privacyPolicy.section4Body' => 'Nutzer und Eltern haben das Recht auf Zugriff, Berichtigung, Löschung des Kontos und die permanente Entfernung von Daten. Sie können diese Rechte über unser Support-Team ausüben.',
-			'termOfService.privacyPolicy.section5Title' => '5. Datensicherheit & Aufbewahrung',
-			'termOfService.privacyPolicy.section5Body' => 'Daten werden durch branchenübliche Verschlüsselung und Zugriffskontrollen geschützt. Lerndaten werden so lange gespeichert, wie das Konto aktiv ist, um Kontinuität zu gewährleisten, und nach Löschung des Kontos entfernt.',
-			'termOfService.privacyPolicy.section6Title' => '6. Kontakt',
-			'termOfService.privacyPolicy.section6Body' => '📩 Für Datenschutzanfragen, Datenlöschung oder elterliche Anfragen kontaktieren Sie uns unter: support@fly-work.com',
+			'termOfService.text4' => ' verarbeiten',
+			'termOfService.privacyPolicy.title' => 'Datenschutzerklärung',
+			'termOfService.privacyPolicy.lastUpdated' => 'Letzte Aktualisierung: 2025',
+			'termOfService.privacyPolicy.intro' => 'Lingola Stories Kids betrachtet den Schutz der Privatsphäre von Kindern als Grundprinzip.',
+			'termOfService.privacyPolicy.section1Title' => '1. GESAMMELTE INFORMATIONEN',
+			'termOfService.privacyPolicy.section1sub1Title' => '1.1 Vom Nutzer bereitgestellte Daten',
+			'termOfService.privacyPolicy.section1sub1Body' => 'Spitzname oder Profilname.\nE-Mail-Adresse.\nAltersinformation.\nSprachstand und gelernte Wörter.\n\nHinweis: Nie für Gesundheitsanalysen genutzt.',
+			'termOfService.privacyPolicy.section1sub2Title' => '1.2 Automatisch gesammelte Daten',
+			'termOfService.privacyPolicy.section1sub2Body' => 'Gerätetyp, Betriebssystem und App-Leistungsdaten. Genaue Standortdaten werden NICHT gesammelt.',
+			'termOfService.privacyPolicy.section2Title' => '2. ZWECKE DER DATENVERARBEITUNG',
+			'termOfService.privacyPolicy.section2Body' => 'Ihre Daten werden ausschließlich verwendet für:\n\n- Sichere altersgerechte Inhalte.\n- Personalisierung der Lernerfahrung.\n- Verbesserung der App-Leistung.\n- Erfüllung gesetzlicher Pflichten.',
+			'termOfService.privacyPolicy.section3Title' => '3. DATENSPEICHERUNG UND LÖSCHUNG',
+			'termOfService.privacyPolicy.section3Body' => 'Daten werden gespeichert, solange Ihr Konto aktiv ist. Support-Aufzeichnungen max. 12 Monate. Bei Kontolöschung werden Daten unwiderruflich gelöscht.',
+			'termOfService.privacyPolicy.section4Title' => '4. NUTZERRECHTE',
+			'termOfService.privacyPolicy.section4Body' => 'Gemäß DSGVO haben Eltern das Recht auf Auskunft, Berichtigung und Löschung. Anfragen an: support@fly-work.com.',
+			'termOfService.privacyPolicy.section5Title' => '5. DATENSCHUTZ FÜR KINDER',
+			'termOfService.privacyPolicy.section5Body' => 'Für Nutzer ab 6 Jahren. Elternzustimmung für unter 13 Jahren erforderlich.',
+			'termOfService.privacyPolicy.section6Title' => '6. KONTAKT',
+			'termOfService.privacyPolicy.section6Body' => 'Anfragen: support@fly-work.com',
+			'termOfService.termsOfService.title' => 'Nutzungsbedingungen',
+			'termOfService.termsOfService.lastUpdated' => 'Letzte Aktualisierung: 2025',
+			'termOfService.termsOfService.intro' => 'Diese Nutzungsbedingungen regeln die Verwendung von Lingola Stories Kids.',
+			'termOfService.termsOfService.disclaimer' => 'Hinweis: Lingola Stories Kids ist ein Lernwerkzeug ohne offizielle Zertifizierung.',
+			'termOfService.termsOfService.section1Title' => '1. DIENSTLEISTUNGSUMFANG',
+			'termOfService.termsOfService.section1Body' => 'Die App bietet:\n\n- KI-gestützte Geschichten.\n- Altersbasiertes Leseerlebnis.\n- Wortschatz- und Ausspracheunterstützung.',
+			'termOfService.termsOfService.section2Title' => '2. NUTZUNGSBEDINGUNGEN & ALTER',
+			'termOfService.termsOfService.section2Body' => 'Mindestens 6 Jahre alt.\nUnter 18 unter elterlicher Aufsicht.\nKontoinformationen müssen korrekt sein.',
+			'termOfService.termsOfService.section3Title' => '3. VERBOTENE NUTZUNGEN',
+			'termOfService.termsOfService.section3Body' => 'Unbefugtes Kopieren, Reverse Engineering und kommerzielle Nutzung sind verboten.',
+			'termOfService.termsOfService.section4Title' => '4. ABONNEMENTS UND ZAHLUNGEN',
+			'termOfService.termsOfService.section4Body' => 'Premium gemäß App Store / Google Play Richtlinien.',
+			'termOfService.termsOfService.section5Title' => '5. GEISTIGES EIGENTUM',
+			'termOfService.termsOfService.section5Body' => 'Alle Inhalte gehören Lingola Stories Kids.',
+			'termOfService.termsOfService.section6Title' => '6. HAFTUNGSBESCHRÄNKUNG',
+			'termOfService.termsOfService.section6Body' => 'Die App wird ohne Gewährleistung bereitgestellt.',
+			'termOfService.termsOfService.section7Title' => '7. GELTENDES RECHT',
+			'termOfService.termsOfService.section7Body' => 'Türkisches Recht, Zuständigkeit bei Istanbuler Gerichten.',
+			'termOfService.termsOfService.section8Title' => '8. KONTAKT',
+			'termOfService.termsOfService.section8Body' => 'Anfragen: support@fly-work.com',
 			'termOfService.cookiePolicy.title' => 'Cookie-Richtlinie',
-			'termOfService.cookiePolicy.lastUpdated' => 'Letzte Aktualisierung: 2026',
-			'termOfService.cookiePolicy.intro' => 'Willkommen bei Lingola Kids. Digitale Hilfstechnologien werden verwendet, um das Nutzererlebnis sicherer und personalisierter zu gestalten.',
-			'termOfService.cookiePolicy.important' => 'Diese Richtlinie erklärt, was Cookies sind, welche Zwecke sie erfüllen und wie Sie Ihre Präferenzen verwalten können.',
+			'termOfService.cookiePolicy.lastUpdated' => 'Letzte Aktualisierung: 2025',
+			'termOfService.cookiePolicy.intro' => 'Diese Richtlinie erklärt, welche digitalen Hilfsmittel bei der App-Nutzung verwendet werden.',
+			'termOfService.cookiePolicy.important' => 'WICHTIG: Kinderschutz ist unser Grundprinzip. Für Nutzer ab 6 Jahren.',
 			'termOfService.cookiePolicy.section1Title' => '1. WAS SIND COOKIES?',
-			'termOfService.cookiePolicy.section1Body' => 'Cookies sind kleine Datendateien, die auf Ihrem Gerät abgelegt werden. Sie identifizieren Sie nicht direkt; sie fungieren als digitale Notizen, die Einstellungen merken, z. B. Sprache oder Sitzungspräferenzen.',
+			'termOfService.cookiePolicy.section1Body' => 'Cookies and similar technologies (SDKs, identifiers) are small digital components that help the app function correctly. They do not directly identify you.',
 			'termOfService.cookiePolicy.section2Title' => '2. WELCHE TECHNOLOGIEN VERWENDEN WIR?',
-			'termOfService.cookiePolicy.section2Body' => 'Unbedingt notwendige Technologien\nErforderlich für Sitzungsverwaltung und Sicherheitskontrollen. Ohne diese Komponenten funktioniert die App möglicherweise nicht ordnungsgemäß.\n\nLeistung und Analysen\nHilft uns zu verstehen, welche Funktionen genutzt werden und welche Bereiche verbessert werden müssen. Die Daten werden anonym ausgewertet.\n\nPersonalisierung\nMerkt sich Einstellungen wie bevorzugte Sprache und Lernniveau, um ein kindgerechtes Erlebnis zu bieten.',
-			'termOfService.cookiePolicy.section3Title' => '3. WARUM NUTZEN WIR DIESE TECHNOLOGIEN?',
-			'termOfService.cookiePolicy.section3Body' => '• Um sicherzustellen, dass die App sicher und reibungslos läuft.\n• Um das Lernerlebnis zu verbessern.\n• Um wiederkehrende Einstellungen zu speichern.\n• Um Funktionen für die zukünftige Entwicklung zu identifizieren.',
-			'termOfService.cookiePolicy.section4Title' => '4. TECHNOLOGIEN VON DRITTANBIETERN',
-			'termOfService.cookiePolicy.section4Body' => 'Einige Technologien werden möglicherweise von technischen Dienstleistern bereitgestellt und unterliegen deren eigenen Richtlinien. Lingola Kids legt bei diesen Partnerschaften großen Wert auf Datensicherheit.',
-			'termOfService.cookiePolicy.section5Title' => '5. COOKIE-KONTROLLE UND -VERWALTUNG',
-			'termOfService.cookiePolicy.section5Body' => 'Benutzer können diese Technologien über Geräte- oder App-Einstellungen einschränken. Das Deaktivieren wesentlicher Technologien kann zu Problemen führen, z. B. dass keine Lernfunktionen verfügbar sind.',
+			'termOfService.cookiePolicy.section2Body' => 'Strictly Necessary: For session management and security.\n\nPerformance and Analytics: Understand which stories are read, data evaluated anonymously.\n\nPersonalization: Remembers language preference and reading level.',
+			'termOfService.cookiePolicy.section3Title' => '3. WARUM VERWENDEN WIR DIESE?',
+			'termOfService.cookiePolicy.section3Body' => '- To ensure the app runs safely.\n- To make the reading experience more fluid.\n- To remember settings.\n- To identify features for future development.',
+			'termOfService.cookiePolicy.section4Title' => '4. DRITTANBIETER-TECHNOLOGIEN',
+			'termOfService.cookiePolicy.section4Body' => 'We apply minimum data usage when working with third-party partners.',
+			'termOfService.cookiePolicy.section5Title' => '5. KONTROLLE UND VERWALTUNG',
+			'termOfService.cookiePolicy.section5Body' => 'Parents can limit these technologies via device settings. Disabling necessary technologies may affect functionality.',
 			'termOfService.cookiePolicy.section6Title' => '6. KONTAKT',
-			'termOfService.cookiePolicy.section6Body' => '📩 Für Anfragen: support@fly-work.com',
+			'termOfService.cookiePolicy.section6Body' => 'Anfragen: support@fly-work.com',
 			'cookies' => 'Cookie-Richtlinie',
 			'privacy' => 'Datenschutzrichtlinie',
-			'onboarding.step5.permissionRequired' => 'Erlaubnis erforderlich',
-			'onboarding.step5.notNow' => 'Nicht jetzt',
-			'onboarding.step5.openSettings' => 'Einstellungen öffnen',
-			'onboarding.step5.title' => 'Berechtigungen',
-			'onboarding.step5.permission1' => 'Kamerazugriff',
-			'onboarding.step5.permission1Subtitle' => 'ChatFace nutzt Ihre Kamera für Videoanrufe mit KI-Charakteren.',
-			'onboarding.step5.permission2' => 'Mikrofonzugriff',
-			'onboarding.step5.permission2Subtitle' => 'ChatFace nutzt Ihr Mikrofon für Sprach- und Videoanrufe.',
-			'onboarding.step5.permission3' => 'Standortzugriff',
-			'onboarding.step5.permission3Subtitle' => 'ChatFace verwendet Ihren Standort, um Ihr Erlebnis zu personalisieren.',
-			'onboarding.step1.title' => 'Wie heißt du?',
-			'onboarding.step1.subtitle' => 'Bitte geben Sie Ihren Namen ein',
-			'onboarding.step1.hint' => 'Vollständiger Name',
-			'onboarding.step2.title' => 'Wie alt bist du?',
-			'onboarding.step2.subtitle' => 'Für die Registrierung müssen Sie mindestens 18 Jahre alt sein.',
-			'onboarding.step3.title' => 'Was ist Ihr Geschlecht?',
-			'onboarding.step3.subtitle' => 'Bitte wählen Sie Ihr Geschlecht aus',
-			'onboarding.step3.male' => 'Männlich',
-			'onboarding.step3.female' => 'Weiblich',
-			'onboarding.step3.dontWantToMention' => 'Ich möchte es nicht erwähnen.',
-			'onboarding.step4.title' => 'Viel Spaß beim\nBleiben Sie auf der sicheren Seite',
-			'onboarding.step4.entry1' => 'Wir sorgen für Ordnung',
-			'onboarding.step4.subentry1' => 'Echtzeit-KI-Überwachung geöffnet',
-			'onboarding.step4.entry2' => 'Bildschirmaufnahmen',
-			'onboarding.step4.subentry2' => 'Keine Aufzeichnung ohne Zustimmung',
-			'onboarding.step4.entry3' => '24/7-Support',
-			'onboarding.step4.subentry3' => 'Beschwerden werden zu jeder Tageszeit geprüft',
-			'onboarding.step4.entry4' => 'Nur 18+',
-			'onboarding.step4.subentry4' => 'Nicht für Minderjährige geeignet',
-			'onboarding.step4.communityRules' => 'Gemeinschaftsregeln',
-			'onboarding.loading.titlePart1' => 'Ihr persönliches Konto ist\n',
-			'onboarding.loading.titlePart2' => 'Geschaffen werden',
-			'onboarding.loading.subtitle' => 'Bitte warten Sie, Ihr Profil wird vorbereitet.',
-			'onboarding.kFinal.titlePart1' => 'Ihr persönliches Konto ist\n',
-			'onboarding.kFinal.titlePart2' => 'Erstellt',
-			'onboarding.kFinal.subtitle' => 'Genießen Sie die Kommunikation mit jedem Charakter',
-			'onboarding.allowAccess' => 'Zugriff zulassen',
-			'onboarding.iUnderstand' => 'Ich verstehe',
-			'onboarding.login.title' => 'Setzen Sie Ihre\nLernreise fort',
-			'onboarding.login.subtitle' => 'Speichern Sie Fortschritte, schalten Sie Lektionen frei und\nlernen Sie geräteübergreifend weiter.',
-			'onboarding.login.failed' => 'Die Anmeldung konnte nicht abgeschlossen werden.',
-			'onboarding.reward.points' => '⭐️ +50 Punkte',
-			'onboarding.reward.title' => 'Tolle Arbeit 🎉',
-			'onboarding.reward.subtitle' => 'Über 200 weitere Lektionen warten auf Sie!',
-			'onboarding.reward.progressLabel' => 'Erster Schritt geschafft!',
-			'onboarding.reward.featureAlphabetTitle' => 'Vollständiges Alphabet und Zahlen',
-			'onboarding.reward.featureAlphabetSubtitle' => 'Über 200 interaktive Lektionen',
-			'onboarding.reward.featureVoiceTitle' => 'Stimmliche Aussprache',
-			'onboarding.reward.featureVoiceSubtitle' => 'Audiounterstützung für jedes Wort',
-			'onboarding.reward.featureQuizTitle' => 'Spielerische Mini-Quiz',
-			'onboarding.reward.featureQuizSubtitle' => 'Lernen und dabei Spaß haben',
-			'onboarding.reward.continueButton' => 'Entdecken Sie weiter',
-			'onboarding.spellTitle' => 'Buchstabieren Sie das Wort, das Sie sehen!',
-			'onboarding.spellSubtitle' => 'Kannst du LÖWE buchstabieren?',
-			'onboarding.spellSuccessTitle' => 'Hübsch! Es ist LÖWE',
-			'onboarding.spellSuccessSubtitle' => 'Zum Anhören tippen',
-			'pressBackAgainToExit' => 'Drücken Sie erneut die Zurück-Taste, um den Vorgang zu beenden',
-			'splash.initial.hello' => 'Hallo',
-			'splash.initial.title' => 'Spielerisches Englisch für Kinder',
-			'splash.screen1.title' => 'Englisch lernen\nkann sich wie ein Spiel anfühlen',
-			'splash.screen1.description' => 'Kurze, spielerische Lektionen helfen Kindern, ohne Druck neue Wörter zu lernen.',
-			'splash.screen2.title' => 'Hören Sie zu, wiederholen Sie und\nLernen Sie neue Wörter',
-			'splash.screen2.description' => 'Einfache Stimmübungen helfen Kindern, die Aussprache Schritt für Schritt zu üben.',
-			'splash.screen3.title' => 'Bauen Sie Selbstvertrauen auf,\nWort für Wort',
-			'splash.screen3.description' => 'Konzipiert für junge Lernende mit einfachen Aktivitäten, freundlicher Anleitung und einem sicheren Lernfluss.',
-			'splash.screen3.option1' => '️🛡️ Sicher für Kinder',
-			'splash.screen3.option2' => '🌱 Kein Lerndruck',
-			'splash.screen3.option3' => '⭐️ Für junge Lernende gemacht',
+			'onboarding.step1.title' => 'In welche Sprache möchtest du Englisch übersetzen, um es zu lernen?',
+			'onboarding.step1.subtitle' => 'Bitte wähle die Sprache, in die du Englisch übersetzen möchtest.',
+			'onboarding.step2.title' => 'Welche Art von Geschichten\nmöchtest du?',
+			'onboarding.step2.subtitle' => 'Bitte gib deine Präferenz an.',
+			'onboarding.step2.categories.space' => '🚀 Weltraumabenteuer',
+			'onboarding.step2.categories.magic' => '🦄 Magische Welten',
+			'onboarding.step2.categories.detectives' => '🕵️ Kleine Detektive',
+			'onboarding.step2.categories.animals' => '🐾 Liebenswerte Freunde',
+			'onboarding.step2.categories.dinosaurs' => '🦖 Das Zeitalter der Dinosaurier',
+			'onboarding.step2.categories.superhero' => '🦸 Superhelden',
+			'onboarding.step2.categories.underwater' => '🌊 Unterwasserkönigreich',
+			'onboarding.step2.categories.fairytale' => '🏰 Märchen von Prinz und Prinzessin',
+			'onboarding.loading.titlePart1' => 'Dein persönliches Konto wird\n',
+			'onboarding.loading.titlePart2' => 'erstellt',
+			'onboarding.loading.subtitle' => 'Wir erstellen wunderbare Geschichten für dich',
+			'onboarding.loading.optimization' => 'Optimierung',
+			'pressBackAgainToExit' => 'Drücken Sie erneut zurück, um zu beenden',
+			'faq.title' => 'Häufig gestellte Fragen',
+			'faq.questions.q1.question' => 'Was ist der Zweck dieser App?',
+			'faq.questions.q1.answer' => 'Sie hilft Kindern, Englisch durch unterhaltsame Geschichten zu lernen. Wörter werden im Kontext gesehen, intuitiv gelernt und durch Wiederholungen verstärkt.',
+			'faq.questions.q2.question' => 'Was macht die KI hier?',
+			'faq.questions.q2.answer' => 'Sie analysiert, mit welchen Wörtern das Kind Schwierigkeiten hat, bietet einfache Erklärungen an und schlägt neue Geschichten vor, die für dessen Niveau geeignet sind. Der Inhalt wird an das Lerntempo des Kindes angepasst.',
+			'faq.questions.q3.question' => 'Wie viel Zeit ist täglich ausreichend?',
+			'faq.questions.q3.answer' => '5–10 Minuten pro Tag sind ausreichend. Selbst eine kurze Geschichte ist effektiv für das regelmäßige Lernen.',
+			'faq.questions.q4.question' => 'Für welche Altersgruppe sind die Geschichten geeignet?',
+			'faq.questions.q4.answer' => 'Die Geschichten werden entsprechend dem Alter und Niveau des Kindes präsentiert. Die App bestimmt zu Beginn das Niveau und passt die Schwierigkeit basierend auf dem Fortschritt an.',
+			'faq.questions.q5.question' => 'Wie lernt das Kind unbekannte Wörter?',
+			'faq.questions.q5.answer' => 'Wenn das Kind auf ein unbekanntes Wort tippt, wird dessen Bedeutung, eine einfache Erklärung und die korrekte Aussprache angezeigt. So wird das Wort sowohl gelesen als auch gehört.',
+			'faq.questions.q6.question' => 'Ist ein Internetanschluss erforderlich?',
+			'faq.questions.q6.answer' => 'Bereits heruntergeladene Geschichten können offline gelesen werden. Ein Internetanschluss ist für neue Inhalte und Updates erforderlich.',
+			'faq.questions.q7.question' => 'Ist die App kostenlos?',
+			'faq.questions.q7.answer' => 'Grundlegende Geschichten sind kostenlos verfügbar. Weitere Geschichten, erweiterte Personalisierung und zusätzliche Funktionen sind im Premium-Paket enthalten.',
+			'faq.questions.q8.question' => 'Können die Geschichten angehört werden?',
+			'faq.questions.q8.answer' => 'Ja. Die Geschichten können mit korrekter Aussprache angehört werden. So entwickeln sich sowohl Lese- als auch Hörfähigkeiten gemeinsam.',
+			'faq.questions.q9.question' => 'Können die gelernten Wörter verfolgt werden?',
+			'faq.questions.q9.answer' => 'Ja. Die gelernten Wörter werden aufgezeichnet und sollen in bestimmten Abständen wiederholt werden. So kann das Vergessen reduziert werden.',
+			'faq.questions.q10.question' => 'Wie lange dauert es, Fortschritte zu sehen?',
+			'faq.questions.q10.answer' => 'Mit regelmäßiger Nutzung kann Fortschritt in kurzer Zeit sichtbar werden. Mit zunehmenden Lesegewohnheiten verbessern sich Wortschatz und Verständnisfähigkeiten.',
+			'good_morning' => 'Guten Morgen',
+			'good_afternoon' => 'Guten Tag',
+			'good_evening' => 'Guten Abend',
+			'splash.screen1.title' => 'Englisch lernen mit Geschichten',
+			'splash.screen1.description' => 'Keine langweilige Auswendiglernerei. Entdecken Sie Wörter in ihrem natürlichen Fluss durch kurze und unterhaltsame Geschichten.',
+			'splash.screen2.title' => 'Künstliche Intelligenz führt Sie',
+			'splash.screen2.description' => 'Sie verfolgt die Wörter, mit denen Sie Schwierigkeiten haben, erklärt deren Bedeutung und schlägt neue Geschichten vor, die auf Ihr Niveau zugeschnitten sind.',
+			'profile.title' => 'Profil',
+			'profile.freeVersion' => 'Kostenlose Version',
+			'profile.error' => 'Fehler',
+			'profile.passive' => 'Passiv',
+			'profile.sections.accountSettings' => 'KONTOEINSTELLUNGEN',
+			'profile.sections.general' => 'ALLGEMEINES',
+			'profile.menu.editProfile' => 'Profil bearbeiten',
+			'profile.menu.notifications' => 'Benachrichtigungen',
+			'profile.menu.premium' => 'Premium',
+			'profile.menu.appLanguage' => 'App-Sprache',
+			'profile.menu.shareWithFriends' => 'Mit Freunden teilen',
+			'profile.menu.enterInviteCode' => 'Einladungscode eingeben',
+			'profile.menu.rateUs' => 'Bewerten Sie uns',
+			'profile.menu.faq' => 'FAQ',
+			'profile.menu.logout' => 'Abmelden',
+			'profile.manage' => 'VERWALTEN',
+			'profile.logoutDialog.title' => 'Sie sind dabei, sich abzumelden',
+			'profile.logoutDialog.message' => 'Bis bald! Wir werden Ihre Atemübungen weiter verfolgen.',
+			'profile.logoutDialog.logoutButton' => 'Abmelden',
+			'profile.logoutDialog.cancelButton' => 'Abbrechen',
+			'home.premium' => 'Premium!',
+			'home.seeMore' => 'Mehr sehen',
+			'home.pickUpWhereYouLeftOff' => 'Dort weitermachen, wo du aufgehört hast',
+			'home.premiumSection' => 'Premium',
+			'home.history' => 'Verlauf',
+			'home.librarySection' => 'Bibliothek',
+			'home.libraryDescription' => 'Die gespeicherten Wörter werden hier angezeigt.',
+			'home.upgradeToPremium' => 'Auf Premium upgraden',
+			'home.unlimitedStories' => 'Unbegrenzte Geschichten und werbefrei',
+			'home.premiumPlan.title' => 'Premium-Plan',
+			'home.premiumPlan.description' => 'Schalten Sie Ihren KI-Chatbot frei &\nerhalten Sie alle Premium-Funktionen',
+			'home.premiumPlan.button' => 'Premium erhalten',
+			'home.premiumPlan.dialog.title' => 'Funktion nicht verfügbar',
+			'home.premiumPlan.dialog.message' => 'Diese Funktion ist derzeit nicht verfügbar.',
+			'home.premiumPlan.dialog.button' => 'OK',
+			'allStories.title' => 'Alle Geschichten',
+			'allStories.noStoriesFound' => 'Keine Geschichten gefunden',
+			'allStories.selectFilter' => 'Filter wählen',
+			'allStories.category' => 'Kategorie',
+			'allStories.categorySubtitle' => 'Bitte wähle die Kategorie, die du lesen möchtest',
+			'allStories.apply' => 'Anwenden',
+			'stories.title' => 'Geschichten',
+			'stories.popularStories' => 'Beliebte Geschichten',
+			'stories.recommendForYou' => 'Empfohlen für dich',
+			'stories.allStories' => 'Alle Geschichten',
+			'stories.seeAll' => 'Alle sehen',
+			'stories.categories.popular' => 'Beliebt',
+			'stories.categories.space' => 'Weltraumabenteuer',
+			'stories.categories.magic' => 'Magische Welten',
+			'stories.categories.animals' => 'Tiere',
+			'stories.categories.detectives' => 'Detektive',
+			'stories.categories.dinosaurs' => 'Dinosaurier',
+			'stories.categories.superhero' => 'Superhelden',
+			'stories.categories.underwater' => 'Unterwasserkönigreich',
+			'stories.categories.fairytale' => 'Märchen',
+			'library.title' => 'Bibliothek',
+			'library.wordCount' => ({required Object count}) => '${count} Wörter',
+			'library.popularWords' => 'Beliebte Wörter',
+			'library.allWords' => 'Alle Wörter',
+			'library.searchWord' => 'Wort suchen',
+			'library.searchHint' => 'Bitte Wort eingeben…',
+			'library.noWordsFound' => 'Keine Wörter gefunden',
+			'library.noSavedWords' => 'Noch keine gespeicherten Wörter',
+			'bottomNav.home' => 'Startseite',
+			'bottomNav.stories' => 'Geschichten',
+			'bottomNav.library' => 'Bibliothek',
+			'bottomNav.profile' => 'Profil',
+			'dayStreak.title' => 'Tages-Serie!',
+			'dayStreak.days.su' => 'So',
+			'dayStreak.days.mo' => 'Mo',
+			'dayStreak.days.tu' => 'Di',
+			'dayStreak.days.we' => 'Mi',
+			'dayStreak.days.th' => 'Do',
+			'dayStreak.days.fr' => 'Fr',
+			'dayStreak.days.sa' => 'Sa',
+			'storyDetails.introduction' => 'Einleitung',
+			'storyDetails.saved' => 'Gespeichert',
+			'storyDetails.removed' => 'Entfernt',
+			'storyDetails.storyAddedToLibrary' => 'Die Geschichte wurde deiner Bibliothek hinzugefügt.',
+			'storyDetails.storyRemovedFromLibrary' => 'Die Geschichte wurde aus der Bibliothek entfernt.',
+			'storyDetails.wordAddedToLibrary' => 'Das Wort wurde der Bibliothek hinzugefügt. Rückgängig',
+			'storyDetails.successfully' => 'Erfolgreich',
+			'storyDetails.ratingSubmitted' => 'Deine Bewertung wurde erfolgreich eingereicht.',
+			'storyDetails.warning' => 'Warnung',
+			'storyDetails.fillAllFields' => 'Bitte fülle alle Felder aus.',
+			'storyDetails.messageSent' => 'Deine Nachricht wurde erfolgreich gesendet.',
+			'storyDetails.translate' => 'Übersetzen',
+			'storyDetails.speak' => 'Sprechen',
+			'storyDetails.like' => 'Gefällt mir',
+			'storyDetails.save' => 'Speichern',
+			'storyDetails.feedback' => 'Feedback',
+			'storyDetails.rating' => 'Bewertung',
+			'storyDetails.stop' => 'Stopp',
+			'storyDetails.start' => 'Start',
+			'storyDetails.listen' => 'Hören',
+			'storyDetails.translation' => 'Übersetzung',
+			'storyDetails.translating' => 'Wird übersetzt...',
+			'storyDetails.saveToLibrary' => 'In Bibliothek speichern',
+			'storyDetails.rateThisStory' => 'Diese Geschichte bewerten',
+			'storyDetails.enjoyStory' => 'Wie sehr hat dir diese Geschichte gefallen?',
+			'storyDetails.send' => 'Senden',
+			'storyDetails.subject' => 'Betreff',
+			'storyDetails.feedbackSubjects.bugReport' => 'Fehlerbericht',
+			'storyDetails.feedbackSubjects.storyContent' => 'Story-Inhalt',
+			'storyDetails.feedbackSubjects.audioIssue' => 'Audioproblem',
+			'storyDetails.feedbackSubjects.suggestion' => 'Vorschlag',
+			'storyDetails.feedbackSubjects.other' => 'Sonstiges',
+			'share.title' => 'Mit Freunden teilen',
+			'share.mainTitle' => 'Teilen Sie den Frieden',
+			'share.descriptionPart1' => 'Laden Sie Ihre Freunde ein, gemeinsam zu atmen.\nFür jede Einladung erhalten Sie beide ',
+			'share.descriptionPart2' => '1 Woche Premium',
+			'share.descriptionPart3' => '',
+			'share.yourReferralCode' => 'IHR EMPFEHLUNGSCODE',
+			'share.codeCopied' => 'Code kopiert!',
+			'share.copyCode' => 'Code kopieren',
+			'share.inviteDescription' => 'Lade deine Freunde ein und lerne\ngemeinsam',
+			'share.linkCopied' => 'Kopiert',
+			'share.linkCopiedMessage' => 'Der Link wurde in die Zwischenablage kopiert.',
+			'delete' => 'Löschen',
+			'editProfile.title' => 'Profil bearbeiten',
+			'editProfile.changePhoto' => 'Avatar ändern',
+			'editProfile.learnLanguage' => 'Sprache lernen',
+			'editProfile.fullName' => 'Vollständiger Name',
+			'editProfile.email' => 'E-Mail',
+			'editProfile.age' => 'Alter',
+			'editProfile.save' => 'Speichern',
+			'editProfile.saving' => 'Wird gespeichert...',
+			'editProfile.updateSuccess' => 'Profil erfolgreich aktualisiert',
+			'editProfile.updateError' => 'Beim Aktualisieren des Profils ist ein Fehler aufgetreten',
+			'editProfile.deleteAccount' => 'Konto löschen',
+			'notifications.title' => 'Benachrichtigungen',
+			'notifications.emptyTitle' => 'Noch keine Benachrichtigungen',
+			'notifications.emptyDescription' => 'Wir benachrichtigen Sie, wenn es ein wichtiges Update zu Ihrer Lernreise gibt.',
+			'notifications.premiumBannerTitle' => 'Verpassen Sie nicht die\nPremium-Vorteile!',
+			'notifications.premiumBannerDescription' => 'Nutzen Sie die Möglichkeiten als Premium-Abonnent.',
 			'auth.google' => 'Weiter mit Google',
 			'auth.facebook' => 'Weiter mit Facebook',
 			'auth.apple' => 'Weiter mit Apple',
 			'auth.guest' => 'Als Gast fortfahren',
 			'auth.signInFailed' => ({required Object error}) => 'Anmeldung fehlgeschlagen: ${error}',
-			'home.seeAll' => 'Alle anzeigen',
-			'home.more' => 'Mehr',
-			'home.online' => 'Online',
-			'home.offline' => 'Offline',
-			'home.placeholders.fashionDesigner' => 'Modedesigner',
-			'home.placeholders.comedian' => 'Komiker',
-			'home.placeholders.influencer' => 'Influencer',
-			'home.placeholders.teacher' => 'Lehrer',
-			'home.placeholders.friend' => 'Freund',
-			'home.greeting' => 'Hallo,',
-			'home.guest' => 'Gast',
-			'home.thisWeek' => 'Diese Woche',
-			'home.continueLearning' => 'Lernen Sie weiter',
-			'home.allLessons' => 'Alle Lektionen',
-			'home.startLearning' => 'Fangen Sie an zu lernen',
-			'home.resumeActivity' => ({required Object activity}) => 'Fortsetzen ${activity}',
-			'home.continueButton' => 'Weitermachen',
-			'home.streakTitle' => 'Serienstatus',
-			'home.streakActive' => ({required Object count}) => 'Sie haben derzeit eine Lernserie von ${count} Tagen. Schließen Sie jeden Tag eine Lektion ab, um Ihre Serie zu behalten.',
-			'home.streakEmpty' => 'Ihre Lernserie hat noch nicht begonnen. Schließen Sie heute eine Lektion ab, um Ihre Serie zu starten.',
-			'home.weekDays.0' => 'MO',
-			'home.weekDays.1' => 'DI',
-			'home.weekDays.2' => 'HEIRATEN',
-			'home.weekDays.3' => 'DO',
-			'home.weekDays.4' => 'FR',
-			'home.weekDays.5' => 'SA',
-			'home.weekDays.6' => 'SONNE',
-			'home.lessons.alphabet' => 'Alphabet',
-			'home.lessons.numbers' => 'Zahlen',
-			'home.lessons.colors' => 'Farben',
-			'home.lessons.shapes' => 'Formen',
-			'home.lessons.fruit' => 'Obst',
-			'home.lessons.vegetables' => 'Gemüse',
-			'home.lessons.sports' => 'Sport',
-			'home.lessons.fillIn' => 'Ausfüllen',
-			'home.lessons.fillInBlank' => 'Füllen Sie die Lücke aus',
-			'home.lessonProgress' => ({required Object current, required Object total}) => 'Lektion ${current} von ${total}',
-			'notifications.today' => 'Heute',
-			'notifications.yesterday' => 'Gestern',
-			'notifications.weekAgo' => ({required Object week}) => '${week} Woche',
-			'notifications.monthAgo' => ({required Object month}) => '${month} Monat',
-			'notifications.yearAgo' => ({required Object year}) => '${year} Jahr her',
-			'notifications.noNotifications' => 'Noch keine Benachrichtigungen.',
-			'notifications.noNotificationsSubtitle' => 'Vergessen Sie nicht, noch einmal nachzuschauen, wenn Sie die Benachrichtigung erhalten.',
-			'notifications.allDeleted' => 'Alle Benachrichtigungen wurden erfolgreich gelöscht',
-			'editProfile.aboutMe' => 'Über mich',
-			'editProfile.aboutMeHint' => 'Schreiben Sie etwas über sich',
-			'editProfile.fullName' => 'Vollständiger Name',
-			'editProfile.gender' => 'Geschlecht',
-			'editProfile.male' => 'Männlich',
-			'editProfile.female' => 'Weiblich',
-			'editProfile.dontWantToMention' => 'Ich möchte es nicht erwähnen.',
-			'editProfile.country' => 'Land',
-			'editProfile.languagePreferences' => 'Spracheinstellungen',
-			'editProfile.selectLanguage' => 'Fügen Sie Ihre bevorzugte Sprache hinzu',
-			'editProfile.saved' => 'Gespeichert',
-			'editProfile.changesSaved' => 'Änderungen wurden gespeichert.',
-			'settingsSupport.title' => 'Einstellungen & Support',
-			'settingsSupport.premiumTitle' => 'Unbegrenzter Zugriff\nauf alle Funktionen',
-			'settingsSupport.getPremium' => 'Holen Sie sich Premium',
-			'settingsSupport.settingsHub' => 'Einstellungs-Hub',
-			'settingsSupport.shareTheApp' => 'Teilen Sie die App',
-			'settingsSupport.rateUs' => 'Bewerten Sie uns',
-			'settingsSupport.version' => 'Version',
-			'settingsSupport.notifications' => 'Benachrichtigungen',
-			'settingsSupport.accountManagement' => 'Kontoverwaltung',
-			'settingsSupport.deleteAccount' => 'Konto löschen',
-			'settingsSupport.logOut' => 'Abmelden',
-			'settingsSupport.logOutTitle' => 'Sie sind dabei, sich abzumelden',
-			'settingsSupport.logOutSubtitle' => 'Bis bald!\nWir werden dich vermissen.',
-			'deleteAccount.title' => 'Konto löschen',
-			'deleteAccount.warning' => 'Sind Sie sicher, dass Sie Ihr Konto löschen möchten?',
-			'deleteAccount.description' => 'Diese Aktion kann nicht rückgängig gemacht werden und Ihr gesamter Verlauf und Ihre Daten werden dauerhaft gelöscht.',
-			'deleteAccount.deleteFailed' => ({required Object error}) => 'Kontolöschung fehlgeschlagen: ${error}',
-			'deleteAccount.steps.step1.title' => 'Wir wollen nicht, dass du gehst, aber wir verstehen es.',
-			'deleteAccount.steps.step1.subtitle' => 'Können Sie uns sagen, warum Sie gehen möchten, damit wir das ChatFace-Erlebnis verbessern können?',
-			'deleteAccount.steps.step1.option1' => 'Ich fand die KI-Charaktere nicht realistisch.',
-			'deleteAccount.steps.step1.option2' => 'Ich habe technische Probleme mit Video-Chats.',
-			'deleteAccount.steps.step1.option3' => 'Die Abonnementpreise liegen über meinen Erwartungen.',
-			'deleteAccount.steps.step1.option4' => 'Ich konnte die Art von Charakteren, die ich suchte, nicht finden.',
-			'deleteAccount.steps.step1.option5' => 'Ich wollte es einfach mal kurz ausprobieren.',
-			'deleteAccount.steps.step1.option6' => 'Andere',
-			'deleteAccount.steps.step2.title' => 'Wenn Sie Ihr Konto löschen, verabschieden Sie sich von:',
-			'deleteAccount.steps.step2.subtitle1' => 'Tiefe Verbindungen und Erinnerung:',
-			'deleteAccount.steps.step2.subtitle1Desc' => 'Die Charaktere, mit denen Sie chatten, werden ihre Vergangenheit mit Ihnen, Ihre gemeinsamen Geheimnisse und Ihre persönlichen Gewohnheiten vollständig vergessen.',
-			'deleteAccount.steps.step2.subtitle2' => 'Privilegien für Videoanrufe:',
-			'deleteAccount.steps.step2.subtitle2Desc' => 'Sie verlieren das Recht, persönlich mit Ihren KI-Partnern zu kommunizieren, die Ihnen jederzeit zur Verfügung stehen.',
-			'deleteAccount.steps.step2.subtitle3' => 'Erweiterter Algorithmus:',
-			'deleteAccount.steps.step2.subtitle3Desc' => 'Ihre auf Ihre Vorlieben zugeschnittenen „Nur für Sie“-Charakterzuordnungen werden zurückgesetzt.',
-			'deleteAccount.steps.step2.subtitle4' => 'Profildaten:',
-			'deleteAccount.steps.step2.subtitle4Desc' => 'Ihre erzielten Erfolge, freigeschalteten Sonderzeichen und Ihr Chatverlauf werden unwiderruflich gelöscht.',
-			'deleteAccount.steps.step3.title' => 'Bevor Sie losfahren, haben wir ein besonderes Angebot für Sie!',
-			'deleteAccount.steps.step3.description' => 'Vielleicht brauchen Sie einfach etwas mehr Zeit oder ein besseres Angebot. Würden Sie Folgendes in Betracht ziehen, anstatt Ihr Konto zu löschen?',
-			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'Es ist wertvoll, Sie bei uns zu behalten. ${offer} auf Ihr nächstes Abonnement! Möchten Sie mit diesem Angebot fortfahren?',
-			'deleteAccount.steps.step3.description1Offer' => 'Wir haben einen Rabatt von 50 % gewährt',
-			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'Wir haben Ihnen ${offer} Credits gegeben, damit Sie neue Charaktere sehen können, die Sie noch nicht entdeckt haben.',
-			'deleteAccount.steps.step3.description2Offer' => '3 kostenlose Videoanrufe',
-			'deleteAccount.steps.step3.acceptOffer' => 'Akzeptieren Sie das Rabattangebot von 50 %',
-			'deleteAccount.steps.step3.deleteMyAccount' => 'Mein Konto löschen',
-			'cancel' => 'Stornieren',
-			'delete' => 'Löschen',
-			'premium' => 'Prämie',
-			'profileEdit' => 'Profil bearbeiten',
-			'settings' => 'Einstellungen',
-			'undo' => 'Rückgängig machen',
-			'successfully' => 'Erfolgreich',
+			'cancel' => 'Abbrechen',
+			'deleteAccount' => 'Konto löschen',
+			'deleteDialogTitle' => 'Sind Sie sicher, dass Sie Ihr Konto löschen möchten?',
+			'deleteDialogDescription' => 'Diese Aktion ist irreversibel und löscht dauerhaft alle Ihre Übungshistorie und Daten.',
+			'deleteError' => 'Beim Löschen Ihres Kontos ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.',
+			'enterInvitationCode' => 'Einladungscode eingeben',
+			'inviteFriends' => 'Gib den Einladungscode ein, den du von einem Freund erhalten hast.\nTippe ihn in das vorgesehene Feld',
+			'twoDaysPremium' => '7 Tage Premium',
+			'advantage' => '\num die Vorteile zu genießen.',
+			'send' => 'Senden',
+			'referralCode.inputPlaceholder' => '8-stelligen Code eingeben',
+			'referralCode.applying' => 'Code wird angewendet...',
+			'referralCode.success.title' => 'Erfolg!',
+			'referralCode.success.message' => 'Empfehlungscode erfolgreich angewendet! Sowohl du als auch dein Freund haben 1 Woche Premium erhalten.',
+			'referralCode.errors.missingCode.title' => 'Code erforderlich',
+			'referralCode.errors.missingCode.message' => 'Bitte gib einen Empfehlungscode ein, um fortzufahren.',
+			'referralCode.errors.invalidFormat.title' => 'Ungültiges Format',
+			'referralCode.errors.invalidFormat.message' => 'Der Empfehlungscode muss genau 8 Zeichen lang sein.',
+			'referralCode.errors.alreadyUsed.title' => 'Bereits verwendet',
+			'referralCode.errors.alreadyUsed.message' => 'Du hast bereits einen Empfehlungscode verwendet. Jeder Benutzer kann nur einen Code verwenden.',
+			'referralCode.errors.selfReferral.title' => 'Ungültiger Code',
+			'referralCode.errors.selfReferral.message' => 'Du kannst deinen eigenen Einladungscode nicht verwenden. Bitte verwende einen Code von einem Freund.',
+			'referralCode.errors.codeNotFound.title' => 'Code nicht gefunden',
+			'referralCode.errors.codeNotFound.message' => 'Der eingegebene Empfehlungscode existiert nicht. Bitte überprüfe ihn und versuche es erneut.',
+			'referralCode.errors.genericError.title' => 'Fehler',
+			'referralCode.errors.genericError.message' => 'Beim Anwenden des Empfehlungscodes ist ein Fehler aufgetreten. Bitte versuche es erneut.',
+			'deleteNotifications' => 'Benachrichtigungen löschen',
+			'deleteNotificationsDescription' => 'Sind Sie sicher, dass Sie alle\nIhre Benachrichtigungen löschen möchten? Diese Aktion ist irreversibel und kann nicht rückgängig gemacht werden.',
+			'deleteAll' => 'Alle löschen',
+			'appLanguage' => 'App-Sprache',
+			'selectLanguage' => 'Wählen Sie Ihre bevorzugte Sprache',
 			'save' => 'Speichern',
 			'languageOptions.english' => 'Englisch',
-			'languageOptions.chinese' => 'chinesisch',
 			'languageOptions.german' => 'Deutsch',
 			'languageOptions.italian' => 'Italienisch',
 			'languageOptions.french' => 'Französisch',
-			'languageOptions.japanese' => 'japanisch',
+			'languageOptions.japanese' => 'Japanisch',
 			'languageOptions.spanish' => 'Spanisch',
 			'languageOptions.russian' => 'Russisch',
 			'languageOptions.turkish' => 'Türkisch',
 			'languageOptions.korean' => 'Koreanisch',
 			'languageOptions.hindi' => 'Hindi',
 			'languageOptions.portuguese' => 'Portugiesisch',
-			'common.tryAgain' => 'Versuchen Sie es erneut',
-			'common.retry' => 'Wiederholen',
-			'common.close' => 'Schließen',
-			'profileScreen.title' => 'Profil',
-			'profileScreen.greeting' => 'Hallo,',
-			'profileScreen.account' => 'KONTO',
-			'profileScreen.app' => 'APP',
-			'profileScreen.statusLoading' => 'Status wird geladen',
-			'profileScreen.premiumActive' => 'Aktives • Pro-Mitglied',
-			'profileScreen.freePlan' => 'Kostenloser Plan',
-			'profileScreen.loadFailed' => 'Profilinformationen konnten nicht geladen werden. Ziehen Sie nach unten, um es erneut zu versuchen.',
-			'profileScreen.accountSettings' => 'Kontoeinstellungen',
-			'profileScreen.accountSettingsGuestSubtitle' => 'Name und Avatar',
-			'profileScreen.accountSettingsSubtitle' => 'Name, Foto, E-Mail',
-			'profileScreen.manageSubscription' => 'Abonnement verwalten',
-			'profileScreen.screenTime' => 'Bildschirmzeit',
-			'profileScreen.rateApp' => 'Bewerten Sie die App',
-			'profileScreen.supportUs' => 'Unterstützen Sie uns',
-			'profileScreen.rateComingSoon' => 'Die Bewertung wird in Kürze verfügbar sein.',
-			'profileScreen.changeLanguage' => 'Sprache',
-			'profileScreen.changeLanguageSubtitle' => 'App-Sprache ändern',
-			'profileScreen.privacyPolicy' => 'Datenschutzrichtlinie',
-			'profileScreen.privacySubtitle' => 'Daten schützen',
-			'profileScreen.termsOfService' => 'Nutzungsbedingungen',
-			'profileScreen.termsSubtitle' => 'Daten und Bedingungen',
-			'profileScreen.logout' => 'Abmelden',
-			'profileScreen.logoutDialogTitle' => 'Sie sind dabei,\naus Ihrem Konto abzumelden',
-			'profileScreen.logoutFailed' => 'Konnte mich nicht abmelden. Bitte versuchen Sie es erneut.',
-			'profileScreen.subscriptionFailed' => 'Der Abonnementbildschirm konnte nicht geöffnet werden. Bitte versuchen Sie es erneut.',
-			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Heute ${minutes} Minuten',
-			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Heute ${hours} Stunden',
-			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Heute ${hours} Stunden ${minutes} Minuten',
-			'profileScreen.trialSubscriptionTitle' => 'Test Premium Aktiv',
-			'profileScreen.trialSubscriptionPrompt' => 'Sie verwenden derzeit eine Test-Premium-Abonnement. Möchten Sie sich anmelden?',
-			'profileScreen.yes' => 'Ja',
-			'profileScreen.no' => 'Nein',
-			'editProfileScreen.changeAvatar' => 'Avatar ändern',
-			'editProfileScreen.email' => 'E-Mail',
-			'editProfileScreen.emailHelper' => 'Dieses Feld stammt aus Ihrem Backend-Konto.',
-			'editProfileScreen.deleteDialogTitle' => 'Möchten Sie\nIhr Konto wirklich löschen?',
-			'editProfileScreen.accountDeleteFailed' => 'Konto konnte nicht gelöscht werden. Bitte versuchen Sie es erneut.',
-			'editProfileScreen.profileSaveFailed' => 'Profil konnte nicht gespeichert werden. Bitte versuchen Sie es erneut.',
-			'premiumAccess.openFailed' => 'Premium-Bildschirm konnte nicht geöffnet werden. Bitte versuchen Sie es erneut.',
-			'parentalGate.barrierLabel' => 'Elterntor',
-			'parentalGate.question' => 'Was ist das Ergebnis dieser Operation?',
-			'parentalGate.wrongAnswer' => 'Falsche Antwort. Bitte versuchen Sie es erneut.',
-			'parentalGate.submit' => 'Einreichen',
-			'activities.flashCards' => 'Lernkarten',
-			'activities.drawing' => 'Zeichnung',
-			'activities.flipCards' => 'Karten umdrehen',
-			'activities.trueFalse' => 'Richtig Falsch',
-			'activities.spelling' => 'Rechtschreibung',
-			'resultSheet.correct' => 'Richtig',
-			'resultSheet.tryAgain' => 'Versuchen Sie es erneut',
-			'resultSheet.correctBody' => 'Du machst das großartig!',
-			'resultSheet.tryAgainBody' => 'Versuchen Sie es noch einmal!',
-			'trueFalseView.isThisLetter' => ({required Object letter}) => 'Ist dieser Buchstabe ${letter}?',
-			'trueFalseView.isThisNumber' => ({required Object number}) => 'Ist diese Nummer ${number}?',
-			'trueFalseView.isThisShape' => ({required Object shape}) => 'Ist diese Form ${shape}?',
-			'trueFalseView.isThisSubject' => ({required Object subject}) => 'Ist das ${subject}?',
-			'trueFalseView.trueText' => 'WAHR',
-			'trueFalseView.falseText' => 'FALSCH',
+			'parentalGate.title' => 'Nur für Eltern',
+			'parentalGate.subtitle' => 'Bitte lösen Sie die folgende Rechenaufgabe, um fortzufahren:',
+			'parentalGate.hint' => 'Antwort',
+			'parentalGate.incorrect' => 'Falsche Antwort, bitte versuchen Sie es erneut.',
 			_ => null,
 		};
 	}

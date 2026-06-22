@@ -483,7 +483,7 @@ class _TranslationsTermOfServicePrivacyPolicyZh implements TranslationsTermOfSer
 	@override String get section2Title => '2. 儿童隐私（重要）';
 	@override String get section2Body => 'Lingola Kids 专为 4 岁及以上儿童设计。保护儿童数据是我们的核心重点：\n- 我们不会向儿童收集不必要或敏感的个人数据。\n- 不允许也未提示儿童公开分享联系方式。\n- 严禁针对儿童的基于行为或个性化的广告分析。\n- 父母或法定监护人可以随时要求查看或删除其孩子的数据。';
 	@override String get section3Title => '3. 数据处理和共享的目的';
-	@override String get section3Body => '处理您的数据是为了跟踪学习进度、个性化词汇内容并修复技术问题。个人信息绝对不会为了商业用途而出售或与第三方共享。受信任的服务提供商（云存储、分析等）在严格保密义务下处理数据。';
+	@override String get section3Body => '处理您的数据是为了跟踪学习进度、个性化词汇内容并修复技术问题。个人信息绝对不会为了商业用途而出售或与第三方共享。受信任的服务提供商（云存储、身份验证和订阅管理）在严格保密义务下处理数据。';
 	@override String get section4Title => '4. 用户和父母的权利';
 	@override String get section4Body => '用户和父母有权访问、纠正、请求删除帐户以及要求永久删除数据。您可以通过联系我们的支持团队来行使这些权利。';
 	@override String get section5Title => '5. 数据安全与保留';
@@ -501,7 +501,7 @@ class _TranslationsTermOfServiceCookiePolicyZh implements TranslationsTermOfServ
 	// Translations
 	@override String get title => 'Cookie 政策';
 	@override String get lastUpdated => '最后更新：2026年';
-	@override String get intro => '欢迎使用 ChatFace。使用数字助手技术是为了让您的 AI 视频通话体验更加顺畅、安全和个性化。';
+	@override String get intro => '欢迎使用 Lingola Kids。使用数字助手技术是为了让您的 AI 视频通话体验更加顺畅、安全和个性化。';
 	@override String get important => '本政策说明了什么是 Cookie、它们的用途以及您如何管理您的偏好设置。';
 	@override String get section1Title => '1. 什么是 Cookie？';
 	@override String get section1Body => 'Cookie 是放置在您的设备上的小型数据文件。它们不会直接识别您的身份；它们充当数字便签，记住：\n• 通话和语言设置\n• 会话和性能偏好。';
@@ -510,7 +510,7 @@ class _TranslationsTermOfServiceCookiePolicyZh implements TranslationsTermOfServ
 	@override String get section3Title => '3. 我们为什么使用这些技术？';
 	@override String get section3Body => '• 为了确保应用程序安全顺畅地运行。\n• 为了使阅读体验更加流畅。\n• 为了记住重复性的设置。\n• 为了确定未来开发的功能。';
 	@override String get section4Title => '4. 第三方技术';
-	@override String get section4Body => '有些技术可能由技术服务提供商提供，并受其各自政策的约束。ChatFace 在这些合作中将数据安全放在首位。';
+	@override String get section4Body => '有些技术可能由技术服务提供商提供，并受其各自政策的约束。Lingola Kids 在这些合作中将数据安全放在首位。';
 	@override String get section5Title => '5. Cookie 的控制和管理';
 	@override String get section5Body => '用户可以通过设备或应用程序设置限制这些技术。禁用基本技术可能会导致无法拨打视频电话等问题。';
 	@override String get section6Title => '6. 联系方式';
@@ -529,11 +529,11 @@ class _TranslationsOnboardingStep5Zh implements TranslationsOnboardingStep5En {
 	@override String get openSettings => '打开设置';
 	@override String get title => '权限';
 	@override String get permission1 => '相机访问';
-	@override String get permission1Subtitle => 'ChatFace 使用您的相机进行与 AI 角色的视频通话。';
+	@override String get permission1Subtitle => 'Lingola Kids 使用您的相机进行与 AI 角色的视频通话。';
 	@override String get permission2 => '麦克风访问';
-	@override String get permission2Subtitle => 'ChatFace 使用您的麦克风进行语音和视频通话。';
+	@override String get permission2Subtitle => 'Lingola Kids 使用您的麦克风进行语音和视频通话。';
 	@override String get permission3 => '位置访问';
-	@override String get permission3Subtitle => 'ChatFace 使用您的位置来个性化您的体验。';
+	@override String get permission3Subtitle => 'Lingola Kids 使用您的位置来个性化您的体验。';
 }
 
 // Path: onboarding.step1
@@ -747,7 +747,7 @@ class _TranslationsDeleteAccountStepsStep1Zh implements TranslationsDeleteAccoun
 
 	// Translations
 	@override String get title => '我们不想让你离开，但我们理解。';
-	@override String get subtitle => '您能告诉我们为什么想离开，以便我们改进 ChatFace 吗？';
+	@override String get subtitle => '您能告诉我们为什么想离开，以便我们改进 Lingola Kids 吗？';
 	@override String get option1 => '我觉得 AI 角色不够真实。';
 	@override String get option2 => '我在视频聊天中遇到技术问题。';
 	@override String get option3 => '订阅价格超出我的预期。';
@@ -850,7 +850,7 @@ extension on TranslationsZh {
 			'termOfService.privacyPolicy.section2Title' => '2. 儿童隐私（重要）',
 			'termOfService.privacyPolicy.section2Body' => 'Lingola Kids 专为 4 岁及以上儿童设计。保护儿童数据是我们的核心重点：\n- 我们不会向儿童收集不必要或敏感的个人数据。\n- 不允许也未提示儿童公开分享联系方式。\n- 严禁针对儿童的基于行为或个性化的广告分析。\n- 父母或法定监护人可以随时要求查看或删除其孩子的数据。',
 			'termOfService.privacyPolicy.section3Title' => '3. 数据处理和共享的目的',
-			'termOfService.privacyPolicy.section3Body' => '处理您的数据是为了跟踪学习进度、个性化词汇内容并修复技术问题。个人信息绝对不会为了商业用途而出售或与第三方共享。受信任的服务提供商（云存储、分析等）在严格保密义务下处理数据。',
+			'termOfService.privacyPolicy.section3Body' => '处理您的数据是为了跟踪学习进度、个性化词汇内容并修复技术问题。个人信息绝对不会为了商业用途而出售或与第三方共享。受信任的服务提供商（云存储、身份验证和订阅管理）在严格保密义务下处理数据。',
 			'termOfService.privacyPolicy.section4Title' => '4. 用户和父母的权利',
 			'termOfService.privacyPolicy.section4Body' => '用户和父母有权访问、纠正、请求删除帐户以及要求永久删除数据。您可以通过联系我们的支持团队来行使这些权利。',
 			'termOfService.privacyPolicy.section5Title' => '5. 数据安全与保留',
@@ -859,7 +859,7 @@ extension on TranslationsZh {
 			'termOfService.privacyPolicy.section6Body' => '📩 对于隐私查询、数据删除或父母请求，请联系我们：support@fly-work.com',
 			'termOfService.cookiePolicy.title' => 'Cookie 政策',
 			'termOfService.cookiePolicy.lastUpdated' => '最后更新：2026年',
-			'termOfService.cookiePolicy.intro' => '欢迎使用 ChatFace。使用数字助手技术是为了让您的 AI 视频通话体验更加顺畅、安全和个性化。',
+			'termOfService.cookiePolicy.intro' => '欢迎使用 Lingola Kids。使用数字助手技术是为了让您的 AI 视频通话体验更加顺畅、安全和个性化。',
 			'termOfService.cookiePolicy.important' => '本政策说明了什么是 Cookie、它们的用途以及您如何管理您的偏好设置。',
 			'termOfService.cookiePolicy.section1Title' => '1. 什么是 Cookie？',
 			'termOfService.cookiePolicy.section1Body' => 'Cookie 是放置在您的设备上的小型数据文件。它们不会直接识别您的身份；它们充当数字便签，记住：\n• 通话和语言设置\n• 会话和性能偏好。',
@@ -868,7 +868,7 @@ extension on TranslationsZh {
 			'termOfService.cookiePolicy.section3Title' => '3. 我们为什么使用这些技术？',
 			'termOfService.cookiePolicy.section3Body' => '• 为了确保应用程序安全顺畅地运行。\n• 为了使阅读体验更加流畅。\n• 为了记住重复性的设置。\n• 为了确定未来开发的功能。',
 			'termOfService.cookiePolicy.section4Title' => '4. 第三方技术',
-			'termOfService.cookiePolicy.section4Body' => '有些技术可能由技术服务提供商提供，并受其各自政策的约束。ChatFace 在这些合作中将数据安全放在首位。',
+			'termOfService.cookiePolicy.section4Body' => '有些技术可能由技术服务提供商提供，并受其各自政策的约束。Lingola Kids 在这些合作中将数据安全放在首位。',
 			'termOfService.cookiePolicy.section5Title' => '5. Cookie 的控制和管理',
 			'termOfService.cookiePolicy.section5Body' => '用户可以通过设备或应用程序设置限制这些技术。禁用基本技术可能会导致无法拨打视频电话等问题。',
 			'termOfService.cookiePolicy.section6Title' => '6. 联系方式',
@@ -880,11 +880,11 @@ extension on TranslationsZh {
 			'onboarding.step5.openSettings' => '打开设置',
 			'onboarding.step5.title' => '权限',
 			'onboarding.step5.permission1' => '相机访问',
-			'onboarding.step5.permission1Subtitle' => 'ChatFace 使用您的相机进行与 AI 角色的视频通话。',
+			'onboarding.step5.permission1Subtitle' => 'Lingola Kids 使用您的相机进行与 AI 角色的视频通话。',
 			'onboarding.step5.permission2' => '麦克风访问',
-			'onboarding.step5.permission2Subtitle' => 'ChatFace 使用您的麦克风进行语音和视频通话。',
+			'onboarding.step5.permission2Subtitle' => 'Lingola Kids 使用您的麦克风进行语音和视频通话。',
 			'onboarding.step5.permission3' => '位置访问',
-			'onboarding.step5.permission3Subtitle' => 'ChatFace 使用您的位置来个性化您的体验。',
+			'onboarding.step5.permission3Subtitle' => 'Lingola Kids 使用您的位置来个性化您的体验。',
 			'onboarding.step1.title' => '你叫什么名字？',
 			'onboarding.step1.subtitle' => '请输入您的姓名',
 			'onboarding.step1.hint' => '全名',
@@ -1023,7 +1023,7 @@ extension on TranslationsZh {
 			'deleteAccount.description' => '此操作不可撤销，您的所有历史记录和数据将被永久删除。',
 			'deleteAccount.deleteFailed' => ({required Object error}) => '删除帐户失败：${error}',
 			'deleteAccount.steps.step1.title' => '我们不想让你离开，但我们理解。',
-			'deleteAccount.steps.step1.subtitle' => '您能告诉我们为什么想离开，以便我们改进 ChatFace 吗？',
+			'deleteAccount.steps.step1.subtitle' => '您能告诉我们为什么想离开，以便我们改进 Lingola Kids 吗？',
 			'deleteAccount.steps.step1.option1' => '我觉得 AI 角色不够真实。',
 			'deleteAccount.steps.step1.option2' => '我在视频聊天中遇到技术问题。',
 			'deleteAccount.steps.step1.option3' => '订阅价格超出我的预期。',
