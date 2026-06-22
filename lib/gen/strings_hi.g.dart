@@ -38,56 +38,75 @@ class TranslationsHi with BaseTranslations<AppLocale, Translations> implements T
 
 	// Translations
 	@override String welcome({required Object name}) => 'स्वागत है ${name}';
-	@override String welcome2({required Object appName}) => 'स्वागत है ${appName}';
-	@override String continue_to({required Object language}) => '${language} पर जारी रखें';
-	@override String get get_started => 'शुरू करें';
+	@override String welcome2({required Object appName}) => '${appName} में आपका स्वागत है';
+	@override String get get_started => 'शुरू हो जाओ';
+	@override String get start_learning => 'सीखना शुरू करें';
+	@override String get hello => 'नमस्ते';
 	@override String get next => 'अगला';
 	@override String get back => 'पीछे';
-	@override String get skip => 'छोड़ें';
-	@override String get kContinue => 'जारी रखें';
-	@override String get logintext => 'जहां हर शब्द एक नई साहसिकता है जो बताने की प्रतीक्षा कर रहा है।';
+	@override String get skip => 'छोडना';
+	@override String get profile => 'प्रोफ़ाइल';
+	@override String get kContinue => 'जारी रखना';
+	@override String get ok => 'ठीक है';
+	@override late final _TranslationsVoicePlaybackHi voicePlayback = _TranslationsVoicePlaybackHi._(_root);
+	@override late final _TranslationsLocalNotificationsHi localNotifications = _TranslationsLocalNotificationsHi._(_root);
 	@override late final _TranslationsTermOfServiceHi termOfService = _TranslationsTermOfServiceHi._(_root);
-	@override String get cookies => 'कुकी नीति';
+	@override String get cookies => 'कुकीज़ नीति';
 	@override String get privacy => 'गोपनीयता नीति';
 	@override late final _TranslationsOnboardingHi onboarding = _TranslationsOnboardingHi._(_root);
-	@override String get pressBackAgainToExit => 'बाहर निकलने के लिए फिर से वापस दबाएं';
-	@override late final _TranslationsFaqHi faq = _TranslationsFaqHi._(_root);
-	@override String get good_morning => 'सुप्रभात';
-	@override String get good_afternoon => 'शुभ दोपहर';
-	@override String get good_evening => 'शुभ संध्या';
+	@override String get pressBackAgainToExit => 'बाहर निकलने के लिए फिर से वापस दबाएँ';
 	@override late final _TranslationsSplashHi splash = _TranslationsSplashHi._(_root);
-	@override late final _TranslationsProfileHi profile = _TranslationsProfileHi._(_root);
-	@override late final _TranslationsHomeHi home = _TranslationsHomeHi._(_root);
-	@override late final _TranslationsAllStoriesHi allStories = _TranslationsAllStoriesHi._(_root);
-	@override late final _TranslationsStoriesHi stories = _TranslationsStoriesHi._(_root);
-	@override late final _TranslationsLibraryHi library = _TranslationsLibraryHi._(_root);
-	@override late final _TranslationsBottomNavHi bottomNav = _TranslationsBottomNavHi._(_root);
-	@override late final _TranslationsDayStreakHi dayStreak = _TranslationsDayStreakHi._(_root);
-	@override late final _TranslationsStoryDetailsHi storyDetails = _TranslationsStoryDetailsHi._(_root);
-	@override late final _TranslationsShareHi share = _TranslationsShareHi._(_root);
-	@override String get delete => 'हटाएं';
-	@override late final _TranslationsEditProfileHi editProfile = _TranslationsEditProfileHi._(_root);
-	@override late final _TranslationsNotificationsHi notifications = _TranslationsNotificationsHi._(_root);
 	@override late final _TranslationsAuthHi auth = _TranslationsAuthHi._(_root);
-	@override String get cancel => 'रद्द करें';
-	@override String get deleteAccount => 'खाता हटाएं';
-	@override String get deleteDialogTitle => 'क्या आप वाकई अपना खाता हटाना चाहते हैं?';
-	@override String get deleteDialogDescription => 'यह क्रिया अपरिवर्तनीय है और आपके सभी व्यायाम इतिहास और डेटा को स्थायी रूप से हटा देगी।';
-	@override String get deleteError => 'अपना खाता हटाते समय एक त्रुटि हुई। कृपया पुनः प्रयास करें।';
-	@override String get enterInvitationCode => 'निमंत्रण कोड दर्ज करें';
-	@override String get inviteFriends => 'किसी मित्र से प्राप्त आमंत्रण कोड दर्ज करें।\nइसे निर्दिष्ट फ़ील्ड में टाइप करें';
-	@override String get twoDaysPremium => '7 दिन प्रीमियम';
-	@override String get advantage => '\nइसके लाभों का आनंद लेने के लिए।';
-	@override String get send => 'भेजें';
-	@override late final _TranslationsReferralCodeHi referralCode = _TranslationsReferralCodeHi._(_root);
-	@override String get deleteNotifications => 'सूचनाएं हटाएं';
-	@override String get deleteNotificationsDescription => 'क्या आप वाकई अपनी सभी\nसूचनाएं हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।';
-	@override String get deleteAll => 'सभी हटाएं';
-	@override String get appLanguage => 'ऐप भाषा';
-	@override String get selectLanguage => 'अपनी पसंदीदा भाषा चुनें';
-	@override String get save => 'सहेजें';
+	@override late final _TranslationsHomeHi home = _TranslationsHomeHi._(_root);
+	@override late final _TranslationsNotificationsHi notifications = _TranslationsNotificationsHi._(_root);
+	@override late final _TranslationsEditProfileHi editProfile = _TranslationsEditProfileHi._(_root);
+	@override late final _TranslationsSettingsSupportHi settingsSupport = _TranslationsSettingsSupportHi._(_root);
+	@override late final _TranslationsDeleteAccountHi deleteAccount = _TranslationsDeleteAccountHi._(_root);
+	@override String get cancel => 'रद्द करना';
+	@override String get delete => 'मिटाना';
+	@override String get premium => 'अधिमूल्य';
+	@override String get profileEdit => 'प्रोफ़ाइल संपादित करें';
+	@override String get settings => 'सेटिंग्स';
+	@override String get undo => 'पूर्ववत';
+	@override String get successfully => 'सफलतापूर्वक';
+	@override String get save => 'बचाना';
 	@override late final _TranslationsLanguageOptionsHi languageOptions = _TranslationsLanguageOptionsHi._(_root);
+	@override late final _TranslationsCommonHi common = _TranslationsCommonHi._(_root);
+	@override late final _TranslationsProfileScreenHi profileScreen = _TranslationsProfileScreenHi._(_root);
+	@override late final _TranslationsEditProfileScreenHi editProfileScreen = _TranslationsEditProfileScreenHi._(_root);
+	@override late final _TranslationsPremiumAccessHi premiumAccess = _TranslationsPremiumAccessHi._(_root);
 	@override late final _TranslationsParentalGateHi parentalGate = _TranslationsParentalGateHi._(_root);
+	@override late final _TranslationsActivitiesHi activities = _TranslationsActivitiesHi._(_root);
+	@override late final _TranslationsResultSheetHi resultSheet = _TranslationsResultSheetHi._(_root);
+	@override late final _TranslationsTrueFalseViewHi trueFalseView = _TranslationsTrueFalseViewHi._(_root);
+}
+
+// Path: voicePlayback
+class _TranslationsVoicePlaybackHi implements TranslationsVoicePlaybackEn {
+	_TranslationsVoicePlaybackHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get loading => 'ऑडियो लोड हो रहा है...';
+	@override String get playing => 'ऑडियो तैयार है, चल रहा है।';
+	@override String get missing => 'ऑडियो नहीं मिला। कृपया फिर से प्रयास करें।';
+	@override String get failed => 'ऑडियो तैयार नहीं हो सका। कृपया फिर से प्रयास करें।';
+}
+
+// Path: localNotifications
+class _TranslationsLocalNotificationsHi implements TranslationsLocalNotificationsEn {
+	_TranslationsLocalNotificationsHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get channelName => 'दैनिक सीखने की याद दिलाने वाली सूचनाएं';
+	@override String get channelDescription => 'बच्चों को दैनिक सीखने की स्ट्रीक बनाए रखने में मदद करने वाली याद दिलाने वाली सूचनाएं।';
+	@override String get reminderTitle => 'Lingola Kids';
+	@override String get reminderBody => 'आज एक छोटा पाठ करके अपनी स्ट्रीक जारी रखें।';
+	@override String get debugTitle => 'Lingola Kids';
+	@override String get debugBody => 'स्थानीय सूचनाएं काम कर रही हैं।';
 }
 
 // Path: termOfService
@@ -97,15 +116,15 @@ class _TranslationsTermOfServiceHi implements TranslationsTermOfServiceEn {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get text1 => 'swipe पर साइन अप करके, आप हमारी ';
+	@override String get text1 => 'लिंगोला किड्स (Lingola Kids) के लिए साइन अप करके, आप हमारी ';
 	@override String get link1 => 'सेवा की शर्तों';
-	@override String get text2 => ' से सहमत हैं। जानें कि हम आपका डेटा कैसे प्रोसेस करते हैं हमारी ';
+	@override String get text2 => ' से सहमत होते हैं। जानें कि हम आपके डेटा को अपनी ';
 	@override String get link2 => 'गोपनीयता नीति';
 	@override String get text3 => ' और ';
 	@override String get link3 => 'कुकी नीति';
-	@override String get text4 => '';
-	@override late final _TranslationsTermOfServicePrivacyPolicyHi privacyPolicy = _TranslationsTermOfServicePrivacyPolicyHi._(_root);
+	@override String get text4 => ' में कैसे संसाधित करते हैं।';
 	@override late final _TranslationsTermOfServiceTermsOfServiceHi termsOfService = _TranslationsTermOfServiceTermsOfServiceHi._(_root);
+	@override late final _TranslationsTermOfServicePrivacyPolicyHi privacyPolicy = _TranslationsTermOfServicePrivacyPolicyHi._(_root);
 	@override late final _TranslationsTermOfServiceCookiePolicyHi cookiePolicy = _TranslationsTermOfServiceCookiePolicyHi._(_root);
 }
 
@@ -116,20 +135,21 @@ class _TranslationsOnboardingHi implements TranslationsOnboardingEn {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsOnboardingStep5Hi step5 = _TranslationsOnboardingStep5Hi._(_root);
 	@override late final _TranslationsOnboardingStep1Hi step1 = _TranslationsOnboardingStep1Hi._(_root);
 	@override late final _TranslationsOnboardingStep2Hi step2 = _TranslationsOnboardingStep2Hi._(_root);
+	@override late final _TranslationsOnboardingStep3Hi step3 = _TranslationsOnboardingStep3Hi._(_root);
+	@override late final _TranslationsOnboardingStep4Hi step4 = _TranslationsOnboardingStep4Hi._(_root);
 	@override late final _TranslationsOnboardingLoadingHi loading = _TranslationsOnboardingLoadingHi._(_root);
-}
-
-// Path: faq
-class _TranslationsFaqHi implements TranslationsFaqEn {
-	_TranslationsFaqHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'सामान्य प्रश्न';
-	@override late final _TranslationsFaqQuestionsHi questions = _TranslationsFaqQuestionsHi._(_root);
+	@override late final _TranslationsOnboardingKFinalHi kFinal = _TranslationsOnboardingKFinalHi._(_root);
+	@override String get allowAccess => 'उपयोग की अनुमति दें';
+	@override String get iUnderstand => 'मैं समझता हूँ';
+	@override late final _TranslationsOnboardingLoginHi login = _TranslationsOnboardingLoginHi._(_root);
+	@override late final _TranslationsOnboardingRewardHi reward = _TranslationsOnboardingRewardHi._(_root);
+	@override String get spellTitle => 'जो शब्द आप देखते हैं उसका उच्चारण करें!';
+	@override String get spellSubtitle => 'क्या आप "LION" लिख सकते हैं?';
+	@override String get spellSuccessTitle => 'अच्छा! यह शेर है';
+	@override String get spellSuccessSubtitle => 'सुनने के लिए टैप करें';
 }
 
 // Path: splash
@@ -139,206 +159,10 @@ class _TranslationsSplashHi implements TranslationsSplashEn {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsSplashInitialHi initial = _TranslationsSplashInitialHi._(_root);
 	@override late final _TranslationsSplashScreen1Hi screen1 = _TranslationsSplashScreen1Hi._(_root);
 	@override late final _TranslationsSplashScreen2Hi screen2 = _TranslationsSplashScreen2Hi._(_root);
-}
-
-// Path: profile
-class _TranslationsProfileHi implements TranslationsProfileEn {
-	_TranslationsProfileHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'प्रोफ़ाइल';
-	@override String get freeVersion => 'मुफ्त संस्करण';
-	@override String get error => 'त्रुटि';
-	@override String get passive => 'निष्क्रिय';
-	@override late final _TranslationsProfileSectionsHi sections = _TranslationsProfileSectionsHi._(_root);
-	@override late final _TranslationsProfileMenuHi menu = _TranslationsProfileMenuHi._(_root);
-	@override String get manage => 'प्रबंधित करें';
-	@override late final _TranslationsProfileLogoutDialogHi logoutDialog = _TranslationsProfileLogoutDialogHi._(_root);
-}
-
-// Path: home
-class _TranslationsHomeHi implements TranslationsHomeEn {
-	_TranslationsHomeHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get premium => 'प्रीमियम!';
-	@override String get seeMore => 'और देखें';
-	@override String get pickUpWhereYouLeftOff => 'जहाँ छोड़ा था वहाँ से जारी रखें';
-	@override String get premiumSection => 'प्रीमियम';
-	@override String get history => 'इतिहास';
-	@override String get librarySection => 'पुस्तकालय';
-	@override String get libraryDescription => 'आपके सहेजे गए शब्द यहाँ दिखाई देंगे।';
-	@override String get upgradeToPremium => 'प्रीमियम में अपग्रेड करें';
-	@override String get unlimitedStories => 'असीमित कहानियाँ और विज्ञापन-मुक्त अनुभव';
-	@override late final _TranslationsHomePremiumPlanHi premiumPlan = _TranslationsHomePremiumPlanHi._(_root);
-}
-
-// Path: allStories
-class _TranslationsAllStoriesHi implements TranslationsAllStoriesEn {
-	_TranslationsAllStoriesHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'सभी कहानियाँ';
-	@override String get noStoriesFound => 'कोई कहानी नहीं मिली';
-	@override String get selectFilter => 'फ़िल्टर चुनें';
-	@override String get category => 'श्रेणी';
-	@override String get categorySubtitle => 'कृपया वह श्रेणी चुनें जो आप पढ़ना चाहते हैं';
-	@override String get apply => 'लागू करें';
-}
-
-// Path: stories
-class _TranslationsStoriesHi implements TranslationsStoriesEn {
-	_TranslationsStoriesHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'कहानियाँ';
-	@override String get popularStories => 'लोकप्रिय कहानियाँ';
-	@override String get recommendForYou => 'आपके लिए अनुशंसित';
-	@override String get allStories => 'सभी कहानियाँ';
-	@override String get seeAll => 'सभी देखें';
-	@override late final _TranslationsStoriesCategoriesHi categories = _TranslationsStoriesCategoriesHi._(_root);
-}
-
-// Path: library
-class _TranslationsLibraryHi implements TranslationsLibraryEn {
-	_TranslationsLibraryHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'पुस्तकालय';
-	@override String wordCount({required Object count}) => '${count} शब्द';
-	@override String get popularWords => 'लोकप्रिय शब्द';
-	@override String get allWords => 'सभी शब्द';
-	@override String get searchWord => 'शब्द खोजें';
-	@override String get searchHint => 'कृपया शब्द दर्ज करें…';
-	@override String get noWordsFound => 'कोई शब्द नहीं मिला';
-	@override String get noSavedWords => 'अभी तक कोई सहेजा गया शब्द नहीं है';
-}
-
-// Path: bottomNav
-class _TranslationsBottomNavHi implements TranslationsBottomNavEn {
-	_TranslationsBottomNavHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get home => 'होम';
-	@override String get stories => 'कहानियाँ';
-	@override String get library => 'पुस्तकालय';
-	@override String get profile => 'प्रोफ़ाइल';
-}
-
-// Path: dayStreak
-class _TranslationsDayStreakHi implements TranslationsDayStreakEn {
-	_TranslationsDayStreakHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'दिन की स्ट्रीक!';
-	@override late final _TranslationsDayStreakDaysHi days = _TranslationsDayStreakDaysHi._(_root);
-}
-
-// Path: storyDetails
-class _TranslationsStoryDetailsHi implements TranslationsStoryDetailsEn {
-	_TranslationsStoryDetailsHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get introduction => 'परिचय';
-	@override String get saved => 'सहेजा गया';
-	@override String get removed => 'हटाया गया';
-	@override String get storyAddedToLibrary => 'कहानी आपकी लाइब्रेरी में जोड़ी गई।';
-	@override String get storyRemovedFromLibrary => 'कहानी लाइब्रेरी से हटाई गई।';
-	@override String get wordAddedToLibrary => 'शब्द लाइब्रेरी में जोड़ा गया। पूर्ववत करें';
-	@override String get successfully => 'सफलतापूर्वक';
-	@override String get ratingSubmitted => 'आपकी रेटिंग सफलतापूर्वक सबमिट की गई।';
-	@override String get warning => 'चेतावनी';
-	@override String get fillAllFields => 'कृपया सभी फ़ील्ड भरें।';
-	@override String get messageSent => 'आपका संदेश सफलतापूर्वक भेजा गया।';
-	@override String get translate => 'अनुवाद करें';
-	@override String get speak => 'बोलें';
-	@override String get like => 'पसंद';
-	@override String get save => 'सहेजें';
-	@override String get feedback => 'प्रतिक्रिया';
-	@override String get rating => 'रेटिंग';
-	@override String get stop => 'रोकें';
-	@override String get start => 'शुरू करें';
-	@override String get listen => 'सुनें';
-	@override String get translation => 'अनुवाद';
-	@override String get translating => 'अनुवाद हो रहा है...';
-	@override String get saveToLibrary => 'लाइब्रेरी में सहेजें';
-	@override String get rateThisStory => 'इस कहानी को रेट करें';
-	@override String get enjoyStory => 'आपको यह कहानी कितनी पसंद आई?';
-	@override String get send => 'भेजें';
-	@override String get subject => 'विषय';
-	@override late final _TranslationsStoryDetailsFeedbackSubjectsHi feedbackSubjects = _TranslationsStoryDetailsFeedbackSubjectsHi._(_root);
-}
-
-// Path: share
-class _TranslationsShareHi implements TranslationsShareEn {
-	_TranslationsShareHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'दोस्तों के साथ साझा करें';
-	@override String get mainTitle => 'शांति साझा करें';
-	@override String get descriptionPart1 => 'दोस्तों को एक साथ सांस लेने के लिए आमंत्रित करें।\nप्रत्येक आमंत्रण के लिए, आप दोनों को मिलता है ';
-	@override String get descriptionPart2 => '1 सप्ताह प्रीमियम';
-	@override String get descriptionPart3 => '';
-	@override String get yourReferralCode => 'आपका रेफरल कोड';
-	@override String get codeCopied => 'कोड कॉपी किया गया!';
-	@override String get copyCode => 'कोड कॉपी करें';
-	@override String get inviteDescription => 'अपने दोस्तों को आमंत्रित करें और\nएक साथ सीखें';
-	@override String get linkCopied => 'कॉपी हो गया';
-	@override String get linkCopiedMessage => 'लिंक क्लिपबोर्ड पर कॉपी हो गया है।';
-}
-
-// Path: editProfile
-class _TranslationsEditProfileHi implements TranslationsEditProfileEn {
-	_TranslationsEditProfileHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'प्रोफ़ाइल संपादित करें';
-	@override String get changePhoto => 'Avatar बदलें';
-	@override String get learnLanguage => 'भाषा सीखें';
-	@override String get fullName => 'पूरा नाम';
-	@override String get email => 'ईमेल';
-	@override String get age => 'आयु';
-	@override String get save => 'सहेजें';
-	@override String get saving => 'सहेज रहा है...';
-	@override String get updateSuccess => 'प्रोफ़ाइल सफलतापूर्वक अपडेट की गई';
-	@override String get updateError => 'प्रोफ़ाइल अपडेट करते समय एक त्रुटि हुई';
-	@override String get deleteAccount => 'खाता हटाएं';
-}
-
-// Path: notifications
-class _TranslationsNotificationsHi implements TranslationsNotificationsEn {
-	_TranslationsNotificationsHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'सूचनाएं';
-	@override String get emptyTitle => 'अभी तक कोई सूचना नहीं';
-	@override String get emptyDescription => 'जब आपकी सीखने की यात्रा के बारे में कोई महत्वपूर्ण अपडेट होगा तो हम आपको सूचित करेंगे।';
-	@override String get premiumBannerTitle => 'प्रीमियम लाभों को\nन चूकें!';
-	@override String get premiumBannerDescription => 'प्रीमियम ग्राहक के रूप में अवसरों का लाभ उठाएं।';
+	@override late final _TranslationsSplashScreen3Hi screen3 = _TranslationsSplashScreen3Hi._(_root);
 }
 
 // Path: auth
@@ -348,24 +172,121 @@ class _TranslationsAuthHi implements TranslationsAuthEn {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get google => 'Continue with Google';
-	@override String get facebook => 'Continue with Facebook';
-	@override String get apple => 'Continue with Apple';
+	@override String get google => 'Google के साथ जारी रखें';
+	@override String get facebook => 'फेसबुक के साथ जारी रखें';
+	@override String get apple => 'एप्पल के साथ जारी रखें';
 	@override String get guest => 'अतिथि के रूप में जारी रखें';
-	@override String signInFailed({required Object error}) => 'साइन इन विफल: ${error}';
+	@override String signInFailed({required Object error}) => 'साइन-इन विफल: ${error}';
 }
 
-// Path: referralCode
-class _TranslationsReferralCodeHi implements TranslationsReferralCodeEn {
-	_TranslationsReferralCodeHi._(this._root);
+// Path: home
+class _TranslationsHomeHi implements TranslationsHomeEn {
+	_TranslationsHomeHi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get inputPlaceholder => '8-अंकीय कोड दर्ज करें';
-	@override String get applying => 'कोड लागू हो रहा है...';
-	@override late final _TranslationsReferralCodeSuccessHi success = _TranslationsReferralCodeSuccessHi._(_root);
-	@override late final _TranslationsReferralCodeErrorsHi errors = _TranslationsReferralCodeErrorsHi._(_root);
+	@override String get seeAll => 'सभी देखें';
+	@override String get more => 'अधिक';
+	@override String get online => 'ऑनलाइन';
+	@override String get offline => 'ऑफलाइन';
+	@override late final _TranslationsHomePlaceholdersHi placeholders = _TranslationsHomePlaceholdersHi._(_root);
+	@override String get greeting => 'नमस्ते,';
+	@override String get guest => 'अतिथि';
+	@override String get thisWeek => 'इस सप्ताह';
+	@override String get continueLearning => 'सीखना जारी रखें';
+	@override String get allLessons => 'सभी पाठ';
+	@override String get startLearning => 'सीखना शुरू करें';
+	@override String resumeActivity({required Object activity}) => '${activity} फिर से शुरू करें';
+	@override String get continueButton => 'जारी रखना';
+	@override String get streakTitle => 'स्ट्रीक स्थिति';
+	@override String streakActive({required Object count}) => 'आपकी अभी ${count} दिन की सीखने की स्ट्रीक है। इसे बनाए रखने के लिए हर दिन एक पाठ पूरा करें।';
+	@override String get streakEmpty => 'आपकी सीखने की स्ट्रीक अभी शुरू नहीं हुई है। इसे शुरू करने के लिए आज एक पाठ पूरा करें।';
+	@override List<String> get weekDays => [
+		'सोम',
+		'मंगल',
+		'बुध',
+		'गुरु',
+		'शुक्र',
+		'बैठा',
+		'सूरज',
+	];
+	@override late final _TranslationsHomeLessonsHi lessons = _TranslationsHomeLessonsHi._(_root);
+	@override String lessonProgress({required Object total, required Object current}) => '${total} का पाठ ${current}';
+}
+
+// Path: notifications
+class _TranslationsNotificationsHi implements TranslationsNotificationsEn {
+	_TranslationsNotificationsHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get today => 'आज';
+	@override String get yesterday => 'कल';
+	@override String weekAgo({required Object week}) => '${week} सप्ताह पहले';
+	@override String monthAgo({required Object month}) => '${month} महीना पहले';
+	@override String yearAgo({required Object year}) => '${year} वर्ष पहले';
+	@override String get noNotifications => 'अभी तक कोई सूचना नहीं.';
+	@override String get noNotificationsSubtitle => 'सूचना मिलने पर दोबारा जांच करना न भूलें।';
+	@override String get allDeleted => 'सभी सूचनाएं सफलतापूर्वक हटा दी गई हैं';
+}
+
+// Path: editProfile
+class _TranslationsEditProfileHi implements TranslationsEditProfileEn {
+	_TranslationsEditProfileHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get aboutMe => 'मेरे बारे में';
+	@override String get aboutMeHint => 'अपने बारे में कुछ लिखें';
+	@override String get fullName => 'पूरा नाम';
+	@override String get gender => 'लिंग';
+	@override String get male => 'पुरुष';
+	@override String get female => 'महिला';
+	@override String get dontWantToMention => 'मैं इसका जिक्र नहीं करना चाहता.';
+	@override String get country => 'देश';
+	@override String get languagePreferences => 'भाषा प्राथमिकताएँ';
+	@override String get selectLanguage => 'अपनी पसंदीदा भाषा जोड़ें';
+	@override String get saved => 'सहेजा गया';
+	@override String get changesSaved => 'परिवर्तन सहेजे गए हैं.';
+}
+
+// Path: settingsSupport
+class _TranslationsSettingsSupportHi implements TranslationsSettingsSupportEn {
+	_TranslationsSettingsSupportHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'सेटिंग्स और समर्थन';
+	@override String get premiumTitle => 'सभी सुविधाओं तक असीमित पहुंच\n';
+	@override String get getPremium => 'प्रीमियम प्राप्त करें';
+	@override String get settingsHub => 'सेटिंग्स हब';
+	@override String get shareTheApp => 'ऐप साझा करें';
+	@override String get rateUs => 'हमें रेटिंग दें';
+	@override String get version => 'संस्करण';
+	@override String get notifications => 'सूचनाएं';
+	@override String get accountManagement => 'खाता प्रबंधन';
+	@override String get deleteAccount => 'खाता हटा दो';
+	@override String get logOut => 'लॉग आउट';
+	@override String get logOutTitle => 'आप लॉग आउट होने वाले हैं';
+	@override String get logOutSubtitle => 'जल्द ही तुम्हें देखेंगे!  [न्यूलाइन] हम आपको याद करेंगे।';
+}
+
+// Path: deleteAccount
+class _TranslationsDeleteAccountHi implements TranslationsDeleteAccountEn {
+	_TranslationsDeleteAccountHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'खाता हटा दो';
+	@override String get warning => 'क्या आप इस खाते को हटाने के लिए सुनिश्चित हैं?';
+	@override String get description => 'यह क्रिया पूर्ववत नहीं की जा सकती और आपका सारा इतिहास और डेटा स्थायी रूप से हटा दिया जाएगा।';
+	@override String deleteFailed({required Object error}) => 'खाता हटाना विफल: ${error}';
+	@override late final _TranslationsDeleteAccountStepsHi steps = _TranslationsDeleteAccountStepsHi._(_root);
 }
 
 // Path: languageOptions
@@ -376,16 +297,96 @@ class _TranslationsLanguageOptionsHi implements TranslationsLanguageOptionsEn {
 
 	// Translations
 	@override String get english => 'अंग्रेज़ी';
+	@override String get chinese => 'चीनी';
 	@override String get german => 'जर्मन';
 	@override String get italian => 'इतालवी';
-	@override String get french => 'फ्रेंच';
+	@override String get french => 'फ़्रेंच';
 	@override String get japanese => 'जापानी';
-	@override String get spanish => 'स्पेनिश';
+	@override String get spanish => 'स्पैनिश';
 	@override String get russian => 'रूसी';
 	@override String get turkish => 'तुर्की';
 	@override String get korean => 'कोरियाई';
 	@override String get hindi => 'हिंदी';
 	@override String get portuguese => 'पुर्तगाली';
+}
+
+// Path: common
+class _TranslationsCommonHi implements TranslationsCommonEn {
+	_TranslationsCommonHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get tryAgain => 'पुनः प्रयास करें';
+	@override String get retry => 'पुन: प्रयास करें';
+	@override String get close => 'बंद करना';
+}
+
+// Path: profileScreen
+class _TranslationsProfileScreenHi implements TranslationsProfileScreenEn {
+	_TranslationsProfileScreenHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'प्रोफ़ाइल';
+	@override String get greeting => 'नमस्ते,';
+	@override String get account => 'खाता';
+	@override String get app => 'अनुप्रयोग';
+	@override String get statusLoading => 'स्थिति लोड हो रही है';
+	@override String get premiumActive => 'सक्रिय • प्रो सदस्य';
+	@override String get freePlan => 'निःशुल्क योजना';
+	@override String get loadFailed => 'प्रोफ़ाइल जानकारी लोड नहीं की जा सकी. पुनः प्रयास करने के लिए नीचे खींचें.';
+	@override String get accountSettings => 'अकाउंट सेटिंग';
+	@override String get accountSettingsGuestSubtitle => 'नाम और अवतार';
+	@override String get accountSettingsSubtitle => 'नाम, फोटो, ई-मेल';
+	@override String get manageSubscription => 'सदस्यता प्रबंधित करें';
+	@override String get screenTime => 'स्क्रीन टाइम';
+	@override String get changeLanguage => 'बदलें';
+	@override String get changeLanguageSubtitle => 'एप्लिकेशन की भाषा बदलें';
+	@override String get rateApp => 'एप्लिकेशन की श्रेणी बताओ';
+	@override String get supportUs => 'हमें प्रोत्साहन दें';
+	@override String get rateComingSoon => 'रेटिंग जल्द ही उपलब्ध होगी.';
+	@override String get privacyPolicy => 'गोपनीयता नीति';
+	@override String get privacySubtitle => 'डेटा सुरक्षित रखें';
+	@override String get termsOfService => 'सेवा की शर्तें';
+	@override String get termsSubtitle => 'डेटा और शर्तें';
+	@override String get logout => 'लॉग आउट';
+	@override String get logoutDialogTitle => 'आप अपने खाते से\nलॉग आउट करने वाले हैं';
+	@override String get logoutFailed => 'लॉग आउट नहीं हो सका. कृपया पुन: प्रयास करें।';
+	@override String get subscriptionFailed => 'सदस्यता स्क्रीन नहीं खोली जा सकी. कृपया पुन: प्रयास करें।';
+	@override String screenTimeMinutes({required Object minutes}) => 'आज ${minutes} मिनट';
+	@override String screenTimeHours({required Object hours}) => 'आज ${hours} घंटे';
+	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'आज ${hours} घंटे ${minutes} मिनट';
+	@override String get trialSubscriptionTitle => 'ट्रायल प्रीमियम सक्रिय';
+	@override String get trialSubscriptionPrompt => 'आप वर्तमान में एक ट्रायल प्रीमियम सब्सक्रिप्शन का उपयोग कर रहे हैं. क्या आप सब्सक्राइब करना चाहेंगे?';
+	@override String get yes => 'हाँ';
+	@override String get no => 'नहीं';
+}
+
+// Path: editProfileScreen
+class _TranslationsEditProfileScreenHi implements TranslationsEditProfileScreenEn {
+	_TranslationsEditProfileScreenHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get changeAvatar => 'परिवर्तन अवतार';
+	@override String get email => 'ई-मेल';
+	@override String get emailHelper => 'यह फ़ील्ड आपके बैकएंड खाते से आती है.';
+	@override String get deleteDialogTitle => 'क्या आप वाकई\nअपना खाता हटाना चाहते हैं?';
+	@override String get accountDeleteFailed => 'खाता हटाया नहीं जा सका. कृपया पुन: प्रयास करें।';
+	@override String get profileSaveFailed => 'प्रोफ़ाइल सहेजी नहीं जा सकी. कृपया पुन: प्रयास करें।';
+}
+
+// Path: premiumAccess
+class _TranslationsPremiumAccessHi implements TranslationsPremiumAccessEn {
+	_TranslationsPremiumAccessHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get openFailed => 'प्रीमियम स्क्रीन नहीं खोली जा सकी. कृपया पुन: प्रयास करें।';
 }
 
 // Path: parentalGate
@@ -395,37 +396,52 @@ class _TranslationsParentalGateHi implements TranslationsParentalGateEn {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'सिर्फ़ माता-पिता के लिए';
-	@override String get subtitle => 'जारी रखने के लिए कृपया निम्नलिखित गणितीय प्रश्न हल करें:';
-	@override String get hint => 'उत्तर';
-	@override String get incorrect => 'गलत उत्तर, कृपया फिर से प्रयास करें।';
+	@override String get barrierLabel => 'पैतृक द्वार';
+	@override String get question => 'इस ऑपरेशन का परिणाम क्या है?';
+	@override String get wrongAnswer => 'गलत उत्तर. कृपया पुन: प्रयास करें.';
+	@override String get submit => 'जमा करना';
 }
 
-// Path: termOfService.privacyPolicy
-class _TranslationsTermOfServicePrivacyPolicyHi implements TranslationsTermOfServicePrivacyPolicyEn {
-	_TranslationsTermOfServicePrivacyPolicyHi._(this._root);
+// Path: activities
+class _TranslationsActivitiesHi implements TranslationsActivitiesEn {
+	_TranslationsActivitiesHi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'गोपनीयता नीति';
-	@override String get lastUpdated => 'अंतिम अपडेट: 2025';
-	@override String get intro => 'Lingola Stories Kids बाल गोपनीयता और डेटा सुरक्षा को मूल सिद्धांत के रूप में अपनाता है।';
-	@override String get section1Title => '1. एकत्र की गई जानकारी';
-	@override String get section1sub1Title => '1.1 उपयोगकर्ता द्वारा प्रदान किया गया डेटा';
-	@override String get section1sub1Body => 'उपनाम या प्रोफ़ाइल नाम।\nईमेल पता।\nआयु जानकारी।\nभाषा स्तर और सीखे गए शब्द।\n\nनोट: स्वास्थ्य विश्लेषण के लिए कभी उपयोग नहीं।';
-	@override String get section1sub2Title => '1.2 स्वचालित रूप से एकत्र';
-	@override String get section1sub2Body => 'डिवाइस प्रकार, OS और ऐप प्रदर्शन। सटीक स्थान एकत्र नहीं किया जाता।';
-	@override String get section2Title => '2. डेटा प्रसंस्करण के उद्देश्य';
-	@override String get section2Body => 'डेटा केवल इन उद्देश्यों के लिए:\n\n- आयु-उपयुक्त सामग्री।\n- सीखने का व्यक्तिगतकरण।\n- ऐप प्रदर्शन सुधार।\n- कानूनी दायित्व।';
-	@override String get section3Title => '3. डेटा संरक्षण और हटाना';
-	@override String get section3Body => 'खाता सक्रिय रहने तक संग्रहीत। सहायता रिकॉर्ड 12 महीने। खाता हटाने पर डेटा अपरिवर्तनीय रूप से मिट जाता है।';
-	@override String get section4Title => '4. उपयोगकर्ता अधिकार';
-	@override String get section4Body => 'GDPR/KVKK के तहत माता-पिता डेटा तक पहुँच, सुधार या हटाने का अनुरोध कर सकते हैं। support@fly-work.com';
-	@override String get section5Title => '5. बाल गोपनीयता';
-	@override String get section5Body => '6 वर्ष और उससे अधिक के लिए। 13 वर्ष से कम के लिए माता-पिता की सहमति आवश्यक।';
-	@override String get section6Title => '6. संपर्क';
-	@override String get section6Body => '📩 पूछताछ: support@fly-work.com';
+	@override String get flashCards => 'फ़्लैश कार्ड';
+	@override String get drawing => 'चित्रकला';
+	@override String get flipCards => 'कार्ड पलटें';
+	@override String get trueFalse => 'सच्चा झूठ';
+	@override String get spelling => 'वर्तनी';
+}
+
+// Path: resultSheet
+class _TranslationsResultSheetHi implements TranslationsResultSheetEn {
+	_TranslationsResultSheetHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get correct => 'सही';
+	@override String get tryAgain => 'पुनः प्रयास करें';
+	@override String get correctBody => 'आप बहुत अच्छा कर रहे हैं!';
+	@override String get tryAgainBody => 'एक बार और प्रयास करें!';
+}
+
+// Path: trueFalseView
+class _TranslationsTrueFalseViewHi implements TranslationsTrueFalseViewEn {
+	_TranslationsTrueFalseViewHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String isThisLetter({required Object letter}) => 'क्या यह पत्र ${letter} है?';
+	@override String isThisNumber({required Object number}) => 'क्या यह संख्या ${number} है?';
+	@override String isThisShape({required Object shape}) => 'क्या यह आकृति ${shape} है?';
+	@override String isThisSubject({required Object subject}) => 'क्या यह ${subject} है?';
+	@override String get trueText => 'सत्य';
+	@override String get falseText => 'असत्य';
 }
 
 // Path: termOfService.termsOfService
@@ -435,26 +451,45 @@ class _TranslationsTermOfServiceTermsOfServiceHi implements TranslationsTermOfSe
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'सेवा की शर्तें';
-	@override String get lastUpdated => 'अंतिम अपडेट: 2025';
-	@override String get intro => 'ये शर्तें Lingola Stories Kids के उपयोग को नियंत्रित करती हैं। ऐप उपयोग करके, आप इन शर्तों से सहमत होते हैं।';
-	@override String get disclaimer => 'अस्वीकरण: Lingola Stories Kids एक शैक्षिक उपकरण है, आधिकारिक शिक्षा नहीं।';
-	@override String get section1Title => '1. सेवा का दायरा';
-	@override String get section1Body => 'ऐप बच्चों के लिए कहानी-आधारित सीखने का अनुभव:\n\n- AI-संचालित कहानियाँ।\n- आयु-आधारित पठन।\n- शब्दावली और उच्चारण सहायता।';
-	@override String get section2Title => '2. उपयोग की शर्तें और आयु';
-	@override String get section2Body => 'कम से कम 6 वर्ष की आयु।\n18 वर्ष से कम माता-पिता की निगरानी में।\nसटीक खाता जानकारी।';
-	@override String get section3Title => '3. निषिद्ध उपयोग';
-	@override String get section3Body => 'अनधिकृत प्रतिलिपि, रिवर्स इंजीनियरिंग और व्यावसायिक उपयोग प्रतिबंधित है।';
-	@override String get section4Title => '4. सदस्यता और भुगतान';
-	@override String get section4Body => 'प्रीमियम सुविधाएं App Store और Google Play नीतियों के अधीन।';
-	@override String get section5Title => '5. बौद्धिक संपदा';
-	@override String get section5Body => 'सभी सामग्री Lingola Stories Kids की है।';
-	@override String get section6Title => '6. देयता का सीमांकन';
-	@override String get section6Body => 'ऐप यथावत प्रदान किया जाता है।';
-	@override String get section7Title => '7. शासी कानून';
-	@override String get section7Body => 'तुर्की गणराज्य के कानूनों द्वारा शासित।';
-	@override String get section8Title => '8. संपर्क';
-	@override String get section8Body => '📩 पूछताछ: support@fly-work.com';
+	@override String get title => 'लिंगोला किड्स - सेवा की शर्तें';
+	@override String get lastUpdated => 'अंतिम अपडेट: 2026';
+	@override String get intro => 'ये सेवा की शर्तें ("शर्तें") लिंगोला किड्स मोबाइल एप्लिकेशन ("ऐप") का उपयोग करने के नियमों और शर्तों को नियंत्रित करती हैं। ऐप को डाउनलोड या उपयोग करके, आप इन शर्तों से सहमत होते हैं।';
+	@override String get section1Title => '1. सेवा का दायरा और अस्वीकरण';
+	@override String get section1Body => 'लिंगोला किड्स बच्चों को अंग्रेजी शब्दावली सीखने में मदद करने के लिए दृश्य, ऑडियो फ्लैशकार्ड और शैक्षिक खेल प्रदान करता है। ऐप कोई आधिकारिक शैक्षणिक संस्थान नहीं है; यह परीक्षा की सफलता, शैक्षणिक डिग्री या भाषा प्रवीणता प्रमाण पत्र की गारंटी नहीं देता है।';
+	@override String get section2Title => '2. उपयोग की शर्तें';
+	@override String get section2Body => '- ऐप 4 वर्ष और उससे अधिक उम्र के बच्चों के लिए बनाया गया है।\n- 13/18 वर्ष से कम उम्र के उपयोगकर्ताओं को माता-पिता या कानूनी अभिभावक की देखरेख में ऐप का उपयोग करने की सख्त सलाह दी जाती है।\n- एक माता-पिता या कानूनी अभिभावक के रूप में, अपने बच्चे को ऐप का उपयोग करने की अनुमति देकर, आप उनकी ओर से इन शर्तों से सहमत होते हैं।\n- ऐप सामग्री की अनधिकृत प्रतिलिपि बनाना, बेचना, रिवर्स इंजीनियरिंग, या थोक वितरण सख्त वर्जित है।';
+	@override String get section3Title => '3. प्रीमियम और सशुल्क सेवाएं';
+	@override String get section3Body => 'सशुल्क सेवाओं के लिए भुगतान, जैसे प्रीमियम शब्दावली पैक और विज्ञापन-मुक्त उपयोग, ऐप स्टोर या Google Play के माध्यम से संसाधित किए जाते हैं। स्वचालित रूप से नवीनीकृत होने वाली सदस्यताओं को रद्द करने का प्रबंधन उपयोगकर्ता/माता-पिता द्वारा उनके स्टोर खाते के माध्यम से किया जाता है। लिंगोला किड्स सीधे रिफंड प्रदान नहीं करता है।';
+	@override String get section4Title => '4. लर्निंग डेटा और गोपनीयता';
+	@override String get section4Body => 'उपयोगकर्ता अनुभव और प्रगति ट्रैकिंग को बेहतर बनाने के लिए संसाधित किए गए लर्निंग डेटा (सीखे गए शब्द, पूरी की गई गतिविधियां) हमारी गोपनीयता नीति के तहत सुरक्षित हैं। ऐप का उपयोग करने वाले किसी भी व्यक्ति को गोपनीयता नीति स्वीकार करने वाला माना जाता है।';
+	@override String get section5Title => '5. शासी कानून';
+	@override String get section5Body => 'ये शर्तें तुर्की गणराज्य के कानूनों द्वारा शासित होती हैं। इस्तांबुल सेंट्रल कोर्ट्स और एनफोर्समेंट ऑफिस का किसी भी विवाद पर अधिकार क्षेत्र होगा।';
+	@override String get section6Title => '6. संपर्क';
+	@override String get section6Body => '📩 किसी भी प्रश्न, अनुरोध या नोटिस के लिए, आप हमसे यहां संपर्क कर सकते हैं: support@fly-work.com';
+}
+
+// Path: termOfService.privacyPolicy
+class _TranslationsTermOfServicePrivacyPolicyHi implements TranslationsTermOfServicePrivacyPolicyEn {
+	_TranslationsTermOfServicePrivacyPolicyHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'लिंगोला किड्स - गोपनीयता नीति';
+	@override String get lastUpdated => 'अंतिम अपडेट: 2026';
+	@override String get intro => 'लिंगोला किड्स में आपका स्वागत है। बच्चों और परिवारों की गोपनीयता की रक्षा करना हमारी सर्वोच्च प्राथमिकता है। यह गोपनीयता नीति बताती है कि कौन सी जानकारी एकत्र की जाती है, उपयोग की जाती है, सुरक्षित की जाती है, और उपयोगकर्ता अपने डेटा का प्रबंधन कैसे कर सकते हैं।';
+	@override String get section1Title => '1. एकत्र की गई जानकारी';
+	@override String get section1Body => '- उपयोगकर्ता/माता-पिता द्वारा प्रदान किया गया: ईमेल पता (यदि खाता बनाया गया है), उपयोगकर्ता नाम, भाषा और सीखने की प्राथमिकताएं, सहेजे गए शब्द।\n- स्वचालित रूप से एकत्र किया गया: डिवाइस मॉडल, ऑपरेटिंग सिस्टम, आईपी एड्रेस, ऐप संस्करण, क्रैश लॉग और सीखने की प्रगति का डेटा।';
+	@override String get section2Title => '2. बच्चों की गोपनीयता (महत्वपूर्ण)';
+	@override String get section2Body => 'लिंगोला किड्स 4 वर्ष और उससे अधिक उम्र के बच्चों के लिए बनाया गया है। बच्चों का डेटा संरक्षण हमारा मुख्य फोकस है:\n- हम बच्चों से अनावश्यक या संवेदनशील व्यक्तिगत डेटा एकत्र नहीं करते हैं।\n- बच्चों को सार्वजनिक रूप से संपर्क विवरण साझा करने की अनुमति या प्रेरित नहीं किया जाता है।\n- बच्चों को लक्षित करने वाली व्यवहारिक या व्यक्तिगत विज्ञापन प्रोफ़ाइलिंग सख्त वर्जित है।\n- माता-पिता या कानूनी अभिभावक किसी भी समय अपने बच्चे के डेटा की समीक्षा करने या उसे हटाने का अनुरोध कर सकते हैं।';
+	@override String get section3Title => '3. डेटा प्रोसेसिंग और साझाकरण के उद्देश्य';
+	@override String get section3Body => 'आपके डेटा को सीखने की प्रगति को ट्रैक करने, शब्दावली सामग्री को वैयक्तिकृत करने और तकनीकी समस्याओं को ठीक करने के लिए संसाधित किया जाता है। व्यावसायिक उपयोग के लिए व्यक्तिगत जानकारी कभी भी तीसरे पक्ष को बेची या साझा नहीं की जाती है। विश्वसनीय सेवा प्रदाता (क्लाउड स्टोरेज, प्रमाणीकरण और सदस्यता प्रबंधन) डेटा को उनकी गोपनीयता दायित्वों के तहत कड़ाई से संसाधित करते हैं।';
+	@override String get section4Title => '4. उपयोगकर्ता और माता-पिता के अधिकार';
+	@override String get section4Body => 'उपयोगकर्ताओं और माता-पिता को पहुंच प्राप्त करने, सुधार करने, खाता हटाने का अनुरोध करने और डेटा को स्थायी रूप से हटाने की मांग करने का अधिकार है। आप हमारी सहायता टीम से संपर्क करके इन अधिकारों का प्रयोग कर सकते हैं।';
+	@override String get section5Title => '5. डेटा सुरक्षा और प्रतिधारण';
+	@override String get section5Body => 'डेटा उद्योग-मानक एन्क्रिप्शन और एक्सेस नियंत्रण के माध्यम से सुरक्षित है। सीखने के आंकड़े तब तक संग्रहीत किए जाते हैं जब तक कि निरंतरता सुनिश्चित करने के लिए खाता सक्रिय रहता है और खाता हटाए जाने पर इसे मिटा दिया जाता है।';
+	@override String get section6Title => '6. संपर्क';
+	@override String get section6Body => '📩 गोपनीयता पूछताछ, डेटा हटाने या माता-पिता के अनुरोधों के लिए, हमसे संपर्क करें: support@fly-work.com';
 }
 
 // Path: termOfService.cookiePolicy
@@ -465,21 +500,40 @@ class _TranslationsTermOfServiceCookiePolicyHi implements TranslationsTermOfServ
 
 	// Translations
 	@override String get title => 'कुकी नीति';
-	@override String get lastUpdated => 'अंतिम अपडेट: 2025';
-	@override String get intro => 'यह नीति बताती है कि ऐप उपयोग के दौरान कौन सी डिजिटल तकनीकें उपयोग की जाती हैं।';
-	@override String get important => 'महत्वपूर्ण: बाल गोपनीयता हमारा मूल सिद्धांत है। ऐप 6 वर्ष और उससे अधिक उम्र के लिए है।';
+	@override String get lastUpdated => 'अंतिम अपडेट: 2026';
+	@override String get intro => 'Lingola Kids में आपका स्वागत है। आपके एआई (AI) वीडियो कॉल अनुभव को आसान, अधिक सुरक्षित और व्यक्तिगत बनाने के लिए डिजिटल सहायक तकनीकों का उपयोग किया जाता है।';
+	@override String get important => 'यह नीति बताती है कि कुकीज़ क्या हैं, उनके उद्देश्य क्या हैं, और आप अपनी प्राथमिकताओं का प्रबंधन कैसे कर सकते हैं।';
 	@override String get section1Title => '1. कुकीज़ क्या हैं?';
-	@override String get section1Body => 'कुकीज़ और समान तकनीकें छोटे डिजिटल घटक हैं जो ऐप को सही ढंग से काम करने में मदद करते हैं।';
-	@override String get section2Title => '2. हम कौन सी तकनीकें उपयोग करते हैं?';
-	@override String get section2Body => 'आवश्यक: सत्र प्रबंधन और सुरक्षा।\n\nप्रदर्शन और विश्लेषण: पढ़ी जाने वाली कहानियाँ, अनाम डेटा।\n\nव्यक्तिगतकरण: भाषा और पठन स्तर।';
-	@override String get section3Title => '3. हम इनका उपयोग क्यों करते हैं?';
-	@override String get section3Body => '- सुरक्षित और सुचारु ऐप।\n- बेहतर पठन अनुभव।\n- सेटिंग्स याद रखना।\n- भविष्य की सुविधाएं।';
-	@override String get section4Title => '4. तृतीय-पक्ष तकनीकें';
-	@override String get section4Body => 'हम न्यूनतम डेटा उपयोग सिद्धांत लागू करते हैं।';
-	@override String get section5Title => '5. नियंत्रण और प्रबंधन';
-	@override String get section5Body => 'माता-पिता डिवाइस सेटिंग्स से इन तकनीकों को सीमित कर सकते हैं।';
+	@override String get section1Body => 'कुकीज़ आपके डिवाइस पर रखी गई छोटी डेटा फ़ाइलें हैं। वे आपको सीधे पहचानती नहीं हैं; वे डिजिटल नोट्स के रूप में कार्य करती हैं जो याद रखती हैं:\n• कॉल और भाषा सेटिंग्स\n• सत्र और प्रदर्शन प्राथमिकताएं।';
+	@override String get section2Title => '2. हम किन तकनीकों का उपयोग करते हैं?';
+	@override String get section2Body => 'सख्ती से आवश्यक प्रौद्योगिकियां\nसत्र प्रबंधन और सुरक्षा नियंत्रण के लिए आवश्यक। इन घटकों के बिना ऐप ठीक से काम नहीं कर सकता है।\n\nप्रदर्शन और एनालिटिक्स\nहमें यह समझने में मदद करता है कि कौन सी कहानियां पढ़ी जाती हैं और किन क्षेत्रों में सुधार की आवश्यकता है। डेटा का अनाम रूप से मूल्यांकन किया जाता है।\n\nवैयक्तिकरण\nबच्चे के लिए एक अनुरूप अनुभव प्रदान करने के लिए भाषा वरीयता और पढ़ने के स्तर जैसी सेटिंग्स को याद रखता है।';
+	@override String get section3Title => '3. हम इन तकनीकों का उपयोग क्यों करते हैं?';
+	@override String get section3Body => '• यह सुनिश्चित करने के लिए कि ऐप सुरक्षित रूप से और सुचारू रूप से चलता है।\n• पढ़ने के अनुभव को अधिक तरल बनाने के लिए।\n• दोहराव वाली सेटिंग्स को याद रखने के लिए।\n• भविष्य के विकास के लिए सुविधाओं की पहचान करने के लिए।';
+	@override String get section4Title => '4. तृतीय-पक्ष प्रौद्योगिकियां';
+	@override String get section4Body => 'कुछ प्रौद्योगिकियां तकनीकी सेवा प्रदाताओं द्वारा प्रदान की जा सकती हैं और उनकी अपनी नीतियों के अधीन हैं। Lingola Kids इन साझेदारियों में डेटा सुरक्षा को प्राथमिकता देता है।';
+	@override String get section5Title => '5. कुकी नियंत्रण और प्रबंधन';
+	@override String get section5Body => 'उपयोगकर्ता डिवाइस या ऐप सेटिंग्स के माध्यम से इन तकनीकों को सीमित कर सकते हैं। आवश्यक तकनीकों को अक्षम करने से वीडियो कॉल शुरू करने में असमर्थ होने जैसी समस्याएं हो सकती हैं।';
 	@override String get section6Title => '6. संपर्क';
-	@override String get section6Body => '📩 पूछताछ: support@fly-work.com';
+	@override String get section6Body => '📩 पूछताछ के लिए: support@fly-work.com';
+}
+
+// Path: onboarding.step5
+class _TranslationsOnboardingStep5Hi implements TranslationsOnboardingStep5En {
+	_TranslationsOnboardingStep5Hi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get permissionRequired => 'अनुमति आवश्यक है';
+	@override String get notNow => 'अभी नहीं';
+	@override String get openSettings => 'खुली सेटिंग';
+	@override String get title => 'अनुमतियां';
+	@override String get permission1 => 'कैमरा एक्सेस';
+	@override String get permission1Subtitle => 'Lingola Kids एआई वर्णों के साथ वीडियो कॉल के लिए आपके कैमरे का उपयोग करता है।';
+	@override String get permission2 => 'माइक्रोफ़ोन एक्सेस';
+	@override String get permission2Subtitle => 'Lingola Kids ध्वनि और वीडियो कॉल के लिए आपके माइक्रोफ़ोन का उपयोग करता है।';
+	@override String get permission3 => 'स्थान पहुंच';
+	@override String get permission3Subtitle => 'Lingola Kids आपके अनुभव को निजीकृत करने के लिए आपके स्थान का उपयोग करता है।';
 }
 
 // Path: onboarding.step1
@@ -489,8 +543,9 @@ class _TranslationsOnboardingStep1Hi implements TranslationsOnboardingStep1En {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'आप अंग्रेज़ी किस भाषा में अनुवाद करके सीखना चाहते हैं?';
-	@override String get subtitle => 'कृपया वह भाषा चुनें जिसमें आप अंग्रेज़ी को अनुवाद करके सीखना चाहते हैं।';
+	@override String get title => 'आपका क्या नाम है?';
+	@override String get subtitle => 'कृपया अपना नाम दर्ज करें';
+	@override String get hint => 'पूरा नाम';
 }
 
 // Path: onboarding.step2
@@ -500,9 +555,41 @@ class _TranslationsOnboardingStep2Hi implements TranslationsOnboardingStep2En {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'आपको किस तरह की कहानियाँ\nपसंद हैं?';
-	@override String get subtitle => 'कृपया अपनी पसंद बताएं।';
-	@override late final _TranslationsOnboardingStep2CategoriesHi categories = _TranslationsOnboardingStep2CategoriesHi._(_root);
+	@override String get title => 'तुम्हारी उम्र क्या है?';
+	@override String get subtitle => 'पंजीकरण के लिए आपकी आयु कम से कम 18 वर्ष होनी चाहिए।';
+}
+
+// Path: onboarding.step3
+class _TranslationsOnboardingStep3Hi implements TranslationsOnboardingStep3En {
+	_TranslationsOnboardingStep3Hi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'आपका लिंग क्या है?';
+	@override String get subtitle => 'कृपया अपना लिंग चुनें';
+	@override String get male => 'पुरुष';
+	@override String get female => 'महिला';
+	@override String get dontWantToMention => 'मैं इसका जिक्र नहीं करना चाहता.';
+}
+
+// Path: onboarding.step4
+class _TranslationsOnboardingStep4Hi implements TranslationsOnboardingStep4En {
+	_TranslationsOnboardingStep4Hi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => '[न्यूलाइन] सुरक्षित रहते हुए आनंद लें';
+	@override String get entry1 => 'हम व्यवस्था बनाए रखते हैं';
+	@override String get subentry1 => 'रीयल-टाइम एआई मॉनिटरिंग ओपन';
+	@override String get entry2 => 'स्क्रीन रिकॉर्डिंग';
+	@override String get subentry2 => 'सहमति के बिना कोई रिकॉर्डिंग नहीं';
+	@override String get entry3 => '24/7 सहायता';
+	@override String get subentry3 => 'शिकायतों की समीक्षा दिन के किसी भी समय की जाती है';
+	@override String get entry4 => 'केवल 18+';
+	@override String get subentry4 => 'अवयस्कों के लिए उपयुक्त नहीं';
+	@override String get communityRules => 'सामुदायिक नियम';
 }
 
 // Path: onboarding.loading
@@ -512,29 +599,64 @@ class _TranslationsOnboardingLoadingHi implements TranslationsOnboardingLoadingE
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get titlePart1 => 'आपका व्यक्तिगत खाता\n';
+	@override String get titlePart1 => 'आपका व्यक्तिगत खाता है\n';
 	@override String get titlePart2 => 'बनाया जा रहा है';
-	@override String get subtitle => 'हम आपके लिए अद्भुत कहानियाँ बना रहे हैं';
-	@override String get optimization => 'अनुकूलन';
+	@override String get subtitle => 'कृपया प्रतीक्षा करें, आपकी प्रोफ़ाइल तैयार की जा रही है।';
 }
 
-// Path: faq.questions
-class _TranslationsFaqQuestionsHi implements TranslationsFaqQuestionsEn {
-	_TranslationsFaqQuestionsHi._(this._root);
+// Path: onboarding.kFinal
+class _TranslationsOnboardingKFinalHi implements TranslationsOnboardingKFinalEn {
+	_TranslationsOnboardingKFinalHi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override late final _TranslationsFaqQuestionsQ1Hi q1 = _TranslationsFaqQuestionsQ1Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ2Hi q2 = _TranslationsFaqQuestionsQ2Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ3Hi q3 = _TranslationsFaqQuestionsQ3Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ4Hi q4 = _TranslationsFaqQuestionsQ4Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ5Hi q5 = _TranslationsFaqQuestionsQ5Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ6Hi q6 = _TranslationsFaqQuestionsQ6Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ7Hi q7 = _TranslationsFaqQuestionsQ7Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ8Hi q8 = _TranslationsFaqQuestionsQ8Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ9Hi q9 = _TranslationsFaqQuestionsQ9Hi._(_root);
-	@override late final _TranslationsFaqQuestionsQ10Hi q10 = _TranslationsFaqQuestionsQ10Hi._(_root);
+	@override String get titlePart1 => 'आपका व्यक्तिगत खाता है\n';
+	@override String get titlePart2 => 'बनाया था';
+	@override String get subtitle => 'किसी भी पात्र के साथ संचार का आनंद लें';
+}
+
+// Path: onboarding.login
+class _TranslationsOnboardingLoginHi implements TranslationsOnboardingLoginEn {
+	_TranslationsOnboardingLoginHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'अपनी\nसीखने की यात्रा जारी रखें';
+	@override String get subtitle => 'प्रगति सहेजें, पाठ अनलॉक करें और\nविभिन्न डिवाइसों पर सीखते रहें।';
+	@override String get failed => 'साइन-इन पूरा नहीं हो सका.';
+}
+
+// Path: onboarding.reward
+class _TranslationsOnboardingRewardHi implements TranslationsOnboardingRewardEn {
+	_TranslationsOnboardingRewardHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get points => '⭐️ +50 अंक';
+	@override String get title => 'महान कार्य 🎉';
+	@override String get subtitle => '200 से अधिक पाठ आपकी प्रतीक्षा कर रहे हैं!';
+	@override String get progressLabel => 'पहला चरण पूरा हुआ!';
+	@override String get featureAlphabetTitle => 'पूर्ण वर्णमाला एवं संख्याएँ';
+	@override String get featureAlphabetSubtitle => '200+ इंटरैक्टिव पाठ';
+	@override String get featureVoiceTitle => 'स्वर उच्चारण';
+	@override String get featureVoiceSubtitle => 'हर शब्द के लिए ऑडियो समर्थन';
+	@override String get featureQuizTitle => 'चंचल मिनी क्विज़';
+	@override String get featureQuizSubtitle => 'आनंद लेते हुए सीखें';
+	@override String get continueButton => 'अन्वेषण करते रहें';
+}
+
+// Path: splash.initial
+class _TranslationsSplashInitialHi implements TranslationsSplashInitialEn {
+	_TranslationsSplashInitialHi._(this._root);
+
+	final TranslationsHi _root; // ignore: unused_field
+
+	// Translations
+	@override String get hello => 'नमस्ते';
+	@override String get title => 'बच्चों के लिए चंचल अंग्रेजी';
 }
 
 // Path: splash.screen1
@@ -544,8 +666,8 @@ class _TranslationsSplashScreen1Hi implements TranslationsSplashScreen1En {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'कहानियों के साथ अंग्रेजी सीखें';
-	@override String get description => 'कोई उबाऊ याददाश्त नहीं। छोटी और मजेदार कहानियों के माध्यम से शब्दों को उनके प्राकृतिक प्रवाह में खोजें।';
+	@override String get title => 'अंग्रेजी सीखना\nखेलने जैसा महसूस हो सकता है';
+	@override String get description => 'छोटे, चंचल पाठ बच्चों को बिना दबाव के नए शब्द सीखने में मदद करते हैं।';
 }
 
 // Path: splash.screen2
@@ -555,342 +677,118 @@ class _TranslationsSplashScreen2Hi implements TranslationsSplashScreen2En {
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'आर्टिफिशियल इंटेलिजेंस आपको मार्गदर्शन करता है';
-	@override String get description => 'यह उन शब्दों का ट्रैक रखता है जिनसे आप संघर्ष करते हैं, उनके अर्थ को समझाता है, और आपके स्तर के अनुसार नई कहानियों का सुझाव देता है।';
+	@override String get title => 'सुनें, दोहराएं और\nनए शब्द सीखें';
+	@override String get description => 'सरल आवाज गतिविधियाँ बच्चों को चरण दर चरण उच्चारण का अभ्यास करने में मदद करती हैं।';
 }
 
-// Path: profile.sections
-class _TranslationsProfileSectionsHi implements TranslationsProfileSectionsEn {
-	_TranslationsProfileSectionsHi._(this._root);
+// Path: splash.screen3
+class _TranslationsSplashScreen3Hi implements TranslationsSplashScreen3En {
+	_TranslationsSplashScreen3Hi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get accountSettings => 'खाता सेटिंग्स';
-	@override String get general => 'सामान्य';
+	@override String get title => 'आत्मविश्वास बनाएँ,\nएक समय में एक शब्द';
+	@override String get description => 'सरल गतिविधियों, मैत्रीपूर्ण मार्गदर्शन और सुरक्षित शिक्षण प्रवाह वाले युवा शिक्षार्थियों के लिए डिज़ाइन किया गया।';
+	@override String get option1 => '️🛡️ बच्चों के लिए सुरक्षित';
+	@override String get option2 => '🌱कोई दबाव नहीं सीखना';
+	@override String get option3 => '⭐️ युवा शिक्षार्थियों के लिए बनाया गया';
 }
 
-// Path: profile.menu
-class _TranslationsProfileMenuHi implements TranslationsProfileMenuEn {
-	_TranslationsProfileMenuHi._(this._root);
+// Path: home.placeholders
+class _TranslationsHomePlaceholdersHi implements TranslationsHomePlaceholdersEn {
+	_TranslationsHomePlaceholdersHi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get editProfile => 'प्रोफ़ाइल संपादित करें';
-	@override String get notifications => 'सूचनाएं';
-	@override String get premium => 'प्रीमियम';
-	@override String get appLanguage => 'ऐप भाषा';
-	@override String get shareWithFriends => 'दोस्तों के साथ साझा करें';
-	@override String get enterInviteCode => 'निमंत्रण कोड दर्ज करें';
-	@override String get rateUs => 'हमें रेट करें';
-	@override String get faq => 'FAQ';
-	@override String get logout => 'लॉग आउट';
+	@override String get fashionDesigner => 'फैशन डिजाइनर';
+	@override String get comedian => 'हास्य अभिनेता';
+	@override String get influencer => 'प्रभावशाली व्यक्ति';
+	@override String get teacher => 'अध्यापक';
+	@override String get friend => 'दोस्त';
 }
 
-// Path: profile.logoutDialog
-class _TranslationsProfileLogoutDialogHi implements TranslationsProfileLogoutDialogEn {
-	_TranslationsProfileLogoutDialogHi._(this._root);
+// Path: home.lessons
+class _TranslationsHomeLessonsHi implements TranslationsHomeLessonsEn {
+	_TranslationsHomeLessonsHi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'आप लॉग आउट करने वाले हैं';
-	@override String get message => 'फिर मिलेंगे! हम आपके श्वास व्यायाम को ट्रैक करना जारी रखेंगे।';
-	@override String get logoutButton => 'लॉग आउट';
-	@override String get cancelButton => 'रद्द करें';
+	@override String get alphabet => 'वर्णमाला';
+	@override String get numbers => 'नंबर';
+	@override String get colors => 'रंग';
+	@override String get shapes => 'आकार';
+	@override String get fruit => 'फल';
+	@override String get vegetables => 'सब्ज़ियाँ';
+	@override String get sports => 'खेल';
+	@override String get fillIn => 'भरें';
+	@override String get fillInBlank => 'रिक्त स्थान को भरें';
 }
 
-// Path: home.premiumPlan
-class _TranslationsHomePremiumPlanHi implements TranslationsHomePremiumPlanEn {
-	_TranslationsHomePremiumPlanHi._(this._root);
+// Path: deleteAccount.steps
+class _TranslationsDeleteAccountStepsHi implements TranslationsDeleteAccountStepsEn {
+	_TranslationsDeleteAccountStepsHi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'प्रीमियम प्लान';
-	@override String get description => 'अपने AI चैटबॉट को अनलॉक करें और\nसभी प्रीमियम सुविधाएं प्राप्त करें';
-	@override String get button => 'प्रीमियम प्राप्त करें';
-	@override late final _TranslationsHomePremiumPlanDialogHi dialog = _TranslationsHomePremiumPlanDialogHi._(_root);
+	@override late final _TranslationsDeleteAccountStepsStep1Hi step1 = _TranslationsDeleteAccountStepsStep1Hi._(_root);
+	@override late final _TranslationsDeleteAccountStepsStep2Hi step2 = _TranslationsDeleteAccountStepsStep2Hi._(_root);
+	@override late final _TranslationsDeleteAccountStepsStep3Hi step3 = _TranslationsDeleteAccountStepsStep3Hi._(_root);
 }
 
-// Path: stories.categories
-class _TranslationsStoriesCategoriesHi implements TranslationsStoriesCategoriesEn {
-	_TranslationsStoriesCategoriesHi._(this._root);
+// Path: deleteAccount.steps.step1
+class _TranslationsDeleteAccountStepsStep1Hi implements TranslationsDeleteAccountStepsStep1En {
+	_TranslationsDeleteAccountStepsStep1Hi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get popular => 'लोकप्रिय';
-	@override String get space => 'अंतरिक्ष रोमांच';
-	@override String get magic => 'जादुई दुनिया';
-	@override String get animals => 'प्यारे दोस्त';
-	@override String get detectives => 'छोटे जासूस';
-	@override String get dinosaurs => 'डायनासोर';
-	@override String get superhero => 'सुपरहीरो';
-	@override String get underwater => 'पानी के नीचे';
-	@override String get fairytale => 'परीकथाएँ';
+	@override String get title => 'हम नहीं चाहते कि आप जाएं, लेकिन हम समझते हैं।';
+	@override String get subtitle => 'क्या आप हमें बता सकते हैं कि आप क्यों छोड़ना चाहते हैं ताकि हम Lingola Kids अनुभव को बेहतर बना सकें?';
+	@override String get option1 => 'मुझे एआई अक्षर यथार्थवादी नहीं लगे।';
+	@override String get option2 => 'मुझे वीडियो चैट में तकनीकी समस्याएं आ रही हैं.';
+	@override String get option3 => 'सदस्यता कीमतें मेरी अपेक्षाओं से ऊपर हैं।';
+	@override String get option4 => 'मैं जिस प्रकार के पात्रों की तलाश कर रहा था, वे मुझे नहीं मिल सके।';
+	@override String get option5 => 'मैं बस इसे थोड़े समय के लिए आज़माना चाहता था।';
+	@override String get option6 => 'अन्य';
 }
 
-// Path: dayStreak.days
-class _TranslationsDayStreakDaysHi implements TranslationsDayStreakDaysEn {
-	_TranslationsDayStreakDaysHi._(this._root);
+// Path: deleteAccount.steps.step2
+class _TranslationsDeleteAccountStepsStep2Hi implements TranslationsDeleteAccountStepsStep2En {
+	_TranslationsDeleteAccountStepsStep2Hi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get su => 'र';
-	@override String get mo => 'सो';
-	@override String get tu => 'म';
-	@override String get we => 'बु';
-	@override String get th => 'गु';
-	@override String get fr => 'शु';
-	@override String get sa => 'श';
+	@override String get title => 'यदि आप अपना खाता हटाते हैं, तो आप इन्हें अलविदा कह देंगे:';
+	@override String get subtitle1 => 'गहरे संबंध और स्मृति:';
+	@override String get subtitle1Desc => 'जिन पात्रों के साथ आप बातचीत करते हैं वे आपके साथ अपने अतीत, आपके साझा रहस्यों और आपकी व्यक्तिगत आदतों को पूरी तरह से भूल जाएंगे।';
+	@override String get subtitle2 => 'वीडियो कॉल विशेषाधिकार:';
+	@override String get subtitle2Desc => 'आप अपने एआई भागीदारों के साथ आमने-सामने संवाद करने का अधिकार खो देंगे, जो आपके लिए किसी भी समय उपलब्ध हैं।';
+	@override String get subtitle3 => 'उन्नत एल्गोरिथम:';
+	@override String get subtitle3Desc => 'आपकी प्राथमिकताओं के अनुरूप आपका \'सिर्फ आपके लिए\' वर्ण मिलान रीसेट कर दिया जाएगा।';
+	@override String get subtitle4 => 'प्रोफ़ाइल डेटा:';
+	@override String get subtitle4Desc => 'आपकी अर्जित उपलब्धियाँ, अनलॉक किए गए विशेष वर्ण और चैट इतिहास अपरिवर्तनीय रूप से हटा दिए जाएंगे।';
 }
 
-// Path: storyDetails.feedbackSubjects
-class _TranslationsStoryDetailsFeedbackSubjectsHi implements TranslationsStoryDetailsFeedbackSubjectsEn {
-	_TranslationsStoryDetailsFeedbackSubjectsHi._(this._root);
+// Path: deleteAccount.steps.step3
+class _TranslationsDeleteAccountStepsStep3Hi implements TranslationsDeleteAccountStepsStep3En {
+	_TranslationsDeleteAccountStepsStep3Hi._(this._root);
 
 	final TranslationsHi _root; // ignore: unused_field
 
 	// Translations
-	@override String get bugReport => 'बग रिपोर्ट';
-	@override String get storyContent => 'कहानी सामग्री';
-	@override String get audioIssue => 'ऑडियो समस्या';
-	@override String get suggestion => 'सुझाव';
-	@override String get other => 'अन्य';
-}
-
-// Path: referralCode.success
-class _TranslationsReferralCodeSuccessHi implements TranslationsReferralCodeSuccessEn {
-	_TranslationsReferralCodeSuccessHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'सफल!';
-	@override String get message => 'रेफरल कोड सफलतापूर्वक लागू किया गया! आपको और आपके मित्र को 1 सप्ताह का प्रीमियम मिला है।';
-}
-
-// Path: referralCode.errors
-class _TranslationsReferralCodeErrorsHi implements TranslationsReferralCodeErrorsEn {
-	_TranslationsReferralCodeErrorsHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override late final _TranslationsReferralCodeErrorsMissingCodeHi missingCode = _TranslationsReferralCodeErrorsMissingCodeHi._(_root);
-	@override late final _TranslationsReferralCodeErrorsInvalidFormatHi invalidFormat = _TranslationsReferralCodeErrorsInvalidFormatHi._(_root);
-	@override late final _TranslationsReferralCodeErrorsAlreadyUsedHi alreadyUsed = _TranslationsReferralCodeErrorsAlreadyUsedHi._(_root);
-	@override late final _TranslationsReferralCodeErrorsSelfReferralHi selfReferral = _TranslationsReferralCodeErrorsSelfReferralHi._(_root);
-	@override late final _TranslationsReferralCodeErrorsCodeNotFoundHi codeNotFound = _TranslationsReferralCodeErrorsCodeNotFoundHi._(_root);
-	@override late final _TranslationsReferralCodeErrorsGenericErrorHi genericError = _TranslationsReferralCodeErrorsGenericErrorHi._(_root);
-}
-
-// Path: onboarding.step2.categories
-class _TranslationsOnboardingStep2CategoriesHi implements TranslationsOnboardingStep2CategoriesEn {
-	_TranslationsOnboardingStep2CategoriesHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get space => '🚀 अंतरिक्ष रोमांच';
-	@override String get magic => '🦄 जादुई दुनिया';
-	@override String get detectives => '🕵️ छोटे जासूस';
-	@override String get animals => '🐾 प्यारे दोस्त';
-	@override String get dinosaurs => '🦖 डायनासोर का युग';
-	@override String get superhero => '🦸 सुपरहीरो';
-	@override String get underwater => '🌊 पानी के नीचे का राज्य';
-	@override String get fairytale => '🏰 राजकुमार और राजकुमारी की परीकथाएँ';
-}
-
-// Path: faq.questions.q1
-class _TranslationsFaqQuestionsQ1Hi implements TranslationsFaqQuestionsQ1En {
-	_TranslationsFaqQuestionsQ1Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'यह ऐप क्या करती है?';
-	@override String get answer => 'यह बच्चों को मज़ेदार कहानियों के माध्यम से अंग्रेज़ी सीखने में मदद करता है। शब्द वाक्यों में प्राकृतिक रूप से दिखाई देते हैं, अर्थ सहज रूप से समझाया जाता है और पुनरावृत्ति से वे स्थायी हो जाते हैं।';
-}
-
-// Path: faq.questions.q2
-class _TranslationsFaqQuestionsQ2Hi implements TranslationsFaqQuestionsQ2En {
-	_TranslationsFaqQuestionsQ2Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'यहाँ आर्टिफिशियल इंटेलिजेंस क्या करता है?';
-	@override String get answer => 'यह विश्लेषण करता है कि बच्चा किन शब्दों में कठिनाई महसूस कर रहा है, सरल व्याख्याएँ प्रदान करता है और उसके स्तर के अनुसार नई कहानियाँ सुझाता है। सामग्री बच्चे की सीखने की गति के अनुसार अनुकूलित होती है।';
-}
-
-// Path: faq.questions.q3
-class _TranslationsFaqQuestionsQ3Hi implements TranslationsFaqQuestionsQ3En {
-	_TranslationsFaqQuestionsQ3Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'रोज़ कितना उपयोग करना पर्याप्त है?';
-	@override String get answer => 'रोज़ाना 5–10 मिनट पर्याप्त हैं। एक छोटी सी कहानी भी नियमित अभ्यास के लिए प्रभावी होती है।';
-}
-
-// Path: faq.questions.q4
-class _TranslationsFaqQuestionsQ4Hi implements TranslationsFaqQuestionsQ4En {
-	_TranslationsFaqQuestionsQ4Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'कहानियाँ किस आयु समूह के लिए उपयुक्त हैं?';
-	@override String get answer => 'कहानियाँ बच्चों की आयु और स्तर के अनुसार प्रस्तुत की जाती हैं। ऐप शुरुआत में स्तर तय करता है और प्रगति के अनुसार कठिनाई समायोजित करता है।';
-}
-
-// Path: faq.questions.q5
-class _TranslationsFaqQuestionsQ5Hi implements TranslationsFaqQuestionsQ5En {
-	_TranslationsFaqQuestionsQ5Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'अनजाने शब्द कैसे सीखे जाते हैं?';
-	@override String get answer => 'जब बच्चा किसी अनजाने शब्द पर टैप करता है तो उसका अर्थ, सरल विवरण और सही उच्चारण दिखाया जाता है। इस तरह शब्द पढ़ा और सुना दोनों जाता है।';
-}
-
-// Path: faq.questions.q6
-class _TranslationsFaqQuestionsQ6Hi implements TranslationsFaqQuestionsQ6En {
-	_TranslationsFaqQuestionsQ6Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'क्या इंटरनेट कनेक्शन आवश्यक है?';
-	@override String get answer => 'पहले से डाउनलोड की गई कहानियाँ ऑफ़लाइन पढ़ी जा सकती हैं। नई सामग्री और अपडेट के लिए इंटरनेट कनेक्शन की आवश्यकता होगी।';
-}
-
-// Path: faq.questions.q7
-class _TranslationsFaqQuestionsQ7Hi implements TranslationsFaqQuestionsQ7En {
-	_TranslationsFaqQuestionsQ7Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'क्या ऐप मुफ्त है?';
-	@override String get answer => 'बेसिक कहानियों तक मुफ्त पहुँच उपलब्ध है। अधिक कहानियाँ, उन्नत पर्सनलाइज़ेशन और अतिरिक्त सुविधाएँ प्रीमियम पैकेज में मिलती हैं।';
-}
-
-// Path: faq.questions.q8
-class _TranslationsFaqQuestionsQ8Hi implements TranslationsFaqQuestionsQ8En {
-	_TranslationsFaqQuestionsQ8Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'क्या कहानियाँ ऑडियो में सुनी जा सकती हैं?';
-	@override String get answer => 'हाँ। कहानियाँ सही उच्चारण के साथ सुनी जा सकती हैं, जिससे पढ़ने और सुनने दोनों कौशल साथ में विकसित होते हैं।';
-}
-
-// Path: faq.questions.q9
-class _TranslationsFaqQuestionsQ9Hi implements TranslationsFaqQuestionsQ9En {
-	_TranslationsFaqQuestionsQ9Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'क्या सीखे गए शब्द ट्रैक किए जा सकते हैं?';
-	@override String get answer => 'हाँ। सीखे गए शब्द रिकॉर्ड किए जाते हैं और उन्हें निर्धारित अंतराल पर दोहराने का कार्यक्रम बनाया जाता है, जिससे भूलना कम होता है।';
-}
-
-// Path: faq.questions.q10
-class _TranslationsFaqQuestionsQ10Hi implements TranslationsFaqQuestionsQ10En {
-	_TranslationsFaqQuestionsQ10Hi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get question => 'कितने समय में प्रगति दिखती है?';
-	@override String get answer => 'नियमित उपयोग से प्रगति कुछ ही समय में दिख सकती है। पढ़ने की आदत बढ़ने पर शब्दभंडार और समझने की क्षमता में सुधार होता है।';
-}
-
-// Path: home.premiumPlan.dialog
-class _TranslationsHomePremiumPlanDialogHi implements TranslationsHomePremiumPlanDialogEn {
-	_TranslationsHomePremiumPlanDialogHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'सुविधा उपलब्ध नहीं है';
-	@override String get message => 'यह सुविधा वर्तमान में उपलब्ध नहीं है।';
-	@override String get button => 'ठीक है';
-}
-
-// Path: referralCode.errors.missingCode
-class _TranslationsReferralCodeErrorsMissingCodeHi implements TranslationsReferralCodeErrorsMissingCodeEn {
-	_TranslationsReferralCodeErrorsMissingCodeHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'कोड आवश्यक';
-	@override String get message => 'जारी रखने के लिए कृपया रेफरल कोड दर्ज करें।';
-}
-
-// Path: referralCode.errors.invalidFormat
-class _TranslationsReferralCodeErrorsInvalidFormatHi implements TranslationsReferralCodeErrorsInvalidFormatEn {
-	_TranslationsReferralCodeErrorsInvalidFormatHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'अमान्य प्रारूप';
-	@override String get message => 'रेफरल कोड ठीक 8 वर्णों का होना चाहिए।';
-}
-
-// Path: referralCode.errors.alreadyUsed
-class _TranslationsReferralCodeErrorsAlreadyUsedHi implements TranslationsReferralCodeErrorsAlreadyUsedEn {
-	_TranslationsReferralCodeErrorsAlreadyUsedHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'पहले से उपयोग किया गया';
-	@override String get message => 'आपने पहले ही एक रेफरल कोड का उपयोग कर लिया है। प्रत्येक उपयोगकर्ता केवल एक कोड का उपयोग कर सकता है।';
-}
-
-// Path: referralCode.errors.selfReferral
-class _TranslationsReferralCodeErrorsSelfReferralHi implements TranslationsReferralCodeErrorsSelfReferralEn {
-	_TranslationsReferralCodeErrorsSelfReferralHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'अमान्य कोड';
-	@override String get message => 'आप अपने स्वयं के आमंत्रण कोड का उपयोग नहीं कर सकते। कृपया किसी मित्र के कोड का उपयोग करें।';
-}
-
-// Path: referralCode.errors.codeNotFound
-class _TranslationsReferralCodeErrorsCodeNotFoundHi implements TranslationsReferralCodeErrorsCodeNotFoundEn {
-	_TranslationsReferralCodeErrorsCodeNotFoundHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'कोड नहीं मिला';
-	@override String get message => 'दर्ज किया गया रेफरल कोड मौजूद नहीं है। कृपया जांचें और पुनः प्रयास करें।';
-}
-
-// Path: referralCode.errors.genericError
-class _TranslationsReferralCodeErrorsGenericErrorHi implements TranslationsReferralCodeErrorsGenericErrorEn {
-	_TranslationsReferralCodeErrorsGenericErrorHi._(this._root);
-
-	final TranslationsHi _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'त्रुटि';
-	@override String get message => 'रेफरल कोड लागू करते समय एक त्रुटि हुई। कृपया पुनः प्रयास करें।';
+	@override String get title => 'आपके जाने से पहले हमारे पास आपके लिए एक विशेष पेशकश है!';
+	@override String get description => 'हो सकता है कि आपको बस थोड़ा और समय या बेहतर डील की आवश्यकता हो। क्या आप अपना खाता हटाने के बजाय इन पर विचार करेंगे?';
+	@override String description1({required Object offer}) => 'आपको हमारे साथ रखना मूल्यवान है. आपकी अगली सदस्यता पर ${offer}! क्या आप इस ऑफर को जारी रखना चाहेंगे?';
+	@override String get description1Offer => 'हमने 50% छूट लागू की है';
+	@override String description2({required Object offer}) => 'हमने आपको ${offer} क्रेडिट दिया है ताकि आप नए पात्र देख सकें जिन्हें आपने अभी तक नहीं खोजा है।';
+	@override String get description2Offer => '3 निःशुल्क वीडियो कॉल';
+	@override String get acceptOffer => '50% डिस्काउंट ऑफर स्वीकार करें';
+	@override String get deleteMyAccount => 'मेरा एकाउंट हटा दो';
 }
 
 /// The flat map containing all translations for locale <hi>.
@@ -902,309 +800,335 @@ extension on TranslationsHi {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
 			'welcome' => ({required Object name}) => 'स्वागत है ${name}',
-			'welcome2' => ({required Object appName}) => 'स्वागत है ${appName}',
-			'continue_to' => ({required Object language}) => '${language} पर जारी रखें',
-			'get_started' => 'शुरू करें',
+			'welcome2' => ({required Object appName}) => '${appName} में आपका स्वागत है',
+			'get_started' => 'शुरू हो जाओ',
+			'start_learning' => 'सीखना शुरू करें',
+			'hello' => 'नमस्ते',
 			'next' => 'अगला',
 			'back' => 'पीछे',
-			'skip' => 'छोड़ें',
-			'kContinue' => 'जारी रखें',
-			'logintext' => 'जहां हर शब्द एक नई साहसिकता है जो बताने की प्रतीक्षा कर रहा है।',
-			'termOfService.text1' => 'swipe पर साइन अप करके, आप हमारी ',
+			'skip' => 'छोडना',
+			'profile' => 'प्रोफ़ाइल',
+			'kContinue' => 'जारी रखना',
+			'ok' => 'ठीक है',
+			'voicePlayback.loading' => 'ऑडियो लोड हो रहा है...',
+			'voicePlayback.playing' => 'ऑडियो तैयार है, चल रहा है।',
+			'voicePlayback.missing' => 'ऑडियो नहीं मिला। कृपया फिर से प्रयास करें।',
+			'voicePlayback.failed' => 'ऑडियो तैयार नहीं हो सका। कृपया फिर से प्रयास करें।',
+			'localNotifications.channelName' => 'दैनिक सीखने की याद दिलाने वाली सूचनाएं',
+			'localNotifications.channelDescription' => 'बच्चों को दैनिक सीखने की स्ट्रीक बनाए रखने में मदद करने वाली याद दिलाने वाली सूचनाएं।',
+			'localNotifications.reminderTitle' => 'Lingola Kids',
+			'localNotifications.reminderBody' => 'आज एक छोटा पाठ करके अपनी स्ट्रीक जारी रखें।',
+			'localNotifications.debugTitle' => 'Lingola Kids',
+			'localNotifications.debugBody' => 'स्थानीय सूचनाएं काम कर रही हैं।',
+			'termOfService.text1' => 'लिंगोला किड्स (Lingola Kids) के लिए साइन अप करके, आप हमारी ',
 			'termOfService.link1' => 'सेवा की शर्तों',
-			'termOfService.text2' => ' से सहमत हैं। जानें कि हम आपका डेटा कैसे प्रोसेस करते हैं हमारी ',
+			'termOfService.text2' => ' से सहमत होते हैं। जानें कि हम आपके डेटा को अपनी ',
 			'termOfService.link2' => 'गोपनीयता नीति',
 			'termOfService.text3' => ' और ',
 			'termOfService.link3' => 'कुकी नीति',
-			'termOfService.text4' => '',
-			'termOfService.privacyPolicy.title' => 'गोपनीयता नीति',
-			'termOfService.privacyPolicy.lastUpdated' => 'अंतिम अपडेट: 2025',
-			'termOfService.privacyPolicy.intro' => 'Lingola Stories Kids बाल गोपनीयता और डेटा सुरक्षा को मूल सिद्धांत के रूप में अपनाता है।',
+			'termOfService.text4' => ' में कैसे संसाधित करते हैं।',
+			'termOfService.termsOfService.title' => 'लिंगोला किड्स - सेवा की शर्तें',
+			'termOfService.termsOfService.lastUpdated' => 'अंतिम अपडेट: 2026',
+			'termOfService.termsOfService.intro' => 'ये सेवा की शर्तें ("शर्तें") लिंगोला किड्स मोबाइल एप्लिकेशन ("ऐप") का उपयोग करने के नियमों और शर्तों को नियंत्रित करती हैं। ऐप को डाउनलोड या उपयोग करके, आप इन शर्तों से सहमत होते हैं।',
+			'termOfService.termsOfService.section1Title' => '1. सेवा का दायरा और अस्वीकरण',
+			'termOfService.termsOfService.section1Body' => 'लिंगोला किड्स बच्चों को अंग्रेजी शब्दावली सीखने में मदद करने के लिए दृश्य, ऑडियो फ्लैशकार्ड और शैक्षिक खेल प्रदान करता है। ऐप कोई आधिकारिक शैक्षणिक संस्थान नहीं है; यह परीक्षा की सफलता, शैक्षणिक डिग्री या भाषा प्रवीणता प्रमाण पत्र की गारंटी नहीं देता है।',
+			'termOfService.termsOfService.section2Title' => '2. उपयोग की शर्तें',
+			'termOfService.termsOfService.section2Body' => '- ऐप 4 वर्ष और उससे अधिक उम्र के बच्चों के लिए बनाया गया है।\n- 13/18 वर्ष से कम उम्र के उपयोगकर्ताओं को माता-पिता या कानूनी अभिभावक की देखरेख में ऐप का उपयोग करने की सख्त सलाह दी जाती है।\n- एक माता-पिता या कानूनी अभिभावक के रूप में, अपने बच्चे को ऐप का उपयोग करने की अनुमति देकर, आप उनकी ओर से इन शर्तों से सहमत होते हैं।\n- ऐप सामग्री की अनधिकृत प्रतिलिपि बनाना, बेचना, रिवर्स इंजीनियरिंग, या थोक वितरण सख्त वर्जित है।',
+			'termOfService.termsOfService.section3Title' => '3. प्रीमियम और सशुल्क सेवाएं',
+			'termOfService.termsOfService.section3Body' => 'सशुल्क सेवाओं के लिए भुगतान, जैसे प्रीमियम शब्दावली पैक और विज्ञापन-मुक्त उपयोग, ऐप स्टोर या Google Play के माध्यम से संसाधित किए जाते हैं। स्वचालित रूप से नवीनीकृत होने वाली सदस्यताओं को रद्द करने का प्रबंधन उपयोगकर्ता/माता-पिता द्वारा उनके स्टोर खाते के माध्यम से किया जाता है। लिंगोला किड्स सीधे रिफंड प्रदान नहीं करता है।',
+			'termOfService.termsOfService.section4Title' => '4. लर्निंग डेटा और गोपनीयता',
+			'termOfService.termsOfService.section4Body' => 'उपयोगकर्ता अनुभव और प्रगति ट्रैकिंग को बेहतर बनाने के लिए संसाधित किए गए लर्निंग डेटा (सीखे गए शब्द, पूरी की गई गतिविधियां) हमारी गोपनीयता नीति के तहत सुरक्षित हैं। ऐप का उपयोग करने वाले किसी भी व्यक्ति को गोपनीयता नीति स्वीकार करने वाला माना जाता है।',
+			'termOfService.termsOfService.section5Title' => '5. शासी कानून',
+			'termOfService.termsOfService.section5Body' => 'ये शर्तें तुर्की गणराज्य के कानूनों द्वारा शासित होती हैं। इस्तांबुल सेंट्रल कोर्ट्स और एनफोर्समेंट ऑफिस का किसी भी विवाद पर अधिकार क्षेत्र होगा।',
+			'termOfService.termsOfService.section6Title' => '6. संपर्क',
+			'termOfService.termsOfService.section6Body' => '📩 किसी भी प्रश्न, अनुरोध या नोटिस के लिए, आप हमसे यहां संपर्क कर सकते हैं: support@fly-work.com',
+			'termOfService.privacyPolicy.title' => 'लिंगोला किड्स - गोपनीयता नीति',
+			'termOfService.privacyPolicy.lastUpdated' => 'अंतिम अपडेट: 2026',
+			'termOfService.privacyPolicy.intro' => 'लिंगोला किड्स में आपका स्वागत है। बच्चों और परिवारों की गोपनीयता की रक्षा करना हमारी सर्वोच्च प्राथमिकता है। यह गोपनीयता नीति बताती है कि कौन सी जानकारी एकत्र की जाती है, उपयोग की जाती है, सुरक्षित की जाती है, और उपयोगकर्ता अपने डेटा का प्रबंधन कैसे कर सकते हैं।',
 			'termOfService.privacyPolicy.section1Title' => '1. एकत्र की गई जानकारी',
-			'termOfService.privacyPolicy.section1sub1Title' => '1.1 उपयोगकर्ता द्वारा प्रदान किया गया डेटा',
-			'termOfService.privacyPolicy.section1sub1Body' => 'उपनाम या प्रोफ़ाइल नाम।\nईमेल पता।\nआयु जानकारी।\nभाषा स्तर और सीखे गए शब्द।\n\nनोट: स्वास्थ्य विश्लेषण के लिए कभी उपयोग नहीं।',
-			'termOfService.privacyPolicy.section1sub2Title' => '1.2 स्वचालित रूप से एकत्र',
-			'termOfService.privacyPolicy.section1sub2Body' => 'डिवाइस प्रकार, OS और ऐप प्रदर्शन। सटीक स्थान एकत्र नहीं किया जाता।',
-			'termOfService.privacyPolicy.section2Title' => '2. डेटा प्रसंस्करण के उद्देश्य',
-			'termOfService.privacyPolicy.section2Body' => 'डेटा केवल इन उद्देश्यों के लिए:\n\n- आयु-उपयुक्त सामग्री।\n- सीखने का व्यक्तिगतकरण।\n- ऐप प्रदर्शन सुधार।\n- कानूनी दायित्व।',
-			'termOfService.privacyPolicy.section3Title' => '3. डेटा संरक्षण और हटाना',
-			'termOfService.privacyPolicy.section3Body' => 'खाता सक्रिय रहने तक संग्रहीत। सहायता रिकॉर्ड 12 महीने। खाता हटाने पर डेटा अपरिवर्तनीय रूप से मिट जाता है।',
-			'termOfService.privacyPolicy.section4Title' => '4. उपयोगकर्ता अधिकार',
-			'termOfService.privacyPolicy.section4Body' => 'GDPR/KVKK के तहत माता-पिता डेटा तक पहुँच, सुधार या हटाने का अनुरोध कर सकते हैं। support@fly-work.com',
-			'termOfService.privacyPolicy.section5Title' => '5. बाल गोपनीयता',
-			'termOfService.privacyPolicy.section5Body' => '6 वर्ष और उससे अधिक के लिए। 13 वर्ष से कम के लिए माता-पिता की सहमति आवश्यक।',
+			'termOfService.privacyPolicy.section1Body' => '- उपयोगकर्ता/माता-पिता द्वारा प्रदान किया गया: ईमेल पता (यदि खाता बनाया गया है), उपयोगकर्ता नाम, भाषा और सीखने की प्राथमिकताएं, सहेजे गए शब्द।\n- स्वचालित रूप से एकत्र किया गया: डिवाइस मॉडल, ऑपरेटिंग सिस्टम, आईपी एड्रेस, ऐप संस्करण, क्रैश लॉग और सीखने की प्रगति का डेटा।',
+			'termOfService.privacyPolicy.section2Title' => '2. बच्चों की गोपनीयता (महत्वपूर्ण)',
+			'termOfService.privacyPolicy.section2Body' => 'लिंगोला किड्स 4 वर्ष और उससे अधिक उम्र के बच्चों के लिए बनाया गया है। बच्चों का डेटा संरक्षण हमारा मुख्य फोकस है:\n- हम बच्चों से अनावश्यक या संवेदनशील व्यक्तिगत डेटा एकत्र नहीं करते हैं।\n- बच्चों को सार्वजनिक रूप से संपर्क विवरण साझा करने की अनुमति या प्रेरित नहीं किया जाता है।\n- बच्चों को लक्षित करने वाली व्यवहारिक या व्यक्तिगत विज्ञापन प्रोफ़ाइलिंग सख्त वर्जित है।\n- माता-पिता या कानूनी अभिभावक किसी भी समय अपने बच्चे के डेटा की समीक्षा करने या उसे हटाने का अनुरोध कर सकते हैं।',
+			'termOfService.privacyPolicy.section3Title' => '3. डेटा प्रोसेसिंग और साझाकरण के उद्देश्य',
+			'termOfService.privacyPolicy.section3Body' => 'आपके डेटा को सीखने की प्रगति को ट्रैक करने, शब्दावली सामग्री को वैयक्तिकृत करने और तकनीकी समस्याओं को ठीक करने के लिए संसाधित किया जाता है। व्यावसायिक उपयोग के लिए व्यक्तिगत जानकारी कभी भी तीसरे पक्ष को बेची या साझा नहीं की जाती है। विश्वसनीय सेवा प्रदाता (क्लाउड स्टोरेज, प्रमाणीकरण और सदस्यता प्रबंधन) डेटा को उनकी गोपनीयता दायित्वों के तहत कड़ाई से संसाधित करते हैं।',
+			'termOfService.privacyPolicy.section4Title' => '4. उपयोगकर्ता और माता-पिता के अधिकार',
+			'termOfService.privacyPolicy.section4Body' => 'उपयोगकर्ताओं और माता-पिता को पहुंच प्राप्त करने, सुधार करने, खाता हटाने का अनुरोध करने और डेटा को स्थायी रूप से हटाने की मांग करने का अधिकार है। आप हमारी सहायता टीम से संपर्क करके इन अधिकारों का प्रयोग कर सकते हैं।',
+			'termOfService.privacyPolicy.section5Title' => '5. डेटा सुरक्षा और प्रतिधारण',
+			'termOfService.privacyPolicy.section5Body' => 'डेटा उद्योग-मानक एन्क्रिप्शन और एक्सेस नियंत्रण के माध्यम से सुरक्षित है। सीखने के आंकड़े तब तक संग्रहीत किए जाते हैं जब तक कि निरंतरता सुनिश्चित करने के लिए खाता सक्रिय रहता है और खाता हटाए जाने पर इसे मिटा दिया जाता है।',
 			'termOfService.privacyPolicy.section6Title' => '6. संपर्क',
-			'termOfService.privacyPolicy.section6Body' => '📩 पूछताछ: support@fly-work.com',
-			'termOfService.termsOfService.title' => 'सेवा की शर्तें',
-			'termOfService.termsOfService.lastUpdated' => 'अंतिम अपडेट: 2025',
-			'termOfService.termsOfService.intro' => 'ये शर्तें Lingola Stories Kids के उपयोग को नियंत्रित करती हैं। ऐप उपयोग करके, आप इन शर्तों से सहमत होते हैं।',
-			'termOfService.termsOfService.disclaimer' => 'अस्वीकरण: Lingola Stories Kids एक शैक्षिक उपकरण है, आधिकारिक शिक्षा नहीं।',
-			'termOfService.termsOfService.section1Title' => '1. सेवा का दायरा',
-			'termOfService.termsOfService.section1Body' => 'ऐप बच्चों के लिए कहानी-आधारित सीखने का अनुभव:\n\n- AI-संचालित कहानियाँ।\n- आयु-आधारित पठन।\n- शब्दावली और उच्चारण सहायता।',
-			'termOfService.termsOfService.section2Title' => '2. उपयोग की शर्तें और आयु',
-			'termOfService.termsOfService.section2Body' => 'कम से कम 6 वर्ष की आयु।\n18 वर्ष से कम माता-पिता की निगरानी में।\nसटीक खाता जानकारी।',
-			'termOfService.termsOfService.section3Title' => '3. निषिद्ध उपयोग',
-			'termOfService.termsOfService.section3Body' => 'अनधिकृत प्रतिलिपि, रिवर्स इंजीनियरिंग और व्यावसायिक उपयोग प्रतिबंधित है।',
-			'termOfService.termsOfService.section4Title' => '4. सदस्यता और भुगतान',
-			'termOfService.termsOfService.section4Body' => 'प्रीमियम सुविधाएं App Store और Google Play नीतियों के अधीन।',
-			'termOfService.termsOfService.section5Title' => '5. बौद्धिक संपदा',
-			'termOfService.termsOfService.section5Body' => 'सभी सामग्री Lingola Stories Kids की है।',
-			'termOfService.termsOfService.section6Title' => '6. देयता का सीमांकन',
-			'termOfService.termsOfService.section6Body' => 'ऐप यथावत प्रदान किया जाता है।',
-			'termOfService.termsOfService.section7Title' => '7. शासी कानून',
-			'termOfService.termsOfService.section7Body' => 'तुर्की गणराज्य के कानूनों द्वारा शासित।',
-			'termOfService.termsOfService.section8Title' => '8. संपर्क',
-			'termOfService.termsOfService.section8Body' => '📩 पूछताछ: support@fly-work.com',
+			'termOfService.privacyPolicy.section6Body' => '📩 गोपनीयता पूछताछ, डेटा हटाने या माता-पिता के अनुरोधों के लिए, हमसे संपर्क करें: support@fly-work.com',
 			'termOfService.cookiePolicy.title' => 'कुकी नीति',
-			'termOfService.cookiePolicy.lastUpdated' => 'अंतिम अपडेट: 2025',
-			'termOfService.cookiePolicy.intro' => 'यह नीति बताती है कि ऐप उपयोग के दौरान कौन सी डिजिटल तकनीकें उपयोग की जाती हैं।',
-			'termOfService.cookiePolicy.important' => 'महत्वपूर्ण: बाल गोपनीयता हमारा मूल सिद्धांत है। ऐप 6 वर्ष और उससे अधिक उम्र के लिए है।',
+			'termOfService.cookiePolicy.lastUpdated' => 'अंतिम अपडेट: 2026',
+			'termOfService.cookiePolicy.intro' => 'Lingola Kids में आपका स्वागत है। आपके एआई (AI) वीडियो कॉल अनुभव को आसान, अधिक सुरक्षित और व्यक्तिगत बनाने के लिए डिजिटल सहायक तकनीकों का उपयोग किया जाता है।',
+			'termOfService.cookiePolicy.important' => 'यह नीति बताती है कि कुकीज़ क्या हैं, उनके उद्देश्य क्या हैं, और आप अपनी प्राथमिकताओं का प्रबंधन कैसे कर सकते हैं।',
 			'termOfService.cookiePolicy.section1Title' => '1. कुकीज़ क्या हैं?',
-			'termOfService.cookiePolicy.section1Body' => 'कुकीज़ और समान तकनीकें छोटे डिजिटल घटक हैं जो ऐप को सही ढंग से काम करने में मदद करते हैं।',
-			'termOfService.cookiePolicy.section2Title' => '2. हम कौन सी तकनीकें उपयोग करते हैं?',
-			'termOfService.cookiePolicy.section2Body' => 'आवश्यक: सत्र प्रबंधन और सुरक्षा।\n\nप्रदर्शन और विश्लेषण: पढ़ी जाने वाली कहानियाँ, अनाम डेटा।\n\nव्यक्तिगतकरण: भाषा और पठन स्तर।',
-			'termOfService.cookiePolicy.section3Title' => '3. हम इनका उपयोग क्यों करते हैं?',
-			'termOfService.cookiePolicy.section3Body' => '- सुरक्षित और सुचारु ऐप।\n- बेहतर पठन अनुभव।\n- सेटिंग्स याद रखना।\n- भविष्य की सुविधाएं।',
-			'termOfService.cookiePolicy.section4Title' => '4. तृतीय-पक्ष तकनीकें',
-			'termOfService.cookiePolicy.section4Body' => 'हम न्यूनतम डेटा उपयोग सिद्धांत लागू करते हैं।',
-			'termOfService.cookiePolicy.section5Title' => '5. नियंत्रण और प्रबंधन',
-			'termOfService.cookiePolicy.section5Body' => 'माता-पिता डिवाइस सेटिंग्स से इन तकनीकों को सीमित कर सकते हैं।',
+			'termOfService.cookiePolicy.section1Body' => 'कुकीज़ आपके डिवाइस पर रखी गई छोटी डेटा फ़ाइलें हैं। वे आपको सीधे पहचानती नहीं हैं; वे डिजिटल नोट्स के रूप में कार्य करती हैं जो याद रखती हैं:\n• कॉल और भाषा सेटिंग्स\n• सत्र और प्रदर्शन प्राथमिकताएं।',
+			'termOfService.cookiePolicy.section2Title' => '2. हम किन तकनीकों का उपयोग करते हैं?',
+			'termOfService.cookiePolicy.section2Body' => 'सख्ती से आवश्यक प्रौद्योगिकियां\nसत्र प्रबंधन और सुरक्षा नियंत्रण के लिए आवश्यक। इन घटकों के बिना ऐप ठीक से काम नहीं कर सकता है।\n\nप्रदर्शन और एनालिटिक्स\nहमें यह समझने में मदद करता है कि कौन सी कहानियां पढ़ी जाती हैं और किन क्षेत्रों में सुधार की आवश्यकता है। डेटा का अनाम रूप से मूल्यांकन किया जाता है।\n\nवैयक्तिकरण\nबच्चे के लिए एक अनुरूप अनुभव प्रदान करने के लिए भाषा वरीयता और पढ़ने के स्तर जैसी सेटिंग्स को याद रखता है।',
+			'termOfService.cookiePolicy.section3Title' => '3. हम इन तकनीकों का उपयोग क्यों करते हैं?',
+			'termOfService.cookiePolicy.section3Body' => '• यह सुनिश्चित करने के लिए कि ऐप सुरक्षित रूप से और सुचारू रूप से चलता है।\n• पढ़ने के अनुभव को अधिक तरल बनाने के लिए।\n• दोहराव वाली सेटिंग्स को याद रखने के लिए।\n• भविष्य के विकास के लिए सुविधाओं की पहचान करने के लिए।',
+			'termOfService.cookiePolicy.section4Title' => '4. तृतीय-पक्ष प्रौद्योगिकियां',
+			'termOfService.cookiePolicy.section4Body' => 'कुछ प्रौद्योगिकियां तकनीकी सेवा प्रदाताओं द्वारा प्रदान की जा सकती हैं और उनकी अपनी नीतियों के अधीन हैं। Lingola Kids इन साझेदारियों में डेटा सुरक्षा को प्राथमिकता देता है।',
+			'termOfService.cookiePolicy.section5Title' => '5. कुकी नियंत्रण और प्रबंधन',
+			'termOfService.cookiePolicy.section5Body' => 'उपयोगकर्ता डिवाइस या ऐप सेटिंग्स के माध्यम से इन तकनीकों को सीमित कर सकते हैं। आवश्यक तकनीकों को अक्षम करने से वीडियो कॉल शुरू करने में असमर्थ होने जैसी समस्याएं हो सकती हैं।',
 			'termOfService.cookiePolicy.section6Title' => '6. संपर्क',
-			'termOfService.cookiePolicy.section6Body' => '📩 पूछताछ: support@fly-work.com',
-			'cookies' => 'कुकी नीति',
+			'termOfService.cookiePolicy.section6Body' => '📩 पूछताछ के लिए: support@fly-work.com',
+			'cookies' => 'कुकीज़ नीति',
 			'privacy' => 'गोपनीयता नीति',
-			'onboarding.step1.title' => 'आप अंग्रेज़ी किस भाषा में अनुवाद करके सीखना चाहते हैं?',
-			'onboarding.step1.subtitle' => 'कृपया वह भाषा चुनें जिसमें आप अंग्रेज़ी को अनुवाद करके सीखना चाहते हैं।',
-			'onboarding.step2.title' => 'आपको किस तरह की कहानियाँ\nपसंद हैं?',
-			'onboarding.step2.subtitle' => 'कृपया अपनी पसंद बताएं।',
-			'onboarding.step2.categories.space' => '🚀 अंतरिक्ष रोमांच',
-			'onboarding.step2.categories.magic' => '🦄 जादुई दुनिया',
-			'onboarding.step2.categories.detectives' => '🕵️ छोटे जासूस',
-			'onboarding.step2.categories.animals' => '🐾 प्यारे दोस्त',
-			'onboarding.step2.categories.dinosaurs' => '🦖 डायनासोर का युग',
-			'onboarding.step2.categories.superhero' => '🦸 सुपरहीरो',
-			'onboarding.step2.categories.underwater' => '🌊 पानी के नीचे का राज्य',
-			'onboarding.step2.categories.fairytale' => '🏰 राजकुमार और राजकुमारी की परीकथाएँ',
-			'onboarding.loading.titlePart1' => 'आपका व्यक्तिगत खाता\n',
+			'onboarding.step5.permissionRequired' => 'अनुमति आवश्यक है',
+			'onboarding.step5.notNow' => 'अभी नहीं',
+			'onboarding.step5.openSettings' => 'खुली सेटिंग',
+			'onboarding.step5.title' => 'अनुमतियां',
+			'onboarding.step5.permission1' => 'कैमरा एक्सेस',
+			'onboarding.step5.permission1Subtitle' => 'Lingola Kids एआई वर्णों के साथ वीडियो कॉल के लिए आपके कैमरे का उपयोग करता है।',
+			'onboarding.step5.permission2' => 'माइक्रोफ़ोन एक्सेस',
+			'onboarding.step5.permission2Subtitle' => 'Lingola Kids ध्वनि और वीडियो कॉल के लिए आपके माइक्रोफ़ोन का उपयोग करता है।',
+			'onboarding.step5.permission3' => 'स्थान पहुंच',
+			'onboarding.step5.permission3Subtitle' => 'Lingola Kids आपके अनुभव को निजीकृत करने के लिए आपके स्थान का उपयोग करता है।',
+			'onboarding.step1.title' => 'आपका क्या नाम है?',
+			'onboarding.step1.subtitle' => 'कृपया अपना नाम दर्ज करें',
+			'onboarding.step1.hint' => 'पूरा नाम',
+			'onboarding.step2.title' => 'तुम्हारी उम्र क्या है?',
+			'onboarding.step2.subtitle' => 'पंजीकरण के लिए आपकी आयु कम से कम 18 वर्ष होनी चाहिए।',
+			'onboarding.step3.title' => 'आपका लिंग क्या है?',
+			'onboarding.step3.subtitle' => 'कृपया अपना लिंग चुनें',
+			'onboarding.step3.male' => 'पुरुष',
+			'onboarding.step3.female' => 'महिला',
+			'onboarding.step3.dontWantToMention' => 'मैं इसका जिक्र नहीं करना चाहता.',
+			'onboarding.step4.title' => '[न्यूलाइन] सुरक्षित रहते हुए आनंद लें',
+			'onboarding.step4.entry1' => 'हम व्यवस्था बनाए रखते हैं',
+			'onboarding.step4.subentry1' => 'रीयल-टाइम एआई मॉनिटरिंग ओपन',
+			'onboarding.step4.entry2' => 'स्क्रीन रिकॉर्डिंग',
+			'onboarding.step4.subentry2' => 'सहमति के बिना कोई रिकॉर्डिंग नहीं',
+			'onboarding.step4.entry3' => '24/7 सहायता',
+			'onboarding.step4.subentry3' => 'शिकायतों की समीक्षा दिन के किसी भी समय की जाती है',
+			'onboarding.step4.entry4' => 'केवल 18+',
+			'onboarding.step4.subentry4' => 'अवयस्कों के लिए उपयुक्त नहीं',
+			'onboarding.step4.communityRules' => 'सामुदायिक नियम',
+			'onboarding.loading.titlePart1' => 'आपका व्यक्तिगत खाता है\n',
 			'onboarding.loading.titlePart2' => 'बनाया जा रहा है',
-			'onboarding.loading.subtitle' => 'हम आपके लिए अद्भुत कहानियाँ बना रहे हैं',
-			'onboarding.loading.optimization' => 'अनुकूलन',
-			'pressBackAgainToExit' => 'बाहर निकलने के लिए फिर से वापस दबाएं',
-			'faq.title' => 'सामान्य प्रश्न',
-			'faq.questions.q1.question' => 'यह ऐप क्या करती है?',
-			'faq.questions.q1.answer' => 'यह बच्चों को मज़ेदार कहानियों के माध्यम से अंग्रेज़ी सीखने में मदद करता है। शब्द वाक्यों में प्राकृतिक रूप से दिखाई देते हैं, अर्थ सहज रूप से समझाया जाता है और पुनरावृत्ति से वे स्थायी हो जाते हैं।',
-			'faq.questions.q2.question' => 'यहाँ आर्टिफिशियल इंटेलिजेंस क्या करता है?',
-			'faq.questions.q2.answer' => 'यह विश्लेषण करता है कि बच्चा किन शब्दों में कठिनाई महसूस कर रहा है, सरल व्याख्याएँ प्रदान करता है और उसके स्तर के अनुसार नई कहानियाँ सुझाता है। सामग्री बच्चे की सीखने की गति के अनुसार अनुकूलित होती है।',
-			'faq.questions.q3.question' => 'रोज़ कितना उपयोग करना पर्याप्त है?',
-			'faq.questions.q3.answer' => 'रोज़ाना 5–10 मिनट पर्याप्त हैं। एक छोटी सी कहानी भी नियमित अभ्यास के लिए प्रभावी होती है।',
-			'faq.questions.q4.question' => 'कहानियाँ किस आयु समूह के लिए उपयुक्त हैं?',
-			'faq.questions.q4.answer' => 'कहानियाँ बच्चों की आयु और स्तर के अनुसार प्रस्तुत की जाती हैं। ऐप शुरुआत में स्तर तय करता है और प्रगति के अनुसार कठिनाई समायोजित करता है।',
-			'faq.questions.q5.question' => 'अनजाने शब्द कैसे सीखे जाते हैं?',
-			'faq.questions.q5.answer' => 'जब बच्चा किसी अनजाने शब्द पर टैप करता है तो उसका अर्थ, सरल विवरण और सही उच्चारण दिखाया जाता है। इस तरह शब्द पढ़ा और सुना दोनों जाता है।',
-			'faq.questions.q6.question' => 'क्या इंटरनेट कनेक्शन आवश्यक है?',
-			'faq.questions.q6.answer' => 'पहले से डाउनलोड की गई कहानियाँ ऑफ़लाइन पढ़ी जा सकती हैं। नई सामग्री और अपडेट के लिए इंटरनेट कनेक्शन की आवश्यकता होगी।',
-			'faq.questions.q7.question' => 'क्या ऐप मुफ्त है?',
-			'faq.questions.q7.answer' => 'बेसिक कहानियों तक मुफ्त पहुँच उपलब्ध है। अधिक कहानियाँ, उन्नत पर्सनलाइज़ेशन और अतिरिक्त सुविधाएँ प्रीमियम पैकेज में मिलती हैं।',
-			'faq.questions.q8.question' => 'क्या कहानियाँ ऑडियो में सुनी जा सकती हैं?',
-			'faq.questions.q8.answer' => 'हाँ। कहानियाँ सही उच्चारण के साथ सुनी जा सकती हैं, जिससे पढ़ने और सुनने दोनों कौशल साथ में विकसित होते हैं।',
-			'faq.questions.q9.question' => 'क्या सीखे गए शब्द ट्रैक किए जा सकते हैं?',
-			'faq.questions.q9.answer' => 'हाँ। सीखे गए शब्द रिकॉर्ड किए जाते हैं और उन्हें निर्धारित अंतराल पर दोहराने का कार्यक्रम बनाया जाता है, जिससे भूलना कम होता है।',
-			'faq.questions.q10.question' => 'कितने समय में प्रगति दिखती है?',
-			'faq.questions.q10.answer' => 'नियमित उपयोग से प्रगति कुछ ही समय में दिख सकती है। पढ़ने की आदत बढ़ने पर शब्दभंडार और समझने की क्षमता में सुधार होता है।',
-			'good_morning' => 'सुप्रभात',
-			'good_afternoon' => 'शुभ दोपहर',
-			'good_evening' => 'शुभ संध्या',
-			'splash.screen1.title' => 'कहानियों के साथ अंग्रेजी सीखें',
-			'splash.screen1.description' => 'कोई उबाऊ याददाश्त नहीं। छोटी और मजेदार कहानियों के माध्यम से शब्दों को उनके प्राकृतिक प्रवाह में खोजें।',
-			'splash.screen2.title' => 'आर्टिफिशियल इंटेलिजेंस आपको मार्गदर्शन करता है',
-			'splash.screen2.description' => 'यह उन शब्दों का ट्रैक रखता है जिनसे आप संघर्ष करते हैं, उनके अर्थ को समझाता है, और आपके स्तर के अनुसार नई कहानियों का सुझाव देता है।',
-			'profile.title' => 'प्रोफ़ाइल',
-			'profile.freeVersion' => 'मुफ्त संस्करण',
-			'profile.error' => 'त्रुटि',
-			'profile.passive' => 'निष्क्रिय',
-			'profile.sections.accountSettings' => 'खाता सेटिंग्स',
-			'profile.sections.general' => 'सामान्य',
-			'profile.menu.editProfile' => 'प्रोफ़ाइल संपादित करें',
-			'profile.menu.notifications' => 'सूचनाएं',
-			'profile.menu.premium' => 'प्रीमियम',
-			'profile.menu.appLanguage' => 'ऐप भाषा',
-			'profile.menu.shareWithFriends' => 'दोस्तों के साथ साझा करें',
-			'profile.menu.enterInviteCode' => 'निमंत्रण कोड दर्ज करें',
-			'profile.menu.rateUs' => 'हमें रेट करें',
-			'profile.menu.faq' => 'FAQ',
-			'profile.menu.logout' => 'लॉग आउट',
-			'profile.manage' => 'प्रबंधित करें',
-			'profile.logoutDialog.title' => 'आप लॉग आउट करने वाले हैं',
-			'profile.logoutDialog.message' => 'फिर मिलेंगे! हम आपके श्वास व्यायाम को ट्रैक करना जारी रखेंगे।',
-			'profile.logoutDialog.logoutButton' => 'लॉग आउट',
-			'profile.logoutDialog.cancelButton' => 'रद्द करें',
-			'home.premium' => 'प्रीमियम!',
-			'home.seeMore' => 'और देखें',
-			'home.pickUpWhereYouLeftOff' => 'जहाँ छोड़ा था वहाँ से जारी रखें',
-			'home.premiumSection' => 'प्रीमियम',
-			'home.history' => 'इतिहास',
-			'home.librarySection' => 'पुस्तकालय',
-			'home.libraryDescription' => 'आपके सहेजे गए शब्द यहाँ दिखाई देंगे।',
-			'home.upgradeToPremium' => 'प्रीमियम में अपग्रेड करें',
-			'home.unlimitedStories' => 'असीमित कहानियाँ और विज्ञापन-मुक्त अनुभव',
-			'home.premiumPlan.title' => 'प्रीमियम प्लान',
-			'home.premiumPlan.description' => 'अपने AI चैटबॉट को अनलॉक करें और\nसभी प्रीमियम सुविधाएं प्राप्त करें',
-			'home.premiumPlan.button' => 'प्रीमियम प्राप्त करें',
-			'home.premiumPlan.dialog.title' => 'सुविधा उपलब्ध नहीं है',
-			'home.premiumPlan.dialog.message' => 'यह सुविधा वर्तमान में उपलब्ध नहीं है।',
-			'home.premiumPlan.dialog.button' => 'ठीक है',
-			'allStories.title' => 'सभी कहानियाँ',
-			'allStories.noStoriesFound' => 'कोई कहानी नहीं मिली',
-			'allStories.selectFilter' => 'फ़िल्टर चुनें',
-			'allStories.category' => 'श्रेणी',
-			'allStories.categorySubtitle' => 'कृपया वह श्रेणी चुनें जो आप पढ़ना चाहते हैं',
-			'allStories.apply' => 'लागू करें',
-			'stories.title' => 'कहानियाँ',
-			'stories.popularStories' => 'लोकप्रिय कहानियाँ',
-			'stories.recommendForYou' => 'आपके लिए अनुशंसित',
-			'stories.allStories' => 'सभी कहानियाँ',
-			'stories.seeAll' => 'सभी देखें',
-			'stories.categories.popular' => 'लोकप्रिय',
-			'stories.categories.space' => 'अंतरिक्ष रोमांच',
-			'stories.categories.magic' => 'जादुई दुनिया',
-			'stories.categories.animals' => 'प्यारे दोस्त',
-			'stories.categories.detectives' => 'छोटे जासूस',
-			'stories.categories.dinosaurs' => 'डायनासोर',
-			'stories.categories.superhero' => 'सुपरहीरो',
-			'stories.categories.underwater' => 'पानी के नीचे',
-			'stories.categories.fairytale' => 'परीकथाएँ',
-			'library.title' => 'पुस्तकालय',
-			'library.wordCount' => ({required Object count}) => '${count} शब्द',
-			'library.popularWords' => 'लोकप्रिय शब्द',
-			'library.allWords' => 'सभी शब्द',
-			'library.searchWord' => 'शब्द खोजें',
-			'library.searchHint' => 'कृपया शब्द दर्ज करें…',
-			'library.noWordsFound' => 'कोई शब्द नहीं मिला',
-			'library.noSavedWords' => 'अभी तक कोई सहेजा गया शब्द नहीं है',
-			'bottomNav.home' => 'होम',
-			'bottomNav.stories' => 'कहानियाँ',
-			'bottomNav.library' => 'पुस्तकालय',
-			'bottomNav.profile' => 'प्रोफ़ाइल',
-			'dayStreak.title' => 'दिन की स्ट्रीक!',
-			'dayStreak.days.su' => 'र',
-			'dayStreak.days.mo' => 'सो',
-			'dayStreak.days.tu' => 'म',
-			'dayStreak.days.we' => 'बु',
-			'dayStreak.days.th' => 'गु',
-			'dayStreak.days.fr' => 'शु',
-			'dayStreak.days.sa' => 'श',
-			'storyDetails.introduction' => 'परिचय',
-			'storyDetails.saved' => 'सहेजा गया',
-			'storyDetails.removed' => 'हटाया गया',
-			'storyDetails.storyAddedToLibrary' => 'कहानी आपकी लाइब्रेरी में जोड़ी गई।',
-			'storyDetails.storyRemovedFromLibrary' => 'कहानी लाइब्रेरी से हटाई गई।',
-			'storyDetails.wordAddedToLibrary' => 'शब्द लाइब्रेरी में जोड़ा गया। पूर्ववत करें',
-			'storyDetails.successfully' => 'सफलतापूर्वक',
-			'storyDetails.ratingSubmitted' => 'आपकी रेटिंग सफलतापूर्वक सबमिट की गई।',
-			'storyDetails.warning' => 'चेतावनी',
-			'storyDetails.fillAllFields' => 'कृपया सभी फ़ील्ड भरें।',
-			'storyDetails.messageSent' => 'आपका संदेश सफलतापूर्वक भेजा गया।',
-			'storyDetails.translate' => 'अनुवाद करें',
-			'storyDetails.speak' => 'बोलें',
-			'storyDetails.like' => 'पसंद',
-			'storyDetails.save' => 'सहेजें',
-			'storyDetails.feedback' => 'प्रतिक्रिया',
-			'storyDetails.rating' => 'रेटिंग',
-			'storyDetails.stop' => 'रोकें',
-			'storyDetails.start' => 'शुरू करें',
-			'storyDetails.listen' => 'सुनें',
-			'storyDetails.translation' => 'अनुवाद',
-			'storyDetails.translating' => 'अनुवाद हो रहा है...',
-			'storyDetails.saveToLibrary' => 'लाइब्रेरी में सहेजें',
-			'storyDetails.rateThisStory' => 'इस कहानी को रेट करें',
-			'storyDetails.enjoyStory' => 'आपको यह कहानी कितनी पसंद आई?',
-			'storyDetails.send' => 'भेजें',
-			'storyDetails.subject' => 'विषय',
-			'storyDetails.feedbackSubjects.bugReport' => 'बग रिपोर्ट',
-			'storyDetails.feedbackSubjects.storyContent' => 'कहानी सामग्री',
-			'storyDetails.feedbackSubjects.audioIssue' => 'ऑडियो समस्या',
-			'storyDetails.feedbackSubjects.suggestion' => 'सुझाव',
-			'storyDetails.feedbackSubjects.other' => 'अन्य',
-			'share.title' => 'दोस्तों के साथ साझा करें',
-			'share.mainTitle' => 'शांति साझा करें',
-			'share.descriptionPart1' => 'दोस्तों को एक साथ सांस लेने के लिए आमंत्रित करें।\nप्रत्येक आमंत्रण के लिए, आप दोनों को मिलता है ',
-			'share.descriptionPart2' => '1 सप्ताह प्रीमियम',
-			'share.descriptionPart3' => '',
-			'share.yourReferralCode' => 'आपका रेफरल कोड',
-			'share.codeCopied' => 'कोड कॉपी किया गया!',
-			'share.copyCode' => 'कोड कॉपी करें',
-			'share.inviteDescription' => 'अपने दोस्तों को आमंत्रित करें और\nएक साथ सीखें',
-			'share.linkCopied' => 'कॉपी हो गया',
-			'share.linkCopiedMessage' => 'लिंक क्लिपबोर्ड पर कॉपी हो गया है।',
-			'delete' => 'हटाएं',
-			'editProfile.title' => 'प्रोफ़ाइल संपादित करें',
-			'editProfile.changePhoto' => 'Avatar बदलें',
-			'editProfile.learnLanguage' => 'भाषा सीखें',
-			'editProfile.fullName' => 'पूरा नाम',
-			'editProfile.email' => 'ईमेल',
-			'editProfile.age' => 'आयु',
-			'editProfile.save' => 'सहेजें',
-			'editProfile.saving' => 'सहेज रहा है...',
-			'editProfile.updateSuccess' => 'प्रोफ़ाइल सफलतापूर्वक अपडेट की गई',
-			'editProfile.updateError' => 'प्रोफ़ाइल अपडेट करते समय एक त्रुटि हुई',
-			'editProfile.deleteAccount' => 'खाता हटाएं',
-			'notifications.title' => 'सूचनाएं',
-			'notifications.emptyTitle' => 'अभी तक कोई सूचना नहीं',
-			'notifications.emptyDescription' => 'जब आपकी सीखने की यात्रा के बारे में कोई महत्वपूर्ण अपडेट होगा तो हम आपको सूचित करेंगे।',
-			'notifications.premiumBannerTitle' => 'प्रीमियम लाभों को\nन चूकें!',
-			'notifications.premiumBannerDescription' => 'प्रीमियम ग्राहक के रूप में अवसरों का लाभ उठाएं।',
-			'auth.google' => 'Continue with Google',
-			'auth.facebook' => 'Continue with Facebook',
-			'auth.apple' => 'Continue with Apple',
+			'onboarding.loading.subtitle' => 'कृपया प्रतीक्षा करें, आपकी प्रोफ़ाइल तैयार की जा रही है।',
+			'onboarding.kFinal.titlePart1' => 'आपका व्यक्तिगत खाता है\n',
+			'onboarding.kFinal.titlePart2' => 'बनाया था',
+			'onboarding.kFinal.subtitle' => 'किसी भी पात्र के साथ संचार का आनंद लें',
+			'onboarding.allowAccess' => 'उपयोग की अनुमति दें',
+			'onboarding.iUnderstand' => 'मैं समझता हूँ',
+			'onboarding.login.title' => 'अपनी\nसीखने की यात्रा जारी रखें',
+			'onboarding.login.subtitle' => 'प्रगति सहेजें, पाठ अनलॉक करें और\nविभिन्न डिवाइसों पर सीखते रहें।',
+			'onboarding.login.failed' => 'साइन-इन पूरा नहीं हो सका.',
+			'onboarding.reward.points' => '⭐️ +50 अंक',
+			'onboarding.reward.title' => 'महान कार्य 🎉',
+			'onboarding.reward.subtitle' => '200 से अधिक पाठ आपकी प्रतीक्षा कर रहे हैं!',
+			'onboarding.reward.progressLabel' => 'पहला चरण पूरा हुआ!',
+			'onboarding.reward.featureAlphabetTitle' => 'पूर्ण वर्णमाला एवं संख्याएँ',
+			'onboarding.reward.featureAlphabetSubtitle' => '200+ इंटरैक्टिव पाठ',
+			'onboarding.reward.featureVoiceTitle' => 'स्वर उच्चारण',
+			'onboarding.reward.featureVoiceSubtitle' => 'हर शब्द के लिए ऑडियो समर्थन',
+			'onboarding.reward.featureQuizTitle' => 'चंचल मिनी क्विज़',
+			'onboarding.reward.featureQuizSubtitle' => 'आनंद लेते हुए सीखें',
+			'onboarding.reward.continueButton' => 'अन्वेषण करते रहें',
+			'onboarding.spellTitle' => 'जो शब्द आप देखते हैं उसका उच्चारण करें!',
+			'onboarding.spellSubtitle' => 'क्या आप "LION" लिख सकते हैं?',
+			'onboarding.spellSuccessTitle' => 'अच्छा! यह शेर है',
+			'onboarding.spellSuccessSubtitle' => 'सुनने के लिए टैप करें',
+			'pressBackAgainToExit' => 'बाहर निकलने के लिए फिर से वापस दबाएँ',
+			'splash.initial.hello' => 'नमस्ते',
+			'splash.initial.title' => 'बच्चों के लिए चंचल अंग्रेजी',
+			'splash.screen1.title' => 'अंग्रेजी सीखना\nखेलने जैसा महसूस हो सकता है',
+			'splash.screen1.description' => 'छोटे, चंचल पाठ बच्चों को बिना दबाव के नए शब्द सीखने में मदद करते हैं।',
+			'splash.screen2.title' => 'सुनें, दोहराएं और\nनए शब्द सीखें',
+			'splash.screen2.description' => 'सरल आवाज गतिविधियाँ बच्चों को चरण दर चरण उच्चारण का अभ्यास करने में मदद करती हैं।',
+			'splash.screen3.title' => 'आत्मविश्वास बनाएँ,\nएक समय में एक शब्द',
+			'splash.screen3.description' => 'सरल गतिविधियों, मैत्रीपूर्ण मार्गदर्शन और सुरक्षित शिक्षण प्रवाह वाले युवा शिक्षार्थियों के लिए डिज़ाइन किया गया।',
+			'splash.screen3.option1' => '️🛡️ बच्चों के लिए सुरक्षित',
+			'splash.screen3.option2' => '🌱कोई दबाव नहीं सीखना',
+			'splash.screen3.option3' => '⭐️ युवा शिक्षार्थियों के लिए बनाया गया',
+			'auth.google' => 'Google के साथ जारी रखें',
+			'auth.facebook' => 'फेसबुक के साथ जारी रखें',
+			'auth.apple' => 'एप्पल के साथ जारी रखें',
 			'auth.guest' => 'अतिथि के रूप में जारी रखें',
-			'auth.signInFailed' => ({required Object error}) => 'साइन इन विफल: ${error}',
-			'cancel' => 'रद्द करें',
-			'deleteAccount' => 'खाता हटाएं',
-			'deleteDialogTitle' => 'क्या आप वाकई अपना खाता हटाना चाहते हैं?',
-			'deleteDialogDescription' => 'यह क्रिया अपरिवर्तनीय है और आपके सभी व्यायाम इतिहास और डेटा को स्थायी रूप से हटा देगी।',
-			'deleteError' => 'अपना खाता हटाते समय एक त्रुटि हुई। कृपया पुनः प्रयास करें।',
-			'enterInvitationCode' => 'निमंत्रण कोड दर्ज करें',
-			'inviteFriends' => 'किसी मित्र से प्राप्त आमंत्रण कोड दर्ज करें।\nइसे निर्दिष्ट फ़ील्ड में टाइप करें',
-			'twoDaysPremium' => '7 दिन प्रीमियम',
-			'advantage' => '\nइसके लाभों का आनंद लेने के लिए।',
-			'send' => 'भेजें',
-			'referralCode.inputPlaceholder' => '8-अंकीय कोड दर्ज करें',
-			'referralCode.applying' => 'कोड लागू हो रहा है...',
-			'referralCode.success.title' => 'सफल!',
-			'referralCode.success.message' => 'रेफरल कोड सफलतापूर्वक लागू किया गया! आपको और आपके मित्र को 1 सप्ताह का प्रीमियम मिला है।',
-			'referralCode.errors.missingCode.title' => 'कोड आवश्यक',
-			'referralCode.errors.missingCode.message' => 'जारी रखने के लिए कृपया रेफरल कोड दर्ज करें।',
-			'referralCode.errors.invalidFormat.title' => 'अमान्य प्रारूप',
-			'referralCode.errors.invalidFormat.message' => 'रेफरल कोड ठीक 8 वर्णों का होना चाहिए।',
-			'referralCode.errors.alreadyUsed.title' => 'पहले से उपयोग किया गया',
-			'referralCode.errors.alreadyUsed.message' => 'आपने पहले ही एक रेफरल कोड का उपयोग कर लिया है। प्रत्येक उपयोगकर्ता केवल एक कोड का उपयोग कर सकता है।',
-			'referralCode.errors.selfReferral.title' => 'अमान्य कोड',
-			'referralCode.errors.selfReferral.message' => 'आप अपने स्वयं के आमंत्रण कोड का उपयोग नहीं कर सकते। कृपया किसी मित्र के कोड का उपयोग करें।',
-			'referralCode.errors.codeNotFound.title' => 'कोड नहीं मिला',
-			'referralCode.errors.codeNotFound.message' => 'दर्ज किया गया रेफरल कोड मौजूद नहीं है। कृपया जांचें और पुनः प्रयास करें।',
-			'referralCode.errors.genericError.title' => 'त्रुटि',
-			'referralCode.errors.genericError.message' => 'रेफरल कोड लागू करते समय एक त्रुटि हुई। कृपया पुनः प्रयास करें।',
-			'deleteNotifications' => 'सूचनाएं हटाएं',
-			'deleteNotificationsDescription' => 'क्या आप वाकई अपनी सभी\nसूचनाएं हटाना चाहते हैं? यह क्रिया पूर्ववत नहीं की जा सकती।',
-			'deleteAll' => 'सभी हटाएं',
-			'appLanguage' => 'ऐप भाषा',
-			'selectLanguage' => 'अपनी पसंदीदा भाषा चुनें',
-			'save' => 'सहेजें',
+			'auth.signInFailed' => ({required Object error}) => 'साइन-इन विफल: ${error}',
+			'home.seeAll' => 'सभी देखें',
+			'home.more' => 'अधिक',
+			'home.online' => 'ऑनलाइन',
+			'home.offline' => 'ऑफलाइन',
+			'home.placeholders.fashionDesigner' => 'फैशन डिजाइनर',
+			'home.placeholders.comedian' => 'हास्य अभिनेता',
+			'home.placeholders.influencer' => 'प्रभावशाली व्यक्ति',
+			'home.placeholders.teacher' => 'अध्यापक',
+			'home.placeholders.friend' => 'दोस्त',
+			'home.greeting' => 'नमस्ते,',
+			'home.guest' => 'अतिथि',
+			'home.thisWeek' => 'इस सप्ताह',
+			'home.continueLearning' => 'सीखना जारी रखें',
+			'home.allLessons' => 'सभी पाठ',
+			'home.startLearning' => 'सीखना शुरू करें',
+			'home.resumeActivity' => ({required Object activity}) => '${activity} फिर से शुरू करें',
+			'home.continueButton' => 'जारी रखना',
+			'home.streakTitle' => 'स्ट्रीक स्थिति',
+			'home.streakActive' => ({required Object count}) => 'आपकी अभी ${count} दिन की सीखने की स्ट्रीक है। इसे बनाए रखने के लिए हर दिन एक पाठ पूरा करें।',
+			'home.streakEmpty' => 'आपकी सीखने की स्ट्रीक अभी शुरू नहीं हुई है। इसे शुरू करने के लिए आज एक पाठ पूरा करें।',
+			'home.weekDays.0' => 'सोम',
+			'home.weekDays.1' => 'मंगल',
+			'home.weekDays.2' => 'बुध',
+			'home.weekDays.3' => 'गुरु',
+			'home.weekDays.4' => 'शुक्र',
+			'home.weekDays.5' => 'बैठा',
+			'home.weekDays.6' => 'सूरज',
+			'home.lessons.alphabet' => 'वर्णमाला',
+			'home.lessons.numbers' => 'नंबर',
+			'home.lessons.colors' => 'रंग',
+			'home.lessons.shapes' => 'आकार',
+			'home.lessons.fruit' => 'फल',
+			'home.lessons.vegetables' => 'सब्ज़ियाँ',
+			'home.lessons.sports' => 'खेल',
+			'home.lessons.fillIn' => 'भरें',
+			'home.lessons.fillInBlank' => 'रिक्त स्थान को भरें',
+			'home.lessonProgress' => ({required Object total, required Object current}) => '${total} का पाठ ${current}',
+			'notifications.today' => 'आज',
+			'notifications.yesterday' => 'कल',
+			'notifications.weekAgo' => ({required Object week}) => '${week} सप्ताह पहले',
+			'notifications.monthAgo' => ({required Object month}) => '${month} महीना पहले',
+			'notifications.yearAgo' => ({required Object year}) => '${year} वर्ष पहले',
+			'notifications.noNotifications' => 'अभी तक कोई सूचना नहीं.',
+			'notifications.noNotificationsSubtitle' => 'सूचना मिलने पर दोबारा जांच करना न भूलें।',
+			'notifications.allDeleted' => 'सभी सूचनाएं सफलतापूर्वक हटा दी गई हैं',
+			'editProfile.aboutMe' => 'मेरे बारे में',
+			'editProfile.aboutMeHint' => 'अपने बारे में कुछ लिखें',
+			'editProfile.fullName' => 'पूरा नाम',
+			'editProfile.gender' => 'लिंग',
+			'editProfile.male' => 'पुरुष',
+			'editProfile.female' => 'महिला',
+			'editProfile.dontWantToMention' => 'मैं इसका जिक्र नहीं करना चाहता.',
+			'editProfile.country' => 'देश',
+			'editProfile.languagePreferences' => 'भाषा प्राथमिकताएँ',
+			'editProfile.selectLanguage' => 'अपनी पसंदीदा भाषा जोड़ें',
+			'editProfile.saved' => 'सहेजा गया',
+			'editProfile.changesSaved' => 'परिवर्तन सहेजे गए हैं.',
+			'settingsSupport.title' => 'सेटिंग्स और समर्थन',
+			'settingsSupport.premiumTitle' => 'सभी सुविधाओं तक असीमित पहुंच\n',
+			'settingsSupport.getPremium' => 'प्रीमियम प्राप्त करें',
+			'settingsSupport.settingsHub' => 'सेटिंग्स हब',
+			'settingsSupport.shareTheApp' => 'ऐप साझा करें',
+			'settingsSupport.rateUs' => 'हमें रेटिंग दें',
+			'settingsSupport.version' => 'संस्करण',
+			'settingsSupport.notifications' => 'सूचनाएं',
+			'settingsSupport.accountManagement' => 'खाता प्रबंधन',
+			'settingsSupport.deleteAccount' => 'खाता हटा दो',
+			'settingsSupport.logOut' => 'लॉग आउट',
+			'settingsSupport.logOutTitle' => 'आप लॉग आउट होने वाले हैं',
+			'settingsSupport.logOutSubtitle' => 'जल्द ही तुम्हें देखेंगे!  [न्यूलाइन] हम आपको याद करेंगे।',
+			'deleteAccount.title' => 'खाता हटा दो',
+			'deleteAccount.warning' => 'क्या आप इस खाते को हटाने के लिए सुनिश्चित हैं?',
+			'deleteAccount.description' => 'यह क्रिया पूर्ववत नहीं की जा सकती और आपका सारा इतिहास और डेटा स्थायी रूप से हटा दिया जाएगा।',
+			'deleteAccount.deleteFailed' => ({required Object error}) => 'खाता हटाना विफल: ${error}',
+			'deleteAccount.steps.step1.title' => 'हम नहीं चाहते कि आप जाएं, लेकिन हम समझते हैं।',
+			'deleteAccount.steps.step1.subtitle' => 'क्या आप हमें बता सकते हैं कि आप क्यों छोड़ना चाहते हैं ताकि हम Lingola Kids अनुभव को बेहतर बना सकें?',
+			'deleteAccount.steps.step1.option1' => 'मुझे एआई अक्षर यथार्थवादी नहीं लगे।',
+			'deleteAccount.steps.step1.option2' => 'मुझे वीडियो चैट में तकनीकी समस्याएं आ रही हैं.',
+			'deleteAccount.steps.step1.option3' => 'सदस्यता कीमतें मेरी अपेक्षाओं से ऊपर हैं।',
+			'deleteAccount.steps.step1.option4' => 'मैं जिस प्रकार के पात्रों की तलाश कर रहा था, वे मुझे नहीं मिल सके।',
+			'deleteAccount.steps.step1.option5' => 'मैं बस इसे थोड़े समय के लिए आज़माना चाहता था।',
+			'deleteAccount.steps.step1.option6' => 'अन्य',
+			'deleteAccount.steps.step2.title' => 'यदि आप अपना खाता हटाते हैं, तो आप इन्हें अलविदा कह देंगे:',
+			'deleteAccount.steps.step2.subtitle1' => 'गहरे संबंध और स्मृति:',
+			'deleteAccount.steps.step2.subtitle1Desc' => 'जिन पात्रों के साथ आप बातचीत करते हैं वे आपके साथ अपने अतीत, आपके साझा रहस्यों और आपकी व्यक्तिगत आदतों को पूरी तरह से भूल जाएंगे।',
+			'deleteAccount.steps.step2.subtitle2' => 'वीडियो कॉल विशेषाधिकार:',
+			'deleteAccount.steps.step2.subtitle2Desc' => 'आप अपने एआई भागीदारों के साथ आमने-सामने संवाद करने का अधिकार खो देंगे, जो आपके लिए किसी भी समय उपलब्ध हैं।',
+			'deleteAccount.steps.step2.subtitle3' => 'उन्नत एल्गोरिथम:',
+			'deleteAccount.steps.step2.subtitle3Desc' => 'आपकी प्राथमिकताओं के अनुरूप आपका \'सिर्फ आपके लिए\' वर्ण मिलान रीसेट कर दिया जाएगा।',
+			'deleteAccount.steps.step2.subtitle4' => 'प्रोफ़ाइल डेटा:',
+			'deleteAccount.steps.step2.subtitle4Desc' => 'आपकी अर्जित उपलब्धियाँ, अनलॉक किए गए विशेष वर्ण और चैट इतिहास अपरिवर्तनीय रूप से हटा दिए जाएंगे।',
+			'deleteAccount.steps.step3.title' => 'आपके जाने से पहले हमारे पास आपके लिए एक विशेष पेशकश है!',
+			'deleteAccount.steps.step3.description' => 'हो सकता है कि आपको बस थोड़ा और समय या बेहतर डील की आवश्यकता हो। क्या आप अपना खाता हटाने के बजाय इन पर विचार करेंगे?',
+			'deleteAccount.steps.step3.description1' => ({required Object offer}) => 'आपको हमारे साथ रखना मूल्यवान है. आपकी अगली सदस्यता पर ${offer}! क्या आप इस ऑफर को जारी रखना चाहेंगे?',
+			'deleteAccount.steps.step3.description1Offer' => 'हमने 50% छूट लागू की है',
+			'deleteAccount.steps.step3.description2' => ({required Object offer}) => 'हमने आपको ${offer} क्रेडिट दिया है ताकि आप नए पात्र देख सकें जिन्हें आपने अभी तक नहीं खोजा है।',
+			'deleteAccount.steps.step3.description2Offer' => '3 निःशुल्क वीडियो कॉल',
+			'deleteAccount.steps.step3.acceptOffer' => '50% डिस्काउंट ऑफर स्वीकार करें',
+			'deleteAccount.steps.step3.deleteMyAccount' => 'मेरा एकाउंट हटा दो',
+			'cancel' => 'रद्द करना',
+			'delete' => 'मिटाना',
+			'premium' => 'अधिमूल्य',
+			'profileEdit' => 'प्रोफ़ाइल संपादित करें',
+			'settings' => 'सेटिंग्स',
+			'undo' => 'पूर्ववत',
+			'successfully' => 'सफलतापूर्वक',
+			'save' => 'बचाना',
 			'languageOptions.english' => 'अंग्रेज़ी',
+			'languageOptions.chinese' => 'चीनी',
 			'languageOptions.german' => 'जर्मन',
 			'languageOptions.italian' => 'इतालवी',
-			'languageOptions.french' => 'फ्रेंच',
+			'languageOptions.french' => 'फ़्रेंच',
 			'languageOptions.japanese' => 'जापानी',
-			'languageOptions.spanish' => 'स्पेनिश',
+			'languageOptions.spanish' => 'स्पैनिश',
 			'languageOptions.russian' => 'रूसी',
 			'languageOptions.turkish' => 'तुर्की',
 			'languageOptions.korean' => 'कोरियाई',
 			'languageOptions.hindi' => 'हिंदी',
 			'languageOptions.portuguese' => 'पुर्तगाली',
-			'parentalGate.title' => 'सिर्फ़ माता-पिता के लिए',
-			'parentalGate.subtitle' => 'जारी रखने के लिए कृपया निम्नलिखित गणितीय प्रश्न हल करें:',
-			'parentalGate.hint' => 'उत्तर',
-			'parentalGate.incorrect' => 'गलत उत्तर, कृपया फिर से प्रयास करें।',
+			'common.tryAgain' => 'पुनः प्रयास करें',
+			'common.retry' => 'पुन: प्रयास करें',
+			'common.close' => 'बंद करना',
+			'profileScreen.title' => 'प्रोफ़ाइल',
+			'profileScreen.greeting' => 'नमस्ते,',
+			'profileScreen.account' => 'खाता',
+			'profileScreen.app' => 'अनुप्रयोग',
+			'profileScreen.statusLoading' => 'स्थिति लोड हो रही है',
+			'profileScreen.premiumActive' => 'सक्रिय • प्रो सदस्य',
+			'profileScreen.freePlan' => 'निःशुल्क योजना',
+			'profileScreen.loadFailed' => 'प्रोफ़ाइल जानकारी लोड नहीं की जा सकी. पुनः प्रयास करने के लिए नीचे खींचें.',
+			'profileScreen.accountSettings' => 'अकाउंट सेटिंग',
+			'profileScreen.accountSettingsGuestSubtitle' => 'नाम और अवतार',
+			'profileScreen.accountSettingsSubtitle' => 'नाम, फोटो, ई-मेल',
+			'profileScreen.manageSubscription' => 'सदस्यता प्रबंधित करें',
+			'profileScreen.screenTime' => 'स्क्रीन टाइम',
+			'profileScreen.changeLanguage' => 'बदलें',
+			'profileScreen.changeLanguageSubtitle' => 'एप्लिकेशन की भाषा बदलें',
+			'profileScreen.rateApp' => 'एप्लिकेशन की श्रेणी बताओ',
+			'profileScreen.supportUs' => 'हमें प्रोत्साहन दें',
+			'profileScreen.rateComingSoon' => 'रेटिंग जल्द ही उपलब्ध होगी.',
+			'profileScreen.privacyPolicy' => 'गोपनीयता नीति',
+			'profileScreen.privacySubtitle' => 'डेटा सुरक्षित रखें',
+			'profileScreen.termsOfService' => 'सेवा की शर्तें',
+			'profileScreen.termsSubtitle' => 'डेटा और शर्तें',
+			'profileScreen.logout' => 'लॉग आउट',
+			'profileScreen.logoutDialogTitle' => 'आप अपने खाते से\nलॉग आउट करने वाले हैं',
+			'profileScreen.logoutFailed' => 'लॉग आउट नहीं हो सका. कृपया पुन: प्रयास करें।',
+			'profileScreen.subscriptionFailed' => 'सदस्यता स्क्रीन नहीं खोली जा सकी. कृपया पुन: प्रयास करें।',
+			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'आज ${minutes} मिनट',
+			'profileScreen.screenTimeHours' => ({required Object hours}) => 'आज ${hours} घंटे',
+			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'आज ${hours} घंटे ${minutes} मिनट',
+			'profileScreen.trialSubscriptionTitle' => 'ट्रायल प्रीमियम सक्रिय',
+			'profileScreen.trialSubscriptionPrompt' => 'आप वर्तमान में एक ट्रायल प्रीमियम सब्सक्रिप्शन का उपयोग कर रहे हैं. क्या आप सब्सक्राइब करना चाहेंगे?',
+			'profileScreen.yes' => 'हाँ',
+			'profileScreen.no' => 'नहीं',
+			'editProfileScreen.changeAvatar' => 'परिवर्तन अवतार',
+			'editProfileScreen.email' => 'ई-मेल',
+			'editProfileScreen.emailHelper' => 'यह फ़ील्ड आपके बैकएंड खाते से आती है.',
+			'editProfileScreen.deleteDialogTitle' => 'क्या आप वाकई\nअपना खाता हटाना चाहते हैं?',
+			'editProfileScreen.accountDeleteFailed' => 'खाता हटाया नहीं जा सका. कृपया पुन: प्रयास करें।',
+			'editProfileScreen.profileSaveFailed' => 'प्रोफ़ाइल सहेजी नहीं जा सकी. कृपया पुन: प्रयास करें।',
+			'premiumAccess.openFailed' => 'प्रीमियम स्क्रीन नहीं खोली जा सकी. कृपया पुन: प्रयास करें।',
+			'parentalGate.barrierLabel' => 'पैतृक द्वार',
+			'parentalGate.question' => 'इस ऑपरेशन का परिणाम क्या है?',
+			'parentalGate.wrongAnswer' => 'गलत उत्तर. कृपया पुन: प्रयास करें.',
+			'parentalGate.submit' => 'जमा करना',
+			'activities.flashCards' => 'फ़्लैश कार्ड',
+			'activities.drawing' => 'चित्रकला',
+			'activities.flipCards' => 'कार्ड पलटें',
+			'activities.trueFalse' => 'सच्चा झूठ',
+			'activities.spelling' => 'वर्तनी',
+			'resultSheet.correct' => 'सही',
+			'resultSheet.tryAgain' => 'पुनः प्रयास करें',
+			'resultSheet.correctBody' => 'आप बहुत अच्छा कर रहे हैं!',
+			'resultSheet.tryAgainBody' => 'एक बार और प्रयास करें!',
+			'trueFalseView.isThisLetter' => ({required Object letter}) => 'क्या यह पत्र ${letter} है?',
+			'trueFalseView.isThisNumber' => ({required Object number}) => 'क्या यह संख्या ${number} है?',
+			'trueFalseView.isThisShape' => ({required Object shape}) => 'क्या यह आकृति ${shape} है?',
+			'trueFalseView.isThisSubject' => ({required Object subject}) => 'क्या यह ${subject} है?',
+			'trueFalseView.trueText' => 'सत्य',
+			'trueFalseView.falseText' => 'असत्य',
 			_ => null,
 		};
 	}

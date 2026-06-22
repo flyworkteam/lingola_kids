@@ -1,0 +1,4 @@
+base_locale: en
+input_directory: i18n
+output_directory: lib/gen
+flutter_integration: true

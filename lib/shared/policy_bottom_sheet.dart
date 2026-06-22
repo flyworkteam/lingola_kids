@@ -32,7 +32,7 @@ class _PolicySheet extends StatelessWidget {
         title = p.title;
         sections = [
           _PolicySection(body: p.intro),
-          _PolicySection(title: p.section1Title, body: null),
+          _PolicySection(title: p.section1Title, body: p.section1Body),
           _PolicySection(title: p.section2Title, body: p.section2Body),
           _PolicySection(title: p.section3Title, body: p.section3Body),
           _PolicySection(title: p.section4Title, body: p.section4Body),
