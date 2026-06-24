@@ -50,22 +50,6 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
     });
   }
 
-  Future<void> _continueWithGoogle() async {
-    await _runAuthAction(() async {
-      final idToken = await ref
-          .read(socialAuthServiceProvider)
-          .signInWithGoogle();
-      if (idToken == null || idToken.isEmpty) {
-        return false;
-      }
-
-      await ref
-          .read(AllProviders.authRepositoryProvider)
-          .signInWithGoogle(idToken: idToken);
-      return true;
-    });
-  }
-
   Future<void> _continueWithApple() async {
     await _runAuthAction(() async {
       final result = await ref
@@ -132,7 +116,6 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
           OnboardingRewardPage(onContinue: _next),
           OnboardingLoginPage(
             isLoading: _isAuthenticating,
-            onGoogle: _continueWithGoogle,
             onApple: _continueWithApple,
             onGuest: _continueAsGuest,
           ),

@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,14 +8,12 @@ import 'package:lingola_kids/utils/app_assets.dart';
 
 class OnboardingLoginPage extends StatelessWidget {
   const OnboardingLoginPage({
-    required this.onGoogle,
     required this.onApple,
     required this.onGuest,
     required this.isLoading,
     super.key,
   });
 
-  final VoidCallback onGoogle;
   final VoidCallback onApple;
   final VoidCallback onGuest;
   final bool isLoading;
@@ -24,15 +21,7 @@ class OnboardingLoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = context.t;
-    final authButtons = defaultTargetPlatform == TargetPlatform.iOS
-        ? [
-            _AuthButtonConfig.apple(t.auth.apple, onApple),
-            _AuthButtonConfig.google(t.auth.google, onGoogle),
-          ]
-        : [
-            _AuthButtonConfig.google(t.auth.google, onGoogle),
-            _AuthButtonConfig.apple(t.auth.apple, onApple),
-          ];
+    final authButtons = [_AuthButtonConfig.apple(t.auth.apple, onApple)];
 
     return OnboardingCloudBackground(
       child: SafeArea(
@@ -123,16 +112,6 @@ class _AuthButtonConfig {
     required this.textColor,
     required this.onTap,
   });
-
-  factory _AuthButtonConfig.google(String label, VoidCallback onTap) {
-    return _AuthButtonConfig(
-      label: label,
-      icon: AppIcons.google,
-      color: Colors.white,
-      textColor: Colors.black,
-      onTap: onTap,
-    );
-  }
 
   factory _AuthButtonConfig.apple(String label, VoidCallback onTap) {
     return _AuthButtonConfig(

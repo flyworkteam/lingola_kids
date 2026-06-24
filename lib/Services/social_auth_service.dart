@@ -2,9 +2,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:crypto/crypto.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lingola_kids/utils/print.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
@@ -13,49 +11,10 @@ final socialAuthServiceProvider = Provider<SocialAuthService>((ref) {
 });
 
 class SocialAuthService {
-  static const _googleServerClientId =
-      '395792097824-htddih19lauke1fufv99ifku8e17ded6.apps.googleusercontent.com';
   static const _appleServiceId = 'com.flywork.lingolakidsapp.sid';
   static final _appleRedirectUri = Uri.parse(
     'https://lingola-kids.firebaseapp.com/__/auth/handler',
   );
-  bool _isGoogleInitialized = false;
-
-  Future<String?> signInWithGoogle() async {
-    try {
-      final googleSignIn = GoogleSignIn.instance;
-      if (!_isGoogleInitialized) {
-        if (defaultTargetPlatform == TargetPlatform.android) {
-          await googleSignIn.initialize(serverClientId: _googleServerClientId);
-        } else {
-          await googleSignIn.initialize();
-        }
-        _isGoogleInitialized = true;
-      }
-
-      final GoogleSignInAccount account = await googleSignIn.authenticate();
-
-      final GoogleSignInAuthentication auth = account.authentication;
-
-      if (auth.idToken == null) {
-        Print.error('Failed to get ID token from Google');
-        throw Exception('Failed to get ID token from Google');
-      }
-
-      Print.info('Google sign-in successful for: ${account.email}');
-      return auth.idToken;
-    } on GoogleSignInException catch (e) {
-      if (e.code == GoogleSignInExceptionCode.canceled) {
-        Print.info('User cancelled Google Sign-In $e');
-        return null;
-      }
-      Print.error('Error signing in with Google: $e');
-      rethrow;
-    } catch (e) {
-      Print.error('Error signing in with Google: $e');
-      rethrow;
-    }
-  }
 
   Future<Map<String, dynamic>?> signInWithApple() async {
     try {
@@ -119,16 +78,6 @@ class SocialAuthService {
     } catch (e) {
       Print.error('Error signing in with Apple: $e');
       rethrow;
-    }
-  }
-
-  Future<void> signOutGoogle() async {
-    try {
-      final googleSignIn = GoogleSignIn.instance;
-      await googleSignIn.signOut();
-      Print.info('Google sign-out successful');
-    } catch (e) {
-      Print.error('Error signing out from Google: $e');
     }
   }
 

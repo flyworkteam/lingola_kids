@@ -20,11 +20,20 @@ Future<void> initPlatformState() async {
 
   await Purchases.setLogLevel(kDebugMode ? LogLevel.debug : LogLevel.info);
 
+  final config =
+      defaultTargetPlatform == TargetPlatform.iOS ||
+              defaultTargetPlatform == TargetPlatform.macOS
+          ? PurchasesConfiguration(appleApiKey)
+          : PurchasesConfiguration(googleApiKey);
+  // Kids app: avoid automatic device identifier collection for attribution.
+  config.automaticDeviceIdentifierCollectionEnabled = false;
+  config.diagnosticsEnabled = false;
+
   if (defaultTargetPlatform == TargetPlatform.iOS ||
       defaultTargetPlatform == TargetPlatform.macOS) {
-    await Purchases.configure(PurchasesConfiguration(appleApiKey));
+    await Purchases.configure(config);
   } else if (defaultTargetPlatform == TargetPlatform.android) {
-    await Purchases.configure(PurchasesConfiguration(googleApiKey));
+    await Purchases.configure(config);
   }
 
   Print.info('RevenueCat initialized', tag: 'Main');

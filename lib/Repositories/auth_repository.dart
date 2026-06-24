@@ -6,7 +6,6 @@ import 'package:lingola_kids/Services/dio_service.dart';
 import 'package:lingola_kids/Services/secure_storage_service.dart';
 import 'package:lingola_kids/Views/ProfileView/models/screen_time_controller.dart';
 import 'package:lingola_kids/utils/print.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
 
 /// Provider for AuthRepository
 
@@ -52,12 +51,6 @@ class AuthRepository {
         await _storageService.saveIsGuest(authResponse.user!.isGuest);
         await ScreenTimeController.handleUserChanged();
       }
-      try {
-        await Purchases.logIn(authResponse.user!.id.toString());
-        Print.info('RevenueCat: Logged in as user ${authResponse.user!.id}');
-      } catch (e) {
-        Print.error('RevenueCat login error: $e');
-      }
       Print.info('Guest user created successfully');
       return authResponse;
     } catch (e) {
@@ -95,12 +88,6 @@ class AuthRepository {
         await _storageService.saveUserId(authResponse.user!.id);
         await _storageService.saveIsGuest(authResponse.user!.isGuest);
         await ScreenTimeController.handleUserChanged();
-      }
-      try {
-        await Purchases.logIn(authResponse.user!.id.toString());
-        Print.info('RevenueCat: Logged in as user ${authResponse.user!.id}');
-      } catch (e) {
-        Print.error('RevenueCat login error: $e');
       }
       Print.info('Google sign-in successful');
       return authResponse;
@@ -144,12 +131,6 @@ class AuthRepository {
         await _storageService.saveUserId(authResponse.user!.id);
         await _storageService.saveIsGuest(authResponse.user!.isGuest);
         await ScreenTimeController.handleUserChanged();
-      }
-      try {
-        await Purchases.logIn(authResponse.user!.id.toString());
-        Print.info('RevenueCat: Logged in as user ${authResponse.user!.id}');
-      } catch (e) {
-        Print.error('RevenueCat login error: $e');
       }
       Print.info('Apple sign-in successful');
       return authResponse;
@@ -208,12 +189,6 @@ class AuthRepository {
         data: {'refreshToken': refreshToken},
         cancelToken: cancelToken,
       );
-      try {
-        await Purchases.logOut();
-        Print.info('RevenueCat: Logged out successfully');
-      } catch (e) {
-        Print.error('RevenueCat logout error: $e');
-      }
       // Clear local storage
       await _storageService.clearAll();
       await ScreenTimeController.handleUserChanged(
