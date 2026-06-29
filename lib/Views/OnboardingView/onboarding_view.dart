@@ -6,6 +6,7 @@ import 'package:lingola_kids/Services/social_auth_service.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_login_page.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_reward_page.dart';
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_spell_page.dart';
+import 'package:lingola_kids/Views/ProfileView/widgets/parental_gate_dialog.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/print.dart';
 
@@ -50,7 +51,25 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
     });
   }
 
+  Future<void> _continueWithGoogle() async {
+    if (!await _passParentalGate()) return;
+    await _runAuthAction(() async {
+      final idToken = await ref
+          .read(socialAuthServiceProvider)
+          .signInWithGoogle();
+      if (idToken == null || idToken.isEmpty) {
+        return false;
+      }
+
+      await ref
+          .read(AllProviders.authRepositoryProvider)
+          .signInWithGoogle(idToken: idToken);
+      return true;
+    });
+  }
+
   Future<void> _continueWithApple() async {
+    if (!await _passParentalGate()) return;
     await _runAuthAction(() async {
       final result = await ref
           .read(socialAuthServiceProvider)
@@ -67,6 +86,13 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
           );
       return true;
     });
+  }
+
+  Future<bool> _passParentalGate() async {
+    if (_isAuthenticating) return false;
+    final passed = await showParentalGate(context);
+    if (!mounted) return false;
+    return passed;
   }
 
   Future<void> _runAuthAction(Future<bool> Function() action) async {
@@ -116,6 +142,7 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
           OnboardingRewardPage(onContinue: _next),
           OnboardingLoginPage(
             isLoading: _isAuthenticating,
+            onGoogle: _continueWithGoogle,
             onApple: _continueWithApple,
             onGuest: _continueAsGuest,
           ),
