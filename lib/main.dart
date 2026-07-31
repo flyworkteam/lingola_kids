@@ -10,6 +10,7 @@ import 'package:lingola_kids/Services/secure_storage_service.dart';
 import 'package:lingola_kids/Views/ProfileView/models/screen_time_controller.dart';
 import 'package:lingola_kids/Views/SplashView/splash_view.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
+import 'package:lingola_kids/theme/app_scroll_behavior.dart';
 import 'package:lingola_kids/theme/app_text_styles.dart';
 import 'package:lingola_kids/utils/constants.dart';
 import 'package:lingola_kids/utils/print.dart' hide LogLevel;
@@ -110,6 +111,7 @@ class MyApp extends StatelessWidget {
       title: Constants.appName,
       navigatorKey: AppNavigator.key,
       debugShowCheckedModeBanner: false,
+      scrollBehavior: const AppScrollBehavior(),
       theme: ThemeData(
         useMaterial3: true,
         textTheme: AppTextStyles.textTheme(Theme.of(context).colorScheme),

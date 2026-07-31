@@ -278,7 +278,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
             : SafeArea(
                 bottom: false,
                 child: CustomScrollView(
-                  physics: const BouncingScrollPhysics(),
+                  physics: const ClampingScrollPhysics(),
                   slivers: [
                     SliverPadding(
                       padding: const EdgeInsets.fromLTRB(24, 32, 24, 0),

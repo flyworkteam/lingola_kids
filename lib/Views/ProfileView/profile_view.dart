@@ -214,7 +214,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                 child: ListView(
                   padding: const EdgeInsets.only(top: 54, bottom: 24),
                   physics: const AlwaysScrollableScrollPhysics(
-                    parent: BouncingScrollPhysics(),
+                    parent: ClampingScrollPhysics(),
                   ),
                   children: [
                     if (profileAsync.hasError) ...[

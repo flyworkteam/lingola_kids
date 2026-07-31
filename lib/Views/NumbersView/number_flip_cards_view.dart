@@ -53,7 +53,7 @@ class _NumberFlipCardsViewState extends State<NumberFlipCardsView> {
       padding: const EdgeInsets.fromLTRB(15, 32, 15, 0),
       child: GridView.builder(
         padding: const EdgeInsets.only(top: 28, bottom: 22),
-        physics: const BouncingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         itemCount: NumberData.numbers.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,

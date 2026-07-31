@@ -138,7 +138,7 @@ class _EditProfileViewState extends ConsumerState<EditProfileView> {
           children: [
             Expanded(
               child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
+                physics: const ClampingScrollPhysics(),
                 child: Column(
                   children: [
                     Center(
@@ -221,7 +221,7 @@ class _AvatarPicker extends StatelessWidget {
       height: 58,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        physics: const BouncingScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         itemCount: avatars.length,
         separatorBuilder: (context, index) => const SizedBox(width: 12),
         itemBuilder: (context, index) {
