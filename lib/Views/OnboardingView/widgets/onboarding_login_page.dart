@@ -7,31 +7,46 @@ import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_primary_but
 import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 
-class OnboardingLoginPage extends StatelessWidget {
+class OnboardingLoginPage extends StatefulWidget {
   const OnboardingLoginPage({
     required this.onGoogle,
     required this.onApple,
     required this.onGuest,
-    required this.isLoading,
     super.key,
   });
 
   final VoidCallback onGoogle;
   final VoidCallback onApple;
   final VoidCallback onGuest;
-  final bool isLoading;
+
+  @override
+  State<OnboardingLoginPage> createState() => _OnboardingLoginPageState();
+}
+
+class _OnboardingLoginPageState extends State<OnboardingLoginPage> {
+  /// Blocks the residual tap from the previous onboarding "Continue" button.
+  bool _acceptInput = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Future<void>.delayed(const Duration(milliseconds: 450), () {
+      if (!mounted) return;
+      setState(() => _acceptInput = true);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final t = context.t;
     final authButtons = defaultTargetPlatform == TargetPlatform.iOS
         ? [
-            _AuthButtonConfig.apple(t.auth.apple, onApple),
-            _AuthButtonConfig.google(t.auth.google, onGoogle),
+            _AuthButtonConfig.apple(t.auth.apple, widget.onApple),
+            _AuthButtonConfig.google(t.auth.google, widget.onGoogle),
           ]
         : [
-            _AuthButtonConfig.google(t.auth.google, onGoogle),
-            _AuthButtonConfig.apple(t.auth.apple, onApple),
+            _AuthButtonConfig.google(t.auth.google, widget.onGoogle),
+            _AuthButtonConfig.apple(t.auth.apple, widget.onApple),
           ];
 
     return OnboardingCloudBackground(
@@ -71,29 +86,28 @@ class OnboardingLoginPage extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
-                        for (var i = 0; i < authButtons.length; i++) ...[
-                          OnboardingAuthButton(
-                            label: authButtons[i].label,
-                            color: authButtons[i].color,
-                            textColor: authButtons[i].textColor,
-                            enabled: !isLoading,
-                            leading: SvgPicture.asset(
-                              authButtons[i].icon,
-                              width: 22,
-                              height: 22,
-                            ),
-                            onTap: authButtons[i].onTap,
-                          ),
-                          if (i != authButtons.length - 1) const SizedBox(height: 12),
-                        ],
-                        TextButton(
-                          onPressed: isLoading ? null : onGuest,
-                          child: isLoading
-                              ? const SizedBox.square(
-                                  dimension: 18,
-                                  child: CircularProgressIndicator(strokeWidth: 2),
-                                )
-                              : Text(
+                        IgnorePointer(
+                          ignoring: !_acceptInput,
+                          child: Column(
+                            children: [
+                              for (var i = 0; i < authButtons.length; i++) ...[
+                                OnboardingAuthButton(
+                                  label: authButtons[i].label,
+                                  color: authButtons[i].color,
+                                  textColor: authButtons[i].textColor,
+                                  leading: SvgPicture.asset(
+                                    authButtons[i].icon,
+                                    width: 22,
+                                    height: 22,
+                                  ),
+                                  onTap: authButtons[i].onTap,
+                                ),
+                                if (i != authButtons.length - 1)
+                                  const SizedBox(height: 12),
+                              ],
+                              TextButton(
+                                onPressed: widget.onGuest,
+                                child: Text(
                                   t.auth.guest,
                                   style: GoogleFonts.manrope(
                                     fontSize: 16,
@@ -101,6 +115,9 @@ class OnboardingLoginPage extends StatelessWidget {
                                     color: Colors.black,
                                   ),
                                 ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

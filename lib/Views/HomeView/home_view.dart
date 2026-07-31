@@ -3,8 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lingola_kids/Core/Routes/app_routes.dart';
 import 'package:lingola_kids/Models/lesson_model.dart';
-import 'package:lingola_kids/Models/user_model.dart';
-import 'package:lingola_kids/Riverpod/Providers/all_providers.dart';
+import 'package:lingola_kids/Riverpod/Providers/home_data_provider.dart';
 import 'package:lingola_kids/Riverpod/Providers/user_provider.dart';
 import 'package:lingola_kids/Views/HomeView/models/home_lesson_model.dart';
 import 'package:lingola_kids/Views/HomeView/widgets/continue_learning_card.dart';
@@ -14,10 +13,8 @@ import 'package:lingola_kids/Views/HomeView/widgets/lesson_card.dart';
 import 'package:lingola_kids/Views/HomeView/widgets/weekly_progress_card.dart';
 import 'package:lingola_kids/Views/LearningCategoryView/learning_category_data.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
+import 'package:lingola_kids/shared/app_loading.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
-import 'package:lingola_kids/utils/premium_access.dart';
-import 'package:lingola_kids/utils/print.dart';
-import 'package:purchases_ui_flutter/purchases_ui_flutter.dart';
 
 class HomeView extends ConsumerStatefulWidget {
   const HomeView({super.key});
@@ -27,8 +24,6 @@ class HomeView extends ConsumerStatefulWidget {
 }
 
 class _HomeViewState extends ConsumerState<HomeView> {
-  late Future<_HomeBackendData> _backendDataFuture;
-
   static const Color _backgroundColor = Color(0xFFFAF5F1);
 
   static const List<HomeLessonModel> _lessons = [
@@ -94,24 +89,17 @@ class _HomeViewState extends ConsumerState<HomeView> {
   @override
   void initState() {
     super.initState();
-    _backendDataFuture = _loadBackendData();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(userProfileProvider.notifier).logActivity();
+      // Fallback if we landed on home without splash bootstrap (e.g. deep link).
+      final home = ref.read(homeDataProvider).value;
+      final profile = ref.read(userProfileProvider).value;
+      if (home == null || home.lessons.isEmpty || profile == null) {
+        ref.read(homeDataProvider.notifier).reload();
+        if (profile == null) {
+          ref.read(userProfileProvider.notifier).refresh();
+        }
+      }
     });
-  }
-
-  Future<_HomeBackendData> _loadBackendData() async {
-    try {
-      final lessons = await ref
-          .read(AllProviders.lessonRepositoryProvider)
-          .getLessons();
-      final progress = await ref
-          .read(AllProviders.progressRepositoryProvider)
-          .getCurrentProgress();
-      return _HomeBackendData(lessons: lessons, currentProgress: progress);
-    } catch (_) {
-      return const _HomeBackendData();
-    }
   }
 
   List<HomeLessonModel> _mergedLessons(
@@ -218,9 +206,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
   }
 
   Future<void> _refreshBackendData() async {
-    setState(() {
-      _backendDataFuture = _loadBackendData();
-    });
+    await ref.read(homeDataProvider.notifier).reload();
   }
 
   Future<void> _openRoute(String routeName) async {
@@ -230,67 +216,6 @@ class _HomeViewState extends ConsumerState<HomeView> {
     await Navigator.of(context).pushNamed(safeRoute);
     if (!mounted) return;
     await _refreshBackendData();
-  }
-
-  Future<void> _openPremium(UserProfile? user) async {
-    if (user == null) return;
-
-    final isTrialPremium = _isTrialPremium(user);
-    if (isTrialPremium) {
-      final confirmed = await _confirmTrialSubscription();
-      if (!mounted || !confirmed) return;
-    }
-
-    if (isTrialPremium || !user.isPremium) {
-      final result = await PremiumAccess.openPaywall(context);
-      if (!mounted || !PremiumAccess.shouldRefreshPremiumStatus(result)) {
-        return;
-      }
-    } else {
-      try {
-        await RevenueCatUI.presentCustomerCenter();
-      } catch (error) {
-        Print.error('Customer center failed: $error');
-      }
-      if (!mounted) return;
-    }
-
-    await ref.read(userProfileProvider.notifier).refresh();
-  }
-
-  Future<bool> _confirmTrialSubscription() async {
-    final result = await showDialog<bool>(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text(context.t.profileScreen.trialSubscriptionTitle),
-          content: Text(context.t.profileScreen.trialSubscriptionPrompt),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(false),
-              child: Text(context.t.profileScreen.no),
-            ),
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(true),
-              child: Text(context.t.profileScreen.yes),
-            ),
-          ],
-        );
-      },
-    );
-
-    return result == true;
-  }
-
-  bool _isTrialPremium(UserProfile user) {
-    final createdAt = user.createdAt;
-    final premiumEndTime = user.premiumEndTime;
-    if (!user.isPremium || createdAt == null || premiumEndTime == null) {
-      return false;
-    }
-
-    final premiumDuration = premiumEndTime.difference(createdAt);
-    return premiumDuration.inHours >= 46 && premiumDuration.inHours <= 74;
   }
 
   Future<void> _showStreakInfo(int streakCount) async {
@@ -317,129 +242,118 @@ class _HomeViewState extends ConsumerState<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<_HomeBackendData>(
-      future: _backendDataFuture,
-      builder: (context, snapshot) {
-        final profile = ref.watch(userProfileProvider).asData?.value;
-        final user = profile?.user;
-        final streak = profile?.streak;
-        Print.info(
-          'Building HomeView - User: ${user?.isPremium ?? "null"}, '
-          'Streak: ${streak?.currentStreak ?? "null"}, '
-          'BackendData: ${snapshot.data != null ? "loaded" : "null"}',
-        );
-        final data = snapshot.data ?? const _HomeBackendData();
-        final lessons = _mergedLessons(context, data.lessons);
-        final currentProgress = data.currentProgress;
-        final hasContinueProgress = _hasContinueProgress(currentProgress);
-        final activeProgress = hasContinueProgress ? currentProgress : null;
-        final continueLesson = activeProgress != null
-            ? lessons.firstWhere(
-                (lesson) => lesson.slug == activeProgress.lessonSlug,
-                orElse: () => lessons.first,
-              )
-            : null;
-        final continueRoute = continueLesson == null
-            ? AppRoutes.home
-            : activeProgress?.routeName.isNotEmpty == true
-            ? activeProgress!.routeName
-            : _routeForSlug(continueLesson.slug);
+    final homeAsync = ref.watch(homeDataProvider);
+    final profileAsync = ref.watch(userProfileProvider);
+    final profile = profileAsync.value;
+    final user = profile?.user;
+    final streak = profile?.streak;
+    final data = homeAsync.value ?? const HomeBackendData();
+    final lessons = _mergedLessons(context, data.lessons);
+    final currentProgress = data.currentProgress;
+    final hasContinueProgress = _hasContinueProgress(currentProgress);
+    final activeProgress = hasContinueProgress ? currentProgress : null;
+    final continueLesson = activeProgress != null
+        ? lessons.firstWhere(
+            (lesson) => lesson.slug == activeProgress.lessonSlug,
+            orElse: () => lessons.first,
+          )
+        : null;
+    final continueRoute = continueLesson == null
+        ? AppRoutes.home
+        : activeProgress?.routeName.isNotEmpty == true
+        ? activeProgress!.routeName
+        : _routeForSlug(continueLesson.slug);
 
-        return AnnotatedRegion<SystemUiOverlayStyle>(
-          value: SystemUiOverlayStyle.dark.copyWith(
-            statusBarColor: Colors.transparent,
-            systemNavigationBarColor: _backgroundColor,
-          ),
-          child: Scaffold(
-            backgroundColor: _backgroundColor,
-            body: SafeArea(
-              bottom: false,
-              child: CustomScrollView(
-                physics: const BouncingScrollPhysics(),
-                slivers: [
-                  SliverPadding(
-                    padding: const EdgeInsets.fromLTRB(24, 32, 24, 0),
-                    sliver: SliverToBoxAdapter(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          HomeHeader(
-                            userName: user?.fullName?.trim().isNotEmpty == true
-                                ? user!.fullName!.trim()
-                                : context.t.home.guest,
-                            avatarKey: user?.avatarKey,
-                            streakCount: streak?.currentStreak ?? 0,
-                            isPremium: user?.isPremium ?? false,
-                            onPremiumTap: () => _openPremium(user),
-                            onStreakTap: () =>
-                                _showStreakInfo(streak?.currentStreak ?? 0),
-                          ),
-                          const SizedBox(height: 37),
-                          HomeSectionTitle(title: context.t.home.thisWeek),
-                          const SizedBox(height: 10),
-                          WeeklyProgressCard(
-                            weekActivity: streak?.weekActivity,
-                            streakCount: streak?.currentStreak ?? 0,
-                          ),
-                          const SizedBox(height: 28),
-                          if (continueLesson != null) ...[
-                            HomeSectionTitle(
-                              title: context.t.home.continueLearning,
+    final stillBootstrapping = profile == null;
+
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: SystemUiOverlayStyle.dark.copyWith(
+        statusBarColor: Colors.transparent,
+        systemNavigationBarColor: _backgroundColor,
+      ),
+      child: Scaffold(
+        backgroundColor: _backgroundColor,
+        body: stillBootstrapping
+            ? const Center(child: AppLoading())
+            : SafeArea(
+                bottom: false,
+                child: CustomScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  slivers: [
+                    SliverPadding(
+                      padding: const EdgeInsets.fromLTRB(24, 32, 24, 0),
+                      sliver: SliverToBoxAdapter(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            HomeHeader(
+                              userName:
+                                  user?.fullName?.trim().isNotEmpty == true
+                                  ? user!.fullName!.trim()
+                                  : context.t.home.guest,
+                              avatarKey: user?.avatarKey,
+                              streakCount: streak?.currentStreak ?? 0,
+                              isPremium: user?.hasActivePremium ?? false,
+                              onStreakTap: () =>
+                                  _showStreakInfo(streak?.currentStreak ?? 0),
                             ),
+                            const SizedBox(height: 37),
+                            HomeSectionTitle(title: context.t.home.thisWeek),
                             const SizedBox(height: 10),
-                            ContinueLearningCard(
-                              title: continueLesson.title.toUpperCase(),
-                              assetPath: continueLesson.assetPath,
-                              subtitle: _continueLessonSubtitle(
-                                context,
-                                currentProgress,
-                                continueLesson,
-                                lessons,
-                              ),
-                              onTap: () => _openRoute(continueRoute),
+                            WeeklyProgressCard(
+                              weekActivity: streak?.weekActivity,
+                              streakCount: streak?.currentStreak ?? 0,
                             ),
                             const SizedBox(height: 28),
+                            if (continueLesson != null) ...[
+                              HomeSectionTitle(
+                                title: context.t.home.continueLearning,
+                              ),
+                              const SizedBox(height: 10),
+                              ContinueLearningCard(
+                                title: continueLesson.title.toUpperCase(),
+                                assetPath: continueLesson.assetPath,
+                                subtitle: _continueLessonSubtitle(
+                                  context,
+                                  currentProgress,
+                                  continueLesson,
+                                  lessons,
+                                ),
+                                onTap: () => _openRoute(continueRoute),
+                              ),
+                              const SizedBox(height: 28),
+                            ],
+                            HomeSectionTitle(title: context.t.home.allLessons),
+                            const SizedBox(height: 10),
                           ],
-                          HomeSectionTitle(title: context.t.home.allLessons),
-                          const SizedBox(height: 10),
-                        ],
+                        ),
                       ),
                     ),
-                  ),
-                  SliverPadding(
-                    padding: const EdgeInsets.fromLTRB(31, 0, 31, 31),
-                    sliver: SliverGrid.builder(
-                      itemCount: lessons.length,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            mainAxisSpacing: 15,
-                            crossAxisSpacing: 15,
-                            childAspectRatio: 0.78,
-                          ),
-                      itemBuilder: (context, index) {
-                        final lesson = lessons[index];
-                        return LessonCard(
-                          lesson: lesson,
-                          isActive: continueLesson?.slug == lesson.slug,
-                          onTap: () => _openRoute(lesson.routeName),
-                        );
-                      },
+                    SliverPadding(
+                      padding: const EdgeInsets.fromLTRB(31, 0, 31, 31),
+                      sliver: SliverGrid.builder(
+                        itemCount: lessons.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 15,
+                              crossAxisSpacing: 15,
+                              childAspectRatio: 0.78,
+                            ),
+                        itemBuilder: (context, index) {
+                          final lesson = lessons[index];
+                          return LessonCard(
+                            lesson: lesson,
+                            isActive: continueLesson?.slug == lesson.slug,
+                            onTap: () => _openRoute(lesson.routeName),
+                          );
+                        },
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ),
-        );
-      },
+      ),
     );
   }
-}
-
-class _HomeBackendData {
-  const _HomeBackendData({this.lessons = const [], this.currentProgress});
-
-  final List<BackendLesson> lessons;
-  final BackendProgress? currentProgress;
 }

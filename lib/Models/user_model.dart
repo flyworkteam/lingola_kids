@@ -72,6 +72,25 @@ class UserProfile {
     this.updatedAt,
   });
 
+  /// True only while premium flag is on AND end time (if any) is still in the future.
+  /// Welcome trial is exactly 2 days; after that this becomes false even if DB flag lags.
+  bool get hasActivePremium {
+    if (!isPremium) return false;
+    final end = premiumEndTime;
+    if (end == null) return true;
+    return end.isAfter(DateTime.now());
+  }
+
+  /// Welcome / free trial (~2 days from account creation), not a paid subscription.
+  bool get isWelcomeTrial {
+    if (!hasActivePremium) return false;
+    final created = createdAt;
+    final end = premiumEndTime;
+    if (created == null || end == null) return false;
+    final hours = end.difference(created).inHours;
+    return hours >= 0 && hours <= 50;
+  }
+
   factory UserProfile.fromJson(Map<String, dynamic> json) {
     return UserProfile(
       id: json['id'] as int? ?? 0,

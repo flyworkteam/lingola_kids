@@ -3,10 +3,14 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lingola_kids/Core/Routes/app_navigator.dart';
 import 'package:lingola_kids/Riverpod/Providers/all_providers.dart';
+import 'package:lingola_kids/Riverpod/Providers/user_provider.dart';
+import 'package:lingola_kids/Views/ProfileView/models/profile_controller.dart';
 import 'package:lingola_kids/Views/ProfileView/models/screen_time_controller.dart';
 import 'package:lingola_kids/utils/app_config.dart';
 import 'package:lingola_kids/utils/print.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 class DioService {
   DioService(this.ref) {
@@ -27,6 +31,12 @@ class DioService {
   };
 
   final _dio = Dio(BaseOptions(headers: _headers));
+
+  /// Refresh must use a bare client; otherwise a 401 on /auth/refresh
+  /// re-enters this interceptor and loops forever.
+  final _refreshDio = Dio(BaseOptions(headers: _headers));
+
+  Future<bool>? _refreshInFlight;
 
   Future<void> _logApiRequest({
     required final String method,
@@ -70,7 +80,13 @@ class DioService {
     }
   }
 
-  Future<bool> _refreshToken() async {
+  Future<bool> _refreshToken() {
+    return _refreshInFlight ??= _doRefreshToken().whenComplete(() {
+      _refreshInFlight = null;
+    });
+  }
+
+  Future<bool> _doRefreshToken() async {
     try {
       Print.info('Attempting to refresh access token...');
 
@@ -81,15 +97,12 @@ class DioService {
 
       if (refreshToken == null || refreshToken.isEmpty) {
         Print.error('No refresh token available');
-        await storageService.clearAll();
-        await ScreenTimeController.handleUserChanged(
-          preserveCurrentSession: false,
-        );
+        await _forceLogout();
         return false;
       }
 
-      // Call the refresh endpoint
-      final response = await _dio.post(
+      // Call the refresh endpoint WITHOUT the auth interceptor.
+      final response = await _refreshDio.post(
         '${_baseUrl}auth/refresh',
         data: {'refreshToken': refreshToken},
       );
@@ -109,28 +122,36 @@ class DioService {
       }
 
       Print.error('Token refresh failed with status: ${response.statusCode}');
-      await storageService.clearAll();
-      await ScreenTimeController.handleUserChanged(
-        preserveCurrentSession: false,
-      );
+      await _forceLogout();
       return false;
     } catch (e, st) {
       Print.error('Token refresh error: $e');
       Print.error('Stack trace: $st');
-
-      // Clear storage on refresh failure
-      try {
-        final storageService = ref.read(
-          AllProviders.secureStorageServiceProvider,
-        );
-        await storageService.clearAll();
-        await ScreenTimeController.handleUserChanged(
-          preserveCurrentSession: false,
-        );
-      } catch (_) {}
-
+      await _forceLogout();
       return false;
     }
+  }
+
+  /// Clears local session and sends the user back to login.
+  Future<void> _forceLogout() async {
+    try {
+      final storageService = ref.read(
+        AllProviders.secureStorageServiceProvider,
+      );
+      await storageService.clearAll();
+      await ScreenTimeController.handleUserChanged(
+        preserveCurrentSession: false,
+      );
+      ref.read(userProfileProvider.notifier).clearLocal();
+      ProfileController.reset();
+      try {
+        await Purchases.logOut();
+      } catch (_) {}
+    } catch (e) {
+      Print.error('Force logout cleanup failed: $e');
+    }
+
+    AppNavigator.goToLogin();
   }
 
   Future<Response> _retry(final RequestOptions requestOptions) async {
@@ -339,7 +360,9 @@ class DioService {
           Print.error(
             'Error occurred: ${e.message} handler: $handler ${_dio.options.baseUrl}',
           );
-          if (e.response?.statusCode == 401) {
+          final path = e.requestOptions.path;
+          final isRefreshCall = path.contains('auth/refresh');
+          if (e.response?.statusCode == 401 && !isRefreshCall) {
             final success = await _refreshToken();
             if (success) {
               return handler.resolve(await _retry(e.requestOptions));

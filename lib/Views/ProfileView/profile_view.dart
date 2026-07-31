@@ -16,6 +16,7 @@ import 'package:lingola_kids/Views/ProfileView/widgets/profile_menu_row.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/shared/policy_bottom_sheet.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
+import 'package:lingola_kids/utils/premium_access.dart';
 import 'package:lingola_kids/utils/print.dart';
 import 'package:purchases_ui_flutter/purchases_ui_flutter.dart';
 
@@ -57,6 +58,7 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
     try {
       await ref.read(AllProviders.authRepositoryProvider).logout();
       ref.read(userProfileProvider.notifier).clearLocal();
+      ProfileController.reset();
       if (!mounted) return;
       Navigator.of(
         context,
@@ -71,18 +73,43 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
 
   Future<void> _openAccountSettings() async {
     await Navigator.of(context).pushNamed(AppRoutes.editProfile);
+    // Edit already updates ProfileController + provider; only soft-sync if needed.
     if (!mounted) return;
-    await ref.read(userProfileProvider.notifier).refresh();
+    final hasData = ref.read(userProfileProvider).hasValue;
+    if (hasData) {
+      // Keep showing current UI while confirming against backend.
+      await ref.read(userProfileProvider.notifier).refresh();
+    }
+  }
+
+  Future<void> _openPaywall() async {
+    if (_isBusy) return;
+    setState(() => _isBusy = true);
+    try {
+      final result = await PremiumAccess.openPaywall(context);
+      if (!mounted) return;
+      if (PremiumAccess.shouldRefreshPremiumStatus(result)) {
+        await ref.read(userProfileProvider.notifier).refresh();
+      }
+    } catch (error) {
+      Print.error('Paywall failed: $error');
+      if (mounted) {
+        _showMessage(context.t.premiumAccess.openFailed);
+      }
+    } finally {
+      if (mounted) setState(() => _isBusy = false);
+    }
   }
 
   Future<void> _openSubscriptionCenter(UserProfile? profile) async {
     if (profile == null) return;
     if (_isBusy) return;
 
+    final isTrial = profile.isWelcomeTrial;
     final shouldOpenPaywall =
-        !profile.isPremium ||
-        (_isTrialPremium(profile) && await _confirmTrialSubscription());
-    if (!shouldOpenPaywall && _isTrialPremium(profile)) return;
+        !profile.hasActivePremium ||
+        (isTrial && await _confirmTrialSubscription());
+    if (!shouldOpenPaywall && isTrial) return;
 
     setState(() => _isBusy = true);
     try {
@@ -126,17 +153,6 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
     return result == true;
   }
 
-  bool _isTrialPremium(UserProfile profile) {
-    final createdAt = profile.createdAt;
-    final premiumEndTime = profile.premiumEndTime;
-    if (!profile.isPremium || createdAt == null || premiumEndTime == null) {
-      return false;
-    }
-
-    final premiumDuration = premiumEndTime.difference(createdAt);
-    return premiumDuration.inHours >= 0 && premiumDuration.inHours <= 74;
-  }
-
   void _showMessage(String message) {
     ScaffoldMessenger.of(
       context,
@@ -152,8 +168,9 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
       final next = ProfileData(
         fullName: backendProfile.fullName?.trim().isNotEmpty == true
             ? backendProfile.fullName!.trim()
-            : current.fullName,
-        email: _displayEmail(backendProfile.email) ?? current.email,
+            : (backendProfile.isGuest ? 'Guest' : current.fullName),
+        // Never keep a previous account's email when backend has none / local email.
+        email: _displayEmail(backendProfile.email) ?? '',
         avatarPath: ProfileController.avatarPathForKey(
           backendProfile.avatarKey,
         ),
@@ -167,9 +184,16 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
           ProfileController.update(next);
         });
       }
+    } else if (!profileAsync.isLoading) {
+      // No backend profile (logged out / switching) — drop stale UI cache.
+      if (ProfileController.value != ProfileController.empty) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          ProfileController.reset();
+        });
+      }
     }
 
-    final isPremium = backendProfile?.isPremium ?? false;
+    final isPremium = backendProfile?.hasActivePremium ?? false;
     final subscriptionSubtitle = backendProfile == null
         ? context.t.profileScreen.statusLoading
         : isPremium
@@ -218,6 +242,15 @@ class _ProfileViewState extends ConsumerState<ProfileView> {
                       assetPath: AppIcons.handlePremium,
                       onTap: () => _openSubscriptionCenter(backendProfile),
                     ),
+                    if (backendProfile != null && !isPremium) ...[
+                      const SizedBox(height: 12),
+                      ProfileMenuRow(
+                        title: context.t.profileScreen.upgradeToPro,
+                        subtitle: context.t.profileScreen.upgradeToProSubtitle,
+                        assetPath: AppLearningAssets.crown,
+                        onTap: _openPaywall,
+                      ),
+                    ],
                     const SizedBox(height: 12),
                     ValueListenableBuilder<ScreenTimeState>(
                       valueListenable: ScreenTimeController.listenable,

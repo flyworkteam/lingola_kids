@@ -341,6 +341,8 @@ class _TranslationsProfileScreenRu implements TranslationsProfileScreenEn {
 	@override String get accountSettingsGuestSubtitle => 'Имя и аватар';
 	@override String get accountSettingsSubtitle => 'Имя, Фото, Электронная почта';
 	@override String get manageSubscription => 'Управление подпиской';
+	@override String get upgradeToPro => 'Перейти на Pro';
+	@override String get upgradeToProSubtitle => 'Откройте все уроки и функции';
 	@override String get screenTime => 'Экранное время';
 	@override String get rateApp => 'Оценить приложение';
 	@override String get supportUs => 'Поддержите нас';
@@ -1082,6 +1084,8 @@ extension on TranslationsRu {
 			'profileScreen.accountSettingsGuestSubtitle' => 'Имя и аватар',
 			'profileScreen.accountSettingsSubtitle' => 'Имя, Фото, Электронная почта',
 			'profileScreen.manageSubscription' => 'Управление подпиской',
+			'profileScreen.upgradeToPro' => 'Перейти на Pro',
+			'profileScreen.upgradeToProSubtitle' => 'Откройте все уроки и функции',
 			'profileScreen.screenTime' => 'Экранное время',
 			'profileScreen.rateApp' => 'Оценить приложение',
 			'profileScreen.supportUs' => 'Поддержите нас',

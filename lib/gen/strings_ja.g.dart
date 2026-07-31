@@ -341,6 +341,8 @@ class _TranslationsProfileScreenJa implements TranslationsProfileScreenEn {
 	@override String get accountSettingsGuestSubtitle => '名前とアバター';
 	@override String get accountSettingsSubtitle => '名前、写真、メール';
 	@override String get manageSubscription => 'サブスクリプションの管理';
+	@override String get upgradeToPro => 'Proにアップグレード';
+	@override String get upgradeToProSubtitle => 'すべてのレッスンと機能を解除';
 	@override String get screenTime => 'スクリーンタイム';
 	@override String get rateApp => 'アプリを評価';
 	@override String get supportUs => '私たちをサポート';
@@ -1082,6 +1084,8 @@ extension on TranslationsJa {
 			'profileScreen.accountSettingsGuestSubtitle' => '名前とアバター',
 			'profileScreen.accountSettingsSubtitle' => '名前、写真、メール',
 			'profileScreen.manageSubscription' => 'サブスクリプションの管理',
+			'profileScreen.upgradeToPro' => 'Proにアップグレード',
+			'profileScreen.upgradeToProSubtitle' => 'すべてのレッスンと機能を解除',
 			'profileScreen.screenTime' => 'スクリーンタイム',
 			'profileScreen.rateApp' => 'アプリを評価',
 			'profileScreen.supportUs' => '私たちをサポート',

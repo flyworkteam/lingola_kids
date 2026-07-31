@@ -36,11 +36,24 @@ class UserNotifier extends AsyncNotifier<UserProfileData?> {
     }
   }
 
-  /// Refresh the profile from backend
+  /// Refresh the profile from backend without clearing the last known value
+  /// (avoids profile/home UI flicker when a fetch briefly fails or returns null).
   Future<UserProfileData?> refresh() async {
-    state = const AsyncValue.loading();
-    state = await AsyncValue.guard(() => _fetchProfile());
-    return state.asData?.value;
+    final previous = state.value;
+    try {
+      final next = await _fetchProfile();
+      if (next != null) {
+        state = AsyncValue.data(next);
+        return next;
+      }
+      // Keep showing the last good profile instead of wiping the UI.
+      return previous;
+    } catch (error, stackTrace) {
+      Print.error('Error refreshing user profile: $error');
+      if (previous != null) return previous;
+      state = AsyncValue.error(error, stackTrace);
+      return null;
+    }
   }
 
   /// Update profile fields
@@ -121,6 +134,13 @@ class UserNotifier extends AsyncNotifier<UserProfileData?> {
 
   void clearLocal() {
     state = const AsyncValue.data(null);
+  }
+
+  /// Drop cached profile and fetch the current account fresh.
+  Future<UserProfileData?> reloadForNewSession() async {
+    state = const AsyncValue.loading();
+    state = await AsyncValue.guard(() => _fetchProfile());
+    return state.asData?.value;
   }
 }
 

@@ -32,17 +32,30 @@ class _EditProfileViewState extends ConsumerState<EditProfileView> {
   late final TextEditingController _nameController;
   late final TextEditingController _emailController;
   late String _selectedAvatar;
+  late final bool _showEmail;
   bool _isSaving = false;
 
   @override
   void initState() {
     super.initState();
     final profile = ProfileController.value;
+    final user = ref.read(userProfileProvider).asData?.value?.user;
+    final displayEmail = _displayableEmail(
+      profile.email.isNotEmpty ? profile.email : user?.email,
+    );
+    _showEmail = displayEmail != null && displayEmail.isNotEmpty;
     _nameController = TextEditingController(text: profile.fullName);
-    _emailController = TextEditingController(text: profile.email);
+    _emailController = TextEditingController(text: displayEmail ?? '');
     _selectedAvatar = _avatars.contains(profile.avatarPath)
         ? profile.avatarPath
-        : AppIcons.avatar4;
+        : AppIcons.avatar1;
+  }
+
+  String? _displayableEmail(String? email) {
+    final trimmed = email?.trim();
+    if (trimmed == null || trimmed.isEmpty) return null;
+    if (trimmed.endsWith('@lingolakids.local')) return null;
+    return trimmed;
   }
 
   @override
@@ -82,7 +95,7 @@ class _EditProfileViewState extends ConsumerState<EditProfileView> {
   Future<void> _save() async {
     if (_isSaving) return;
     final fullName = _nameController.text.trim().isEmpty
-        ? 'Sam Lee'
+        ? 'Guest'
         : _nameController.text.trim();
     final avatarKey = ProfileController.avatarKeyForPath(_selectedAvatar);
 
@@ -158,13 +171,15 @@ class _EditProfileViewState extends ConsumerState<EditProfileView> {
                       controller: _nameController,
                       maxChars: 20,
                     ),
-                    const SizedBox(height: 14),
-                    _ProfileTextField(
-                      label: context.t.editProfileScreen.email,
-                      controller: _emailController,
-                      keyboardType: TextInputType.emailAddress,
-                      readOnly: true,
-                    ),
+                    if (_showEmail) ...[
+                      const SizedBox(height: 14),
+                      _ProfileTextField(
+                        label: context.t.editProfileScreen.email,
+                        controller: _emailController,
+                        keyboardType: TextInputType.emailAddress,
+                        readOnly: true,
+                      ),
+                    ],
                   ],
                 ),
               ),

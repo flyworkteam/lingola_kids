@@ -16,10 +16,10 @@ class PremiumAccess {
     try {
       final container = ProviderScope.containerOf(context, listen: false);
       final currentProfile = container.read(userProfileProvider).asData?.value;
-      if (currentProfile != null) return currentProfile.user.isPremium;
+      if (currentProfile != null) return currentProfile.user.hasActivePremium;
 
       final profile = await container.read(userProfileProvider.future);
-      return profile?.user.isPremium ?? false;
+      return profile?.user.hasActivePremium ?? false;
     } catch (error) {
       Print.error('Premium status check failed: $error');
       return false;
@@ -43,7 +43,7 @@ class PremiumAccess {
     final profile = await container
         .read(userProfileProvider.notifier)
         .refresh();
-    return profile?.user.isPremium ?? false;
+    return profile?.user.hasActivePremium ?? false;
   }
 
   static Future<PaywallResult?> openPaywall(BuildContext context) async {

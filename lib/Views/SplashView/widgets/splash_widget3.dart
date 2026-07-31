@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lingola_kids/Views/SplashView/continue_from_intro.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/shared/custom_button.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
@@ -129,9 +130,7 @@ class SplashWidget3 extends StatelessWidget {
                   width: buttonWidth,
                   child: CustomButton(
                     label: context.t.start_learning,
-                    onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/onboarding');
-                    },
+                    onPressed: () => continueFromIntroSplash(context),
                     size: CustomButtonSize.large,
                     fullWidth: true,
                     backgroundColor: _buttonColor,

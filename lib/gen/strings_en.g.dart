@@ -614,6 +614,12 @@ class TranslationsProfileScreenEn {
 	/// en: 'Manage Subscription'
 	String get manageSubscription => 'Manage Subscription';
 
+	/// en: 'Upgrade to Pro'
+	String get upgradeToPro => 'Upgrade to Pro';
+
+	/// en: 'Unlock all lessons and features'
+	String get upgradeToProSubtitle => 'Unlock all lessons and features';
+
 	/// en: 'Screen Time'
 	String get screenTime => 'Screen Time';
 
@@ -1740,6 +1746,8 @@ extension on Translations {
 			'profileScreen.accountSettingsGuestSubtitle' => 'Name and avatar',
 			'profileScreen.accountSettingsSubtitle' => 'Name, Photo, E-mail',
 			'profileScreen.manageSubscription' => 'Manage Subscription',
+			'profileScreen.upgradeToPro' => 'Upgrade to Pro',
+			'profileScreen.upgradeToProSubtitle' => 'Unlock all lessons and features',
 			'profileScreen.screenTime' => 'Screen Time',
 			'profileScreen.rateApp' => 'Rate the App',
 			'profileScreen.supportUs' => 'Support us',

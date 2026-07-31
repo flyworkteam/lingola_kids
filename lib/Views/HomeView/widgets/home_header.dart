@@ -13,7 +13,6 @@ class HomeHeader extends StatelessWidget {
     required this.streakCount,
     this.avatarKey,
     this.isPremium = false,
-    this.onPremiumTap,
     this.onStreakTap,
     super.key,
   });
@@ -22,7 +21,6 @@ class HomeHeader extends StatelessWidget {
   final int streakCount;
   final String? avatarKey;
   final bool isPremium;
-  final VoidCallback? onPremiumTap;
   final VoidCallback? onStreakTap;
 
   @override
@@ -71,20 +69,12 @@ class HomeHeader extends StatelessWidget {
           child: _StreakBadge(count: streakCount),
         ),
         const SizedBox(width: 14),
-        !isPremium
-            ? SizedBox.shrink()
-            : GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTap: onPremiumTap,
-                child: Opacity(
-                  opacity: isPremium ? 1 : 0.45,
-                  child: SvgPicture.asset(
-                    AppLearningAssets.crown,
-                    width: 48,
-                    height: 48,
-                  ),
-                ),
-              ),
+        if (isPremium)
+          SvgPicture.asset(
+            AppLearningAssets.crown,
+            width: 48,
+            height: 48,
+          ),
       ],
     );
   }

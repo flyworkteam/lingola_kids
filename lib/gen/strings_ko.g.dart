@@ -341,6 +341,8 @@ class _TranslationsProfileScreenKo implements TranslationsProfileScreenEn {
 	@override String get accountSettingsGuestSubtitle => '이름 및 아바타';
 	@override String get accountSettingsSubtitle => '이름, 사진, 이메일';
 	@override String get manageSubscription => '구독 관리';
+	@override String get upgradeToPro => 'Pro로 업그레이드';
+	@override String get upgradeToProSubtitle => '모든 레슨과 기능 잠금 해제';
 	@override String get screenTime => '스크린 시간';
 	@override String get changeLanguage => '언어';
 	@override String get changeLanguageSubtitle => '앱 언어 변경';
@@ -1082,6 +1084,8 @@ extension on TranslationsKo {
 			'profileScreen.accountSettingsGuestSubtitle' => '이름 및 아바타',
 			'profileScreen.accountSettingsSubtitle' => '이름, 사진, 이메일',
 			'profileScreen.manageSubscription' => '구독 관리',
+			'profileScreen.upgradeToPro' => 'Pro로 업그레이드',
+			'profileScreen.upgradeToProSubtitle' => '모든 레슨과 기능 잠금 해제',
 			'profileScreen.screenTime' => '스크린 시간',
 			'profileScreen.changeLanguage' => '언어',
 			'profileScreen.changeLanguageSubtitle' => '앱 언어 변경',

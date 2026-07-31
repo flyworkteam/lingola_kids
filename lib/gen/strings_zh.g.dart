@@ -341,6 +341,8 @@ class _TranslationsProfileScreenZh implements TranslationsProfileScreenEn {
 	@override String get accountSettingsGuestSubtitle => '姓名和头像';
 	@override String get accountSettingsSubtitle => '姓名、照片、电子邮件';
 	@override String get manageSubscription => '管理订阅';
+	@override String get upgradeToPro => '升级到 Pro';
+	@override String get upgradeToProSubtitle => '解锁所有课程和功能';
 	@override String get screenTime => '屏幕时间';
 	@override String get rateApp => '为应用评分';
 	@override String get supportUs => '支持我们';
@@ -1082,6 +1084,8 @@ extension on TranslationsZh {
 			'profileScreen.accountSettingsGuestSubtitle' => '姓名和头像',
 			'profileScreen.accountSettingsSubtitle' => '姓名、照片、电子邮件',
 			'profileScreen.manageSubscription' => '管理订阅',
+			'profileScreen.upgradeToPro' => '升级到 Pro',
+			'profileScreen.upgradeToProSubtitle' => '解锁所有课程和功能',
 			'profileScreen.screenTime' => '屏幕时间',
 			'profileScreen.rateApp' => '为应用评分',
 			'profileScreen.supportUs' => '支持我们',

@@ -144,6 +144,7 @@ class UserRepository {
       final success = response.data['success'] == true;
       if (success) {
         await _storageService.clearAll();
+        await _storageService.clearLastGuestUserId();
         await ScreenTimeController.handleUserChanged(
           preserveCurrentSession: false,
         );

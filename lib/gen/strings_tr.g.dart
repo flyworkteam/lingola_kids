@@ -341,6 +341,8 @@ class _TranslationsProfileScreenTr implements TranslationsProfileScreenEn {
 	@override String get accountSettingsGuestSubtitle => 'Ad ve avatar';
 	@override String get accountSettingsSubtitle => 'Ad, Fotoğraf, E-posta';
 	@override String get manageSubscription => 'Aboneliği Yönet';
+	@override String get upgradeToPro => 'Pro\'ya Geç';
+	@override String get upgradeToProSubtitle => 'Tüm derslerin ve özelliklerin kilidini aç';
 	@override String get screenTime => 'Ekran Süresi';
 	@override String get rateApp => 'Uygulamaya Puan Ver';
 	@override String get supportUs => 'Bizi Destekle';
@@ -358,8 +360,8 @@ class _TranslationsProfileScreenTr implements TranslationsProfileScreenEn {
 	@override String screenTimeMinutes({required Object minutes}) => 'Bugün ${minutes} dakika';
 	@override String screenTimeHours({required Object hours}) => 'Bugün ${hours} saat';
 	@override String screenTimeHoursMinutes({required Object hours, required Object minutes}) => 'Bugün ${hours} saat ${minutes} dakika';
-	@override String get trialSubscriptionTitle => 'Deneme Aboneliği';
-	@override String get trialSubscriptionPrompt => 'Deneme süreniz sona erdi. Premium özelliklere erişmeye devam etmek ister misiniz?';
+	@override String get trialSubscriptionTitle => 'Deneme Premium Aktif';
+	@override String get trialSubscriptionPrompt => 'Şu an 2 günlük deneme premium kullanıyorsun. Abone olmak ister misin?';
 	@override String get yes => 'Evet';
 	@override String get no => 'Hayır';
 }
@@ -1082,6 +1084,8 @@ extension on TranslationsTr {
 			'profileScreen.accountSettingsGuestSubtitle' => 'Ad ve avatar',
 			'profileScreen.accountSettingsSubtitle' => 'Ad, Fotoğraf, E-posta',
 			'profileScreen.manageSubscription' => 'Aboneliği Yönet',
+			'profileScreen.upgradeToPro' => 'Pro\'ya Geç',
+			'profileScreen.upgradeToProSubtitle' => 'Tüm derslerin ve özelliklerin kilidini aç',
 			'profileScreen.screenTime' => 'Ekran Süresi',
 			'profileScreen.rateApp' => 'Uygulamaya Puan Ver',
 			'profileScreen.supportUs' => 'Bizi Destekle',
@@ -1099,8 +1103,8 @@ extension on TranslationsTr {
 			'profileScreen.screenTimeMinutes' => ({required Object minutes}) => 'Bugün ${minutes} dakika',
 			'profileScreen.screenTimeHours' => ({required Object hours}) => 'Bugün ${hours} saat',
 			'profileScreen.screenTimeHoursMinutes' => ({required Object hours, required Object minutes}) => 'Bugün ${hours} saat ${minutes} dakika',
-			'profileScreen.trialSubscriptionTitle' => 'Deneme Aboneliği',
-			'profileScreen.trialSubscriptionPrompt' => 'Deneme süreniz sona erdi. Premium özelliklere erişmeye devam etmek ister misiniz?',
+			'profileScreen.trialSubscriptionTitle' => 'Deneme Premium Aktif',
+			'profileScreen.trialSubscriptionPrompt' => 'Şu an 2 günlük deneme premium kullanıyorsun. Abone olmak ister misin?',
 			'profileScreen.yes' => 'Evet',
 			'profileScreen.no' => 'Hayır',
 			'editProfileScreen.changeAvatar' => 'Avatarı Değiştir',

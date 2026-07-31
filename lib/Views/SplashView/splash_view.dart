@@ -15,6 +15,7 @@ import 'package:lingola_kids/Views/SplashView/widgets/splash_widget3.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
 import 'package:lingola_kids/utils/app_assets.dart';
 import 'package:lingola_kids/utils/constants.dart';
+import 'package:lingola_kids/utils/session_bootstrap.dart';
 
 class SplashView extends HookConsumerWidget {
   const SplashView({super.key});
@@ -27,14 +28,31 @@ class SplashView extends HookConsumerWidget {
     final autoScrollTimer = useRef<Timer?>(null);
 
     useEffect(() {
-      Future.delayed(const Duration(seconds: 2), () async {
+      Future<void>(() async {
+        final minSplash = Future<void>.delayed(const Duration(seconds: 2));
         final authRepo = ref.read(AllProviders.authRepositoryProvider);
-        final isLoggedIn = await authRepo.isLoggedIn();
+        final storage = ref.read(AllProviders.secureStorageServiceProvider);
 
-        if (!context.mounted) return;
+        final isLoggedIn = await authRepo.isLoggedIn();
+        final hasSeenIntro = await storage.hasSeenIntroSplash();
 
         if (isLoggedIn) {
+          final userId = await storage.getUserId();
+          final isGuest = await storage.getIsGuest();
+          if (isGuest && userId != null) {
+            await storage.saveLastGuestUserId(userId);
+          }
+          await Future.wait([minSplash, bootstrapLoggedInSession(ref)]);
+          if (!context.mounted) return;
           Navigator.of(context).pushReplacementNamed('/main');
+          return;
+        }
+
+        await minSplash;
+        if (!context.mounted) return;
+
+        if (hasSeenIntro) {
+          Navigator.of(context).pushReplacementNamed('/onboarding');
         } else {
           showInitialSplash.value = false;
         }

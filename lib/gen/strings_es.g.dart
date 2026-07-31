@@ -341,6 +341,8 @@ class _TranslationsProfileScreenEs implements TranslationsProfileScreenEn {
 	@override String get accountSettingsGuestSubtitle => 'Nombre y avatar';
 	@override String get accountSettingsSubtitle => 'Nombre, Foto, Correo electrónico';
 	@override String get manageSubscription => 'Administrar suscripción';
+	@override String get upgradeToPro => 'Pasar a Pro';
+	@override String get upgradeToProSubtitle => 'Desbloquea todas las lecciones y funciones';
 	@override String get changeLanguage => 'Idioma';
 	@override String get changeLanguageSubtitle => 'Cambiar idioma de la aplicación';
 	@override String get screenTime => 'Tiempo de pantalla';
@@ -1082,6 +1084,8 @@ extension on TranslationsEs {
 			'profileScreen.accountSettingsGuestSubtitle' => 'Nombre y avatar',
 			'profileScreen.accountSettingsSubtitle' => 'Nombre, Foto, Correo electrónico',
 			'profileScreen.manageSubscription' => 'Administrar suscripción',
+			'profileScreen.upgradeToPro' => 'Pasar a Pro',
+			'profileScreen.upgradeToProSubtitle' => 'Desbloquea todas las lecciones y funciones',
 			'profileScreen.changeLanguage' => 'Idioma',
 			'profileScreen.changeLanguageSubtitle' => 'Cambiar idioma de la aplicación',
 			'profileScreen.screenTime' => 'Tiempo de pantalla',

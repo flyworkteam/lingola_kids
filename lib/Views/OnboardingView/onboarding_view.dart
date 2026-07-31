@@ -8,7 +8,9 @@ import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_reward_page
 import 'package:lingola_kids/Views/OnboardingView/widgets/onboarding_spell_page.dart';
 import 'package:lingola_kids/Views/ProfileView/widgets/parental_gate_dialog.dart';
 import 'package:lingola_kids/gen/strings.g.dart';
+import 'package:lingola_kids/utils/future_loading.dart';
 import 'package:lingola_kids/utils/print.dart';
+import 'package:lingola_kids/utils/session_bootstrap.dart';
 
 class OnboardingView extends ConsumerStatefulWidget {
   const OnboardingView({super.key});
@@ -21,6 +23,24 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
   final _pageController = PageController();
   int _page = 0;
   bool _isAuthenticating = false;
+  bool _ready = false;
+  bool _skipTutorial = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadDeviceFlags();
+  }
+
+  Future<void> _loadDeviceFlags() async {
+    final storage = ref.read(AllProviders.secureStorageServiceProvider);
+    final seen = await storage.hasSeenOnboardingTutorial();
+    if (!mounted) return;
+    setState(() {
+      _skipTutorial = seen;
+      _ready = true;
+    });
+  }
 
   @override
   void dispose() {
@@ -28,12 +48,27 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
     super.dispose();
   }
 
-  void _next() {
-    if (_page >= 3) {
+  int get _lastPageIndex => _skipTutorial ? 0 : 3;
+
+  Future<void> _next() async {
+    if (_page >= _lastPageIndex) {
       _goHome();
       return;
     }
 
+    // Leaving reward page → mark tutorial as done on this device.
+    if (!_skipTutorial && _page == 2) {
+      await ref
+          .read(AllProviders.secureStorageServiceProvider)
+          .markOnboardingTutorialSeen();
+      if (!mounted) return;
+      // jumpToPage avoids animating over the login buttons while the
+      // "Continue" finger is still down (which was auto-tapping Apple).
+      _pageController.jumpToPage(_page + 1);
+      return;
+    }
+
+    if (!mounted) return;
     _pageController.nextPage(
       duration: const Duration(milliseconds: 280),
       curve: Curves.easeOut,
@@ -98,11 +133,17 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
   Future<void> _runAuthAction(Future<bool> Function() action) async {
     if (_isAuthenticating) return;
 
-    setState(() => _isAuthenticating = true);
+    _isAuthenticating = true;
     try {
-      final shouldEnterApp = await action();
+      final shouldEnterApp = await action().withLoading(context);
       if (!mounted) return;
       if (shouldEnterApp) {
+        await bootstrapLoggedInSession(ref);
+        if (!mounted) return;
+        await ref
+            .read(AllProviders.secureStorageServiceProvider)
+            .markOnboardingTutorialSeen();
+        if (!mounted) return;
         _goHome();
       }
     } catch (error) {
@@ -112,41 +153,49 @@ class _OnboardingViewState extends ConsumerState<OnboardingView> {
         SnackBar(content: Text(context.t.onboarding.login.failed)),
       );
     } finally {
-      if (mounted) {
-        setState(() => _isAuthenticating = false);
-      }
+      _isAuthenticating = false;
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (!_ready) {
+      return const Scaffold(
+        backgroundColor: Color(0xFFFAF5F1),
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    final pages = <Widget>[
+      if (!_skipTutorial) ...[
+        OnboardingSpellPage(
+          title: context.t.onboarding.spellTitle,
+          subtitle: context.t.onboarding.spellSubtitle,
+          prefilled: false,
+          onSolved: _next,
+        ),
+        OnboardingSpellPage(
+          title: context.t.onboarding.spellSuccessTitle,
+          subtitle: context.t.onboarding.spellSuccessSubtitle,
+          prefilled: true,
+          onSolved: _next,
+        ),
+        OnboardingRewardPage(onContinue: _next),
+      ],
+      OnboardingLoginPage(
+        onGoogle: _continueWithGoogle,
+        onApple: _continueWithApple,
+        onGuest: _continueAsGuest,
+      ),
+    ];
+
     return Scaffold(
       backgroundColor: const Color(0xFFFAF5F1),
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: (page) => setState(() => _page = page),
-        children: [
-          OnboardingSpellPage(
-            title: context.t.onboarding.spellTitle,
-            subtitle: context.t.onboarding.spellSubtitle,
-            prefilled: false,
-            onSolved: _next,
-          ),
-          OnboardingSpellPage(
-            title: context.t.onboarding.spellSuccessTitle,
-            subtitle: context.t.onboarding.spellSuccessSubtitle,
-            prefilled: true,
-            onSolved: _next,
-          ),
-          OnboardingRewardPage(onContinue: _next),
-          OnboardingLoginPage(
-            isLoading: _isAuthenticating,
-            onGoogle: _continueWithGoogle,
-            onApple: _continueWithApple,
-            onGuest: _continueAsGuest,
-          ),
-        ],
+        children: pages,
       ),
     );
   }

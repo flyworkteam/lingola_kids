@@ -341,6 +341,8 @@ class _TranslationsProfileScreenHi implements TranslationsProfileScreenEn {
 	@override String get accountSettingsGuestSubtitle => 'नाम और अवतार';
 	@override String get accountSettingsSubtitle => 'नाम, फोटो, ई-मेल';
 	@override String get manageSubscription => 'सदस्यता प्रबंधित करें';
+	@override String get upgradeToPro => 'Pro में अपग्रेड करें';
+	@override String get upgradeToProSubtitle => 'सभी पाठ और सुविधाएँ अनलॉक करें';
 	@override String get screenTime => 'स्क्रीन टाइम';
 	@override String get changeLanguage => 'बदलें';
 	@override String get changeLanguageSubtitle => 'एप्लिकेशन की भाषा बदलें';
@@ -1082,6 +1084,8 @@ extension on TranslationsHi {
 			'profileScreen.accountSettingsGuestSubtitle' => 'नाम और अवतार',
 			'profileScreen.accountSettingsSubtitle' => 'नाम, फोटो, ई-मेल',
 			'profileScreen.manageSubscription' => 'सदस्यता प्रबंधित करें',
+			'profileScreen.upgradeToPro' => 'Pro में अपग्रेड करें',
+			'profileScreen.upgradeToProSubtitle' => 'सभी पाठ और सुविधाएँ अनलॉक करें',
 			'profileScreen.screenTime' => 'स्क्रीन टाइम',
 			'profileScreen.changeLanguage' => 'बदलें',
 			'profileScreen.changeLanguageSubtitle' => 'एप्लिकेशन की भाषा बदलें',

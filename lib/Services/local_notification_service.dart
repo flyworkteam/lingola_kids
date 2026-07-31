@@ -139,8 +139,15 @@ class LocalNotificationService {
 
   static Future<void> _configureLocalTimeZone() async {
     tz_data.initializeTimeZones();
-    final timezoneInfo = await FlutterTimezone.getLocalTimezone();
-    tz.setLocalLocation(tz.getLocation(timezoneInfo.identifier));
+    try {
+      final timezoneInfo = await FlutterTimezone.getLocalTimezone().timeout(
+        const Duration(seconds: 2),
+      );
+      tz.setLocalLocation(tz.getLocation(timezoneInfo.identifier));
+    } catch (error) {
+      Print.error('Timezone lookup failed, falling back to UTC: $error');
+      tz.setLocalLocation(tz.UTC);
+    }
   }
 
   static tz.TZDateTime _nextDailyTime({
@@ -221,6 +228,17 @@ class LocalNotificationService {
     }
 
     if (Platform.isIOS || Platform.isMacOS) {
+      final alreadyAsked = await storageService
+          .getNotificationPermissionAsked();
+      if (alreadyAsked) {
+        final iosPlugin = _plugin
+            .resolvePlatformSpecificImplementation<
+              IOSFlutterLocalNotificationsPlugin
+            >();
+        final settings = await iosPlugin?.checkPermissions();
+        return settings?.isEnabled ?? false;
+      }
+
       final iosPlugin = _plugin
           .resolvePlatformSpecificImplementation<
             IOSFlutterLocalNotificationsPlugin

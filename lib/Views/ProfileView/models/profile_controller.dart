@@ -5,15 +5,15 @@ import 'package:lingola_kids/utils/app_assets.dart';
 class ProfileController {
   ProfileController._();
 
+  static const ProfileData empty = ProfileData(
+    fullName: 'Guest',
+    email: '',
+    avatarPath: AppIcons.avatar1,
+    avatarKey: 'avatar1',
+  );
+
   static final ValueNotifier<ProfileData> listenable =
-      ValueNotifier<ProfileData>(
-        const ProfileData(
-          fullName: 'Sam Lee',
-          email: 'samlee@icloud.com',
-          avatarPath: AppIcons.avatar4,
-          avatarKey: 'avatar4',
-        ),
-      );
+      ValueNotifier<ProfileData>(empty);
 
   static ProfileData get value => listenable.value;
 
@@ -27,19 +27,24 @@ class ProfileController {
   };
 
   static String avatarPathForKey(String? avatarKey) {
-    return avatarAssetsByKey[avatarKey] ?? AppIcons.avatar4;
+    return avatarAssetsByKey[avatarKey] ?? AppIcons.avatar1;
   }
 
   static String avatarKeyForPath(String avatarPath) {
     return avatarAssetsByKey.entries
         .firstWhere(
           (entry) => entry.value == avatarPath,
-          orElse: () => const MapEntry('avatar4', AppIcons.avatar4),
+          orElse: () => const MapEntry('avatar1', AppIcons.avatar1),
         )
         .key;
   }
 
   static void update(ProfileData data) {
     listenable.value = data;
+  }
+
+  /// Clears cached UI profile (must be called on logout / account switch).
+  static void reset() {
+    listenable.value = empty;
   }
 }

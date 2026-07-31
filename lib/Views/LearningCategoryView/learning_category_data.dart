@@ -35,7 +35,7 @@ class LearningCategoryData {
       assetPath: AppLearningAssets.vegetableCucumber,
     ),
     LearningItemModel(
-      name: 'lemon',
+      name: 'chili',
       assetPath: AppLearningAssets.vegetableChiliPepper,
     ),
     LearningItemModel(

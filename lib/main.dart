@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:lingola_kids/Core/Routes/app_navigator.dart';
 import 'package:lingola_kids/Core/Routes/app_routes.dart';
 import 'package:lingola_kids/Services/local_notification_service.dart';
 import 'package:lingola_kids/Services/secure_storage_service.dart';
@@ -39,6 +40,18 @@ Future<void> initPlatformState() async {
   Print.info('RevenueCat initialized', tag: 'Main');
 }
 
+Future<void> _safeInit(
+  String label,
+  Future<void> Function() action, {
+  Duration timeout = const Duration(seconds: 4),
+}) async {
+  try {
+    await action().timeout(timeout);
+  } catch (error) {
+    Print.error('$label init failed/timed out: $error', tag: 'Main');
+  }
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -53,8 +66,9 @@ void main() async {
     ),
   );
 
-  await ScreenTimeController.initialize();
-  await initPlatformState();
+  // Never block first frame on optional native setup.
+  await _safeInit('ScreenTime', ScreenTimeController.initialize);
+  await _safeInit('RevenueCat', initPlatformState);
 
   final container = ProviderContainer();
 
@@ -74,7 +88,10 @@ void main() async {
     await LocaleSettings.useDeviceLocale();
   }
 
-  await LocalNotificationService.initialize(storageService: storageService);
+  await _safeInit(
+    'LocalNotifications',
+    () => LocalNotificationService.initialize(storageService: storageService),
+  );
 
   runApp(
     UncontrolledProviderScope(
@@ -91,6 +108,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: Constants.appName,
+      navigatorKey: AppNavigator.key,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,

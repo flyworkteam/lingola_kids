@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:lingola_kids/Models/auth_model.dart';
@@ -31,17 +33,44 @@ class AuthRepository {
     }
   }
 
-  /// Create guest user
+  Future<void> _applyAuthSession(AuthResponse authResponse) async {
+    if (authResponse.tokens != null) {
+      await _storageService.saveTokens(
+        accessToken: authResponse.tokens!.accessToken,
+        refreshToken: authResponse.tokens!.refreshToken,
+      );
+    }
+
+    final user = authResponse.user;
+    if (user == null) return;
+
+    await _storageService.saveUserId(user.id);
+    await _storageService.saveIsGuest(user.isGuest);
+    if (user.isGuest) {
+      await _storageService.saveLastGuestUserId(user.id);
+    } else {
+      await _storageService.clearLastGuestUserId();
+    }
+    await ScreenTimeController.handleUserChanged();
+  }
+
+  /// Create or resume guest user for this device.
   /// POST /api/auth/guest
   Future<AuthResponse> createGuestUser({
     Map<String, dynamic>? deviceInfo,
     CancelToken? cancelToken,
   }) async {
     try {
-      final payload = <String, dynamic>{};
-      if (deviceInfo != null) {
-        payload['device_info'] = deviceInfo;
-      }
+      final deviceId = await _storageService.getOrCreateDeviceId();
+      final lastGuestUserId = await _storageService.getLastGuestUserId();
+      final payload = <String, dynamic>{
+        'device_info': {
+          'device_id': deviceId,
+          'platform': Platform.operatingSystem,
+          if (lastGuestUserId != null) 'guest_user_id': lastGuestUserId,
+          ...?deviceInfo,
+        },
+      };
       final response = await _dioService.postRaw(
         'auth/guest',
         data: payload,
@@ -52,24 +81,12 @@ class AuthRepository {
         response.data as Map<String, dynamic>,
       );
 
-      // Save tokens and user info
-      if (authResponse.tokens != null) {
-        await _storageService.saveTokens(
-          accessToken: authResponse.tokens!.accessToken,
-          refreshToken: authResponse.tokens!.refreshToken,
-        );
-      }
-
-      if (authResponse.user != null) {
-        await _storageService.saveUserId(authResponse.user!.id);
-        await _storageService.saveIsGuest(authResponse.user!.isGuest);
-        await ScreenTimeController.handleUserChanged();
-      }
+      await _applyAuthSession(authResponse);
       await _linkRevenueCatUser(authResponse);
-      Print.info('Guest user created successfully');
+      Print.info('Guest user signed in successfully');
       return authResponse;
     } catch (e) {
-      Print.error('Error creating guest user: $e');
+      Print.error('Error signing in as guest: $e');
       rethrow;
     }
   }
@@ -91,19 +108,7 @@ class AuthRepository {
         response.data as Map<String, dynamic>,
       );
 
-      // Save tokens and user info
-      if (authResponse.tokens != null) {
-        await _storageService.saveTokens(
-          accessToken: authResponse.tokens!.accessToken,
-          refreshToken: authResponse.tokens!.refreshToken,
-        );
-      }
-
-      if (authResponse.user != null) {
-        await _storageService.saveUserId(authResponse.user!.id);
-        await _storageService.saveIsGuest(authResponse.user!.isGuest);
-        await ScreenTimeController.handleUserChanged();
-      }
+      await _applyAuthSession(authResponse);
       await _linkRevenueCatUser(authResponse);
       Print.info('Google sign-in successful');
       return authResponse;
@@ -135,19 +140,7 @@ class AuthRepository {
         response.data as Map<String, dynamic>,
       );
 
-      // Save tokens and user info
-      if (authResponse.tokens != null) {
-        await _storageService.saveTokens(
-          accessToken: authResponse.tokens!.accessToken,
-          refreshToken: authResponse.tokens!.refreshToken,
-        );
-      }
-
-      if (authResponse.user != null) {
-        await _storageService.saveUserId(authResponse.user!.id);
-        await _storageService.saveIsGuest(authResponse.user!.isGuest);
-        await ScreenTimeController.handleUserChanged();
-      }
+      await _applyAuthSession(authResponse);
       await _linkRevenueCatUser(authResponse);
       Print.info('Apple sign-in successful');
       return authResponse;
@@ -200,6 +193,8 @@ class AuthRepository {
   Future<void> logout({CancelToken? cancelToken}) async {
     try {
       final refreshToken = await _storageService.getRefreshToken();
+      final userId = await _storageService.getUserId();
+      final isGuest = await _storageService.getIsGuest();
 
       await _dioService.postRaw(
         'auth/logout',
@@ -212,7 +207,10 @@ class AuthRepository {
       } catch (e) {
         Print.error('RevenueCat logout error: $e');
       }
-      // Clear local storage
+      // Remember this guest so the next "Continue as Guest" resumes it.
+      if (isGuest && userId != null) {
+        await _storageService.saveLastGuestUserId(userId);
+      }
       await _storageService.clearAll();
       await ScreenTimeController.handleUserChanged(
         preserveCurrentSession: false,
@@ -221,7 +219,11 @@ class AuthRepository {
       Print.info('Logout successful');
     } catch (e) {
       Print.error('Error logging out: $e');
-      // Clear local storage even if API call fails
+      final userId = await _storageService.getUserId();
+      final isGuest = await _storageService.getIsGuest();
+      if (isGuest && userId != null) {
+        await _storageService.saveLastGuestUserId(userId);
+      }
       await _storageService.clearAll();
       await ScreenTimeController.handleUserChanged(
         preserveCurrentSession: false,

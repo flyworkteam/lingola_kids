@@ -110,8 +110,10 @@ class SocialAuthService {
         'Apple Sign-In authorization error: ${e.code} - ${e.message}',
       );
 
-      if (e.code == AuthorizationErrorCode.canceled) {
-        Print.info('User cancelled Apple Sign-In');
+      if (e.code == AuthorizationErrorCode.canceled ||
+          e.code == AuthorizationErrorCode.unknown) {
+        // Simulator / accidental sheet dismiss often reports `unknown` (1000).
+        Print.info('Apple Sign-In dismissed: ${e.code}');
         return null;
       }
 

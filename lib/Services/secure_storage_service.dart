@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:lingola_kids/utils/print.dart';
 
@@ -29,6 +31,21 @@ class SecureStorageService {
   static const String _wsResumeTokenKey = 'ws_resume_token';
   static const String _selectedGenderKey = 'selected_character_gender';
   static const String _selectedLanguageKey = 'selected_character_language';
+
+  /// Device-level flags — must survive logout / token clear.
+  static const String _hasSeenIntroSplashKey = 'has_seen_intro_splash';
+  static const String _hasSeenOnboardingTutorialKey =
+      'has_seen_onboarding_tutorial';
+  static const String _deviceIdKey = 'stable_device_id';
+  static const String _lastGuestUserIdKey = 'last_guest_user_id';
+
+  static const Set<String> _devicePersistentKeys = {
+    _hasSeenIntroSplashKey,
+    _hasSeenOnboardingTutorialKey,
+    _languageKey,
+    _deviceIdKey,
+    _lastGuestUserIdKey,
+  };
 
   // Flutter Secure Storage instance
   final FlutterSecureStorage _storage = const FlutterSecureStorage(
@@ -201,14 +218,106 @@ class SecureStorageService {
   Future<String?> getSelectedCharacterLanguage() =>
       _storage.read(key: _selectedLanguageKey);
 
-  /// Clear all stored data
+  /// Clear session data. Device-level flags (intro/tutorial/language) are kept.
   Future<void> clearAll() async {
     try {
+      final preserved = <String, String>{};
+      for (final key in _devicePersistentKeys) {
+        final value = await _storage.read(key: key);
+        if (value != null) preserved[key] = value;
+      }
+
       await _storage.deleteAll();
-      Print.info('All secure storage cleared');
+
+      for (final entry in preserved.entries) {
+        await _storage.write(key: entry.key, value: entry.value);
+      }
+      Print.info('Session storage cleared (device flags preserved)');
     } catch (e) {
       Print.error('Error clearing storage: $e');
       rethrow;
+    }
+  }
+
+  Future<bool> hasSeenIntroSplash() async {
+    try {
+      return await _storage.read(key: _hasSeenIntroSplashKey) == '1';
+    } catch (e) {
+      Print.error('Error reading intro splash flag: $e');
+      return false;
+    }
+  }
+
+  Future<void> markIntroSplashSeen() async {
+    try {
+      await _storage.write(key: _hasSeenIntroSplashKey, value: '1');
+      Print.info('Intro splash marked as seen');
+    } catch (e) {
+      Print.error('Error saving intro splash flag: $e');
+    }
+  }
+
+  Future<bool> hasSeenOnboardingTutorial() async {
+    try {
+      return await _storage.read(key: _hasSeenOnboardingTutorialKey) == '1';
+    } catch (e) {
+      Print.error('Error reading onboarding tutorial flag: $e');
+      return false;
+    }
+  }
+
+  Future<void> markOnboardingTutorialSeen() async {
+    try {
+      await _storage.write(key: _hasSeenOnboardingTutorialKey, value: '1');
+      Print.info('Onboarding tutorial marked as seen');
+    } catch (e) {
+      Print.error('Error saving onboarding tutorial flag: $e');
+    }
+  }
+
+  /// Stable per-device id used to resume the same guest account across logins.
+  Future<String> getOrCreateDeviceId() async {
+    try {
+      final existing = await _storage.read(key: _deviceIdKey);
+      if (existing != null && existing.isNotEmpty) return existing;
+
+      final random = Random.secure();
+      final id = List.generate(
+        32,
+        (_) => random.nextInt(16).toRadixString(16),
+      ).join();
+      await _storage.write(key: _deviceIdKey, value: id);
+      Print.info('Stable device id created');
+      return id;
+    } catch (e) {
+      Print.error('Error getting device id: $e');
+      rethrow;
+    }
+  }
+
+  Future<int?> getLastGuestUserId() async {
+    try {
+      final value = await _storage.read(key: _lastGuestUserIdKey);
+      return value != null ? int.tryParse(value) : null;
+    } catch (e) {
+      Print.error('Error reading last guest user id: $e');
+      return null;
+    }
+  }
+
+  Future<void> saveLastGuestUserId(int userId) async {
+    try {
+      await _storage.write(key: _lastGuestUserIdKey, value: userId.toString());
+    } catch (e) {
+      Print.error('Error saving last guest user id: $e');
+    }
+  }
+
+  Future<void> clearLastGuestUserId() async {
+    try {
+      await _storage.delete(key: _lastGuestUserIdKey);
+    } catch (e) {
+      Print.error('Error clearing last guest user id: $e');
     }
   }
 
