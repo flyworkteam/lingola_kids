@@ -34,7 +34,7 @@ android {
     defaultConfig {
         applicationId = "com.flywork.lingolakidsapp"
         minSdk = flutter.minSdkVersion
-        targetSdk = 35
+        targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
